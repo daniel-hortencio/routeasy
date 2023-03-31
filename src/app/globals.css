@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+  /* border: solid 1px red !important; */
+  background: white;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
