@@ -6,11 +6,19 @@ export interface InputBaseProps {
   placeholder?: string;
   type?: "text" | "password";
   icon?: ReactNode;
+  className?: string;
 }
 
-export const InputBase = ({ placeholder, type, icon }: InputBaseProps) => {
+export const InputBase = ({
+  placeholder,
+  type = "text",
+  icon,
+  className,
+}: InputBaseProps) => {
   return (
-    <div className="bg-white  flex items-center h-12 justify-between rounded-full overflow-hidden relative">
+    <div
+      className={`bg-white  flex items-center h-12 justify-between rounded-full overflow-hidden relative ${className}`}
+    >
       <input
         placeholder={placeholder}
         type={type}

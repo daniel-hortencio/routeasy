@@ -5,6 +5,7 @@ import { Box } from "../../../shared/components/elements/Box";
 import { Text } from "../../../shared/components/elements/Text";
 import { Wrapper } from "../../../shared/components/elements/Wrapper";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
+import { InputSearch } from "../../../shared/components/elements/Inputs/InputSearch";
 
 export default function ConsultProcess() {
   return (
@@ -16,22 +17,29 @@ export default function ConsultProcess() {
         mobileLinkText=""
       />
 
-      <Wrapper as="section" className="flex-auto flex flex-col justify-center">
-        <Box className="text-center">
+      <Wrapper
+        as="section"
+        className="flex-auto flex flex-col justify-center pt-36 pb-20"
+      >
+        <Box className="text-center mb-12">
           <Text
             as="h1"
-            className="font-extrabold text-2xl md:text-3xl lg:text-5xl mb-8"
+            className="font-extrabold text-2xl md:text-3xl lg:text-5xl mb-8 max-w-lg mx-auto"
           >
             Consulta processual
           </Text>
 
-          <Text>
+          <Text className="max-w-3xl mx-auto">
             Orci varius natoque penatibus et magnis dis parturient montes,
             nascetur ridiculus mus. Duis vehicula lacinia turpis et maximus.
           </Text>
         </Box>
 
-        <Box className="grid md:grid-cols-3 gap-12">
+        <Box className="mb-20 max-w-lg mx-auto">
+          <InputSearch />
+        </Box>
+
+        <Box className="grid md:grid-cols-3 gap-8 md:gap-12">
           <Box className="flex items-start">
             <Box className="pt-2">
               <Image
