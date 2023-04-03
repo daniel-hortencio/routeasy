@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 
 interface Props {
@@ -13,7 +15,10 @@ export const InputGroup = ({ label, children, linkText, linkTo }: Props) => {
       <div className="flex justify-between items-center mb-2">
         <label className=" font-semibold text-textGray-light">{label}</label>
         {linkText && (
-          <a href={linkTo} className="text-primary">
+          <a
+            href={linkTo}
+            className="text-primary hover:text-primaryHover transition-all"
+          >
             {linkText}
           </a>
         )}

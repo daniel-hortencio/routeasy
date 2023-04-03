@@ -1,3 +1,5 @@
+"use client";
+
 import { InputBase, InputBaseProps } from "./InputBase";
 
 interface Props extends InputBaseProps {}

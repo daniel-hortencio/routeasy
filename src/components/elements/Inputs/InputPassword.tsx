@@ -13,16 +13,18 @@ export const InputPassword = ({ placeholder }: Props) => {
     <InputBase
       placeholder={placeholder}
       type={showPassword ? "text" : "password"}
-      icon={(
+      icon={
         <button
           type="button"
           onClick={() => setShowPassword(!showPassword)}
+          className="p-2 m-2 hover:text-primary transition-all"
         >
-          <Icon name={showPassword ? "HiOutlineEyeOff" : "HiOutlineEye"} size={20}/>
+          <Icon
+            name={showPassword ? "HiOutlineEye" : "HiOutlineEyeOff"}
+            size={24}
+          />
         </button>
-      )}
+      }
     />
   );
-
- 
 };

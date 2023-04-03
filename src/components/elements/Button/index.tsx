@@ -1,5 +1,3 @@
-import { HTMLAttributes } from "react";
-
 interface Props {
   text: string;
   size?: "small" | "large";
@@ -15,7 +13,7 @@ export const Button = ({
 }: Props) => {
   function getClassName() {
     let className =
-      "h-12 rounded-full flex justify-center items-center transition-all";
+      "h-12 rounded-full flex justify-center items-center transition-all flex-nowrap";
 
     className += ` ${
       color === "primary"

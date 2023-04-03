@@ -10,14 +10,16 @@ export interface InputBaseProps {
 
 export const InputBase = ({ placeholder, type, icon }: InputBaseProps) => {
   return (
-    <div className="bg-white px-6 flex items-center h-12 justify-between rounded-full ">
+    <div className="bg-white  flex items-center h-12 justify-between rounded-full overflow-hidden relative">
       <input
         placeholder={placeholder}
         type={type}
-        className="w-full placeholder-textGray-dark"
+        className="w-full placeholder-textGray-dark pl-6 pr-14 h-full"
         autoComplete="off"
       />
-      {icon && <div className="ml-4">{icon}</div>}
+      {icon && (
+        <div className="absolute h-full right-0 flex items-center">{icon}</div>
+      )}
     </div>
   );
 };
