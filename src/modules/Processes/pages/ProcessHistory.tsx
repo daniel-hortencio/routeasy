@@ -7,6 +7,7 @@ import { Wrapper } from "../../../shared/components/elements/Wrapper";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
 import { InputSearch } from "../../../shared/components/elements/Inputs/InputSearch";
 import { CardProcessesSummary } from "../components/CardProcessesSummary";
+import { Button } from "../../../shared/components/elements/Button";
 
 export default function ProcessHistory() {
   return (
@@ -30,10 +31,19 @@ export default function ProcessHistory() {
       </Wrapper>
 
       <Wrapper>
-        <Box className="mb-12">
+        <Box className="mb-12 mt-8 flex justify-between items-center">
           <Text as="h1" className="font-extrabold text-2xl">
             Histórico de precessos
           </Text>
+
+          <Box className="w-24">
+            <Button
+              color="primary"
+              text="Filtrar"
+              onClick={() => {}}
+              size="large"
+            />
+          </Box>
         </Box>
       </Wrapper>
     </>
