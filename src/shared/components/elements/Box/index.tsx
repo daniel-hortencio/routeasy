@@ -1,10 +1,17 @@
 import { CSSProperties, ReactNode } from "react";
 
+export type BoxElementType =
+  | "div"
+  | "header"
+  | "nav"
+  | "section"
+  | "footer"
+  | "main";
 interface Props {
   children?: ReactNode;
   className?: string;
   style?: CSSProperties;
-  as?: "div" | "header" | "nav" | "section" | "footer";
+  as?: BoxElementType;
 }
 
 export const Box = ({ children, className, style, as = "div" }: Props) => {
@@ -33,6 +40,11 @@ export const Box = ({ children, className, style, as = "div" }: Props) => {
       <footer style={style} className={className}>
         {children}
       </footer>
+    ),
+    main: (
+      <main style={style} className={className}>
+        {children}
+      </main>
     ),
   };
 

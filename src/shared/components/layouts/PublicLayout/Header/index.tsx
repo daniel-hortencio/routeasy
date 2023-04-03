@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Box } from "../../../elements/Box";
 import { Button } from "../../../elements/Button";
 import { Text } from "../../../elements/Text";
+import { Logo } from "../../../elements/Logo";
 
 interface Props {
   desktopText: string;
@@ -20,15 +21,7 @@ export const PublicLayoutHeader = ({
   return (
     <Box className="fixed flex top-0 left-0 w-full h-20 lg:h-28 backdrop-blur-lg z-20">
       <Box className="w-full max-w-6xl mx-auto flex items-center p-5 justify-between">
-        <Image
-          src="/logos/judit.svg"
-          alt="Logo Judit"
-          width={108}
-          height={108}
-          style={{
-            objectFit: "cover",
-          }}
-        />
+        <Logo color="white" />
         <Box className="w-32 md:hidden">
           <Button
             text={mobileLinkText}

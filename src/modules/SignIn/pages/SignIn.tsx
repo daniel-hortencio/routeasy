@@ -39,7 +39,7 @@ export default function PageSignIn() {
           </InputGroup>
         </Box>
 
-        <Box className="flex items-center mb-6">
+        {/*         <Box className="flex items-center mb-6">
           <Box className="border-b-2 h-1 border-dotted border-textGray-light flex-auto" />
           <Text className="flex-1 text-center text-textGray-light">
             para a sua segurança
@@ -47,9 +47,9 @@ export default function PageSignIn() {
           <Box className="border-b-2 h-1 border-dotted border-textGray-light flex-auto" />
         </Box>
 
-        <Box className="mb-8 test">
+        <Box className="mb-8">
           <p className="bg-white">Recaptcha</p>
-        </Box>
+        </Box> */}
 
         <Button
           text="Acessar minha conta"
