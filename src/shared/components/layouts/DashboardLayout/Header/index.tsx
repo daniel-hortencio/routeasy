@@ -1,10 +1,7 @@
 import { useState, Fragment } from "react";
-import Image from "next/image";
 
-import { Menu, Transition } from "@headlessui/react";
 import { Box } from "../../../elements/Box";
 import { Text } from "../../../elements/Text";
-//import { Button } from "../../../elements/Button";
 import { Logo } from "../../../elements/Logo";
 import { DashboardLayoutNavigation } from "../Navigation";
 import { MenuDropDown } from "../../../elements/MenuDropDown";

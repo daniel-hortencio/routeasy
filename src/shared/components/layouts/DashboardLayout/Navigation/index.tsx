@@ -1,11 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { Box } from "../../../elements/Box";
 import { usePathname } from "next/navigation";
 
 export const DashboardLayoutNavigation = () => {
   const path = usePathname();
-
-  console.log({ path });
 
   return (
     <Box as="nav" className="flex">
