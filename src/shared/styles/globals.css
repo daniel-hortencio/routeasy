@@ -28,3 +28,7 @@ small,
 input {
   color: #252525;
 }
+
+button {
+  cursor: pointer !important;
+}

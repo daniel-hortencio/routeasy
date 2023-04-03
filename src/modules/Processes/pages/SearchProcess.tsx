@@ -7,14 +7,14 @@ import { Wrapper } from "../../../shared/components/elements/Wrapper";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
 import { InputSearch } from "../../../shared/components/elements/Inputs/InputSearch";
 
-export default function ConsultProcess() {
+export default function SearchProcess() {
   return (
     <>
       <DashboardLayoutHeader />
 
       <Wrapper
         as="section"
-        className="flex-auto flex flex-col justify-center pt-36 pb-20"
+        className="flex-auto flex flex-col justify-center pt-16 pb-20"
       >
         <Box className="text-center mb-12">
           <Text
@@ -34,7 +34,7 @@ export default function ConsultProcess() {
           <InputSearch />
         </Box>
 
-        <Box className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <Box className="grid lg:grid-cols-3 gap-8 md:gap-12">
           <Box className="flex items-start">
             <Box className="pt-2">
               <Image

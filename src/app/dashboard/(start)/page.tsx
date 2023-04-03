@@ -1,7 +1,7 @@
 "use client";
 
-import ConsultProcess from "../../../modules/Processes/pages/ConsultProcess";
+import PageSearchProcess from "../../../modules/Processes/pages/SearchProcess";
 
-export default function SignIn() {
-  return <ConsultProcess />;
+export default function SearchProcess() {
+  return <PageSearchProcess />;
 }
