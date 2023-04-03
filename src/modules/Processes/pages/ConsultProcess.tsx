@@ -10,12 +10,7 @@ import { InputSearch } from "../../../shared/components/elements/Inputs/InputSea
 export default function ConsultProcess() {
   return (
     <>
-      <DashboardLayoutHeader
-        desktopLinkText=""
-        desktopText=""
-        linkTo=""
-        mobileLinkText=""
-      />
+      <DashboardLayoutHeader />
 
       <Wrapper
         as="section"
