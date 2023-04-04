@@ -7,8 +7,6 @@ export interface InputBaseProps {
   type?: "text" | "password";
   icon?: ReactNode;
   className?: string;
-  autoFocus?: true;
-  onBlur?: () => void;
 }
 
 export const InputBase = ({
@@ -16,7 +14,6 @@ export const InputBase = ({
   type = "text",
   icon,
   className,
-  onBlur,
 }: InputBaseProps) => {
   return (
     <div
@@ -25,7 +22,6 @@ export const InputBase = ({
       <input
         placeholder={placeholder}
         type={type}
-        onBlur={onBlur}
         className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full`}
         autoComplete="off"
       />

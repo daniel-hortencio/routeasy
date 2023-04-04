@@ -14,12 +14,12 @@ export default function SearchProcess() {
 
       <Wrapper
         as="section"
-        className="flex-auto flex flex-col justify-center pt-16 pb-20"
+        className="flex-auto flex flex-col justify-center pt-8 md:pt-16 pb-20"
       >
-        <Box className="text-center mb-12">
+        <Box className="text-center mb-8 md:mb-12">
           <Text
             as="h1"
-            className="font-extrabold text-2xl md:text-3xl lg:text-5xl mb-8 max-w-lg mx-auto"
+            className="font-extrabold text-2xl md:text-3xl lg:text-5xl mb-5 md:mb-8 max-w-lg mx-auto"
           >
             Consulta processual
           </Text>
@@ -30,13 +30,13 @@ export default function SearchProcess() {
           </Text>
         </Box>
 
-        <Box className="mb-20 max-w-lg mx-auto">
-          <InputSearch />
+        <Box className="mb-12 md:mb-20 max-w-lg mx-auto">
+          <InputSearch placeholder="Pesquisar por número do processo" />
         </Box>
 
         <Box className="grid lg:grid-cols-3 gap-8 md:gap-12">
           <Box className="flex items-start">
-            <Box className="pt-2">
+            <Box className="pt-2 w-10">
               <Image
                 src={`/images/icons/FolderSimpleLock.svg`}
                 alt="Logo Judit"
@@ -44,7 +44,7 @@ export default function SearchProcess() {
                 height={80}
               />
             </Box>
-            <Box className="flex-auto pl-6">
+            <Box className="w-full pl-4 sm:pl-6">
               <Text as="h2" className="font-bold text-xl">
                 Fusce faucibus sodales tellusitt amet
               </Text>
@@ -56,7 +56,7 @@ export default function SearchProcess() {
           </Box>
 
           <Box className="flex items-start">
-            <Box className="pt-2">
+            <Box className="pt-2 w-10">
               <Image
                 src={`/images/icons/Cpu.svg`}
                 alt="Logo Judit"
@@ -64,7 +64,7 @@ export default function SearchProcess() {
                 height={80}
               />
             </Box>
-            <Box className="flex-auto pl-6">
+            <Box className="w-full pl-4 sm:pl-6">
               <Text as="h2" className="font-bold text-xl">
                 Vestibulum maximus laoreet sapien, sed convallis
               </Text>
@@ -76,7 +76,7 @@ export default function SearchProcess() {
           </Box>
 
           <Box className="flex items-start">
-            <Box className="pt-2">
+            <Box className="pt-2 w-10">
               <Image
                 src={`/images/icons/Database.svg`}
                 alt="Logo Judit"
@@ -84,7 +84,7 @@ export default function SearchProcess() {
                 height={80}
               />
             </Box>
-            <Box className="flex-auto pl-6">
+            <Box className="w-full pl-4 sm:pl-6">
               <Text as="h2" className="font-bold text-xl">
                 Duis eros orci, blandit nec dolor ac, fringilla
               </Text>
