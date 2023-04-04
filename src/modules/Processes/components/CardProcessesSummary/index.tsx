@@ -10,12 +10,16 @@ interface Props {
 
 export const CardProcessesSummary = ({ label, filterDays, data }: Props) => {
   return (
-    <Box className="bg-secondary px-6 py-4 rounded-lg">
-      <Box as="header" className="flex justify-between items-center pb-3">
-        <Text>{label}</Text>
+    <Box className="bg-secondary p-2 sm:px-6 sm:py-4 rounded-lg flex flex-col h-32">
+      <Box as="header" className="flex flex-auto justify-between pb-3">
+        <Text className="mr-4">{label}</Text>
         {/* <Text>{filterDays}</Text> */}
 
-        {filterDays && <Select options={filterDays} />}
+        {filterDays && (
+          <Box className="transform -translate-y-2">
+            <Select options={filterDays} />
+          </Box>
+        )}
       </Box>
       <Text className="text-4xl">{data}</Text>
     </Box>

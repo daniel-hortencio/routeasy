@@ -18,9 +18,12 @@ export default function Select({ options }: Props) {
     <Listbox value={selected} onChange={setSelected}>
       {({ open }) => (
         <>
-          <div className="relative mt-2">
+          <div className="relative mt-2 py-0">
             <Listbox.Button className="relative w-full cursor-default rounded-md bg-transparent pr-5 text-right sm:text-sm sm:leading-6">
-              <span className="block truncate font-bold transition-all text-primary hover:text-primaryHover">
+              <span className="block truncate font-bold transition-all text-primary hover:text-primaryHover md:hidden">
+                {selected} D
+              </span>
+              <span className="truncate font-bold transition-all text-primary hover:text-primaryHover hidden md:block">
                 {selected} dias
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-2 flex items-center text-primary">

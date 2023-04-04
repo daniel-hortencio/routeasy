@@ -4,9 +4,9 @@ import { Box, InputSearch } from "../../../shared/components/elements";
 import { Text } from "../../../shared/components/elements";
 import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
-import { CardProcessesSummary } from "../components/CardProcessesSummary";
 import { Button } from "../../../shared/components/elements";
 import { Table } from "../components/Table";
+import ProcessesSummary from "../components/ProcessesSummary";
 
 export default function ProcessHistory() {
   return (
@@ -14,19 +14,7 @@ export default function ProcessHistory() {
       <DashboardLayoutHeader />
 
       <Wrapper as="section" className="justify-center pt-6 pb-12  bg-white">
-        <Box className="grid md:grid-cols-3 gap-8">
-          <CardProcessesSummary label="Em monitoramento" data={100592} />
-          <CardProcessesSummary
-            label="Consultas realizadas"
-            data={19437}
-            filterDays={[30, 60, 90]}
-          />
-          <CardProcessesSummary
-            label="Movimentações"
-            data={286195}
-            filterDays={[30, 60, 90]}
-          />
-        </Box>
+        <ProcessesSummary />
       </Wrapper>
 
       <Wrapper>
