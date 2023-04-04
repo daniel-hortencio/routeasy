@@ -9,7 +9,7 @@ export const TimeLine = () => {
       <Box className="mb-7">
         <Box className="flex items-center mb-5">
           <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-dark uppercase">
+          <Text className="text-textGray-dark uppercase text-sm">
             24/02/2023 · há 13 dias
           </Text>
         </Box>
@@ -93,7 +93,7 @@ export const TimeLine = () => {
       <Box className="mb-7">
         <Box className="flex items-center mb-5">
           <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-dark uppercase">
+          <Text className="text-textGray-dark uppercase text-sm">
             18/01/2023 · mês passado
           </Text>
         </Box>
@@ -115,7 +115,7 @@ export const TimeLine = () => {
                   <>
                     <Box className="flex items-center font-semibold">
                       <Box className="mr-2">
-                        <Icon name="BsFiletypePdf" />
+                        <Icon name="BsFiletypePdf" size={24} />
                       </Box>
                       Despacho.pdf
                     </Box>

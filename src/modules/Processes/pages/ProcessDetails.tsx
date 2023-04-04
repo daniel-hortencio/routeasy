@@ -14,35 +14,52 @@ export default function ProcessDetails() {
       <DashboardLayoutHeader />
 
       <Wrapper as="section" className="justify-center pt-6 pb-12  bg-white">
-        <Box>
-          <Text>Em monitoramento</Text>
-          <Text>Processo nº 0136156-24.2023.8.09.0001</Text>
+        <Box className="mb-9 xl:flex">
+          <Box className="flex-auto mb-5 xl:mb-0">
+            <Box className="flex items-center mb-5 flex-wrap">
+              <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap">
+                Em monitoramento
+              </Text>
+              <Text>Processo nº 0136156-24.2023.8.09.0001</Text>
+            </Box>
 
-          <Text as="h1">CESAR SANTOS x VOLVO BRASIL LTDA</Text>
+            <Text as="h1" className="text-3xl font-bold">
+              CESAR SANTOS x VOLVO BRASIL LTDA
+            </Text>
+          </Box>
+          <Box className="flex">
+            <Box className="w-48">
+              <Button text="Documentos anexos" color="primary" size="large" />
+            </Box>
+            <Box className="ml-5">
+              <Button text={<Icon name="FiRefreshCw" size={20} />} />
+            </Box>
+            <Box className="ml-5">
+              <Button text={<Icon name="CgMore" size={24} />} />
+            </Box>
+          </Box>
+        </Box>
 
-          <Button text="Documentos anexos" color="primary" size="large" />
-          <Button text={<Icon name="FiRefreshCw" size={20} />} />
-          <Button text={<Icon name="CgMore" size={24} />} />
-
-          <Text className="flex items-center">
+        <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center">
+          <Text className="flex items-center md:mr-8">
             <Box className="text-textGray-dark mr-2">
               <Icon name="AiOutlineBank" size={24} />
             </Box>{" "}
             PJE · Rio de Janeiro, RJ
           </Text>
-          <Text className="flex items-center">
+          <Text className="flex items-center md:mr-8">
             <Box className="text-textGray-dark mr-2">
               <Icon name="GiInjustice" size={24} />
             </Box>{" "}
             [CÍVEL] EXECUÇÃO FISCAL
           </Text>
-          <Text className="flex items-center">
+          <Text className="flex items-center md:mr-8">
             <Box className="text-textGray-dark mr-2 rounded-full border-2 border-textGray-dark">
               <Icon name="MdAttachMoney" />
             </Box>{" "}
             Valor da causa: R$ 5.978,19
           </Text>
-          <Text className="flex items-center">
+          <Text className="flex items-center md:mr-8">
             <Box className="opacity-60 mr-2 ">
               <Icon name="GrGroup" size={20} />
             </Box>{" "}
