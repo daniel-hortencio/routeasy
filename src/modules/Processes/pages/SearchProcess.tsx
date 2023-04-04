@@ -45,7 +45,7 @@ export default function SearchProcess() {
               />
             </Box>
             <Box className="w-full pl-4 sm:pl-6">
-              <Text as="h2" className="font-bold text-xl">
+              <Text as="h2" className="font-bold text-lg md:text-xl">
                 Fusce faucibus sodales tellusitt amet
               </Text>
               <Text>
@@ -65,7 +65,7 @@ export default function SearchProcess() {
               />
             </Box>
             <Box className="w-full pl-4 sm:pl-6">
-              <Text as="h2" className="font-bold text-xl">
+              <Text as="h2" className="font-bold text-lg md:text-xl">
                 Vestibulum maximus laoreet sapien, sed convallis
               </Text>
               <Text>
@@ -85,7 +85,7 @@ export default function SearchProcess() {
               />
             </Box>
             <Box className="w-full pl-4 sm:pl-6">
-              <Text as="h2" className="font-bold text-xl">
+              <Text as="h2" className="font-bold text-lg md:text-xl">
                 Duis eros orci, blandit nec dolor ac, fringilla
               </Text>
               <Text>
