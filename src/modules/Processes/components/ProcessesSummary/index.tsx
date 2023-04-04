@@ -6,11 +6,8 @@ import { CardProcessesSummary } from "../CardProcessesSummary";
 import "keen-slider/keen-slider.min.css";
 import "./styles.css";
 import { useKeenSlider } from "keen-slider/react";
-import { isServerSide } from "../../../../shared/hooks/isServerSide";
 
 export default function ProcessesSummary() {
-  const windowWidth = window?.innerWidth || undefined;
-
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       initial: 0,
@@ -22,8 +19,6 @@ export default function ProcessesSummary() {
       // add plugins here
     ]
   );
-
-  console.log({ windowWidth });
 
   return (
     <>
