@@ -6,7 +6,9 @@ export type BoxElementType =
   | "nav"
   | "section"
   | "footer"
-  | "main";
+  | "main"
+  | "ul"
+  | "li";
 interface Props {
   children?: ReactNode;
   className?: string;
@@ -52,6 +54,16 @@ export const Box = ({
       <main onClick={onClick} style={style} className={className}>
         {children}
       </main>
+    ),
+    ul: (
+      <ul onClick={onClick} style={style} className={className}>
+        {children}
+      </ul>
+    ),
+    li: (
+      <li onClick={onClick} style={style} className={className}>
+        {children}
+      </li>
     ),
   };
 
