@@ -14,9 +14,9 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
   const [value, setValue] = useState("");
 
   return (
-    <Box className="relative flex justify-end">
+    <Box className={`relative flex justify-end flex-auto`}>
       <div
-        className={`bg-white  flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-textGray-dark focus-within:text-primary transition-all ${
+        className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-textGray-dark focus-within:text-primary transition-all ${
           variant === "collapsible" && collapsed ? "w-12" : "w-full"
         }`}
       >

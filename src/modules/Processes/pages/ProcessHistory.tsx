@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, InputSearch } from "../../../shared/components/elements";
+import { Box, Icon, InputSearch } from "../../../shared/components/elements";
 import { Text } from "../../../shared/components/elements";
 import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
@@ -18,12 +18,24 @@ export default function ProcessHistory() {
       </Wrapper>
 
       <Wrapper>
-        <Box className="mb-12 mt-8 flex justify-between items-center">
-          <Text as="h1" className="font-extrabold text-2xl">
-            Histórico de precessos
+        <Box className="mb-8 md:mb-12 mt-8 md:flex justify-between items-center">
+          <Text as="h1" className="font-bold text-2xl md:text-3xl mb-4 md:mb-0">
+            Total de 459.235 processos
           </Text>
 
-          <Box className="flex items-center">
+          <Box className="flex items-center md:hidden w-full">
+            <InputSearch />
+
+            <Box className="ml-5">
+              <Button
+                color="primary"
+                text={<Icon name="BiFilterAlt" />}
+                onClick={() => {}}
+              />
+            </Box>
+          </Box>
+
+          <Box className="hidden md:flex md:items-center">
             <InputSearch variant="collapsible" />
 
             <Box className="w-24 ml-5">
