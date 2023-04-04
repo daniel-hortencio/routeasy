@@ -20,7 +20,7 @@ const TableHeader = () => {
 
 const TableRow = () => {
   return (
-    <Box className="TableRow bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14">
+    <Box className="TableRow bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary">
       <Box className="TableRowData p-4 md:p-0">
         <Box className="flex md:items-center">
           <Text>
