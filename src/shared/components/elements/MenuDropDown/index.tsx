@@ -6,6 +6,7 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import { Logo } from "../Logo";
 import Icon from "../Icon";
+import Link from "next/link";
 
 interface Props {
   button: ReactNode;
@@ -34,43 +35,46 @@ export const MenuDropDown = ({ button }: Props) => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="pb-1">
-            <Menu.Item>
-              <Text className="uppercase px-4 pt-3 pb-2 text-sm">
-                Configuração de Conta
-              </Text>
-            </Menu.Item>
+          <Menu.Item>
+            <Text className="uppercase px-4 pt-3 pb-2 text-sm">
+              Configuração de Conta
+            </Text>
+          </Menu.Item>
 
+          <Box className=" py-2">
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "flex items-center px-4 py-2 text-sm"
-                  )}
-                >
-                  <Icon name="FiLock" />
-                  <span className="ml-2">Account settings</span>
-                </a>
+                <Link href="#">
+                  <Text
+                    className={classNames(
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "flex items-center px-4 py-2 text-sm"
+                    )}
+                  >
+                    <Icon name="FiLock" />
+                    <span className="ml-2">Account settings</span>
+                  </Text>
+                </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "flex items-center px-4 py-2 text-sm"
-                  )}
-                >
-                  <Icon name="MdAlternateEmail" />
-                  <span className="ml-2">Support</span>
-                </a>
+                <Link href="#">
+                  <Text
+                    className={classNames(
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "flex items-center px-4 py-2 text-sm"
+                    )}
+                  >
+                    <Icon name="MdAlternateEmail" />
+                    <span className="ml-2">Support</span>
+                  </Text>
+                </Link>
               )}
             </Menu.Item>
+          </Box>
 
-            {/*  <form method="POST" action="#">
+          {/*  <form method="POST" action="#">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -85,15 +89,24 @@ export const MenuDropDown = ({ button }: Props) => {
                 )}
               </Menu.Item>
             </form> */}
-          </div>
 
-          <div className="border-t-2 border-backgroundGray pb-1">
+          <Box className="border-t-2 border-backgroundGray py-2">
             <Menu.Item>
-              <button className="flex items-center px-4 py-2 text-sm">
-                <Icon name="FiLogOut" /> <span className="ml-2">Sair</span>
-              </button>
+              {({ active }) => (
+                <button
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "flex items-center px-4 py-2 text-sm w-full hover:text-red-600"
+                  )}
+                >
+                  <Box className="mr-2">
+                    <Icon name="FiLogOut" />
+                  </Box>
+                  Sair
+                </button>
+              )}
             </Menu.Item>
-          </div>
+          </Box>
         </Menu.Items>
       </Transition>
     </Menu>
