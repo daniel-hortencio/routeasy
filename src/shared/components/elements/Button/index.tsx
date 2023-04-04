@@ -1,8 +1,8 @@
 interface Props {
-  text: string;
+  text: string | JSX.Element;
   size?: "small" | "large";
   color?: "primary" | "secondary";
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Button = ({
@@ -18,7 +18,7 @@ export const Button = ({
     className += ` ${
       color === "primary"
         ? "bg-primary hover:bg-primaryHover text-white "
-        : "bg-secondary"
+        : "bg-secondary text-primary hover:bg-primaryHover hover:text-white "
     }`;
     className += ` ${size === "small" ? "w-12" : "w-full"}`;
 

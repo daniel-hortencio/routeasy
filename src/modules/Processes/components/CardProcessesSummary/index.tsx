@@ -2,7 +2,7 @@ import { Listbox, Transition } from "@headlessui/react";
 
 import { Box } from "../../../../shared/components/elements/Box";
 import { Text } from "../../../../shared/components/elements/Text";
-import Select from "../../../../shared/components/elements/Select";
+import Select from "../Select";
 
 interface Props {
   label: string;

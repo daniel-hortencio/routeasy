@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import { Box } from "../Box";
-import Icon from "../Icon";
+import { Box } from "../../../../shared/components/elements/Box";
+import Icon from "../../../../shared/components/elements/Icon";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

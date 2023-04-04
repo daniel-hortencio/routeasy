@@ -1,6 +1,7 @@
-import { Box } from "../Box";
-import Icon from "../Icon";
-import { Text } from "../Text";
+import Link from "next/link";
+import { Box } from "../../../../shared/components/elements/Box";
+import Icon from "../../../../shared/components/elements/Icon";
+import { Text } from "../../../../shared/components/elements/Text";
 
 import "./styles.css";
 
@@ -37,10 +38,12 @@ const TableRow = () => {
           <Text>0136156-24.2023.8.09.0001</Text>
         </Box>
         <Box className="flex md:items-center">
-          <Text as="span" className="md:hidden font-bold pr-2">
-            Processo:{" "}
+          <Text className="font-bold">
+            <Text as="span" className="md:hidden font-bold pr-2">
+              Processo:{" "}
+            </Text>
+            CESAR SANTOS x VOLVO BRASIL LTDA
           </Text>
-          <Text className="font-bold">CESAR SANTOS x VOLVO BRASIL LTDA</Text>
         </Box>
         <Box className="flex md:items-center">
           <Text as="span" className="md:hidden font-bold pr-2">
@@ -67,17 +70,39 @@ export const Table = () => {
     <Box className="w-full mb-">
       <TableHeader />
 
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
-      <TableRow />
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
+      <Link href="/dashboard/processos/123">
+        <TableRow />
+      </Link>
     </Box>
   );
 };
