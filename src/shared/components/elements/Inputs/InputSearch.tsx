@@ -2,22 +2,44 @@
 
 import { InputBase, InputBaseProps } from "./InputBase";
 import Icon from "../Icon";
+import { useState } from "react";
+import { Box } from "../Box";
 
-interface Props extends InputBaseProps {}
+interface Props extends InputBaseProps {
+  variant?: "fixed" | "collapsible";
+}
 
-export const InputSearch = ({ placeholder }: Props) => {
+export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
+  const [collapsed, setCollapsed] = useState(true);
+  const [value, setValue] = useState("");
+
   return (
-    <InputBase
-      placeholder={placeholder}
-      className="shadow-md text-textGray-dark focus-within:text-primary"
-      icon={
-        <button
-          type="button"
-          className="p-2 m-2  hover:text-primary transition-all"
-        >
-          <Icon name="CgSearch" size={24} />
-        </button>
-      }
-    />
+    <Box className="relative flex justify-end">
+      <div
+        className={`bg-white  flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-textGray-dark focus-within:text-primary transition-all ${
+          variant === "collapsible" && collapsed ? "w-12" : "w-full"
+        }`}
+      >
+        <input
+          placeholder={placeholder}
+          value={value}
+          onBlur={() => {
+            if (variant === "collapsible" && value === "") setCollapsed(true);
+          }}
+          onChange={(e) => setValue(e.target.value)}
+          className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full`}
+          autoComplete="off"
+        />
+        <div className="absolute h-full right-0 flex items-center">
+          <button
+            type="button"
+            className="p-1.5 m-2  hover:text-primary transition-all"
+            onClick={() => setCollapsed(false)}
+          >
+            <Icon name="CgSearch" size={24} />
+          </button>
+        </div>
+      </div>
+    </Box>
   );
 };

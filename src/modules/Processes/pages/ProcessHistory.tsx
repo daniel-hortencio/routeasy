@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "../../../shared/components/elements";
+import { Box, InputSearch } from "../../../shared/components/elements";
 import { Text } from "../../../shared/components/elements";
 import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
@@ -35,13 +35,17 @@ export default function ProcessHistory() {
             Histórico de precessos
           </Text>
 
-          <Box className="w-24">
-            <Button
-              color="primary"
-              text="Filtrar"
-              onClick={() => {}}
-              size="large"
-            />
+          <Box className="flex items-center">
+            <InputSearch variant="collapsible" />
+
+            <Box className="w-24 ml-5">
+              <Button
+                color="primary"
+                text="Filtrar"
+                onClick={() => {}}
+                size="large"
+              />
+            </Box>
           </Box>
         </Box>
 
