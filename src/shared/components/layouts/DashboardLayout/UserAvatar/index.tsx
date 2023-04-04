@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box } from "../../../elements/Box";
+import { Box } from "../../../elements";
 
 interface Props {
   src: string;

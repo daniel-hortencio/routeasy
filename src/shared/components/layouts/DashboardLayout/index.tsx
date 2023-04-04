@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "../../elements/Box";
+import { Box } from "../../elements";
 import { DashboardLayoutFooter } from "./Footer";
 
 export default function DashboardLayout({ children }) {

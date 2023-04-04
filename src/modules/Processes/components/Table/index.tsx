@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Box } from "../../../../shared/components/elements/Box";
-import Icon from "../../../../shared/components/elements/Icon";
-import { Text } from "../../../../shared/components/elements/Text";
+import { Box } from "../../../../shared/components/elements";
+import { Icon } from "../../../../shared/components/elements";
+import { Text } from "../../../../shared/components/elements";
 
 import "./styles.css";
 

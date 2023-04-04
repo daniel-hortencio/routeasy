@@ -1,6 +1,6 @@
-import { Box } from "../../../elements/Box";
-import { Text } from "../../../elements/Text";
-import { Wrapper } from "../../../elements/Wrapper";
+import { Box } from "../../../elements";
+import { Text } from "../../../elements";
+import { Wrapper } from "../../../elements";
 
 export const DashboardLayoutFooter = () => {
   return (

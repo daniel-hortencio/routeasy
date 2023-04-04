@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { Box } from "../../../elements/Box";
-import { Logo } from "../../../elements/Logo";
+import { Box } from "../../../elements";
+import { Logo } from "../../../elements";
 import { MenuMobile, MenuMobileButton } from "../MenuMobile";
 import { MenuDesktop } from "../MenuDesktop";
 

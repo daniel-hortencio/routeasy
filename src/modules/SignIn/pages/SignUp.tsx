@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Box } from "../../../shared/components/elements/Box";
-import { Button } from "../../../shared/components/elements/Button";
+import { Box } from "../../../shared/components/elements";
+import { Button } from "../../../shared/components/elements";
 import {
   InputGroup,
   InputPassword,
   InputText,
-} from "../../../shared/components/elements/Inputs";
-import { Text } from "../../../shared/components/elements/Text";
+} from "../../../shared/components/elements";
+import { Text } from "../../../shared/components/elements";
 import { PublicLayoutHeader } from "../../../shared/components/layouts/PublicLayout/Header";
 
 export default function PageSignUp() {

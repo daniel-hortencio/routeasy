@@ -1,7 +1,5 @@
-import { Listbox, Transition } from "@headlessui/react";
-
-import { Box } from "../../../../shared/components/elements/Box";
-import { Text } from "../../../../shared/components/elements/Text";
+import { Box } from "../../../../shared/components/elements";
+import { Text } from "../../../../shared/components/elements";
 import Select from "../Select";
 
 interface Props {

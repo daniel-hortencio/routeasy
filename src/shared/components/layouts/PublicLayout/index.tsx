@@ -2,7 +2,7 @@
 
 import background from "../../../../../public/images/pictures/background-public-layout.svg";
 import background_gradient from "../../../../../public/images/pictures/background-public-layout-gradient.png";
-import { Box } from "../../elements/Box";
+import { Box } from "../../elements";
 
 export default function PublicLayout({ children }) {
   return (

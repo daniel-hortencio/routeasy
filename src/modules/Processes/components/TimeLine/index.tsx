@@ -1,7 +1,7 @@
-import { Box } from "../../../../shared/components/elements/Box";
-import { Button } from "../../../../shared/components/elements/Button";
-import Icon from "../../../../shared/components/elements/Icon";
-import { Text } from "../../../../shared/components/elements/Text";
+import { Box } from "../../../../shared/components/elements";
+import { Button } from "../../../../shared/components/elements";
+import { Icon } from "../../../../shared/components/elements";
+import { Text } from "../../../../shared/components/elements";
 
 export const TimeLine = () => {
   return (

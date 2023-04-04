@@ -1,11 +1,11 @@
 "use client";
 
-import { Box } from "../../../shared/components/elements/Box";
-import { Text } from "../../../shared/components/elements/Text";
-import { Wrapper } from "../../../shared/components/elements/Wrapper";
+import { Box } from "../../../shared/components/elements";
+import { Text } from "../../../shared/components/elements";
+import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
-import { Button } from "../../../shared/components/elements/Button";
-import Icon from "../../../shared/components/elements/Icon";
+import { Button } from "../../../shared/components/elements";
+import { Icon } from "../../../shared/components/elements";
 import { TimeLine } from "../components/TimeLine";
 
 export default function ProcessDetails() {

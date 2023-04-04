@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction, useState } from "react";
 
-import { Box } from "../../../elements/Box";
-import { Text } from "../../../elements/Text";
+import { Box } from "../../../elements";
+import { Text } from "../../../elements";
 import { DashboardLayoutNavigation } from "../Navigation";
-import { MenuDropDown } from "../../../elements/MenuDropDown";
-import Icon from "../../../elements/Icon";
+import { MenuDropDown } from "../../../elements";
+import { Icon } from "../../../elements";
 import { UserAvatar } from "../UserAvatar";
 
 export const MenuDesktop = () => {

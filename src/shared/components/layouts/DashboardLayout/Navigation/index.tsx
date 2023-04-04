@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Box } from "../../../elements/Box";
+import { Box } from "../../../elements";
 import { usePathname } from "next/navigation";
 
 export const DashboardLayoutNavigation = () => {

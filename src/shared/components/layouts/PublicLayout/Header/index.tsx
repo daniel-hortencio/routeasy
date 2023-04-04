@@ -1,9 +1,7 @@
-import Image from "next/image";
-
-import { Box } from "../../../elements/Box";
-import { Button } from "../../../elements/Button";
-import { Text } from "../../../elements/Text";
-import { Logo } from "../../../elements/Logo";
+import { Box } from "../../../elements";
+import { Button } from "../../../elements";
+import { Text } from "../../../elements";
+import { Logo } from "../../../elements";
 
 interface Props {
   desktopText: string;

@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import { Box } from "../../../shared/components/elements/Box";
-import { Text } from "../../../shared/components/elements/Text";
-import { Wrapper } from "../../../shared/components/elements/Wrapper";
+import { Box } from "../../../shared/components/elements";
+import { Text } from "../../../shared/components/elements";
+import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
-import { InputSearch } from "../../../shared/components/elements/Inputs/InputSearch";
 import { CardProcessesSummary } from "../components/CardProcessesSummary";
-import { Button } from "../../../shared/components/elements/Button";
+import { Button } from "../../../shared/components/elements";
 import { Table } from "../components/Table";
 
 export default function ProcessHistory() {

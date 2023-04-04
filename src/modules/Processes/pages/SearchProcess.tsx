@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Box } from "../../../shared/components/elements/Box";
-import { Text } from "../../../shared/components/elements/Text";
-import { Wrapper } from "../../../shared/components/elements/Wrapper";
+import { Box } from "../../../shared/components/elements";
+import { Text } from "../../../shared/components/elements";
+import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
-import { InputSearch } from "../../../shared/components/elements/Inputs/InputSearch";
+import { InputSearch } from "../../../shared/components/elements";
 
 export default function SearchProcess() {
   return (
