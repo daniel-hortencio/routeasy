@@ -10,7 +10,7 @@ interface Props {
 
 export const CardProcessesSummary = ({ label, filterDays, data }: Props) => {
   return (
-    <Box className="bg-secondary p-2 sm:px-6 sm:py-4 rounded-lg flex flex-col h-32">
+    <Box className="bg-secondary p-4 sm:px-6 rounded-lg flex flex-col h-32">
       <Box as="header" className="flex flex-auto justify-between pb-3">
         <Text className="mr-4">{label}</Text>
         {/* <Text>{filterDays}</Text> */}
