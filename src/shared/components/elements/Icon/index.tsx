@@ -6,6 +6,7 @@ import * as Bi from "react-icons/bi";
 import * as Io from "react-icons/io";
 import * as Bs from "react-icons/bs";
 import * as Hi from "react-icons/hi";
+import * as Ai from "react-icons/ai";
 
 export const AllIcons = {
   ...Fi,
@@ -17,6 +18,7 @@ export const AllIcons = {
   ...Bs,
   ...Hi,
   ...Io,
+  ...Ai,
 };
 
 interface IconProps {

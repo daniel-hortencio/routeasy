@@ -8,6 +8,7 @@ import { DashboardLayoutHeader } from "../../../shared/components/layouts/Dashbo
 import { InputSearch } from "../../../shared/components/elements/Inputs/InputSearch";
 import { CardProcessesSummary } from "../components/CardProcessesSummary";
 import { Button } from "../../../shared/components/elements/Button";
+import { Table } from "../../../shared/components/elements/Table";
 
 export default function ProcessHistory() {
   return (
@@ -45,6 +46,8 @@ export default function ProcessHistory() {
             />
           </Box>
         </Box>
+
+        <Table />
       </Wrapper>
     </>
   );
