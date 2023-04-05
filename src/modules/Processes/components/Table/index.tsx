@@ -72,37 +72,37 @@ export const Table = () => {
     <Box className="w-full mb-">
       <TableHeader />
 
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/1">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
-      <Link href="/dashboard/processos/123">
+      <Link href="/dashboard/processos/2">
         <TableRow />
       </Link>
     </Box>

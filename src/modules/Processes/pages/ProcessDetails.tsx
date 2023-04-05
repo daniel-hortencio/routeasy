@@ -13,10 +13,16 @@ import { ModalProcessDocument } from "../components/ModalProcessDocument";
 import { MenuProcessDocumentOptions } from "../components/MenuProcessDocumentOptions";
 import { ModalCancelMonitoring } from "../components/ModalCancelMonitoring";
 
-export default function ProcessDetails() {
+interface Props {
+  isMonitoring: boolean;
+}
+
+export default function ProcessDetails({ isMonitoring }: Props) {
   const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false);
   const [isOpenModalCancelMonitoring, setIsOpenModalCancelMonitoring] =
     useState(false);
+
+  console.log({ isMonitoring });
 
   return (
     <>
@@ -29,9 +35,15 @@ export default function ProcessDetails() {
         <Box className="mb-9 xl:flex">
           <Box className="flex-auto mb-5 xl:mb-0">
             <Box className="flex items-center mb-5 flex-wrap">
-              <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap">
-                Em monitoramento
-              </Text>
+              {isMonitoring ? (
+                <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap">
+                  Em monitoramento
+                </Text>
+              ) : (
+                <Text className="uppercase p-1 rounded bg-textGray-light text-white text-xs font-medium mr-2 whitespace-nowrap">
+                  MONITORAMENTO DESATIVADO
+                </Text>
+              )}
               <Text>Processo nº 0136156-24.2023.8.09.0001</Text>
             </Box>
 
@@ -54,6 +66,7 @@ export default function ProcessDetails() {
             </Box>
             <Box className="ml-5">
               <MenuProcessDocumentOptions
+                isMonitoring={isMonitoring}
                 cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
                 button={<Button text={<Icon name="CgMore" size={24} />} />}
               />
@@ -131,6 +144,7 @@ export default function ProcessDetails() {
           </Box>
           <Box className="ml-5">
             <MenuProcessDocumentOptions
+              isMonitoring={isMonitoring}
               cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
               button={<Button text={<Icon name="CgMore" size={24} />} />}
             />
@@ -143,13 +157,24 @@ export default function ProcessDetails() {
           <Text as="h2" className="font-extrabold text-2xl mb-4">
             Movimentação processual
           </Text>
-          <Text>
-            Processo monitorado e sincronizado automaticamente a cada 24h com
-            todos os tribunais e Diários Oficiais.
-          </Text>
+          {isMonitoring ? (
+            <Text>
+              "Processo monitorado e sincronizado automaticamente a cada 24h com
+              todos os tribunais e Diários Oficiais."
+            </Text>
+          ) : (
+            <Text>
+              "Este processo teve seu{" "}
+              <Text as="strong" className="font-semibold">
+                monitoramento desativado em 18/02/23 às 18h45,
+              </Text>{" "}
+              por esse motivo as movimentações não estão sincronizadas com todos
+              os tribunais e Diários Oficiais."
+            </Text>
+          )}
         </Box>
 
-        <TimeLine />
+        <TimeLine isMonitoring={isMonitoring} />
       </Wrapper>
     </>
   );

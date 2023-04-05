@@ -3,10 +3,45 @@ import { Button } from "../../../../shared/components/elements";
 import { Icon } from "../../../../shared/components/elements";
 import { Text } from "../../../../shared/components/elements";
 
-export const TimeLine = () => {
+interface Props {
+  isMonitoring: boolean;
+}
+
+export const TimeLine = ({ isMonitoring }: Props) => {
   return (
     <Box>
       <Box className="mb-7">
+        {!isMonitoring && (
+          <>
+            <Box className="flex items-center mb-5">
+              <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
+              <Text className="text-textGray-dark uppercase text-sm">
+                01/04/2023 · HOJE
+              </Text>
+            </Box>
+            <Box className="border-l-2 pl-5 border-dotted border-gray-300">
+              <Box className="bg-white rounded-lg p-4 md:p-6 mb-5 shadow-md">
+                <Text as="h3" className="text-lg font-bold mb-2">
+                  Podem existir novas movimentações
+                </Text>
+                <Text className="mb-6">
+                  Atualize ou volte a monitorar este processo para verificar se
+                  há novas informações em todos os tribunais e Diários Oficiais.
+                </Text>
+
+                <Box className="md:flex">
+                  <Box className="w-52 mr-5 mb-2 md:mb-0">
+                    <Button text="Ativar Processo" size="large" />
+                  </Box>
+                  <Box className="w-56">
+                    <Button text="Ativar Monitoramento" size="large" />
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </>
+        )}
+
         <Box className="flex items-center mb-5">
           <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
           <Text className="text-textGray-dark uppercase text-sm">

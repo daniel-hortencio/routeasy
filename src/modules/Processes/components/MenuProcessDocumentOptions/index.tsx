@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, Fragment, ReactNode } from "react";
 import Link from "next/link";
 
@@ -8,6 +10,7 @@ import Icon from "../../../../shared/components/elements/Icon";
 
 interface Props {
   button: ReactNode;
+  isMonitoring: boolean;
   cancelMonitoring: () => void;
 }
 
@@ -17,6 +20,7 @@ function classNames(...classes) {
 
 export const MenuProcessDocumentOptions = ({
   button,
+  isMonitoring,
   cancelMonitoring,
 }: Props) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -107,20 +111,35 @@ export const MenuProcessDocumentOptions = ({
 
           <Box className="border-t-2 border-backgroundGray py-2">
             <Menu.Item>
-              {({ active }) => (
-                <button
-                  onClick={cancelMonitoring}
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "flex items-center px-4 py-2 text-sm w-full hover:text-red-600"
-                  )}
-                >
-                  <Box className="mr-2">
-                    <Icon name="FiLogOut" />
-                  </Box>
-                  Cancelar monitoramento
-                </button>
-              )}
+              {({ active }) =>
+                isMonitoring ? (
+                  <button
+                    onClick={cancelMonitoring}
+                    className={classNames(
+                      active ? "bg-gray-100 " : "",
+                      "flex items-center px-4 py-2 text-sm w-full text-warning hover:text-red-600"
+                    )}
+                  >
+                    <Box className="mr-2">
+                      <Icon name="FiLogOut" />
+                    </Box>
+                    Cancelar monitoramento
+                  </button>
+                ) : (
+                  <button
+                    onClick={cancelMonitoring}
+                    className={classNames(
+                      active ? "bg-gray-100 " : "",
+                      "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primaryHover"
+                    )}
+                  >
+                    <Box className="mr-2">
+                      <Icon name="FiLogOut" />
+                    </Box>
+                    Ativar monitoramento
+                  </button>
+                )
+              }
             </Menu.Item>
           </Box>
         </Menu.Items>
