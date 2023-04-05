@@ -31,7 +31,7 @@ export const MenuDesktop = () => {
                 leo.rebitte@gmail.com
               </Text>
             </Box>
-            <Box className={`transition-all ${isOpenMenu && "rotate-180"}`}>
+            <Box className={`transition-all ${!isOpenMenu && "rotate-180"}`}>
               <Icon name="IoIosArrowUp" />
             </Box>
           </Box>

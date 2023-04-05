@@ -12,6 +12,7 @@ import Modal from "../../../shared/components/elements/Modal";
 import { ModalProcessDocument } from "../components/ModalProcessDocument";
 import { MenuProcessDocumentOptions } from "../components/MenuProcessDocumentOptions";
 import { ModalCancelMonitoring } from "../components/ModalCancelMonitoring";
+import { MenuPartiesInvolved } from "../components/MenuPartiesInvolved";
 
 interface Props {
   isMonitoring: boolean;
@@ -20,6 +21,8 @@ interface Props {
 export default function ProcessDetails({ isMonitoring }: Props) {
   const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false);
   const [isOpenModalCancelMonitoring, setIsOpenModalCancelMonitoring] =
+    useState(false);
+  const [isOpenMenuPartiesInvolved, setIsOpenMenuPartiesInvolved] =
     useState(false);
 
   console.log({ isMonitoring });
@@ -122,12 +125,25 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             </Box>{" "}
             Valor da causa: R$ 5.978,19
           </Text>
-          <Text className="flex items-center md:mr-8">
-            <Box className="opacity-60 mr-2 ">
-              <Icon name="GrGroup" size={20} />
-            </Box>{" "}
-            5 partes envolvidas
-          </Text>
+
+          <MenuPartiesInvolved
+            onChange={setIsOpenMenuPartiesInvolved}
+            button={
+              <Text className="flex items-center md:mr-8">
+                <Box className="opacity-60 mr-2 ">
+                  <Icon name="GrGroup" size={20} />
+                </Box>{" "}
+                5 partes envolvidas
+                <Box
+                  className={`ml-2 text-textGray-light transition-all ${
+                    !isOpenMenuPartiesInvolved && "rotate-180"
+                  }`}
+                >
+                  <Icon name="IoIosArrowUp" />
+                </Box>
+              </Text>
+            }
+          />
         </Box>
 
         <Box className="flex xl:hidden">

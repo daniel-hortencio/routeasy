@@ -23,8 +23,6 @@ export const MenuProcessDocumentOptions = ({
   isMonitoring,
   cancelMonitoring,
 }: Props) => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
-
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -42,7 +40,9 @@ export const MenuProcessDocumentOptions = ({
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <Menu.Item>
-            <Text className="uppercase px-4 pt-3 pb-2 text-sm">Opções</Text>
+            <Text className="uppercase px-4 pt-3 pb-2 text-sm text-textGray-light">
+              Opções
+            </Text>
           </Menu.Item>
 
           <Box className=" py-2">
