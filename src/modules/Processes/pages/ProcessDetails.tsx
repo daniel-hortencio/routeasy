@@ -22,7 +22,10 @@ export default function ProcessDetails() {
     <>
       <DashboardLayoutHeader />
 
-      <Wrapper as="section" className="justify-center pt-6 pb-12  bg-white">
+      <Wrapper
+        as="section"
+        className="justify-center pt-6 pb-10 xl:pb-12  bg-white"
+      >
         <Box className="mb-9 xl:flex">
           <Box className="flex-auto mb-5 xl:mb-0">
             <Box className="flex items-center mb-5 flex-wrap">
@@ -36,7 +39,8 @@ export default function ProcessDetails() {
               CESAR SANTOS x VOLVO BRASIL LTDA
             </Text>
           </Box>
-          <Box className="flex">
+
+          <Box className="hidden xl:flex">
             <Box className="w-48">
               <Button
                 text="Documentos anexos"
@@ -86,7 +90,7 @@ export default function ProcessDetails() {
           <ModalCancelMonitoring />
         </Modal>
 
-        <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center">
+        <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center mb-8 xl:mb-0">
           <Text className="flex items-center md:mr-8">
             <Box className="text-textGray-dark mr-2">
               <Icon name="AiOutlineBank" size={24} />
@@ -111,6 +115,26 @@ export default function ProcessDetails() {
             </Box>{" "}
             5 partes envolvidas
           </Text>
+        </Box>
+
+        <Box className="flex xl:hidden">
+          <Box className="w-48">
+            <Button
+              text="Documentos anexos"
+              color="primary"
+              size="large"
+              onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
+            />
+          </Box>
+          <Box className="ml-5">
+            <Button text={<Icon name="FiRefreshCw" size={20} />} />
+          </Box>
+          <Box className="ml-5">
+            <MenuProcessDocumentOptions
+              cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
+              button={<Button text={<Icon name="CgMore" size={24} />} />}
+            />
+          </Box>
         </Box>
       </Wrapper>
 
