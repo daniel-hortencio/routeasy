@@ -1,3 +1,5 @@
+"use client";
+
 import { Box } from "../../../../shared/components/elements";
 import { Button } from "../../../../shared/components/elements";
 import { Icon } from "../../../../shared/components/elements";
@@ -78,45 +80,29 @@ export const TimeLine = ({ isMonitoring }: Props) => {
               <Text as="strong" className="font-bold">
                 Proc.
               </Text>{" "}
-              <Text
-                as="span"
-                className="text-primary font-bold hover:text-primaryHover underline"
-              >
-                {" "}
-                0101014-15.2006.8.19.0001{" "}
-              </Text>
+              <span className="font-bold hover:text-primaryHover underline text-primary">
+                0101014-15.2006.8.19.000
+              </span>{" "}
               <Text as="strong" className="font-bold">
                 (2XXX.001.1XX005-5)
               </Text>{" "}
               -{" "}
-              <Text
-                as="span"
-                className="text-primary hover:text-primaryHover underline"
-              >
+              <span className="text-primary hover:text-primaryHover underline">
                 CAIXA DE PREVIDENCIA DOS FUNCIONARIOS DO BANCO DO BRASIL PREVI{" "}
-              </Text>
+              </span>{" "}
               (Adv(s). Dr(a).{" "}
-              <Text
-                as="span"
-                className="text-primary hover:text-primaryHover underline"
-              >
+              <span className="text-primary hover:text-primaryHover underline">
                 ALEXANDRE GHAZI
-              </Text>{" "}
+              </span>{" "}
               (OAB/RJ-070771) X{" "}
-              <Text
-                as="span"
-                className="text-primary hover:text-primaryHover underline"
-              >
+              <span className="text-primary hover:text-primaryHover underline">
                 SERGIO MAURICIO CARNEIRO
-              </Text>{" "}
+              </span>{" "}
               (Adv(s). Dr(a). ERICA CARLA SILVA DE SOUSA ANDRADE
               (OAB/RJ-116306), Dr(a).{" "}
-              <Text
-                as="span"
-                className="text-primary hover:text-primaryHover underline"
-              >
+              <span className="text-primary hover:text-primaryHover underline">
                 RODRIGO LESSA PEREIRA
-              </Text>{" "}
+              </span>{" "}
               (OAB/RJ-131983) Despacho: Cumpra-se o despacho no apenso, sem
               prejuízo junte o exequente cópia da certidão junto ao Registro de
               Imóveis do bem que pretende ver penhorado.

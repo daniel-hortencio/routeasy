@@ -1,5 +1,12 @@
 "use client";
 
+import { Roboto } from "@next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
+
 import "../shared/styles/globals.css";
 
 export default function RootLayout({ children }) {
@@ -10,7 +17,7 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

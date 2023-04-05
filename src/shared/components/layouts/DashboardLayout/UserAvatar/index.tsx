@@ -7,7 +7,7 @@ interface Props {
 
 export const UserAvatar = ({ src }: Props) => {
   return (
-    <Box className="border-2 rounded-full border-primary w-12 h-12 mr-4">
+    <Box className="border-2 transition-all rounded-full w-12 h-12 mr-4 border-transparent UserAvatar">
       <Box className="flex items-center justify-center w-full h-full  rounded-full overflow-hidden border-2 border-white ">
         <Image
           src={src}

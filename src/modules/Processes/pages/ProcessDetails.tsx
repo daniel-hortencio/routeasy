@@ -25,7 +25,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
   console.log({ isMonitoring });
 
   return (
-    <>
+    <Box className="flex-auto">
       <DashboardLayoutHeader />
 
       <Wrapper
@@ -176,6 +176,6 @@ export default function ProcessDetails({ isMonitoring }: Props) {
 
         <TimeLine isMonitoring={isMonitoring} />
       </Wrapper>
-    </>
+    </Box>
   );
 }
