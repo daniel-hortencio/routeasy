@@ -10,6 +10,7 @@ import { TimeLine } from "../components/TimeLine";
 import { useState } from "react";
 import Modal from "../../../shared/components/elements/Modal";
 import { ModalProcessDocument } from "../components/ModalProcessDocument";
+import { MenuProcessDocumentOptions } from "../components/MenuProcessDocumentOptions";
 
 export default function ProcessDetails() {
   const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false);
@@ -45,7 +46,9 @@ export default function ProcessDetails() {
               <Button text={<Icon name="FiRefreshCw" size={20} />} />
             </Box>
             <Box className="ml-5">
-              <Button text={<Icon name="CgMore" size={24} />} />
+              <MenuProcessDocumentOptions
+                button={<Button text={<Icon name="CgMore" size={24} />} />}
+              />
             </Box>
           </Box>
         </Box>
