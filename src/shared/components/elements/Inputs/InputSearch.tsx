@@ -27,7 +27,7 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
             if (variant === "collapsible" && value === "") setCollapsed(true);
           }}
           onChange={(e) => setValue(e.target.value)}
-          className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full`}
+          className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full text-textDefault `}
           autoComplete="off"
         />
         <div className="absolute h-full right-0 flex items-center">

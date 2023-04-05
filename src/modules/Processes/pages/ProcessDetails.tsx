@@ -7,8 +7,13 @@ import { DashboardLayoutHeader } from "../../../shared/components/layouts/Dashbo
 import { Button } from "../../../shared/components/elements";
 import { Icon } from "../../../shared/components/elements";
 import { TimeLine } from "../components/TimeLine";
+import { useState } from "react";
+import Modal from "../../../shared/components/elements/Modal";
+import { ModalProcessDocument } from "../components/ModalProcessDocument";
 
 export default function ProcessDetails() {
+  const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false);
+
   return (
     <>
       <DashboardLayoutHeader />
@@ -29,7 +34,12 @@ export default function ProcessDetails() {
           </Box>
           <Box className="flex">
             <Box className="w-48">
-              <Button text="Documentos anexos" color="primary" size="large" />
+              <Button
+                text="Documentos anexos"
+                color="primary"
+                size="large"
+                onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
+              />
             </Box>
             <Box className="ml-5">
               <Button text={<Icon name="FiRefreshCw" size={20} />} />
@@ -39,6 +49,15 @@ export default function ProcessDetails() {
             </Box>
           </Box>
         </Box>
+
+        <Modal
+          title="Documentos do processo"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum sagittis pharetra. Proin pellentesque urna arcu, ut feugiat tellus porttitor vel."
+          isOpen={isOpenModalDocuments}
+          onClose={() => setIsOpenModalDocuments(false)}
+        >
+          <ModalProcessDocument />
+        </Modal>
 
         <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center">
           <Text className="flex items-center md:mr-8">

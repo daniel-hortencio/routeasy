@@ -15,20 +15,6 @@ input:focus {
   border: solid 1px red !important;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-strong,
-small,
-input {
-  color: #252525;
-}
-
 button {
   cursor: pointer !important;
 }

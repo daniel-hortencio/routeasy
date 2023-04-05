@@ -22,7 +22,7 @@ export const InputBase = ({
       <input
         placeholder={placeholder}
         type={type}
-        className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full`}
+        className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full text-textDefault `}
         autoComplete="off"
       />
       {icon && (

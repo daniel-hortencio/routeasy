@@ -19,7 +19,8 @@ module.exports = {
         textGray: {
           light: "#A7A7A7",
           dark: "#595959"
-        }
+        },
+        textDefault: "#252525"
       },
     },
     plugins: [],
