@@ -5,11 +5,11 @@ import "./styles.css";
 
 const Header = () => {
   return (
-    <Box className="ModalProcessDocument__TableRow mb-4 ">
-      <Text className="text-sm text-textGray-light test">NOME</Text>
-      <Text className="text-sm text-textGray-light test">TAMANHO</Text>
-      <Text className="text-sm text-textGray-light test">DATA</Text>
-      <Box className="w-8 test" />
+    <Box className="hidden md:grid ModalProcessDocument__TableRow mb-4 ">
+      <Text className="text-sm text-textGray-light">NOME</Text>
+      <Text className="text-sm text-textGray-light">TAMANHO</Text>
+      <Text className="text-sm text-textGray-light">DATA</Text>
+      <Box className="w-8" />
     </Box>
   );
 };
@@ -23,24 +23,41 @@ interface RowProps {
 
 const Row = ({ name, size, date, downloadLink }: RowProps) => {
   return (
-    <Box className="ModalProcessDocument__TableRow mb-2">
-      <Text>
-        <Text as="span" className="text-textGray-dark font-medium">
-          {name}
+    <>
+      <Box className="hidden md:grid ModalProcessDocument__TableRow mb-2">
+        <Text className="flex items-center">
+          <Text className="text-textGray-light mr-2">
+            <Icon name="BsFiletypePdf" size={20} />
+          </Text>
+          <Text as="span" className="text-textGray-dark font-medium">
+            {name}
+          </Text>
         </Text>
-      </Text>
-      <Text className="text-textGray-dark test">{size}</Text>
-      <Text className="text-textGray-dark test">{date}</Text>
+        <Text className="text-textGray-dark">{size}</Text>
+        <Text className="text-textGray-dark">{date}</Text>
 
-      <Box className="flex justify-center transform -translate-y-2 test">
+        <Box className="flex justify-center transform -translate-y-2">
+          <a
+            href={downloadLink}
+            className="flex justify-center items-center w-8 h-8  transition-all text-primary hover:text-primaryHover"
+          >
+            <Icon name="FiDownload" size={16} />
+          </a>
+        </Box>
+      </Box>
+
+      <Box className="md:hidden flex items-center mb-">
+        <Text className="text-textGray-light mr-2">
+          <Icon name="BsFiletypePdf" size={20} />
+        </Text>
         <a
           href={downloadLink}
-          className="flex justify-center items-center w-8 h-8  transition-all text-primary hover:text-primaryHover"
+          className=" text-primary hover:text-primaryHover font-medium"
         >
-          <Icon name="FiDownload" size={16} />
+          {name}
         </a>
       </Box>
-    </Box>
+    </>
   );
 };
 
@@ -81,15 +98,19 @@ export const ModalProcessDocument = () => {
       </Box>
 
       <Box>
-        <Box className="flex items-center w-full justify-between mb-4">
-          <Box className="flex items-center">
+        <Box className="md:flex items-center w-full justify-between mb-6">
+          <Box className="flex items-center justify-start mb-4 md:mb-0">
             <Text className="text-xl font-bold">Todos os documentos</Text>
             <button className="ml-2 text-textGray-light">
               <Icon name="IoIosArrowDown" size={20} />
             </button>
           </Box>
           <Box className="w-64">
-            <Button text="Baixar todos os documentos" size="large" />
+            <Button
+              text="Baixar todos os documentos"
+              size="large"
+              height="low"
+            />
           </Box>
         </Box>
 
