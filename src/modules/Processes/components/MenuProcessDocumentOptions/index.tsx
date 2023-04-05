@@ -8,13 +8,17 @@ import Icon from "../../../../shared/components/elements/Icon";
 
 interface Props {
   button: ReactNode;
+  cancelMonitoring: () => void;
 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const MenuProcessDocumentOptions = ({ button }: Props) => {
+export const MenuProcessDocumentOptions = ({
+  button,
+  cancelMonitoring,
+}: Props) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   return (
@@ -105,6 +109,7 @@ export const MenuProcessDocumentOptions = ({ button }: Props) => {
             <Menu.Item>
               {({ active }) => (
                 <button
+                  onClick={cancelMonitoring}
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                     "flex items-center px-4 py-2 text-sm w-full hover:text-red-600"

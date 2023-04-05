@@ -13,8 +13,11 @@ module.exports = {
       colors: {
         backgroundBlack: "#1E1E1E",
         backgroundGray: "#F4F4F4",
+        backgroundGrayLight: "#EAEAEA",
         primary: "#15BE62",
         primaryHover: "#09A751",
+        warning: "#BF0905",
+        warningHover: "#A61311",
         secondary: "#E7F4EE",
         textGray: {
           light: "#A7A7A7",
@@ -22,6 +25,9 @@ module.exports = {
         },
         textDefault: "#252525"
       },
+      borderWidth: {
+        1: "1px"
+      }
     },
     plugins: [],
   }

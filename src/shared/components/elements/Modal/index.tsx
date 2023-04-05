@@ -13,6 +13,7 @@ interface Props {
   onClose: () => void;
   headerAlign?: "left" | "center" | "right";
   children: ReactNode;
+  footer?: ReactNode;
 }
 
 export default function Modal({
@@ -22,6 +23,7 @@ export default function Modal({
   onClose,
   description,
   children,
+  footer,
 }: Props) {
   const cancelButtonRef = useRef(null);
 
@@ -56,28 +58,40 @@ export default function Modal({
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:max-w-screen-md p-8 rounded-3xl ">
-                <Dialog.Title as="h3">
-                  <button
-                    type="button"
-                    className="absolute top-2 right-2 p-0.5 text-textGray-light hover:text-primary transition-all"
-                    onClick={onClose}
-                    ref={cancelButtonRef}
-                  >
-                    <Icon name="IoIosClose" size={32} />
-                  </button>
-                  <Box as="header">
-                    <Text
-                      className={`font-bold text-2xl mb-4 text-${headerAlign}`}
+              <Dialog.Panel className="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:max-w-screen-md rounded-3xl ">
+                <Box className="p-8 ">
+                  <Dialog.Title as="h3">
+                    <button
+                      type="button"
+                      className="absolute top-2 right-2 p-0.5 text-textGray-light hover:text-primary transition-all"
+                      onClick={onClose}
+                      ref={cancelButtonRef}
                     >
-                      {title}
-                    </Text>
+                      <Icon name="IoIosClose" size={32} />
+                    </button>
+                    <Box as="header">
+                      <Text
+                        className={`font-bold text-2xl mb-4 text-${headerAlign}`}
+                      >
+                        {title}
+                      </Text>
 
-                    <Text className={`text-${headerAlign}`}>{description}</Text>
+                      <Text className={`text-${headerAlign}`}>
+                        {description}
+                      </Text>
+                    </Box>
+                  </Dialog.Title>
+
+                  <Box className="pt-6">{children}</Box>
+                </Box>
+                {footer && (
+                  <Box
+                    as="footer"
+                    className="p-8 border-t-1 border-backgroundGrayLight"
+                  >
+                    {footer}
                   </Box>
-                </Dialog.Title>
-
-                <Box className="pt-6">{children}</Box>
+                )}
               </Dialog.Panel>
             </Transition.Child>
           </div>

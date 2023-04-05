@@ -11,9 +11,12 @@ import { useState } from "react";
 import Modal from "../../../shared/components/elements/Modal";
 import { ModalProcessDocument } from "../components/ModalProcessDocument";
 import { MenuProcessDocumentOptions } from "../components/MenuProcessDocumentOptions";
+import { ModalCancelMonitoring } from "../components/ModalCancelMonitoring";
 
 export default function ProcessDetails() {
   const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false);
+  const [isOpenModalCancelMonitoring, setIsOpenModalCancelMonitoring] =
+    useState(false);
 
   return (
     <>
@@ -47,6 +50,7 @@ export default function ProcessDetails() {
             </Box>
             <Box className="ml-5">
               <MenuProcessDocumentOptions
+                cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
                 button={<Button text={<Icon name="CgMore" size={24} />} />}
               />
             </Box>
@@ -60,6 +64,26 @@ export default function ProcessDetails() {
           onClose={() => setIsOpenModalDocuments(false)}
         >
           <ModalProcessDocument />
+        </Modal>
+
+        <Modal
+          headerAlign="center"
+          title="Tem certeza que deseja continuar?"
+          description="Você está prestes a cancelar o monitoramento automático deste Processo Judicial, antes de continuar avalie o histórico do período monitorado:"
+          isOpen={isOpenModalCancelMonitoring}
+          onClose={() => setIsOpenModalCancelMonitoring(false)}
+          footer={
+            <Box className="grid gap-3 md:gap-5 md:grid-cols-2 md:w-3/4 mx-auto">
+              <Button text="Manter monitoramento" size="large" />
+              <Button
+                text="Cancelar monitoramento"
+                size="large"
+                color="warning"
+              />
+            </Box>
+          }
+        >
+          <ModalCancelMonitoring />
         </Modal>
 
         <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center">
