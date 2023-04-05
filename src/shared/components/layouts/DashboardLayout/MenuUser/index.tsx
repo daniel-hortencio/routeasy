@@ -1,4 +1,4 @@
-import { useState, Fragment, ReactNode } from "react";
+import { useState, Fragment, ReactNode, Dispatch, SetStateAction } from "react";
 import Image from "next/image";
 
 import { Menu, Transition } from "@headlessui/react";
@@ -9,15 +9,14 @@ import Link from "next/link";
 
 interface Props {
   button: ReactNode;
+  onChange: Dispatch<SetStateAction<boolean>>;
 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const MenuUser = ({ button }: Props) => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
-
+export const MenuUser = ({ button, onChange }: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -32,6 +31,8 @@ export const MenuUser = ({ button }: Props) => {
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
+        beforeEnter={() => onChange(true)}
+        beforeLeave={() => onChange(false)}
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <Menu.Item>
@@ -42,19 +43,23 @@ export const MenuUser = ({ button }: Props) => {
 
           <Box className=" py-2">
             <Menu.Item>
-              {({ active }) => (
-                <Link href="#">
-                  <Text
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm"
-                    )}
-                  >
-                    <Icon name="FiLock" />
-                    <span className="ml-2">Account settings</span>
-                  </Text>
-                </Link>
-              )}
+              {({ active }) => {
+                console.log({ active });
+
+                return (
+                  <Link href="#">
+                    <Text
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "flex items-center px-4 py-2 text-sm"
+                      )}
+                    >
+                      <Icon name="FiLock" />
+                      <span className="ml-2">Account settings</span>
+                    </Text>
+                  </Link>
+                );
+              }}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (

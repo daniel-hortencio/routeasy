@@ -9,7 +9,7 @@ export const DashboardLayoutFooter = () => {
         <Text className="text-sm text-textGray-light">
           2023 © Judit.io · Todos os direitos reservados
         </Text>
-        <Text className="text-sm text-textGray-light">
+        <Text className="text-sm text-textGray-dark">
           Termos de uso · Política de privacidade · Cookies
         </Text>
       </Box>
