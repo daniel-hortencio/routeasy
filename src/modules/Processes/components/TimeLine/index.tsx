@@ -145,7 +145,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
               desapensei o mencionado processo para remete-los ao arquivo.
             </Text>
 
-            <Box className="w-52">
+            <Box className="w-52 max-w-full">
               <Button
                 size="large"
                 text={
