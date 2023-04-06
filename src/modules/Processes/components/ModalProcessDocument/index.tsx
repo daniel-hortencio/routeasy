@@ -65,21 +65,26 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
 };
 
 export const ModalProcessDocument = () => {
-  const [showLastPublications, setShowLastPublications] = useState(false);
+  const [showLastPublications, setShowLastPublications] = useState(true);
   const [showAllDocuments, setShowAllDocuments] = useState(false);
 
   return (
     <Box>
       <Box className="mb-9">
-        <Box className="flex items-center w-full mb-7">
-          <Text className="text-xl font-bold">Últimas publicações</Text>
+        <Box className="w-full mb-7">
           <button
             onClick={() => setShowLastPublications(!showLastPublications)}
-            className={`ml-2 text-textGray-light fill-textGray-light hover:fill-primary transition-all ${
-              showLastPublications && "rotate-180"
-            }`}
+            className={`flex items-center text-textGray-light fill-textGray-light hover:fill-primary`}
           >
-            <Icon name="CaretDown" size={20} />
+            <Text className="text-xl font-bold mr-2">Últimas publicações</Text>
+
+            <Box
+              className={`transition-all ${
+                showLastPublications && "rotate-180"
+              }`}
+            >
+              <Icon name="CaretDown" size={20} />
+            </Box>
           </button>
         </Box>
 
@@ -112,18 +117,22 @@ export const ModalProcessDocument = () => {
 
       <Box>
         <Box className="md:flex items-center w-full justify-between mb-6">
-          <Box className="flex items-center justify-start mb-4 md:mb-0">
-            <Text className="text-xl font-bold">Todos os documentos</Text>
+          <Box className="justify-start mb-4 md:mb-0">
             <button
               onClick={() => setShowAllDocuments(!showAllDocuments)}
-              className={`ml-2 text-textGray-light fill-textGray-light hover:fill-primary transition-all ${
-                showAllDocuments && "rotate-180"
-              }`}
+              className={`flex items-center text-textGray-light fill-textGray-light hover:fill-primary`}
             >
-              <Icon name="CaretDown" size={20} />
+              <Text className="text-xl font-bold mr-2">
+                Todos os documentos
+              </Text>
+              <Box
+                className={`transition-all ${showAllDocuments && "rotate-180"}`}
+              >
+                <Icon name="CaretDown" size={20} />
+              </Box>
             </button>
           </Box>
-          <Box className="w-64">
+          <Box className="hidden md:flex w-52">
             <Button
               text="Baixar todos os documentos"
               size="large"
