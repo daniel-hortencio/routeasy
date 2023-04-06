@@ -7,12 +7,12 @@ import { InputSearch } from "../../../shared/components/elements";
 
 export default function SearchProcess() {
   return (
-    <Box className="flex-auto">
+    <Box className="flex-auto flex items-center justify-center">
       <DashboardLayoutHeader />
 
       <Wrapper
         as="section"
-        className="flex flex-col justify-center pt-8 md:pt-16 pb-20"
+        className="flex flex-col justify-center items-center pt-8 md:pt-16 pb-20"
       >
         <Box className="text-center mb-8 md:mb-12">
           <Text

@@ -131,10 +131,8 @@ export const MenuProcessDocumentOptions = ({
                       "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primaryHover fill-primary hover:fill-primaryHover"
                     )}
                   >
-                    <Box className="mr-2">
-                      <Icon name="Broadcast" />
-                    </Box>
-                    Ativar monitoramento
+                    <Icon name="Broadcast" />
+                    <span className="ml-2">Ativar monitoramento</span>
                   </button>
                 )
               }
