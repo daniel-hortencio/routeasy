@@ -8,13 +8,17 @@ import "./styles.css";
 const TableHeader = () => {
   return (
     <Box className="TableHeader p-1 md:pl-4">
-      <Box className="uppercase text-textGray-dark text-sm pb-4">
+      <Box className="uppercase text-textGray-light text-sm pb-4">
         Atualizado em:
       </Box>
-      <Box className="uppercase text-textGray-dark text-sm pb-4">Número:</Box>
-      <Box className="uppercase text-textGray-dark text-sm pb-4">Processo:</Box>
-      <Box className="uppercase text-textGray-dark text-sm pb-4">Tribunal:</Box>
-      <Box className="uppercase text-textGray-dark text-sm pb-4">Tipo:</Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">Número:</Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">
+        Processo:
+      </Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">
+        Tribunal:
+      </Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">Tipo:</Box>
     </Box>
   );
 };
@@ -41,7 +45,9 @@ const TableRow = () => {
       </Box>
 
       <Box as="ul" className="md:hidden p-4">
-        <Text className="font-bold mb-2">CESAR SANTOS x VOLVO BRASIL LTDA</Text>
+        <Text className="font-bold mb-2 text-lg">
+          CESAR SANTOS x VOLVO BRASIL LTDA
+        </Text>
         <Text className="flex items-center">
           <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
           Atualizado em 05/03/23 às 15h38
@@ -60,7 +66,7 @@ const TableRow = () => {
         </Text>
       </Box>
 
-      <Box className="bg-secondary fill-primary rounded-md flex items-center justify-center h-full">
+      <Box className="bg-secondary fill-primary rounded-md flex items-center justify-center h-full transition-all TableRow__IconFolder">
         <Icon name="FolderSimple" size={24} />
       </Box>
     </Box>

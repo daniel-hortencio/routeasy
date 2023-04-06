@@ -27,7 +27,13 @@ module.exports = {
       },
       borderWidth: {
         1: "1px"
+      },
+      fontSize: {
+        '28px': ['1.75rem', '2.25rem']
       }
+
+
+
     },
     plugins: [],
   }

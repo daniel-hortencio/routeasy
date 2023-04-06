@@ -19,12 +19,15 @@ export default function ProcessHistory() {
 
       <Wrapper>
         <Box className="mb-8 md:mb-12 mt-8 md:flex justify-between items-center">
-          <Text as="h1" className="font-bold text-2xl md:text-3xl mb-4 md:mb-0">
+          <Text
+            as="h1"
+            className="font-bold text-2xl md:text-28px mb-4 md:mb-0"
+          >
             Total de 459.235 processos
           </Text>
 
           <Box className="flex items-center md:hidden w-full">
-            <InputSearch />
+            <InputSearch placeholder="Pesquisar Processo" />
 
             <Box className="ml-5">
               <Button
@@ -36,7 +39,10 @@ export default function ProcessHistory() {
           </Box>
 
           <Box className="hidden md:flex md:items-center">
-            <InputSearch variant="collapsible" />
+            <InputSearch
+              variant="collapsible"
+              placeholder="Pesquisar Processo"
+            />
 
             <Box className="w-24 ml-5">
               <Button

@@ -4,6 +4,11 @@
   grid-template-columns: 1fr 3rem;
 }
 
+.TableRow:hover .TableRow__IconFolder {
+  fill: white;
+  background: #15be62;
+}
+
 .TableHeader {
   display: none;
 }
