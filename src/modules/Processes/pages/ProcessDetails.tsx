@@ -35,17 +35,17 @@ export default function ProcessDetails({ isMonitoring }: Props) {
       >
         <Box className="mb-9 lg:flex">
           <Box className="flex-auto mb-5 lg:mb-0">
-            <Box className="flex items-center mb-5 flex-wrap">
+            <Box className="md:flex md:items-center mb-5 md:flex-wrap">
               {isMonitoring ? (
-                <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap">
+                <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap w-min mb-3 md:mb-0">
                   Em monitoramento
                 </Text>
               ) : (
-                <Text className="uppercase p-1 rounded bg-textGray-light text-white text-xs font-medium mr-2 whitespace-nowrap">
+                <Text className="uppercase p-1 rounded bg-textGray-light text-white text-xs font-medium mr-2 whitespace-nowrap w-min mb-3 md:mb-0">
                   MONITORAMENTO DESATIVADO
                 </Text>
               )}
-              <Text className="text-textGray-dark">
+              <Text className="text-textGray-dark mt-0.5 md:mt-0">
                 Processo nº 0136156-24.2023.8.09.0001
               </Text>
             </Box>
