@@ -146,8 +146,8 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           />
         </Box>
 
-        <Box className="flex xl:hidden">
-          <Box className="w-48">
+        <Box className="flex flex-wrap xl:hidden">
+          <Box className="w-48 mb-5 mr-5">
             <Button
               text="Documentos anexos"
               color="primary"
@@ -155,7 +155,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
             />
           </Box>
-          <Box className="ml-5">
+          <Box className="">
             <Button text={<Icon name="ArrowsClockwise" size={20} />} />
           </Box>
           <Box className="ml-5">
