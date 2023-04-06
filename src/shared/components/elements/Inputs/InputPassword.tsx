@@ -17,12 +17,9 @@ export const InputPassword = ({ placeholder }: Props) => {
         <button
           type="button"
           onClick={() => setShowPassword(!showPassword)}
-          className="p-2 m-2 hover:text-primary transition-all"
+          className="p-2 m-2 hover:fill-primary transition-all"
         >
-          <Icon
-            name={showPassword ? "HiOutlineEye" : "HiOutlineEyeOff"}
-            size={24}
-          />
+          <Icon name={showPassword ? "Eye" : "EyeSlash"} size={24} />
         </button>
       }
     />

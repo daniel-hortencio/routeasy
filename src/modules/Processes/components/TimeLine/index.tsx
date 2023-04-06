@@ -17,7 +17,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
           <>
             <Box className="flex items-center mb-5">
               <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-              <Text className="text-textGray-dark uppercase text-sm">
+              <Text className="text-textGray-light uppercase text-sm">
                 01/04/2023 · HOJE
               </Text>
             </Box>
@@ -33,10 +33,26 @@ export const TimeLine = ({ isMonitoring }: Props) => {
 
                 <Box className="md:flex">
                   <Box className="w-52 mr-5 mb-2 md:mb-0">
-                    <Button text="Ativar Processo" size="large" />
+                    <Button
+                      text={
+                        <Box className="flex items-center">
+                          <Icon size={28} name="ClockClockwise" />
+                          <span className="ml-3">Ativar Processo</span>
+                        </Box>
+                      }
+                      size="large"
+                    />
                   </Box>
-                  <Box className="w-56">
-                    <Button text="Ativar Monitoramento" size="large" />
+                  <Box className="w-64">
+                    <Button
+                      text={
+                        <Box className="flex items-center">
+                          <Icon size={28} name="Broadcast" />{" "}
+                          <span className="ml-3">Ativar Monitoramento</span>
+                        </Box>
+                      }
+                      size="large"
+                    />
                   </Box>
                 </Box>
               </Box>
@@ -46,7 +62,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
 
         <Box className="flex items-center mb-5">
           <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-dark uppercase text-sm">
+          <Text className="text-textGray-light uppercase text-sm">
             24/02/2023 · há 13 dias
           </Text>
         </Box>

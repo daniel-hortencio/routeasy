@@ -26,9 +26,9 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
     <>
       <Box className="hidden md:grid ModalProcessDocument__TableRow mb-2">
         <Text className="flex items-center">
-          <Text className="text-textGray-light mr-2">
-            <Icon name="BsFiletypePdf" size={20} />
-          </Text>
+          <Box className="fill-textGray-light mr-2">
+            <Icon name="FilePdf" size={20} />
+          </Box>
           <Text as="span" className="text-textGray-dark font-medium">
             {name}
           </Text>
@@ -39,17 +39,17 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
         <Box className="flex justify-center transform -translate-y-2">
           <a
             href={downloadLink}
-            className="flex justify-center items-center w-8 h-8  transition-all text-primary hover:text-primaryHover"
+            className="flex justify-center items-center w-8 h-8  transition-all fill-primary hover:fill-primaryHover"
           >
-            <Icon name="FiDownload" size={16} />
+            <Icon name="DownloadSimple" />
           </a>
         </Box>
       </Box>
 
       <Box className="md:hidden flex items-center mb-2">
-        <Text className="text-textGray-light mr-2">
-          <Icon name="BsFiletypePdf" size={20} />
-        </Text>
+        <Box className="fill-BoxGray-light mr-2">
+          <Icon name="FilePdf" size={20} />
+        </Box>
         <a
           href={downloadLink}
           className=" text-primary hover:text-primaryHover font-medium"
@@ -67,8 +67,8 @@ export const ModalProcessDocument = () => {
       <Box className="mb-9">
         <Box className="flex items-center w-full mb-7">
           <Text className="text-xl font-bold">Últimas publicações</Text>
-          <button className="ml-2 text-textGray-light">
-            <Icon name="IoIosArrowDown" size={20} />
+          <button className="ml-2 text-textGray-light fill-textGray-light">
+            <Icon name="CaretDown" size={20} />
           </button>
         </Box>
 
@@ -101,8 +101,8 @@ export const ModalProcessDocument = () => {
         <Box className="md:flex items-center w-full justify-between mb-6">
           <Box className="flex items-center justify-start mb-4 md:mb-0">
             <Text className="text-xl font-bold">Todos os documentos</Text>
-            <button className="ml-2 text-textGray-light">
-              <Icon name="IoIosArrowDown" size={20} />
+            <button className="ml-2 text-textGray-light fill-textGray-light">
+              <Icon name="CaretDown" size={20} />
             </button>
           </Box>
           <Box className="w-64">

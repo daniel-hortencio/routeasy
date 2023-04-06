@@ -128,11 +128,11 @@ export const MenuProcessDocumentOptions = ({
                     onClick={cancelMonitoring}
                     className={classNames(
                       active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primaryHover"
+                      "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primaryHover fill-primary hover:fill-primaryHover"
                     )}
                   >
                     <Box className="mr-2">
-                      <Icon name="FiLogOut" />
+                      <Icon name="Broadcast" />
                     </Box>
                     Ativar monitoramento
                   </button>

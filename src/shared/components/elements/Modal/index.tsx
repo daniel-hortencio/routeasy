@@ -63,11 +63,11 @@ export default function Modal({
                   <Dialog.Title as="h3">
                     <button
                       type="button"
-                      className="absolute top-2 right-2 p-0.5 text-textGray-light hover:text-primary transition-all"
+                      className="absolute top-5 right-5 p-0.5 fill-textGray-light hover:fill-primary transition-all"
                       onClick={onClose}
                       ref={cancelButtonRef}
                     >
-                      <Icon name="IoIosClose" size={32} />
+                      <Icon name="X" />
                     </button>
                     <Box as="header">
                       <Text
