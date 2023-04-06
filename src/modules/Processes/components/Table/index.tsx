@@ -25,7 +25,7 @@ const TableHeader = () => {
 
 const TableRow = () => {
   return (
-    <Box className="TableRow bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
+    <Box className="TableRow shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
       <Box className="hidden TableRowData md:grid p-4 md:p-0">
         <Box className="flex items-center">
           <Text>05/03/23 às 15h38</Text>
