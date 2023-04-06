@@ -17,7 +17,7 @@ export const MenuMobileIcon = ({ isOpen, onChange }: Props) => {
       className="h-full flex items-center"
       onClick={() => onChange(!isOpen)}
     >
-      <Icon name={isOpen ? "List" : "X"} size={32} />
+      <Icon name={isOpen ? "X" : "List"} size={32} />
     </button>
   );
 };
