@@ -51,10 +51,10 @@ export const MenuUser = ({ button, onChange }: Props) => {
                     <Text
                       className={classNames(
                         active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm"
+                        "flex items-center px-4 py-2 text-sm fill-textGray-light"
                       )}
                     >
-                      <Icon name="FiLock" />
+                      <Icon name="LockSimple" />
                       <span className="ml-2">Account settings</span>
                     </Text>
                   </Link>
@@ -67,10 +67,10 @@ export const MenuUser = ({ button, onChange }: Props) => {
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm"
+                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
                     )}
                   >
-                    <Icon name="MdAlternateEmail" />
+                    <Icon name="At" />
                     <span className="ml-2">Support</span>
                   </Text>
                 </Link>
@@ -99,12 +99,12 @@ export const MenuUser = ({ button, onChange }: Props) => {
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "flex items-center px-4 py-2 text-sm w-full hover:text-red-600"
+                    active ? "bg-gray-100 " : "",
+                    "flex items-center px-4 py-2 text-sm w-full text-warning hover:text-warningHover fill-warning hover:fill-warningHover"
                   )}
                 >
                   <Box className="mr-2">
-                    <Icon name="FiLogOut" />
+                    <Icon name="SignOut" />
                   </Box>
                   Sair
                 </button>
