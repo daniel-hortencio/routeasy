@@ -155,10 +155,10 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
             />
           </Box>
-          <Box className="">
+          <Box className="mr-5">
             <Button text={<Icon name="ArrowsClockwise" size={20} />} />
           </Box>
-          <Box className="ml-5">
+          <Box>
             <MenuProcessDocumentOptions
               isMonitoring={isMonitoring}
               cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
