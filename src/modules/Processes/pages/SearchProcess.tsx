@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box } from "../../../shared/components/elements";
+import { Box, Icon } from "../../../shared/components/elements";
 import { Text } from "../../../shared/components/elements";
 import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
@@ -34,14 +34,13 @@ export default function SearchProcess() {
 
         <Box className="grid lg:grid-cols-3 gap-8 md:gap-12">
           <Box className="flex items-start">
-            <Box className="pt-2 w-10">
-              <Image
-                src={`/images/icons/FolderSimpleLock.svg`}
-                alt="Logo Judit"
-                width={80}
-                height={80}
-              />
+            <Box className="pt-2 w-10 fill-primary relative">
+              <Box className="absolute w-9 h-9 bg-secondary -top-1 -left-3 rounded-full" />
+              <Box className="relative z-10">
+                <Icon name="FolderSimple" size={36} />
+              </Box>
             </Box>
+
             <Box className="w-full pl-4 sm:pl-6">
               <Text as="h2" className="font-bold text-lg md:text-xl mb-2 ">
                 Fusce faucibus sodales tellusitt amet
@@ -54,14 +53,13 @@ export default function SearchProcess() {
           </Box>
 
           <Box className="flex items-start">
-            <Box className="pt-2 w-10">
-              <Image
-                src={`/images/icons/Cpu.svg`}
-                alt="Logo Judit"
-                width={80}
-                height={80}
-              />
+            <Box className="pt-2 w-10 fill-primary relative">
+              <Box className="absolute w-9 h-9 bg-secondary -top-1 -left-3 rounded-full" />
+              <Box className="relative z-10">
+                <Icon name="Cpu" size={36} />
+              </Box>
             </Box>
+
             <Box className="w-full pl-4 sm:pl-6">
               <Text as="h2" className="font-bold text-lg md:text-xl mb-2">
                 Vestibulum maximus laoreet sapien, sed convallis
@@ -74,14 +72,13 @@ export default function SearchProcess() {
           </Box>
 
           <Box className="flex items-start">
-            <Box className="pt-2 w-10">
-              <Image
-                src={`/images/icons/Database.svg`}
-                alt="Logo Judit"
-                width={80}
-                height={80}
-              />
+            <Box className="pt-2 w-10 fill-primary relative">
+              <Box className="absolute w-9 h-9 bg-secondary -top-1 -left-3 rounded-full" />
+              <Box className="relative z-10">
+                <Icon name="Database" size={36} />
+              </Box>
             </Box>
+
             <Box className="w-full pl-4 sm:pl-6">
               <Text as="h2" className="font-bold text-lg md:text-xl mb-2">
                 Duis eros orci, blandit nec dolor ac, fringilla
