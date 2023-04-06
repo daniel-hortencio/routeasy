@@ -20,21 +20,22 @@ button {
 }
 
 /* width */
-/* ::-webkit-scrollbar {
-  width: 10px;
-} */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
 /* Track */
-/* ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-} */
+::-webkit-scrollbar-track {
+  background: #eaeaea;
+}
 
 /* Handle */
-/* ::-webkit-scrollbar-thumb {
-  background: #888;
-} */
+::-webkit-scrollbar-thumb {
+  background: #15be62;
+  border-radius: 4px;
+}
 
 /* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} */
+::-webkit-scrollbar-thumb:hover {
+  background: #09a751;
+}
