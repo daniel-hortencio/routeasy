@@ -138,7 +138,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
                 5 partes envolvidas
                 <Box
                   className={`ml-2 fill-textGray-light transition-all ${
-                    !isOpenMenuPartiesInvolved && "rotate-180"
+                    isOpenMenuPartiesInvolved && "rotate-180"
                   }`}
                 >
                   <Icon name="CaretDown" />
@@ -178,18 +178,18 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             Movimentação processual
           </Text>
           {isMonitoring ? (
-            <Text>
-              "Processo monitorado e sincronizado automaticamente a cada 24h com
-              todos os tribunais e Diários Oficiais."
+            <Text className="text-textGray-dark">
+              Processo monitorado e sincronizado automaticamente a cada 24h com
+              todos os tribunais e Diários Oficiais.
             </Text>
           ) : (
-            <Text>
-              "Este processo teve seu{" "}
-              <Text as="strong" className="font-semibold">
+            <Text className="text-textGray-dark">
+              Este processo teve seu{" "}
+              <Text as="strong" className="font-semibold text-textGray-dark">
                 monitoramento desativado em 18/02/23 às 18h45,
               </Text>{" "}
               por esse motivo as movimentações não estão sincronizadas com todos
-              os tribunais e Diários Oficiais."
+              os tribunais e Diários Oficiais.
             </Text>
           )}
         </Box>

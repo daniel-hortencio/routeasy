@@ -26,7 +26,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                 <Text as="h3" className="text-lg font-bold mb-2">
                   Podem existir novas movimentações
                 </Text>
-                <Text className="mb-6">
+                <Text className="mb-6 text-textGray-dark">
                   Atualize ou volte a monitorar este processo para verificar se
                   há novas informações em todos os tribunais e Diários Oficiais.
                 </Text>
@@ -71,7 +71,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             <Text as="h3" className="text-lg font-bold mb-2">
               Andamento
             </Text>
-            <Text>
+            <Text className="text-textGray-dark">
               Cumpra-se o despacho no apenso, sem prejuízo junte o exequente
               cópia da certidão junto ao Registro de Imóveis do bem que pretende
               ver penhorado.
@@ -92,7 +92,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             </Text>
             <Text>Expediente do Dia: 26/01/2023</Text>
             <Text>Execução de Título Extrajudicial - Cpc</Text>
-            <Text>
+            <Text className="text-textGray-dark">
               <Text as="strong" className="font-bold">
                 Proc.
               </Text>{" "}
@@ -139,7 +139,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             <Text as="h3" className="text-lg font-bold mb-2">
               Andamento
             </Text>
-            <Text className="mb-5">
+            <Text className="mb-5 text-textGray-dark">
               Certifico, que trasladei cópias conforme determinado no despacho
               de fls. 944 dos autos em apenso. 0059693-63/2007, bem como
               desapensei o mencionado processo para remete-los ao arquivo.
