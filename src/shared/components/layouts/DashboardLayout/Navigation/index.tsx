@@ -28,8 +28,8 @@ export const DashboardLayoutNavigation = () => {
       ].map((item, index) => (
         <Box
           key={item.href}
-          className={`h-28 flex items-center border-spacing-2 ${
-            item.isActive() && "border-b-2 border-primary"
+          className={`h-28 flex items-center border-spacing-2 border-b-2 ${
+            item.isActive() ? "border-primary" : "border-transparent"
           } ${index > 0 && "ml-10"}`}
         >
           <Link href={item.href} className="text-textDefault">
