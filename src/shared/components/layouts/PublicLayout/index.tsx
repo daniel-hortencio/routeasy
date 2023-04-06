@@ -7,7 +7,7 @@ import { Box } from "../../elements";
 export default function PublicLayout({ children }) {
   return (
     <Box
-      className="bg-backgroundBlack w-full min-h-screen overflow-x-hidden overflow-y-auto"
+      className="bg-backgroundBlack flex items-center w-full min-h-screen overflow-x-hidden overflow-y-auto"
       style={{
         backgroundImage: `url(${background_gradient.src})`,
         backgroundPosition: "left bottom",
