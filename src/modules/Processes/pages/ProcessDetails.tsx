@@ -129,7 +129,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           <MenuPartiesInvolved
             onChange={setIsOpenMenuPartiesInvolved}
             button={
-              <Text className="flex items-center md:mr-8">
+              <Text className="flex items-center md:mr-8 text-left">
                 <Box className="opacity-60 mr-2 fill-textGray-light">
                   <Icon name="UsersThree" size={24} />
                 </Box>{" "}
