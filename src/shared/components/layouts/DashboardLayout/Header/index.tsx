@@ -5,6 +5,8 @@ import { Logo } from "../../../elements";
 import { MenuMobile, MenuMobileButton } from "../MenuMobile";
 import { MenuDesktop } from "../MenuDesktop";
 
+import "./styles.css";
+
 interface Props {}
 
 export const DashboardLayoutHeader = ({}: Props) => {
@@ -12,7 +14,7 @@ export const DashboardLayoutHeader = ({}: Props) => {
 
   return (
     <Box>
-      <Box className="fixed flex top-0 left-0 w-full h-20 lg:h-28 z-20 backdrop-blur-md">
+      <Box className="DashboardLayoutHeader fixed flex top-0 left-0 w-full h-20 lg:h-28 z-20 backdrop-blur-md">
         <Box className="w-full max-w-6xl mx-auto flex items-center p-5 justify-between border-b-2 border-backgroundGray">
           <Logo color="black" />
 
