@@ -11,6 +11,7 @@ interface Props {
   description: string;
   isOpen: boolean;
   onClose: () => void;
+  showButtonClose?: boolean;
   headerAlign?: "left" | "center" | "right";
   children: ReactNode;
   footer?: ReactNode;
@@ -21,6 +22,7 @@ export default function Modal({
   isOpen,
   headerAlign = "left",
   onClose,
+  showButtonClose = true,
   description,
   children,
   footer,
@@ -61,14 +63,16 @@ export default function Modal({
               <Dialog.Panel className="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:max-w-screen-md rounded-3xl ">
                 <Box className="p-8 ">
                   <Dialog.Title as="h3">
-                    <button
-                      type="button"
-                      className="absolute top-5 right-5 p-0.5 fill-textGray-light hover:fill-primary transition-all"
-                      onClick={onClose}
-                      ref={cancelButtonRef}
-                    >
-                      <Icon name="X" />
-                    </button>
+                    {showButtonClose && (
+                      <button
+                        type="button"
+                        className="absolute top-5 right-5 p-0.5 fill-textGray-light hover:fill-primary transition-all"
+                        onClick={onClose}
+                        ref={cancelButtonRef}
+                      >
+                        <Icon name="X" />
+                      </button>
+                    )}
                     <Box as="header">
                       <Text
                         className={`font-bold text-2xl mb-4 text-${headerAlign}`}
@@ -76,7 +80,9 @@ export default function Modal({
                         {title}
                       </Text>
 
-                      <Text className={`text-${headerAlign}`}>
+                      <Text
+                        className={`text-${headerAlign} text-textGray-dark`}
+                      >
                         {description}
                       </Text>
                     </Box>

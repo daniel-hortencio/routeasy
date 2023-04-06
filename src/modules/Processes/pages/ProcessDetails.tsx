@@ -94,6 +94,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           description="Você está prestes a cancelar o monitoramento automático deste Processo Judicial, antes de continuar avalie o histórico do período monitorado:"
           isOpen={isOpenModalCancelMonitoring}
           onClose={() => setIsOpenModalCancelMonitoring(false)}
+          showButtonClose={false}
           footer={
             <Box className="grid gap-3 md:gap-5 md:grid-cols-2 md:w-3/4 mx-auto">
               <Button text="Manter monitoramento" size="large" />
