@@ -45,7 +45,9 @@ export default function ProcessDetails({ isMonitoring }: Props) {
                   MONITORAMENTO DESATIVADO
                 </Text>
               )}
-              <Text>Processo nº 0136156-24.2023.8.09.0001</Text>
+              <Text className="text-textGray-dark">
+                Processo nº 0136156-24.2023.8.09.0001
+              </Text>
             </Box>
 
             <Text as="h1" className="text-3xl font-bold">
@@ -107,20 +109,20 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         </Modal>
 
         <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center mb-8 xl:mb-0">
-          <Text className="flex items-center md:mr-8">
-            <Box className="text-textGray-dark mr-2 fill-textGray-light">
+          <Text className="flex items-center md:mr-8 text-textGray-dark">
+            <Box className="mr-2 fill-textGray-light">
               <Icon name="Bank" size={24} />
             </Box>{" "}
             PJE · Rio de Janeiro, RJ
           </Text>
-          <Text className="flex items-center md:mr-8">
-            <Box className="text-textGray-dark mr-2 fill-textGray-light">
+          <Text className="flex items-center md:mr-8 text-textGray-dark">
+            <Box className="mr-2 fill-textGray-light">
               <Icon name="Scales" size={24} />
             </Box>{" "}
             [CÍVEL] EXECUÇÃO FISCAL
           </Text>
-          <Text className="flex items-center md:mr-8">
-            <Box className="text-textGray-dark mr-2  fill-textGray-light">
+          <Text className="flex items-center md:mr-8 text-textGray-dark">
+            <Box className="mr-2  fill-textGray-light">
               <Icon name="CurrencyCircleDollar" size={24} />
             </Box>{" "}
             Valor da causa: R$ 5.978,19
@@ -129,7 +131,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           <MenuPartiesInvolved
             onChange={setIsOpenMenuPartiesInvolved}
             button={
-              <Text className="flex items-center md:mr-8 text-left">
+              <Text className="flex items-center md:mr-8 text-left text-textGray-dark">
                 <Box className="opacity-60 mr-2 fill-textGray-light">
                   <Icon name="UsersThree" size={24} />
                 </Box>{" "}

@@ -62,7 +62,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
 
         <Box className="flex items-center mb-5">
           <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-light uppercase text-sm">
+          <Text className="text-textGray-light uppercase text-sm tracking-2px">
             24/02/2023 · há 13 dias
           </Text>
         </Box>
@@ -130,7 +130,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
       <Box className="mb-7">
         <Box className="flex items-center mb-5">
           <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-dark uppercase text-sm">
+          <Text className="text-textGray-dark uppercase text-sm tracking-2px">
             18/01/2023 · mês passado
           </Text>
         </Box>

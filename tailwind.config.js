@@ -30,6 +30,9 @@ module.exports = {
       },
       fontSize: {
         '28px': ['1.75rem', '2.25rem']
+      },
+      letterSpacing: {
+        '2px': '0.125em'
       }
 
 
