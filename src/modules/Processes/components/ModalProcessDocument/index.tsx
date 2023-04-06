@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Box, Button, Icon } from "../../../../shared/components/elements";
 import { Text } from "../../../../shared/components/elements";
 
@@ -62,46 +65,61 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
 };
 
 export const ModalProcessDocument = () => {
+  const [showLastPublications, setShowLastPublications] = useState(false);
+  const [showAllDocuments, setShowAllDocuments] = useState(false);
+
   return (
     <Box>
       <Box className="mb-9">
         <Box className="flex items-center w-full mb-7">
           <Text className="text-xl font-bold">Últimas publicações</Text>
-          <button className="ml-2 text-textGray-light fill-textGray-light">
+          <button
+            onClick={() => setShowLastPublications(!showLastPublications)}
+            className={`ml-2 text-textGray-light fill-textGray-light hover:fill-primary transition-all ${
+              showLastPublications && "rotate-180"
+            }`}
+          >
             <Icon name="CaretDown" size={20} />
           </button>
         </Box>
 
-        <Box className="bg-backgroundGray rounded-lg p-5">
-          <Box>
-            <Header />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="150kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="Extrato mensal (ABR/22).xls"
-              size="1.9MB"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="Apresentação de negócios.doc"
-              size="849kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
+        {showLastPublications ? (
+          <Box className="bg-backgroundGray rounded-lg p-5">
+            <Box>
+              <Header />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="150kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="Extrato mensal (ABR/22).xls"
+                size="1.9MB"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="Apresentação de negócios.doc"
+                size="849kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+            </Box>
           </Box>
-        </Box>
+        ) : null}
       </Box>
 
       <Box>
         <Box className="md:flex items-center w-full justify-between mb-6">
           <Box className="flex items-center justify-start mb-4 md:mb-0">
             <Text className="text-xl font-bold">Todos os documentos</Text>
-            <button className="ml-2 text-textGray-light fill-textGray-light">
+            <button
+              onClick={() => setShowAllDocuments(!showAllDocuments)}
+              className={`ml-2 text-textGray-light fill-textGray-light hover:fill-primary transition-all ${
+                showAllDocuments && "rotate-180"
+              }`}
+            >
               <Icon name="CaretDown" size={20} />
             </button>
           </Box>
@@ -114,65 +132,67 @@ export const ModalProcessDocument = () => {
           </Box>
         </Box>
 
-        <Box className="bg-backgroundGray rounded-lg p-5">
-          <Box>
-            <Header />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="150kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="1.9MB"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="Extrato mensal (ABR/22).xls"
-              size="849kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="150kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="1.9MB"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="Extrato mensal (ABR/22).xls"
-              size="849kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="150kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="092231 - Despacho urgente.pdf"
-              size="1.9MB"
-              date="18/03/2023"
-              downloadLink="#"
-            />
-            <Row
-              name="Extrato mensal (ABR/22).xls"
-              size="849kb"
-              date="18/03/2023"
-              downloadLink="#"
-            />
+        {showAllDocuments && (
+          <Box className="bg-backgroundGray rounded-lg p-5">
+            <Box>
+              <Header />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="150kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="1.9MB"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="Extrato mensal (ABR/22).xls"
+                size="849kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="150kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="1.9MB"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="Extrato mensal (ABR/22).xls"
+                size="849kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="150kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="092231 - Despacho urgente.pdf"
+                size="1.9MB"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+              <Row
+                name="Extrato mensal (ABR/22).xls"
+                size="849kb"
+                date="18/03/2023"
+                downloadLink="#"
+              />
+            </Box>
           </Box>
-        </Box>
+        )}
       </Box>
     </Box>
   );

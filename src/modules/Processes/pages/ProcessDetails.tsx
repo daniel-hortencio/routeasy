@@ -25,8 +25,6 @@ export default function ProcessDetails({ isMonitoring }: Props) {
   const [isOpenMenuPartiesInvolved, setIsOpenMenuPartiesInvolved] =
     useState(false);
 
-  console.log({ isMonitoring });
-
   return (
     <Box className="flex-auto">
       <DashboardLayoutHeader />

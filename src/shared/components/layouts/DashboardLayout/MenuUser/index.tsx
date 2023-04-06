@@ -44,8 +44,6 @@ export const MenuUser = ({ button, onChange }: Props) => {
           <Box className=" py-2">
             <Menu.Item>
               {({ active }) => {
-                console.log({ active });
-
                 return (
                   <Link href="#">
                     <Text
