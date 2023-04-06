@@ -9,16 +9,12 @@ const TableHeader = () => {
   return (
     <Box className="TableHeader p-1 md:pl-4">
       <Box className="uppercase text-textGray-light text-sm pb-4">
-        Atualizado em:
+        Atualizado em
       </Box>
-      <Box className="uppercase text-textGray-light text-sm pb-4">Número:</Box>
-      <Box className="uppercase text-textGray-light text-sm pb-4">
-        Processo:
-      </Box>
-      <Box className="uppercase text-textGray-light text-sm pb-4">
-        Tribunal:
-      </Box>
-      <Box className="uppercase text-textGray-light text-sm pb-4">Tipo:</Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">Número</Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">Processo</Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">Tribunal</Box>
+      <Box className="uppercase text-textGray-light text-sm pb-4">Tipo</Box>
     </Box>
   );
 };
