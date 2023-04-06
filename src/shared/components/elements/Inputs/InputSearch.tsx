@@ -16,7 +16,7 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
   return (
     <Box className={`relative flex justify-end flex-auto`}>
       <div
-        className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-textGray-dark fill-textGray-dark focus-within:text-primary focus-within:fill-primary transition-all ${
+        className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-textGray-dark fill-primary focus-within:fill-primaryHover transition-all ${
           variant === "collapsible" && collapsed ? "w-12" : "w-full"
         }`}
       >
@@ -33,7 +33,7 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
         <div className="absolute h-full right-0 flex items-center">
           <button
             type="button"
-            className="p-1.5 m-2  hover:text-primary transition-all "
+            className="p-1.5 m-2  transition-all "
             onClick={() => setCollapsed(false)}
           >
             <Icon name="MagnifyingGlass" size={24} />
