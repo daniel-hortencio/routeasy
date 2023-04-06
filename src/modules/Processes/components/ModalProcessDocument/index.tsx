@@ -49,8 +49,8 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
         </Box>
       </Box>
 
-      <Box className="md:hidden flex items-center mb-2">
-        <Box className="fill-BoxGray-light mr-2">
+      <Box className="md:hidden flex mb-2">
+        <Box className="fill-textGray-light mr-2 pt-1px">
           <Icon name="FilePdf" size={20} />
         </Box>
         <a

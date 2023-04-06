@@ -36,7 +36,11 @@ module.exports = {
       },
       height: {
         '30px': "1.875rem"
+      },
+      padding: {
+        '1px': '1px',
       }
+
     },
     plugins: [],
   }

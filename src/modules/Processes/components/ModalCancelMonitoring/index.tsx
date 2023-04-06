@@ -37,7 +37,7 @@ export const ModalCancelMonitoring = () => {
         </Box>
       </Box>
 
-      <Text className="text-textGray-dark">
+      <Text className="text-textGray-dark text-center">
         Após o cancelamento, as movimentações processuais não serão mais
         sincronizadas com todos os tribunais e Diários Oficiais.
       </Text>
