@@ -36,8 +36,8 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                     <Button
                       text={
                         <Box className="flex items-center">
-                          <Icon size={28} name="ClockClockwise" />
-                          <span className="ml-3">Ativar Processo</span>
+                          <Icon size={28} name="ArrowsClockwise" />
+                          <span className="ml-3">Atualizar processo</span>
                         </Box>
                       }
                       size="large"

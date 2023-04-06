@@ -35,7 +35,7 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
         beforeEnter={() => onChange(true)}
         beforeLeave={() => onChange(false)}
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-96 max-w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-80 max-w-full md:max-w-none origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
           <Box className="border-b-1 backgroundGrayLight">
             <Menu.Item>
               <Text className="uppercase px-4 pt-3 text-sm text-textGray-light">

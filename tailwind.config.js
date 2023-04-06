@@ -33,10 +33,7 @@ module.exports = {
       },
       letterSpacing: {
         '2px': '0.125em'
-      }
-
-
-
+      },
     },
     plugins: [],
   }
