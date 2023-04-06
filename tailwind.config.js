@@ -34,6 +34,9 @@ module.exports = {
       letterSpacing: {
         '2px': '0.125em'
       },
+      height: {
+        '30px': "1.875rem"
+      }
     },
     plugins: [],
   }

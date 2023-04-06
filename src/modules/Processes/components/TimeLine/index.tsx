@@ -32,22 +32,24 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                 </Text>
 
                 <Box className="md:flex">
-                  <Box className="w-52 mr-5 mb-2 md:mb-0">
+                  <Box className="w-52 max-w-full mr-5 mb-2 md:mb-0">
                     <Button
+                      className="text-sm h-30px md:text-base md:h-12"
                       text={
                         <Box className="flex items-center">
-                          <Icon size={28} name="ArrowsClockwise" />
+                          <Icon name="ArrowsClockwise" />
                           <span className="ml-3">Atualizar processo</span>
                         </Box>
                       }
                       size="large"
                     />
                   </Box>
-                  <Box className="w-64">
+                  <Box className="w-60 max-w-full">
                     <Button
+                      className="text-sm h-30px md:text-base md:h-12"
                       text={
                         <Box className="flex items-center">
-                          <Icon size={28} name="Broadcast" />{" "}
+                          <Icon name="Broadcast" />{" "}
                           <span className="ml-3">Ativar Monitoramento</span>
                         </Box>
                       }
@@ -148,11 +150,12 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             <Box className="w-52 max-w-full">
               <Button
                 size="large"
+                className="text-sm h-30px md:text-base md:h-12"
                 text={
                   <>
                     <Box className="flex items-center font-semibold">
                       <Box className="mr-2">
-                        <Icon name="FilePdf" size={24} />
+                        <Icon name="FilePdf" />
                       </Box>
                       Despacho.pdf
                     </Box>

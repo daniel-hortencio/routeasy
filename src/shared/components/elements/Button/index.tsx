@@ -4,6 +4,7 @@ interface Props {
   height?: "low" | "high";
   color?: "primary" | "secondary" | "warning";
   onClick?: () => void;
+  className?: string;
 }
 
 export const Button = ({
@@ -12,6 +13,7 @@ export const Button = ({
   color = "secondary",
   height = "high",
   onClick,
+  className,
 }: Props) => {
   function getClassName() {
     const color_schemes = {
@@ -21,14 +23,15 @@ export const Button = ({
       warning: "bg-warning hover:bg-warningHover text-white",
     };
 
-    let className =
+    let classNameScheme =
       " rounded-full flex justify-center items-center transition-all flex-nowrap";
 
-    className += ` ${color_schemes[color]}`;
-    className += ` ${height === "high" ? "h-12" : "h-8 text-sm"}`;
-    className += ` ${size === "small" ? "w-12" : "w-full"}`;
+    classNameScheme += ` ${color_schemes[color]}`;
+    classNameScheme += ` ${height === "high" ? "h-12" : "h-8 text-sm"}`;
+    classNameScheme += ` ${size === "small" ? "w-12" : "w-full"}`;
+    classNameScheme += ` ${className}`;
 
-    return className;
+    return classNameScheme;
   }
 
   return (
