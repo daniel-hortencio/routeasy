@@ -1,64 +1,15 @@
-import * as Fa from "react-icons/fa";
-import * as Md from "react-icons/md";
-import * as Fi from "react-icons/fi";
-import * as Cg from "react-icons/cg";
-import * as Bi from "react-icons/bi";
-import * as Io from "react-icons/io";
-import * as Bs from "react-icons/bs";
-import * as Hi from "react-icons/hi";
-import * as Ai from "react-icons/ai";
-import * as Tb from "react-icons/tb";
-import * as Gi from "react-icons/gi";
-import * as Gr from "react-icons/gr";
-
-export const AllIcons = {
-  ...Fi,
-  ...Md,
-  ...Fa,
-  ...Cg,
-  ...Bi,
-  ...Io,
-  ...Bs,
-  ...Hi,
-  ...Io,
-  ...Ai,
-  ...Tb,
-  ...Gi,
-  ...Gr,
-};
-
-interface IconProps {
-  name: string;
+import * as PhosphorIcons from "@phosphor-icons/react";
+import { IconName } from "./types";
+interface IconTest {
+  name: IconName;
   size?: number;
   color?: string;
-  hoverColor?: string;
 }
 
-const Icon = ({ name, size, color = "" }: IconProps) => {
-  const RIcon = AllIcons[name as keyof typeof AllIcons]
-    ? AllIcons[name as keyof typeof AllIcons]
-    : AllIcons["FaRegWindowClose"];
+const Icon = ({ name, size = 20, color = "" }: IconTest) => {
+  const PhIcon = PhosphorIcons[name] || PhosphorIcons["XSquare"];
 
-  return <RIcon size={size} color={color} />;
-};
-
-export const getAllIcons = (searchName = "") => {
-  let icons: string[] = [];
-
-  if (searchName.length <= 2) return [];
-
-  for (let key in AllIcons) {
-    if (searchName) {
-      const { name = "" } = AllIcons[key as keyof typeof AllIcons];
-      if (name.toLowerCase().includes(searchName.toLowerCase())) {
-        icons.push(AllIcons[key as keyof typeof AllIcons].name);
-      }
-    } else {
-      icons.push(AllIcons[key as keyof typeof AllIcons].name);
-    }
-  }
-
-  return icons;
+  return <PhIcon size={size} color={color} />;
 };
 
 export default Icon;

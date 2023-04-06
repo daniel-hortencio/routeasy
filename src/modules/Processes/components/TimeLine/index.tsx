@@ -136,7 +136,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                   <>
                     <Box className="flex items-center font-semibold">
                       <Box className="mr-2">
-                        <Icon name="BsFiletypePdf" size={24} />
+                        <Icon name="FilePdf" size={24} />
                       </Box>
                       Despacho.pdf
                     </Box>

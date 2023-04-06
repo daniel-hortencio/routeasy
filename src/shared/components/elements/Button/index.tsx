@@ -15,9 +15,9 @@ export const Button = ({
 }: Props) => {
   function getClassName() {
     const color_schemes = {
-      primary: "bg-primary hover:bg-primaryHover text-white",
+      primary: "bg-primary hover:bg-primaryHover text-white fill-white",
       secondary:
-        "bg-secondary text-primary hover:bg-primaryHover hover:text-white",
+        "bg-secondary text-primary fill-primary hover:bg-primaryHover hover:fill-white hover:text-white",
       warning: "bg-warning hover:bg-warningHover text-white",
     };
 

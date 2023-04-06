@@ -65,13 +65,15 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               />
             </Box>
             <Box className="ml-5">
-              <Button text={<Icon name="FiRefreshCw" size={20} />} />
+              <Button text={<Icon name="ArrowsClockwise" size={24} />} />
             </Box>
             <Box className="ml-5">
               <MenuProcessDocumentOptions
                 isMonitoring={isMonitoring}
                 cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
-                button={<Button text={<Icon name="CgMore" size={24} />} />}
+                button={
+                  <Button text={<Icon name="DotsThreeOutline" size={26} />} />
+                }
               />
             </Box>
           </Box>
@@ -108,20 +110,20 @@ export default function ProcessDetails({ isMonitoring }: Props) {
 
         <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center mb-8 xl:mb-0">
           <Text className="flex items-center md:mr-8">
-            <Box className="text-textGray-dark mr-2">
-              <Icon name="AiOutlineBank" size={24} />
+            <Box className="text-textGray-dark mr-2 fill-textGray-light">
+              <Icon name="Bank" size={24} />
             </Box>{" "}
             PJE · Rio de Janeiro, RJ
           </Text>
           <Text className="flex items-center md:mr-8">
-            <Box className="text-textGray-dark mr-2">
-              <Icon name="GiInjustice" size={24} />
+            <Box className="text-textGray-dark mr-2 fill-textGray-light">
+              <Icon name="Scales" size={24} />
             </Box>{" "}
             [CÍVEL] EXECUÇÃO FISCAL
           </Text>
           <Text className="flex items-center md:mr-8">
-            <Box className="text-textGray-dark mr-2 rounded-full border-2 border-textGray-dark">
-              <Icon name="MdAttachMoney" />
+            <Box className="text-textGray-dark mr-2  fill-textGray-light">
+              <Icon name="CurrencyCircleDollar" size={24} />
             </Box>{" "}
             Valor da causa: R$ 5.978,19
           </Text>
@@ -130,16 +132,16 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             onChange={setIsOpenMenuPartiesInvolved}
             button={
               <Text className="flex items-center md:mr-8">
-                <Box className="opacity-60 mr-2 ">
-                  <Icon name="GrGroup" size={20} />
+                <Box className="opacity-60 mr-2 fill-textGray-light">
+                  <Icon name="UsersThree" size={24} />
                 </Box>{" "}
                 5 partes envolvidas
                 <Box
-                  className={`ml-2 text-textGray-light transition-all ${
+                  className={`ml-2 fill-textGray-light transition-all ${
                     !isOpenMenuPartiesInvolved && "rotate-180"
                   }`}
                 >
-                  <Icon name="IoIosArrowUp" />
+                  <Icon name="CaretDown" />
                 </Box>
               </Text>
             }
@@ -156,13 +158,15 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             />
           </Box>
           <Box className="ml-5">
-            <Button text={<Icon name="FiRefreshCw" size={20} />} />
+            <Button text={<Icon name="ArrowsClockwise" size={20} />} />
           </Box>
           <Box className="ml-5">
             <MenuProcessDocumentOptions
               isMonitoring={isMonitoring}
               cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
-              button={<Button text={<Icon name="CgMore" size={24} />} />}
+              button={
+                <Button text={<Icon name="DotsThreeOutline" size={24} />} />
+              }
             />
           </Box>
         </Box>

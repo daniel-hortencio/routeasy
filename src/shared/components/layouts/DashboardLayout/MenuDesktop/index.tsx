@@ -31,8 +31,12 @@ export const MenuDesktop = () => {
                 leo.rebitte@gmail.com
               </Text>
             </Box>
-            <Box className={`transition-all ${!isOpenMenu && "rotate-180"}`}>
-              <Icon name="IoIosArrowUp" />
+            <Box
+              className={`transition-all fill-textGray-light ${
+                !isOpenMenu && "rotate-180"
+              }`}
+            >
+              <Icon name="CaretDown" />
             </Box>
           </Box>
         }

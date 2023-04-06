@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Fragment, ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import Link from "next/link";
 
 import { Menu, Transition } from "@headlessui/react";
@@ -52,10 +52,10 @@ export const MenuProcessDocumentOptions = ({
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm"
+                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
                     )}
                   >
-                    <Icon name="BsFiletypeJson" />
+                    <Icon name="CodeBlock" />
                     <span className="ml-2">Exportar JSON</span>
                   </Text>
                 </Link>
@@ -67,10 +67,10 @@ export const MenuProcessDocumentOptions = ({
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm"
+                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
                     )}
                   >
-                    <Icon name="BsFiletypePdf" />
+                    <Icon name="FilePdf" />
                     <span className="ml-2">Exportar PDF</span>
                   </Text>
                 </Link>
@@ -82,10 +82,10 @@ export const MenuProcessDocumentOptions = ({
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm"
+                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
                     )}
                   >
-                    <Icon name="BsPrinter" />
+                    <Icon name="Printer" />
                     <span className="ml-2">Imprimir</span>
                   </Text>
                 </Link>
@@ -117,13 +117,11 @@ export const MenuProcessDocumentOptions = ({
                     onClick={cancelMonitoring}
                     className={classNames(
                       active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-warning hover:text-red-600"
+                      "flex items-center px-4 py-2 text-sm w-full text-warning hover:text-red-600 fill-warning hover:fill-warningHover"
                     )}
                   >
-                    <Box className="mr-2">
-                      <Icon name="FiLogOut" />
-                    </Box>
-                    Cancelar monitoramento
+                    <Icon name="Broadcast" size={22} />
+                    <span className="ml-2">Cancelar monitoramento</span>
                   </button>
                 ) : (
                   <button
