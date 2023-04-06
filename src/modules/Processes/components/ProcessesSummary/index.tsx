@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "../../../../shared/components/elements";
+import { Box, Wrapper } from "../../../../shared/components/elements";
 import { CardProcessesSummary } from "../CardProcessesSummary";
 
 import "keen-slider/keen-slider.min.css";
@@ -21,24 +21,26 @@ export default function ProcessesSummary() {
   );
 
   return (
-    <>
-      <Box className="hidden md:grid md:grid-cols-3 gap-8">
-        <CardProcessesSummary label="Em monitoramento" data={100592} />
-        <CardProcessesSummary
-          label="Consultas realizadas"
-          data={19437}
-          filterDays={[30, 60, 90]}
-        />
-        <CardProcessesSummary
-          label="Movimentações"
-          data={286195}
-          filterDays={[30, 60, 90]}
-        />
-      </Box>
+    <Box className="justify-center pt-6 pb-12  bg-white">
+      <Wrapper as="section">
+        <Box className="hidden md:grid md:grid-cols-3 gap-8">
+          <CardProcessesSummary label="Em monitoramento" data={100592} />
+          <CardProcessesSummary
+            label="Consultas realizadas"
+            data={19437}
+            filterDays={[30, 60, 90]}
+          />
+          <CardProcessesSummary
+            label="Movimentações"
+            data={286195}
+            filterDays={[30, 60, 90]}
+          />
+        </Box>
+      </Wrapper>
 
       <Box className="md:hidden">
         <div ref={sliderRef} className="keen-slider ProcessSummary_KeenSlider">
-          <div className="keen-slider__slide pr-4 cursor-grab">
+          <div className="keen-slider__slide px-4 cursor-grab">
             <CardProcessesSummary
               label="Consultas realizadas"
               data={19437}
@@ -59,6 +61,6 @@ export default function ProcessesSummary() {
           </div>
         </div>
       </Box>
-    </>
+    </Box>
   );
 }

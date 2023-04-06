@@ -13,9 +13,7 @@ export default function ProcessHistory() {
     <>
       <DashboardLayoutHeader />
 
-      <Wrapper as="section" className="justify-center pt-6 pb-12  bg-white">
-        <ProcessesSummary />
-      </Wrapper>
+      <ProcessesSummary />
 
       <Wrapper>
         <Box className="mb-8 md:mb-12 mt-8 md:flex justify-between items-center">
