@@ -29,7 +29,7 @@ export default function ProcessHistory() {
             <Box className="ml-5">
               <Button
                 color="primary"
-                text={<Icon name="BiFilterAlt" />}
+                text={<Icon name="Funnel" />}
                 onClick={() => {}}
               />
             </Box>

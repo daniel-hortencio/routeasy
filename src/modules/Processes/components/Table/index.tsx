@@ -60,8 +60,8 @@ const TableRow = () => {
         </Text>
       </Box>
 
-      <Box className="bg-secondary text-primary rounded-md flex items-center justify-center h-full">
-        <Icon name="AiOutlineFolder" size={24} />
+      <Box className="bg-secondary fill-primary rounded-md flex items-center justify-center h-full">
+        <Icon name="FolderSimple" size={24} />
       </Box>
     </Box>
   );

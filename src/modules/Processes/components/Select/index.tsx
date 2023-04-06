@@ -27,8 +27,8 @@ export default function Select({ options }: Props) {
                 {selected} dias
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-2 flex items-center text-primary">
-                <Box className={`transition-all`}>
-                  <Icon name="IoIosArrowDown" />
+                <Box className={`transition-all fill-primary`}>
+                  <Icon name="CaretDown" />
                 </Box>
               </span>
             </Listbox.Button>
