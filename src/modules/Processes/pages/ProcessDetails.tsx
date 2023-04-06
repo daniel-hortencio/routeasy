@@ -33,8 +33,8 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         as="section"
         className="justify-center pt-6 pb-10 xl:pb-12  bg-white"
       >
-        <Box className="mb-9 xl:flex">
-          <Box className="flex-auto mb-5 xl:mb-0">
+        <Box className="mb-9 lg:flex">
+          <Box className="flex-auto mb-5 lg:mb-0">
             <Box className="flex items-center mb-5 flex-wrap">
               {isMonitoring ? (
                 <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap">
@@ -53,7 +53,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             </Text>
           </Box>
 
-          <Box className="hidden xl:flex">
+          <Box className="hidden lg:flex">
             <Box className="w-48">
               <Button
                 text="Documentos anexos"
@@ -146,8 +146,8 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           />
         </Box>
 
-        <Box className="flex flex-wrap xl:hidden">
-          <Box className="w-48 mb-5 mr-5">
+        <Box className="flex lg:hidden">
+          <Box className="w-48 mr-5">
             <Button
               text="Documentos anexos"
               color="primary"
