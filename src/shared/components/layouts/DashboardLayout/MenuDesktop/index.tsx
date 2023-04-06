@@ -33,7 +33,7 @@ export const MenuDesktop = () => {
             </Box>
             <Box
               className={`transition-all fill-textGray-light ${
-                !isOpenMenu && "rotate-180"
+                isOpenMenu && "rotate-180"
               }`}
             >
               <Icon name="CaretDown" />

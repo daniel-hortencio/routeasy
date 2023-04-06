@@ -37,7 +37,7 @@ export default function SearchProcess() {
             <Box className="pt-2 w-10 fill-primary relative">
               <Box className="absolute w-9 h-9 bg-secondary -top-1 -left-3 rounded-full" />
               <Box className="relative z-10">
-                <Icon name="FolderSimple" size={36} />
+                <Icon name="FolderSimpleLock" size={36} />
               </Box>
             </Box>
 

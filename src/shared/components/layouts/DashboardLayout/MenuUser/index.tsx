@@ -53,7 +53,7 @@ export const MenuUser = ({ button, onChange }: Props) => {
                       )}
                     >
                       <Icon name="LockSimple" />
-                      <span className="ml-2">Account settings</span>
+                      <span className="ml-2">Alterar senha</span>
                     </Text>
                   </Link>
                 );
@@ -69,7 +69,7 @@ export const MenuUser = ({ button, onChange }: Props) => {
                     )}
                   >
                     <Icon name="At" />
-                    <span className="ml-2">Support</span>
+                    <span className="ml-2">Alterar email</span>
                   </Text>
                 </Link>
               )}
