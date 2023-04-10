@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   text: string | JSX.Element;
   size?: "small" | "large";
@@ -5,6 +7,8 @@ interface Props {
   color?: "primary" | "secondary" | "warning";
   onClick?: () => void;
   className?: string;
+  as?: "button" | "link";
+  href?: string;
 }
 
 export const Button = ({
@@ -14,6 +18,8 @@ export const Button = ({
   height = "high",
   onClick,
   className,
+  as = "button",
+  href = "/",
 }: Props) => {
   function getClassName() {
     const color_schemes = {
@@ -34,9 +40,13 @@ export const Button = ({
     return classNameScheme;
   }
 
-  return (
+  return as === "button" ? (
     <button className={getClassName()} onClick={onClick}>
       {text}
     </button>
+  ) : (
+    <Link href={href}>
+      <button className={getClassName()}>{text}</button>
+    </Link>
   );
 };
