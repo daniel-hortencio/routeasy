@@ -17,7 +17,7 @@ export const PublicLayoutHeader = ({
   mobileLinkText,
 }: Props) => {
   return (
-    <Box className="fixed flex top-0 left-0 w-full h-20 lg:h-28 backdrop-blur-md z-20">
+    <Box className="fixed flex top-0 left-0 w-full h-20 lg:h-28 backdrop-blur-lg z-20">
       <Box className="w-full max-w-6xl mx-auto flex items-center p-5 justify-between">
         <Logo color="white" />
         <Box className="w-32 md:hidden">
