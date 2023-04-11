@@ -12,6 +12,7 @@ interface Props {
   consumo: string;
   forma_de_pagamento: string;
   valor: string;
+  status: "success" | "pending" | "error";
 }
 
 export const TableHeaderLastInvoices = () => {
@@ -38,7 +39,36 @@ export const TableRowLastInvoices = ({
   consumo,
   forma_de_pagamento,
   valor,
+  status,
 }: Props) => {
+  const BoxIcon = ({ className, children }) => {
+    return (
+      <Box
+        className={`rounded-md flex items-center justify-center h-full transition-all TableRow__IconFolder ${className}`}
+      >
+        {children}
+      </Box>
+    );
+  };
+
+  const status_icons = {
+    success: (
+      <BoxIcon className="bg-secondary fill-primary">
+        <Icon name="FolderSimple" size={24} />
+      </BoxIcon>
+    ),
+    pending: (
+      <BoxIcon className="bg-warningLight fill-warning">
+        <Icon name="Receipt" size={24} />
+      </BoxIcon>
+    ),
+    error: (
+      <BoxIcon className="bg-dangerLight fill-danger">
+        <Icon name="ReceiptX" size={24} />,
+      </BoxIcon>
+    ),
+  };
+
   return (
     <Box className="TableRowLastInvoices shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
       <Box className="hidden TableRowLastInvoicesData md:grid p-4 md:p-0">
@@ -87,9 +117,7 @@ export const TableRowLastInvoices = ({
         </Text>
       </Box>
 
-      <Box className="bg-secondary fill-primary rounded-md flex items-center justify-center h-full transition-all TableRow__IconFolder">
-        <Icon name="FolderSimple" size={24} />
-      </Box>
+      {status_icons[status]}
     </Box>
   );
 };

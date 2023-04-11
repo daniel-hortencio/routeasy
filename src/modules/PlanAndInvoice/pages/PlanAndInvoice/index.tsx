@@ -26,7 +26,7 @@ export default function PlanAndInvoice() {
       </WhiteSection>
 
       <Wrapper>
-        <Text>Últimas faturas</Text>
+        <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
 
         <Table
           data={[
@@ -38,6 +38,27 @@ export default function PlanAndInvoice() {
               consumo: "1.125 consultas",
               forma_de_pagamento: "Previsto: Cartão final 0987",
               valor: "R$ 2.250,00",
+              status: "error",
+            },
+            {
+              id: "2",
+              vencimento: "15/04/2023",
+              periodo: "05/03/23 · 05/04/23",
+              plano: "1.000 - 10.000",
+              consumo: "1.125 consultas",
+              forma_de_pagamento: "Previsto: Cartão final 0987",
+              valor: "R$ 2.250,00",
+              status: "pending",
+            },
+            {
+              id: "3",
+              vencimento: "15/04/2023",
+              periodo: "05/03/23 · 05/04/23",
+              plano: "1.000 - 10.000",
+              consumo: "1.125 consultas",
+              forma_de_pagamento: "Previsto: Cartão final 0987",
+              valor: "R$ 2.250,00",
+              status: "success",
             },
           ]}
           HeaderComponent={TableHeaderLastInvoices}
