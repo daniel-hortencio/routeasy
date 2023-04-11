@@ -13,6 +13,7 @@ import { ModalProcessDocument } from "../components/ModalProcessDocument";
 import { MenuProcessDocumentOptions } from "../components/MenuProcessDocumentOptions";
 import { ModalCancelMonitoring } from "../components/ModalCancelMonitoring";
 import { MenuPartiesInvolved } from "../components/MenuPartiesInvolved";
+import { WhiteSection } from "../../../shared/components/layouts/DashboardLayout/WhiteSection";
 
 interface Props {
   isMonitoring: boolean;
@@ -29,10 +30,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
     <Box className="flex-auto">
       <DashboardLayoutHeader />
 
-      <Wrapper
-        as="section"
-        className="justify-center pt-6 pb-10 xl:pb-12  bg-white"
-      >
+      <WhiteSection>
         <Box className="mb-9 lg:flex">
           <Box className="flex-auto mb-5 lg:mb-0">
             <Box className="md:flex md:items-center mb-5 md:flex-wrap">
@@ -171,7 +169,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             />
           </Box>
         </Box>
-      </Wrapper>
+      </WhiteSection>
 
       <Wrapper>
         <Box className="mb-8 mt-8 ">

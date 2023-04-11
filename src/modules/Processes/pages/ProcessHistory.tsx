@@ -5,8 +5,9 @@ import { Text } from "../../../shared/components/elements";
 import { Wrapper } from "../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
 import { Button } from "../../../shared/components/elements";
-import { Table } from "../components/Table";
+import { Table } from "../../../shared/components/elements/Table";
 import ProcessesSummary from "../components/ProcessesSummary";
+import { TableRowProcessHistory } from "../components/TableRowProcessHistory";
 
 export default function ProcessHistory() {
   return (
@@ -53,7 +54,44 @@ export default function ProcessHistory() {
           </Box>
         </Box>
 
-        <Table />
+        <Table
+          columns={[
+            {
+              title: "Atualizado em",
+            },
+            {
+              title: "Número",
+            },
+            {
+              title: "Processo",
+            },
+            {
+              title: "Tribunal",
+            },
+            {
+              title: "Tipo",
+            },
+          ]}
+          data={[
+            {
+              id: "1",
+              updated_at: "05/03/23 às 15h38",
+              number: "0136156-24.2023.8.09.0001",
+              processo: "CESAR SANTOS x VOLVO BRASIL LTDA",
+              tribunal: "PJERJ",
+              tipo: "Web",
+            },
+            {
+              id: "2",
+              updated_at: "05/03/23 às 15h38",
+              number: "0136156-24.2023.8.09.0001",
+              processo: "CESAR SANTOS x VOLVO BRASIL LTDA",
+              tribunal: "PJERJ",
+              tipo: "Web",
+            },
+          ]}
+          RowComponent={TableRowProcessHistory}
+        />
       </Wrapper>
     </>
   );
