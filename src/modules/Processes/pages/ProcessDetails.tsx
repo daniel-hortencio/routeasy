@@ -99,7 +99,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               <Button
                 text="Cancelar monitoramento"
                 size="large"
-                color="warning"
+                color="danger"
               />
             </Box>
           }

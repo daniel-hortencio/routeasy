@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Box, Icon, Text } from "../../../../shared/components/elements";
 
+import "./styles.css";
+import { TableHeader } from "../../../../shared/components/elements/Table/TableHeader";
+
 interface Props {
   id: string;
   updated_at: string;
@@ -9,6 +12,15 @@ interface Props {
   tribunal: string;
   tipo: string;
 }
+
+export const TableHeaderProcessHistory = () => {
+  return (
+    <TableHeader
+      titles={["Atualizado em", "Número", "Processo", "Tribunal", "Tipo"]}
+      className="TableHeaderProcessHistory"
+    />
+  );
+};
 
 export const TableRowProcessHistory = ({
   id,
@@ -20,8 +32,8 @@ export const TableRowProcessHistory = ({
 }: Props) => {
   return (
     <Link href={`/dashboard/processos/${id}`}>
-      <Box className="TableRow shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
-        <Box className="hidden TableRowData md:grid p-4 md:p-0">
+      <Box className="TableRowProcessHistory shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
+        <Box className="hidden TableRowProcessHistoryData md:grid p-4 md:p-0">
           <Box className="flex items-center">
             <Text>{updated_at}</Text>
           </Box>

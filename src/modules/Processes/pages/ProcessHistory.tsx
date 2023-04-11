@@ -7,7 +7,10 @@ import { DashboardLayoutHeader } from "../../../shared/components/layouts/Dashbo
 import { Button } from "../../../shared/components/elements";
 import { Table } from "../../../shared/components/elements/Table";
 import ProcessesSummary from "../components/ProcessesSummary";
-import { TableRowProcessHistory } from "../components/TableRowProcessHistory";
+import {
+  TableHeaderProcessHistory,
+  TableRowProcessHistory,
+} from "../components/TableRowProcessHistory";
 
 export default function ProcessHistory() {
   return (
@@ -55,23 +58,6 @@ export default function ProcessHistory() {
         </Box>
 
         <Table
-          columns={[
-            {
-              title: "Atualizado em",
-            },
-            {
-              title: "Número",
-            },
-            {
-              title: "Processo",
-            },
-            {
-              title: "Tribunal",
-            },
-            {
-              title: "Tipo",
-            },
-          ]}
           data={[
             {
               id: "1",
@@ -90,6 +76,7 @@ export default function ProcessHistory() {
               tipo: "Web",
             },
           ]}
+          HeaderComponent={TableHeaderProcessHistory}
           RowComponent={TableRowProcessHistory}
         />
       </Wrapper>

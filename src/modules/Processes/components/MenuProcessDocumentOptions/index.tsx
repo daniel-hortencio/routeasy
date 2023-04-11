@@ -117,7 +117,7 @@ export const MenuProcessDocumentOptions = ({
                     onClick={cancelMonitoring}
                     className={classNames(
                       active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-warning hover:text-red-600 fill-warning hover:fill-warningHover"
+                      "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-dangerHover"
                     )}
                   >
                     <Icon name="Broadcast" size={22} />

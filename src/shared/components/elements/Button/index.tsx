@@ -4,7 +4,7 @@ interface Props {
   text: string | JSX.Element;
   size?: "small" | "large";
   height?: "low" | "high";
-  color?: "primary" | "secondary" | "warning";
+  color?: "primary" | "secondary" | "danger";
   onClick?: () => void;
   className?: string;
   as?: "button" | "link";
@@ -26,7 +26,7 @@ export const Button = ({
       primary: "bg-primary hover:bg-primaryHover text-white fill-white",
       secondary:
         "bg-secondary text-primary fill-primary hover:bg-primaryHover hover:fill-white hover:text-white",
-      warning: "bg-warning hover:bg-warningHover text-white",
+      danger: "bg-danger hover:bg-dangerHover text-white",
     };
 
     let classNameScheme =

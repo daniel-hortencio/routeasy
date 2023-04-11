@@ -19,7 +19,7 @@ interface Props {
 }
 
 export const Text = ({ children, className, as = "p" }: Props) => {
-  const getClassName = () => `${className}`;
+  const getClassName = () => `text-textDefault ${className}`;
 
   const element = {
     p: <p className={getClassName()}>{children}</p>,

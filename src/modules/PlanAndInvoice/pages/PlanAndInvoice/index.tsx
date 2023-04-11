@@ -8,6 +8,10 @@ import { DashboardLayoutHeader } from "../../../../shared/components/layouts/Das
 import { useState } from "react";
 import { WhiteSection } from "../../../../shared/components/layouts/DashboardLayout/WhiteSection";
 import { Table } from "../../../../shared/components/elements/Table";
+import {
+  TableHeaderLastInvoices,
+  TableRowLastInvoices,
+} from "../../components/TableRowLastInvoices";
 
 export default function PlanAndInvoice() {
   return (
@@ -24,7 +28,21 @@ export default function PlanAndInvoice() {
       <Wrapper>
         <Text>Últimas faturas</Text>
 
-        {/* <Table columns={[]} data={[]} /> */}
+        <Table
+          data={[
+            {
+              id: "1",
+              vencimento: "15/04/2023",
+              periodo: "05/03/23 · 05/04/23",
+              plano: "1.000 - 10.000",
+              consumo: "1.125 consultas",
+              forma_de_pagamento: "Previsto: Cartão final 0987",
+              valor: "R$ 2.250,00",
+            },
+          ]}
+          HeaderComponent={TableHeaderLastInvoices}
+          RowComponent={TableRowLastInvoices}
+        />
       </Wrapper>
     </Box>
   );

@@ -16,8 +16,9 @@ module.exports = {
         backgroundGrayLight: "#EAEAEA",
         primary: "#15BE62",
         primaryHover: "#09A751",
-        warning: "#BF0905",
-        warningHover: "#A61311",
+        danger: "#BF0905",
+        dangerHover: "#A61311",
+        dangerLight: "#F4E7E7",
         secondary: "#E7F4EE",
         textGray: {
           light: "#A7A7A7",

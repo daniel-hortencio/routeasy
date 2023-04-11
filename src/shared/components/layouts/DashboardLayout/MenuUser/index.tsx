@@ -98,7 +98,7 @@ export const MenuUser = ({ button, onChange }: Props) => {
                 <button
                   className={classNames(
                     active ? "bg-gray-100 " : "",
-                    "flex items-center px-4 py-2 text-sm w-full text-warning hover:text-warningHover fill-warning hover:fill-warningHover"
+                    "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-dangerHover fill-danger hover:fill-dangerHover"
                   )}
                 >
                   <Box className="mr-2">
