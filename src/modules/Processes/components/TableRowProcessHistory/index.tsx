@@ -54,24 +54,24 @@ export const TableRowProcessHistory = ({
         <Box as="ul" className="md:hidden p-4">
           <Text className="font-bold mb-2 text-lg">{processo}</Text>
           <Text className="flex items-center">
-            <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
             Atualizado em {updated_at}
           </Text>
           <Text className="flex items-center">
-            <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
             Nº {number}
           </Text>
           <Text className="flex items-center">
-            <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
             Tribunal {tribunal}
           </Text>
           <Text className="flex items-center">
-            <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
             Consulta {tipo}
           </Text>
         </Box>
 
-        <Box className="bg-secondary fill-primary rounded-md flex items-center justify-center h-full transition-all TableRow__IconFolder">
+        <Box className="bg-primary-light fill-primary rounded-md flex items-center justify-center h-full transition-all TableRow__IconFolder">
           <Icon name="FolderSimple" size={24} />
         </Box>
       </Box>

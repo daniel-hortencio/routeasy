@@ -35,15 +35,15 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           <Box className="flex-auto mb-5 lg:mb-0">
             <Box className="md:flex md:items-center mb-5 md:flex-wrap">
               {isMonitoring ? (
-                <Text className="uppercase p-1 rounded bg-backgroundBlack text-white text-xs font-medium mr-2 whitespace-nowrap w-min mb-3 md:mb-0">
+                <Text className="uppercase p-1 rounded bg-custom-gray-600 text-white text-xs font-medium mr-2 whitespace-nowrap w-min mb-3 md:mb-0">
                   Em monitoramento
                 </Text>
               ) : (
-                <Text className="uppercase p-1 rounded bg-textGray-light text-white text-xs font-medium mr-2 whitespace-nowrap w-min mb-3 md:mb-0">
+                <Text className="uppercase p-1 rounded bg-custom-gray-300 text-white text-xs font-medium mr-2 whitespace-nowrap w-min mb-3 md:mb-0">
                   MONITORAMENTO DESATIVADO
                 </Text>
               )}
-              <Text className="text-textGray-dark mt-0.5 md:mt-0">
+              <Text className="text-custom-gray-400 mt-0.5 md:mt-0">
                 Processo nº 0136156-24.2023.8.09.0001
               </Text>
             </Box>
@@ -108,20 +108,20 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         </Modal>
 
         <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center mb-8 xl:mb-0">
-          <Text className="flex items-center md:mr-8 text-textGray-dark">
-            <Box className="mr-2 fill-textGray-light">
+          <Text className="flex items-center md:mr-8 text-custom-gray-400">
+            <Box className="mr-2 fill-custom-gray-300">
               <Icon name="Bank" size={24} />
             </Box>{" "}
             PJE · Rio de Janeiro, RJ
           </Text>
-          <Text className="flex items-center md:mr-8 text-textGray-dark">
-            <Box className="mr-2 fill-textGray-light">
+          <Text className="flex items-center md:mr-8 text-custom-gray-400">
+            <Box className="mr-2 fill-custom-gray-300">
               <Icon name="Scales" size={24} />
             </Box>{" "}
             [CÍVEL] EXECUÇÃO FISCAL
           </Text>
-          <Text className="flex items-center md:mr-8 text-textGray-dark">
-            <Box className="mr-2  fill-textGray-light">
+          <Text className="flex items-center md:mr-8 text-custom-gray-400">
+            <Box className="mr-2  fill-custom-gray-300">
               <Icon name="CurrencyCircleDollar" size={24} />
             </Box>{" "}
             Valor da causa: R$ 5.978,19
@@ -130,13 +130,13 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           <MenuPartiesInvolved
             onChange={setIsOpenMenuPartiesInvolved}
             button={
-              <Text className="flex items-center md:mr-8 text-left text-textGray-dark">
-                <Box className="opacity-60 mr-2 fill-textGray-light">
+              <Text className="flex items-center md:mr-8 text-left text-custom-gray-400">
+                <Box className="opacity-60 mr-2 fill-custom-gray-300">
                   <Icon name="UsersThree" size={24} />
                 </Box>{" "}
                 5 partes envolvidas
                 <Box
-                  className={`ml-2 fill-textGray-light transition-all ${
+                  className={`ml-2 fill-custom-gray-300 transition-all ${
                     isOpenMenuPartiesInvolved && "rotate-180"
                   }`}
                 >
@@ -177,14 +177,14 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             Movimentação processual
           </Text>
           {isMonitoring ? (
-            <Text className="text-textGray-dark">
+            <Text className="text-custom-gray-400">
               Processo monitorado e sincronizado automaticamente a cada 24h com
               todos os tribunais e Diários Oficiais.
             </Text>
           ) : (
-            <Text className="text-textGray-dark">
+            <Text className="text-custom-gray-400">
               Este processo teve seu{" "}
-              <Text as="strong" className="font-semibold text-textGray-dark">
+              <Text as="strong" className="font-semibold text-custom-gray-400">
                 monitoramento desativado em 18/02/23 às 18h45,
               </Text>{" "}
               por esse motivo as movimentações não estão sincronizadas com todos

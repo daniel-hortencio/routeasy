@@ -9,9 +9,9 @@ import "./styles.css";
 const Header = () => {
   return (
     <Box className="hidden md:grid ModalProcessDocument__TableRow mb-4 ">
-      <Text className="text-sm text-textGray-light">NOME</Text>
-      <Text className="text-sm text-textGray-light">TAMANHO</Text>
-      <Text className="text-sm text-textGray-light">DATA</Text>
+      <Text className="text-sm text-custom-gray-300">NOME</Text>
+      <Text className="text-sm text-custom-gray-300">TAMANHO</Text>
+      <Text className="text-sm text-custom-gray-300">DATA</Text>
       <Box className="w-8" />
     </Box>
   );
@@ -29,20 +29,20 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
     <>
       <Box className="hidden md:grid ModalProcessDocument__TableRow mb-2">
         <Text className="flex items-center">
-          <Box className="fill-textGray-light mr-2">
+          <Box className="fill-custom-gray-300 mr-2">
             <Icon name="FilePdf" size={20} />
           </Box>
-          <Text as="span" className="text-textGray-dark font-medium">
+          <Text as="span" className="text-custom-gray-400 font-medium">
             {name}
           </Text>
         </Text>
-        <Text className="text-textGray-dark">{size}</Text>
-        <Text className="text-textGray-dark">{date}</Text>
+        <Text className="text-custom-gray-400">{size}</Text>
+        <Text className="text-custom-gray-400">{date}</Text>
 
         <Box className="flex justify-center transform -translate-y-2">
           <a
             href={downloadLink}
-            className="flex justify-center items-center w-8 h-8  transition-all fill-primary hover:fill-primaryHover"
+            className="flex justify-center items-center w-8 h-8  transition-all fill-primary hover:fill-primary-dark"
           >
             <Icon name="DownloadSimple" />
           </a>
@@ -50,12 +50,12 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
       </Box>
 
       <Box className="md:hidden flex mb-2">
-        <Box className="fill-textGray-light mr-2 pt-1px">
+        <Box className="fill-custom-gray-300 mr-2 pt-1px">
           <Icon name="FilePdf" size={20} />
         </Box>
         <a
           href={downloadLink}
-          className=" text-primary hover:text-primaryHover font-medium"
+          className=" text-primary hover:text-primary-dark font-medium"
         >
           {name}
         </a>
@@ -74,7 +74,7 @@ export const ModalProcessDocument = () => {
         <Box className="w-full mb-7">
           <button
             onClick={() => setShowLastPublications(!showLastPublications)}
-            className={`flex items-center text-textGray-light fill-textGray-light hover:fill-primary`}
+            className={`flex items-center text-custom-gray-300 fill-custom-gray-300 hover:fill-primary`}
           >
             <Text className="text-xl font-bold mr-2">Últimas publicações</Text>
 
@@ -89,7 +89,7 @@ export const ModalProcessDocument = () => {
         </Box>
 
         {showLastPublications ? (
-          <Box className="bg-backgroundGray rounded-lg p-5">
+          <Box className="bg-custom-gray-100 rounded-lg p-5">
             <Box>
               <Header />
               <Row
@@ -120,7 +120,7 @@ export const ModalProcessDocument = () => {
           <Box className="justify-start mb-4 md:mb-0">
             <button
               onClick={() => setShowAllDocuments(!showAllDocuments)}
-              className={`flex items-center text-textGray-light fill-textGray-light hover:fill-primary`}
+              className={`flex items-center text-custom-gray-300 fill-custom-gray-300 hover:fill-primary`}
             >
               <Text className="text-xl font-bold mr-2">
                 Todos os documentos
@@ -142,7 +142,7 @@ export const ModalProcessDocument = () => {
         </Box>
 
         {showAllDocuments && (
-          <Box className="bg-backgroundGray rounded-lg p-5">
+          <Box className="bg-custom-gray-100 rounded-lg p-5">
             <Box>
               <Header />
               <Row

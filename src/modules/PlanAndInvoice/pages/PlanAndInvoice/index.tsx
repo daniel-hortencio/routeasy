@@ -1,6 +1,6 @@
 "use client";
 
-import { Box } from "../../../../shared/components/elements";
+import { Box, Button } from "../../../../shared/components/elements";
 import { Text } from "../../../../shared/components/elements";
 import { Wrapper } from "../../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../../shared/components/layouts/DashboardLayout/Header";
@@ -26,6 +26,18 @@ export default function PlanAndInvoice() {
       </WhiteSection>
 
       <Wrapper>
+        <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
+
+        <Box className="bg-white rounded-lg">
+          <Text className="text-lg font-bold mb-5">Últimas faturas</Text>
+
+          <Button text="Alterar forma de pagamento" />
+
+          <Text className="text-lg font-bold mb-5">
+            Sua assinatura tem recorrencia mensal
+          </Text>
+        </Box>
+
         <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
 
         <Table

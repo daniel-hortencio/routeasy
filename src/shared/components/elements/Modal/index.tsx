@@ -66,7 +66,7 @@ export default function Modal({
                     {showButtonClose && (
                       <button
                         type="button"
-                        className="absolute top-5 right-5 p-0.5 fill-textGray-light hover:fill-primary transition-all"
+                        className="absolute top-5 right-5 p-0.5 fill-custom-gray-300 hover:fill-primary transition-all"
                         onClick={onClose}
                         ref={cancelButtonRef}
                       >
@@ -81,7 +81,7 @@ export default function Modal({
                       </Text>
 
                       <Text
-                        className={`text-${headerAlign} text-textGray-dark`}
+                        className={`text-${headerAlign} text-custom-gray-400`}
                       >
                         {description}
                       </Text>
@@ -93,7 +93,7 @@ export default function Modal({
                 {footer && (
                   <Box
                     as="footer"
-                    className="p-8 border-t-1 border-backgroundGrayLight"
+                    className="p-8 border-t-1 border-custom-gray-200"
                   >
                     {footer}
                   </Box>

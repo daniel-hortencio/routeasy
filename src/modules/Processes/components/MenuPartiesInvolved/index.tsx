@@ -36,9 +36,9 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
         beforeLeave={() => onChange(false)}
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-80 max-w-full md:max-w-none origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
-          <Box className="border-b-1 backgroundGrayLight">
+          <Box className="border-b-1">
             <Menu.Item>
-              <Text className="uppercase px-4 pt-3 text-sm text-textGray-light">
+              <Text className="uppercase px-4 pt-3 text-sm text-custom-gray-300">
                 Polo Ativo
               </Text>
             </Menu.Item>
@@ -62,9 +62,9 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
             </Box>
           </Box>
 
-          <Box className="border-b-1 backgroundGrayLight">
+          <Box className="border-b-1">
             <Menu.Item>
-              <Text className="uppercase px-4 pt-3 text-sm text-textGray-light">
+              <Text className="uppercase px-4 pt-3 text-sm text-custom-gray-300">
                 POLO passivo
               </Text>
             </Menu.Item>
@@ -89,7 +89,7 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
 
           <Box>
             <Menu.Item>
-              <Text className="uppercase px-4 pt-3 text-sm text-textGray-light">
+              <Text className="uppercase px-4 pt-3 text-sm text-custom-gray-300">
                 OUTRAS PARTES
               </Text>
             </Menu.Item>

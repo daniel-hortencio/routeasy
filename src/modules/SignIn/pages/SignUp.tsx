@@ -47,11 +47,11 @@ export default function PageSignUp() {
         </Box>
 
         {/*         <Box className="flex items-center mb-6">
-          <Box className="border-b-2 h-1 border-dotted border-textGray-light flex-auto" />
-          <Text className="flex-1 text-center text-textGray-light">
+          <Box className="border-b-2 h-1 border-dotted border-custom-gray-300 flex-auto" />
+          <Text className="flex-1 text-center text-custom-gray-300">
             para a sua segurança
           </Text>
-          <Box className="border-b-2 h-1 border-dotted border-textGray-light flex-auto" />
+          <Box className="border-b-2 h-1 border-dotted border-custom-gray-300 flex-auto" />
         </Box>
 
         <Box className="mb-8">

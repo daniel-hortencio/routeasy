@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function PublicLayout({ children }) {
   return (
-    <Box className="bg-backgroundBlack flex items-center w-full min-h-screen overflow-x-hidden overflow-y-auto">
+    <Box className="bg-custom-gray-600 flex items-center w-full min-h-screen overflow-x-hidden overflow-y-auto">
       <Box className="w-screen h-screen fixed top-0 left-0 z-0">
         <Image
           src={`/images/pictures/background-public-layout-gradient.png`}

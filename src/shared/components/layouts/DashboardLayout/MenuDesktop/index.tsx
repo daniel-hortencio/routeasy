@@ -27,12 +27,12 @@ export const MenuDesktop = () => {
 
             <Box className="text-left mr-4">
               <Text className="font-bold">Leonardo Rebitte</Text>
-              <Text className="text-sm text-textGray-light">
+              <Text className="text-sm text-custom-gray-300">
                 leo.rebitte@gmail.com
               </Text>
             </Box>
             <Box
-              className={`transition-all fill-textGray-light ${
+              className={`transition-all fill-custom-gray-300 ${
                 isOpenMenu && "rotate-180"
               }`}
             >

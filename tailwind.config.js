@@ -11,26 +11,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        backgroundBlack: "#1E1E1E",
-        backgroundGray: "#F4F4F4",
-        backgroundGrayLight: "#EAEAEA",
-        primary: "#15BE62",
-        primaryHover: "#09A751",
-
-        danger: "#BF0905",
-        dangerHover: "#A61311",
-        dangerLight: "#F4E7E7",
-
-        warning: "#F9A000",
-        warningHover: "#F09C00",
-        warningLight: "#FAF2E3",
-
-        secondary: "#E7F4EE",
-        textGray: {
-          light: "#A7A7A7",
-          dark: "#595959"
+        custom: {
+          gray: {
+            100: '#F4F4F4',
+            200: '#EAEAEA',
+            300: '#A7A7A7',
+            400: '#595959',
+            500: '#252525',
+            600: '#1E1E1E',
+          }
         },
-        textDefault: "#252525"
+
+        primary: {
+          DEFAULT: "#15BE62",
+          light: "#E7F4EE",
+          dark: "#09A751"
+        },
+
+        danger: {
+          DEFAULT: "#BF0905",
+          light: "#F4E7E7",
+          dark: "#A61311"
+        },
+
+        warning: {
+          DEFAULT: "#F9A000",
+          dark: '#F09C00', //warningHover: "#F09C00",
+          light: '#FAF2E3', //warningLight: "#FAF2E3",
+        },
+
       },
       borderWidth: {
         1: "1px"

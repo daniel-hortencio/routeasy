@@ -16,8 +16,8 @@ export const TimeLine = ({ isMonitoring }: Props) => {
         {!isMonitoring && (
           <>
             <Box className="flex items-center mb-5">
-              <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-              <Text className="text-textGray-light uppercase text-sm">
+              <Box className="w-1 h-1 mr-5 bg-custom-gray-300 rounded-full" />
+              <Text className="text-custom-gray-300 uppercase text-sm">
                 01/04/2023 · HOJE
               </Text>
             </Box>
@@ -26,7 +26,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                 <Text as="h3" className="text-lg font-bold mb-2">
                   Podem existir novas movimentações
                 </Text>
-                <Text className="mb-6 text-textGray-dark">
+                <Text className="mb-6 text-custom-gray-400">
                   Atualize ou volte a monitorar este processo para verificar se
                   há novas informações em todos os tribunais e Diários Oficiais.
                 </Text>
@@ -63,8 +63,8 @@ export const TimeLine = ({ isMonitoring }: Props) => {
         )}
 
         <Box className="flex items-center mb-5">
-          <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-light uppercase text-sm tracking-2px">
+          <Box className="w-1 h-1 mr-5 bg-custom-gray-300 rounded-full" />
+          <Text className="text-custom-gray-300 uppercase text-sm tracking-2px">
             24/02/2023 · há 13 dias
           </Text>
         </Box>
@@ -73,7 +73,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             <Text as="h3" className="text-lg font-bold mb-2">
               Andamento
             </Text>
-            <Text className="text-textGray-dark">
+            <Text className="text-custom-gray-400">
               Cumpra-se o despacho no apenso, sem prejuízo junte o exequente
               cópia da certidão junto ao Registro de Imóveis do bem que pretende
               ver penhorado.
@@ -94,31 +94,31 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             </Text>
             <Text>Expediente do Dia: 26/01/2023</Text>
             <Text>Execução de Título Extrajudicial - Cpc</Text>
-            <Text className="text-textGray-dark">
+            <Text className="text-custom-gray-400">
               <Text as="strong" className="font-bold">
                 Proc.
               </Text>{" "}
-              <span className="font-bold hover:text-primaryHover underline text-primary">
+              <span className="font-bold hover:text-primary-dark underline text-primary">
                 0101014-15.2006.8.19.000
               </span>{" "}
               <Text as="strong" className="font-bold">
                 (2XXX.001.1XX005-5)
               </Text>{" "}
               -{" "}
-              <span className="text-primary hover:text-primaryHover underline">
+              <span className="text-primary hover:text-primary-dark underline">
                 CAIXA DE PREVIDENCIA DOS FUNCIONARIOS DO BANCO DO BRASIL PREVI{" "}
               </span>{" "}
               (Adv(s). Dr(a).{" "}
-              <span className="text-primary hover:text-primaryHover underline">
+              <span className="text-primary hover:text-primary-dark underline">
                 ALEXANDRE GHAZI
               </span>{" "}
               (OAB/RJ-070771) X{" "}
-              <span className="text-primary hover:text-primaryHover underline">
+              <span className="text-primary hover:text-primary-dark underline">
                 SERGIO MAURICIO CARNEIRO
               </span>{" "}
               (Adv(s). Dr(a). ERICA CARLA SILVA DE SOUSA ANDRADE
               (OAB/RJ-116306), Dr(a).{" "}
-              <span className="text-primary hover:text-primaryHover underline">
+              <span className="text-primary hover:text-primary-dark underline">
                 RODRIGO LESSA PEREIRA
               </span>{" "}
               (OAB/RJ-131983) Despacho: Cumpra-se o despacho no apenso, sem
@@ -131,8 +131,8 @@ export const TimeLine = ({ isMonitoring }: Props) => {
 
       <Box className="mb-7">
         <Box className="flex items-center mb-5">
-          <Box className="w-1 h-1 mr-5 bg-textGray-light rounded-full" />
-          <Text className="text-textGray-dark uppercase text-sm tracking-2px">
+          <Box className="w-1 h-1 mr-5 bg-custom-gray-300 rounded-full" />
+          <Text className="text-custom-gray-400 uppercase text-sm tracking-2px">
             18/01/2023 · mês passado
           </Text>
         </Box>
@@ -141,7 +141,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             <Text as="h3" className="text-lg font-bold mb-2">
               Andamento
             </Text>
-            <Text className="mb-5 text-textGray-dark">
+            <Text className="mb-5 text-custom-gray-400">
               Certifico, que trasladei cópias conforme determinado no despacho
               de fls. 944 dos autos em apenso. 0059693-63/2007, bem como
               desapensei o mencionado processo para remete-los ao arquivo.

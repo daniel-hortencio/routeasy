@@ -32,7 +32,7 @@ export const DashboardLayoutNavigation = () => {
             item.isActive() ? "border-primary" : "border-transparent"
           } ${index > 0 && "ml-10"}`}
         >
-          <Link href={item.href} className="text-textDefault">
+          <Link href={item.href} className="text-custom-gray-500">
             {item.label}
           </Link>
         </Box>

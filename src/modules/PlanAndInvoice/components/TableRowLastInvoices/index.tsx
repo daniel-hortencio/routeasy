@@ -53,17 +53,17 @@ export const TableRowLastInvoices = ({
 
   const status_icons = {
     success: (
-      <BoxIcon className="bg-secondary fill-primary">
+      <BoxIcon className="bg-primary-light fill-primary">
         <Icon name="FolderSimple" size={24} />
       </BoxIcon>
     ),
     pending: (
-      <BoxIcon className="bg-warningLight fill-warning">
+      <BoxIcon className="bg-warning-light fill-warning">
         <Icon name="Receipt" size={24} />
       </BoxIcon>
     ),
     error: (
-      <BoxIcon className="bg-dangerLight fill-danger">
+      <BoxIcon className="bg-danger-light fill-danger">
         <Icon name="ReceiptX" size={24} />,
       </BoxIcon>
     ),
@@ -95,24 +95,24 @@ export const TableRowLastInvoices = ({
       <Box as="ul" className="md:hidden p-4">
         <Text className="font-bold mb-2 text-lg">Vencimento {vencimento}</Text>
         <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
           Periodo {periodo}
         </Text>
         <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
           Plano {plano}
         </Text>
         <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
           Consumo {consumo}
         </Text>
 
         <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
           Forma de pagamento {forma_de_pagamento}
         </Text>
         <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-textGray-dark mr-2 rounded-full" />
+          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
           Valor {valor}
         </Text>
       </Box>

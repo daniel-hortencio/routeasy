@@ -16,7 +16,7 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
   return (
     <Box className={`relative flex justify-end flex-auto`}>
       <div
-        className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-textGray-dark fill-primary focus-within:fill-primaryHover transition-all ${
+        className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-custom-gray-400 fill-primary focus-within:fill-primary-dark transition-all ${
           variant === "collapsible" && collapsed ? "w-12" : "w-full"
         }`}
       >
@@ -27,7 +27,7 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
             if (variant === "collapsible" && value === "") setCollapsed(true);
           }}
           onChange={(e) => setValue(e.target.value)}
-          className={`w-full placeholder-textGray-dark pl-6 pr-14 h-full text-textDefault `}
+          className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}
           autoComplete="off"
         />
         <div className="absolute h-full right-0 flex items-center">

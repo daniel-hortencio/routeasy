@@ -33,7 +33,7 @@ export const PublicLayoutHeader = ({
           {desktopText}{" "}
           <a
             href={linkTo}
-            className="text-primary hover:text-primaryHover transition-all"
+            className="text-primary hover:text-primary-dark transition-all"
           >
             {desktopLinkText}
           </a>

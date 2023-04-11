@@ -40,7 +40,7 @@ export const MenuProcessDocumentOptions = ({
       >
         <Menu.Items className="absolute w-60 right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <Menu.Item>
-            <Text className="uppercase px-4 pt-3 pb-2 text-sm text-textGray-light">
+            <Text className="uppercase px-4 pt-3 pb-2 text-sm text-custom-gray-300">
               Opções
             </Text>
           </Menu.Item>
@@ -52,7 +52,7 @@ export const MenuProcessDocumentOptions = ({
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
+                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
                     )}
                   >
                     <Icon name="CodeBlock" />
@@ -67,7 +67,7 @@ export const MenuProcessDocumentOptions = ({
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
+                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
                     )}
                   >
                     <Icon name="FilePdf" />
@@ -82,7 +82,7 @@ export const MenuProcessDocumentOptions = ({
                   <Text
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-textGray-light"
+                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
                     )}
                   >
                     <Icon name="Printer" />
@@ -109,7 +109,7 @@ export const MenuProcessDocumentOptions = ({
               </Menu.Item>
             </form> */}
 
-          <Box className="border-t-2 border-backgroundGray py-2">
+          <Box className="border-t-2 border-custom-gray-100 py-2">
             <Menu.Item>
               {({ active }) =>
                 isMonitoring ? (
@@ -117,7 +117,7 @@ export const MenuProcessDocumentOptions = ({
                     onClick={cancelMonitoring}
                     className={classNames(
                       active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-dangerHover"
+                      "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-danger-dark"
                     )}
                   >
                     <Icon name="Broadcast" size={22} />
@@ -128,7 +128,7 @@ export const MenuProcessDocumentOptions = ({
                     onClick={cancelMonitoring}
                     className={classNames(
                       active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primaryHover fill-primary hover:fill-primaryHover"
+                      "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primary-dark fill-primary hover:fill-primary-dark"
                     )}
                   >
                     <Icon name="Broadcast" />

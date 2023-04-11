@@ -10,10 +10,10 @@ interface Props {
 
 export const CardProcessesSummary = ({ label, filterDays, data }: Props) => {
   return (
-    <Box className="bg-secondary p-7 rounded-lg flex flex-col h-32">
+    <Box className="bg-primary-light p-7 rounded-lg flex flex-col h-32">
       <Box className="p-[1px]">
         <Box as="header" className="flex flex-auto justify-between mb-3 h-8 ">
-          <Text className="mr-4 text-textGray-dark leading-5">{label}</Text>
+          <Text className="mr-4 text-custom-gray-400 leading-5">{label}</Text>
           {/* <Text>{filterDays}</Text> */}
 
           {filterDays && (
