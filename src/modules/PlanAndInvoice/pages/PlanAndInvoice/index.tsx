@@ -26,19 +26,23 @@ export default function PlanAndInvoice() {
       </WhiteSection>
 
       <Wrapper>
-        <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
+        <Text className="text-xl font-bold mb-5">Forma de Pagamento</Text>
 
-        <Box className="bg-white rounded-lg">
-          <Text className="text-lg font-bold mb-5">Últimas faturas</Text>
+        <Box className="bg-white rounded-lg py-6 px-7 mb-10 flex justify-between">
+          <Box>
+            <Text className="text-lg font-bold mb-5">Cartão de crédito</Text>
+          </Box>
 
-          <Button text="Alterar forma de pagamento" />
+          <Box>
+            <Button text="Alterar forma de pagamento" size="large" />
 
-          <Text className="text-lg font-bold mb-5">
-            Sua assinatura tem recorrencia mensal
-          </Text>
+            <Text className="text-lg text-custom-gray-300">
+              Sua assinatura tem recorrencia mensal
+            </Text>
+          </Box>
         </Box>
 
-        <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
+        <Text className="font-bold mb-5">Últimas faturas</Text>
 
         <Table
           data={[

@@ -19,7 +19,7 @@ interface Props {
 }
 
 export const Text = ({ children, className, as = "p" }: Props) => {
-  const getClassName = () => `text-custom-gray-500 ${className}`;
+  const getClassName = () => `${className}`;
 
   const element = {
     p: <p className={getClassName()}>{children}</p>,

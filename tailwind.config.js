@@ -21,25 +21,21 @@ module.exports = {
             600: '#1E1E1E',
           }
         },
-
         primary: {
           DEFAULT: "#15BE62",
           light: "#E7F4EE",
           dark: "#09A751"
         },
-
         danger: {
           DEFAULT: "#BF0905",
           light: "#F4E7E7",
           dark: "#A61311"
         },
-
         warning: {
           DEFAULT: "#F9A000",
-          dark: '#F09C00', //warningHover: "#F09C00",
-          light: '#FAF2E3', //warningLight: "#FAF2E3",
+          dark: '#F09C00',
+          light: '#FAF2E3',
         },
-
       },
       borderWidth: {
         1: "1px"
