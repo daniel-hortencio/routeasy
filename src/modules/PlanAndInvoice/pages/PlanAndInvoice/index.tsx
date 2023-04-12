@@ -12,6 +12,7 @@ import {
   TableHeaderLastInvoices,
   TableRowLastInvoices,
 } from "../../components/TableRowLastInvoices";
+import { CardFlagIcon } from "../../../../shared/components/elements/CardFlagIcon";
 
 export default function PlanAndInvoice() {
   return (
@@ -28,13 +29,25 @@ export default function PlanAndInvoice() {
       <Wrapper>
         <Text className="text-xl font-bold mb-5">Forma de Pagamento</Text>
 
-        <Box className="bg-white rounded-lg py-6 px-7 mb-10 flex justify-between">
-          <Box>
+        <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between">
+          <Box className="mb-6 md:mb-0">
             <Text className="text-lg font-bold mb-5">Cartão de crédito</Text>
+
+            <Box className="flex">
+              <Box className="w-20 h-14 flex items-center justify-center rounded-lg border-1 border-custom-gray-200">
+                <CardFlagIcon flag="Mastercard" />
+              </Box>
+              <Box className="text-custom-gray-400 ml-5">
+                <Text className="mb-2">Mastercard</Text>
+                <Text>**** **** **** 0987</Text>
+              </Box>
+            </Box>
           </Box>
 
           <Box>
-            <Button text="Alterar forma de pagamento" size="large" />
+            <Box className="mb-5">
+              <Button text="Alterar forma de pagamento" size="large" />
+            </Box>
 
             <Text className="text-lg text-custom-gray-300">
               Sua assinatura tem recorrencia mensal
