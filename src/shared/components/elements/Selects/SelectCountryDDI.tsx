@@ -1,27 +1,25 @@
-("");
-
-import { Fragment, useCallback, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { CircleFlag as CountryFlag } from "react-circle-flags";
+import { Fragment, useState } from 'react'
+import { Listbox, Transition } from '@headlessui/react'
+import { CircleFlag as CountryFlag } from 'react-circle-flags'
 import {
   CountryDDIPhoneCodeType,
-  countries_ddi_phone_code,
-} from "../../../constants/countriesPhoneCode";
-import { SelectBase } from "./SelectBase";
-import Icon from "../Icon";
-import { Text } from "../Text";
-import { Box } from "../Box";
+  countries_ddi_phone_code
+} from '../../../constants/countriesPhoneCode'
+import { SelectBase } from './SelectBase'
+import Icon from '../Icon'
+import { Text } from '../Text'
+import { Box } from '../Box'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export const SelectCountryDDI = () => {
   const [selected, setSelected] = useState<CountryDDIPhoneCodeType>({
-    name: "Brasil",
-    code: "BR",
-    ddi: "55",
-  });
+    name: 'Brasil',
+    code: 'BR',
+    ddi: '55'
+  })
 
   return (
     <SelectBase>
@@ -38,10 +36,10 @@ export const SelectCountryDDI = () => {
                 </Box>
                 <Box
                   className={`transition-all fill-custom-gray-300 hover:fill-primary ${
-                    open && "rotate-180"
+                    open && 'rotate-180'
                   }`}
                 >
-                  <Icon name="CaretDown" size={20} />{" "}
+                  <Icon name="CaretDown" size={20} />{' '}
                 </Box>
               </Listbox.Button>
 
@@ -55,15 +53,15 @@ export const SelectCountryDDI = () => {
                 <Listbox.Options className="absolute z-10 mt-1 max-h-56 max-w-xs overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {countries_ddi_phone_code
                     .sort((a, b) => a.name.localeCompare(b.name))
-                    .map((country) => (
+                    .map(country => (
                       <Listbox.Option
                         key={country.code}
                         className={({ active }) =>
                           classNames(
                             active
-                              ? "bg-custom-gray-200 text-white"
-                              : "text-gray-900",
-                            "relative select-none py-2 pl-3 pr-9 cursor-pointer"
+                              ? 'bg-custom-gray-200 text-white'
+                              : 'text-gray-900',
+                            'relative select-none py-2 pl-3 pr-9 cursor-pointer'
                           )
                         }
                         value={country}
@@ -92,5 +90,5 @@ export const SelectCountryDDI = () => {
         )}
       </Listbox>
     </SelectBase>
-  );
-};
+  )
+}

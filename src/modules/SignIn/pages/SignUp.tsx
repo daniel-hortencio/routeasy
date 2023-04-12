@@ -1,16 +1,15 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { Box, Icon } from "../../../shared/components/elements";
-import { Button } from "../../../shared/components/elements";
 import {
+  Box,
+  Button,
   InputGroup,
   InputPassword,
   InputText,
-} from "../../../shared/components/elements";
-import { Text } from "../../../shared/components/elements";
-import { PublicLayoutHeader } from "../../../shared/components/layouts/PublicLayout/Header";
-import { SelectCountryDDI } from "../../../shared/components/elements";
+  Text,
+  SelectCountryDDI
+} from '../../../shared/components/elements'
+import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLayout/Header'
 
 export default function PageSignUp() {
   return (
@@ -43,7 +42,7 @@ export default function PageSignUp() {
           </InputGroup>
           <Box className="flex-auto pl-5">
             <InputGroup label="Celular">
-              <InputText placeholder="Insira seu celular" />
+              <InputText placeholder="Insira seu nº de celular" />
             </InputGroup>
           </Box>
         </Box>
@@ -74,5 +73,5 @@ export default function PageSignUp() {
         />
       </form>
     </>
-  );
+  )
 }

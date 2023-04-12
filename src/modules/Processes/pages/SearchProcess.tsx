@@ -1,9 +1,11 @@
-import Image from "next/image";
-import { Box, Icon } from "../../../shared/components/elements";
-import { Text } from "../../../shared/components/elements";
-import { Wrapper } from "../../../shared/components/elements";
-import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
-import { InputSearch } from "../../../shared/components/elements";
+import {
+  Box,
+  Icon,
+  Text,
+  InputSearch,
+  Wrapper
+} from '../../../shared/components/elements'
+import { DashboardLayoutHeader } from '../../../shared/components/layouts/DashboardLayout/Header'
 
 export default function SearchProcess() {
   return (
@@ -92,5 +94,5 @@ export default function SearchProcess() {
         </Box>
       </Wrapper>
     </Box>
-  );
+  )
 }

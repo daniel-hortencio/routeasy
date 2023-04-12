@@ -1,30 +1,32 @@
-"use client";
+'use client'
 
-import { Box } from "../../../shared/components/elements";
-import { Text } from "../../../shared/components/elements";
-import { Wrapper } from "../../../shared/components/elements";
-import { DashboardLayoutHeader } from "../../../shared/components/layouts/DashboardLayout/Header";
-import { Button } from "../../../shared/components/elements";
-import { Icon } from "../../../shared/components/elements";
-import { TimeLine } from "../components/TimeLine";
-import { useState } from "react";
-import Modal from "../../../shared/components/elements/Modal";
-import { ModalProcessDocument } from "../components/ModalProcessDocument";
-import { MenuProcessDocumentOptions } from "../components/MenuProcessDocumentOptions";
-import { ModalCancelMonitoring } from "../components/ModalCancelMonitoring";
-import { MenuPartiesInvolved } from "../components/MenuPartiesInvolved";
-import { WhiteSection } from "../../../shared/components/layouts/DashboardLayout/WhiteSection";
+import {
+  Box,
+  Text,
+  Wrapper,
+  Button,
+  Icon
+} from '../../../shared/components/elements'
+import { DashboardLayoutHeader } from '../../../shared/components/layouts/DashboardLayout/Header'
+import { TimeLine } from '../components/TimeLine'
+import { useState } from 'react'
+import Modal from '../../../shared/components/elements/Modal'
+import { ModalProcessDocument } from '../components/ModalProcessDocument'
+import { MenuProcessDocumentOptions } from '../components/MenuProcessDocumentOptions'
+import { ModalCancelMonitoring } from '../components/ModalCancelMonitoring'
+import { MenuPartiesInvolved } from '../components/MenuPartiesInvolved'
+import { WhiteSection } from '../../../shared/components/layouts/DashboardLayout/WhiteSection'
 
 interface Props {
-  isMonitoring: boolean;
+  isMonitoring: boolean
 }
 
 export default function ProcessDetails({ isMonitoring }: Props) {
-  const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false);
+  const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false)
   const [isOpenModalCancelMonitoring, setIsOpenModalCancelMonitoring] =
-    useState(false);
+    useState(false)
   const [isOpenMenuPartiesInvolved, setIsOpenMenuPartiesInvolved] =
-    useState(false);
+    useState(false)
 
   return (
     <Box className="flex-auto">
@@ -111,19 +113,19 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           <Text className="flex items-center md:mr-8 text-custom-gray-400">
             <Box className="mr-2 fill-custom-gray-300">
               <Icon name="Bank" size={24} />
-            </Box>{" "}
+            </Box>{' '}
             PJE · Rio de Janeiro, RJ
           </Text>
           <Text className="flex items-center md:mr-8 text-custom-gray-400">
             <Box className="mr-2 fill-custom-gray-300">
               <Icon name="Scales" size={24} />
-            </Box>{" "}
+            </Box>{' '}
             [CÍVEL] EXECUÇÃO FISCAL
           </Text>
           <Text className="flex items-center md:mr-8 text-custom-gray-400">
             <Box className="mr-2  fill-custom-gray-300">
               <Icon name="CurrencyCircleDollar" size={24} />
-            </Box>{" "}
+            </Box>{' '}
             Valor da causa: R$ 5.978,19
           </Text>
 
@@ -133,11 +135,11 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               <Text className="flex items-center md:mr-8 text-left text-custom-gray-400">
                 <Box className="opacity-60 mr-2 fill-custom-gray-300">
                   <Icon name="UsersThree" size={24} />
-                </Box>{" "}
+                </Box>{' '}
                 5 partes envolvidas
                 <Box
                   className={`ml-2 fill-custom-gray-300 transition-all ${
-                    isOpenMenuPartiesInvolved && "rotate-180"
+                    isOpenMenuPartiesInvolved && 'rotate-180'
                   }`}
                 >
                   <Icon name="CaretDown" />
@@ -183,10 +185,10 @@ export default function ProcessDetails({ isMonitoring }: Props) {
             </Text>
           ) : (
             <Text className="text-custom-gray-400">
-              Este processo teve seu{" "}
+              Este processo teve seu{' '}
               <Text as="strong" className="font-semibold text-custom-gray-400">
                 monitoramento desativado em 18/02/23 às 18h45,
-              </Text>{" "}
+              </Text>{' '}
               por esse motivo as movimentações não estão sincronizadas com todos
               os tribunais e Diários Oficiais.
             </Text>
@@ -196,5 +198,5 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         <TimeLine isMonitoring={isMonitoring} />
       </Wrapper>
     </Box>
-  );
+  )
 }

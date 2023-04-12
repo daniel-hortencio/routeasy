@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import { Box } from "../../../shared/components/elements";
-import { Button } from "../../../shared/components/elements";
 import {
+  Box,
+  Button,
   InputGroup,
   InputPassword,
   InputText,
-} from "../../../shared/components/elements";
-import { Text } from "../../../shared/components/elements";
-import { PublicLayoutHeader } from "../../../shared/components/layouts/PublicLayout/Header";
+  Text
+} from '../../../shared/components/elements'
+import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLayout/Header'
 
 export default function PageSignIn() {
   return (
@@ -59,5 +59,5 @@ export default function PageSignIn() {
         />
       </form>
     </>
-  );
+  )
 }
