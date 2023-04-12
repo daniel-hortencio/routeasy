@@ -38,19 +38,24 @@ export default function PlanAndInvoice() {
             </Box>
           </Box>
 
-          <Box className="flex">
-            {" "}
-            <Box className="w-48">
-              <Button
-                text="Documentos anexos"
-                color="primary"
-                size="large"
-                //onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
-              />
+          <Box className="md:w-80 flex flex-col justify-between">
+            <Box className="flex md:justify-end mb-4 md:mb-0">
+              <Box className="w-48">
+                <Button
+                  text="Aumentar meu plano"
+                  color="primary"
+                  size="large"
+                  //onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
+                />
+              </Box>
+              <Box className="ml-5">
+                <Button text={<Icon name="ArrowsClockwise" size={24} />} />
+              </Box>
             </Box>
-            <Box className="ml-5">
-              <Button text={<Icon name="ArrowsClockwise" size={24} />} />
-            </Box>
+            <Text className="md:text-right text-custom-gray-300">
+              Última fatura em 10/02/23 de R$ 2.250,00 Próxima fatura em Abril
+              de 2023
+            </Text>
           </Box>
         </Box>
       </WhiteSection>
