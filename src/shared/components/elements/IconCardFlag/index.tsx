@@ -5,7 +5,7 @@ interface Props {
   flag: "Mastercard";
 }
 
-export const CardFlagIcon = ({ flag }: Props) => {
+export const IconCardFlag = ({ flag }: Props) => {
   const card_flag_src = {
     Mastercard: "/images/icons/Mastercard.svg",
   };

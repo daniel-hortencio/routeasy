@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button } from "../../../../shared/components/elements";
+import { Box, Button, Icon } from "../../../../shared/components/elements";
 import { Text } from "../../../../shared/components/elements";
 import { Wrapper } from "../../../../shared/components/elements";
 import { DashboardLayoutHeader } from "../../../../shared/components/layouts/DashboardLayout/Header";
@@ -12,7 +12,7 @@ import {
   TableHeaderLastInvoices,
   TableRowLastInvoices,
 } from "../../components/TableRowLastInvoices";
-import { CardFlagIcon } from "../../../../shared/components/elements/CardFlagIcon";
+import { IconCardFlag } from "../../../../shared/components/elements/IconCardFlag";
 
 export default function PlanAndInvoice() {
   return (
@@ -20,10 +20,39 @@ export default function PlanAndInvoice() {
       <DashboardLayoutHeader />
 
       <WhiteSection>
-        <Text>Planos & faturas</Text>
-        <Text>1.000 - 10.000 consultas</Text>
-        <Text>PLANO ATIVO</Text>
-        <Text>Pagamento mínimo mensal: R$ 501,50</Text>
+        <Box className="md:flex md:justify-between">
+          <Box className="mb-8 md:mb-0 ">
+            <Text className="font-extrabold text-28px mb-4 text-custom-gray-500">
+              Planos & faturas
+            </Text>
+            <Text className="text-4xl font-light text-custom-gray-400 mb-4">
+              1.000 - 10.000 consultas
+            </Text>
+            <Box className="flex">
+              <Text className="uppercase p-1 rounded bg-custom-gray-500 text-white text-xs font-medium mr-2 whitespace-nowrap w-min">
+                PLANO ATIVO
+              </Text>
+              <Text className="text-custom-gray-400">
+                Pagamento mínimo mensal: R$ 501,50
+              </Text>
+            </Box>
+          </Box>
+
+          <Box className="flex">
+            {" "}
+            <Box className="w-48">
+              <Button
+                text="Documentos anexos"
+                color="primary"
+                size="large"
+                //onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
+              />
+            </Box>
+            <Box className="ml-5">
+              <Button text={<Icon name="ArrowsClockwise" size={24} />} />
+            </Box>
+          </Box>
+        </Box>
       </WhiteSection>
 
       <Wrapper>
@@ -35,7 +64,7 @@ export default function PlanAndInvoice() {
 
             <Box className="flex">
               <Box className="w-20 h-14 flex items-center justify-center rounded-lg border-1 border-custom-gray-200">
-                <CardFlagIcon flag="Mastercard" />
+                <IconCardFlag flag="Mastercard" />
               </Box>
               <Box className="text-custom-gray-400 ml-5">
                 <Text className="mb-2">Mastercard</Text>
@@ -55,7 +84,7 @@ export default function PlanAndInvoice() {
           </Box>
         </Box>
 
-        <Text className="font-bold mb-5">Últimas faturas</Text>
+        <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
 
         <Table
           data={[
