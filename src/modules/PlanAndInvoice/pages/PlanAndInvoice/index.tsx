@@ -12,7 +12,7 @@ import {
   TableHeaderLastInvoices,
   TableRowLastInvoices,
 } from "../../components/TableRowLastInvoices";
-import { IconCardFlag } from "../../../../shared/components/elements/IconCardFlag";
+import { IconCardFlag } from "../../../../shared/components/elements";
 import { MenuPlanOptions } from "../../components/MenuPlanOptions";
 
 export default function PlanAndInvoice() {

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Box } from "../../../shared/components/elements";
+import { Box, Icon } from "../../../shared/components/elements";
 import { Button } from "../../../shared/components/elements";
 import {
   InputGroup,
@@ -10,6 +10,7 @@ import {
 } from "../../../shared/components/elements";
 import { Text } from "../../../shared/components/elements";
 import { PublicLayoutHeader } from "../../../shared/components/layouts/PublicLayout/Header";
+import { SelectCountryDDI } from "../../../shared/components/elements";
 
 export default function PageSignUp() {
   return (
@@ -35,11 +36,18 @@ export default function PageSignUp() {
             <InputText placeholder="Insira seu e-mail" />
           </InputGroup>
         </Box>
-        <Box className="mb-8">
-          <InputGroup label="Celular">
-            <InputText placeholder="Insira seu celular" />
+
+        <Box className="flex mb-8">
+          <InputGroup label="País (DDI)">
+            <SelectCountryDDI />
           </InputGroup>
+          <Box className="flex-auto pl-5">
+            <InputGroup label="Celular">
+              <InputText placeholder="Insira seu celular" />
+            </InputGroup>
+          </Box>
         </Box>
+
         <Box className="mb-8">
           <InputGroup label="Senha" linkText="Esqueceu sua senha?" linkTo="/">
             <InputPassword placeholder="Insira sua senha de acesso" />

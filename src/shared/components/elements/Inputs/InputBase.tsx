@@ -17,7 +17,7 @@ export const InputBase = ({
 }: InputBaseProps) => {
   return (
     <div
-      className={`bg-white  flex items-center h-12 justify-between rounded-full overflow-hidden relative ${className}`}
+      className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative ${className}`}
     >
       <input
         placeholder={placeholder}
