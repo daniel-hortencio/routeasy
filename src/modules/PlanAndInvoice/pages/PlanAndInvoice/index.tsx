@@ -13,6 +13,7 @@ import {
   TableRowLastInvoices,
 } from "../../components/TableRowLastInvoices";
 import { IconCardFlag } from "../../../../shared/components/elements/IconCardFlag";
+import { MenuPlanOptions } from "../../components/MenuPlanOptions";
 
 export default function PlanAndInvoice() {
   return (
@@ -43,13 +44,16 @@ export default function PlanAndInvoice() {
               <Box className="w-48">
                 <Button
                   text="Aumentar meu plano"
-                  color="primary"
                   size="large"
-                  //onClick={() => setIsOpenModalDocuments(!isOpenModalDocuments)}
+                  color="primary"
                 />
               </Box>
               <Box className="ml-5">
-                <Button text={<Icon name="ArrowsClockwise" size={24} />} />
+                <MenuPlanOptions
+                  button={
+                    <Button text={<Icon name="DotsThreeOutline" size={24} />} />
+                  }
+                />
               </Box>
             </Box>
             <Text className="md:text-right text-custom-gray-300">
