@@ -69,9 +69,9 @@ export const TableRowLastInvoices = ({
   }
 
   return (
-    <Box className="TableRowLastInvoices shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
+    <Box className="TableRowLastInvoices shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all text-custom-gray-400">
       <Box className="hidden TableRowLastInvoicesData md:grid p-4 md:p-0">
-        <Box className="flex items-center">
+        <Box className="flex items-center ">
           <Text>{vencimento}</Text>
         </Box>
         <Box className="flex items-center">

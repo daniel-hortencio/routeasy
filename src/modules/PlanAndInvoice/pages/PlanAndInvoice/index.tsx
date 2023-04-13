@@ -87,7 +87,9 @@ export default function PlanAndInvoice({ isCanceled }: Props) {
       </WhiteSection>
 
       <Wrapper>
-        <Text className="text-xl font-bold mb-5">Forma de Pagamento</Text>
+        <Text className="text-xl font-bold mb-5 text-custom-gray-500">
+          Forma de Pagamento
+        </Text>
 
         <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between">
           <Box className="mb-6 md:mb-0">
@@ -125,7 +127,9 @@ export default function PlanAndInvoice({ isCanceled }: Props) {
           )}
         </Box>
 
-        <Text className="text-xl font-bold mb-5">Últimas faturas</Text>
+        <Text className="text-xl font-bold mb-5 text-custom-gray-500">
+          Últimas faturas
+        </Text>
 
         <Table
           data={[
