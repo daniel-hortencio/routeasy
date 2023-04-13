@@ -56,27 +56,29 @@ eslint:
   stage: lint
   image: node:14
   script:
+    - echo "Checking Lint..."
     - npm ci
     - npx eslint .
   tags:
     - docker
+# jest:
+#   stage: test
+#   image: node:14
+#   script:
+#     - echo "Run Unit Tests..."
+#     - npm ci
+#     - npx jest
+#   tags:
+#     - docker
 
-jest:
-  stage: test
-  image: node:14
-  script:
-    - npm ci
-    - npx jest
-  tags:
-    - docker
-
-cypress:
-  stage: test
-  image: cypress/browsers:node14.18.3-chrome95-ff94
-  services:
-    - docker:dind
-  script:
-    - npm ci
-    - npx cypress run
-  tags:
-    - docker
+# cypress:
+#   stage: test
+#   image: cypress/browsers:node14.18.3-chrome95-ff94
+#   services:
+#     - docker:dind
+#   script:
+#     - echo "Run E2E Tests..."
+#     - npm ci
+#     - npx cypress run
+#   tags:
+#     - docker

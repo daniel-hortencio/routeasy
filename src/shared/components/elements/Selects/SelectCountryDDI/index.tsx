@@ -23,6 +23,10 @@ export const SelectCountryDDI = () => {
     ddi: '55'
   })
 
+  const anything = 123
+
+  anything = 'asdw'
+
   return (
     <SelectBase>
       <Listbox value={selected} onChange={setSelected}>
