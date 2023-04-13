@@ -26,10 +26,10 @@ export const SelectCountryDDI = () => {
       <Listbox value={selected} onChange={setSelected}>
         {({ open }) => (
           <>
-            <div className="relative h-full w-36">
+            <div className="relative h-full w-28 md:w-36">
               <Listbox.Button className="flex items-center justify-between relative w-full cursor-default rounded-full px-6 h-full text-left text-custom-gray-500 ">
                 <Box className="flex items-center">
-                  <Box className="mr-2 w-6 h-6 rounded-full flex items-center relative">
+                  <Box className="hidden md:flex mr-2 w-6 h-6 rounded-full items-center relative">
                     <CountryFlag countryCode={selected.code.toLowerCase()} />
                   </Box>
                   <Text>+{selected.ddi}</Text>
