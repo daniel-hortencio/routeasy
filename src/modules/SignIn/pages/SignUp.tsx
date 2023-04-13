@@ -41,7 +41,7 @@ export default function PageSignUp() {
             <SelectCountryDDI />
           </InputGroup>
           <Box className="flex-auto pl-5">
-            <InputGroup label="Celular">
+            <InputGroup label="DDD + Celular">
               <InputText placeholder="Insira seu nº de celular" />
             </InputGroup>
           </Box>
