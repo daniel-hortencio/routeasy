@@ -2,6 +2,6 @@
 
 import PublicLayout from '../../shared/components/layouts/PublicLayout'
 
-export default function ({ children }) {
+export default function Layout({ children }) {
   return <PublicLayout>{children}</PublicLayout>
 }
