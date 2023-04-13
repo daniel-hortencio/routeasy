@@ -22,7 +22,7 @@ interface Props {
   isCanceled?: boolean
 }
 
-export default function PlanAndInvoice({ isCanceled }: Props) {
+export default function PlansAndInvoices({ isCanceled }: Props) {
   return (
     <Box className="flex-auto">
       <DashboardLayoutHeader />
@@ -54,14 +54,23 @@ export default function PlanAndInvoice({ isCanceled }: Props) {
           <Box className="md:w-80 flex flex-col justify-between">
             <Box className="flex md:justify-end mb-4 md:mb-0">
               <Box className="w-48">
-                <Button
-                  text="Aumentar meu plano"
-                  size="large"
-                  color="primary"
-                />
+                {isCanceled ? (
+                  <Button
+                    text="Reativar meu plano"
+                    size="large"
+                    color="primary"
+                  />
+                ) : (
+                  <Button
+                    text="Aumentar meu plano"
+                    size="large"
+                    color="primary"
+                  />
+                )}
               </Box>
               <Box className="ml-5">
                 <MenuPlanOptions
+                  isCanceled={isCanceled}
                   button={
                     <Button text={<Icon name="DotsThreeOutline" size={24} />} />
                   }
@@ -86,12 +95,12 @@ export default function PlanAndInvoice({ isCanceled }: Props) {
         </Box>
       </WhiteSection>
 
-      <Wrapper>
+      <Wrapper className="py-7">
         <Text className="text-xl font-bold mb-5 text-custom-gray-500">
           Forma de Pagamento
         </Text>
 
-        <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between">
+        <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between shadow-md">
           <Box className="mb-6 md:mb-0">
             <Text className="text-lg font-bold mb-5">Cartão de crédito</Text>
 
@@ -103,7 +112,11 @@ export default function PlanAndInvoice({ isCanceled }: Props) {
               >
                 <IconCardFlag flag="Mastercard" />
               </Box>
-              <Box className="text-custom-gray-400 ml-5 filter:">
+              <Box
+                className={`ml-5 ${
+                  isCanceled ? 'text-custom-gray-300' : 'text-custom-gray-400'
+                }`}
+              >
                 <Text className="mb-2">Mastercard</Text>
                 <Text>**** **** **** 0987</Text>
               </Box>
@@ -120,7 +133,7 @@ export default function PlanAndInvoice({ isCanceled }: Props) {
                 <Button text="Alterar forma de pagamento" size="large" />
               </Box>
 
-              <Text className="text-lg text-custom-gray-300">
+              <Text className="text-custom-gray-300">
                 Sua assinatura tem recorrencia mensal
               </Text>
             </Box>

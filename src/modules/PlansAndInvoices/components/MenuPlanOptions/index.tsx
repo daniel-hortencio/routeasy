@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Fragment, ReactNode, SetStateAction, Dispatch } from 'react'
+import { Fragment, ReactNode } from 'react'
 import Link from 'next/link'
 
 import { Menu, Transition } from '@headlessui/react'
@@ -10,6 +10,7 @@ import Icon from '../../../../shared/components/elements/Icon'
 
 interface Props {
   button: ReactNode
+  isCanceled?: boolean
   // onChange: Dispatch<SetStateAction<boolean>>;
 }
 
@@ -17,7 +18,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const MenuPlanOptions = ({ button }: Props) => {
+export const MenuPlanOptions = ({ button, isCanceled }: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -58,21 +59,23 @@ export const MenuPlanOptions = ({ button }: Props) => {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <Link href="#">
-                  <Text
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
-                    )}
-                  >
-                    <Icon name="SmileySad" />
-                    <span className="ml-2">Reduzir meu plano</span>
-                  </Text>
-                </Link>
-              )}
-            </Menu.Item>
+            {!isCanceled && (
+              <Menu.Item>
+                {({ active }) => (
+                  <Link href="#">
+                    <Text
+                      className={classNames(
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
+                      )}
+                    >
+                      <Icon name="SmileySad" />
+                      <span className="ml-2">Reduzir meu plano</span>
+                    </Text>
+                  </Link>
+                )}
+              </Menu.Item>
+            )}
           </Box>
 
           {/*  <form method="POST" action="#">
@@ -91,21 +94,23 @@ export const MenuPlanOptions = ({ button }: Props) => {
               </Menu.Item>
             </form> */}
 
-          <Box className="border-t-2 border-custom-gray-100 py-2">
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  className={classNames(
-                    active ? 'bg-gray-100 ' : '',
-                    'flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-danger-dark'
-                  )}
-                >
-                  <Icon name="XCircle" size={22} />
-                  <span className="ml-2">Cancelar monitoramento</span>
-                </button>
-              )}
-            </Menu.Item>
-          </Box>
+          {!isCanceled && (
+            <Box className="border-t-2 border-custom-gray-100 py-2">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={classNames(
+                      active ? 'bg-gray-100 ' : '',
+                      'flex items-center px-4 py-2 text-sm w-full text-danger hover:text-danger-dark fill-danger hover:fill-danger-dark'
+                    )}
+                  >
+                    <Icon name="XCircle" size={22} />
+                    <span className="ml-2">Cancelar assinatura</span>
+                  </button>
+                )}
+              </Menu.Item>
+            </Box>
+          )}
         </Menu.Items>
       </Transition>
     </Menu>

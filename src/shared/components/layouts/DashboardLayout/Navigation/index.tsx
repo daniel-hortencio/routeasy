@@ -21,9 +21,9 @@ export const DashboardLayoutNavigation = () => {
           isActive: () => path.startsWith('/dashboard/processos')
         },
         {
-          label: 'Plano & faturas',
-          href: '/dashboard/plano-e-faturas',
-          isActive: () => path.startsWith('/dashboard/plano-e-faturas')
+          label: 'Planos & faturas',
+          href: '/dashboard/planos-e-faturas',
+          isActive: () => path.startsWith('/dashboard/planos-e-faturas')
         }
       ].map((item, index) => (
         <Box

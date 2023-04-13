@@ -53,7 +53,7 @@ export const TableRowLastInvoices = ({
   const status_icons = {
     success: (
       <BoxIcon className="bg-primary-light fill-primary">
-        <Icon name="FolderSimple" size={24} />
+        <Icon name="FileText" size={24} />
       </BoxIcon>
     ),
     pending: (
@@ -63,7 +63,7 @@ export const TableRowLastInvoices = ({
     ),
     error: (
       <BoxIcon className="bg-danger-light fill-danger">
-        <Icon name="ReceiptX" size={24} />,
+        <Icon name="ReceiptX" size={24} />
       </BoxIcon>
     )
   }

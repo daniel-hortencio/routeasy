@@ -11,7 +11,7 @@ export const TableHeader = ({ titles, className }: Props) => {
       {titles.map(title => (
         <Box
           key={title}
-          className="uppercase text-custom-gray-300 text-sm pb-4"
+          className="uppercase text-custom-gray-300 text-sm pb-4 tracking-widest"
         >
           {title}
         </Box>
