@@ -18,7 +18,11 @@ import {
 } from '../../components/TableRowLastInvoices'
 import { MenuPlanOptions } from '../../components/MenuPlanOptions'
 
-export default function PlanAndInvoice() {
+interface Props {
+  isCanceled?: boolean
+}
+
+export default function PlanAndInvoice({ isCanceled }: Props) {
   return (
     <Box className="flex-auto">
       <DashboardLayoutHeader />
@@ -33,9 +37,14 @@ export default function PlanAndInvoice() {
               1.000 - 10.000 consultas
             </Text>
             <Box className="flex">
-              <Text className="uppercase p-1 rounded bg-custom-gray-500 text-white text-xs font-medium mr-2 whitespace-nowrap w-min">
-                PLANO ATIVO
+              <Text
+                className={`uppercase p-1 rounded  text-white text-xs font-medium mr-2 whitespace-nowrap w-min ${
+                  isCanceled ? 'bg-custom-gray-300' : 'bg-custom-gray-500'
+                }`}
+              >
+                {isCanceled ? 'PLANO CANCELADO' : 'PLANO ATIVO'}
               </Text>
+
               <Text className="text-custom-gray-400">
                 Pagamento mínimo mensal: R$ 501,50
               </Text>
@@ -59,10 +68,20 @@ export default function PlanAndInvoice() {
                 />
               </Box>
             </Box>
-            <Text className="md:text-right text-custom-gray-300">
-              Última fatura em 10/02/23 de R$ 2.250,00 Próxima fatura em Abril
-              de 2023
-            </Text>
+            <Box className="md:text-right text-custom-gray-300">
+              <Text>Última fatura em 10/02/23 de R$ 2.250,00</Text>
+              {isCanceled ? (
+                <Text>
+                  Plano cancelado em{' '}
+                  <span className="font-semibold">Abril de 2023</span>
+                </Text>
+              ) : (
+                <Text>
+                  Próxima fatura em{' '}
+                  <span className="font-semibold">Abril de 2023</span>
+                </Text>
+              )}
+            </Box>
           </Box>
         </Box>
       </WhiteSection>
@@ -75,25 +94,35 @@ export default function PlanAndInvoice() {
             <Text className="text-lg font-bold mb-5">Cartão de crédito</Text>
 
             <Box className="flex">
-              <Box className="w-20 h-14 flex items-center justify-center rounded-lg border-1 border-custom-gray-200">
+              <Box
+                className={`w-20 h-14 flex items-center justify-center rounded-lg border-1 border-custom-gray-200 ${
+                  isCanceled && 'saturate-0'
+                }`}
+              >
                 <IconCardFlag flag="Mastercard" />
               </Box>
-              <Box className="text-custom-gray-400 ml-5">
+              <Box className="text-custom-gray-400 ml-5 filter:">
                 <Text className="mb-2">Mastercard</Text>
                 <Text>**** **** **** 0987</Text>
               </Box>
             </Box>
           </Box>
 
-          <Box>
-            <Box className="mb-5">
-              <Button text="Alterar forma de pagamento" size="large" />
+          {isCanceled ? (
+            <Box>
+              <Button text={<Icon name="DotsThreeOutline" size={24} />} />
             </Box>
+          ) : (
+            <Box>
+              <Box className="mb-5">
+                <Button text="Alterar forma de pagamento" size="large" />
+              </Box>
 
-            <Text className="text-lg text-custom-gray-300">
-              Sua assinatura tem recorrencia mensal
-            </Text>
-          </Box>
+              <Text className="text-lg text-custom-gray-300">
+                Sua assinatura tem recorrencia mensal
+              </Text>
+            </Box>
+          )}
         </Box>
 
         <Text className="text-xl font-bold mb-5">Últimas faturas</Text>

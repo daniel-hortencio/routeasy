@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 interface Props {
   text: string | JSX.Element
+  type?: 'submit' | 'reset' | 'button'
   size?: 'small' | 'large'
   height?: 'low' | 'high'
   color?: 'primary' | 'secondary' | 'danger'
@@ -13,6 +14,7 @@ interface Props {
 
 export const Button = ({
   text,
+  type = 'button',
   size = 'small',
   color = 'secondary',
   height = 'high',
@@ -41,7 +43,7 @@ export const Button = ({
   }
 
   return as === 'button' ? (
-    <button className={getClassName()} onClick={onClick}>
+    <button type={type} className={getClassName()} onClick={onClick}>
       {text}
     </button>
   ) : (
