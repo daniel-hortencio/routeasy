@@ -33,30 +33,20 @@ export default function PageSignIn() {
             <InputText placeholder="Insira seu e-mail" />
           </InputGroup>
         </Box>
-        <Box className="mb-8">
+        <Box className="mb-14">
           <InputGroup label="Senha" linkText="Esqueceu sua senha?" linkTo="/">
             <InputPassword placeholder="Insira sua senha de acesso" />
           </InputGroup>
         </Box>
 
-        {/*         <Box className="flex items-center mb-6">
-          <Box className="border-b-2 h-1 border-dotted border-custom-gray-300 flex-auto" />
-          <Text className="flex-1 text-center text-custom-gray-300">
-            para a sua segurança
-          </Text>
-          <Box className="border-b-2 h-1 border-dotted border-custom-gray-300 flex-auto" />
+        <Box className="mt-1">
+          <Button
+            text="Acessar minha conta"
+            onClick={() => {}}
+            color="primary"
+            size="large"
+          />
         </Box>
-
-        <Box className="mb-8">
-          <p className="bg-white">Recaptcha</p>
-        </Box> */}
-
-        <Button
-          text="Acessar minha conta"
-          onClick={() => {}}
-          color="primary"
-          size="large"
-        />
       </form>
     </>
   )
