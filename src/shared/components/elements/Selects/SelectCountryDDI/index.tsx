@@ -4,11 +4,13 @@ import { CircleFlag as CountryFlag } from 'react-circle-flags'
 import {
   CountryDDIPhoneCodeType,
   countries_ddi_phone_code
-} from '../../../constants/countriesPhoneCode'
-import { SelectBase } from './SelectBase'
-import Icon from '../Icon'
-import { Text } from '../Text'
-import { Box } from '../Box'
+} from '../../../../constants/countriesPhoneCode'
+import { SelectBase } from '../SelectBase'
+import Icon from '../../Icon'
+import { Text } from '../../Text'
+import { Box } from '../../Box'
+
+import S from './styles.module.css'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -27,7 +29,9 @@ export const SelectCountryDDI = () => {
         {({ open }) => (
           <>
             <div className="relative h-full w-28 md:w-36">
-              <Listbox.Button className="flex items-center justify-between relative w-full cursor-default rounded-full px-6 h-full text-left text-custom-gray-500 ">
+              <Listbox.Button
+                className={`${S.SelectCountryDDI__ListBoxButton} flex items-center justify-between relative w-full cursor-default rounded-full px-6 h-full text-left text-custom-gray-500 `}
+              >
                 <Box className="flex items-center">
                   <Box className="hidden md:flex mr-2 w-6 h-6 rounded-full items-center relative">
                     <CountryFlag countryCode={selected.code.toLowerCase()} />
@@ -35,9 +39,9 @@ export const SelectCountryDDI = () => {
                   <Text>+{selected.ddi}</Text>
                 </Box>
                 <Box
-                  className={`transition-all fill-custom-gray-300 hover:fill-primary ${
-                    open && 'rotate-180'
-                  }`}
+                  className={`transition-all fill-custom-gray-300 ${
+                    S.SelectCountryDDI__ListBoxButtonArrow
+                  } ${open && 'rotate-180'}`}
                 >
                   <Icon name="CaretDown" size={20} />{' '}
                 </Box>
