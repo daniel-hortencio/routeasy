@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import { InputBase, InputBaseProps } from "./InputBase";
+import { InputBase, InputBaseProps } from './InputBase'
 
-interface Props extends InputBaseProps {}
+type Props = InputBaseProps
 
 export const InputText = ({ placeholder }: Props) => {
-  return <InputBase type="text" placeholder={placeholder} />;
-};
+  return <InputBase type="text" placeholder={placeholder} />
+}

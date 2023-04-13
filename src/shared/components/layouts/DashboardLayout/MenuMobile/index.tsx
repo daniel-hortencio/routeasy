@@ -1,24 +1,22 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from 'react'
 
-import { Box } from "../../../elements";
-import { Text } from "../../../elements";
-import { UserAvatar } from "../UserAvatar";
-import { MenuMobileIcon } from "../../../elements";
-import Link from "next/link";
+import { Box, Text, MenuMobileIcon } from '../../../elements'
+import { UserAvatar } from '../UserAvatar'
+import Link from 'next/link'
 
 interface Props {
-  isOpen: boolean;
-  onChange: Dispatch<SetStateAction<boolean>>;
+  isOpen: boolean
+  onChange: Dispatch<SetStateAction<boolean>>
 }
 
 const MenuBackDrop = ({ isOpen, onChange }: Props) => {
   return (
     <button
-      className={`fixed t-0 l-0 w-full h-screen ${!isOpen && "hidden"}`}
+      className={`fixed t-0 l-0 w-full h-screen ${!isOpen && 'hidden'}`}
       onClick={() => onChange(false)}
     />
-  );
-};
+  )
+}
 
 export const MenuMobileButton = ({ isOpen, onChange }: Props) => {
   return (
@@ -28,8 +26,8 @@ export const MenuMobileButton = ({ isOpen, onChange }: Props) => {
         <MenuMobileIcon isOpen={isOpen} onChange={onChange} />
       </Box>
     </Box>
-  );
-};
+  )
+}
 
 export const MenuMobile = ({ isOpen, onChange }: Props) => {
   return (
@@ -38,35 +36,35 @@ export const MenuMobile = ({ isOpen, onChange }: Props) => {
 
       <Box
         className={`absolute b-0 lg:hidden top-20 w-full transition-all overflow-hidden ${
-          isOpen ? "h-72 opacity-100" : "h-0 opacity-0"
+          isOpen ? 'h-72 opacity-100' : 'h-0 opacity-0'
         }`}
       >
         {[
           {
-            label: "Início",
-            href: "/dashboard",
+            label: 'Início',
+            href: '/dashboard'
           },
           {
-            label: "Processos Judiciais",
-            href: "/dashboard/processos",
+            label: 'Processos Judiciais',
+            href: '/dashboard/processos'
           },
           {
-            label: "Planos & faturas",
-            href: "/",
+            label: 'Planos & faturas',
+            href: '/'
           },
           {
-            label: "Alterar senha",
-            href: "/",
+            label: 'Alterar senha',
+            href: '/'
           },
           {
-            label: "Alterar e-mail",
-            href: "/",
+            label: 'Alterar e-mail',
+            href: '/'
           },
           {
-            label: "Sair",
-            href: "/",
-          },
-        ].map((item) => (
+            label: 'Sair',
+            href: '/'
+          }
+        ].map(item => (
           <Link key={item.label} href={item.href}>
             <Text className="flex items-center justify-center h-12 border-b-1 border-primary-dark bg-primary text-white hover:bg-primary-dark ">
               {item.label}
@@ -75,5 +73,5 @@ export const MenuMobile = ({ isOpen, onChange }: Props) => {
         ))}
       </Box>
     </>
-  );
-};
+  )
+}

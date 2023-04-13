@@ -1,26 +1,26 @@
-import Link from "next/link";
-import { Box, Icon, Text } from "../../../../shared/components/elements";
+import Link from 'next/link'
+import { Box, Icon, Text } from '../../../../shared/components/elements'
 
-import "./styles.css";
-import { TableHeader } from "../../../../shared/components/elements/Table/TableHeader";
+import './styles.css'
+import { TableHeader } from '../../../../shared/components/elements/Table/TableHeader'
 
 interface Props {
-  id: string;
-  updated_at: string;
-  number: string;
-  processo: string;
-  tribunal: string;
-  tipo: string;
+  id: string
+  updated_at: string
+  number: string
+  processo: string
+  tribunal: string
+  tipo: string
 }
 
 export const TableHeaderProcessHistory = () => {
   return (
     <TableHeader
-      titles={["Atualizado em", "Número", "Processo", "Tribunal", "Tipo"]}
+      titles={['Atualizado em', 'Número', 'Processo', 'Tribunal', 'Tipo']}
       className="TableHeaderProcessHistory"
     />
-  );
-};
+  )
+}
 
 export const TableRowProcessHistory = ({
   id,
@@ -28,7 +28,7 @@ export const TableRowProcessHistory = ({
   number,
   processo,
   tribunal,
-  tipo,
+  tipo
 }: Props) => {
   return (
     <Link href={`/dashboard/processos/${id}`}>
@@ -76,5 +76,5 @@ export const TableRowProcessHistory = ({
         </Box>
       </Box>
     </Link>
-  );
-};
+  )
+}

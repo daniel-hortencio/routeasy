@@ -1,18 +1,17 @@
-import { Fragment, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { Box } from "../../../../shared/components/elements";
-import { Icon } from "../../../../shared/components/elements";
+import { Fragment, useState } from 'react'
+import { Listbox, Transition } from '@headlessui/react'
+import { Box, Icon } from '../../../../shared/components/elements'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 interface Props {
-  options: number[];
+  options: number[]
 }
 
 export default function Select({ options }: Props) {
-  const [selected, setSelected] = useState<number | null>(options[0]);
+  const [selected, setSelected] = useState<number | null>(options[0])
 
   return (
     <Listbox value={selected} onChange={setSelected}>
@@ -41,13 +40,13 @@ export default function Select({ options }: Props) {
               leaveTo="opacity-0"
             >
               <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 sm:text-sm">
-                {options.map((option) => (
+                {options.map(option => (
                   <Listbox.Option
                     key={option}
                     className={({ active }) =>
                       classNames(
-                        active ? "bg-primary font-semibold" : "text-gray-900",
-                        "relative cursor-default select-none py-2"
+                        active ? 'bg-primary font-semibold' : 'text-gray-900',
+                        'relative cursor-default select-none py-2'
                       )
                     }
                     value={option}
@@ -58,11 +57,11 @@ export default function Select({ options }: Props) {
                           <span
                             className={classNames(
                               active
-                                ? "text-white bg-primary"
+                                ? 'text-white bg-primary'
                                 : selected
-                                ? "text-primary font-bold"
-                                : "font-normal",
-                              "block truncate"
+                                ? 'text-primary font-bold'
+                                : 'font-normal',
+                              'block truncate'
                             )}
                           >
                             {option}
@@ -90,5 +89,5 @@ export default function Select({ options }: Props) {
         </>
       )}
     </Listbox>
-  );
+  )
 }

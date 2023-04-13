@@ -1,28 +1,28 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from 'react'
 
 export type BoxElementType =
-  | "div"
-  | "header"
-  | "nav"
-  | "section"
-  | "footer"
-  | "main"
-  | "ul"
-  | "li";
+  | 'div'
+  | 'header'
+  | 'nav'
+  | 'section'
+  | 'footer'
+  | 'main'
+  | 'ul'
+  | 'li'
 interface Props {
-  children?: ReactNode;
-  className?: string;
-  style?: CSSProperties;
-  as?: BoxElementType;
-  onClick?: () => void;
+  children?: ReactNode
+  className?: string
+  style?: CSSProperties
+  as?: BoxElementType
+  onClick?: () => void
 }
 
 export const Box = ({
   children,
   className,
   style,
-  as = "div",
-  onClick,
+  as = 'div',
+  onClick
 }: Props) => {
   const element = {
     div: (
@@ -64,8 +64,8 @@ export const Box = ({
       <li onClick={onClick} style={style} className={className}>
         {children}
       </li>
-    ),
-  };
+    )
+  }
 
-  return element[as];
-};
+  return element[as]
+}

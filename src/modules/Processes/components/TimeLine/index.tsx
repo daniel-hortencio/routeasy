@@ -1,12 +1,9 @@
-"use client";
+'use client'
 
-import { Box } from "../../../../shared/components/elements";
-import { Button } from "../../../../shared/components/elements";
-import { Icon } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements";
+import { Box, Button, Icon, Text } from '../../../../shared/components/elements'
 
 interface Props {
-  isMonitoring: boolean;
+  isMonitoring: boolean
 }
 
 export const TimeLine = ({ isMonitoring }: Props) => {
@@ -49,7 +46,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                       className="text-sm h-30px md:text-base md:h-12"
                       text={
                         <Box className="flex items-center">
-                          <Icon name="Broadcast" />{" "}
+                          <Icon name="Broadcast" />{' '}
                           <span className="ml-3">Ativar Monitoramento</span>
                         </Box>
                       }
@@ -97,30 +94,30 @@ export const TimeLine = ({ isMonitoring }: Props) => {
             <Text className="text-custom-gray-400">
               <Text as="strong" className="font-bold">
                 Proc.
-              </Text>{" "}
+              </Text>{' '}
               <span className="font-bold hover:text-primary-dark underline text-primary">
                 0101014-15.2006.8.19.000
-              </span>{" "}
+              </span>{' '}
               <Text as="strong" className="font-bold">
                 (2XXX.001.1XX005-5)
-              </Text>{" "}
-              -{" "}
+              </Text>{' '}
+              -{' '}
               <span className="text-primary hover:text-primary-dark underline">
-                CAIXA DE PREVIDENCIA DOS FUNCIONARIOS DO BANCO DO BRASIL PREVI{" "}
-              </span>{" "}
-              (Adv(s). Dr(a).{" "}
+                CAIXA DE PREVIDENCIA DOS FUNCIONARIOS DO BANCO DO BRASIL PREVI{' '}
+              </span>{' '}
+              (Adv(s). Dr(a).{' '}
               <span className="text-primary hover:text-primary-dark underline">
                 ALEXANDRE GHAZI
-              </span>{" "}
-              (OAB/RJ-070771) X{" "}
+              </span>{' '}
+              (OAB/RJ-070771) X{' '}
               <span className="text-primary hover:text-primary-dark underline">
                 SERGIO MAURICIO CARNEIRO
-              </span>{" "}
+              </span>{' '}
               (Adv(s). Dr(a). ERICA CARLA SILVA DE SOUSA ANDRADE
-              (OAB/RJ-116306), Dr(a).{" "}
+              (OAB/RJ-116306), Dr(a).{' '}
               <span className="text-primary hover:text-primary-dark underline">
                 RODRIGO LESSA PEREIRA
-              </span>{" "}
+              </span>{' '}
               (OAB/RJ-131983) Despacho: Cumpra-se o despacho no apenso, sem
               prejuízo junte o exequente cópia da certidão junto ao Registro de
               Imóveis do bem que pretende ver penhorado.
@@ -168,5 +165,5 @@ export const TimeLine = ({ isMonitoring }: Props) => {
         </Box>
       </Box>
     </Box>
-  );
-};
+  )
+}

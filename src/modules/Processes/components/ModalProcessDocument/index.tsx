@@ -1,10 +1,9 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Box, Button, Icon } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements";
+import { useState } from 'react'
+import { Box, Button, Icon, Text } from '../../../../shared/components/elements'
 
-import "./styles.css";
+import './styles.css'
 
 const Header = () => {
   return (
@@ -14,14 +13,14 @@ const Header = () => {
       <Text className="text-sm text-custom-gray-300">DATA</Text>
       <Box className="w-8" />
     </Box>
-  );
-};
+  )
+}
 
 interface RowProps {
-  name: string;
-  size: string;
-  date: string;
-  downloadLink: string;
+  name: string
+  size: string
+  date: string
+  downloadLink: string
 }
 
 const Row = ({ name, size, date, downloadLink }: RowProps) => {
@@ -61,12 +60,12 @@ const Row = ({ name, size, date, downloadLink }: RowProps) => {
         </a>
       </Box>
     </>
-  );
-};
+  )
+}
 
 export const ModalProcessDocument = () => {
-  const [showLastPublications, setShowLastPublications] = useState(true);
-  const [showAllDocuments, setShowAllDocuments] = useState(false);
+  const [showLastPublications, setShowLastPublications] = useState(true)
+  const [showAllDocuments, setShowAllDocuments] = useState(false)
 
   return (
     <Box>
@@ -80,7 +79,7 @@ export const ModalProcessDocument = () => {
 
             <Box
               className={`transition-all ${
-                showLastPublications && "rotate-180"
+                showLastPublications && 'rotate-180'
               }`}
             >
               <Icon name="CaretDown" size={20} />
@@ -126,7 +125,7 @@ export const ModalProcessDocument = () => {
                 Todos os documentos
               </Text>
               <Box
-                className={`transition-all ${showAllDocuments && "rotate-180"}`}
+                className={`transition-all ${showAllDocuments && 'rotate-180'}`}
               >
                 <Icon name="CaretDown" size={20} />
               </Box>
@@ -204,5 +203,5 @@ export const ModalProcessDocument = () => {
         )}
       </Box>
     </Box>
-  );
-};
+  )
+}

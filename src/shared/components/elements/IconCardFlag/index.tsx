@@ -1,14 +1,14 @@
-import Image from "next/image";
-import { Box } from "../Box";
+import Image from 'next/image'
+import { Box } from '../Box'
 
 interface Props {
-  flag: "Mastercard";
+  flag: 'Mastercard'
 }
 
 export const IconCardFlag = ({ flag }: Props) => {
   const card_flag_src = {
-    Mastercard: "/images/icons/Mastercard.svg",
-  };
+    Mastercard: '/images/icons/Mastercard.svg'
+  }
 
   return (
     <Box className="h-12 w-12 relative">
@@ -17,9 +17,9 @@ export const IconCardFlag = ({ flag }: Props) => {
         alt={`${flag}`}
         fill
         style={{
-          objectFit: "contain",
+          objectFit: 'contain'
         }}
       />
     </Box>
-  );
-};
+  )
+}

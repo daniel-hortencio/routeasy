@@ -1,15 +1,15 @@
-import * as PhosphorIcons from "@phosphor-icons/react";
-import { IconName } from "./types";
+import * as PhosphorIcons from '@phosphor-icons/react'
+import { IconName } from './types'
 interface IconTest {
-  name: IconName;
-  size?: number;
-  color?: string;
+  name: IconName
+  size?: number
+  color?: string
 }
 
-const Icon = ({ name, size = 20, color = "" }: IconTest) => {
-  const PhIcon = PhosphorIcons[name] || PhosphorIcons["XSquare"];
+const Icon = ({ name, size = 20, color = '' }: IconTest) => {
+  const PhIcon = PhosphorIcons[name] || PhosphorIcons.XSquare
 
-  return <PhIcon size={size} color={color} />;
-};
+  return <PhIcon size={size} color={color} />
+}
 
-export default Icon;
+export default Icon

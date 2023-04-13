@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import PageProcessDetails from "../../../../modules/Processes/pages/ProcessDetails";
-import { FC } from "react";
+import PageProcessDetails from '../../../../modules/Processes/pages/ProcessDetails'
+import { FC } from 'react'
 
 interface Props {
   params: {
-    id: string;
-  };
+    id: string
+  }
 }
 
 const ProcessDetails: FC<Props> = ({ params }) => {
-  return <PageProcessDetails isMonitoring={params.id === "1"} />;
-};
-export default ProcessDetails;
+  return <PageProcessDetails isMonitoring={params.id === '1'} />
+}
+export default ProcessDetails

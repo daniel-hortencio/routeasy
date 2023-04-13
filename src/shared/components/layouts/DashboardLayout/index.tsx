@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { Box } from "../../elements";
-import { DashboardLayoutFooter } from "./Footer";
+import { Box } from '../../elements'
+import { DashboardLayoutFooter } from './Footer'
 
 export default function DashboardLayout({ children }) {
   return (
@@ -10,5 +10,5 @@ export default function DashboardLayout({ children }) {
       {children}
       <DashboardLayoutFooter />
     </Box>
-  );
+  )
 }

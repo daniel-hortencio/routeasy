@@ -1,12 +1,12 @@
-"use client";
+'use client'
 
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface Props {
-  label: string;
-  children: ReactNode;
-  linkText?: string;
-  linkTo?: string;
+  label: string
+  children: ReactNode
+  linkText?: string
+  linkTo?: string
 }
 
 export const InputGroup = ({ label, children, linkText, linkTo }: Props) => {
@@ -25,5 +25,5 @@ export const InputGroup = ({ label, children, linkText, linkTo }: Props) => {
       </div>
       {children}
     </div>
-  );
-};
+  )
+}

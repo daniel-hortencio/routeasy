@@ -1,17 +1,15 @@
-"use client";
+'use client'
 
-import { Box } from "../../../elements";
-import { Text } from "../../../elements";
-import { DashboardLayoutNavigation } from "../Navigation";
-import { MenuUser } from "../MenuUser";
-import { Icon } from "../../../elements";
-import { UserAvatar } from "../UserAvatar";
+import { Box, Text, Icon } from '../../../elements'
+import { DashboardLayoutNavigation } from '../Navigation'
+import { MenuUser } from '../MenuUser'
+import { UserAvatar } from '../UserAvatar'
 
-import "./styles.css";
-import { useState } from "react";
+import './styles.css'
+import { useState } from 'react'
 
 export const MenuDesktop = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
 
   return (
     <Box className="hidden lg:flex lg:items-center">
@@ -33,7 +31,7 @@ export const MenuDesktop = () => {
             </Box>
             <Box
               className={`transition-all fill-custom-gray-300 ${
-                isOpenMenu && "rotate-180"
+                isOpenMenu && 'rotate-180'
               }`}
             >
               <Icon name="CaretDown" />
@@ -42,5 +40,5 @@ export const MenuDesktop = () => {
         }
       />
     </Box>
-  );
-};
+  )
+}

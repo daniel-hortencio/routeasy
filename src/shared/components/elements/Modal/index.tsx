@@ -1,33 +1,33 @@
-"use client";
+'use client'
 
-import { Fragment, ReactNode, useRef } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { Box } from "../Box";
-import { Text } from "../Text";
-import Icon from "../Icon";
+import { Fragment, ReactNode, useRef } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import { Box } from '../Box'
+import { Text } from '../Text'
+import Icon from '../Icon'
 
 interface Props {
-  title: string;
-  description: string;
-  isOpen: boolean;
-  onClose: () => void;
-  showButtonClose?: boolean;
-  headerAlign?: "left" | "center" | "right";
-  children: ReactNode;
-  footer?: ReactNode;
+  title: string
+  description: string
+  isOpen: boolean
+  onClose: () => void
+  showButtonClose?: boolean
+  headerAlign?: 'left' | 'center' | 'right'
+  children: ReactNode
+  footer?: ReactNode
 }
 
 export default function Modal({
   title,
   isOpen,
-  headerAlign = "left",
+  headerAlign = 'left',
   onClose,
   showButtonClose = true,
   description,
   children,
-  footer,
+  footer
 }: Props) {
-  const cancelButtonRef = useRef(null);
+  const cancelButtonRef = useRef(null)
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
@@ -104,5 +104,5 @@ export default function Modal({
         </div>
       </Dialog>
     </Transition.Root>
-  );
+  )
 }

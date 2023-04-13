@@ -1,29 +1,29 @@
-import { Box } from "..";
+import { Box } from '..'
 
-import { TableHeader } from "./TableHeader";
+import { TableHeader } from './TableHeader'
 
 type TableColumn = {
-  title: string;
-};
+  title: string
+}
 
 interface TableColumnsDefinition {
-  data: any;
-  HeaderComponent: () => JSX.Element;
-  RowComponent: (data: any) => JSX.Element;
+  data: any
+  HeaderComponent: () => JSX.Element
+  RowComponent: (data: any) => JSX.Element
 }
 
 export const Table = ({
   data,
   HeaderComponent,
-  RowComponent,
+  RowComponent
 }: TableColumnsDefinition) => {
   return (
     <Box className="w-full ">
       <HeaderComponent />
 
-      {data?.map((row_data) => (
+      {data?.map(row_data => (
         <RowComponent key={row_data.id} {...row_data} />
       ))}
     </Box>
-  );
-};
+  )
+}

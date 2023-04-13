@@ -1,20 +1,17 @@
-import { Box } from "../../../elements";
-import { Button } from "../../../elements";
-import { Text } from "../../../elements";
-import { Logo } from "../../../elements";
+import { Box, Button, Text, Logo } from '../../../elements'
 
 interface Props {
-  desktopText: string;
-  linkTo: string;
-  desktopLinkText: string;
-  mobileLinkText: string;
+  desktopText: string
+  linkTo: string
+  desktopLinkText: string
+  mobileLinkText: string
 }
 
 export const PublicLayoutHeader = ({
   desktopText,
   linkTo,
   desktopLinkText,
-  mobileLinkText,
+  mobileLinkText
 }: Props) => {
   return (
     <Box className="fixed flex top-0 left-0 w-full h-20 lg:h-28 backdrop-blur-lg z-20">
@@ -30,7 +27,7 @@ export const PublicLayoutHeader = ({
           />
         </Box>
         <Text className="text-white hidden md:block">
-          {desktopText}{" "}
+          {desktopText}{' '}
           <a
             href={linkTo}
             className="text-primary hover:text-primary-dark transition-all"
@@ -40,5 +37,5 @@ export const PublicLayoutHeader = ({
         </Text>
       </Box>
     </Box>
-  );
-};
+  )
+}

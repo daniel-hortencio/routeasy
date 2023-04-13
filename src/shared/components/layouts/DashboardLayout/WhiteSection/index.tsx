@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { Wrapper } from "../../../elements";
+import React, { ReactNode } from 'react'
+import { Wrapper } from '../../../elements'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const WhiteSection = ({ children }: Props) => {
@@ -13,5 +13,5 @@ export const WhiteSection = ({ children }: Props) => {
     >
       {children}
     </Wrapper>
-  );
-};
+  )
+}

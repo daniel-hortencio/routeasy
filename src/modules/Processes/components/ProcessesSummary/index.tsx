@@ -1,30 +1,30 @@
-"use client";
+'use client'
 
-import { Box, Wrapper } from "../../../../shared/components/elements";
-import { CardProcessesSummary } from "../CardProcessesSummary";
+import { Box, Wrapper } from '../../../../shared/components/elements'
+import { CardProcessesSummary } from '../CardProcessesSummary'
 
-import "keen-slider/keen-slider.min.css";
-import "./styles.css";
-import { useKeenSlider } from "keen-slider/react";
-import { useState, useEffect } from "react";
+import 'keen-slider/keen-slider.min.css'
+import './styles.css'
+import { useKeenSlider } from 'keen-slider/react'
+import { useState, useEffect } from 'react'
 
 export default function ProcessesSummary() {
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       initial: 0,
       slides: {
-        perView: 1.25,
-      },
+        perView: 1.25
+      }
     },
     [
       // add plugins here
     ]
-  );
-  const [sliderIsMounting, setSliderIsMounting] = useState(true);
+  )
+  const [sliderIsMounting, setSliderIsMounting] = useState(true)
 
   useEffect(() => {
-    setSliderIsMounting(false);
-  }, []);
+    setSliderIsMounting(false)
+  }, [])
 
   return (
     <Box className="justify-center pt-6 pb-12  bg-white">
@@ -51,7 +51,7 @@ export default function ProcessesSummary() {
         >
           <div
             className={`keen-slider__slide px-4 cursor-grab ${
-              sliderIsMounting && "hidden"
+              sliderIsMounting && 'hidden'
             }`}
           >
             <CardProcessesSummary
@@ -63,7 +63,7 @@ export default function ProcessesSummary() {
 
           <div
             className={`keen-slider__slide pr-4 cursor-grab ${
-              sliderIsMounting && "hidden"
+              sliderIsMounting && 'hidden'
             }`}
           >
             <CardProcessesSummary label="Em monitoramento" data={100592} />
@@ -71,7 +71,7 @@ export default function ProcessesSummary() {
 
           <div
             className={`keen-slider__slide pr-4 cursor-grab ${
-              sliderIsMounting && "hidden"
+              sliderIsMounting && 'hidden'
             }`}
           >
             <CardProcessesSummary
@@ -90,5 +90,5 @@ export default function ProcessesSummary() {
         </div>
       </Box>
     </Box>
-  );
+  )
 }

@@ -1,9 +1,8 @@
-"use client";
+'use client'
 
-import { Box, Button } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements";
+import { Box, Button, Text } from '../../../../shared/components/elements'
 
-import "./styles.css";
+import './styles.css'
 
 export const ModalCancelMonitoring = () => {
   return (
@@ -46,5 +45,5 @@ export const ModalCancelMonitoring = () => {
         sincronizadas com todos os tribunais e Diários Oficiais.
       </Text>
     </Box>
-  );
-};
+  )
+}

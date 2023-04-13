@@ -1,1 +1,1 @@
-export { SelectCountryDDI } from "./SelectCountryDDI";
+export { SelectCountryDDI } from './SelectCountryDDI'

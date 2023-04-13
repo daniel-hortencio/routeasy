@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import { useState, Fragment, ReactNode, SetStateAction, Dispatch } from "react";
-import Link from "next/link";
+import { useState, Fragment, ReactNode, SetStateAction, Dispatch } from 'react'
+import Link from 'next/link'
 
-import { Menu, Transition } from "@headlessui/react";
-import { Box } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements/Text";
-import Icon from "../../../../shared/components/elements/Icon";
+import { Menu, Transition } from '@headlessui/react'
+import { Box } from '../../../../shared/components/elements'
+import { Text } from '../../../../shared/components/elements/Text'
+import Icon from '../../../../shared/components/elements/Icon'
 
 interface Props {
-  button: ReactNode;
-  //onChange: Dispatch<SetStateAction<boolean>>;
+  button: ReactNode
+  // onChange: Dispatch<SetStateAction<boolean>>;
 }
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export const MenuPlanOptions = ({ button }: Props) => {
@@ -48,8 +48,8 @@ export const MenuPlanOptions = ({ button }: Props) => {
                 <Link href="#">
                   <Text
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                     )}
                   >
                     <Icon name="FilePdf" />
@@ -63,8 +63,8 @@ export const MenuPlanOptions = ({ button }: Props) => {
                 <Link href="#">
                   <Text
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                     )}
                   >
                     <Icon name="SmileySad" />
@@ -96,8 +96,8 @@ export const MenuPlanOptions = ({ button }: Props) => {
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? "bg-gray-100 " : "",
-                    "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-danger-dark"
+                    active ? 'bg-gray-100 ' : '',
+                    'flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-danger-dark'
                   )}
                 >
                   <Icon name="XCircle" size={22} />
@@ -109,5 +109,5 @@ export const MenuPlanOptions = ({ button }: Props) => {
         </Menu.Items>
       </Transition>
     </Menu>
-  );
-};
+  )
+}

@@ -1,27 +1,27 @@
-"use client";
+'use client'
 
-import { Fragment, ReactNode } from "react";
-import Link from "next/link";
+import { Fragment, ReactNode } from 'react'
+import Link from 'next/link'
 
-import { Menu, Transition } from "@headlessui/react";
-import { Box } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements/Text";
-import Icon from "../../../../shared/components/elements/Icon";
+import { Menu, Transition } from '@headlessui/react'
+import { Box } from '../../../../shared/components/elements'
+import { Text } from '../../../../shared/components/elements/Text'
+import Icon from '../../../../shared/components/elements/Icon'
 
 interface Props {
-  button: ReactNode;
-  isMonitoring: boolean;
-  cancelMonitoring: () => void;
+  button: ReactNode
+  isMonitoring: boolean
+  cancelMonitoring: () => void
 }
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export const MenuProcessDocumentOptions = ({
   button,
   isMonitoring,
-  cancelMonitoring,
+  cancelMonitoring
 }: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -51,8 +51,8 @@ export const MenuProcessDocumentOptions = ({
                 <Link href="#">
                   <Text
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                     )}
                   >
                     <Icon name="CodeBlock" />
@@ -66,8 +66,8 @@ export const MenuProcessDocumentOptions = ({
                 <Link href="#">
                   <Text
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                     )}
                   >
                     <Icon name="FilePdf" />
@@ -81,8 +81,8 @@ export const MenuProcessDocumentOptions = ({
                 <Link href="#">
                   <Text
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                     )}
                   >
                     <Icon name="Printer" />
@@ -116,8 +116,8 @@ export const MenuProcessDocumentOptions = ({
                   <button
                     onClick={cancelMonitoring}
                     className={classNames(
-                      active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-danger-dark"
+                      active ? 'bg-gray-100 ' : '',
+                      'flex items-center px-4 py-2 text-sm w-full text-danger hover:text-red-600 fill-danger hover:fill-danger-dark'
                     )}
                   >
                     <Icon name="Broadcast" size={22} />
@@ -127,8 +127,8 @@ export const MenuProcessDocumentOptions = ({
                   <button
                     onClick={cancelMonitoring}
                     className={classNames(
-                      active ? "bg-gray-100 " : "",
-                      "flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primary-dark fill-primary hover:fill-primary-dark"
+                      active ? 'bg-gray-100 ' : '',
+                      'flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primary-dark fill-primary hover:fill-primary-dark'
                     )}
                   >
                     <Icon name="Broadcast" />
@@ -141,5 +141,5 @@ export const MenuProcessDocumentOptions = ({
         </Menu.Items>
       </Transition>
     </Menu>
-  );
-};
+  )
+}

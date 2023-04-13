@@ -1,11 +1,10 @@
-import { Box } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements";
-import Select from "../Select";
+import { Box, Text } from '../../../../shared/components/elements'
+import Select from '../Select'
 
 interface Props {
-  label: string;
-  filterDays?: number[];
-  data: number;
+  label: string
+  filterDays?: number[]
+  data: number
 }
 
 export const CardProcessesSummary = ({ label, filterDays, data }: Props) => {
@@ -25,5 +24,5 @@ export const CardProcessesSummary = ({ label, filterDays, data }: Props) => {
         <Text className="text-4xl">{data}</Text>
       </Box>
     </Box>
-  );
-};
+  )
+}

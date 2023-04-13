@@ -1,19 +1,19 @@
-import { useState, Fragment, ReactNode, Dispatch, SetStateAction } from "react";
-import Image from "next/image";
+import { useState, Fragment, ReactNode, Dispatch, SetStateAction } from 'react'
+import Image from 'next/image'
 
-import { Menu, Transition } from "@headlessui/react";
-import { Box } from "../../../elements/Box";
-import { Text } from "../../../elements/Text";
-import Icon from "../../../elements/Icon";
-import Link from "next/link";
+import { Menu, Transition } from '@headlessui/react'
+import { Box } from '../../../elements/Box'
+import { Text } from '../../../elements/Text'
+import Icon from '../../../elements/Icon'
+import Link from 'next/link'
 
 interface Props {
-  button: ReactNode;
-  onChange: Dispatch<SetStateAction<boolean>>;
+  button: ReactNode
+  onChange: Dispatch<SetStateAction<boolean>>
 }
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export const MenuUser = ({ button, onChange }: Props) => {
@@ -48,15 +48,15 @@ export const MenuUser = ({ button, onChange }: Props) => {
                   <Link href="#">
                     <Text
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                       )}
                     >
                       <Icon name="LockSimple" />
                       <span className="ml-2">Alterar senha</span>
                     </Text>
                   </Link>
-                );
+                )
               }}
             </Menu.Item>
             <Menu.Item>
@@ -64,8 +64,8 @@ export const MenuUser = ({ button, onChange }: Props) => {
                 <Link href="#">
                   <Text
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "flex items-center px-4 py-2 text-sm fill-custom-gray-300"
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'flex items-center px-4 py-2 text-sm fill-custom-gray-300'
                     )}
                   >
                     <Icon name="At" />
@@ -97,8 +97,8 @@ export const MenuUser = ({ button, onChange }: Props) => {
               {({ active }) => (
                 <button
                   className={classNames(
-                    active ? "bg-gray-100 " : "",
-                    "flex items-center px-4 py-2 text-sm w-full text-danger hover:text-danger-dark fill-danger hover:fill-danger-dark"
+                    active ? 'bg-gray-100 ' : '',
+                    'flex items-center px-4 py-2 text-sm w-full text-danger hover:text-danger-dark fill-danger hover:fill-danger-dark'
                   )}
                 >
                   <Box className="mr-2">
@@ -112,5 +112,5 @@ export const MenuUser = ({ button, onChange }: Props) => {
         </Menu.Items>
       </Transition>
     </Menu>
-  );
-};
+  )
+}

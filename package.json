@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "style:all": "tsc && npm run style:lint && npm run style:prettier",
+    "style:lint": "eslint src --ext .ts",
+    "style:prettier": "prettier --check './src'"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

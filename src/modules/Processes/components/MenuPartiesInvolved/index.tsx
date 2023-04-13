@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import { useState, Fragment, ReactNode, SetStateAction, Dispatch } from "react";
-import Link from "next/link";
+import { useState, Fragment, ReactNode, SetStateAction, Dispatch } from 'react'
+import Link from 'next/link'
 
-import { Menu, Transition } from "@headlessui/react";
-import { Box } from "../../../../shared/components/elements";
-import { Text } from "../../../../shared/components/elements/Text";
-import Icon from "../../../../shared/components/elements/Icon";
+import { Menu, Transition } from '@headlessui/react'
+import { Box } from '../../../../shared/components/elements'
+import { Text } from '../../../../shared/components/elements/Text'
+import Icon from '../../../../shared/components/elements/Icon'
 
 interface Props {
-  button: ReactNode;
-  onChange: Dispatch<SetStateAction<boolean>>;
+  button: ReactNode
+  onChange: Dispatch<SetStateAction<boolean>>
 }
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
@@ -49,8 +49,8 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
                   <Link href="#">
                     <Text
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm"
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm'
                       )}
                     >
                       Caixa de Previdencia dos Funcionarios do Banco do Brasil
@@ -75,8 +75,8 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
                   <Link href="#">
                     <Text
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm"
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm'
                       )}
                     >
                       Sergio Mauricio Carneiro (Executado)
@@ -100,8 +100,8 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
                   <Link href="#">
                     <Text
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm"
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm'
                       )}
                     >
                       Alexandre Ghazi
@@ -114,8 +114,8 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
                   <Link href="#">
                     <Text
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm"
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm'
                       )}
                     >
                       Erica Carla Silva de Sousa Andrade
@@ -128,8 +128,8 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
                   <Link href="#">
                     <Text
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "flex items-center px-4 py-2 text-sm"
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'flex items-center px-4 py-2 text-sm'
                       )}
                     >
                       Rodrigo Lessa Pereira
@@ -142,5 +142,5 @@ export const MenuPartiesInvolved = ({ button, onChange }: Props) => {
         </Menu.Items>
       </Transition>
     </Menu>
-  );
-};
+  )
+}

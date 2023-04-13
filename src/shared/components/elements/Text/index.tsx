@@ -1,24 +1,24 @@
-"use client";
+'use client'
 
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
-  className?: string;
+  children: ReactNode
+  className?: string
   as?:
-    | "p"
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "strong"
-    | "small"
-    | "span";
+    | 'p'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'strong'
+    | 'small'
+    | 'span'
 }
 
-export const Text = ({ children, className = "", as = "p" }: Props) => {
+export const Text = ({ children, className = '', as = 'p' }: Props) => {
   const element = {
     p: <p className={className}>{children}</p>,
     h1: <h1 className={className}>{children}</h1>,
@@ -29,8 +29,8 @@ export const Text = ({ children, className = "", as = "p" }: Props) => {
     h6: <h6 className={className}>{children}</h6>,
     strong: <strong className={className}>{children}</strong>,
     small: <small className={className}>{children}</small>,
-    span: <span className={className}>{children}</span>,
-  };
+    span: <span className={className}>{children}</span>
+  }
 
-  return element[as];
-};
+  return element[as]
+}

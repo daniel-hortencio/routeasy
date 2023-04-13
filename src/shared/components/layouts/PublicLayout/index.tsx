@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { Box } from "../../elements";
-import Image from "next/image";
+import { Box } from '../../elements'
+import Image from 'next/image'
 
 export default function PublicLayout({ children }) {
   return (
@@ -12,8 +12,8 @@ export default function PublicLayout({ children }) {
           alt="Background text"
           fill
           style={{
-            objectFit: "cover",
-            objectPosition: "left bottom",
+            objectFit: 'cover',
+            objectPosition: 'left bottom'
           }}
         />
       </Box>
@@ -23,8 +23,8 @@ export default function PublicLayout({ children }) {
           alt="Background text"
           fill
           style={{
-            objectFit: "cover",
-            objectPosition: "left bottom",
+            objectFit: 'cover',
+            objectPosition: 'left bottom'
           }}
         />
       </Box>
@@ -35,5 +35,5 @@ export default function PublicLayout({ children }) {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }

@@ -1,19 +1,19 @@
-"use client";
+'use client'
 
-import { ReactNode, useState } from "react";
+import { ReactNode } from 'react'
 
 export interface InputBaseProps {
-  placeholder?: string;
-  type?: "text" | "password";
-  icon?: ReactNode;
-  className?: string;
+  placeholder?: string
+  type?: 'text' | 'password'
+  icon?: ReactNode
+  className?: string
 }
 
 export const InputBase = ({
   placeholder,
-  type = "text",
+  type = 'text',
   icon,
-  className,
+  className
 }: InputBaseProps) => {
   return (
     <div
@@ -29,5 +29,5 @@ export const InputBase = ({
         <div className="absolute h-full right-0 flex items-center">{icon}</div>
       )}
     </div>
-  );
-};
+  )
+}

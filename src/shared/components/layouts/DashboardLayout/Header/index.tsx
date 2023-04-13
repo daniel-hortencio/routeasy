@@ -1,16 +1,13 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import { Box } from "../../../elements";
-import { Logo } from "../../../elements";
-import { MenuMobile, MenuMobileButton } from "../MenuMobile";
-import { MenuDesktop } from "../MenuDesktop";
+import { Box, Logo } from '../../../elements'
+import { MenuMobile, MenuMobileButton } from '../MenuMobile'
+import { MenuDesktop } from '../MenuDesktop'
 
-import "./styles.css";
+import './styles.css'
 
-interface Props {}
-
-export const DashboardLayoutHeader = ({}: Props) => {
-  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
+export const DashboardLayoutHeader = () => {
+  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false)
 
   return (
     <Box>
@@ -30,5 +27,5 @@ export const DashboardLayoutHeader = ({}: Props) => {
       </Box>
       <Box className="fixed bg-white  w-full h-20 lg:h-28 top-0 left-0 -z-10" />
     </Box>
-  );
-};
+  )
+}

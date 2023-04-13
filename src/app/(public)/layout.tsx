@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import PublicLayout from "../../shared/components/layouts/PublicLayout";
+import PublicLayout from '../../shared/components/layouts/PublicLayout'
 
 export default function ({ children }) {
-  return <PublicLayout>{children}</PublicLayout>;
+  return <PublicLayout>{children}</PublicLayout>
 }

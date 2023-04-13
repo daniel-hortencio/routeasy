@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Box } from "../../../elements";
+import Image from 'next/image'
+import { Box } from '../../../elements'
 
 interface Props {
-  src: string;
+  src: string
 }
 
 export const UserAvatar = ({ src }: Props) => {
@@ -15,12 +15,12 @@ export const UserAvatar = ({ src }: Props) => {
           width={80}
           height={80}
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
           }}
         />
       </Box>
     </Box>
-  );
-};
+  )
+}

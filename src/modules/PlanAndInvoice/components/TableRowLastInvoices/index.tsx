@@ -1,35 +1,34 @@
-import Link from "next/link";
-import { Box, Icon, Text } from "../../../../shared/components/elements";
+import { Box, Icon, Text } from '../../../../shared/components/elements'
 
-import "./styles.css";
-import { TableHeader } from "../../../../shared/components/elements/Table/TableHeader";
+import './styles.css'
+import { TableHeader } from '../../../../shared/components/elements/Table/TableHeader'
 
 interface Props {
-  id: string;
-  vencimento: string;
-  periodo: string;
-  plano: string;
-  consumo: string;
-  forma_de_pagamento: string;
-  valor: string;
-  status: "success" | "pending" | "error";
+  id: string
+  vencimento: string
+  periodo: string
+  plano: string
+  consumo: string
+  forma_de_pagamento: string
+  valor: string
+  status: 'success' | 'pending' | 'error'
 }
 
 export const TableHeaderLastInvoices = () => {
   return (
     <TableHeader
       titles={[
-        "Vencimento",
-        "Periodo",
-        "Plano",
-        "Consumo",
-        "Forma de Pagamento",
-        "Valor",
+        'Vencimento',
+        'Periodo',
+        'Plano',
+        'Consumo',
+        'Forma de Pagamento',
+        'Valor'
       ]}
       className="TableHeaderLastInvoices"
     />
-  );
-};
+  )
+}
 
 export const TableRowLastInvoices = ({
   id,
@@ -39,7 +38,7 @@ export const TableRowLastInvoices = ({
   consumo,
   forma_de_pagamento,
   valor,
-  status,
+  status
 }: Props) => {
   const BoxIcon = ({ className, children }) => {
     return (
@@ -48,8 +47,8 @@ export const TableRowLastInvoices = ({
       >
         {children}
       </Box>
-    );
-  };
+    )
+  }
 
   const status_icons = {
     success: (
@@ -66,8 +65,8 @@ export const TableRowLastInvoices = ({
       <BoxIcon className="bg-danger-light fill-danger">
         <Icon name="ReceiptX" size={24} />,
       </BoxIcon>
-    ),
-  };
+    )
+  }
 
   return (
     <Box className="TableRowLastInvoices shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all">
@@ -119,5 +118,5 @@ export const TableRowLastInvoices = ({
 
       {status_icons[status]}
     </Box>
-  );
-};
+  )
+}

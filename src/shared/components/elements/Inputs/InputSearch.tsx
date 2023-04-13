@@ -1,32 +1,32 @@
-"use client";
+'use client'
 
-import { InputBase, InputBaseProps } from "./InputBase";
-import Icon from "../Icon";
-import { useState } from "react";
-import { Box } from "../Box";
+import { InputBaseProps } from './InputBase'
+import Icon from '../Icon'
+import { useState } from 'react'
+import { Box } from '../Box'
 
 interface Props extends InputBaseProps {
-  variant?: "fixed" | "collapsible";
+  variant?: 'fixed' | 'collapsible'
 }
 
-export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
-  const [collapsed, setCollapsed] = useState(true);
-  const [value, setValue] = useState("");
+export const InputSearch = ({ placeholder, variant = 'fixed' }: Props) => {
+  const [collapsed, setCollapsed] = useState(true)
+  const [value, setValue] = useState('')
 
   return (
     <Box className={`relative flex justify-end flex-auto`}>
       <div
         className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-custom-gray-400 fill-primary focus-within:fill-primary-dark transition-all ${
-          variant === "collapsible" && collapsed ? "w-12" : "w-full"
+          variant === 'collapsible' && collapsed ? 'w-12' : 'w-full'
         }`}
       >
         <input
           placeholder={placeholder}
           value={value}
           onBlur={() => {
-            if (variant === "collapsible" && value === "") setCollapsed(true);
+            if (variant === 'collapsible' && value === '') setCollapsed(true)
           }}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={e => setValue(e.target.value)}
           className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}
           autoComplete="off"
         />
@@ -41,5 +41,5 @@ export const InputSearch = ({ placeholder, variant = "fixed" }: Props) => {
         </div>
       </div>
     </Box>
-  );
-};
+  )
+}
