@@ -102,24 +102,24 @@ export const TableRowLastInvoices = ({
 
         <Box className="text-sm">
           <Text className="flex items-center">
-            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-500 mr-2 rounded-full" />
             Plano "{plano}"
           </Text>
           <Text className="flex items-center">
-            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-500 mr-2 rounded-full" />
             Vencimento em {vencimento}
           </Text>
           <Text className="flex items-center">
-            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-500 mr-2 rounded-full" />
             Periodo "{periodo}"
           </Text>
           <Text className="flex items-center">
-            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-500 mr-2 rounded-full" />
             {consumo} realizadas
           </Text>
 
           <Text className="flex items-center">
-            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            <Box className="w-1 h-1 bg-custom-gray-500 mr-2 rounded-full" />
             Pgto. {status === 'pending' && 'previsto '}
             {status === 'error' && 'recusado '}
             {forma_de_pagamento}

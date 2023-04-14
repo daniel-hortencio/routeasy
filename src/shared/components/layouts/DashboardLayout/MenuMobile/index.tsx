@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction } from 'react'
 import { Box, Text, MenuMobileIcon } from '../../../elements'
 import { UserAvatar } from '../UserAvatar'
 import Link from 'next/link'
+import { dashboard_routes } from '../../../../constants/routes'
 
 interface Props {
   isOpen: boolean
@@ -40,18 +41,7 @@ export const MenuMobile = ({ isOpen, onChange }: Props) => {
         }`}
       >
         {[
-          {
-            label: 'Início',
-            href: '/dashboard'
-          },
-          {
-            label: 'Processos Judiciais',
-            href: '/dashboard/processos'
-          },
-          {
-            label: 'Planos & faturas',
-            href: '/'
-          },
+          ...dashboard_routes(),
           {
             label: 'Alterar senha',
             href: '/'

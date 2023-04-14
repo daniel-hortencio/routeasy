@@ -1,20 +1,38 @@
 'use client'
 
+import { useState } from 'react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+
 import { Box, Text, Icon } from '../../../elements'
-import { DashboardLayoutNavigation } from '../Navigation'
 import { MenuUser } from '../MenuUser'
 import { UserAvatar } from '../UserAvatar'
 
+import { dashboard_routes } from '../../../../constants/routes'
+
 import './styles.css'
-import { useState } from 'react'
 
 export const MenuDesktop = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const path = usePathname()
 
   return (
     <Box className="hidden lg:flex lg:items-center">
       <Box className="mr-16">
-        <DashboardLayoutNavigation />
+        <Box as="nav" className="flex">
+          {dashboard_routes(path).map((item, index) => (
+            <Box
+              key={item.href}
+              className={`h-28 flex items-center border-spacing-2 border-b-2 ${
+                item.isActive() ? 'border-primary' : 'border-transparent'
+              } ${index > 0 && 'ml-10'}`}
+            >
+              <Link href={item.href} className="text-custom-gray-500">
+                {item.label}
+              </Link>
+            </Box>
+          ))}
+        </Box>
       </Box>
 
       <MenuUser
