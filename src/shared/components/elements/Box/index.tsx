@@ -9,7 +9,7 @@ export type BoxElementType =
   | 'main'
   | 'ul'
   | 'li'
-interface Props {
+export interface IBox {
   children?: ReactNode
   className?: string
   style?: CSSProperties
@@ -23,7 +23,7 @@ export const Box = ({
   style,
   as = 'div',
   onClick
-}: Props) => {
+}: IBox) => {
   const element = {
     div: (
       <div onClick={onClick} style={style} className={className}>

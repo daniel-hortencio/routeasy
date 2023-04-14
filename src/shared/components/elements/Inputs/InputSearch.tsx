@@ -4,6 +4,7 @@ import { InputBaseProps } from './InputBase'
 import Icon from '../Icon'
 import { useState } from 'react'
 import { Box } from '../Box'
+import { Card } from '../Card'
 
 interface Props extends InputBaseProps {
   variant?: 'fixed' | 'collapsible'
@@ -15,8 +16,8 @@ export const InputSearch = ({ placeholder, variant = 'fixed' }: Props) => {
 
   return (
     <Box className={`relative flex justify-end flex-auto`}>
-      <div
-        className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative shadow-md text-custom-gray-400 fill-primary focus-within:fill-primary-dark transition-all ${
+      <Card
+        className={`flex items-center h-12 justify-between rounded-full overflow-hidden relative text-custom-gray-400 fill-primary focus-within:fill-primary-dark transition-all ${
           variant === 'collapsible' && collapsed ? 'w-12' : 'w-full'
         }`}
       >
@@ -39,7 +40,7 @@ export const InputSearch = ({ placeholder, variant = 'fixed' }: Props) => {
             <Icon name="MagnifyingGlass" size={24} />
           </button>
         </div>
-      </div>
+      </Card>
     </Box>
   )
 }

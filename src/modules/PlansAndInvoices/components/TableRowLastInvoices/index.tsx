@@ -1,4 +1,4 @@
-import { Box, Icon, Text } from '../../../../shared/components/elements'
+import { Box, Card, Icon, Text } from '../../../../shared/components/elements'
 
 import './styles.css'
 import { TableHeader } from '../../../../shared/components/elements/Table/TableHeader'
@@ -69,7 +69,7 @@ export const TableRowLastInvoices = ({
   }
 
   return (
-    <Box className="TableRowLastInvoices shadow-md bg-white rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all text-custom-gray-400">
+    <Card className="TableRowLastInvoices rounded-lg overflow-hidden p-1 md:pl-4 md:h-14 hover:ring-2 ring-primary transition-all text-custom-gray-400">
       <Box className="hidden TableRowLastInvoicesData md:grid p-4 md:p-0">
         <Box className="flex items-center ">
           <Text>{vencimento}</Text>
@@ -128,6 +128,6 @@ export const TableRowLastInvoices = ({
       </Box>
 
       {status_icons[status]}
-    </Box>
+    </Card>
   )
 }

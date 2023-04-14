@@ -1,6 +1,12 @@
 'use client'
 
-import { Box, Button, Icon, Text } from '../../../../shared/components/elements'
+import {
+  Box,
+  Button,
+  Card,
+  Icon,
+  Text
+} from '../../../../shared/components/elements'
 
 interface Props {
   isMonitoring: boolean
@@ -19,7 +25,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
               </Text>
             </Box>
             <Box className="border-l-2 pl-5 border-dotted border-gray-300">
-              <Box className="bg-white rounded-lg p-4 md:p-6 mb-5 shadow-md">
+              <Card className="rounded-lg p-4 md:p-6 mb-5">
                 <Text as="h3" className="text-lg font-bold mb-2">
                   Podem existir novas movimentações
                 </Text>
@@ -54,7 +60,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                     />
                   </Box>
                 </Box>
-              </Box>
+              </Card>
             </Box>
           </>
         )}
@@ -66,7 +72,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
           </Text>
         </Box>
         <Box className="border-l-2 pl-5 border-dotted border-gray-300">
-          <Box className="bg-white rounded-lg p-4 md:p-6 mb-5 shadow-md">
+          <Card className="p-4 md:p-6 mb-5">
             <Text as="h3" className="text-lg font-bold mb-2">
               Andamento
             </Text>
@@ -75,8 +81,8 @@ export const TimeLine = ({ isMonitoring }: Props) => {
               cópia da certidão junto ao Registro de Imóveis do bem que pretende
               ver penhorado.
             </Text>
-          </Box>
-          <Box className="bg-white rounded-lg p-6 shadow-md">
+          </Card>
+          <Card className="rounded-lg p-6">
             <Text as="h3" className="text-lg font-bold mb-2">
               Publicação
             </Text>
@@ -122,7 +128,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
               prejuízo junte o exequente cópia da certidão junto ao Registro de
               Imóveis do bem que pretende ver penhorado.
             </Text>
-          </Box>
+          </Card>
         </Box>
       </Box>
 
@@ -134,7 +140,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
           </Text>
         </Box>
         <Box className="border-l-2 pl-5 border-dotted border-gray-300">
-          <Box className="bg-white rounded-lg p-4 md:p-6 mb-5 shadow-md">
+          <Card className="rounded-lg p-4 md:p-6 mb-5">
             <Text as="h3" className="text-lg font-bold mb-2">
               Andamento
             </Text>
@@ -161,7 +167,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                 color="secondary"
               />
             </Box>
-          </Box>
+          </Card>
         </Box>
       </Box>
     </Box>

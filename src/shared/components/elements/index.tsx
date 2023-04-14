@@ -2,6 +2,7 @@ import Icon from './Icon'
 export { Icon }
 
 export { Box } from './Box'
+export { Card } from './Card'
 export type { BoxElementType } from './Box'
 export { Button } from './Button'
 export { InputGroup, InputPassword, InputText, InputSearch } from './Inputs'

@@ -6,7 +6,8 @@ import {
   Icon,
   Text,
   Wrapper,
-  IconCardFlag
+  IconCardFlag,
+  Card
 } from '../../../../shared/components/elements'
 import { DashboardLayoutHeader } from '../../../../shared/components/layouts/DashboardLayout/Header'
 
@@ -103,7 +104,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
           Forma de Pagamento
         </Text>
 
-        <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between shadow-md relative">
+        <Card className="rounded-lg py-6 px-7 mb-10 md:flex justify-between relative">
           <Box className="mb-6 md:mb-0">
             <Text className="md:text-lg font-bold mb-4">Cartão de crédito</Text>
 
@@ -141,7 +142,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
               </Text>
             </Box>
           )}
-        </Box>
+        </Card>
 
         <Text className="text-xl font-bold mb-5 text-custom-gray-500">
           Últimas faturas
