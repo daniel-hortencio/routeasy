@@ -166,7 +166,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               isMonitoring={isMonitoring}
               cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
               button={
-                <Button text={<Icon name="DotsThreeOutline" size={24} />} />
+                <Button text={<Icon name="DotsThreeOutline" size={26} />} />
               }
             />
           </Box>

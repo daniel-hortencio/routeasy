@@ -84,7 +84,11 @@ export const TableRowLastInvoices = ({
           <Text>{consumo}</Text>
         </Box>
         <Box className="flex items-center">
-          <Text>{forma_de_pagamento}</Text>
+          <Text>
+            {status === 'pending' && 'Previsto: '}
+            {status === 'error' && 'Recusado: '}
+            {forma_de_pagamento}
+          </Text>
         </Box>
         <Box className="flex items-center">
           <Text>{valor}</Text>
@@ -92,28 +96,35 @@ export const TableRowLastInvoices = ({
       </Box>
 
       <Box as="ul" className="md:hidden p-4">
-        <Text className="font-bold mb-2 text-lg">Vencimento {vencimento}</Text>
-        <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
-          Periodo {periodo}
-        </Text>
-        <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
-          Plano {plano}
-        </Text>
-        <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
-          Consumo {consumo}
+        <Text className="flex items-center text-custom-gray-500 font-bold text-lg mb-2">
+          {valor}
         </Text>
 
-        <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
-          Forma de pagamento {forma_de_pagamento}
-        </Text>
-        <Text className="flex items-center">
-          <Box className="w-1 h-1 bg-custom-gray-400 mr-2 rounded-full" />
-          Valor {valor}
-        </Text>
+        <Box className="text-sm">
+          <Text className="flex items-center">
+            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            Plano "{plano}"
+          </Text>
+          <Text className="flex items-center">
+            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            Vencimento em {vencimento}
+          </Text>
+          <Text className="flex items-center">
+            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            Periodo "{periodo}"
+          </Text>
+          <Text className="flex items-center">
+            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            {consumo} realizadas
+          </Text>
+
+          <Text className="flex items-center">
+            <Box className="w-2px h-2px bg-custom-gray-500 mr-2 rounded-full" />
+            Pgto. {status === 'pending' && 'previsto '}
+            {status === 'error' && 'recusado '}
+            {forma_de_pagamento}
+          </Text>
+        </Box>
       </Box>
 
       {status_icons[status]}

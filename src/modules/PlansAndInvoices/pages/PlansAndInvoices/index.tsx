@@ -33,7 +33,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
             <Text className="font-extrabold text-28px mb-4 text-custom-gray-500">
               Planos & faturas
             </Text>
-            <Text className="text-4xl font-light text-custom-gray-400 mb-4">
+            <Text className="text-2xl md:text-4xl font-light text-custom-gray-400 mb-3 md:mb-4">
               1.000 - 10.000 consultas
             </Text>
             <Box className="flex">
@@ -42,7 +42,10 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
                   isCanceled ? 'bg-custom-gray-300' : 'bg-custom-gray-500'
                 }`}
               >
-                {isCanceled ? 'PLANO CANCELADO' : 'PLANO ATIVO'}
+                <span>
+                  <span className="hidden md:inline">PLANO</span>{' '}
+                  {isCanceled ? 'CANCELADO' : 'ATIVO'}
+                </span>
               </Text>
 
               <Text className="text-custom-gray-400">
@@ -51,9 +54,9 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
             </Box>
           </Box>
 
-          <Box className="md:w-80 flex flex-col justify-between">
-            <Box className="flex md:justify-end mb-4 md:mb-0">
-              <Box className="w-48">
+          <Box className="w-full md:w-80 flex flex-col-reverse md:flex-col justify-between">
+            <Box className="flex md:justify-end ">
+              <Box className="w-full md:w-48">
                 {isCanceled ? (
                   <Button
                     text="Reativar meu plano"
@@ -72,12 +75,12 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
                 <MenuPlanOptions
                   isCanceled={isCanceled}
                   button={
-                    <Button text={<Icon name="DotsThreeOutline" size={24} />} />
+                    <Button text={<Icon name="DotsThreeOutline" size={26} />} />
                   }
                 />
               </Box>
             </Box>
-            <Box className="md:text-right text-custom-gray-300">
+            <Box className="md:text-right text-custom-gray-300 mb-8 md:mb-0">
               <Text>Última fatura em 10/02/23 de R$ 2.250,00</Text>
               {isCanceled ? (
                 <Text>
@@ -100,9 +103,9 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
           Forma de Pagamento
         </Text>
 
-        <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between shadow-md">
+        <Box className="bg-white rounded-lg py-6 px-7 mb-10 md:flex justify-between shadow-md relative">
           <Box className="mb-6 md:mb-0">
-            <Text className="text-lg font-bold mb-5">Cartão de crédito</Text>
+            <Text className="md:text-lg font-bold mb-4">Cartão de crédito</Text>
 
             <Box className="flex">
               <Box
@@ -115,7 +118,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
               <Box
                 className={`ml-5 ${
                   isCanceled ? 'text-custom-gray-300' : 'text-custom-gray-400'
-                }`}
+                } text-sm md:text-base `}
               >
                 <Text className="mb-2">Mastercard</Text>
                 <Text>**** **** **** 0987</Text>
@@ -124,8 +127,8 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
           </Box>
 
           {isCanceled ? (
-            <Box>
-              <Button text={<Icon name="DotsThreeOutline" size={24} />} />
+            <Box className="absolute right-6 top-7">
+              <Button text={<Icon name="DotsThreeOutline" size={26} />} />
             </Box>
           ) : (
             <Box>
@@ -133,7 +136,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
                 <Button text="Alterar forma de pagamento" size="large" />
               </Box>
 
-              <Text className="text-custom-gray-300">
+              <Text className="text-custom-gray-300 text-sm md:text-base">
                 Sua assinatura tem recorrencia mensal
               </Text>
             </Box>
@@ -152,7 +155,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
               periodo: '05/03/23 · 05/04/23',
               plano: '1.000 - 10.000',
               consumo: '1.125 consultas',
-              forma_de_pagamento: 'Previsto: Cartão final 0987',
+              forma_de_pagamento: 'Cartão final 0987',
               valor: 'R$ 2.250,00',
               status: 'error'
             },
@@ -162,7 +165,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
               periodo: '05/03/23 · 05/04/23',
               plano: '1.000 - 10.000',
               consumo: '1.125 consultas',
-              forma_de_pagamento: 'Previsto: Cartão final 0987',
+              forma_de_pagamento: 'PIX',
               valor: 'R$ 2.250,00',
               status: 'pending'
             },
@@ -172,7 +175,7 @@ export default function PlansAndInvoices({ isCanceled }: Props) {
               periodo: '05/03/23 · 05/04/23',
               plano: '1.000 - 10.000',
               consumo: '1.125 consultas',
-              forma_de_pagamento: 'Previsto: Cartão final 0987',
+              forma_de_pagamento: 'Boleto bancário',
               valor: 'R$ 2.250,00',
               status: 'success'
             }

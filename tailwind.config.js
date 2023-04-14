@@ -47,7 +47,13 @@ module.exports = {
         '2px': '0.125em'
       },
       height: {
+        '1px': '0.063rem',
+        '2px': '0.125em',
         '30px': "1.875rem"
+      },
+      width: {
+        '1px': '0.063rem',
+        '2px': '0.125em',
       },
       padding: {
         '1px': '1px',
