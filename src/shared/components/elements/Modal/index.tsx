@@ -13,7 +13,7 @@ interface Props {
   onClose: () => void
   showButtonClose?: boolean
   headerAlign?: 'left' | 'center' | 'right'
-  children: ReactNode
+  children?: ReactNode
   footer?: ReactNode
 }
 
@@ -88,7 +88,7 @@ export default function Modal({
                     </Box>
                   </Dialog.Title>
 
-                  <Box className="pt-6">{children}</Box>
+                  {children && <Box className="pt-6">{children}</Box>}
                 </Box>
                 {footer && (
                   <Box

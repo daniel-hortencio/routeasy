@@ -25,6 +25,8 @@ export default function ProcessDetails({ isMonitoring }: Props) {
   const [isOpenModalDocuments, setIsOpenModalDocuments] = useState(false)
   const [isOpenModalCancelMonitoring, setIsOpenModalCancelMonitoring] =
     useState(false)
+  const [isOpenModalActiveMonitoring, setIsOpenModalActiveMonitoring] =
+    useState(false)
   const [isOpenMenuPartiesInvolved, setIsOpenMenuPartiesInvolved] =
     useState(false)
 
@@ -71,6 +73,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
               <MenuProcessDocumentOptions
                 isMonitoring={isMonitoring}
                 cancelMonitoring={() => setIsOpenModalCancelMonitoring(true)}
+                activeMonitoring={() => setIsOpenModalActiveMonitoring(true)}
                 button={
                   <Button text={<Icon name="DotsThreeOutline" size={26} />} />
                 }
@@ -97,7 +100,11 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           showButtonClose={false}
           footer={
             <Box className="grid gap-3 md:gap-5 md:grid-cols-2 md:w-3/4 mx-auto">
-              <Button text="Manter monitoramento" size="large" />
+              <Button
+                text="Manter monitoramento"
+                size="large"
+                onClick={() => setIsOpenModalActiveMonitoring(false)}
+              />
               <Button
                 text="Cancelar monitoramento"
                 size="large"
@@ -108,6 +115,29 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         >
           <ModalCancelMonitoring />
         </Modal>
+
+        <Modal
+          headerAlign="center"
+          title="Tem certeza que deseja continuar?"
+          description="Você está prestes a ativar o monitoramento automático deste Processo Judicial, essa ação irá consumir 1 consulta a cada 24h para manter as movimentações processuais sincronizadas com todos os tribunais e Diários Oficiais."
+          isOpen={isOpenModalActiveMonitoring}
+          onClose={() => setIsOpenModalActiveMonitoring(false)}
+          showButtonClose={false}
+          footer={
+            <Box className="grid gap-3 md:gap-5 md:grid-cols-2 md:w-3/5 mx-auto">
+              <Button
+                text="Manter desativado"
+                size="large"
+                onClick={() => setIsOpenModalActiveMonitoring(false)}
+              />
+              <Button
+                text="Ativar monitoramento"
+                size="large"
+                color="primary"
+              />
+            </Box>
+          }
+        />
 
         <Box className="grid gap-4 sm:grid-cols-2 lg:flex lg:items-center mb-8 xl:mb-0">
           <Text className="flex items-center md:mr-8 text-custom-gray-400">
@@ -195,7 +225,10 @@ export default function ProcessDetails({ isMonitoring }: Props) {
           )}
         </Box>
 
-        <TimeLine isMonitoring={isMonitoring} />
+        <TimeLine
+          isMonitoring={isMonitoring}
+          activeMonitoring={() => setIsOpenModalActiveMonitoring(true)}
+        />
       </Wrapper>
     </Box>
   )

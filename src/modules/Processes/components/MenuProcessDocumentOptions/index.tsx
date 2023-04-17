@@ -12,6 +12,7 @@ interface Props {
   button: ReactNode
   isMonitoring: boolean
   cancelMonitoring: () => void
+  activeMonitoring?: () => void
 }
 
 function classNames(...classes) {
@@ -21,7 +22,8 @@ function classNames(...classes) {
 export const MenuProcessDocumentOptions = ({
   button,
   isMonitoring,
-  cancelMonitoring
+  cancelMonitoring,
+  activeMonitoring
 }: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -125,7 +127,7 @@ export const MenuProcessDocumentOptions = ({
                   </button>
                 ) : (
                   <button
-                    onClick={cancelMonitoring}
+                    onClick={activeMonitoring}
                     className={classNames(
                       active ? 'bg-gray-100 ' : '',
                       'flex items-center px-4 py-2 text-sm w-full text-primary hover:text-primary-dark fill-primary hover:fill-primary-dark'

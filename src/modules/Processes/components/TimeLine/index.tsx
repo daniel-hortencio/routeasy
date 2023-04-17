@@ -10,9 +10,10 @@ import {
 
 interface Props {
   isMonitoring: boolean
+  activeMonitoring?: () => void
 }
 
-export const TimeLine = ({ isMonitoring }: Props) => {
+export const TimeLine = ({ isMonitoring, activeMonitoring }: Props) => {
   return (
     <Box>
       <Box className="mb-7">
@@ -50,6 +51,7 @@ export const TimeLine = ({ isMonitoring }: Props) => {
                   <Box className="w-60 max-w-full">
                     <Button
                       className="text-sm h-30px md:text-base md:h-12"
+                      onClick={activeMonitoring}
                       text={
                         <Box className="flex items-center">
                           <Icon name="Broadcast" />{' '}
