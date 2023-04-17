@@ -3,14 +3,15 @@ import { createPortal } from 'react-dom'
 
 interface PortalProps {
   children: ReactNode
+  id: 'toast'
 }
 
-export const Portal = ({ children }: PortalProps) => {
+export const Portal = ({ children, id }: PortalProps) => {
   const ref = useRef<Element | null>(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    ref.current = document.querySelector<HTMLElement>('#portal')
+    ref.current = document.querySelector<HTMLElement>(`#${id}`)
     setMounted(true)
   }, [])
 

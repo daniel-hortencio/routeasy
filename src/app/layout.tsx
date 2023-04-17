@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <ToastProvider>
           <main>{children}</main>
         </ToastProvider>
-        <div id="portal" />
+        <div id="toast" />
       </body>
     </html>
   )

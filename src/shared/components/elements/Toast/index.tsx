@@ -32,7 +32,7 @@ export const Toast = ({ status, message, onClose }: Props) => {
   }, [])
 
   return (
-    <Portal>
+    <Portal id="toast">
       <div className={getClassNameStyles()}>
         <Wrapper noPaddingY className="flex items-center h-12">
           <div className="relative h-6 flex items-center justify-center">
