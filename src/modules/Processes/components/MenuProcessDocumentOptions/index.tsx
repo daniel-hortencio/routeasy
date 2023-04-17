@@ -1,9 +1,9 @@
 'use client'
 
-import { Fragment, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Link from 'next/link'
 
-import { Menu, Transition } from '@headlessui/react'
+import { Menu } from '@headlessui/react'
 import { Box, MenuDropDown } from '../../../../shared/components/elements'
 import { Text } from '../../../../shared/components/elements/Text'
 import Icon from '../../../../shared/components/elements/Icon'

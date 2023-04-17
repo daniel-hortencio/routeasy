@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
   Box,
   Icon,
@@ -6,8 +7,19 @@ import {
   Wrapper
 } from '../../../shared/components/elements'
 import { DashboardLayoutHeader } from '../../../shared/components/layouts/DashboardLayout/Header'
+import { useToast } from '../../../shared/contexts/Toast/UseToast'
 
 export default function SearchProcess() {
+  const { createToast } = useToast()
+
+  useEffect(() => {
+    createToast({
+      message:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, onec facilisis neque!',
+      status: 'success'
+    })
+  }, [])
+
   return (
     <Box className="flex-auto flex items-center justify-center">
       <DashboardLayoutHeader />

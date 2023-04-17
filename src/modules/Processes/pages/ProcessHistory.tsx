@@ -15,8 +15,20 @@ import {
   TableHeaderProcessHistory,
   TableRowProcessHistory
 } from '../components/TableRowProcessHistory'
+import { useToast } from '../../../shared/contexts/Toast/UseToast'
+import { useEffect } from 'react'
 
 export default function ProcessHistory() {
+  const { createToast } = useToast()
+
+  useEffect(() => {
+    createToast({
+      message:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, onec facilisis neque!',
+      status: 'danger'
+    })
+  }, [])
+
   return (
     <>
       <DashboardLayoutHeader />

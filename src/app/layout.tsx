@@ -3,6 +3,7 @@
 import { Roboto } from '@next/font/google'
 
 import '../shared/styles/globals.css'
+import { ToastProvider } from '../shared/contexts/Toast/ToastProvider'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -17,7 +18,12 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <ToastProvider>
+          <main>{children}</main>
+        </ToastProvider>
+        <div id="portal" />
+      </body>
     </html>
   )
 }
