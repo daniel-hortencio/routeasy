@@ -37,6 +37,9 @@ module.exports = {
           light: '#FAF2E3',
         },
       },
+      backdropBlur: {
+        xs: '2px',
+      },
       borderWidth: {
         1: "1px"
       },

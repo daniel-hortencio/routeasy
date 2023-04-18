@@ -4,13 +4,11 @@ import { ToastContext } from './ToastContext'
 export const useToast = () => {
   const context = useContext(ToastContext)
 
-  if (!context)
-    throw new Error(' useToast must be used within a ToastProvider.')
+  if (!context) throw new Error('useToast must be used within a ToastProvider.')
 
-  const { createToast, clearToast } = context
+  const { createToast } = context
 
   return {
-    createToast,
-    clearToast
+    createToast
   }
 }

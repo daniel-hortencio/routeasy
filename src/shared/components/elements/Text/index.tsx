@@ -16,6 +16,7 @@ interface Props {
     | 'strong'
     | 'small'
     | 'span'
+    | 'label'
 }
 
 export const Text = ({ children, className = '', as = 'p' }: Props) => {
@@ -29,7 +30,8 @@ export const Text = ({ children, className = '', as = 'p' }: Props) => {
     h6: <h6 className={className}>{children}</h6>,
     strong: <strong className={className}>{children}</strong>,
     small: <small className={className}>{children}</small>,
-    span: <span className={className}>{children}</span>
+    span: <span className={className}>{children}</span>,
+    label: <label className={className}>{children}</label>
   }
 
   return element[as]

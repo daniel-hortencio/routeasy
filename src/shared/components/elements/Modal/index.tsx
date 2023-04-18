@@ -8,13 +8,14 @@ import Icon from '../Icon'
 
 interface Props {
   title: string
-  description: string
+  description?: string
   isOpen: boolean
   onClose: () => void
   showButtonClose?: boolean
   headerAlign?: 'left' | 'center' | 'right'
   children?: ReactNode
   footer?: ReactNode
+  positionX?: 'left' | 'center' | 'right'
 }
 
 export default function Modal({
@@ -25,9 +26,20 @@ export default function Modal({
   showButtonClose = true,
   description,
   children,
-  footer
+  footer,
+  positionX = 'center'
 }: Props) {
   const cancelButtonRef = useRef(null)
+
+  const getStyle = () => {
+    const positions_x = {
+      left: 'justify-start',
+      center: 'justify-center',
+      right: 'justify-end'
+    }
+
+    return `flex min-h-full items-end ${positions_x[positionX]} p-4 text-center items-center md:p-5`
+  }
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
@@ -46,11 +58,11 @@ export default function Modal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity test backdrop-blur-xs" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className={getStyle()}>
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"

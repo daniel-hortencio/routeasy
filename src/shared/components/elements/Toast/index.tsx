@@ -4,6 +4,8 @@ import { Wrapper } from '../Wrapper'
 import { Text } from '../Text'
 import { useEffect } from 'react'
 
+import S from './styles.module.css'
+
 export interface IToast {
   status: 'success' | 'danger' | 'warning'
   message: string
@@ -20,7 +22,7 @@ export const Toast = ({ status, message, onClose }: Props) => {
       danger: 'bg-danger text-white fill-white'
     }
 
-    return `fixed top-0 z-20 w-full ${status_styles[status]}`
+    return `${S.Toast} fixed top-0 z-20 w-full ${status_styles[status]}`
   }
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export const Toast = ({ status, message, onClose }: Props) => {
   return (
     <Portal id="toast">
       <div className={getClassNameStyles()}>
-        <Wrapper noPaddingY className="flex items-center h-12">
+        <Wrapper noPaddingY className={`flex items-center h-12`}>
           <div className="relative h-6 flex items-center justify-center">
             <Text className="mx-8">{message}</Text>
             <button

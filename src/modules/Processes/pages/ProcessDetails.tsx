@@ -16,6 +16,7 @@ import { MenuProcessDocumentOptions } from '../components/MenuProcessDocumentOpt
 import { ModalCancelMonitoring } from '../components/ModalCancelMonitoring'
 import { MenuPartiesInvolved } from '../components/MenuPartiesInvolved'
 import { WhiteSection } from '../../../shared/components/layouts/DashboardLayout/WhiteSection'
+import { ModalSearchFilters } from '../components/ModalSearchFilters'
 
 interface Props {
   isMonitoring: boolean

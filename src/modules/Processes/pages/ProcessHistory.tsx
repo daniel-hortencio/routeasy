@@ -16,10 +16,14 @@ import {
   TableRowProcessHistory
 } from '../components/TableRowProcessHistory'
 import { useToast } from '../../../shared/contexts/Toast/UseToast'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Modal from '../../../shared/components/elements/Modal'
+import { ModalSearchFilters } from '../components/ModalSearchFilters'
 
 export default function ProcessHistory() {
   const { createToast } = useToast()
+  const [isOpenModalSearchFilters, setIsOpenModalSearchFilters] =
+    useState(false)
 
   useEffect(() => {
     createToast({
@@ -51,7 +55,7 @@ export default function ProcessHistory() {
               <Button
                 color="primary"
                 text={<Icon name="Funnel" />}
-                onClick={() => {}}
+                onClick={() => setIsOpenModalSearchFilters(true)}
               />
             </Box>
           </Box>
@@ -66,12 +70,21 @@ export default function ProcessHistory() {
               <Button
                 color="primary"
                 text="Filtrar"
-                onClick={() => {}}
+                onClick={() => setIsOpenModalSearchFilters(true)}
                 size="large"
               />
             </Box>
           </Box>
         </Box>
+
+        <Modal
+          title="Filtros"
+          isOpen={isOpenModalSearchFilters}
+          onClose={() => setIsOpenModalSearchFilters(false)}
+          positionX="right"
+        >
+          <ModalSearchFilters />
+        </Modal>
 
         <Table
           data={[
