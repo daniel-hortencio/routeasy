@@ -16,6 +16,7 @@ interface Props {
   children?: ReactNode
   footer?: ReactNode
   positionX?: 'left' | 'center' | 'right'
+  className?: string
 }
 
 export default function Modal({
@@ -27,7 +28,8 @@ export default function Modal({
   description,
   children,
   footer,
-  positionX = 'center'
+  positionX = 'center',
+  className = ''
 }: Props) {
   const cancelButtonRef = useRef(null)
 
@@ -39,6 +41,10 @@ export default function Modal({
     }
 
     return `flex min-h-full items-end ${positions_x[positionX]} p-4 text-center items-center md:p-5`
+  }
+
+  const getClassName = () => {
+    return `relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:max-w-screen-md rounded-3xl ${className}`
   }
 
   return (
@@ -58,7 +64,7 @@ export default function Modal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity test backdrop-blur-xs" />
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity backdrop-blur-xs" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -72,7 +78,7 @@ export default function Modal({
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:max-w-screen-md rounded-3xl ">
+              <Dialog.Panel className={getClassName()}>
                 <Box className="p-8 ">
                   <Dialog.Title as="h3">
                     {showButtonClose && (
@@ -100,12 +106,12 @@ export default function Modal({
                     </Box>
                   </Dialog.Title>
 
-                  {children && <Box className="pt-6">{children}</Box>}
+                  {children && <Box className="pt-6 h-full">{children}</Box>}
                 </Box>
                 {footer && (
                   <Box
                     as="footer"
-                    className="p-8 border-t-1 border-custom-gray-200"
+                    className="p-8 border-t-1 border-custom-gray-200 test"
                   >
                     {footer}
                   </Box>

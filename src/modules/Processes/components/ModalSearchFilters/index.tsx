@@ -8,7 +8,7 @@ import {
   Text
 } from '../../../../shared/components/elements'
 
-import './styles.css'
+import S from './styles.module.css'
 
 export const ModalSearchFilters = () => {
   /*   const [showLastPublications, setShowLastPublications] = useState(true)
@@ -30,7 +30,9 @@ export const ModalSearchFilters = () => {
   }
 
   return (
-    <Box>
+    <Box
+      className={`${S.ModalSearchFilters__Content} h-full overflow-y-auto test`}
+    >
       <Box className="mb-7 md:mb-8">
         <Text className="font-bold md:text-lg mb-2">Ordenação</Text>
 
@@ -68,7 +70,7 @@ export const ModalSearchFilters = () => {
         <Text className="font-bold md:text-lg mb-2">Por tribunal</Text>
       </Box>
 
-      <Box className="mb-7 md:mb-8">
+      <Box className="mb-7 md:mb-32">
         <Text className="font-bold md:text-lg mb-2">Por competência</Text>
 
         <Box className="mb-3">

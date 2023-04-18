@@ -7,18 +7,20 @@ import {
   Text,
   Wrapper,
   Button
-} from '../../../shared/components/elements'
-import { DashboardLayoutHeader } from '../../../shared/components/layouts/DashboardLayout/Header'
-import { Table } from '../../../shared/components/elements/Table'
-import ProcessesSummary from '../components/ProcessesSummary'
+} from '../../../../shared/components/elements'
+import { DashboardLayoutHeader } from '../../../../shared/components/layouts/DashboardLayout/Header'
+import { Table } from '../../../../shared/components/elements/Table'
+import ProcessesSummary from '../../components/ProcessesSummary'
 import {
   TableHeaderProcessHistory,
   TableRowProcessHistory
-} from '../components/TableRowProcessHistory'
-import { useToast } from '../../../shared/contexts/Toast/UseToast'
+} from '../../components/TableRowProcessHistory'
+import { useToast } from '../../../../shared/contexts/Toast/UseToast'
 import { useEffect, useState } from 'react'
-import Modal from '../../../shared/components/elements/Modal'
-import { ModalSearchFilters } from '../components/ModalSearchFilters'
+import Modal from '../../../../shared/components/elements/Modal'
+import { ModalSearchFilters } from '../../components/ModalSearchFilters'
+
+import S from './styles.module.css'
 
 export default function ProcessHistory() {
   const { createToast } = useToast()
@@ -82,6 +84,21 @@ export default function ProcessHistory() {
           isOpen={isOpenModalSearchFilters}
           onClose={() => setIsOpenModalSearchFilters(false)}
           positionX="right"
+          className={`${S.ModalSearchFilters}`}
+          footer={
+            <Box className="flex">
+              <Box className="hidden md:block">
+                <Button text="Limpar" size="large" />
+              </Box>
+              <Box className="md:hidden">
+                <Button text={<Icon name="TrashSimple" />} />
+              </Box>
+
+              <Box>
+                <Button text="Filtrar processos" size="large" color="primary" />
+              </Box>
+            </Box>
+          }
         >
           <ModalSearchFilters />
         </Modal>
