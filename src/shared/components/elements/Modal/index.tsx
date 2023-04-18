@@ -7,7 +7,7 @@ import { Text } from '../Text'
 import Icon from '../Icon'
 
 interface Props {
-  title: string
+  title?: string
   description?: string
   isOpen: boolean
   onClose: () => void
@@ -17,6 +17,7 @@ interface Props {
   footer?: ReactNode
   positionX?: 'left' | 'center' | 'right'
   className?: string
+  isCustom?: boolean
 }
 
 export default function Modal({
@@ -29,7 +30,8 @@ export default function Modal({
   children,
   footer,
   positionX = 'center',
-  className = ''
+  className = '',
+  isCustom = false
 }: Props) {
   const cancelButtonRef = useRef(null)
 
@@ -79,8 +81,9 @@ export default function Modal({
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className={getClassName()}>
-                <Box className="p-8 ">
-                  <Dialog.Title as="h3">
+                {isCustom ? (
+                  <Box>
+                    {children}
                     {showButtonClose && (
                       <button
                         type="button"
@@ -91,27 +94,46 @@ export default function Modal({
                         <Icon name="X" />
                       </button>
                     )}
-                    <Box as="header">
-                      <Text
-                        className={`font-bold text-2xl mb-4 text-${headerAlign}`}
-                      >
-                        {title}
-                      </Text>
+                  </Box>
+                ) : (
+                  <Box className="px-8">
+                    <Dialog.Title as="h3">
+                      {showButtonClose && (
+                        <button
+                          type="button"
+                          className="absolute top-5 right-5 p-0.5 fill-custom-gray-300 hover:fill-primary transition-all"
+                          onClick={onClose}
+                          ref={cancelButtonRef}
+                        >
+                          <Icon name="X" />
+                        </button>
+                      )}
+                      <Box as="header" className="pt-8">
+                        {title && (
+                          <Text
+                            className={`font-bold text-2xl mb-4 text-${headerAlign}`}
+                          >
+                            {title}
+                          </Text>
+                        )}
 
-                      <Text
-                        className={`text-${headerAlign} text-custom-gray-400`}
-                      >
-                        {description}
-                      </Text>
-                    </Box>
-                  </Dialog.Title>
+                        {description && (
+                          <Text
+                            className={`text-${headerAlign} text-custom-gray-400`}
+                          >
+                            {description}
+                          </Text>
+                        )}
+                      </Box>
+                    </Dialog.Title>
 
-                  {children && <Box className="pt-6 h-full">{children}</Box>}
-                </Box>
+                    {children && <Box className="pt-6 h-full">{children}</Box>}
+                  </Box>
+                )}
                 {footer && (
                   <Box
                     as="footer"
-                    className="p-8 border-t-1 border-custom-gray-200 test"
+                    className="p-8 border-t-1 border-custom-gray-200"
                   >
                     {footer}
                   </Box>

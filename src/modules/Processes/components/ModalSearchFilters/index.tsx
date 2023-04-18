@@ -5,6 +5,7 @@ import {
   Box,
   CheckboxGroup,
   RadioGroup,
+  SelectCountryDDI,
   Text
 } from '../../../../shared/components/elements'
 
@@ -31,8 +32,9 @@ export const ModalSearchFilters = () => {
 
   return (
     <Box
-      className={`${S.ModalSearchFilters__Content} h-full overflow-y-auto test`}
+      className={`${S.ModalSearchFilters__Content} overflow-y-auto mt-6 pl-5`}
     >
+      <Text className={`font-bold text-2xl mb-4`}>Filtros</Text>
       <Box className="mb-7 md:mb-8">
         <Text className="font-bold md:text-lg mb-2">Ordenação</Text>
 

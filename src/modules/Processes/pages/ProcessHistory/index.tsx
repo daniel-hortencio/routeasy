@@ -80,21 +80,21 @@ export default function ProcessHistory() {
         </Box>
 
         <Modal
-          title="Filtros"
           isOpen={isOpenModalSearchFilters}
           onClose={() => setIsOpenModalSearchFilters(false)}
           positionX="right"
           className={`${S.ModalSearchFilters}`}
+          isCustom
           footer={
-            <Box className="flex">
-              <Box className="hidden md:block">
+            <Box className="flex justify-end">
+              <Box className="hidden md:block md:w-28">
                 <Button text="Limpar" size="large" />
               </Box>
               <Box className="md:hidden">
                 <Button text={<Icon name="TrashSimple" />} />
               </Box>
 
-              <Box>
+              <Box className="ml-5 w-full md:w-40">
                 <Button text="Filtrar processos" size="large" color="primary" />
               </Box>
             </Box>
