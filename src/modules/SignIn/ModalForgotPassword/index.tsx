@@ -14,7 +14,7 @@ export const ModalForgotPassword = () => {
         </InputGroup>
       </Box>
 
-      <Text className="mb-8 text-center">
+      <Text className="text-center">
         Enviaremos um e-mail com instruções de como redefinir sua senha.
       </Text>
     </Box>

@@ -12,9 +12,14 @@ import {
 import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLayout/Header'
 import Modal from '../../../shared/components/elements/Modal'
 import { ModalForgotPassword } from '../ModalForgotPassword'
+import { ModalSendEmailRecoverConfirmation } from '../ModalSendEmailRecoverConfirmation'
 
 export default function PageSignIn() {
   const [showModalForgetPassword, setModalForgetPassword] = useState(false)
+  const [
+    showModalSendEmailRecoverConfirmation,
+    setShowModalSendEmailRecoverConfirmation
+  ] = useState(false)
 
   return (
     <>
@@ -64,13 +69,28 @@ export default function PageSignIn() {
         subtitle="Não se preocupe, insira o seu e-mail de cadastro e receba o código para redefinir a sua senha de acesso a JUDIT:"
         footer={
           <Box className="w-60 mx-auto">
-            <Button text="Recuperar minha senha" color="primary" size="large" />
+            <Button
+              text="Recuperar minha senha"
+              color="primary"
+              size="large"
+              onClick={() => {
+                setModalForgetPassword(false)
+                setShowModalSendEmailRecoverConfirmation(true)
+              }}
+            />
           </Box>
         }
         isOpen={showModalForgetPassword}
         onClose={() => setModalForgetPassword(false)}
       >
         <ModalForgotPassword />
+      </Modal>
+
+      <Modal
+        isOpen={showModalSendEmailRecoverConfirmation}
+        onClose={() => setShowModalSendEmailRecoverConfirmation(false)}
+      >
+        <ModalSendEmailRecoverConfirmation />
       </Modal>
     </>
   )

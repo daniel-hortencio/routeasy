@@ -108,26 +108,28 @@ export default function Modal({
                           <Icon name="X" />
                         </button>
                       )}
-                      <Box as="header" className="pt-8">
-                        {title && (
-                          <Text
-                            className={`font-bold text-2xl mb-4 text-${headerAlign}`}
-                          >
-                            {title}
-                          </Text>
-                        )}
+                      {(title || subtitle) && (
+                        <Box as="header" className="pt-8">
+                          {title && (
+                            <Text
+                              className={`font-bold text-2xl mb-4 text-${headerAlign}`}
+                            >
+                              {title}
+                            </Text>
+                          )}
 
-                        {subtitle && (
-                          <Text
-                            className={`text-${headerAlign} text-custom-gray-400`}
-                          >
-                            {subtitle}
-                          </Text>
-                        )}
-                      </Box>
+                          {subtitle && (
+                            <Text
+                              className={`text-${headerAlign} text-custom-gray-400`}
+                            >
+                              {subtitle}
+                            </Text>
+                          )}
+                        </Box>
+                      )}
                     </Dialog.Title>
 
-                    {children && <Box className="pt-6 h-full">{children}</Box>}
+                    {children && <Box className="py-6 h-full">{children}</Box>}
                   </Box>
                 )}
                 {footer && (
