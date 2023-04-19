@@ -67,7 +67,7 @@ export const ModalSearchFilters = ({
         <SelectSimple />
       </Box>
 
-      <Box className="mb-7 md:mb-32">
+      <Box className="mb-7 md:mb-8">
         <Text className="font-bold md:text-lg mb-2">Por competência</Text>
 
         <Box className="mb-3">
