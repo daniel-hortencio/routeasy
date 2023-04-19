@@ -45,7 +45,7 @@ export default function ProcessHistory() {
       id: '1',
       updated_at: '05/03/23 às 15h38',
       number: '0136156-24.2023.8.09.0001',
-      processo: 'CESAR SANTOS x VOLVO BRASIL LTDA',
+      processo: '(Ativo) CESAR SANTOS x VOLVO...',
       tribunal: 'PJERJ',
       tipo: 'Web'
     },
@@ -53,7 +53,7 @@ export default function ProcessHistory() {
       id: '2',
       updated_at: '05/03/23 às 15h38',
       number: '0136156-24.2023.8.09.0001',
-      processo: 'CESAR SANTOS x VOLVO BRASIL LTDA',
+      processo: '(Cancelado) CESAR SANTOS x VOLVO BRASIL LTDA...',
       tribunal: 'PJERJ',
       tipo: 'Web'
     }
