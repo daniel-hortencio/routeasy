@@ -16,11 +16,12 @@ import {
   TableRowProcessHistory
 } from '../../components/TableRowProcessHistory'
 import { useToast } from '../../../../shared/contexts/Toast/UseToast'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, FormEvent } from 'react'
 import Modal from '../../../../shared/components/elements/Modal'
 import { ModalSearchFilters } from '../../components/ModalSearchFilters'
 
 import S from './styles.module.css'
+import { SearchEmpty } from '../../components/SearchEmpty'
 
 const init_filters = {
   civil: false,
@@ -39,7 +40,26 @@ export default function ProcessHistory() {
     useState(false)
   const [filters, setFilters] = useState(init_filters)
   const [orderBy, setOrderBy] = useState(0)
-  const [selectedTribunal, setSelectedTribunal] = useState({ name: 'Todos' })
+  const [processes, setProcesses] = useState([
+    {
+      id: '1',
+      updated_at: '05/03/23 às 15h38',
+      number: '0136156-24.2023.8.09.0001',
+      processo: 'CESAR SANTOS x VOLVO BRASIL LTDA',
+      tribunal: 'PJERJ',
+      tipo: 'Web'
+    },
+    {
+      id: '2',
+      updated_at: '05/03/23 às 15h38',
+      number: '0136156-24.2023.8.09.0001',
+      processo: 'CESAR SANTOS x VOLVO BRASIL LTDA',
+      tribunal: 'PJERJ',
+      tipo: 'Web'
+    }
+  ])
+  const [search, setSearch] = useState('')
+  const [valueSearched, setValueSearched] = useState('')
 
   useEffect(() => {
     createToast({
@@ -61,6 +81,17 @@ export default function ProcessHistory() {
     setOrderBy(0)
   }, [])
 
+  const handleSubmitSearchProcess = useCallback(
+    (e: FormEvent) => {
+      e.preventDefault()
+
+      setValueSearched(search)
+
+      if (search.length > 0) setProcesses([])
+    },
+    [search]
+  )
+
   return (
     <>
       <DashboardLayoutHeader />
@@ -68,42 +99,69 @@ export default function ProcessHistory() {
       <ProcessesSummary />
 
       <Wrapper>
-        <Box className="mb-8 md:mb-12 mt-8 md:flex justify-between items-center">
-          <Text
-            as="h1"
-            className="font-bold text-2xl md:text-28px mb-4 md:mb-0"
-          >
-            Total de 459.235 processos
-          </Text>
+        {processes.length > 0 ? (
+          <>
+            <Box className="mb-8 md:mb-12 mt-8 md:flex justify-between items-center">
+              <Text
+                as="h1"
+                className="font-bold text-2xl md:text-28px mb-4 md:mb-0"
+              >
+                Total de 459.235 processos
+              </Text>
 
-          <Box className="flex items-center md:hidden w-full">
-            <InputSearch placeholder="Pesquisar Processo" />
+              <Box className="flex items-center md:hidden w-full">
+                <InputSearch
+                  placeholder="Pesquisar Processo"
+                  value={search}
+                  onChange={setSearch}
+                  onSubmit={handleSubmitSearchProcess}
+                />
 
-            <Box className="ml-5">
-              <Button
-                color="primary"
-                text={<Icon name="Funnel" />}
-                onClick={() => setIsOpenModalSearchFilters(true)}
-              />
+                <Box className="ml-5">
+                  <Button
+                    color="primary"
+                    text={<Icon name="Funnel" />}
+                    onClick={() => setIsOpenModalSearchFilters(true)}
+                  />
+                </Box>
+              </Box>
+
+              <Box className="hidden md:flex md:items-center">
+                <InputSearch
+                  variant="collapsible"
+                  placeholder="Pesquisar Processo"
+                  value={search}
+                  onChange={setSearch}
+                  onSubmit={handleSubmitSearchProcess}
+                />
+
+                <Box className="w-24 ml-5">
+                  <form onSubmit={handleSubmitSearchProcess}>
+                    <Button
+                      color="primary"
+                      text="Filtrar"
+                      onClick={() => setIsOpenModalSearchFilters(true)}
+                      size="large"
+                    />
+                  </form>
+                </Box>
+              </Box>
             </Box>
-          </Box>
 
-          <Box className="hidden md:flex md:items-center">
-            <InputSearch
-              variant="collapsible"
-              placeholder="Pesquisar Processo"
+            <Table
+              data={processes}
+              HeaderComponent={TableHeaderProcessHistory}
+              RowComponent={TableRowProcessHistory}
             />
-
-            <Box className="w-24 ml-5">
-              <Button
-                color="primary"
-                text="Filtrar"
-                onClick={() => setIsOpenModalSearchFilters(true)}
-                size="large"
-              />
-            </Box>
+          </>
+        ) : (
+          <Box className="my-20 md:my-44">
+            <SearchEmpty
+              onSubmit={handleSubmitSearchProcess}
+              searched={valueSearched}
+            />
           </Box>
-        </Box>
+        )}
 
         <Modal
           isOpen={isOpenModalSearchFilters}
@@ -136,29 +194,6 @@ export default function ProcessHistory() {
             handleCheck={handleCheck}
           />
         </Modal>
-
-        <Table
-          data={[
-            {
-              id: '1',
-              updated_at: '05/03/23 às 15h38',
-              number: '0136156-24.2023.8.09.0001',
-              processo: 'CESAR SANTOS x VOLVO BRASIL LTDA',
-              tribunal: 'PJERJ',
-              tipo: 'Web'
-            },
-            {
-              id: '2',
-              updated_at: '05/03/23 às 15h38',
-              number: '0136156-24.2023.8.09.0001',
-              processo: 'CESAR SANTOS x VOLVO BRASIL LTDA',
-              tribunal: 'PJERJ',
-              tipo: 'Web'
-            }
-          ]}
-          HeaderComponent={TableHeaderProcessHistory}
-          RowComponent={TableRowProcessHistory}
-        />
       </Wrapper>
     </>
   )

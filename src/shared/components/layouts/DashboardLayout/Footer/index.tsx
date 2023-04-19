@@ -3,7 +3,7 @@ import { Box, Text, Wrapper } from '../../../elements'
 
 export const DashboardLayoutFooter = () => {
   return (
-    <Wrapper as="footer">
+    <Wrapper as="footer" className="mt-auto">
       <Box className="flex flex-col-reverse md:flex-row items-center justify-between">
         <Text className="text-sm text-custom-gray-300">
           2023 © Judit.io

@@ -111,6 +111,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
                 size="large"
                 color="danger"
               />
+              Total de 4 processos encontrados
             </Box>
           }
         >

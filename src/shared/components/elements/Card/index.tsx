@@ -10,7 +10,8 @@ export const Card = ({
   children,
   className,
   onClick,
-  style
+  style,
+  onSubmit
 }: ICard) => {
   const getClassName = () => {
     let class_name = ``
@@ -21,7 +22,7 @@ export const Card = ({
 
   return (
     <Box
-      {...{ as, onClick, style }}
+      {...{ as, onClick, style, onSubmit }}
       className={`bg-white shadow ${getClassName()}`}
     >
       {children}

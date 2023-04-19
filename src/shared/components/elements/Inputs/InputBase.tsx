@@ -1,19 +1,23 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { Dispatch, ReactNode, SetStateAction } from 'react'
 
 export interface InputBaseProps {
   placeholder?: string
   type?: 'text' | 'password'
   icon?: ReactNode
   className?: string
+  value?: string
+  onChange?: Dispatch<SetStateAction<string>>
 }
 
 export const InputBase = ({
   placeholder,
   type = 'text',
   icon,
-  className
+  className,
+  value,
+  onChange
 }: InputBaseProps) => {
   return (
     <div
@@ -24,6 +28,8 @@ export const InputBase = ({
         type={type}
         className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}
         autoComplete="off"
+        value={value}
+        onChange={e => onChange(e.target.value)}
       />
       {icon && (
         <div className="absolute h-full right-0 flex items-center">{icon}</div>

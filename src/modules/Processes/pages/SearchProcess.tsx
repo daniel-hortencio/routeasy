@@ -43,7 +43,10 @@ export default function SearchProcess() {
         </Box>
 
         <Box className="mb-12 md:mb-20 max-w-lg mx-auto">
-          <InputSearch placeholder="Pesquisar por número do processo" />
+          <InputSearch
+            placeholder="Pesquisar por número do processo"
+            onSubmit={e => {}}
+          />
         </Box>
 
         <Box className="grid lg:grid-cols-3 gap-8 md:gap-12">
