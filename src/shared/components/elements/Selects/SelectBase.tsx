@@ -1,17 +1,15 @@
 'use client'
 
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
 
 export interface InputBaseProps {
   children: ReactNode
+  className?: string
 }
 
-export const SelectBase = ({ children }: InputBaseProps) => {
-  return (
-    <div
-      className={`bg-white flex items-center h-12 justify-between rounded-full w-min`}
-    >
-      {children}
-    </div>
-  )
+export const SelectBase = ({ children, className }: InputBaseProps) => {
+  const getClassName = () =>
+    `bg-white flex items-center h-12 justify-between rounded-full ${className}`
+
+  return <div className={getClassName()}>{children}</div>
 }

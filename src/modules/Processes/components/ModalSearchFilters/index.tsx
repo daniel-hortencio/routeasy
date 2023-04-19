@@ -1,35 +1,29 @@
 'use client'
 
-import { useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import {
   Box,
   CheckboxGroup,
   RadioGroup,
-  SelectCountryDDI,
+  SelectSimple,
   Text
 } from '../../../../shared/components/elements'
 
 import S from './styles.module.css'
 
-export const ModalSearchFilters = () => {
-  /*   const [showLastPublications, setShowLastPublications] = useState(true)
-  const [showAllDocuments, setShowAllDocuments] = useState(false) */
-  const [filters, setFilters] = useState({
-    civil: false,
-    penal: false,
-    tributario: false,
-    trabalhista: false,
-    contratual: false,
-    ambiental: false,
-    empresarial: false,
-    consumidor: false
-  })
-  const [orderBy, setOrderBy] = useState(0)
+interface Props {
+  filters: any
+  orderBy: any
+  setOrderBy: Dispatch<SetStateAction<number>>
+  handleCheck: (param: any) => void
+}
 
-  const handleCheck = param => {
-    setFilters(() => ({ ...filters, [param]: !filters[param] }))
-  }
-
+export const ModalSearchFilters = ({
+  filters,
+  orderBy,
+  setOrderBy,
+  handleCheck
+}: Props) => {
   return (
     <Box
       className={`${S.ModalSearchFilters__Content} overflow-y-auto mt-6 pl-5`}
@@ -68,8 +62,9 @@ export const ModalSearchFilters = () => {
         </Box>
       </Box>
 
-      <Box className="mb-7 md:mb-8">
+      <Box className="mb-7 md:mb-8 pr-5">
         <Text className="font-bold md:text-lg mb-2">Por tribunal</Text>
+        <SelectSimple />
       </Box>
 
       <Box className="mb-7 md:mb-32">

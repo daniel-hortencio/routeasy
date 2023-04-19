@@ -16,16 +16,30 @@ import {
   TableRowProcessHistory
 } from '../../components/TableRowProcessHistory'
 import { useToast } from '../../../../shared/contexts/Toast/UseToast'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Modal from '../../../../shared/components/elements/Modal'
 import { ModalSearchFilters } from '../../components/ModalSearchFilters'
 
 import S from './styles.module.css'
 
+const init_filters = {
+  civil: false,
+  penal: false,
+  tributario: false,
+  trabalhista: false,
+  contratual: false,
+  ambiental: false,
+  empresarial: false,
+  consumidor: false
+}
+
 export default function ProcessHistory() {
   const { createToast } = useToast()
   const [isOpenModalSearchFilters, setIsOpenModalSearchFilters] =
     useState(false)
+  const [filters, setFilters] = useState(init_filters)
+  const [orderBy, setOrderBy] = useState(0)
+  const [selectedTribunal, setSelectedTribunal] = useState({ name: 'Todos' })
 
   useEffect(() => {
     createToast({
@@ -33,6 +47,18 @@ export default function ProcessHistory() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, onec facilisis neque!',
       status: 'danger'
     })
+  }, [])
+
+  const handleCheck = useCallback(
+    param => {
+      setFilters(() => ({ ...filters, [param]: !filters[param] }))
+    },
+    [filters]
+  )
+
+  const clearFilters = useCallback(() => {
+    setFilters(() => init_filters)
+    setOrderBy(0)
   }, [])
 
   return (
@@ -88,10 +114,13 @@ export default function ProcessHistory() {
           footer={
             <Box className="flex justify-end">
               <Box className="hidden md:block md:w-28">
-                <Button text="Limpar" size="large" />
+                <Button text="Limpar" size="large" onClick={clearFilters} />
               </Box>
               <Box className="md:hidden">
-                <Button text={<Icon name="TrashSimple" />} />
+                <Button
+                  text={<Icon name="TrashSimple" />}
+                  onClick={clearFilters}
+                />
               </Box>
 
               <Box className="ml-5 w-full md:w-40">
@@ -100,7 +129,12 @@ export default function ProcessHistory() {
             </Box>
           }
         >
-          <ModalSearchFilters />
+          <ModalSearchFilters
+            filters={filters}
+            orderBy={orderBy}
+            setOrderBy={setOrderBy}
+            handleCheck={handleCheck}
+          />
         </Modal>
 
         <Table
