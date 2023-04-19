@@ -85,7 +85,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
 
         <Modal
           title="Documentos do processo"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum sagittis pharetra. Proin pellentesque urna arcu, ut feugiat tellus porttitor vel."
+          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum sagittis pharetra. Proin pellentesque urna arcu, ut feugiat tellus porttitor vel."
           isOpen={isOpenModalDocuments}
           onClose={() => setIsOpenModalDocuments(false)}
         >
@@ -95,7 +95,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         <Modal
           headerAlign="center"
           title="Tem certeza que deseja continuar?"
-          description="Você está prestes a cancelar o monitoramento automático deste Processo Judicial, antes de continuar avalie o histórico do período monitorado:"
+          subtitle="Você está prestes a cancelar o monitoramento automático deste Processo Judicial, antes de continuar avalie o histórico do período monitorado:"
           isOpen={isOpenModalCancelMonitoring}
           onClose={() => setIsOpenModalCancelMonitoring(false)}
           showButtonClose={false}
@@ -121,7 +121,7 @@ export default function ProcessDetails({ isMonitoring }: Props) {
         <Modal
           headerAlign="center"
           title="Tem certeza que deseja continuar?"
-          description="Você está prestes a ativar o monitoramento automático deste Processo Judicial, essa ação irá consumir 1 consulta a cada 24h para manter as movimentações processuais sincronizadas com todos os tribunais e Diários Oficiais."
+          subtitle="Você está prestes a ativar o monitoramento automático deste Processo Judicial, essa ação irá consumir 1 consulta a cada 24h para manter as movimentações processuais sincronizadas com todos os tribunais e Diários Oficiais."
           isOpen={isOpenModalActiveMonitoring}
           onClose={() => setIsOpenModalActiveMonitoring(false)}
           showButtonClose={false}

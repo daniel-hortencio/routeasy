@@ -8,7 +8,7 @@ import Icon from '../Icon'
 
 interface Props {
   title?: string
-  description?: string
+  subtitle?: string
   isOpen: boolean
   onClose: () => void
   showButtonClose?: boolean
@@ -26,7 +26,7 @@ export default function Modal({
   headerAlign = 'left',
   onClose,
   showButtonClose = true,
-  description,
+  subtitle,
   children,
   footer,
   positionX = 'center',
@@ -117,11 +117,11 @@ export default function Modal({
                           </Text>
                         )}
 
-                        {description && (
+                        {subtitle && (
                           <Text
                             className={`text-${headerAlign} text-custom-gray-400`}
                           >
-                            {description}
+                            {subtitle}
                           </Text>
                         )}
                       </Box>

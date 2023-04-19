@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import {
   Box,
   Button,
@@ -9,8 +10,12 @@ import {
   Text
 } from '../../../shared/components/elements'
 import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLayout/Header'
+import Modal from '../../../shared/components/elements/Modal'
+import { ModalForgotPassword } from '../ModalForgotPassword'
 
 export default function PageSignIn() {
+  const [showModalForgetPassword, setModalForgetPassword] = useState(false)
+
   return (
     <>
       <PublicLayoutHeader
@@ -34,7 +39,11 @@ export default function PageSignIn() {
           </InputGroup>
         </Box>
         <Box className="mb-14">
-          <InputGroup label="Senha" linkText="Esqueceu sua senha?" linkTo="/">
+          <InputGroup
+            label="Senha"
+            buttonText="Esqueceu sua senha?"
+            buttonOnClick={() => setModalForgetPassword(true)}
+          >
             <InputPassword placeholder="Insira sua senha de acesso" />
           </InputGroup>
         </Box>
@@ -48,6 +57,21 @@ export default function PageSignIn() {
           />
         </Box>
       </form>
+
+      <Modal
+        title="Esqueceu sua senha?"
+        headerAlign="center"
+        subtitle="Não se preocupe, insira o seu e-mail de cadastro e receba o código para redefinir a sua senha de acesso a JUDIT:"
+        footer={
+          <Box className="w-60 mx-auto">
+            <Button text="Recuperar minha senha" color="primary" size="large" />
+          </Box>
+        }
+        isOpen={showModalForgetPassword}
+        onClose={() => setModalForgetPassword(false)}
+      >
+        <ModalForgotPassword />
+      </Modal>
     </>
   )
 }
