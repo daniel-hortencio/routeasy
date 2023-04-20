@@ -22,7 +22,7 @@ export const Toast = ({ status, message, onClose }: Props) => {
       danger: 'bg-danger text-white fill-white'
     }
 
-    return `${S.Toast} fixed top-0 z-20 w-full ${status_styles[status]}`
+    return `${S.Toast} fixed top-0 z-20 w-full opacity-90 ${status_styles[status]}`
   }
 
   useEffect(() => {

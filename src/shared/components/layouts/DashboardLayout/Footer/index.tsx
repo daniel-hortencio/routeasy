@@ -2,7 +2,8 @@ import {
   Box,
   Text,
   Wrapper,
-  PrivacyPolicyAndTermsOfUse
+  PrivacyPolicy,
+  TermsOfUse
 } from '../../../elements'
 import Modal from '../../../elements/Modal'
 import { useState } from 'react'
@@ -22,7 +23,10 @@ export const DashboardLayoutFooter = () => {
           </span>
         </Text>
         <Box className="flex items-center">
-          <button className="text-sm text-custom-gray-400 text-center mb-2 md:mb-0 hover:underline">
+          <button
+            className="text-sm text-custom-gray-400 text-center mb-2 md:mb-0 hover:underline"
+            onClick={() => setShowModalTerms(true)}
+          >
             Termos de uso
           </button>
           <span className="mx-4 text-custom-gray-400">·</span>
@@ -45,7 +49,15 @@ export const DashboardLayoutFooter = () => {
         isOpen={showModalPolicy}
         onClose={() => setShowModalPolicy(false)}
       >
-        <PrivacyPolicyAndTermsOfUse />
+        <PrivacyPolicy />
+      </Modal>
+      <Modal
+        title="TERMOS DE USO DA JUDIT"
+        subtitle="Esta versão foi atualizada em Abril de 2023."
+        isOpen={showModalTerms}
+        onClose={() => setShowModalTerms(false)}
+      >
+        <TermsOfUse />
       </Modal>
     </Wrapper>
   )
