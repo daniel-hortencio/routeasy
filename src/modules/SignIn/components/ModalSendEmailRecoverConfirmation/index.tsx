@@ -1,4 +1,4 @@
-import { Box, Icon, Text } from '../../../shared/components/elements'
+import { Box, Icon, Text } from '../../../../shared/components/elements'
 
 export const ModalSendEmailRecoverConfirmation = () => {
   return (

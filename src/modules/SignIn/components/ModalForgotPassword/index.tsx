@@ -3,7 +3,7 @@ import {
   InputGroup,
   InputText,
   Text
-} from '../../../shared/components/elements'
+} from '../../../../shared/components/elements'
 
 export const ModalForgotPassword = () => {
   return (

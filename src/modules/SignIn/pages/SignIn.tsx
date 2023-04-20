@@ -11,8 +11,8 @@ import {
 } from '../../../shared/components/elements'
 import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLayout/Header'
 import Modal from '../../../shared/components/elements/Modal'
-import { ModalForgotPassword } from '../ModalForgotPassword'
-import { ModalSendEmailRecoverConfirmation } from '../ModalSendEmailRecoverConfirmation'
+import { ModalForgotPassword } from '../components/ModalForgotPassword'
+import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 
 export default function PageSignIn() {
   const [showModalForgetPassword, setModalForgetPassword] = useState(false)
