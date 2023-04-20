@@ -8,7 +8,8 @@ import Modal from '../../../elements/Modal'
 import { useState } from 'react'
 
 export const DashboardLayoutFooter = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showModalPolicy, setShowModalPolicy] = useState(false)
+  const [showModalTerms, setShowModalTerms] = useState(false)
 
   return (
     <Wrapper as="footer" className="mt-auto">
@@ -20,20 +21,29 @@ export const DashboardLayoutFooter = () => {
             · Todos os direitos reservados
           </span>
         </Text>
-        <button
-          className="text-sm text-custom-gray-400 text-center mb-2 md:mb-0 hover:underline"
-          onClick={() => setShowModal(true)}
-        >
-          <span>Termos de uso</span> ·<span>Política de privacidade</span> ·{' '}
-          <span>Cookies</span>
-        </button>
+        <Box className="flex items-center">
+          <button className="text-sm text-custom-gray-400 text-center mb-2 md:mb-0 hover:underline">
+            Termos de uso
+          </button>
+          <span className="mx-4 text-custom-gray-400">·</span>
+          <button
+            className="text-sm text-custom-gray-400 text-center mb-2 md:mb-0 hover:underline"
+            onClick={() => setShowModalPolicy(true)}
+          >
+            Política de privacidade
+          </button>
+          <span className="mx-4 text-custom-gray-400">·</span>
+          <button className="text-sm text-custom-gray-400 text-center mb-2 md:mb-0 hover:underline">
+            Cookies
+          </button>
+        </Box>
       </Box>
 
       <Modal
         title="POLÍTICA DE PRIVACIDADE DA JUDIT"
         subtitle="Esta versão foi atualizada em Abril de 2023."
-        isOpen={showModal}
-        onClose={() => setShowModal(false)}
+        isOpen={showModalPolicy}
+        onClose={() => setShowModalPolicy(false)}
       >
         <PrivacyPolicyAndTermsOfUse />
       </Modal>
