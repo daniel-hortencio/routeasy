@@ -35,7 +35,7 @@ const init_filters = {
 }
 
 export default function ProcessHistory() {
-  const [filters, setFilters] = useState(null)
+  const [filters, setFilters] = useState({})
   const [orderBy, setOrderBy] = useState(0)
   const [processes, setProcesses] = useState([
     {
@@ -157,7 +157,7 @@ export default function ProcessHistory() {
                   <Button
                     color="primary"
                     text={<Icon name="Funnel" />}
-                    onClick={() => setFilters(init_filters)}
+                    onClick={createModalFilters}
                   />
                 </Box>
               </Box>
@@ -176,7 +176,7 @@ export default function ProcessHistory() {
                     <Button
                       color="primary"
                       text="Filtrar"
-                      onClick={() => setFilters(init_filters)}
+                      onClick={createModalFilters}
                       size="large"
                     />
                   </form>
