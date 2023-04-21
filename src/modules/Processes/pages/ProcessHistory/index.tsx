@@ -1,27 +1,28 @@
 'use client'
 
+import { useEffect, useState, useCallback } from 'react'
+
+import ProcessesSummary from '../../components/ProcessesSummary'
+import {
+  TableHeaderProcessHistory,
+  TableRowProcessHistory
+} from '../../components/TableRowProcessHistory'
+import { ModalSearchFilters } from '../../components/ModalSearchFilters'
+import { SearchEmpty } from '../../components/SearchEmpty'
 import {
   Box,
   Icon,
   InputSearch,
   Text,
   Wrapper,
-  Button
-} from '../../../../shared/components/elements'
-import { DashboardLayoutHeader } from '../../../../shared/components/layouts/DashboardLayout/Header'
-import { Table } from '../../../../shared/components/elements/Table'
-import ProcessesSummary from '../../components/ProcessesSummary'
-import {
-  TableHeaderProcessHistory,
-  TableRowProcessHistory
-} from '../../components/TableRowProcessHistory'
-import { useToast } from '../../../../shared/contexts/Toast/UseToast'
-import { useEffect, useState, useCallback, FormEvent } from 'react'
-import { ModalSearchFilters } from '../../components/ModalSearchFilters'
+  Button,
+  Table
+} from 'shared/components/elements'
+import { useToast } from 'shared/contexts/Toast/UseToast'
+import { DashboardLayoutHeader } from 'shared/components/layouts/DashboardLayout/Header'
+import { useModal } from 'shared/contexts/Modal'
 
 import S from './styles.module.css'
-import { SearchEmpty } from '../../components/SearchEmpty'
-import { useModal } from 'shared/contexts/Modal'
 
 const init_filters = {
   civil: false,
@@ -56,7 +57,6 @@ export default function ProcessHistory() {
     }
   ])
   const [search, setSearch] = useState('')
-  const [valueSearched, setValueSearched] = useState('')
 
   const { createToast } = useToast()
   const { createModal } = useModal()
@@ -82,12 +82,11 @@ export default function ProcessHistory() {
   }, [])
 
   const handleSubmitSearchProcess = useCallback(
-    (e: FormEvent) => {
-      e.preventDefault()
+    (search_value: string) => {
+      setSearch(search_value)
 
-      setValueSearched(search)
-
-      if (search.length > 0) setProcesses([])
+      // Remover ao integrar
+      if (search_value.length > 0) setProcesses([])
     },
     [search]
   )
@@ -152,8 +151,6 @@ export default function ProcessHistory() {
               <Box className="flex items-center md:hidden w-full">
                 <InputSearch
                   placeholder="Pesquisar Processo"
-                  value={search}
-                  onChange={setSearch}
                   onSubmit={handleSubmitSearchProcess}
                 />
 
@@ -170,20 +167,16 @@ export default function ProcessHistory() {
                 <InputSearch
                   variant="collapsible"
                   placeholder="Pesquisar Processo"
-                  value={search}
-                  onChange={setSearch}
                   onSubmit={handleSubmitSearchProcess}
                 />
 
                 <Box className="w-24 ml-5">
-                  <form onSubmit={handleSubmitSearchProcess}>
-                    <Button
-                      color="primary"
-                      text="Filtrar"
-                      onClick={createModalFilters}
-                      size="large"
-                    />
-                  </form>
+                  <Button
+                    color="primary"
+                    text="Filtrar"
+                    onClick={createModalFilters}
+                    size="large"
+                  />
                 </Box>
               </Box>
             </Box>
@@ -196,10 +189,7 @@ export default function ProcessHistory() {
           </>
         ) : (
           <Box className="my-20 md:my-44">
-            <SearchEmpty
-              onSubmit={handleSubmitSearchProcess}
-              searched={valueSearched}
-            />
+            <SearchEmpty onSubmit={() => {}} searched={search} />
           </Box>
         )}
       </Wrapper>

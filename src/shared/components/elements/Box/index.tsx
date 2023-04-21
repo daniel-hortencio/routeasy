@@ -1,4 +1,4 @@
-import { CSSProperties, FormEvent, ReactNode } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 
 export type BoxElementType =
   | 'div'
@@ -9,14 +9,12 @@ export type BoxElementType =
   | 'main'
   | 'ul'
   | 'li'
-  | 'form'
 export interface IBox {
   children?: ReactNode
   className?: string
   style?: CSSProperties
   as?: BoxElementType
   onClick?: () => void
-  onSubmit?: (e: FormEvent) => void
 }
 
 export const Box = ({
@@ -24,8 +22,7 @@ export const Box = ({
   className,
   style,
   as = 'div',
-  onClick,
-  onSubmit
+  onClick
 }: IBox) => {
   const element = {
     div: (
@@ -67,11 +64,6 @@ export const Box = ({
       <li onClick={onClick} style={style} className={className}>
         {children}
       </li>
-    ),
-    form: (
-      <form onSubmit={onSubmit} style={style} className={className}>
-        {children}
-      </form>
     )
   }
 
