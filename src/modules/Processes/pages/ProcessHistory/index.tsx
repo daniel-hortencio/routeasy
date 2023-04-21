@@ -35,7 +35,7 @@ const init_filters = {
 }
 
 export default function ProcessHistory() {
-  const [filters, setFilters] = useState({})
+  const [filters, setFilters] = useState(null)
   const [orderBy, setOrderBy] = useState(0)
   const [processes, setProcesses] = useState([
     {
@@ -93,6 +93,10 @@ export default function ProcessHistory() {
   )
 
   const createModalFilters = () => {
+    if (filters === null) {
+      setFilters(init_filters)
+    }
+
     createModal({
       className: `${S.ModalSearchFilters}`,
       positionX: 'right',
