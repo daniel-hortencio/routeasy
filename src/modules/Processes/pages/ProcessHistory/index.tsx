@@ -93,22 +93,6 @@ export default function ProcessHistory() {
     [search]
   )
 
-  /*   <Modal
-  positionX="right"
-
-  isCustom
-  footer={
-
-  }
->
-  <ModalSearchFilters
-    filters={filters}
-    orderBy={orderBy}
-    setOrderBy={setOrderBy}
-    handleCheck={handleCheck}
-  />
-</Modal> */
-
   const createModalFilters = () => {
     createModal({
       className: `${S.ModalSearchFilters}`,
