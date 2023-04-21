@@ -6,33 +6,35 @@ import { Box } from '../Box'
 import { Text } from '../Text'
 import Icon from '../Icon'
 
-interface Props {
+type ModalHeader = {
   title?: string
   subtitle?: string
+  align?: 'left' | 'center' | 'right'
+}
+
+export interface IModal {
+  header?: ModalHeader
+  showButtonClose?: boolean
   isOpen: boolean
   onClose: () => void
-  showButtonClose?: boolean
-  headerAlign?: 'left' | 'center' | 'right'
-  children?: ReactNode
+  body?: ReactNode
   footer?: ReactNode
   positionX?: 'left' | 'center' | 'right'
   className?: string
   isCustom?: boolean
 }
 
-export default function Modal({
-  title,
-  isOpen,
-  headerAlign = 'left',
-  onClose,
+export const Modal = ({
+  header,
   showButtonClose = true,
-  subtitle,
-  children,
+  isOpen,
+  onClose,
+  body,
   footer,
   positionX = 'center',
   className = '',
   isCustom = false
-}: Props) {
+}: IModal) => {
   const cancelButtonRef = useRef(null)
 
   const getStyle = () => {
@@ -83,7 +85,7 @@ export default function Modal({
               <Dialog.Panel className={getClassName()}>
                 {isCustom ? (
                   <Box>
-                    {children}
+                    {body}
                     {showButtonClose && (
                       <button
                         type="button"
@@ -108,28 +110,32 @@ export default function Modal({
                           <Icon name="X" />
                         </button>
                       )}
-                      {(title || subtitle) && (
+                      {(header?.title || header?.subtitle) && (
                         <Box as="header" className="pt-8">
-                          {title && (
+                          {header.title && (
                             <Text
-                              className={`font-bold text-2xl mb-4 text-${headerAlign}`}
+                              className={`font-bold text-2xl mb-4 ${
+                                header.align && `text-${header.align}`
+                              }`}
                             >
-                              {title}
+                              {header.title}
                             </Text>
                           )}
 
-                          {subtitle && (
+                          {header.subtitle && (
                             <Text
-                              className={`text-${headerAlign} text-custom-gray-400`}
+                              className={`${
+                                header.align && `text-${header.align}`
+                              } text-custom-gray-400`}
                             >
-                              {subtitle}
+                              {header.subtitle}
                             </Text>
                           )}
                         </Box>
                       )}
                     </Dialog.Title>
 
-                    {children && <Box className="py-6 h-full">{children}</Box>}
+                    {body && <Box className="py-6 h-full">{body}</Box>}
                   </Box>
                 )}
                 {footer && (
@@ -148,3 +154,5 @@ export default function Modal({
     </Transition.Root>
   )
 }
+
+export default Modal

@@ -4,6 +4,7 @@ import { Roboto } from '@next/font/google'
 
 import '../shared/styles/globals.css'
 import { ToastProvider } from '../shared/contexts/Toast/ToastProvider'
+import { ModalProvider } from '../shared/contexts/Modal'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
       <head />
       <body className={roboto.className}>
         <ToastProvider>
-          <main>{children}</main>
+          <ModalProvider>
+            <main>{children}</main>
+          </ModalProvider>
         </ToastProvider>
         <div id="toast" />
       </body>

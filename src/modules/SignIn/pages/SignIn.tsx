@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import {
   Box,
   Button,
@@ -13,13 +13,40 @@ import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLay
 import Modal from '../../../shared/components/elements/Modal'
 import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
+import { useModal } from '../../../shared/contexts/Modal'
 
 export default function PageSignIn() {
-  const [showModalForgetPassword, setModalForgetPassword] = useState(false)
-  const [
-    showModalSendEmailRecoverConfirmation,
-    setShowModalSendEmailRecoverConfirmation
-  ] = useState(false)
+  const { createModal } = useModal()
+
+  const createModalSendEmailRecoverConfirmation = useCallback(() => {
+    createModal({
+      body: <ModalSendEmailRecoverConfirmation />
+    })
+  }, [])
+
+  const createModalForgotPassword = useCallback(
+    () =>
+      createModal({
+        header: {
+          title: 'Esqueceu sua senha?',
+          align: 'center',
+          subtitle:
+            'Não se preocupe, insira o seu e-mail de cadastro e receba o código para redefinir a sua senha de acesso a JUDIT:'
+        },
+        body: <ModalForgotPassword />,
+        footer: (
+          <Box className="w-60 mx-auto">
+            <Button
+              text="Recuperar minha senha"
+              color="primary"
+              size="large"
+              onClick={createModalSendEmailRecoverConfirmation}
+            />
+          </Box>
+        )
+      }),
+    []
+  )
 
   return (
     <>
@@ -47,7 +74,7 @@ export default function PageSignIn() {
           <InputGroup
             label="Senha"
             buttonText="Esqueceu sua senha?"
-            buttonOnClick={() => setModalForgetPassword(true)}
+            buttonOnClick={createModalForgotPassword}
           >
             <InputPassword placeholder="Insira sua senha de acesso" />
           </InputGroup>
@@ -62,36 +89,6 @@ export default function PageSignIn() {
           />
         </Box>
       </form>
-
-      <Modal
-        title="Esqueceu sua senha?"
-        headerAlign="center"
-        subtitle="Não se preocupe, insira o seu e-mail de cadastro e receba o código para redefinir a sua senha de acesso a JUDIT:"
-        footer={
-          <Box className="w-60 mx-auto">
-            <Button
-              text="Recuperar minha senha"
-              color="primary"
-              size="large"
-              onClick={() => {
-                setModalForgetPassword(false)
-                setShowModalSendEmailRecoverConfirmation(true)
-              }}
-            />
-          </Box>
-        }
-        isOpen={showModalForgetPassword}
-        onClose={() => setModalForgetPassword(false)}
-      >
-        <ModalForgotPassword />
-      </Modal>
-
-      <Modal
-        isOpen={showModalSendEmailRecoverConfirmation}
-        onClose={() => setShowModalSendEmailRecoverConfirmation(false)}
-      >
-        <ModalSendEmailRecoverConfirmation />
-      </Modal>
     </>
   )
 }

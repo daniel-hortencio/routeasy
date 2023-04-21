@@ -22,6 +22,7 @@ import { ModalSearchFilters } from '../../components/ModalSearchFilters'
 
 import S from './styles.module.css'
 import { SearchEmpty } from '../../components/SearchEmpty'
+import { useModal } from 'shared/contexts/Modal'
 
 const init_filters = {
   civil: false,
@@ -35,9 +36,6 @@ const init_filters = {
 }
 
 export default function ProcessHistory() {
-  const { createToast } = useToast()
-  const [isOpenModalSearchFilters, setIsOpenModalSearchFilters] =
-    useState(false)
   const [filters, setFilters] = useState(init_filters)
   const [orderBy, setOrderBy] = useState(0)
   const [processes, setProcesses] = useState([
@@ -60,6 +58,9 @@ export default function ProcessHistory() {
   ])
   const [search, setSearch] = useState('')
   const [valueSearched, setValueSearched] = useState('')
+
+  const { createToast } = useToast()
+  const { createModal } = useModal()
 
   useEffect(() => {
     createToast({
@@ -92,6 +93,52 @@ export default function ProcessHistory() {
     [search]
   )
 
+  /*   <Modal
+  positionX="right"
+
+  isCustom
+  footer={
+
+  }
+>
+  <ModalSearchFilters
+    filters={filters}
+    orderBy={orderBy}
+    setOrderBy={setOrderBy}
+    handleCheck={handleCheck}
+  />
+</Modal> */
+
+  const createModalFilters = () => {
+    createModal({
+      className: `${S.ModalSearchFilters}`,
+      positionX: 'right',
+      isCustom: true,
+      body: (
+        <ModalSearchFilters
+          filters={filters}
+          orderBy={orderBy}
+          setOrderBy={setOrderBy}
+          handleCheck={handleCheck}
+        />
+      ),
+      footer: (
+        <Box className="flex justify-end">
+          <Box className="hidden md:block md:w-28">
+            <Button text="Limpar" size="large" onClick={clearFilters} />
+          </Box>
+          <Box className="md:hidden">
+            <Button text={<Icon name="TrashSimple" />} onClick={clearFilters} />
+          </Box>
+
+          <Box className="ml-5 w-full md:w-40">
+            <Button text="Filtrar processos" size="large" color="primary" />
+          </Box>
+        </Box>
+      )
+    })
+  }
+
   return (
     <>
       <DashboardLayoutHeader />
@@ -121,7 +168,7 @@ export default function ProcessHistory() {
                   <Button
                     color="primary"
                     text={<Icon name="Funnel" />}
-                    onClick={() => setIsOpenModalSearchFilters(true)}
+                    onClick={createModalFilters}
                   />
                 </Box>
               </Box>
@@ -140,7 +187,7 @@ export default function ProcessHistory() {
                     <Button
                       color="primary"
                       text="Filtrar"
-                      onClick={() => setIsOpenModalSearchFilters(true)}
+                      onClick={createModalFilters}
                       size="large"
                     />
                   </form>
@@ -162,38 +209,6 @@ export default function ProcessHistory() {
             />
           </Box>
         )}
-
-        <Modal
-          isOpen={isOpenModalSearchFilters}
-          onClose={() => setIsOpenModalSearchFilters(false)}
-          positionX="right"
-          className={`${S.ModalSearchFilters}`}
-          isCustom
-          footer={
-            <Box className="flex justify-end">
-              <Box className="hidden md:block md:w-28">
-                <Button text="Limpar" size="large" onClick={clearFilters} />
-              </Box>
-              <Box className="md:hidden">
-                <Button
-                  text={<Icon name="TrashSimple" />}
-                  onClick={clearFilters}
-                />
-              </Box>
-
-              <Box className="ml-5 w-full md:w-40">
-                <Button text="Filtrar processos" size="large" color="primary" />
-              </Box>
-            </Box>
-          }
-        >
-          <ModalSearchFilters
-            filters={filters}
-            orderBy={orderBy}
-            setOrderBy={setOrderBy}
-            handleCheck={handleCheck}
-          />
-        </Modal>
       </Wrapper>
     </>
   )
