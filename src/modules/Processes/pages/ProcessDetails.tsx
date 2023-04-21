@@ -2,14 +2,7 @@
 
 import { useCallback, useState } from 'react'
 
-import {
-  Box,
-  Text,
-  Wrapper,
-  Button,
-  Icon,
-  Modal
-} from 'shared/components/elements'
+import { Box, Text, Wrapper, Button, Icon } from 'shared/components/elements'
 import { DashboardLayoutHeader } from 'shared/components/layouts/DashboardLayout/Header'
 
 import { TimeLine } from '../components/TimeLine'

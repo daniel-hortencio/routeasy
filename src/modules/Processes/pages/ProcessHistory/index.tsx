@@ -17,7 +17,6 @@ import {
 } from '../../components/TableRowProcessHistory'
 import { useToast } from '../../../../shared/contexts/Toast/UseToast'
 import { useEffect, useState, useCallback, FormEvent } from 'react'
-import Modal from '../../../../shared/components/elements/Modal'
 import { ModalSearchFilters } from '../../components/ModalSearchFilters'
 
 import S from './styles.module.css'
@@ -36,7 +35,7 @@ const init_filters = {
 }
 
 export default function ProcessHistory() {
-  const [filters, setFilters] = useState(init_filters)
+  const [filters, setFilters] = useState(null)
   const [orderBy, setOrderBy] = useState(0)
   const [processes, setProcesses] = useState([
     {
@@ -123,6 +122,12 @@ export default function ProcessHistory() {
     })
   }
 
+  useEffect(() => {
+    if (filters) {
+      createModalFilters()
+    }
+  }, [filters, orderBy])
+
   return (
     <>
       <DashboardLayoutHeader />
@@ -152,7 +157,7 @@ export default function ProcessHistory() {
                   <Button
                     color="primary"
                     text={<Icon name="Funnel" />}
-                    onClick={createModalFilters}
+                    onClick={() => setFilters(init_filters)}
                   />
                 </Box>
               </Box>
@@ -171,7 +176,7 @@ export default function ProcessHistory() {
                     <Button
                       color="primary"
                       text="Filtrar"
-                      onClick={createModalFilters}
+                      onClick={() => setFilters(init_filters)}
                       size="large"
                     />
                   </form>
