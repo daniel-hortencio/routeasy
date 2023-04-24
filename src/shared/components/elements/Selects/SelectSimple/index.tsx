@@ -15,14 +15,28 @@ interface Props {
   className?: string
   options: any[]
   defaultValue?: string
+  customOptionComponent?: JSX.Element
 }
 
-export const SelectSimple = ({ className, options, defaultValue }: Props) => {
+export const SelectSimple = ({
+  className,
+  options,
+  defaultValue,
+  customOptionComponent
+}: Props) => {
   const [selected, setSelected] = useState({
     name: defaultValue
   })
 
   const getClassName = `border-1 border-custom-gray-100 w-full ${className}`
+
+  const defaultOption = (props: any) => (
+    <Text className="text-custom-gray-500 mx-2 truncate">{props.name}</Text>
+  )
+
+  const Option = customOptionComponent
+    ? () => customOptionComponent
+    : defaultOption
 
   return (
     <SelectBase className={getClassName}>
@@ -51,9 +65,9 @@ export const SelectSimple = ({ className, options, defaultValue }: Props) => {
                 leaveTo="opacity-0"
               >
                 <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                  {options.map(tribunal => (
+                  {options.map(option => (
                     <Listbox.Option
-                      key={tribunal.name}
+                      key={option.name}
                       className={({ active }) =>
                         classNames(
                           active
@@ -62,13 +76,9 @@ export const SelectSimple = ({ className, options, defaultValue }: Props) => {
                           'relative select-none py-2 pl-3 pr-9 cursor-pointer'
                         )
                       }
-                      value={tribunal}
+                      value={option}
                     >
-                      {({ selected, active }) => (
-                        <Text className="text-custom-gray-500 mx-2 truncate">
-                          {tribunal.name}
-                        </Text>
-                      )}
+                      {({ selected, active }) => <Option {...option} />}
                     </Listbox.Option>
                   ))}
                 </Listbox.Options>
