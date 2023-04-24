@@ -5,7 +5,7 @@ import {
   Box,
   CheckboxGroup,
   RadioGroup,
-  SelectSimple,
+  Select,
   Text
 } from '../../../../shared/components/elements'
 
@@ -69,7 +69,7 @@ export const ModalSearchFilters = ({
 
         <Box className="mb-7 md:mb-8 pr-5">
           <Text className="font-bold md:text-lg mb-2 ">Por tribunal</Text>
-          <SelectSimple
+          <Select
             className="shadow-md"
             options={[
               { name: 'Todos' },

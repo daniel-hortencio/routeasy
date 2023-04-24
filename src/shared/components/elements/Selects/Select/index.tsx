@@ -14,29 +14,35 @@ function classNames(...classes) {
 interface Props {
   className?: string
   options: any[]
-  defaultValue?: string
-  customOptionComponent?: JSX.Element
+  defaultValue?: any
+  customClassNames?: {
+    list?: string
+    display?: string
+  }
+  components?: {
+    option?: (props: any) => JSX.Element
+    display?: (props: any) => JSX.Element
+  }
 }
 
-export const SelectSimple = ({
+export const Select = ({
   className,
   options,
   defaultValue,
-  customOptionComponent
+  components,
+  customClassNames
 }: Props) => {
-  const [selected, setSelected] = useState({
-    name: defaultValue
-  })
+  const [selected, setSelected] = useState(defaultValue)
 
   const getClassName = `border-1 border-custom-gray-100 w-full ${className}`
+
+  const defaultDisplay = (props: any) => <Text>{props.name}</Text>
+  const Display = components?.display || defaultDisplay
 
   const defaultOption = (props: any) => (
     <Text className="text-custom-gray-500 mx-2 truncate">{props.name}</Text>
   )
-
-  const Option = customOptionComponent
-    ? () => customOptionComponent
-    : defaultOption
+  const Option = components?.option || defaultOption
 
   return (
     <SelectBase className={getClassName}>
@@ -47,7 +53,7 @@ export const SelectSimple = ({
               <Listbox.Button
                 className={`${S.SelectSimple__ListBoxButton} flex items-center justify-between relative w-full cursor-default rounded-full px-6 h-full text-left text-custom-gray-500 `}
               >
-                <Text>{selected.name}</Text>
+                <Display {...selected} />
                 <Box
                   className={`transition-all fill-custom-gray-300 ${
                     S.SelectSimple__ListBoxButtonArrow
@@ -64,7 +70,9 @@ export const SelectSimple = ({
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options
+                  className={`absolute z-10 mt-1 max-h-56 max-w-xs overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm ${customClassNames?.list}`}
+                >
                   {options.map(option => (
                     <Listbox.Option
                       key={option.name}

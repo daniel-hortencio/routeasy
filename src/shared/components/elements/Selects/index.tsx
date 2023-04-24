@@ -1,2 +1,2 @@
 export { SelectCountryDDI } from './SelectCountryDDI'
-export { SelectSimple } from './SelectSimple'
+export { Select } from './Select'
