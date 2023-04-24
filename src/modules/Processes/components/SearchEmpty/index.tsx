@@ -2,7 +2,7 @@ import { FormEvent } from 'react'
 import { Box, InputSearch, Text } from '../../../../shared/components/elements'
 
 interface Props {
-  onSubmit: (e: FormEvent) => void
+  onSubmit: (e: string) => void
   searched: string
 }
 
