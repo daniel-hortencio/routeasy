@@ -16,7 +16,7 @@ export interface IBox {
   style?: CSSProperties
   as?: BoxElementType
   onClick?: () => void
-  onSubmit: (e: any) => void
+  onSubmit?: (e: any) => void
 }
 
 export const Box = ({
