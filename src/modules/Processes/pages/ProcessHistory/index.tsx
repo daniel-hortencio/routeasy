@@ -111,14 +111,28 @@ export default function ProcessHistory() {
       footer: (
         <Box className="flex justify-end">
           <Box className="hidden md:block md:w-28">
-            <Button text="Limpar" size="large" onClick={clearFilters} />
+            <Button
+              text="Limpar"
+              size="large"
+              onClick={clearFilters}
+              height="low"
+            />
           </Box>
           <Box className="md:hidden">
-            <Button text={<Icon name="TrashSimple" />} onClick={clearFilters} />
+            <Button
+              text={<Icon name="TrashSimple" />}
+              onClick={clearFilters}
+              height="low"
+            />
           </Box>
 
           <Box className="ml-5 w-full md:w-40">
-            <Button text="Filtrar processos" size="large" color="primary" />
+            <Button
+              text="Filtrar processos"
+              size="large"
+              color="primary"
+              height="low"
+            />
           </Box>
         </Box>
       )

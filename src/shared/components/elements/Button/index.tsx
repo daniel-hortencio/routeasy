@@ -35,7 +35,7 @@ export const Button = ({
       ' rounded-full flex justify-center items-center transition-all flex-nowrap'
 
     classNameScheme += ` ${color_schemes[color]}`
-    classNameScheme += ` ${height === 'high' ? 'h-12' : 'h-8 text-sm'}`
+    classNameScheme += ` ${height === 'high' ? 'h-12' : 'h-10 text-sm'}`
     classNameScheme += ` ${size === 'small' ? 'w-12' : 'w-full'}`
     classNameScheme += ` ${className}`
 

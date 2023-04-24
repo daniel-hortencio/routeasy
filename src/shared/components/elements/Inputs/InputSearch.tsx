@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { InputBaseProps } from './InputBase'
 import Icon from '../Icon'

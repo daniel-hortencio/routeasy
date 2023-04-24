@@ -7,17 +7,23 @@ import { Box } from '../../Box'
 
 import S from './styles.module.css'
 
+interface Props {
+  className?: string
+}
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const SelectSimple = () => {
+export const SelectSimple = ({ className }: Props) => {
   const [selected, setSelected] = useState({
     name: 'Todos'
   })
 
+  const getClassName = `border-1 border-custom-gray-100 w-full ${className}`
+
   return (
-    <SelectBase className="border-1 border-custom-gray-100 w-full">
+    <SelectBase className={getClassName}>
       <Listbox value={selected} onChange={setSelected}>
         {({ open }) => (
           <>
