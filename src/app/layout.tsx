@@ -1,10 +1,12 @@
 'use client'
 
 import { Roboto } from '@next/font/google'
+import { FormProvider, useForm } from 'react-hook-form'
 
-import '../shared/styles/globals.css'
 import { ToastProvider } from '../shared/contexts/Toast/ToastProvider'
 import { ModalProvider } from '../shared/contexts/Modal'
+
+import '../shared/styles/globals.css'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -12,6 +14,8 @@ const roboto = Roboto({
 })
 
 export default function RootLayout({ children }) {
+  const methods = useForm()
+
   return (
     <html lang="pt-BR">
       {/*
@@ -21,9 +25,11 @@ export default function RootLayout({ children }) {
       <head />
       <body className={roboto.className}>
         <ToastProvider>
-          <ModalProvider>
-            <main>{children}</main>
-          </ModalProvider>
+          <FormProvider {...methods}>
+            <ModalProvider>
+              <main>{children}</main>
+            </ModalProvider>
+          </FormProvider>
         </ToastProvider>
         <div id="toast" />
       </body>

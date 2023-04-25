@@ -16,13 +16,15 @@ import {
   Text,
   Wrapper,
   Button,
-  Table
+  Table,
+  Form,
+  Modal
 } from 'shared/components/elements'
 import { useToast } from 'shared/contexts/Toast/UseToast'
 import { DashboardLayoutHeader } from 'shared/components/layouts/DashboardLayout/Header'
-import { useModal } from 'shared/contexts/Modal'
 
 import S from './styles.module.css'
+import { useFormContext } from 'react-hook-form'
 
 const init_filters = {
   civil: false,
@@ -58,8 +60,11 @@ export default function ProcessHistory() {
   ])
   const [search, setSearch] = useState('')
 
+  const [isOpenModalFilters, setIsOpenModalFilters] = useState(false)
+
   const { createToast } = useToast()
-  const { createModal } = useModal()
+
+  const { handleSubmit, reset, getValues } = useFormContext()
 
   useEffect(() => {
     createToast({
@@ -68,13 +73,6 @@ export default function ProcessHistory() {
       status: 'danger'
     })
   }, [])
-
-  const handleCheck = useCallback(
-    param => {
-      setFilters(() => ({ ...filters, [param]: !filters[param] }))
-    },
-    [filters]
-  )
 
   const clearFilters = useCallback(() => {
     setFilters(() => init_filters)
@@ -91,65 +89,58 @@ export default function ProcessHistory() {
     [search]
   )
 
-  const createModalFilters = () => {
-    if (filters === null) {
-      setFilters(init_filters)
-    }
-
-    createModal({
-      className: `${S.ModalSearchFilters}`,
-      positionX: 'right',
-      isCustom: true,
-      body: (
-        <ModalSearchFilters
-          filters={filters}
-          orderBy={orderBy}
-          setOrderBy={setOrderBy}
-          handleCheck={handleCheck}
-        />
-      ),
-      footer: (
-        <Box className="flex justify-end">
-          <Box className="hidden md:block md:w-28">
-            <Button
-              text="Limpar"
-              size="large"
-              onClick={clearFilters}
-              height="low"
-            />
-          </Box>
-          <Box className="md:hidden">
-            <Button
-              text={<Icon name="TrashSimple" />}
-              onClick={clearFilters}
-              height="low"
-            />
-          </Box>
-
-          <Box className="ml-5 w-full md:w-40">
-            <Button
-              text="Filtrar processos"
-              size="large"
-              color="primary"
-              height="low"
-            />
-          </Box>
-        </Box>
-      )
-    })
-  }
-
-  useEffect(() => {
-    if (filters) {
-      createModalFilters()
-    }
-  }, [filters, orderBy])
+  const handleSubmitFilters = handleSubmit((data: any) => {
+    console.log({ data })
+  })
 
   return (
     <>
       <DashboardLayoutHeader />
 
       <ProcessesSummary />
+
+      <Modal
+        className={`${S.ModalSearchFilters}`}
+        positionX="right"
+        isCustom={true}
+        isOpen={isOpenModalFilters}
+        onClose={() => {
+          reset()
+          setIsOpenModalFilters(false)
+        }}
+        body={
+          <form onSubmit={handleSubmitFilters}>
+            <ModalSearchFilters />
+            <Box className="flex justify-end p-8 border-t-1 border-custom-gray-200">
+              <Box className="hidden md:block md:w-28">
+                <Button
+                  text="Limpar"
+                  size="large"
+                  onClick={clearFilters}
+                  height="low"
+                />
+              </Box>
+              <Box className="md:hidden">
+                <Button
+                  text={<Icon name="TrashSimple" />}
+                  onClick={clearFilters}
+                  height="low"
+                />
+              </Box>
+
+              <Box className="ml-5 w-full md:w-40">
+                <Button
+                  text="Filtrar processos"
+                  type="submit"
+                  size="large"
+                  color="primary"
+                  height="low"
+                />
+              </Box>
+            </Box>
+          </form>
+        }
+      />
 
       <Wrapper>
         {processes.length > 0 ? (
@@ -172,7 +163,7 @@ export default function ProcessHistory() {
                   <Button
                     color="primary"
                     text={<Icon name="Funnel" />}
-                    onClick={createModalFilters}
+                    onClick={() => setIsOpenModalFilters(true)}
                   />
                 </Box>
               </Box>
@@ -188,7 +179,7 @@ export default function ProcessHistory() {
                   <Button
                     color="primary"
                     text="Filtrar"
-                    onClick={createModalFilters}
+                    onClick={() => setIsOpenModalFilters(true)}
                     size="large"
                   />
                 </Box>

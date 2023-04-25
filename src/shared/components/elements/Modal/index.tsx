@@ -19,6 +19,7 @@ export interface IModal {
   onClose: () => void
   body?: ReactNode
   footer?: ReactNode
+  wrapper?: () => JSX.Element
   positionX?: 'left' | 'center' | 'right'
   className?: string
   isCustom?: boolean

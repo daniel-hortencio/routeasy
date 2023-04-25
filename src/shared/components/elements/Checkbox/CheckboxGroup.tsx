@@ -4,12 +4,13 @@ import { Text } from '../Text'
 
 interface Props extends ICheckbox {
   label: string
+  name: string
 }
 
-export const CheckboxGroup = ({ isChecked, onCheck, label }: Props) => {
+export const CheckboxGroup = ({ name, label }: Props) => {
   return (
     <Box className="flex items-center">
-      <Checkbox isChecked={isChecked} onCheck={onCheck} />
+      <Checkbox name={name} />
       <Text
         as="label"
         className="ml-4 text-sm md:text-base text-custom-gray-400"

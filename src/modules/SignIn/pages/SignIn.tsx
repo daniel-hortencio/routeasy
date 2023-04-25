@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useCallback } from 'react'
 import {
   Box,
   Button,
@@ -10,7 +10,6 @@ import {
   Text
 } from '../../../shared/components/elements'
 import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLayout/Header'
-import Modal from '../../../shared/components/elements/Modal'
 import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 import { useModal } from '../../../shared/contexts/Modal'

@@ -18,6 +18,7 @@
     "@mui/material": "^5.11.15",
     "@next/font": "13.1.6",
     "@phosphor-icons/react": "^2.0.8",
+    "@types/yup": "^0.32.0",
     "hamburger-react": "^2.5.0",
     "keen-slider": "^6.8.5",
     "next": "13.1.6",
@@ -25,8 +26,10 @@
     "react-circle-flags": "^0.0.18",
     "react-country-flag": "^3.1.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-icons": "^4.7.1",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^18.14.1",

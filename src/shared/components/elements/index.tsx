@@ -5,6 +5,7 @@ export { Box } from './Box'
 export { Button } from './Button'
 export { Card } from './Card'
 export { Checkbox, CheckboxGroup } from './Checkbox'
+export { Form } from './Form'
 export { Icon }
 export { IconCardFlag } from './IconCardFlag'
 export { InputGroup, InputPassword, InputText, InputSearch } from './Inputs'
