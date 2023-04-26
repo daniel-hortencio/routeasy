@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback } from 'react'
+import { FormEvent, useCallback, useState } from 'react'
 import {
   Box,
   Button,
@@ -13,9 +13,12 @@ import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLay
 import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 import { useModal } from '../../../shared/contexts/Modal'
+import { signInServices } from '../services'
 
 export default function PageSignIn() {
   const { createModal } = useModal()
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const createModalSendEmailRecoverConfirmation = useCallback(() => {
     createModal({
@@ -47,8 +50,16 @@ export default function PageSignIn() {
     []
   )
 
+  const handleLogin = (e: FormEvent) => {
+    e.preventDefault()
+
+    signInServices
+      .login({ username, password })
+      .then(res => console.log({ res }))
+  }
+
   return (
-    <>
+    <form onSubmit={handleLogin}>
       <PublicLayoutHeader
         linkTo="/sign-up"
         desktopText="Não tem conta?"
@@ -63,31 +74,39 @@ export default function PageSignIn() {
         Você que já tem uma conta, utilize os seus dados para realizar o acesso
         a plataforma da JUDIT:
       </Text>
-      <form onSubmit={() => {}}>
-        <Box className="mb-8">
-          <InputGroup label="Email">
-            <InputText placeholder="Insira seu e-mail" />
-          </InputGroup>
-        </Box>
-        <Box className="mb-14">
-          <InputGroup
-            label="Senha"
-            buttonText="Esqueceu sua senha?"
-            buttonOnClick={createModalForgotPassword}
-          >
-            <InputPassword placeholder="Insira sua senha de acesso" />
-          </InputGroup>
-        </Box>
 
-        <Box className="mt-1">
-          <Button
-            text="Acessar minha conta"
-            onClick={() => {}}
-            color="primary"
-            size="large"
+      <Box className="mb-8">
+        <InputGroup label="Email">
+          <InputText
+            placeholder="Insira seu e-mail"
+            value={username}
+            onChange={setUsername}
           />
-        </Box>
-      </form>
-    </>
+        </InputGroup>
+      </Box>
+      <Box className="mb-14">
+        <InputGroup
+          label="Senha"
+          buttonText="Esqueceu sua senha?"
+          buttonOnClick={createModalForgotPassword}
+        >
+          <InputPassword
+            placeholder="Insira sua senha de acesso"
+            value={password}
+            onChange={setPassword}
+          />
+        </InputGroup>
+      </Box>
+
+      <Box className="mt-1">
+        <Button
+          text="Acessar minha conta"
+          onClick={() => {}}
+          color="primary"
+          size="large"
+          type="submit"
+        />
+      </Box>
+    </form>
   )
 }

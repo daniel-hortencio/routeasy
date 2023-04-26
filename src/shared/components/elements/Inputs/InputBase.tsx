@@ -1,6 +1,6 @@
 'use client'
 
-import { Dispatch, ReactNode, SetStateAction } from 'react'
+import { ReactNode } from 'react'
 
 export interface InputBaseProps {
   placeholder?: string
@@ -8,7 +8,7 @@ export interface InputBaseProps {
   icon?: ReactNode
   className?: string
   value?: string
-  onChange?: Dispatch<SetStateAction<string>>
+  onChange?: (value: string) => void
 }
 
 export const InputBase = ({
