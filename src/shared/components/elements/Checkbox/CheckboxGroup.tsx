@@ -4,18 +4,17 @@ import { Text } from '../Text'
 
 interface Props extends ICheckbox {
   label: string
-  name: string
 }
 
-export const CheckboxGroup = ({ name, label }: Props) => {
+export const CheckboxGroup = (props: Props) => {
   return (
     <Box className="flex items-center">
-      <Checkbox name={name} />
+      <Checkbox {...props} />
       <Text
         as="label"
         className="ml-4 text-sm md:text-base text-custom-gray-400"
       >
-        {label}
+        {props.label}
       </Text>
     </Box>
   )

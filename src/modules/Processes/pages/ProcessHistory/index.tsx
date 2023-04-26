@@ -64,7 +64,7 @@ export default function ProcessHistory() {
 
   const { createToast } = useToast()
 
-  const { handleSubmit, reset, getValues } = useFormContext()
+  const { handleSubmit, reset } = useFormContext()
 
   useEffect(() => {
     createToast({
@@ -109,21 +109,21 @@ export default function ProcessHistory() {
           setIsOpenModalFilters(false)
         }}
         body={
-          <form onSubmit={handleSubmitFilters}>
+          <>
             <ModalSearchFilters />
             <Box className="flex justify-end p-8 border-t-1 border-custom-gray-200">
               <Box className="hidden md:block md:w-28">
                 <Button
                   text="Limpar"
                   size="large"
-                  onClick={clearFilters}
+                  onClick={reset}
                   height="low"
                 />
               </Box>
               <Box className="md:hidden">
                 <Button
                   text={<Icon name="TrashSimple" />}
-                  onClick={clearFilters}
+                  onClick={reset}
                   height="low"
                 />
               </Box>
@@ -138,7 +138,7 @@ export default function ProcessHistory() {
                 />
               </Box>
             </Box>
-          </form>
+          </>
         }
       />
 
