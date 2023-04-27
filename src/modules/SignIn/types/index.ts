@@ -3,7 +3,7 @@ export type ICreateLoginDTO = {
   password: string
 }
 
-export type IGetUserToken = {
+export type IGetLoginUserToken = {
   access_token: string
   expires_in: string
   refresh_token: string

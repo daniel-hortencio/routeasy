@@ -1,5 +1,8 @@
 import * as PhosphorIcons from '@phosphor-icons/react'
+import React from 'react'
+
 import { IconName } from './types'
+
 interface IconTest {
   name: IconName
   size?: number

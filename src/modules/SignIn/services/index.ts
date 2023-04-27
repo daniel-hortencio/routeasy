@@ -1,6 +1,6 @@
 import { AxiosInstance, AxiosResponse } from 'axios'
 import { api } from 'shared/api'
-import { ICreateLoginDTO, IGetUserToken } from '../types'
+import { ICreateLoginDTO, IGetLoginUserToken } from '../types'
 
 class SignInServices {
   private readonly api: AxiosInstance
@@ -9,7 +9,7 @@ class SignInServices {
     this.api = api
   }
 
-  login(dto: ICreateLoginDTO): Promise<AxiosResponse<IGetUserToken>> {
+  login(dto: ICreateLoginDTO): Promise<AxiosResponse<IGetLoginUserToken>> {
     return this.api.post('/login', dto)
   }
 }

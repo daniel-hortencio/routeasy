@@ -1,6 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
 
-interface Props {
+export interface IButton {
   text: string | JSX.Element
   type?: 'submit' | 'reset' | 'button'
   size?: 'small' | 'large'
@@ -22,13 +23,13 @@ export const Button = ({
   className,
   as = 'button',
   href = '/'
-}: Props) => {
+}: IButton) => {
   function getClassName() {
     const color_schemes = {
       primary: 'bg-primary hover:bg-primary-dark text-white fill-white',
       secondary:
         'bg-primary-light text-primary fill-primary hover:bg-primary-dark hover:fill-white hover:text-white',
-      danger: 'bg-danger hover:bg-danger-dark text-white'
+      danger: 'bg-danger hover:bg-danger-dark text-white fill-white'
     }
 
     let classNameScheme =
