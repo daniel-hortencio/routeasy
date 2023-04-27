@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box } from '../Box'
 import { Checkbox, ICheckbox } from './Checkbox'
 import { Text } from '../Text'

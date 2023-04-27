@@ -14,7 +14,8 @@ const config = {
     options: {}
   },
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
+    defaultName: 'Documentation',
   },
   webpackFinal: async (config) => {
     // Adiciona o loader de CSS para o webpack

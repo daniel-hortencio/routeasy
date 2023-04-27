@@ -3,37 +3,91 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from '.'
 import Icon from '../Icon'
-import { text } from 'stream/consumers'
 
 const meta: Meta<typeof Button> = {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
-   */
   title: 'Button',
-  component: Button
+  component: Button,
+  tags: ['autodocs']
 }
 
 export default meta
 type Story = StoryObj<typeof Button>
 
-export const Primary: Story = {
-  name: 'Large Button',
+export const PrimaryLargeButtonStory: Story = {
+  name: 'Primary Large Button',
   args: {
     size: 'large',
-    text: 'Large Button',
+    text: 'Primary Large Button',
     color: 'primary'
   }
-  /* render: () => (
-    <Button text="Large Primary Button" size="large" color="primary" />
-  ) */
 }
-
-export const SmallPrimary: Story = {
-  name: 'Small Button',
+export const PrimaryLowButtonStory: Story = {
+  name: 'Primary Low Button',
+  args: {
+    size: 'large',
+    height: 'low',
+    text: 'Primary Low Button',
+    color: 'primary'
+  }
+}
+export const PrimarySmallButtonStory: Story = {
+  name: 'Primary Small Button',
   args: {
     size: 'small',
     text: <Icon name="CheckFat" />,
     color: 'primary'
+  }
+}
+
+export const SecondaryLargeButtonStory: Story = {
+  name: 'Secondary Large Button',
+  args: {
+    size: 'large',
+    text: 'Secondary Large Button',
+    color: 'secondary'
+  }
+}
+export const SecondaryLowButtonStory: Story = {
+  name: 'Secondary Low Button',
+
+  args: {
+    size: 'large',
+    height: 'low',
+    text: 'Secondary Low Button',
+    color: 'secondary'
+  }
+}
+export const SmallSecondaryButtonStory: Story = {
+  name: 'Small Secondary Button',
+  args: {
+    size: 'small',
+    text: <Icon name="CheckFat" />,
+    color: 'secondary'
+  }
+}
+
+export const DangerLargeButtonStory: Story = {
+  name: 'Danger Large Button',
+  args: {
+    size: 'large',
+    text: 'Danger Large Button',
+    color: 'danger'
+  }
+}
+export const DangerLowButtonStory: Story = {
+  name: 'Danger Low  Button',
+  args: {
+    size: 'large',
+    height: 'low',
+    text: 'Danger Low Button',
+    color: 'danger'
+  }
+}
+export const DangerSmallButtonStory: Story = {
+  name: 'Danger Small Button',
+  args: {
+    size: 'small',
+    text: <Icon name="CheckFat" />,
+    color: 'danger'
   }
 }
