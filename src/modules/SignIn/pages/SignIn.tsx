@@ -17,6 +17,7 @@ import { useModal } from '../../../shared/contexts/Modal'
 import { signInServices } from '../services'
 import { useDispatch } from 'react-redux'
 import { authenticateUser } from 'shared/store'
+import { api } from 'shared/api'
 
 export default function PageSignIn() {
   const { createModal } = useModal()
@@ -89,6 +90,7 @@ export default function PageSignIn() {
       <Box className="mb-8">
         <InputGroup label="Email">
           <InputText
+            name="email"
             placeholder="Insira seu e-mail"
             value={email}
             onChange={setEmail}
@@ -102,6 +104,7 @@ export default function PageSignIn() {
           buttonOnClick={createModalForgotPassword}
         >
           <InputPassword
+            name="password"
             placeholder="Insira sua senha de acesso"
             value={password}
             onChange={setPassword}

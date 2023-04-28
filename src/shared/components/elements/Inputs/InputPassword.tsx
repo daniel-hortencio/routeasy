@@ -6,11 +6,17 @@ import Icon from '../Icon'
 
 type Props = InputBaseProps
 
-export const InputPassword = ({ placeholder, value, onChange }: Props) => {
+export const InputPassword = ({
+  placeholder,
+  value,
+  onChange,
+  name
+}: Props) => {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
     <InputBase
+      name={name}
       placeholder={placeholder}
       value={value}
       onChange={onChange}

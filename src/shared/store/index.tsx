@@ -1,5 +1,4 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit'
-import { api, setHeaderAuthorization } from '../api'
 import { IAuthLoginResponse } from 'modules/SignIn/types'
 import { useCookies } from 'shared/utils/cookies'
 
@@ -16,11 +15,6 @@ export const userSlice = createSlice({
         expires_in,
         refresh_token,
         scope,
-        token_type
-      })
-
-      setHeaderAuthorization({
-        access_token,
         token_type
       })
 

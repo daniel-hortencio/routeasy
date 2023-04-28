@@ -3,6 +3,7 @@
 import { ReactNode } from 'react'
 
 export interface InputBaseProps {
+  name?: string
   placeholder?: string
   type?: 'text' | 'password'
   icon?: ReactNode
@@ -17,13 +18,15 @@ export const InputBase = ({
   icon,
   className,
   value,
-  onChange
+  onChange,
+  name
 }: InputBaseProps) => {
   return (
     <div
       className={`bg-white flex items-center h-12 justify-between rounded-full overflow-hidden relative ${className}`}
     >
       <input
+        name={name}
         placeholder={placeholder}
         type={type}
         className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}

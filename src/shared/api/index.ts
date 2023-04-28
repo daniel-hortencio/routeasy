@@ -11,10 +11,12 @@ export const api = axios.create({
 })
 
 api.interceptors.request.use(request => {
-  const token = useCookies(null).getAccessToken()
+  const access_token = useCookies(null).getAccessToken()
+  const token_type = useCookies(null).getTokenType()
 
-  console.log({ token })
-  // Implementar refresh token
+  if (access_token && access_token) {
+    request.headers.Authorization = `${token_type} ${access_token}`
+  }
 
   return request
 })
@@ -28,20 +30,8 @@ api.interceptors.response.use(
     } as ApiResponse<any>
   },
   onError => {
-    console.log({ onError })
-
     return Promise.reject({
       message: onError.code
     })
   }
 )
-
-export const setHeaderAuthorization = ({
-  access_token,
-  token_type
-}: {
-  access_token: string
-  token_type: string
-}) => {
-  api.defaults.headers.common.Authorization = `${token_type} ${access_token}`
-}
