@@ -1,6 +1,7 @@
 'use client'
 
 import { FormEvent, useCallback, useState } from 'react'
+import nookies from 'nookies'
 import {
   Box,
   Button,
@@ -14,9 +15,12 @@ import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 import { useModal } from '../../../shared/contexts/Modal'
 import { signInServices } from '../services'
+import { useDispatch } from 'react-redux'
+import { authenticateUser } from 'shared/store'
 
 export default function PageSignIn() {
   const { createModal } = useModal()
+  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -58,10 +62,8 @@ export default function PageSignIn() {
 
     signInServices
       .login({ email, password })
-      .then(res => {
-        const { data } = res
-
-        console.log({ data })
+      .then(({ data }) => {
+        dispatch(authenticateUser(data))
       })
       .catch(err => console.log(err))
       .finally(() => setLoading(false))

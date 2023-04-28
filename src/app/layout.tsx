@@ -5,6 +5,8 @@ import { FormProvider, useForm } from 'react-hook-form'
 
 import { ToastProvider } from '../shared/contexts/Toast/ToastProvider'
 import { ModalProvider } from '../shared/contexts/Modal'
+import { Provider } from 'react-redux'
+import { store } from 'shared/store'
 
 import '../shared/styles/globals.css'
 
@@ -24,14 +26,16 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={roboto.className}>
-        <ToastProvider>
-          <FormProvider {...methods}>
-            <ModalProvider>
-              <main>{children}</main>
-            </ModalProvider>
-          </FormProvider>
-        </ToastProvider>
-        <div id="toast" />
+        <Provider store={store}>
+          <ToastProvider>
+            <FormProvider {...methods}>
+              <ModalProvider>
+                <main>{children}</main>
+              </ModalProvider>
+            </FormProvider>
+          </ToastProvider>
+          <div id="toast" />
+        </Provider>
       </body>
     </html>
   )

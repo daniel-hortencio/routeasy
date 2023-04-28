@@ -27,7 +27,6 @@ export const InputBase = ({
         placeholder={placeholder}
         type={type}
         className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}
-        autoComplete="off"
         value={value}
         onChange={e => onChange(e.target.value)}
       />

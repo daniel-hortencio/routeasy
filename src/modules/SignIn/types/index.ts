@@ -5,7 +5,7 @@ export type IAuthLoginRequestDTO = {
 
 export type IAuthLoginResponse = {
   access_token: string
-  expires_in: string
+  expires_in: number
   refresh_token: string
   scope: string
   token_type: string
