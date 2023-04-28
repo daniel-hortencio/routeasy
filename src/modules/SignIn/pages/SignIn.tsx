@@ -17,8 +17,9 @@ import { signInServices } from '../services'
 
 export default function PageSignIn() {
   const { createModal } = useModal()
-  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const createModalSendEmailRecoverConfirmation = useCallback(() => {
     createModal({
@@ -53,9 +54,17 @@ export default function PageSignIn() {
   const handleLogin = (e: FormEvent) => {
     e.preventDefault()
 
+    setLoading(true)
+
     signInServices
-      .login({ username, password })
-      .then(res => console.log({ res }))
+      .login({ email, password })
+      .then(res => {
+        const { data } = res
+
+        console.log({ data })
+      })
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
   }
 
   return (
@@ -79,8 +88,8 @@ export default function PageSignIn() {
         <InputGroup label="Email">
           <InputText
             placeholder="Insira seu e-mail"
-            value={username}
-            onChange={setUsername}
+            value={email}
+            onChange={setEmail}
           />
         </InputGroup>
       </Box>
@@ -100,7 +109,8 @@ export default function PageSignIn() {
 
       <Box className="mt-1">
         <Button
-          text="Acessar minha conta"
+          text={'Acessar minha conta'}
+          loading={loading}
           onClick={() => {}}
           color="primary"
           size="large"

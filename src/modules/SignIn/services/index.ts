@@ -1,6 +1,7 @@
-import { AxiosInstance, AxiosResponse } from 'axios'
+import { AxiosInstance } from 'axios'
 import { api } from 'shared/api'
-import { ICreateLoginDTO, IGetLoginUserToken } from '../types'
+import { IAuthLoginRequestDTO, IAuthLoginResponse } from '../types'
+import { ApiResponse } from 'shared/api/types'
 
 class SignInServices {
   private readonly api: AxiosInstance
@@ -9,8 +10,10 @@ class SignInServices {
     this.api = api
   }
 
-  login(dto: ICreateLoginDTO): Promise<AxiosResponse<IGetLoginUserToken>> {
-    return this.api.post('/login', dto)
+  async login(
+    dto: IAuthLoginRequestDTO
+  ): Promise<ApiResponse<IAuthLoginResponse>> {
+    return this.api.post('/auth/login', dto)
   }
 }
 

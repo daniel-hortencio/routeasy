@@ -1,9 +1,9 @@
-export type ICreateLoginDTO = {
-  username: string
+export type IAuthLoginRequestDTO = {
+  email: string
   password: string
 }
 
-export type IGetLoginUserToken = {
+export type IAuthLoginResponse = {
   access_token: string
   expires_in: string
   refresh_token: string
