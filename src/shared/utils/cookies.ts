@@ -1,6 +1,5 @@
 import { IAuthLoginResponse } from 'modules/SignIn/types'
-import { NextApiResponse, NextPageContext } from 'next'
-import nookies, { destroyCookie, parseCookies, setCookie } from 'nookies'
+import { parseCookies, setCookie } from 'nookies'
 
 const cookies_names = {
   access_token: '@judit.io.access_token',
