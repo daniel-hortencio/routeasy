@@ -15,7 +15,7 @@ import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 import { useModal } from '../../../shared/contexts/Modal'
 import { signInServices } from '../services'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { authenticateUser } from 'shared/store'
 import { api } from 'shared/api'
 
@@ -71,57 +71,59 @@ export default function PageSignIn() {
   }
 
   return (
-    <form onSubmit={handleLogin}>
-      <PublicLayoutHeader
-        linkTo="/sign-up"
-        desktopText="Não tem conta?"
-        desktopLinkText="Criar agora"
-        mobileLinkText="Criar conta"
-      />
-
-      <Text className="text-white font-extrabold text-2xl md:text-3xl lg:text-5xl mb-8">
-        Olá, seja bem vindo(a) novamente!
-      </Text>
-      <Text className="text-custom-gray-300 mb-8">
-        Você que já tem uma conta, utilize os seus dados para realizar o acesso
-        a plataforma da JUDIT:
-      </Text>
-
-      <Box className="mb-8">
-        <InputGroup label="Email">
-          <InputText
-            name="email"
-            placeholder="Insira seu e-mail"
-            value={email}
-            onChange={setEmail}
-          />
-        </InputGroup>
-      </Box>
-      <Box className="mb-14">
-        <InputGroup
-          label="Senha"
-          buttonText="Esqueceu sua senha?"
-          buttonOnClick={createModalForgotPassword}
-        >
-          <InputPassword
-            name="password"
-            placeholder="Insira sua senha de acesso"
-            value={password}
-            onChange={setPassword}
-          />
-        </InputGroup>
-      </Box>
-
-      <Box className="mt-1">
-        <Button
-          text={'Acessar minha conta'}
-          loading={loading}
-          onClick={() => {}}
-          color="primary"
-          size="large"
-          type="submit"
+    <>
+      <form onSubmit={handleLogin}>
+        <PublicLayoutHeader
+          linkTo="/sign-up"
+          desktopText="Não tem conta?"
+          desktopLinkText="Criar agora"
+          mobileLinkText="Criar conta"
         />
-      </Box>
-    </form>
+
+        <Text className="text-white font-extrabold text-2xl md:text-3xl lg:text-5xl mb-8">
+          Olá, seja bem vindo(a) novamente!
+        </Text>
+        <Text className="text-custom-gray-300 mb-8">
+          Você que já tem uma conta, utilize os seus dados para realizar o
+          acesso a plataforma da JUDIT:
+        </Text>
+
+        <Box className="mb-8">
+          <InputGroup label="Email">
+            <InputText
+              name="email"
+              placeholder="Insira seu e-mail"
+              value={email}
+              onChange={setEmail}
+            />
+          </InputGroup>
+        </Box>
+        <Box className="mb-14">
+          <InputGroup
+            label="Senha"
+            buttonText="Esqueceu sua senha?"
+            buttonOnClick={createModalForgotPassword}
+          >
+            <InputPassword
+              name="password"
+              placeholder="Insira sua senha de acesso"
+              value={password}
+              onChange={setPassword}
+            />
+          </InputGroup>
+        </Box>
+
+        <Box className="mt-1">
+          <Button
+            text={'Acessar minha conta'}
+            loading={loading}
+            onClick={() => {}}
+            color="primary"
+            size="large"
+            type="submit"
+          />
+        </Box>
+      </form>
+    </>
   )
 }

@@ -24,10 +24,10 @@ export function useCookies(ctx?: any | null) {
       return parseCookies(ctx)[cookies_names.token_type]
     },
     getUserAuth: () => ({
-      access_token: this.getAccessToken(),
-      refresh_token: this.getRefreshToken(),
-      scope_token: this.getScope(),
-      token_type: this.getTokenType()
+      access_token: useCookies(ctx).getAccessToken(),
+      refresh_token: useCookies(ctx).getRefreshToken(),
+      scope_token: useCookies(ctx).getScope(),
+      token_type: useCookies(ctx).getTokenType()
     }),
 
     // Setters

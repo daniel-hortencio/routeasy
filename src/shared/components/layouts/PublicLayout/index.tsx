@@ -1,9 +1,25 @@
 'use client'
 
+import { useSelector } from 'react-redux'
 import { Box } from '../../elements'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import { useAuthenticateUser } from 'shared/store'
+import { useRouter } from 'next/navigation'
+import { useCookies } from 'shared/utils/cookies'
 
 export default function PublicLayout({ children }) {
+  const user = useSelector(useAuthenticateUser)
+  const router = useRouter()
+
+  useEffect(() => {
+    const { access_token } = useCookies().getUserAuth()
+
+    if (access_token) {
+      router.push('/dashboard')
+    }
+  }, [user])
+
   return (
     <Box className="bg-custom-gray-600 flex items-center w-full min-h-screen overflow-x-hidden overflow-y-auto">
       <Box className="w-screen h-screen fixed top-0 left-0 z-0">

@@ -1,29 +1,6 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit'
-import { IAuthLoginResponse } from 'modules/SignIn/types'
-import { useCookies } from 'shared/utils/cookies'
+import { configureStore } from '@reduxjs/toolkit'
 
-export const userSlice = createSlice({
-  name: 'user',
-  initialState: null as any | null,
-  reducers: {
-    authenticateUser: (state, { payload }: { payload: IAuthLoginResponse }) => {
-      const { access_token, expires_in, refresh_token, scope, token_type } =
-        payload
-
-      useCookies(null).saveUserAuth({
-        access_token,
-        expires_in,
-        refresh_token,
-        scope,
-        token_type
-      })
-
-      return {
-        ...payload
-      }
-    }
-  }
-})
+import { userSlice } from './modules/user'
 
 export const store = configureStore({
   reducer: {
@@ -32,11 +9,10 @@ export const store = configureStore({
 })
 
 export const useAuthenticateUser = (state: { user: any | null }) => {
-  return state
+  return state.user
 }
 
-export const { authenticateUser } = userSlice.actions
+export const { authenticateUser, getUserByCookies } = userSlice.actions
 
 export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch
