@@ -66,8 +66,10 @@ export default function PageSignIn() {
       .then(({ data }) => {
         dispatch(authenticateUser(data))
       })
-      .catch(err => console.log(err))
-      .finally(() => setLoading(false))
+      .catch(err => {
+        console.log(err)
+        setLoading(false)
+      })
   }
 
   return (
