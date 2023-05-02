@@ -1,23 +1,26 @@
 'use client'
 
-import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Box } from '../../elements'
 import { DashboardLayoutFooter } from './Footer'
 import { useRouter, usePathname } from 'next/navigation'
-import { useEffect } from 'react'
-import { useAuthenticateUser } from 'shared/store'
+import { getUserByCookies, useAuthenticateUser } from 'shared/store'
 import { useCookies } from 'shared/utils/cookies'
 
 export default function DashboardLayout({ children }) {
   const user = useSelector(useAuthenticateUser)
   const router = useRouter()
   const pathname = usePathname()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const { access_token } = useCookies().getUserAuth()
 
     if (!access_token) {
       router.push('/')
+    } else if (!user) {
+      dispatch(getUserByCookies())
     }
   }, [user, pathname])
 
