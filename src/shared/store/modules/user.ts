@@ -12,7 +12,7 @@ export const userSlice = createSlice({
 
       useCookies(null).saveUserAuth({
         access_token,
-        expires_in: null, // Remover
+        expires_in: null, // Remover após testar
         refresh_token,
         scope,
         token_type
@@ -23,8 +23,7 @@ export const userSlice = createSlice({
       }
     },
     getUserByCookies: () => {
-      const { access_token, refresh_token, scope_token, token_type } =
-        useCookies(null).getUserAuth()
+      const { access_token } = useCookies(null).getUserAuth()
 
       if (access_token) {
         return {
