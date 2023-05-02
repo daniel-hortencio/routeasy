@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Box, Logo, Skeleton } from '../../../elements'
 import { MenuMobile, MenuMobileButton } from '../MenuMobile'
@@ -10,7 +10,12 @@ import { useAuthenticateUser } from 'shared/store'
 
 export const DashboardLayoutHeader = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false)
-  const user = useSelector(useAuthenticateUser)
+  // const user = useSelector(useAuthenticateUser)
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    setIsLoading(true)
+  }, [])
 
   return (
     <Box>
@@ -18,7 +23,7 @@ export const DashboardLayoutHeader = () => {
         <Box className="w-full max-w-6xl mx-auto flex items-center p-5 justify-between border-b-1 border-custom-gray-100">
           <Logo color="black" />
 
-          {user ? (
+          {isLoading ? (
             <>
               <MenuDesktop />
               <MenuMobileButton
