@@ -38,7 +38,7 @@ api.interceptors.request.use(
         console.log('Entrou no refresh_token para iniciar o fluxo de refresh')
         is_refreshing_token = true
 
-        await fetch(`${Environments.API_URL}/auth/refresh`, {
+        return await fetch(`${Environments.API_URL}/auth/refresh`, {
           method: 'POST',
           headers: {
             Authorization: `${token_type} ${refresh_token}`
