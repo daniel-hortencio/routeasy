@@ -17,78 +17,21 @@ let pending_requests_queue: any = []
 
 const api_public_routes = ['/auth/login']
 
-// Adiciona o interceptor de solicitação ao Axios
-/* axios.interceptors.request.use(
-  async config => {
-    // Verifica se o token expirou
-    const { access_token, token_type, refresh_token } =
-      useCookies(null).getUserAuth()
-
-    if (
-      !access_token &&
-      !api_public_routes.some(route => route === config.url)
-    ) {
-      // Se o token expirou e não estiver atualizando, inicia a atualização do token
-      if (!is_refreshing_token) {
-        is_refreshing_token = true
-        await axios
-          .post(
-            `${Environments.API_URL}/auth/refresh`,
-            {},
-            {
-              headers: {
-                Authorization: `${token_type} ${refresh_token}`
-              }
-            }
-          )
-          .then(data => {
-            console.log({ data })
-            is_refreshing_token = false
-            // Executa as solicitações pendentes após atualizar o token
-            pending_requests_queue.forEach(callback => callback())
-            pending_requests_queue = []
-          })
-      }
-
-      // Adiciona a solicitação à fila de solicitações pendentes
-      return new Promise(resolve => {
-        pending_requests_queue.push(() => {
-          // Atualiza o cabeçalho Authorization com o novo token
-          config.headers.Authorization = `Bearer ${localStorage.getItem(
-            'token'
-          )}`
-          resolve(config)
-        })
-      })
-    }
-    // Adiciona o cabeçalho Authorization com o token atual ao objeto de configuração
-    config.headers.Authorization = `Bearer ${access_token}`
-    return config
-  },
-  error => {
-    return Promise.reject(error)
-  }
-) */
-
 api.interceptors.request.use(
   async config => {
     const { access_token, token_type, refresh_token } =
       useCookies(null).getUserAuth()
-
-    console.log({ config })
 
     if (api_public_routes.some(route => route === config.url)) {
       return config
     }
 
     if (access_token) {
-      console.log('Entrou no access_token para setar o header')
       config.headers.Authorization = `${token_type} ${access_token}`
 
       return config
     } else if (refresh_token) {
       if (!is_refreshing_token) {
-        console.log('Entrou no refresh_token para iniciar o fluxo de refresh')
         is_refreshing_token = true
 
         fetch(`${Environments.API_URL}/auth/refresh`, {
@@ -99,11 +42,7 @@ api.interceptors.request.use(
         })
           .then(res => res.json())
           .then((new_token: IAuthLoginResponse) => {
-            console.log({ new_token })
-            console.log('Entrou no sucesso do refresh')
             useCookies().saveUserAuth(new_token)
-
-            console.log({ pending_requests_queue })
 
             is_refreshing_token = false
             pending_requests_queue.forEach((request: any) =>
@@ -112,8 +51,6 @@ api.interceptors.request.use(
             pending_requests_queue = []
           })
           .catch(refresh_token_err => {
-            console.log('Entrou no error do refresh')
-
             is_refreshing_token = false
             pending_requests_queue.forEach((request: any) =>
               request.onFailure(refresh_token_err)
@@ -126,17 +63,11 @@ api.interceptors.request.use(
     return new Promise((resolve, reject) => {
       pending_requests_queue.push({
         onSuccess: (new_token: string) => {
-          console.log('Entrou no promise onSuccess')
           config.headers.Authorization = `${token_type} ${new_token}`
-
-          console.log({ config, pending_requests_queue })
 
           return resolve(api(config))
         },
         onFailure: (err: any) => {
-          console.log('Entrou no promise onFailure')
-          console.log({ err })
-
           const { status } = err.response
           const { message } = err.response.data
 
