@@ -12,7 +12,7 @@ export const userSlice = createSlice({
 
       useCookies(null).saveUserAuth({
         access_token,
-        expires_in: null, // Remover após testar
+        expires_in: null, // Remover null após testar
         refresh_token,
         scope,
         token_type
@@ -30,6 +30,11 @@ export const userSlice = createSlice({
           access_token
         }
       }
+    },
+    logout: () => {
+      useCookies().destroyAuthCookies()
+
+      return null
     }
   }
 })

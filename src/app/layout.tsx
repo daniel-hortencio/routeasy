@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import { store } from 'shared/store'
 
 import '../shared/styles/globals.css'
+import { Suspense } from 'react'
 
 const roboto = Roboto({
   subsets: ['latin'],

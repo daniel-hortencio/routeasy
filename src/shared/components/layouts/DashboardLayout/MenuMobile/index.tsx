@@ -4,6 +4,8 @@ import { Box, Text, MenuMobileIcon } from '../../../elements'
 import { UserAvatar } from '../UserAvatar'
 import Link from 'next/link'
 import { dashboard_routes } from '../../../../constants/routes'
+import { useDispatch } from 'react-redux'
+import { logout } from 'shared/store'
 
 interface Props {
   isOpen: boolean
@@ -31,6 +33,11 @@ export const MenuMobileButton = ({ isOpen, onChange }: Props) => {
 }
 
 export const MenuMobile = ({ isOpen, onChange }: Props) => {
+  const dispatch = useDispatch()
+
+  const getClassName = () =>
+    `flex items-center w-full justify-center h-12 border-b-1 border-primary-dark bg-primary text-white hover:bg-primary-dark`
+
   return (
     <>
       <MenuBackDrop isOpen={isOpen} onChange={onChange} />
@@ -52,15 +59,23 @@ export const MenuMobile = ({ isOpen, onChange }: Props) => {
           },
           {
             label: 'Sair',
-            href: '/'
+            onClick: () => dispatch(logout())
           }
-        ].map(item => (
-          <Link key={item.label} href={item.href}>
-            <Text className="flex items-center justify-center h-12 border-b-1 border-primary-dark bg-primary text-white hover:bg-primary-dark ">
+        ].map((item: any) =>
+          item.href ? (
+            <Link key={item.label} href={item.href}>
+              <Text className={getClassName()}>{item.label}</Text>
+            </Link>
+          ) : (
+            <button
+              key={item.label}
+              onClick={item.onClick}
+              className={getClassName()}
+            >
               {item.label}
-            </Text>
-          </Link>
-        ))}
+            </button>
+          )
+        )}
       </Box>
     </>
   )

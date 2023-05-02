@@ -12,7 +12,7 @@ export const useAuthenticateUser = (state: { user: any | null }) => {
   return state.user
 }
 
-export const { authenticateUser, getUserByCookies } = userSlice.actions
+export const { authenticateUser, getUserByCookies, logout } = userSlice.actions
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

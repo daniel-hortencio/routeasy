@@ -1,5 +1,5 @@
 import { IAuthLoginResponse } from 'modules/SignIn/types'
-import { parseCookies, setCookie } from 'nookies'
+import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
 const cookies_names = {
   access_token: '@judit.io.access_token',
@@ -8,7 +8,7 @@ const cookies_names = {
   token_type: '@judit.io.token_type'
 }
 
-export function useCookies(ctx?: any | null) {
+export function useCookies(ctx?) {
   return {
     // Getters
     getAccessToken: () => {
@@ -60,6 +60,14 @@ export function useCookies(ctx?: any | null) {
       useCookies(ctx).setRefreshToken(refresh_token)
       useCookies(ctx).setScope(scope)
       useCookies(ctx).setTokenType(token_type)
+    },
+
+    // Setters
+    destroyAuthCookies: () => {
+      destroyCookie(ctx, cookies_names.access_token)
+      destroyCookie(ctx, cookies_names.refresh_token)
+      destroyCookie(ctx, cookies_names.scope)
+      destroyCookie(ctx, cookies_names.token_type)
     }
   }
 }

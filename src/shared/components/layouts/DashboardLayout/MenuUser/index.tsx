@@ -9,6 +9,8 @@ import {
   MenuDropDown,
   menuDropDownClassNames as classNames
 } from '../../../elements'
+import { useDispatch } from 'react-redux'
+import { logout } from 'shared/store'
 
 interface Props {
   button: ReactNode
@@ -16,6 +18,8 @@ interface Props {
 }
 
 export const MenuUser = ({ button, onChange }: Props) => {
+  const dispatch = useDispatch()
+
   return (
     <MenuDropDown button={button} onChange={onChange}>
       <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
@@ -64,6 +68,7 @@ export const MenuUser = ({ button, onChange }: Props) => {
           <Menu.Item>
             {({ active }) => (
               <button
+                onClick={() => dispatch(logout())}
                 className={classNames(
                   active ? 'bg-gray-100 ' : '',
                   'flex items-center px-4 py-2 text-sm w-full text-danger hover:text-danger-dark fill-danger hover:fill-danger-dark'
