@@ -17,6 +17,59 @@ let pending_requests_queue: any = []
 
 const api_public_routes = ['/auth/login']
 
+// Adiciona o interceptor de solicitação ao Axios
+/* axios.interceptors.request.use(
+  async config => {
+    // Verifica se o token expirou
+    const { access_token, token_type, refresh_token } =
+      useCookies(null).getUserAuth()
+
+    if (
+      !access_token &&
+      !api_public_routes.some(route => route === config.url)
+    ) {
+      // Se o token expirou e não estiver atualizando, inicia a atualização do token
+      if (!is_refreshing_token) {
+        is_refreshing_token = true
+        await axios
+          .post(
+            `${Environments.API_URL}/auth/refresh`,
+            {},
+            {
+              headers: {
+                Authorization: `${token_type} ${refresh_token}`
+              }
+            }
+          )
+          .then(data => {
+            console.log({ data })
+            is_refreshing_token = false
+            // Executa as solicitações pendentes após atualizar o token
+            pending_requests_queue.forEach(callback => callback())
+            pending_requests_queue = []
+          })
+      }
+
+      // Adiciona a solicitação à fila de solicitações pendentes
+      return new Promise(resolve => {
+        pending_requests_queue.push(() => {
+          // Atualiza o cabeçalho Authorization com o novo token
+          config.headers.Authorization = `Bearer ${localStorage.getItem(
+            'token'
+          )}`
+          resolve(config)
+        })
+      })
+    }
+    // Adiciona o cabeçalho Authorization com o token atual ao objeto de configuração
+    config.headers.Authorization = `Bearer ${access_token}`
+    return config
+  },
+  error => {
+    return Promise.reject(error)
+  }
+) */
+
 api.interceptors.request.use(
   async config => {
     const { access_token, token_type, refresh_token } =
@@ -51,24 +104,21 @@ api.interceptors.request.use(
             useCookies().saveUserAuth(new_token)
 
             console.log({ pending_requests_queue })
-            return pending_requests_queue.forEach((request: any) =>
+
+            is_refreshing_token = false
+            pending_requests_queue.forEach((request: any) =>
               request.onSuccess(new_token.access_token)
             )
+            pending_requests_queue = []
           })
           .catch(refresh_token_err => {
             console.log('Entrou no error do refresh')
-            console.log({ pending_requests_queue })
 
+            is_refreshing_token = false
             pending_requests_queue.forEach((request: any) =>
               request.onFailure(refresh_token_err)
             )
-          })
-          .finally(() => {
-            console.log('Entrou no finally do refresh')
             pending_requests_queue = []
-            is_refreshing_token = false
-
-            console.log({ pending_requests_queue })
           })
       }
     }
