@@ -22,16 +22,20 @@ api.interceptors.request.use(
     const { access_token, token_type, refresh_token } =
       useCookies(null).getUserAuth()
 
+    console.log({ config })
+
     if (api_public_routes.some(route => route === config.url)) {
       return config
     }
 
     if (!is_refreshing_token) {
       if (access_token) {
+        console.log('Entrou no access_token para setar o header')
         config.headers.Authorization = `${token_type} ${access_token}`
 
         return config
       } else if (refresh_token) {
+        console.log('Entrou no refresh_token para iniciar o fluxo de refresh')
         is_refreshing_token = true
 
         await fetch(`${Environments.API_URL}/auth/refresh`, {
@@ -43,6 +47,7 @@ api.interceptors.request.use(
           .then(res => res.json())
           .then((new_token: IAuthLoginResponse) => {
             console.log({ new_token })
+            console.log('Entrou no sucesso do refresh')
             useCookies().saveUserAuth(new_token)
 
             pending_requests_queue.forEach((request: any) =>
@@ -66,11 +71,13 @@ api.interceptors.request.use(
     return new Promise((resolve, reject) => {
       pending_requests_queue.push({
         onSuccess: (new_token: string) => {
+          console.log('Entrou no promise onSuccess')
           config.headers.Authorization = `${token_type} ${new_token}`
 
           return resolve(config)
         },
         onFailure: (err: any) => {
+          console.log('Entrou no promise onFailure')
           console.log({ err })
 
           const { status } = err.response
