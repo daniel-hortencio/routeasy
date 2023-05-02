@@ -8,16 +8,13 @@ import {
 } from '../../../shared/components/elements'
 import { DashboardLayoutHeader } from '../../../shared/components/layouts/DashboardLayout/Header'
 import { useToast } from '../../../shared/contexts/Toast/UseToast'
+import { dashboardServices } from '../services'
 
 export default function SearchProcess() {
   const { createToast } = useToast()
 
   useEffect(() => {
-    createToast({
-      message:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, onec facilisis neque!',
-      status: 'success'
-    })
+    dashboardServices.dashboard().then(res => console.log({ res }))
   }, [])
 
   return (

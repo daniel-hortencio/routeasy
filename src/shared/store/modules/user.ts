@@ -12,7 +12,7 @@ export const userSlice = createSlice({
 
       useCookies(null).saveUserAuth({
         access_token,
-        expires_in: null, // Remover null após testar
+        expires_in,
         refresh_token,
         scope,
         token_type
