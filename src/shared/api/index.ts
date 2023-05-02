@@ -15,14 +15,22 @@ export const api = axios.create({
 let is_refreshing_token = false
 let pending_requests_queue: any = []
 
+const api_public_routes = ['/auth/login']
+
 api.interceptors.request.use(
   async config => {
     const { access_token, token_type, refresh_token } =
       useCookies(null).getUserAuth()
 
+    if (api_public_routes.some(route => route === config.url)) {
+      return config
+    }
+
     if (!is_refreshing_token) {
       if (access_token) {
         config.headers.Authorization = `${token_type} ${access_token}`
+
+        return config
       } else if (refresh_token) {
         is_refreshing_token = true
 
@@ -42,17 +50,17 @@ api.interceptors.request.use(
             )
           })
           .catch(refresh_token_err => {
+            console.log('Entrou no error do refresh')
             pending_requests_queue.forEach((request: any) =>
               request.onFailure(refresh_token_err)
             )
           })
           .finally(() => {
+            console.log('Entrou no finally do refresh')
             pending_requests_queue = []
             is_refreshing_token = false
           })
       }
-
-      return config
     }
 
     return new Promise((resolve, reject) => {
