@@ -14,7 +14,9 @@ export default function SearchProcess() {
   const { createToast } = useToast()
 
   useEffect(() => {
-    dashboardServices.dashboard().then(res => console.log({ res }))
+    dashboardServices
+      .dashboard()
+      .then(res_dashboard => console.log({ res_dashboard }))
   }, [])
 
   return (

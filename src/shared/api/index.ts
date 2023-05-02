@@ -75,6 +75,8 @@ api.interceptors.request.use(
           const new_config = config
           new_config.headers.Authorization = `${token_type} ${new_token}`
 
+          console.log({ new_config })
+
           return resolve(new_config)
         },
         onFailure: (err: any) => {
