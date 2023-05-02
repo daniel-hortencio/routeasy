@@ -50,12 +50,15 @@ api.interceptors.request.use(
             console.log('Entrou no sucesso do refresh')
             useCookies().saveUserAuth(new_token)
 
-            pending_requests_queue.forEach((request: any) =>
+            console.log({ pending_requests_queue })
+            return pending_requests_queue.forEach((request: any) =>
               request.onSuccess(new_token.access_token)
             )
           })
           .catch(refresh_token_err => {
             console.log('Entrou no error do refresh')
+            console.log({ pending_requests_queue })
+
             pending_requests_queue.forEach((request: any) =>
               request.onFailure(refresh_token_err)
             )
@@ -64,6 +67,8 @@ api.interceptors.request.use(
             console.log('Entrou no finally do refresh')
             pending_requests_queue = []
             is_refreshing_token = false
+
+            console.log({ pending_requests_queue })
           })
       }
     }
