@@ -72,9 +72,10 @@ api.interceptors.request.use(
       pending_requests_queue.push({
         onSuccess: (new_token: string) => {
           console.log('Entrou no promise onSuccess')
-          config.headers.Authorization = `${token_type} ${new_token}`
+          const new_config = config
+          new_config.headers.Authorization = `${token_type} ${new_token}`
 
-          return resolve(config)
+          return resolve(new_config)
         },
         onFailure: (err: any) => {
           console.log('Entrou no promise onFailure')
