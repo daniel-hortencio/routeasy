@@ -81,17 +81,17 @@ api.interceptors.request.use(
       return config
     }
 
-    if (!is_refreshing_token) {
-      if (access_token) {
-        console.log('Entrou no access_token para setar o header')
-        config.headers.Authorization = `${token_type} ${access_token}`
+    if (access_token) {
+      console.log('Entrou no access_token para setar o header')
+      config.headers.Authorization = `${token_type} ${access_token}`
 
-        return config
-      } else if (refresh_token) {
+      return config
+    } else if (refresh_token) {
+      if (!is_refreshing_token) {
         console.log('Entrou no refresh_token para iniciar o fluxo de refresh')
         is_refreshing_token = true
 
-        await fetch(`${Environments.API_URL}/auth/refresh`, {
+        fetch(`${Environments.API_URL}/auth/refresh`, {
           method: 'POST',
           headers: {
             Authorization: `${token_type} ${refresh_token}`
@@ -127,12 +127,11 @@ api.interceptors.request.use(
       pending_requests_queue.push({
         onSuccess: (new_token: string) => {
           console.log('Entrou no promise onSuccess')
-          const new_config = config
-          new_config.headers.Authorization = `${token_type} ${new_token}`
+          config.headers.Authorization = `${token_type} ${new_token}`
 
-          console.log({ new_config, pending_requests_queue })
+          console.log({ config, pending_requests_queue })
 
-          return resolve(new_config)
+          return resolve(api(config))
         },
         onFailure: (err: any) => {
           console.log('Entrou no promise onFailure')
