@@ -1,4 +1,4 @@
-import { IAuthLoginResponse } from 'modules/SignIn/types'
+import { IAuthLoginResponse } from 'modules/Access/types'
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
 const cookies_names = {

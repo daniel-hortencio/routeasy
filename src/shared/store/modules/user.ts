@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { IAuthLoginResponse } from 'modules/SignIn/types'
+import { IAuthLoginResponse } from 'modules/Access/types'
 import { useCookies } from 'shared/utils/cookies'
 import { redirect } from 'next/navigation'
 

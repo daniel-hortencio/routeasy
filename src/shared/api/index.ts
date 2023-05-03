@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Environments } from 'shared/constants/environments'
 import { ApiResponse } from './types'
 import { useCookies } from 'shared/utils/cookies'
-import { IAuthLoginResponse } from 'modules/SignIn/types'
+import { IAuthLoginResponse } from 'modules/Access/types'
 
 export const api = axios.create({
   baseURL: Environments.API_URL,
