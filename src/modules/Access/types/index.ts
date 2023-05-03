@@ -1,7 +1,10 @@
-export type IAuthLoginRequestDTO = {
+export type IRegisterUserRequestDTO = {
+  name: string
   email: string
   password: string
 }
+
+export type IAuthLoginRequestDTO = Omit<IRegisterUserRequestDTO, 'name'>
 
 export type IAuthLoginResponse = {
   access_token: string

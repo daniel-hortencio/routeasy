@@ -3,8 +3,14 @@ import { countries_ddi_phone_code } from '../../../../constants/countriesPhoneCo
 import { Text } from '../../Text'
 import { Box } from '../../Box'
 import { Select } from '../Select'
+import { Dispatch } from 'react'
 
-export const SelectCountryDDI = () => {
+interface Props {
+  selected: any
+  onSelect: (value: any) => void | Dispatch<any>
+}
+
+export const SelectCountryDDI = ({ selected, onSelect }: Props) => {
   const DisplayComponent = selected => (
     <Box className="flex items-center">
       <Box className="hidden md:flex mr-2 w-6 h-6 rounded-full items-center relative">
@@ -28,6 +34,8 @@ export const SelectCountryDDI = () => {
 
   return (
     <Select
+      selected={selected}
+      onSelect={onSelect}
       options={countries_ddi_phone_code.sort((a, b) =>
         a.name.localeCompare(b.name)
       )}

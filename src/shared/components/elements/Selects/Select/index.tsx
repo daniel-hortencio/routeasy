@@ -23,16 +23,20 @@ interface Props {
     option?: (props: any) => JSX.Element
     display?: (props: any) => JSX.Element
   }
+  selected?: any
+  onSelect?: (value: any) => void
 }
 
 export const Select = ({
   className,
   options,
-  defaultValue,
+  // defaultValue,
   components,
-  customClassNames
+  customClassNames,
+  selected,
+  onSelect
 }: Props) => {
-  const [selected, setSelected] = useState(defaultValue)
+  // const [selected, setSelected] = useState(defaultValue)
 
   const getClassName = `border-1 border-custom-gray-100 w-full ${className}`
 
@@ -46,7 +50,7 @@ export const Select = ({
 
   return (
     <SelectBase className={getClassName}>
-      <Listbox value={selected} onChange={setSelected}>
+      <Listbox value={selected} onChange={onSelect}>
         {({ open }) => (
           <>
             <div className="relative h-full w-full">

@@ -15,16 +15,17 @@ import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 import { useModal } from '../../../shared/contexts/Modal'
 import { signInServices } from '../services'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { authenticateUser } from 'shared/store'
-import { api } from 'shared/api'
 
-export default function PageSignIn() {
+export default function PageLogin() {
   const { createModal } = useModal()
-  const dispatch = useDispatch()
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+
+  const dispatch = useDispatch()
 
   const createModalSendEmailRecoverConfirmation = useCallback(() => {
     createModal({
@@ -76,7 +77,7 @@ export default function PageSignIn() {
     <>
       <form onSubmit={handleLogin}>
         <PublicLayoutHeader
-          linkTo="/sign-up"
+          linkTo="/register"
           desktopText="Não tem conta?"
           desktopLinkText="Criar agora"
           mobileLinkText="Criar conta"
