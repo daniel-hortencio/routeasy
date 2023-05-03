@@ -17,7 +17,7 @@ export default function DashboardLayout({ children }) {
   useEffect(() => {
     const { access_token, refresh_token } = useCookies().getUserAuth()
 
-    if (!access_token && !refresh_token) {
+    if (!access_token && !refresh_token && !user) {
       router.push('/')
     } else if (!user) {
       dispatch(getUserByCookies())

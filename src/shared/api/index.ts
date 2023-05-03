@@ -15,7 +15,7 @@ export const api = axios.create({
 let is_refreshing_token = false
 let pending_requests_queue: any = []
 
-const api_public_routes = ['/auth/login']
+const api_public_routes = ['/auth/login', '/auth/register']
 
 api.interceptors.request.use(
   async config => {

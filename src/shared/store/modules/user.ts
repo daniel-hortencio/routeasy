@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { IAuthLoginResponse } from 'modules/SignIn/types'
 import { useCookies } from 'shared/utils/cookies'
+import { redirect } from 'next/navigation'
 
 export const userSlice = createSlice({
   name: 'user',
