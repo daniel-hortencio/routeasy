@@ -7,18 +7,20 @@ interface Props {
   children: ReactNode
   buttonText?: string
   buttonOnClick?: () => void
+  error?: string
 }
 
 export const InputGroup = ({
   label,
   children,
   buttonText,
-  buttonOnClick
+  buttonOnClick,
+  error
 }: Props) => {
   return (
     <div>
       <div className="flex justify-between items-center mb-2">
-        <label className=" font-semibold text-custom-gray-300">{label}</label>
+        <label className="font-semibold text-custom-gray-300">{label}</label>
         {buttonText && (
           <button
             onClick={buttonOnClick}
@@ -30,6 +32,7 @@ export const InputGroup = ({
         )}
       </div>
       {children}
+      <span className="text-warning text-sm h-5 block">{error}</span>
     </div>
   )
 }

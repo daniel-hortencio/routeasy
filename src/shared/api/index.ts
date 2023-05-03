@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import { Environments } from 'shared/constants/environments'
 import { ApiResponse } from './types'
 import { useCookies } from 'shared/utils/cookies'
@@ -93,9 +93,10 @@ api.interceptors.response.use(
       data
     } as ApiResponse<any>
   },
-  onError => {
+  (onError: AxiosError) => {
     return Promise.reject({
-      message: onError.code
+      status: onError.status,
+      message: onError.response.data
     })
   }
 )

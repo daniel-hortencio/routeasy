@@ -14,7 +14,7 @@ import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLay
 import { ModalForgotPassword } from '../components/ModalForgotPassword'
 import { ModalSendEmailRecoverConfirmation } from '../components/ModalSendEmailRecoverConfirmation'
 import { useModal } from '../../../shared/contexts/Modal'
-import { signInServices } from '../services'
+import { accessServices } from '../services'
 import { useDispatch } from 'react-redux'
 import { authenticateUser } from 'shared/store'
 import { useToast } from 'shared/contexts/Toast'
@@ -64,8 +64,8 @@ export default function PageLogin() {
 
     setLoading(true)
 
-    signInServices
-      .login({ email, password })
+    accessServices
+      .login({ email: email.toLowerCase(), password })
       .then(({ data }) => {
         dispatch(authenticateUser(data))
       })
@@ -96,7 +96,7 @@ export default function PageLogin() {
           acesso a plataforma da JUDIT:
         </Text>
 
-        <Box className="mb-8">
+        <Box className="mb-3">
           <InputGroup label="Email">
             <InputText
               name="email"
@@ -106,7 +106,7 @@ export default function PageLogin() {
             />
           </InputGroup>
         </Box>
-        <Box className="mb-14">
+        <Box className="mb-9">
           <InputGroup
             label="Senha"
             buttonText="Esqueceu sua senha?"

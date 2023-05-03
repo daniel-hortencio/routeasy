@@ -7,7 +7,7 @@ import {
 } from '../types'
 import { ApiResponse } from 'shared/api/types'
 
-class SignInServices {
+class AccessServices {
   private readonly api: AxiosInstance
 
   constructor(api: AxiosInstance) {
@@ -25,4 +25,4 @@ class SignInServices {
   }
 }
 
-export const signInServices = new SignInServices(api)
+export const accessServices = new AccessServices(api)
