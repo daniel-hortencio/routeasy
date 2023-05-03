@@ -185,6 +185,7 @@ export default function PageRegister() {
           <Box className="flex-auto pl-5">
             <InputGroup label="DDD + Celular" error={phone_error}>
               <InputText
+                type="number"
                 value={phone}
                 placeholder="Insira seu nº de celular"
                 onChange={e => handleChange(e, 'phone')}

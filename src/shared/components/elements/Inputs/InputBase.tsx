@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 export interface InputBaseProps {
   name?: string
   placeholder?: string
-  type?: 'text' | 'password'
+  type?: 'text' | 'password' | 'number'
   icon?: ReactNode
   className?: string
   value?: string
@@ -30,10 +30,14 @@ export const InputBase = ({
       <input
         name={name}
         placeholder={placeholder}
-        type={type}
+        type={type === 'number' ? 'tel' : type}
         className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}
         value={value}
-        onChange={e => onChange(e.target.value)}
+        onChange={e =>
+          type === 'number'
+            ? onChange(e.target.value.replace(/\D/g, ''))
+            : onChange(e.target.value)
+        }
         required={required}
       />
       {icon && (

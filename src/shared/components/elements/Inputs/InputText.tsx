@@ -9,12 +9,13 @@ export const InputText = ({
   value,
   onChange,
   name,
-  required
+  required,
+  type = 'text'
 }: Props) => {
   return (
     <InputBase
       name={name}
-      type="text"
+      type={type}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
