@@ -17,9 +17,11 @@ import { useModal } from '../../../shared/contexts/Modal'
 import { signInServices } from '../services'
 import { useDispatch } from 'react-redux'
 import { authenticateUser } from 'shared/store'
+import { useToast } from 'shared/contexts/Toast'
 
 export default function PageLogin() {
   const { createModal } = useModal()
+  const { createToast } = useToast()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -67,9 +69,12 @@ export default function PageLogin() {
       .then(({ data }) => {
         dispatch(authenticateUser(data))
       })
-      .catch(err => {
-        console.log(err)
+      .catch(() => {
         setLoading(false)
+        createToast({
+          message: 'E-mail ou senha inválidos',
+          status: 'danger'
+        })
       })
   }
 

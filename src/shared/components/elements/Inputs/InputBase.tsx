@@ -10,6 +10,7 @@ export interface InputBaseProps {
   className?: string
   value?: string
   onChange?: (value: string) => void
+  required?: boolean
 }
 
 export const InputBase = ({
@@ -19,7 +20,8 @@ export const InputBase = ({
   className,
   value,
   onChange,
-  name
+  name,
+  required = false
 }: InputBaseProps) => {
   return (
     <div
@@ -32,6 +34,7 @@ export const InputBase = ({
         className={`w-full placeholder-custom-gray-400 pl-6 pr-14 h-full text-custom-gray-500 `}
         value={value}
         onChange={e => onChange(e.target.value)}
+        required={required}
       />
       {icon && (
         <div className="absolute h-full right-0 flex items-center">{icon}</div>

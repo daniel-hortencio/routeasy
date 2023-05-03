@@ -4,7 +4,13 @@ import { InputBase, InputBaseProps } from './InputBase'
 
 type Props = InputBaseProps
 
-export const InputText = ({ placeholder, value, onChange, name }: Props) => {
+export const InputText = ({
+  placeholder,
+  value,
+  onChange,
+  name,
+  required
+}: Props) => {
   return (
     <InputBase
       name={name}
@@ -12,6 +18,7 @@ export const InputText = ({ placeholder, value, onChange, name }: Props) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      required={required}
     />
   )
 }

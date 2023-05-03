@@ -14,6 +14,7 @@ import { PublicLayoutHeader } from '../../../shared/components/layouts/PublicLay
 import { FormEvent, useState } from 'react'
 import { signInServices } from '../services'
 import { useDispatch } from 'react-redux'
+import { yupValidator } from 'shared/utils/yupValidator'
 
 export default function PageRegister() {
   const [loading, setLoading] = useState(false)
@@ -70,6 +71,7 @@ export default function PageRegister() {
               name={name}
               placeholder="Insira seu nome"
               onChange={setName}
+              required
             />
           </InputGroup>
         </Box>
@@ -79,6 +81,7 @@ export default function PageRegister() {
               value={email}
               placeholder="Insira seu e-mail"
               onChange={setEmail}
+              required
             />
           </InputGroup>
         </Box>
@@ -95,6 +98,7 @@ export default function PageRegister() {
                 value={phone}
                 placeholder="Insira seu nº de celular"
                 onChange={setPhone}
+                required
               />
             </InputGroup>
           </Box>
@@ -106,6 +110,7 @@ export default function PageRegister() {
               value={password}
               onChange={setPassword}
               placeholder="Defina sua senha de acesso"
+              required
             />
           </InputGroup>
         </Box>
@@ -116,6 +121,7 @@ export default function PageRegister() {
               value={password_confirmation}
               placeholder="Confirme sua senha"
               onChange={setPasswordConfirmation}
+              required
             />
           </InputGroup>
         </Box>

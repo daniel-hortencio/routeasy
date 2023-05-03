@@ -10,7 +10,8 @@ export const InputPassword = ({
   placeholder,
   value,
   onChange,
-  name
+  name,
+  required
 }: Props) => {
   const [showPassword, setShowPassword] = useState(false)
 
@@ -21,6 +22,7 @@ export const InputPassword = ({
       value={value}
       onChange={onChange}
       type={showPassword ? 'text' : 'password'}
+      required={required}
       icon={
         <button
           type="button"
