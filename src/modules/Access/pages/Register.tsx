@@ -24,7 +24,7 @@ export default function PageRegister() {
   const [ddi, setDDI] = useState({ name: 'Brasil', code: 'BR', ddi: '55' })
   const [phone, setPhone] = useState('')
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const handleRegister = (e: FormEvent) => {
     e.preventDefault()
@@ -67,7 +67,7 @@ export default function PageRegister() {
         <Box className="mb-8">
           <InputGroup label="Nome">
             <InputText
-              value={name}
+              name={name}
               placeholder="Insira seu nome"
               onChange={setName}
             />
