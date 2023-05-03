@@ -11,8 +11,6 @@ import { useToast } from '../../../shared/contexts/Toast/UseToast'
 import { dashboardServices } from '../services'
 
 export default function SearchProcess() {
-  const { createToast } = useToast()
-
   useEffect(() => {
     dashboardServices
       .dashboard()

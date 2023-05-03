@@ -62,17 +62,7 @@ export default function ProcessHistory() {
 
   const [isOpenModalFilters, setIsOpenModalFilters] = useState(false)
 
-  const { createToast } = useToast()
-
   const { handleSubmit, reset } = useFormContext()
-
-  useEffect(() => {
-    createToast({
-      message:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, onec facilisis neque!',
-      status: 'danger'
-    })
-  }, [])
 
   const clearFilters = useCallback(() => {
     setFilters(() => init_filters)
