@@ -13,9 +13,9 @@ export default function PublicLayout({ children }) {
   const router = useRouter()
 
   useEffect(() => {
-    const { access_token } = useCookies().getUserAuth()
+    const { access_token, refresh_token } = useCookies().getUserAuth()
 
-    if (access_token) {
+    if (access_token || refresh_token) {
       router.push('/dashboard')
     }
   }, [user])
