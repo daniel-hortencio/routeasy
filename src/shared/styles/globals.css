@@ -17,4 +17,5 @@ input:focus {
 
 button {
   cursor: pointer !important;
+  outline: none;
 }
