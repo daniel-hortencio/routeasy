@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { Header } from './Header'
 
 interface Props {
   children: ReactNode
@@ -7,7 +8,7 @@ interface Props {
 export const WebsiteLayout = ({ children }: Props) => {
   return (
     <div className="bg-background">
-      <header>Header</header>
+      <Header />
       <main>{children}</main>
       <footer>Footer</footer>
     </div>

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  color: white;
+}
+
+.test {
+  border: solid 1px red;
+}
+
+a,
+button {
+  cursor: pointer;
+}
