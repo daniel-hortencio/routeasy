@@ -1,4 +1,5 @@
 import { Banner } from './Banner'
+import { Blog } from './Blog'
 import { Clients } from './Clients'
 import { Integrating } from './Integrating'
 import { Maestro } from './Maestro'
@@ -18,6 +19,7 @@ export const HomePage = () => {
       <Testimonials />
       <Midia />
       <News />
+      <Blog />
     </div>
   )
 }
