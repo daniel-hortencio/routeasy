@@ -21,11 +21,11 @@ const CardBlog = ({ tag, title, avatar, author, date }) => {
 export const Blog = () => {
   return (
     <Section>
-      <h1 className="uppercase mb-2 text-[40px]">
+      <h1 className="uppercase mb-2 text-[40px] text-center">
         Acompanhe as <span className="text-primary">novidades</span> da
         Logística
       </h1>
-      <p className="mb-16">
+      <p className="mb-16 text-center">
         Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
         assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis
         voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.{' '}
