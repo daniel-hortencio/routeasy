@@ -1,24 +1,14 @@
-'use client'
-
-import { Roboto } from '@next/font/google'
-import { FormProvider, useForm } from 'react-hook-form'
-
-import { ToastProvider } from '../shared/contexts/Toast/ToastProvider'
-import { ModalProvider } from '../shared/contexts/Modal'
-import { Provider } from 'react-redux'
-import { store } from 'shared/store'
-
-import '../shared/styles/globals.css'
-import { Suspense } from 'react'
+/* import { Roboto } from '@next/font/google'
 
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900']
 })
+ */
+import { WebsiteLayout } from 'components/layouts/WebsiteLayout'
+import '../styles/global.css'
 
 export default function RootLayout({ children }) {
-  const methods = useForm()
-
   return (
     <html lang="pt-BR">
       {/*
@@ -26,17 +16,11 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={roboto.className}>
-        <Provider store={store}>
-          <ToastProvider>
-            <FormProvider {...methods}>
-              <ModalProvider>
-                <main>{children}</main>
-              </ModalProvider>
-            </FormProvider>
-          </ToastProvider>
-          <div id="toast" />
-        </Provider>
+      <body>
+        <main>
+          {' '}
+          <WebsiteLayout>{children}</WebsiteLayout>
+        </main>
       </body>
     </html>
   )
