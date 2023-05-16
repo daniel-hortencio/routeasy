@@ -5,6 +5,7 @@ import { Integrating } from './Integrating'
 import { Maestro } from './Maestro'
 import { Midia } from './Midia'
 import { News } from './News'
+import { Segments } from './Segments'
 import { Solutions } from './Solutions'
 import { Testimonials } from './Testimonials'
 
@@ -16,6 +17,7 @@ export const HomePage = () => {
       <Solutions />
       <Integrating />
       <Maestro />
+      <Segments />
       <Testimonials />
       <Midia />
       <News />
