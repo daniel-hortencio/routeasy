@@ -26,7 +26,7 @@ export const Banner = () => {
       </Section>
       <div className="h-full absolute top-0 right-0 w-1/2">
         <Image
-          style={{ objectFit: ' cover' }}
+          style={{ objectFit: 'cover' }}
           fill
           src="/images/pictures/home-banner.svg"
           alt="Banner"

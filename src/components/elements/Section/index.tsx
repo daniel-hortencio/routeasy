@@ -10,7 +10,7 @@ interface Props {
 export const Section = ({ children, className, title, subtitle }: Props) => {
   return (
     <section className={className}>
-      <div className="border-2 px-5 w-full max-w-6xl mx-auto">
+      <div className="px-5 w-full max-w-6xl mx-auto">
         {title && (
           <div className="uppercase mb-2 text-[40px] text-center">{title}</div>
         )}
