@@ -20,8 +20,6 @@ module.exports = {
           light: '#1A1C30',
         }
       },
-
-
     },
     plugins: [],
   }
