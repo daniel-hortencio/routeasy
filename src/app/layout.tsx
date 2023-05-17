@@ -1,12 +1,12 @@
-/* import { Roboto } from '@next/font/google'
+import { Poppins } from '@next/font/google'
 
-const roboto = Roboto({
+import { WebsiteLayout } from 'components/layouts/WebsiteLayout'
+import '../styles/global.css'
+
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900']
 })
- */
-import { WebsiteLayout } from 'components/layouts/WebsiteLayout'
-import '../styles/global.css'
 
 export default function RootLayout({ children }) {
   return (
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <main>
+        <main className={poppins.className}>
           {' '}
           <WebsiteLayout>{children}</WebsiteLayout>
         </main>
