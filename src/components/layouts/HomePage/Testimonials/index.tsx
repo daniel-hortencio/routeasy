@@ -10,6 +10,7 @@ import { ButtonWhite } from 'components/elements/Button'
 
 export const Testimonials = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
@@ -33,14 +34,6 @@ export const Testimonials = () => {
     }
 
     return 1
-
-    // 'sm': '640px',
-    // => @media (min-width: 640px) { ... }
-
-    // 'md': '768px',
-    // => @media (min-width: 768px) { ... }
-
-    // 'lg': '1024px',
   }
 
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -58,10 +51,6 @@ export const Testimonials = () => {
       setLoaded(true)
     }
   })
-
-  const body = document.getElementsByTagName('body')
-
-  console.log({ body_width: body[0].offsetWidth })
 
   const CardTestimonial = ({ avatar, name, position, testimonial }) => {
     return (
