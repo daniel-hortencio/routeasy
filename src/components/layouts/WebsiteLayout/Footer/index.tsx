@@ -1,3 +1,4 @@
+import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
 import Link from 'next/link'
 
@@ -45,62 +46,104 @@ export const Footer = () => {
 
   return (
     <Section className="pt-12 pb-8">
-      <div className="grid grid-cols-5 mb-20 px-10">
-        <div>
+      <div className="lg:grid grid-cols-5 mb-6 lg:mb-20 px-10">
+        <div className="hidden lg:block">
           <p>NAVEGAÇÃO</p>
           {links_navegation.map(link => (
             <FooterLink key={link.href} href={link.href} label={link.label} />
           ))}
         </div>
 
-        <div>
+        <div className="hidden lg:block">
           <p>SOLUÇÕES</p>
           {links_solutions.map(link => (
             <FooterLink key={link.href} href={link.href} label={link.label} />
           ))}
         </div>
 
-        <div>
+        <div className="hidden lg:block">
           <p>ROUTEASY</p>
           {links_routeasy.map(link => (
             <FooterLink key={link.href} href={link.href} label={link.label} />
           ))}
         </div>
 
-        <div>
+        <div className="hidden lg:block">
           <p>LEGAL</p>
           {links_legal.map(link => (
             <FooterLink key={link.href} href={link.href} label={link.label} />
           ))}
         </div>
 
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <p className="mb-6">LINGUAGEM</p>
 
-          <button className="bg-background-light rounded h-12 flex items-center px-2 justify-between w-36 mb-5">
+          <button className="bg-background-light rounded h-12 flex items-center px-2 justify-between w-full mb-6 max-w-[272px]">
             Português
           </button>
 
           <p className="mb-6">SOCIAL MEDIA</p>
+
+          <div className="grid gap-4 lg:gap-1 grid-cols-4">
+            <a
+              className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-background-light"
+              href="/"
+              target="_blank"
+              rel="noopener"
+            >
+              <Icon name="FaLinkedin" size={20} />
+            </a>
+            <a
+              className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-background-light"
+              href="/"
+              target="_blank"
+              rel="noopener"
+            >
+              <Icon name="FaInstagram" size={20} />
+            </a>
+            <a
+              className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-background-light"
+              href="/"
+              target="_blank"
+              rel="noopener"
+            >
+              <Icon name="FaFacebookF" size={20} />
+            </a>
+            <a
+              className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-background-light"
+              href="/"
+              target="_blank"
+              rel="noopener"
+            >
+              <Icon name="FaYoutube" size={20} />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="border-y-2 border-[#353860] flex items-center justify-between py-9 px-10">
-        <div>
-          <h1>Newsletter</h1>
-          <p>
+      <div className="border-y-2 border-[#353860] lg:flex lg:items-center justify-between py-9 px-10">
+        <div className="lg:pr-32">
+          <h1 className="text-center lg:text-left uppercase mb-1">
+            Escreva-se em nossa newsletter
+          </h1>
+          <p className="text-center lg:text-left mb-5 lg:mb-0 text-sm text-[#D5D7E8]">
             Fique por dentro de tudo o que acontece com a Routeasy e com o
             mercado de logística.
           </p>
         </div>
 
-        <div>
-          <input placeholder="Escreva seu e-mail" />
-          <button>INSCREVER</button>
+        <div className="h-14 lg:h-12 flex items-center rounded overflow-hidden">
+          <input
+            placeholder="Escreva seu e-mail"
+            className="bg-[#1A1C30] h-full px-6 flex-auto"
+          />
+          <button className="bg-primary h-full w-40 hover:bg-primary-dark">
+            INSCREVER
+          </button>
         </div>
       </div>
 
-      <p className="px-10 py-8">
+      <p className="text-center lg:text-left px-10 pt-7 text-sm text-[#D5D7E8] w-full h-full">
         ©2022 Todos os direitos reservados - RoutEasy
       </p>
     </Section>
