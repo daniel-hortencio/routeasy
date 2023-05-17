@@ -1,8 +1,68 @@
-import Image from 'next/image'
+'use client'
 
+import Image from 'next/image'
+import { useKeenSlider } from 'keen-slider/react'
 import { Section } from 'components/elements/Section'
 
+import 'keen-slider/keen-slider.min.css'
+import { useEffect, useState } from 'react'
+import { ButtonWhite } from 'components/elements/Button'
+
 export const Testimonials = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    // Limpe o listener do evento resize ao desmontar o componente
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  const useWindowWidth = () => {
+    if (windowWidth > 1024) {
+      return 3
+    }
+
+    if (windowWidth > 640) {
+      return 2
+    }
+
+    return 1
+
+    // 'sm': '640px',
+    // => @media (min-width: 640px) { ... }
+
+    // 'md': '768px',
+    // => @media (min-width: 768px) { ... }
+
+    // 'lg': '1024px',
+  }
+
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slides: {
+      perView: useWindowWidth(),
+      spacing: 20
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    }
+  })
+
+  const body = document.getElementsByTagName('body')
+
+  console.log({ body_width: body[0].offsetWidth })
+
   const CardTestimonial = ({ avatar, name, position, testimonial }) => {
     return (
       <div className="pt-7 pb-6 px-11 border-2 border-primary rounded-xl text-center relative">
@@ -10,7 +70,7 @@ export const Testimonials = () => {
         <div className="w-[138px] h-[138px] mb-8 border-2 border-primary mx-auto rounded-full">
           {avatar}
         </div>
-        <h2 className="text-2xl font-semibold">{name}</h2>
+        <h2 className="text-2xl font-semibold sm">{name}</h2>
         <p className="text-sm mb-8">{position}</p>
 
         <p className="text-sm">
@@ -31,54 +91,108 @@ export const Testimonials = () => {
       }
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <div className="grid gap-8 grid-cols-3 mb-14">
-        <CardTestimonial
-          avatar=""
-          name="Antonio Silva"
-          position="Customer"
-          testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-        />
-        <CardTestimonial
-          avatar=""
-          name="Antonio Silva"
-          position="Customer"
-          testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-        />
-        <CardTestimonial
-          avatar=""
-          name="Antonio Silva"
-          position="Customer"
-          testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-        />
-      </div>
-      <div className="grid grid-cols-3 gap-2 w-8 mx-auto mb-36">
-        <div className="h-2 w-2 bg-primary rounded-full" />
-        <div className="h-2 w-2 bg-primary rounded-full opacity-50" />
-        <div className="h-2 w-2 bg-primary rounded-full opacity-50" />
+      <div className="mb-[88px] lg:mb-44">
+        <div className="mb-12 ">
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide pt-2">
+              <CardTestimonial
+                avatar=""
+                name="Antonio Silva"
+                position="Customer"
+                testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+              />
+            </div>
+            <div className="keen-slider__slide pt-2">
+              <CardTestimonial
+                avatar=""
+                name="Antonio Silva"
+                position="Customer"
+                testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+              />
+            </div>
+            <div className="keen-slider__slide pt-2">
+              <CardTestimonial
+                avatar=""
+                name="Antonio Silva"
+                position="Customer"
+                testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+              />
+            </div>
+            <div className="keen-slider__slide pt-2">
+              <CardTestimonial
+                avatar=""
+                name="Antonio Silva"
+                position="Customer"
+                testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+              />
+            </div>
+            <div className="keen-slider__slide pt-2">
+              <CardTestimonial
+                avatar=""
+                name="Antonio Silva"
+                position="Customer"
+                testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+              />
+            </div>
+            <div className="keen-slider__slide pt-2">
+              <CardTestimonial
+                avatar=""
+                name="Antonio Silva"
+                position="Customer"
+                testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+              />
+            </div>
+          </div>
+        </div>
+        {loaded && instanceRef.current && (
+          <div className="flex justify-center translate-x-1">
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys()
+            ].map(idx => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx)
+                  }}
+                  className={
+                    'w-2 h-2 rounded-full bg-primary mr-2 dot ' +
+                    (currentSlide !== idx && 'opacity-50')
+                  }
+                ></button>
+              )
+            })}
+          </div>
+        )}
       </div>
 
-      <div className="relative rounded-3xl w-full h-[453px] text-center py-11 pb-16">
+      <div className="relative overflow-hidden rounded-3xl w-full text-center py-10 md:py-11 pb-16">
         <Image
           src="/images/pictures/background-way.png"
           fill
           alt="Background"
           style={{ objectFit: 'cover' }}
         />
-        <div className="relative mx-auto w-16 h-16">
-          <Image src="/images/pictures/recycle.png" fill alt="Recicável" />
+        <div className="relative mx-auto w-16 h-16 mb-8 md:mb-10">
+          <Image src="/images/logos/union.svg" fill alt="Recicável" />
         </div>
-        <p className="relative z-10 text-lg text-[#EDEDED] font-bold mb-8">
-          Nossos clientes já reduziram
-        </p>
-        <h1 className="relative z-10 text-[88px] font-semibold mb-16">
-          50 Toneladas de Co2
-        </h1>
-        <a
-          href="/"
-          className="rounded relative z-10 w-64 bg-[#EDEDED] text-[#444B55] h-10 flex items-center justify-center mx-auto font-semibold"
-        >
-          Veja alguns cases de sucesso
-        </a>
+        <div className="relative z-10">
+          <p className="text-lg text-[#EDEDED] font-bold mb-6 md:mb-8">
+            Nossos clientes já reduziram
+          </p>
+          <h1 className="text-[88px] font-semibold mb-14 hidden lg:flex justify-center">
+            50 Toneladas de Co2
+          </h1>
+          <h1 className="lg:hidden ">
+            <span className="block text-[88px] font-semibold">50</span>
+            <span className="block text-[32px] mb-2 font-medium">
+              Toneladas <br />
+              de
+            </span>
+            <span className="block text-7xl mb-6 font-semibold">Co2</span>
+          </h1>
+          <ButtonWhite href="/">Veja alguns cases de sucesso</ButtonWhite>
+        </div>
       </div>
     </Section>
   )

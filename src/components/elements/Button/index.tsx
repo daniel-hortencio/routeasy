@@ -31,3 +31,19 @@ export const ButtonSecondary = ({
     </ButtonBase>
   )
 }
+
+export const ButtonWhite = ({
+  children,
+  onClick,
+  href
+}: Omit<IButtonBase, 'className'>) => {
+  return (
+    <ButtonBase
+      className="rounded w-64 bg-[#EDEDED] text-[#444B55] h-10 text-sm flex items-center justify-center mx-auto font-semibold"
+      onClick={onClick}
+      href={href}
+    >
+      {children}
+    </ButtonBase>
+  )
+}
