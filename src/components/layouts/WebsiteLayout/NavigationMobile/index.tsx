@@ -1,5 +1,6 @@
 'use client'
 
+import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -35,20 +36,17 @@ export const NavigationMobile = () => {
               <Link
                 key={route.label}
                 href={route.href}
-                className={`pl-4 mb-6 h-14 flex items-center border-l-4 border-primary text-lg uppercase hover:text-primary-dark transition-all`}
+                className={`font-semibold pl-4 mb-6 h-14 flex items-center border-l-4 border-primary text-lg uppercase hover:text-primary-dark transition-all`}
               >
                 {route.label}
               </Link>
             ))}
           </div>
 
-          <div className="flex items-center ml-24">
-            <Link
-              href="/"
-              className="ml-10 text-primary hover:text-primary-dark border-2 rounded border-primary hover:border-primary-dark transition-all h-12 w-36 flex items-center justify-center"
-            >
+          <div className="flex items-center">
+            <ButtonSecondary href="/">
               Solicite uma Demonstração
-            </Link>
+            </ButtonSecondary>
           </div>
         </div>
       </nav>
