@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const Navigation = () => {
+export const NavigationDesktop = () => {
   const routes = [
     { label: 'Início', href: '/' },
     { label: 'Soluções', href: '/' },
