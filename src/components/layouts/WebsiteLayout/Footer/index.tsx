@@ -45,7 +45,7 @@ export const Footer = () => {
   }
 
   return (
-    <Section className="pt-12 pb-8">
+    <Section className="pt-12 pb-8 border-t-2 border-primary">
       <div className="lg:grid grid-cols-5 mb-6 lg:mb-20 px-10">
         <div className="hidden lg:block">
           <p>NAVEGAÇÃO</p>

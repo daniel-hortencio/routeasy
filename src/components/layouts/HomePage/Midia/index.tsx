@@ -24,7 +24,7 @@ export const Midia = () => {
         </div>
       </div>
 
-      <h2 className="font-semibold text-[32px] uppercase mb-4 text-center">
+      <h2 className="font-medium text-[32px] uppercase mb-4 text-center">
         PRÊMIOS
       </h2>
       <div className="flex mx-auto justify-center">

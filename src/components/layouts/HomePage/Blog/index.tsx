@@ -155,7 +155,7 @@ export const Blog = () => {
           </div>
         </div>
       </div>
-      <Section className="pt-16 pb-14 md:py-20 w-full border-b-2 border-primary">
+      <Section className="pt-16 pb-14 md:py-20 w-full">
         <div className="mx-auto sm:w-64">
           <ButtonSecondary>Quero saber mais</ButtonSecondary>
         </div>

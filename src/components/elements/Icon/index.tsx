@@ -23,14 +23,16 @@ interface IconProps {
   name: string
   size?: number
   color?: string
+  fill?: string
+  stroke?: string
   hoverColor?: string
 }
 
-const Icon = ({ name, size, color = '' }: IconProps) => {
+const Icon = ({ name, size, color = '', ...rest }: IconProps) => {
   const RIcon =
     AllIcons[name as keyof typeof AllIcons] || AllIcons.FaRegWindowClose
 
-  return <RIcon size={size} color={color} />
+  return <RIcon size={size} color={color} {...rest} />
 }
 
 export const getAllIcons = (searchName = '') => {
