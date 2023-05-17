@@ -18,7 +18,8 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./src/"
+    "baseUrl": "./src/",
+    "downlevelIteration": true
   },
   "include": [
     "next-env.d.ts",
