@@ -30,7 +30,7 @@ export const NavigationMobile = () => {
           isOpen ? 'w-full' : 'w-0'
         }`}
       >
-        <div className="flex flex-col justify-between bg-yellow-300 h-full w-full pt-16 px-6 pb-8">
+        <div className="bg-background flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
           <div>
             {routes.map((route, index) => (
               <Link
