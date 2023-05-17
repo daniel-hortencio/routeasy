@@ -25,7 +25,7 @@ const CardBlog = ({ tag, title, avatar, author, date }) => {
 }
 
 export const Blog = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(null)
 
   useEffect(() => {
     const handleResize = () => {

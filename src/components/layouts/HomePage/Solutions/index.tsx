@@ -4,7 +4,7 @@ import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
 import { useState } from 'react'
 
-const CardSoluctions = ({ icon, title, onClick, isActive }) => {
+const CardSoluctions = ({ icon = '', title, onClick, isActive }) => {
   return (
     <div
       onClick={onClick}

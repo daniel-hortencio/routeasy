@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import { ButtonWhite } from 'components/elements/Button'
 
 export const Testimonials = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(null)
 
   useEffect(() => {
     const handleResize = () => {
