@@ -6,13 +6,13 @@ export const Integrating = () => {
     <Section
       title={
         <h1>
-          Integrando para <span className="text-primary">potencializar</span> a
-          sua automação
+          Integração simples para{' '}
+          <span className="text-primary">potencializar</span> seus resultados
         </h1>
       }
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      subtitle="Nossas soluções se conectam facilmente a outras ferramentas como ERP, WMS  TMS. Sincronize dados em tempo real e garanta um fluxo contínuo de informações."
     >
-      <div className="max-w-[939px] h-[465px] m-auto relative">
+      <div className="relative w-full h-[453px] text-center py-11 pb-16">
         <Image src="/images/pictures/integracao.png" fill alt="Integração" />
       </div>
     </Section>
