@@ -15,10 +15,7 @@ export const Testimonials = () => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
     }
-
     window.addEventListener('resize', handleResize)
-
-    // Limpe o listener do evento resize ao desmontar o componente
     return () => {
       window.removeEventListener('resize', handleResize)
     }

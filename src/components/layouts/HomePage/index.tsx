@@ -4,7 +4,6 @@ import { Clients } from './Clients'
 import { Integrating } from './Integrating'
 import { Maestro } from './Maestro'
 import { Midia } from './Midia'
-import { News } from './News'
 import { Segments } from './Segments'
 import { Solutions } from './Solutions'
 import { Testimonials } from './Testimonials'
@@ -20,7 +19,6 @@ export const HomePage = () => {
       <Segments />
       <Testimonials />
       <Midia />
-      <News />
       <Blog />
     </div>
   )

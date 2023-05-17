@@ -10,7 +10,7 @@ export const WebsiteLayout = ({ children }: Props) => {
   return (
     <div className="bg-background">
       <Header />
-      <main className="test pt-[124px] lg:pt-[88px]">{children}</main>
+      <main className="pt-[124px] lg:pt-[88px]">{children}</main>
       <Footer />
     </div>
   )
