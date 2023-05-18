@@ -1,14 +1,15 @@
 import { Section } from 'components/elements/Section'
+import { TextHighlight, Title } from 'components/elements/Texts'
 import Image from 'next/image'
 
 export const Integrating = () => {
   return (
     <Section
       title={
-        <h1>
-          Integração simples para{' '}
-          <span className="text-primary">potencializar</span> seus resultados
-        </h1>
+        <Title>
+          Integração simples para <TextHighlight>potencializar</TextHighlight>{' '}
+          seus resultados
+        </Title>
       }
       subtitle="Nossas soluções se conectam facilmente a outras ferramentas como ERP, WMS  TMS. Sincronize dados em tempo real e garanta um fluxo contínuo de informações."
     >

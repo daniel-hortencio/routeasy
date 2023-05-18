@@ -7,6 +7,7 @@ import { Section } from 'components/elements/Section'
 import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
 import { ButtonWhite } from 'components/elements/Button'
+import { TextHighlight, Title } from 'components/elements/Texts'
 
 export const Testimonials = () => {
   const [windowWidth, setWindowWidth] = useState(null)
@@ -71,9 +72,9 @@ export const Testimonials = () => {
   return (
     <Section
       title={
-        <h1>
-          Quem usa <span className="text-primary">confia</span>
-        </h1>
+        <Title>
+          Quem usa <TextHighlight>confia</TextHighlight>
+        </Title>
       }
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >

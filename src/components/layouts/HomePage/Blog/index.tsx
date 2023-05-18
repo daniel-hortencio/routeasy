@@ -5,6 +5,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import { useEffect, useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { ButtonSecondary } from 'components/elements/Button'
+import { TextHighlight, Title } from 'components/elements/Texts'
 
 const CardBlog = ({ tag, title, avatar, author, date }) => {
   return (
@@ -64,10 +65,9 @@ export const Blog = () => {
     <div>
       <Section
         title={
-          <h1>
-            Acompanhe as <span className="text-primary">novidades</span> da
-            Logística
-          </h1>
+          <Title>
+            Acompanhe as <TextHighlight>novidades</TextHighlight> da Logística
+          </Title>
         }
         subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
       assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis

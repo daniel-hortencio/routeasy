@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
 import { useState } from 'react'
+import { TextHighlight, Title } from 'components/elements/Texts'
 
 const CardSoluctions = ({ icon = '', title, onClick, isActive }) => {
   return (
@@ -29,9 +30,9 @@ export const Solutions = () => {
   return (
     <Section
       title={
-        <h1>
-          Soluções para toda <span className="text-primary">operação</span>
-        </h1>
+        <Title>
+          Soluções para toda <TextHighlight>operação</TextHighlight>
+        </Title>
       }
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >

@@ -1,5 +1,6 @@
 import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
+import { TextHighlight, Title } from 'components/elements/Texts'
 import { useState } from 'react'
 
 export const Segments = () => {
@@ -8,10 +9,9 @@ export const Segments = () => {
   return (
     <Section
       title={
-        <h1>
-          SOLUÇÕES QUE SE <span className="text-primary">ADAPTAM</span> AO SEU
-          NEGÓCIO
-        </h1>
+        <Title>
+          SOLUÇÕES QUE SE <TextHighlight>ADAPTAM</TextHighlight> AO SEU NEGÓCIO
+        </Title>
       }
       className="mb-28"
       subtitle="Sabemos que cada operação é única e, por isso, nosso time de especialistas está preparado para: "

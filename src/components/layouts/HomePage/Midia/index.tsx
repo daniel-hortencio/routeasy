@@ -3,15 +3,16 @@ import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 
 import S from './styles.module.css'
+import { TextHighlight, Title } from 'components/elements/Texts'
 
 export const Midia = () => {
   return (
     <Section
       className="pb-14 pt-12"
       title={
-        <h1>
-          Rout<span className="text-primary">easy</span> na mídia
-        </h1>
+        <Title>
+          Rout<TextHighlight>easy</TextHighlight> na mídia
+        </Title>
       }
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
