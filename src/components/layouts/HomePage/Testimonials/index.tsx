@@ -52,18 +52,18 @@ export const Testimonials = () => {
 
   const CardTestimonial = ({ avatar, name, position, testimonial }) => {
     return (
-      <div className="pt-7 pb-6 px-11 border-2 border-primary rounded-xl text-center relative">
-        <div className="absolute top-0 left-1/2 w-3 h-3 bg-primary rounded-full -translate-x-[6px] -translate-y-[6px]" />
-        <div className="w-[138px] h-[138px] mb-8 border-2 border-primary mx-auto rounded-full">
+      <div className="pt-7 pb-6 px-11 border-2 border-primary-100 rounded-xl text-center relative">
+        <div className="absolute top-0 left-1/2 w-3 h-3 bg-primary-100 rounded-full -translate-x-[6px] -translate-y-[6px]" />
+        <div className="w-[138px] h-[138px] mb-8 border-2 border-primary-100 mx-auto rounded-full">
           {avatar}
         </div>
         <h2 className="text-2xl font-semibold sm">{name}</h2>
         <p className="text-sm mb-8">{position}</p>
 
         <p className="text-sm">
-          <span className="text-primary text-3xl">”</span>
+          <span className="text-primary-100 text-3xl">”</span>
           {testimonial}
-          <span className="text-primary text-3xl">”</span>
+          <span className="text-primary-100 text-3xl">”</span>
         </p>
       </div>
     )
@@ -143,7 +143,7 @@ export const Testimonials = () => {
                     instanceRef.current?.moveToIdx(idx)
                   }}
                   className={
-                    'w-2 h-2 rounded-full bg-primary mr-2 dot ' +
+                    'w-2 h-2 rounded-full bg-primary-100 mr-2 dot ' +
                     (currentSlide !== idx && 'opacity-50')
                   }
                 ></button>
@@ -164,7 +164,7 @@ export const Testimonials = () => {
           <Image src="/images/logos/union.svg" fill alt="Recicável" />
         </div>
         <div className="relative z-10">
-          <p className="text-lg text-[#EDEDED] font-bold mb-6 md:mb-8">
+          <p className="text-lg text-typography-50 font-bold mb-6 md:mb-8">
             Nossos clientes já reduziram
           </p>
           <h1 className="text-[88px] font-semibold mb-14 hidden lg:flex justify-center">

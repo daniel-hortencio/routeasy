@@ -10,7 +10,7 @@ export const Banner = () => {
           <div className="lg:w-3/5 md:1/2 text-center md:text-left">
             <h1 className="text-white uppercase font-semibold text-5xl md:text-6xl pb-5">
               A melhor solução para{' '}
-              <span className="text-primary">last-mile</span>
+              <span className="text-primary-100">last-mile</span>
             </h1>
             <p className="font-normal text-base pb-8">
               Nossas soluções são a chave para aumentar a eficiência da sua

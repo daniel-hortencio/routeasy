@@ -20,7 +20,7 @@ export const NavigationMobile = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer border-2 border-background-light2 w-12 h-12 flex items-center justify-center"
+        className="cursor-pointer border-2 border-grayscale-700 w-12 h-12 flex items-center justify-center"
       >
         <Icon name={isOpen ? 'FiX' : 'FiMenu'} size={24} />
       </button>
@@ -30,13 +30,13 @@ export const NavigationMobile = () => {
           isOpen ? 'w-full' : 'w-0'
         }`}
       >
-        <div className="bg-background flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
+        <div className="bg-grayscale-700 flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
           <div>
             {routes.map((route, index) => (
               <Link
                 key={route.label}
                 href={route.href}
-                className={`font-semibold pl-4 mb-6 h-14 flex items-center border-l-4 border-primary text-lg uppercase hover:text-primary-dark transition-all`}
+                className={`font-semibold pl-4 mb-6 h-14 flex items-center border-l-4 border-primary-100 text-lg uppercase hover:text-primary-200 transition-all`}
               >
                 {route.label}
               </Link>

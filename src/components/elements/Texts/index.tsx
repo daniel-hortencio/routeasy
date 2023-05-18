@@ -46,5 +46,5 @@ export const Title = ({ children, className = '', as = 'h1' }: ITitle) => {
 }
 
 export const TextHighlight = ({ children }: Props) => (
-  <span className="text-primary">{children}</span>
+  <span className="text-primary-100">{children}</span>
 )

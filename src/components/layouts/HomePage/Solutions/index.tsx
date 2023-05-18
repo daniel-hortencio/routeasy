@@ -101,7 +101,7 @@ export const Solutions = () => {
         )}
       </div>
       <div className="md:w-1/2 m-auto my-16">
-        <p className="text-[#ABAED1] text-base font-normal text-center">
+        <p className="text-grayscale-200 text-base font-normal text-center">
           Com o Routing Studio você pode realizar todo o planajamento de suas
           rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
         </p>

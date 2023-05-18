@@ -16,10 +16,10 @@ export const Segments = () => {
       className="mb-28"
       subtitle="Sabemos que cada operação é única e, por isso, nosso time de especialistas está preparado para: "
     >
-      <div className="mb-16 bg-background-light2 p-2 w-min flex mx-auto items-center rounded-full">
+      <div className="mb-16 bg-grayscale-500 p-2 w-min flex mx-auto items-center rounded-full">
         <button
           className={`h-12 px-6 whitespace-nowrap rounded-full ${
-            tab === 1 && 'bg-primary'
+            tab === 1 && 'bg-primary-100'
           }`}
           onClick={() => setTab(1)}
         >
@@ -27,7 +27,7 @@ export const Segments = () => {
         </button>
         <button
           className={`h-12 px-6 whitespace-nowrap rounded-full ${
-            tab === 2 && 'bg-primary'
+            tab === 2 && 'bg-primary-100'
           }`}
           onClick={() => setTab(2)}
         >
@@ -35,7 +35,7 @@ export const Segments = () => {
         </button>
         {/*  <button
           className={`h-12 px-6 whitespace-nowrap rounded-full ${
-            tab === 3 && 'bg-primary'
+            tab === 3 && 'bg-primary-100'
           }`}
           onClick={() => setTab(3)}
         >
@@ -43,7 +43,7 @@ export const Segments = () => {
         </button>
         <button
           className={`h-12 px-6 whitespace-nowrap rounded-full ${
-            tab === 4 && 'bg-primary'
+            tab === 4 && 'bg-primary-100'
           }`}
           onClick={() => setTab(4)}
         >
@@ -51,7 +51,7 @@ export const Segments = () => {
         </button>
         <button
           className={`h-12 px-6 whitespace-nowrap rounded-full ${
-            tab === 5 && 'bg-primary'
+            tab === 5 && 'bg-primary-100'
           }`}
           onClick={() => setTab(5)}
         >
@@ -59,7 +59,7 @@ export const Segments = () => {
         </button> */}
       </div>
 
-      <div className="pt-10 px-6 md:px-16 pb-16 rounded-lg bg-background-light2">
+      <div className="pt-10 px-6 md:px-16 pb-16 rounded-lg bg-grayscale-500">
         {tab === 1 && (
           <div>
             <h3 className="mb-2 md:mb-3 text-[32px] font-medium">Indústria</h3>
@@ -70,7 +70,7 @@ export const Segments = () => {
               veritatis voluptatem hic dolores fuga eum dolorum tenetur est
               iusto quis. hic dolores fuga eum dolorum tenetur est iusto quis.{' '}
             </p>
-            <div className="h-[2px] w-full bg-primary mb-4 md:mb-9" />
+            <div className="h-[2px] w-full bg-primary-100 mb-4 md:mb-9" />
             <p className="mb-5 md:mb-12">Como podemos ajudar:</p>
             <div className="grid sm:grid-cols-2 gap-y-4 max-w-xl">
               <div className="fill-red-500 flex items-center">

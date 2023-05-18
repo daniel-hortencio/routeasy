@@ -15,7 +15,7 @@ export const NavigationDesktop = () => {
         <Link
           key={route.label}
           href={route.href}
-          className={`hover:text-primary-dark transition-all ${
+          className={`hover:text-primary-200 transition-all ${
             index < routes.length - 1 && 'mr-8'
           }`}
         >
@@ -26,13 +26,13 @@ export const NavigationDesktop = () => {
       <div className="flex items-center ml-24">
         <Link
           href="/"
-          className="text-primary hover:text-primary-dark transition-all"
+          className="text-primary-100 hover:text-primary-200 transition-all text-gray"
         >
           Login
         </Link>
         <Link
           href="/"
-          className="ml-10 text-primary hover:text-primary-dark border-2 rounded border-primary hover:border-primary-dark transition-all h-12 w-36 flex items-center justify-center"
+          className="ml-10 text-primary-100 hover:text-primary-200 border-2 rounded border-primary-100 hover:border-primary-200 transition-all h-12 w-36 flex items-center justify-center"
         >
           Demonstração
         </Link>

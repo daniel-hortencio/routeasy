@@ -5,7 +5,7 @@ import { NavigationMobile } from '../NavigationMobile'
 
 export const Header = () => {
   return (
-    <Section className="bg-background fixed w-full h-[124px] lg:h-[88px] flex items-center z-10">
+    <Section className="bg-grayscale-700 fixed w-full h-[124px] lg:h-[88px] flex items-center z-10">
       <div className="pt-4 lg:pt-0 flex items-end lg:items-center justify-between">
         <div className="relative w-36 h-12">
           <Image

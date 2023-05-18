@@ -7,7 +7,7 @@ export const ButtonPrimary = ({
 }: Omit<IButtonBase, 'className'>) => {
   return (
     <ButtonBase
-      className="bg-primary text-white text-sm h-12 flex justify-center w-full rounded items-center"
+      className="bg-primary-100 text-white text-sm h-12 flex justify-center w-full rounded items-center"
       onClick={onClick}
       href={href}
     >
@@ -23,7 +23,7 @@ export const ButtonSecondary = ({
 }: Omit<IButtonBase, 'className'>) => {
   return (
     <ButtonBase
-      className="bg-transparent border-2 border-primary text-primary h-12 flex justify-center w-full rounded items-center hover:bg-primary hover:text-white transition-all"
+      className="bg-transparent border-2 border-primary-100 text-primary-100 h-12 flex justify-center w-full rounded items-center hover:bg-primary-100 hover:text-white transition-all"
       onClick={onClick}
       href={href}
     >
@@ -39,7 +39,7 @@ export const ButtonWhite = ({
 }: Omit<IButtonBase, 'className'>) => {
   return (
     <ButtonBase
-      className="rounded w-64 bg-[#EDEDED] text-[#444B55] h-10 text-sm flex items-center justify-center mx-auto font-semibold"
+      className="rounded w-64 bg-grayscale-50 text-grayscale-300 h-10 text-sm flex items-center justify-center mx-auto font-semibold"
       onClick={onClick}
       href={href}
     >

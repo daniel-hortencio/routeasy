@@ -51,7 +51,7 @@ export const Clients = () => {
 
   return (
     <Section className="pb-14 -mt-16">
-      <div className="mx-auto bg-background-light rounded-lg shadow-boxShadow-bg_clients">
+      <div className="mx-auto bg-grayscale-600 rounded-lg shadow-boxShadow-bg_clients">
         <div className="hidden md:flex justify-evenly">
           {clients.map(client => (
             <div className="w-[100px] h-[100px] relative" key={client.src}>

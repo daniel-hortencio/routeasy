@@ -17,11 +17,11 @@ export const Midia = () => {
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
       <div className={`${S.MidiaGrid} grid w-full gap-6 mb-20`}>
-        <div className="h-80 bg-background-light rounded-2xl"></div>
-        <div className="h-80 bg-background-light rounded-2xl"></div>
+        <div className="h-80 bg-grayscale-600 rounded-2xl"></div>
+        <div className="h-80 bg-grayscale-600 rounded-2xl"></div>
         <div className="h-80 grid gap-6">
-          <div className="bg-background-light rounded-2xl"></div>
-          <div className="bg-background-light rounded-2xl"></div>
+          <div className="bg-grayscale-600 rounded-2xl"></div>
+          <div className="bg-grayscale-600 rounded-2xl"></div>
         </div>
       </div>
 
