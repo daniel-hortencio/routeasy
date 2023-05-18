@@ -13,8 +13,13 @@ export const Integrating = () => {
       }
       subtitle="Nossas soluções se conectam facilmente a outras ferramentas como ERP, WMS  TMS. Sincronize dados em tempo real e garanta um fluxo contínuo de informações."
     >
-      <div className="relative w-full h-[453px] text-center py-11 pb-16">
-        <Image src="/images/pictures/integracao.png" fill alt="Integração" />
+      <div className="relative text-center pt-0 md:pt-11 pb-16 md:pb-28 flex justify-center">
+        <Image
+          src="/images/pictures/integracao.png"
+          width="939"
+          height="465"
+          alt="Integração"
+        />
       </div>
     </Section>
   )
