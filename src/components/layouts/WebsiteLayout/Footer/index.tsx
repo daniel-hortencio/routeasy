@@ -135,7 +135,7 @@ export const Footer = () => {
         <div className="h-14 lg:h-12 flex items-center rounded overflow-hidden">
           <input
             placeholder="Escreva seu e-mail"
-            className="bg-[#1A1C30] h-full px-6 flex-auto"
+            className="bg-grayscale-600 h-full px-6 flex-auto"
           />
           <button className="bg-primary-100 h-full w-40 hover:bg-primary-200">
             INSCREVER

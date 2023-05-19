@@ -50,8 +50,9 @@ export const Clients = () => {
   ]
 
   return (
-    <Section className="pb-14 -mt-16">
-      <div className="mx-auto bg-grayscale-600 rounded-lg shadow-boxShadow-bg_clients">
+    <Section className="pb-16 md:pb-20">
+      <div className="hidden md:block w-[1064px] h-[6px] rounded-t-lg bg-grayscale-600 m-auto"></div>
+      <div className="mx-auto bg-grayscale-500 rounded-lg shadow-3xl">
         <div className="hidden md:flex justify-evenly">
           {clients.map(client => (
             <div className="w-[100px] h-[100px] relative" key={client.src}>

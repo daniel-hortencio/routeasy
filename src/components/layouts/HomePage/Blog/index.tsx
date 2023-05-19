@@ -156,8 +156,8 @@ export const Blog = () => {
         </div>
       </div>
       <Section className="pt-16 pb-14 md:py-20 w-full">
-        <div className="mx-auto sm:w-64">
-          <ButtonSecondary>Quero saber mais</ButtonSecondary>
+        <div className="mx-auto sm:w-36">
+          <ButtonSecondary>Ir para o blog</ButtonSecondary>
         </div>
       </Section>
     </div>

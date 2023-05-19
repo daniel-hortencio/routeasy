@@ -20,7 +20,7 @@ export const Maestro = () => {
           url="https://www.youtube.com/watch?v=L3WzRR5Ugks&t=1s"
         ></ReactPlayer>
       </div>
-      <div className="w-40 m-auto my-16 mb-16">
+      <div className="md:w-40 m-auto my-12 mb-20">
         <ButtonSecondary>Quero saber mais</ButtonSecondary>
       </div>
     </Section>

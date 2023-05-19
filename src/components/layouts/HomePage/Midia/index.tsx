@@ -8,7 +8,7 @@ import { TextHighlight, Title } from 'components/elements/Texts'
 export const Midia = () => {
   return (
     <Section
-      className="pb-14 pt-12"
+      className="pb-20 md:pb-28 pt-16 md:pt-36"
       title={
         <Title>
           Rout<TextHighlight>easy</TextHighlight> na mídia
@@ -16,7 +16,7 @@ export const Midia = () => {
       }
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <div className={`${S.MidiaGrid} grid w-full gap-6 mb-20`}>
+      <div className={`${S.MidiaGrid} grid w-full gap-6 mb-12 md:mb-20`}>
         <div className="h-80 bg-grayscale-600 rounded-2xl"></div>
         <div className="h-80 bg-grayscale-600 rounded-2xl"></div>
         <div className="h-80 grid gap-6">
