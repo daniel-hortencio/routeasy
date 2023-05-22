@@ -54,8 +54,8 @@ export const Clients = () => {
       <div className="hidden md:block w-[1064px] h-[6px] rounded-t-lg bg-grayscale-600 m-auto"></div>
       <div className="mx-auto bg-grayscale-500 rounded-lg shadow-3xl">
         <div className="hidden md:flex justify-evenly">
-          {clients.map(client => (
-            <div className="w-[100px] h-[100px] relative" key={client.src}>
+          {clients.map((client, index) => (
+            <div className="w-[100px] h-[100px] relative" key={index}>
               <Image src={client.src} fill alt={client.alt} />
             </div>
           ))}
@@ -63,10 +63,10 @@ export const Clients = () => {
 
         <div className="md:hidden py-5">
           <div ref={sliderRef} className="keen-slider ">
-            {clients.map(client => (
+            {clients.map((client, index) => (
               <div
                 className="keen-slider__slide h-[70px] relative px-4"
-                key={client.src}
+                key={index}
               >
                 <Image
                   src={client.src}

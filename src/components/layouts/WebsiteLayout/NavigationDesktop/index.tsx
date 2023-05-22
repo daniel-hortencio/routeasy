@@ -13,7 +13,7 @@ export const NavigationDesktop = () => {
     <nav className="flex items-center">
       {routes.map((route, index) => (
         <Link
-          key={route.label}
+          key={index}
           href={route.href}
           className={`hover:text-primary-200 transition-all ${
             index < routes.length - 1 && 'mr-8'

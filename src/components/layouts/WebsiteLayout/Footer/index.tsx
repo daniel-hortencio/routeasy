@@ -34,11 +34,7 @@ export const Footer = () => {
 
   const FooterLink = ({ href, label }) => {
     return (
-      <Link
-        key={href}
-        href={href}
-        className="text-sm hover:text-primary-100 mt-6 block"
-      >
+      <Link href={href} className="text-sm hover:text-primary-100 mt-6 block">
         {label}
       </Link>
     )
@@ -49,29 +45,29 @@ export const Footer = () => {
       <div className="lg:grid grid-cols-5 mb-6 lg:mb-20 px-10">
         <div className="hidden lg:block">
           <p>NAVEGAÇÃO</p>
-          {links_navegation.map(link => (
-            <FooterLink key={link.href} href={link.href} label={link.label} />
+          {links_navegation.map((link, idx) => (
+            <FooterLink key={idx} href={link.href} label={link.label} />
           ))}
         </div>
 
         <div className="hidden lg:block">
           <p>SOLUÇÕES</p>
-          {links_solutions.map(link => (
-            <FooterLink key={link.href} href={link.href} label={link.label} />
+          {links_solutions.map((link, idx) => (
+            <FooterLink key={idx} href={link.href} label={link.label} />
           ))}
         </div>
 
         <div className="hidden lg:block">
           <p>ROUTEASY</p>
-          {links_routeasy.map(link => (
-            <FooterLink key={link.href} href={link.href} label={link.label} />
+          {links_routeasy.map((link, idx) => (
+            <FooterLink key={idx} href={link.href} label={link.label} />
           ))}
         </div>
 
         <div className="hidden lg:block">
           <p>LEGAL</p>
-          {links_legal.map(link => (
-            <FooterLink key={link.href} href={link.href} label={link.label} />
+          {links_legal.map((link, idx) => (
+            <FooterLink key={idx} href={link.href} label={link.label} />
           ))}
         </div>
 
