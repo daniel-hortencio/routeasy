@@ -10,7 +10,7 @@ import { Testimonials } from './Testimonials'
 
 export const HomePage = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Clients />
       <Solutions />
@@ -20,6 +20,6 @@ export const HomePage = () => {
       <Testimonials />
       <Midia />
       <Blog />
-    </div>
+    </>
   )
 }

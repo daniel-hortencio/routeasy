@@ -34,7 +34,7 @@ export const NavigationMobile = () => {
           <div>
             {routes.map((route, index) => (
               <Link
-                key={route.label}
+                key={index}
                 href={route.href}
                 className={`font-semibold pl-4 mb-6 h-14 flex items-center border-l-4 border-primary-100 text-lg uppercase hover:text-primary-200 transition-all`}
               >
