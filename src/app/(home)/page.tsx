@@ -2,6 +2,6 @@
 
 import { HomePage } from 'components/layouts/HomePage'
 
-export default function Loading() {
+export default function Home() {
   return <HomePage />
 }
