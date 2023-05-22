@@ -5,7 +5,7 @@ import { ButtonPrimary } from 'components/elements/Button'
 export const Banner = () => {
   return (
     <Section className="h-screen flex">
-      <div className="flex h-full relative test min-h-[640px]">
+      <div className="flex h-full relative min-h-[640px]">
         <div className="md:max-w-lg md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-white uppercase font-medium text-5xl lg:text-6xl pb-5">
             A melhor solução para{' '}
