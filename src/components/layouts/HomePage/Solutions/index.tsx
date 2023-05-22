@@ -89,7 +89,7 @@ export const Solutions = () => {
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
       <div className="hidden md:block">
-        <div className="mt-2 flex items-center justify-between">
+        <div className="mt-2 flex items-center justify-evenly">
           <CardSoluctions
             isActive={tab === 1}
             onClick={() => setTab(1)}

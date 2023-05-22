@@ -7,8 +7,8 @@ export const Banner = () => {
     <div className="relative">
       <Section className="h-screen flex">
         <div className="flex items-center h-full">
-          <div className="lg:w-3/5 md:1/2 text-center md:text-left">
-            <h1 className="text-white uppercase font-semibold text-5xl md:text-6xl pb-5">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h1 className="text-white uppercase font-medium text-5xl md:text-6xl pb-5">
               A melhor solução para{' '}
               <span className="text-primary-100">last-mile</span>
             </h1>
@@ -18,8 +18,8 @@ export const Banner = () => {
               produtividade com uma plataforma completa de otimização de rotas e
               gestão de entregas e coletas.
             </p>
-            <div className="lg:w-40">
-              <ButtonPrimary href="/">Quero saber mais</ButtonPrimary>
+            <div className="lg:w-56">
+              <ButtonPrimary href="/">Quero uma demonstração</ButtonPrimary>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@ export const Banner = () => {
           <Image
             style={{ objectFit: 'cover' }}
             fill
-            src="/images/pictures/home-banner.svg"
+            src="/images/pictures/home-banner-1.svg"
             alt="Banner"
           />
         </div>
