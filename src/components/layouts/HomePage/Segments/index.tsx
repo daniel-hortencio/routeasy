@@ -55,7 +55,7 @@ export const Segments = () => {
       <div className="hidden md:block">
         <div className="flex mb-12 bg-grayscale-500 p-2 w-min mx-auto items-center rounded-full">
           <button
-            className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+            className={`px-6 h-12 whitespace-nowrap rounded-full ${
               tab === 1 && 'bg-primary-100'
             }`}
             onClick={() => setTab(1)}
@@ -63,7 +63,7 @@ export const Segments = () => {
             Last mile B2C
           </button>
           <button
-            className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+            className={`px-6 h-12 whitespace-nowrap rounded-full ${
               tab === 2 && 'bg-primary-100'
             }`}
             onClick={() => setTab(2)}
@@ -71,7 +71,7 @@ export const Segments = () => {
             E-Last Mile B2B
           </button>
           <button
-            className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+            className={`px-6 h-12 whitespace-nowrap rounded-full ${
               tab === 3 && 'bg-primary-100'
             }`}
             onClick={() => setTab(3)}
@@ -79,7 +79,7 @@ export const Segments = () => {
             Same day delivery
           </button>
           <button
-            className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+            className={`px-6 h-12 whitespace-nowrap rounded-full ${
               tab === 4 && 'bg-primary-100'
             }`}
             onClick={() => setTab(4)}
@@ -87,7 +87,7 @@ export const Segments = () => {
             First e Middle e Mile
           </button>
           <button
-            className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+            className={`px-6 h-12 whitespace-nowrap rounded-full ${
               tab === 5 && 'bg-primary-100'
             }`}
             onClick={() => setTab(5)}
