@@ -23,16 +23,7 @@ export const Testimonials = () => {
     >
       <div className="mb-[88px] lg:mb-44">
         <div className="mb-12 ">
-          <Suspense
-            fallback={
-              <div className="flex flex-col items-center">
-                <Skeleton className="h-[460px] w-full mb-20 rounded-xl" />
-                <Skeleton className="h-2 w-20 rounded-full" />
-              </div>
-            }
-          >
-            <SlideTestimonials />
-          </Suspense>
+          <SlideTestimonials />
         </div>
       </div>
 

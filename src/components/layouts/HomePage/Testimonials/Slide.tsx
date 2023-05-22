@@ -3,13 +3,18 @@
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
+import { Skeleton } from 'components/elements/Skeleton'
 
 export const SlideTestimonials = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(undefined)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
+    if (!windowWidth) {
+      setWindowWidth(window.innerWidth)
+    }
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
     }
@@ -64,9 +69,14 @@ export const SlideTestimonials = () => {
     )
   }
 
-  return (
+  return !windowWidth ? (
+    <div className="flex flex-col items-center">
+      <Skeleton className="h-[460px] w-full mb-20 rounded-xl" />
+      <Skeleton className="h-2 w-20 rounded-full" />
+    </div>
+  ) : (
     <div>
-      <div ref={sliderRef} className="keen-slider">
+      <div ref={sliderRef} className="keen-slider mb-[72px]">
         <div className="keen-slider__slide pt-2">
           <CardTestimonial
             avatar=""
