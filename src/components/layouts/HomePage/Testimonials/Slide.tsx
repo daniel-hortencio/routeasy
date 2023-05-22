@@ -5,7 +5,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
 
 export const SlideTestimonials = () => {
-  const [windowWidth, setWindowWidth] = useState(window?.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
 
@@ -66,7 +66,7 @@ export const SlideTestimonials = () => {
 
   return (
     <div>
-      <div ref={sliderRef} className="keen-slider mb-[72px]">
+      <div ref={sliderRef} className="keen-slider">
         <div className="keen-slider__slide pt-2">
           <CardTestimonial
             avatar=""
