@@ -1,4 +1,3 @@
-import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
@@ -47,7 +46,7 @@ export const Segments = () => {
     <Section
       title={
         <Title>
-          SOLUÇÕES QUE SE <TextHighlight>ADAPTAM</TextHighlight> AO SEU NEGÓCIO
+          Soluções que se <TextHighlight>adaptam</TextHighlight> ao seu negócio
         </Title>
       }
       className="mb-20"
