@@ -3,7 +3,7 @@ import Link from 'next/link'
 export const NavigationDesktop = () => {
   const routes = [
     { label: 'Início', href: '/' },
-    { label: 'Soluções', href: '/' },
+    { label: 'Soluções', href: '/solucoes' },
     { label: 'Segmentos', href: '/' },
     { label: 'Conteúdos', href: '/' },
     { label: 'Sobre', href: '/' }
@@ -13,7 +13,7 @@ export const NavigationDesktop = () => {
     <nav className="flex items-center">
       {routes.map((route, index) => (
         <Link
-          key={route.label}
+          key={index}
           href={route.href}
           className={`hover:text-primary-200 transition-all ${
             index < routes.length - 1 && 'mr-8'

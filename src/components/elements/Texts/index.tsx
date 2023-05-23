@@ -1,6 +1,17 @@
 'use client'
 
 import { ReactNode } from 'react'
+import { Poppins, Open_Sans } from '@next/font/google'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900']
+})
+
+const open_sans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800']
+})
 
 interface Props {
   children: ReactNode
@@ -20,7 +31,7 @@ interface Props {
 }
 
 export const Text = ({ children, className = '' }: Props) => {
-  const getClassName = () => ` ${className}`
+  const getClassName = () => `${open_sans.className} ${className}`
 
   return <p className={getClassName()}>{children}</p>
 }
@@ -31,15 +42,15 @@ interface ITitle extends Props {
 
 export const Title = ({ children, className = '', as = 'h1' }: ITitle) => {
   const getClassName = () =>
-    `uppercase text-[40px] text-center font-medium ${className}`
+    `${poppins.className} uppercase text-[40px] text-center font-medium ${className}`
 
   const element = {
-    h1: <h1 className={getClassName()}>{children}</h1>,
-    h2: <h2 className={getClassName()}>{children}</h2>,
-    h3: <h3 className={getClassName()}>{children}</h3>,
-    h4: <h4 className={getClassName()}>{children}</h4>,
-    h5: <h5 className={getClassName()}>{children}</h5>,
-    h6: <h6 className={getClassName()}>{children}</h6>
+    h1: <h1 className={`${getClassName()}`}>{children}</h1>,
+    h2: <h2 className={`${getClassName()}`}>{children}</h2>,
+    h3: <h3 className={`${getClassName()}`}>{children}</h3>,
+    h4: <h4 className={`${getClassName()}`}>{children}</h4>,
+    h5: <h5 className={`${getClassName()}`}>{children}</h5>,
+    h6: <h6 className={`${getClassName()}`}>{children}</h6>
   }
 
   return element[as]
