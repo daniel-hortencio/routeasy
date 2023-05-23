@@ -32,7 +32,8 @@ export const Segments = () => {
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth()
+      perView: useWindowWidth(),
+      spacing: 20
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -44,66 +45,68 @@ export const Segments = () => {
 
   return (
     <div>
-    <Section
-      title={
-        <Title>
-          Soluções que se <TextHighlight>adaptam</TextHighlight> ao seu negócio
-        </Title>
-      }
-      className="mb-20"
-      subtitle="Sabemos que cada operação é única e, por isso, nosso time de especialistas está preparado para: "
-    >
-      <div className="hidden md:block">
-        <div className="flex mb-12 bg-grayscale-500 p-2 w-min mx-auto items-center rounded-full">
-          <button
-            className={`px-6 h-12 whitespace-nowrap rounded-full ${
-              tab === 1 && 'bg-primary-100'
-            }`}
-            onClick={() => setTab(1)}
-          >
-            Last mile B2C
-          </button>
-          <button
-            className={`px-6 h-12 whitespace-nowrap rounded-full ${
-              tab === 2 && 'bg-primary-100'
-            }`}
-            onClick={() => setTab(2)}
-          >
-            E-Last Mile B2B
-          </button>
-          <button
-            className={`px-6 h-12 whitespace-nowrap rounded-full ${
-              tab === 3 && 'bg-primary-100'
-            }`}
-            onClick={() => setTab(3)}
-          >
-            Same day delivery
-          </button>
-          <button
-            className={`px-6 h-12 whitespace-nowrap rounded-full ${
-              tab === 4 && 'bg-primary-100'
-            }`}
-            onClick={() => setTab(4)}
-          >
-            First e Middle e Mile
-          </button>
-          <button
-            className={`px-6 h-12 whitespace-nowrap rounded-full ${
-              tab === 5 && 'bg-primary-100'
-            }`}
-            onClick={() => setTab(5)}
-          >
-            Outros
-          </button>
+      <Section
+        title={
+          <Title>
+            Soluções que se <TextHighlight>adaptam</TextHighlight> ao seu
+            negócio
+          </Title>
+        }
+        className="mb-20"
+        subtitle="Sabemos que cada operação é única e, por isso, nosso time de especialistas está preparado para: "
+      >
+        <div className="hidden md:block">
+          <div className="flex mb-12 bg-grayscale-500 p-2 w-min mx-auto items-center rounded-full">
+            <button
+              className={`px-6 h-12 whitespace-nowrap rounded-full ${
+                tab === 1 && 'bg-primary-100'
+              }`}
+              onClick={() => setTab(1)}
+            >
+              Last mile B2C
+            </button>
+            <button
+              className={`px-6 h-12 whitespace-nowrap rounded-full ${
+                tab === 2 && 'bg-primary-100'
+              }`}
+              onClick={() => setTab(2)}
+            >
+              E-Last Mile B2B
+            </button>
+            <button
+              className={`px-6 h-12 whitespace-nowrap rounded-full ${
+                tab === 3 && 'bg-primary-100'
+              }`}
+              onClick={() => setTab(3)}
+            >
+              Same day delivery
+            </button>
+            <button
+              className={`px-6 h-12 whitespace-nowrap rounded-full ${
+                tab === 4 && 'bg-primary-100'
+              }`}
+              onClick={() => setTab(4)}
+            >
+              First e Middle e Mile
+            </button>
+            <button
+              className={`px-6 h-12 whitespace-nowrap rounded-full ${
+                tab === 5 && 'bg-primary-100'
+              }`}
+              onClick={() => setTab(5)}
+            >
+              Outros
+            </button>
+          </div>
         </div>
       </Section>
       <div className="block md:hidden">
         <div ref={sliderRef} className="keen-slider ">
           <div className="flex">
-            <div className="keen-slider__slide pr-6 ml-5">
-              <div className="mb-12 bg-grayscale-500 w-[170px] h-12 mx-auto items-center rounded-full">
+            <div className="keen-slider__slide ml-5">
+              <div className="mb-12 bg-grayscale-500 h-12 mx-auto items-center rounded-full">
                 <button
-                  className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+                  className={` w-full h-12 whitespace-nowrap rounded-full ${
                     tab === 1 && 'bg-primary-100'
                   }`}
                   onClick={() => setTab(1)}
@@ -112,10 +115,10 @@ export const Segments = () => {
                 </button>
               </div>
             </div>
-            <div className="keen-slider__slide pr-6">
-              <div className="mb-12 bg-grayscale-500 w-[170px] h-12 mx-auto items-center rounded-full">
+            <div className="keen-slider__slide">
+              <div className="mb-12 bg-grayscale-500 h-12 mx-auto items-center rounded-full">
                 <button
-                  className={`w-[170px] h-12 whitespace-nowrap rounded-full items-center ${
+                  className={` w-full h-12 whitespace-nowrap rounded-full items-center ${
                     tab === 2 && 'bg-primary-100'
                   }`}
                   onClick={() => setTab(2)}
@@ -124,10 +127,10 @@ export const Segments = () => {
                 </button>
               </div>
             </div>
-            <div className="keen-slider__slide pr-6">
-              <div className="mb-12 bg-grayscale-500 w-[170px] h-12 mx-auto items-center rounded-full">
+            <div className="keen-slider__slide">
+              <div className="mb-12 bg-grayscale-500 h-12 mx-auto items-center rounded-full">
                 <button
-                  className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+                  className={` w-full h-12 whitespace-nowrap rounded-full ${
                     tab === 3 && 'bg-primary-100'
                   }`}
                   onClick={() => setTab(3)}
@@ -136,10 +139,10 @@ export const Segments = () => {
                 </button>
               </div>
             </div>
-            <div className="keen-slider__slide pr-6">
-              <div className="mb-12 bg-grayscale-500 w-[170px] h-12 mx-auto items-center rounded-full">
+            <div className="keen-slider__slide">
+              <div className="mb-12 bg-grayscale-500 h-12 mx-auto items-center rounded-full">
                 <button
-                  className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+                  className={` w-full h-12 whitespace-nowrap rounded-full ${
                     tab === 4 && 'bg-primary-100'
                   }`}
                   onClick={() => setTab(4)}
@@ -148,10 +151,10 @@ export const Segments = () => {
                 </button>
               </div>
             </div>
-            <div className="keen-slider__slide pr-6">
-              <div className="mb-12 bg-grayscale-500 w-[170px] h-12 mx-auto items-center rounded-full">
+            <div className="keen-slider__slide">
+              <div className="mb-12 bg-grayscale-500 h-12 mx-auto items-center rounded-full">
                 <button
-                  className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+                  className={` w-full h-12 whitespace-nowrap rounded-full ${
                     tab === 5 && 'bg-primary-100'
                   }`}
                   onClick={() => setTab(5)}
@@ -167,7 +170,7 @@ export const Segments = () => {
         <div className="flex justify-between items-center md:w-[878px] m-auto pt-6 px-6 md:px-16 pb-10 rounded-lg bg-grayscale-500">
           {tab === 1 && (
             <>
-              <div className="md:w-[56%]">
+              <div className="md:w-full">
                 <h3 className="mb-2 md:mb-3 text-[32px] font-medium">
                   Last Mile B2C
                 </h3>
@@ -192,7 +195,7 @@ export const Segments = () => {
           )}
           {tab === 2 && (
             <>
-              <div className="md:w-[56%]">
+              <div className="md:w-full">
                 <h3 className="mb-2 md:mb-3 text-[32px] font-medium">
                   E-Last Mile B2B
                 </h3>
@@ -218,7 +221,7 @@ export const Segments = () => {
           )}
           {tab === 3 && (
             <>
-              <div className="md:w-[56%]">
+              <div className="md:w-full">
                 <h3 className="mb-2 md:mb-3 text-[32px] font-medium">
                   Same day delivery
                 </h3>
@@ -244,7 +247,7 @@ export const Segments = () => {
           )}
           {tab === 4 && (
             <>
-              <div className="md:w-[56%]">
+              <div className="md:w-full">
                 <h3 className="mb-2 md:mb-3 text-[32px] font-medium">
                   First e Middle Mile
                 </h3>
@@ -270,7 +273,7 @@ export const Segments = () => {
           )}
           {tab === 5 && (
             <>
-              <div className="md:w-[56%]">
+              <div className="md:w-full">
                 <h3 className="mb-2 md:mb-3 text-[32px] font-medium">
                   First e Middle Mile
                 </h3>
