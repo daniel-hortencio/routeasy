@@ -4,17 +4,10 @@ import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import Link from 'next/link'
 import { useState } from 'react'
+import routes from '../Header/routes'
 
 export const NavigationMobile = () => {
   const [isOpen, setIsOpen] = useState(false)
-
-  const routes = [
-    { label: 'Início', href: '/' },
-    { label: 'Soluções', href: '/' },
-    { label: 'Segmentos', href: '/' },
-    { label: 'Conteúdos', href: '/' },
-    { label: 'Sobre', href: '/' }
-  ]
 
   return (
     <>

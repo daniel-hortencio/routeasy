@@ -1,14 +1,7 @@
 import Link from 'next/link'
+import routes from '../Header/routes'
 
 export const NavigationDesktop = () => {
-  const routes = [
-    { label: 'Início', href: '/' },
-    { label: 'Soluções', href: '/solucoes' },
-    { label: 'Segmentos', href: '/' },
-    { label: 'Conteúdos', href: '/' },
-    { label: 'Sobre', href: '/' }
-  ]
-
   return (
     <nav className="flex items-center">
       {routes.map((route, index) => (
