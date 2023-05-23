@@ -46,9 +46,9 @@ export const Title = ({
   as: Element = 'h1'
 }: ITitle) => {
   const getClassName = () =>
-    `${poppins.className} uppercase text-[40px] text-center font-medium ${className}`
+    `${poppins.className} uppercase text-[32px] md:text-[40px] text-center font-medium ${className}`
 
-  return <Element className={`${getClassName()}`}>{children}</Element>
+  return <Element className={`${getClassName()} `}>{children}</Element>
 }
 
 export const TextHighlight = ({ children }: Props) => (
