@@ -1,11 +1,11 @@
-import { Poppins } from '@next/font/google'
+import { Open_Sans } from '@next/font/google'
 
 import { WebsiteLayout } from 'components/layouts/WebsiteLayout'
 import '../styles/global.css'
 
-const poppins = Poppins({
+const open_sans = Open_Sans({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900']
+  weight: ['300', '400', '500', '600', '700', '800']
 })
 
 export default function RootLayout({ children }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <main className={poppins.className}>
+        <main className={open_sans.className}>
           {' '}
           <WebsiteLayout>{children}</WebsiteLayout>
         </main>
