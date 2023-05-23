@@ -62,13 +62,10 @@ export const ContactForm = () => {
 
   console.log({ data, errors })
 
-  const handleChange = useCallback(
-    (param: keyof typeof data, value: string) => {
-      setData({ ...data, [param]: value })
-      setErrors({ ...errors, [param]: '' })
-    },
-    []
-  )
+  const handleChange = (param: keyof typeof data, value: string) => {
+    setData({ ...data, [param]: value })
+    setErrors({ ...errors, [param]: '' })
+  }
 
   return (
     <Section className="mb-20">
