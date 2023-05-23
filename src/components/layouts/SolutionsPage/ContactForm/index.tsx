@@ -23,13 +23,10 @@ export const ContactForm = () => {
   const [errors, setErrors] = useState(init_data)
 
   const handleSetError = (errors_list: { param: any; value: string }[]) => {
-    console.log({ errors_list })
     const errors_dto = { ...errors }
     errors_list.forEach(error => {
       errors_dto[error.param] = error.value
     })
-
-    console.log({ errors_dto })
 
     setErrors(errors_dto)
   }
@@ -59,8 +56,6 @@ export const ContactForm = () => {
       onSuccess: () => console.log('Deu certo')
     })
   }
-
-  console.log({ data, errors })
 
   const handleChange = (param: keyof typeof data, value: string) => {
     setData({ ...data, [param]: value })
