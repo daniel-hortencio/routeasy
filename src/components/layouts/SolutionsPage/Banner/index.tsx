@@ -1,36 +1,23 @@
-import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
 
 export const Banner = () => {
   return (
-    <Section className="h-screen flex">
-      <div className="flex h-full relative min-h-[640px]">
-        <div className="md:max-w-lg md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-white uppercase font-medium text-5xl lg:text-6xl pb-5">
-            A melhor solução para{' '}
-            <span className="text-primary-100">last-mile</span>
+    <Section className="flex">
+      <div className="flex justify-center h-full relative min-h-[640px]">
+        <div className="md:mx-auto mt-[124px] lg:mx-0 flex flex-col justify-center w-[645px] text-center">
+          <h1 className="text-white uppercase font-medium text-[35px] lg:text-[40px] pb-5">
+            Encontre as soluções ideais para sua{' '}
+            <span className="text-primary-100">operação</span>
           </h1>
           <p className="font-normal text-base pb-8">
-            Nossas soluções são a chave para aumentar a eficiência da sua
-            operação. Acelere processos, reduza custos e ganhe mais
-            produtividade com uma plataforma completa de otimização de rotas e
-            gestão de entregas e coletas.
+            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
+            assumenda voluptates qui beatae quis id Quis cupiditate. Cum
+            veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
+            quis.
           </p>
-          <div className="lg:w-56">
-            <ButtonPrimary href="/">Quero uma demonstração</ButtonPrimary>
-          </div>
-        </div>
-        <div className="hidden lg:block absolute w-3/4 -right-36 top-0 h-full">
-          <div className="relative h-full">
-            <Image
-              style={{
-                objectFit: 'contain'
-              }}
-              fill
-              src="/images/pictures/home-banner-1.svg"
-              alt="Banner"
-            />
+          <div className="lg:w-56 text-center mx-[auto]">
+            <ButtonPrimary href="/">Quero saber mais</ButtonPrimary>
           </div>
         </div>
       </div>
