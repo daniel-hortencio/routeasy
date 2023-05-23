@@ -78,6 +78,40 @@ export const Solutions = () => {
       setLoaded(true)
     }
   })
+
+  const tab_list = [
+    {
+      index: 1,
+      title: 'Roteirização',
+      src: '/images/pictures/Screen roteirizacao.svg',
+      alt: 'Roteirização'
+    },
+    {
+      index: 2,
+      title: 'Gestão de entregas',
+      src: '/images/pictures/Screen gestao.svg',
+      alt: 'Gestão de Entregas'
+    },
+    {
+      index: 3,
+      title: 'Automação',
+      src: '/images/pictures/Screen automacao API.svg',
+      alt: 'Automação'
+    },
+    {
+      index: 4,
+      title: 'Aplicativo',
+      src: '/images/pictures/Screen aplicativo.svg',
+      alt: 'Aplicativo'
+    },
+    {
+      index: 5,
+      title: 'API',
+      src: '/images/pictures/Screen automacao API.svg',
+      alt: 'API'
+    }
+  ]
+
   return (
     <Section
       title={
@@ -90,114 +124,43 @@ export const Solutions = () => {
     >
       <div className="hidden md:block">
         <div className="mt-2 flex items-center justify-evenly">
-          <CardSoluctions
-            isActive={tab === 1}
-            onClick={() => setTab(1)}
-            title="Roteirização"
-          />
-          <CardSoluctions
-            isActive={tab === 2}
-            onClick={() => setTab(2)}
-            title="Gestão de entregas"
-          />
-          <CardSoluctions
-            isActive={tab === 3}
-            onClick={() => setTab(3)}
-            title="Automação"
-          />
-          <CardSoluctions
-            isActive={tab === 4}
-            onClick={() => setTab(4)}
-            title="Aplicativo"
-          />
-          <CardSoluctions
-            isActive={tab === 5}
-            onClick={() => setTab(5)}
-            title="API"
-          />
+          {tab_list.map(item => (
+            <CardSoluctions
+              key={item.index}
+              isActive={tab === item.index}
+              onClick={() => setTab(item.index)}
+              title={item.title}
+            />
+          ))}
         </div>
       </div>
       <div className="lg:hidden">
         <div ref={sliderRef} className="keen-slider ">
           <div className="ml-5 mt-2 flex items-center justify-between">
-            <div className="keen-slider__slide pr-6">
-              <CardSoluctions
-                isActive={tab === 1}
-                onClick={() => setTab(1)}
-                title="Roteirização"
-              />
-            </div>
-            <div className="keen-slider__slide pr-6">
-              <CardSoluctions
-                isActive={tab === 2}
-                onClick={() => setTab(2)}
-                title="Gestão de entregas"
-              />
-            </div>
-            <div className="keen-slider__slide pr-6">
-              <CardSoluctions
-                isActive={tab === 3}
-                onClick={() => setTab(3)}
-                title="Automação"
-              />
-            </div>
-            <div className="keen-slider__slide pr-6">
-              <CardSoluctions
-                isActive={tab === 4}
-                onClick={() => setTab(4)}
-                title="Aplicativo"
-              />
-            </div>
-            <div className="keen-slider__slide pr-6">
-              <CardSoluctions
-                isActive={tab === 5}
-                onClick={() => setTab(5)}
-                title="API"
-              />
-            </div>
+            {tab_list.map(item => (
+              <div className="keen-slider__slide pr-6" key={item.index}>
+                <CardSoluctions
+                  isActive={tab === item.index}
+                  onClick={() => setTab(item.index)}
+                  title={item.title}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
       <div className="w-full relative my-12 flex justify-center">
-        {tab === 1 && (
-          <Image
-            src="/images/pictures/Screen roteirizacao.svg"
-            width="842"
-            height="543"
-            alt="Roteirização"
-          />
-        )}
-        {tab === 2 && (
-          <Image
-            src="/images/pictures/Screen gestao.svg"
-            width="842"
-            height="543"
-            alt="Gestão de Entregas"
-          />
-        )}
-        {tab === 3 && (
-          <Image
-            src="/images/pictures/Screen automacao API.svg"
-            width="842"
-            height="543"
-            alt="Automação"
-          />
-        )}
-        {tab === 4 && (
-          <Image
-            src="/images/pictures/Screen aplicativo.svg"
-            width="280"
-            height="544"
-            alt="Aplicativo"
-          />
-        )}
-        {tab === 5 && (
-          <Image
-            src="/images/pictures/Screen automacao API.svg"
-            width="842"
-            height="543"
-            alt="API"
-          />
+        {tab_list.map(
+          item =>
+            tab === item.index && (
+              <Image
+                key={item.index}
+                src={item.src}
+                width="842"
+                height="543"
+                alt={item.alt}
+              />
+            )
         )}
       </div>
       <div className="md:flex mb-8 items-center justify-between">

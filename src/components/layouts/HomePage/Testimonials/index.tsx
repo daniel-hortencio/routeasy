@@ -7,7 +7,6 @@ import { Suspense } from 'react'
 import { ButtonWhite } from 'components/elements/Button'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { SlideTestimonials } from './Slide'
-import { Skeleton } from 'components/elements/Skeleton'
 
 export const Testimonials = () => {
   // const [loaded, setLoaded] = useState(false)
