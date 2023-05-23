@@ -1,3 +1,4 @@
+import { ButtonSecondary } from 'components/elements/Button'
 import { InputGroup, InputText } from 'components/elements/Inputs'
 import { Section } from 'components/elements/Section'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
@@ -35,6 +36,8 @@ export const ContactForm = () => {
         <InputGroup label="Quantidade de veículos">
           <InputText value={name} onChange={setName} />
         </InputGroup>
+
+        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
       </div>
     </Section>
   )
