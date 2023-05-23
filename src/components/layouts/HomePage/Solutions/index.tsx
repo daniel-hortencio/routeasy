@@ -7,8 +7,9 @@ import { useKeenSlider } from 'keen-slider/react'
 import { useEffect, useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { TextHighlight, Title } from 'components/elements/Texts'
+import Icon from 'components/elements/Icon'
 
-const CardSoluctions = ({ icon = '', title, onClick, isActive }) => {
+const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   return (
     <div
       onClick={onClick}
@@ -17,7 +18,7 @@ const CardSoluctions = ({ icon = '', title, onClick, isActive }) => {
       }`}
     >
       <div>
-        <div className="border border-white h-10 w-10 rounded-full m-auto">
+        <div className="border border-white rounded-lg h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center m-auto">
           {icon}
         </div>
         <div>
@@ -84,30 +85,35 @@ export const Solutions = () => {
       index: 1,
       title: 'Roteirização',
       src: '/images/pictures/Screen roteirizacao.svg',
+      icon: <Icon name="FaRoute" size={20} />,
       alt: 'Roteirização'
     },
     {
       index: 2,
       title: 'Gestão de entregas',
       src: '/images/pictures/Screen gestao.svg',
+      icon: <Icon name="BiChalkboard" size={20} />,
       alt: 'Gestão de Entregas'
     },
     {
       index: 3,
       title: 'Automação',
       src: '/images/pictures/Screen automacao API.svg',
+      icon: <Icon name="AiOutlineSetting" size={20} />,
       alt: 'Automação'
     },
     {
       index: 4,
       title: 'Aplicativo',
       src: '/images/pictures/Screen aplicativo.svg',
+      icon: <Icon name="FiSmartphone" size={20} />,
       alt: 'Aplicativo'
     },
     {
       index: 5,
       title: 'API',
       src: '/images/pictures/Screen automacao API.svg',
+      icon: <Icon name="HiArrowsPointingIn" size={20} />,
       alt: 'API'
     }
   ]
@@ -130,6 +136,7 @@ export const Solutions = () => {
               isActive={tab === item.index}
               onClick={() => setTab(item.index)}
               title={item.title}
+              icon={item.icon}
             />
           ))}
         </div>
@@ -143,6 +150,7 @@ export const Solutions = () => {
                   isActive={tab === item.index}
                   onClick={() => setTab(item.index)}
                   title={item.title}
+                  icon={item.icon}
                 />
               </div>
             ))}

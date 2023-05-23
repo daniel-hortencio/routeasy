@@ -2,6 +2,10 @@ import * as Fa from 'react-icons/fa'
 /* import * as Md from 'react-icons/md' */
 import * as Fi from 'react-icons/fi'
 import * as Hi from 'react-icons/hi'
+import * as Hi2 from 'react-icons/hi2'
+import * as Ai from 'react-icons/ai'
+import * as Fc from 'react-icons/fc'
+import * as Bi from 'react-icons/bi'
 /* import * as Cg from 'react-icons/cg'
 import * as Bi from 'react-icons/bi'
 import * as Io from 'react-icons/io'
@@ -11,7 +15,11 @@ import * as Hi from 'react-icons/hi' */
 export const AllIcons = {
   ...Fi,
   ...Fa,
-  ...Hi
+  ...Hi,
+  ...Ai,
+  ...Fc,
+  ...Bi,
+  ...Hi2
   /*   ...Md,
 
   ...Cg,
