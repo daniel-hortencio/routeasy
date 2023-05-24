@@ -24,6 +24,9 @@ module.exports = {
           600: '#1A1C30',
           700: '#0D0E18',
         },
+        bluescale: {
+          50: '#3BB5EF',
+        }
       },
       boxShadow: {
         '3xl': ' 0px -16px 4px rgba(0, 0, 0, 0.25)',
