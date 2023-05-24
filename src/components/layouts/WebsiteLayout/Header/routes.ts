@@ -1,9 +1,9 @@
 const routes = [
   { label: 'Início', href: '/' },
   { label: 'Soluções', href: '/solucoes' },
-  { label: 'Segmentos', href: '/' },
-  { label: 'Conteúdos', href: '/' },
-  { label: 'Sobre', href: '/' }
+  { label: 'Segmentos', href: '/segmentos' },
+  { label: 'Conteúdos', href: '/conteudos' },
+  { label: 'Sobre', href: '/sobre' }
 ]
 
 export default routes

@@ -1,16 +1,25 @@
+'use client'
 import Link from 'next/link'
 import routes from '../Header/routes'
+import { usePathname } from 'next/navigation'
 
 export const NavigationDesktop = () => {
+  const pathname = usePathname()
+
+  const getClassName = (isActive: boolean, index: number) => {
+    return `hover:text-primary-200 transition-all ${
+      isActive && 'text-primary-200'
+    }
+    ${index < routes.length - 1 && 'mr-8'}`
+  }
+
   return (
     <nav className="flex items-center">
       {routes.map((route, index) => (
         <Link
           key={index}
           href={route.href}
-          className={`hover:text-primary-200 transition-all ${
-            index < routes.length - 1 && 'mr-8'
-          }`}
+          className={getClassName(pathname === route.href, index)}
         >
           {route.label}
         </Link>

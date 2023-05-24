@@ -75,7 +75,7 @@ export const FAQ = () => {
       title={<Title>Dúvidas frequentes</Title>}
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <div className="flex justify-between">
+      <div className="flex justify-between px-12">
         <div className="w-5/12">
           <div className="rounded-lg p-6 border border-grayscale-500">
             <div className="bg-grayscale-500 rounded-md p-3 w-12 h-12 mb-4">
