@@ -4,7 +4,12 @@ import { FormEvent, useCallback, useState } from 'react'
 import * as yup from 'yup'
 
 import { ButtonSecondary } from 'components/elements/Button'
-import { InputGroup, InputText } from 'components/elements/Inputs'
+import {
+  InputGroup,
+  InputNumber,
+  InputPhone,
+  InputText
+} from 'components/elements/Inputs'
 import { Section } from 'components/elements/Section'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
@@ -13,7 +18,6 @@ const init_data = {
   name: '',
   phone: '',
   email: '',
-  segment: '',
   company: '',
   amountOfVehicles: ''
 }
@@ -35,18 +39,17 @@ export const ContactForm = () => {
     e.preventDefault()
 
     const contactFormSchema = yup.object().shape({
-      name: yup
-        .string()
-        .required('Nome obrigatório')
-        .min(1, 'Nome obrigatório'),
+      name: yup.string().min(1, 'Campo obrigatório'),
       email: yup
         .string()
-        .required('Email obrigatório')
+        .required('Campo obrigatório')
         .email('Insira um e-mail com formato válido'),
       phone: yup
         .string()
-        .required('Telefone obrigatório')
-        .min(9, 'Deve conter pelo menos 9 dígitos')
+        .required('Campo obrigatório')
+        .min(15, 'Deve conter pelo menos 9 dígitos'),
+      company: yup.string().required('Campo obrigatório'),
+      amountOfVehicles: yup.string().required('Campo obrigatório')
     })
 
     yupValidator({
@@ -81,35 +84,28 @@ export const ContactForm = () => {
             <InputText
               value={data.name}
               onChange={(value: string) => handleChange('name', value)}
-              placeholder="Placeholder"
+              placeholder="José da Silva"
             />
           </InputGroup>
           <InputGroup label="Telefone" error={errors.phone}>
-            <InputText
+            <InputPhone
               value={data.phone}
               onChange={(value: string) => handleChange('phone', value)}
-              placeholder="Placeholder"
+              placeholder="(00) 00000-0000"
             />
           </InputGroup>
           <InputGroup label="Email" error={errors.email}>
             <InputText
               value={data.email}
               onChange={(value: string) => handleChange('email', value)}
-              placeholder="Placeholder"
-            />
-          </InputGroup>
-          <InputGroup label="Segmento" error={errors.segment}>
-            <InputText
-              value={data.segment}
-              onChange={(value: string) => handleChange('segment', value)}
-              placeholder="Placeholder"
+              placeholder="josedasilva@gmail.com"
             />
           </InputGroup>
           <InputGroup label="Empresa" error={errors.company}>
             <InputText
               value={data.company}
               onChange={(value: string) => handleChange('company', value)}
-              placeholder="Placeholder"
+              placeholder="Routeasy"
             />
           </InputGroup>
           <InputGroup
@@ -117,12 +113,12 @@ export const ContactForm = () => {
             error={errors.amountOfVehicles}
             className="mb-10"
           >
-            <InputText
+            <InputNumber
               value={data.amountOfVehicles}
               onChange={(value: string) =>
                 handleChange('amountOfVehicles', value)
               }
-              placeholder="Placeholder"
+              placeholder="00"
             />
           </InputGroup>
         </div>
