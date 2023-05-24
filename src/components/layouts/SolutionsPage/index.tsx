@@ -5,6 +5,7 @@ import { FeaturedFrame } from './FeaturedFrame'
 import { Integrating } from '../WebsiteLayout/Integrating'
 import { Differentials } from './Differentials'
 import { Maestro } from '../WebsiteLayout/Maestro'
+import { FAQ } from '../WebsiteLayout/Faq'
 
 export const SolutionsPage = () => {
   return (
@@ -19,6 +20,7 @@ export const SolutionsPage = () => {
       <Maestro />
       <Integrating />
       <Segments />
+      <FAQ />
       <ContactForm />
     </>
   )

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
 import { useKeenSlider } from 'keen-slider/react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import Icon from 'components/elements/Icon'
@@ -13,7 +13,7 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   return (
     <div
       onClick={onClick}
-      className={`rounded-lg border w-44 h-40 border-grayscale-500 hover:bg-grayscale-600 cursor-pointer flex items-center justify-center ${
+      className={`rounded-lg border md:w-44 h-40 border-grayscale-500 hover:bg-grayscale-600 cursor-pointer flex items-center justify-center ${
         isActive && 'bg-grayscale-500'
       }`}
     >
@@ -45,74 +45,51 @@ const CardRoute = ({ icon = '', title }) => {
 export const Solutions = () => {
   const [tab, setTab] = useState(1)
 
-  const [windowWidth, setWindowWidth] = useState(null)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 640) {
-      return 3.25
-    }
-
-    return 2.4
-  }
-
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     initial: 0,
+    loop: true,
     slides: {
-      perView: useWindowWidth()
+      spacing: 20,
+      origin: 'center',
+      perView: 2.4
     },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
+    breakpoints: {
+      '(min-width: 640px)': {
+        slides: {
+          perView: 3.25
+        }
+      }
     }
   })
 
   const tab_list = [
     {
-      index: 1,
       title: 'Roteirização',
-      src: '/images/pictures/Screen roteirizacao.svg',
+      src: '/images/pictures/Screen_roteirizacao.svg',
       icon: <Icon name="FaRoute" size={20} />,
       alt: 'Roteirização'
     },
     {
-      index: 2,
       title: 'Gestão de entregas',
-      src: '/images/pictures/Screen gestao.svg',
+      src: '/images/pictures/Screen_gestao.svg',
       icon: <Icon name="BiChalkboard" size={20} />,
       alt: 'Gestão de Entregas'
     },
     {
-      index: 3,
       title: 'Automação',
-      src: '/images/pictures/Screen automacao API.svg',
+      src: '/images/pictures/Screen_automacao_API.svg',
       icon: <Icon name="AiOutlineSetting" size={20} />,
       alt: 'Automação'
     },
     {
-      index: 4,
       title: 'Aplicativo',
-      src: '/images/pictures/Screen aplicativo.svg',
+      src: '/images/pictures/Screen_aplicativo.svg',
       icon: <Icon name="FiSmartphone" size={20} />,
       alt: 'Aplicativo'
     },
     {
-      index: 5,
       title: 'API',
-      src: '/images/pictures/Screen automacao API.svg',
+      src: '/images/pictures/Screen_automacao_API.svg',
       icon: <Icon name="HiArrowsPointingIn" size={20} />,
       alt: 'API'
     }
@@ -120,8 +97,9 @@ export const Solutions = () => {
 
   return (
     <Section
+      noPadding
       title={
-        <Title>
+        <Title className="px-5">
           Encontre as soluções ideais para sua{' '}
           <TextHighlight>operação</TextHighlight>
         </Title>
@@ -130,11 +108,11 @@ export const Solutions = () => {
     >
       <div className="hidden md:block">
         <div className="mt-2 flex items-center justify-evenly">
-          {tab_list.map(item => (
+          {tab_list.map((item, index) => (
             <CardSoluctions
-              key={item.index}
-              isActive={tab === item.index}
-              onClick={() => setTab(item.index)}
+              key={index}
+              isActive={tab === index}
+              onClick={() => setTab(index)}
               title={item.title}
               icon={item.icon}
             />
@@ -142,36 +120,30 @@ export const Solutions = () => {
         </div>
       </div>
       <div className="lg:hidden">
-        <div ref={sliderRef} className="keen-slider ">
-          <div className="ml-5 mt-2 flex items-center justify-between">
-            {tab_list.map(item => (
-              <div className="keen-slider__slide pr-6" key={item.index}>
-                <CardSoluctions
-                  isActive={tab === item.index}
-                  onClick={() => setTab(item.index)}
-                  title={item.title}
-                  icon={item.icon}
-                />
-              </div>
-            ))}
-          </div>
+        <div ref={sliderRef} className="keen-slider">
+          {tab_list.map((item, index) => (
+            <div className="keen-slider__slide" key={index}>
+              <CardSoluctions
+                isActive={tab === index}
+                onClick={() => setTab(index)}
+                title={item.title}
+                icon={item.icon}
+              />
+            </div>
+          ))}
         </div>
       </div>
       <div className="w-full relative my-12 flex justify-center">
         {tab_list.map(
-          item =>
-            tab === item.index && (
-              <Image
-                key={item.index}
-                src={item.src}
-                width="842"
-                height="543"
-                alt={item.alt}
-              />
+          (item, index) =>
+            tab === index && (
+              <div className="px-5" key={index}>
+                <Image src={item.src} width="842" height="543" alt={item.alt} />
+              </div>
             )
         )}
       </div>
-      <div className="md:flex mb-8 items-center justify-between">
+      <div className="md:flex px-5 mb-8 items-center justify-between">
         <CardRoute
           icon=""
           title="Personalização de objetivos de otimização"
@@ -184,12 +156,12 @@ export const Solutions = () => {
         ></CardRoute>
       </div>
       <div className="">
-        <p className="md:max-w-[60%] m-auto text-grayscale-200 text-base font-normal text-center">
+        <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
           Com o Routing Studio você pode realizar todo o planajamento de suas
           rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
         </p>
       </div>
-      <div className="md:w-32 m-auto mt-8 mb-20 md:mb-24 md:mt-12">
+      <div className="md:w-32 m-auto px-5 mt-8 mb-20 md:mb-24 md:mt-12">
         <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
       </div>
     </Section>
