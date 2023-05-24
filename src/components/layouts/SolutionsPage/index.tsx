@@ -4,6 +4,7 @@ import { ContactForm } from './ContactForm'
 import { FeaturedFrame } from './FeaturedFrame'
 import { Integrating } from '../WebsiteLayout/Integrating'
 import { Differentials } from './Differentials'
+import { Maestro } from '../WebsiteLayout/Maestro'
 
 export const SolutionsPage = () => {
   return (
@@ -15,6 +16,7 @@ export const SolutionsPage = () => {
         image="/images/pictures/max-mid.png"
       />
       <Differentials />
+      <Maestro />
       <Integrating />
       <Segments />
       <ContactForm />
