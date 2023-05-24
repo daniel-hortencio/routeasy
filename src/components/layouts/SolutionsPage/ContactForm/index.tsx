@@ -4,7 +4,12 @@ import { FormEvent, useCallback, useState } from 'react'
 import * as yup from 'yup'
 
 import { ButtonSecondary } from 'components/elements/Button'
-import { InputGroup, InputText } from 'components/elements/Inputs'
+import {
+  InputGroup,
+  InputNumber,
+  InputPhone,
+  InputText
+} from 'components/elements/Inputs'
 import { Section } from 'components/elements/Section'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
@@ -85,7 +90,7 @@ export const ContactForm = () => {
             />
           </InputGroup>
           <InputGroup label="Telefone" error={errors.phone}>
-            <InputText
+            <InputPhone
               value={data.phone}
               onChange={(value: string) => handleChange('phone', value)}
               placeholder="Placeholder"
@@ -117,7 +122,7 @@ export const ContactForm = () => {
             error={errors.amountOfVehicles}
             className="mb-10"
           >
-            <InputText
+            <InputNumber
               value={data.amountOfVehicles}
               onChange={(value: string) =>
                 handleChange('amountOfVehicles', value)

@@ -1,18 +1,52 @@
 import { Dispatch, ReactNode, SetStateAction } from 'react'
+import { mask } from 'utils/masks'
 
 interface InputProps {
   value: string
   onChange: Dispatch<SetStateAction<string>>
   placeholder: string
+  type?: 'text' | 'tel'
 }
 
-export const InputText = ({ value, onChange, placeholder }: InputProps) => {
+export const InputText = ({
+  value,
+  onChange,
+  placeholder,
+  type
+}: InputProps) => {
   return (
     <input
       className="text-sm focus:border-none focus:outline-none bg-grayscale-500 text-white placeholder:text-grayscale-200 py-4 px-[18px] w-full rounded"
       value={value}
       onChange={e => onChange(e.target.value)}
       placeholder={placeholder}
+      type=""
+    />
+  )
+}
+
+export const InputNumber = ({ value, onChange, placeholder }: InputProps) => {
+  return (
+    <InputText
+      type="tel"
+      value={value}
+      placeholder={placeholder}
+      onChange={(value: string) => {
+        onChange(mask.onlyNumbers(value))
+      }}
+    />
+  )
+}
+
+export const InputPhone = ({ value, onChange, placeholder }: InputProps) => {
+  return (
+    <InputText
+      type="tel"
+      value={value}
+      placeholder={placeholder}
+      onChange={(value: string) => {
+        onChange(mask.phoneNumber(value))
+      }}
     />
   )
 }
