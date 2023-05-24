@@ -3,6 +3,7 @@ import { Segments } from '../WebsiteLayout/Segments'
 import { ContactForm } from './ContactForm'
 import { FeaturedFrame } from './FeaturedFrame'
 import { Integrating } from '../WebsiteLayout/Integrating'
+import { FAQ } from '../WebsiteLayout/Faq'
 
 export const SolutionsPage = () => {
   return (
@@ -15,6 +16,7 @@ export const SolutionsPage = () => {
       />
       <Integrating />
       <Segments />
+      <FAQ />
       <ContactForm />
     </>
   )
