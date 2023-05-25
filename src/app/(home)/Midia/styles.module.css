@@ -3,7 +3,7 @@
 }
 
 .border {
-  border-left: 4px solid #3CBC8D;
+  border-left: 4px solid #3cbc8d;
 }
 
 .MidiaBoxPrimary {
@@ -20,7 +20,6 @@
 
 .MidiaText {
   font-size: 17px;
-  font-family: "Open Sans";
   text-transform: uppercase;
   font-weight: 600;
   padding: 0 1rem;

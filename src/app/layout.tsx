@@ -16,9 +16,8 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
-        <main className={open_sans.className}>
-          {' '}
+      <body className={open_sans.className}>
+        <main>
           <WebsiteLayout>{children}</WebsiteLayout>
         </main>
       </body>

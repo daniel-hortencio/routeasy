@@ -3,13 +3,29 @@
 import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 
-import { Suspense } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { ButtonWhite } from 'components/elements/Button'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { SlideTestimonials } from './Slide'
 
 export const Testimonials = () => {
   // const [loaded, setLoaded] = useState(false)
+
+  const [count, setCount] = useState(50)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (count < 600) {
+        setCount(prevCount => prevCount + (prevCount < 100 ? 50 : 100))
+      } else {
+        setCount(50)
+      }
+    }, 500)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [count])
 
   return (
     <Section
@@ -41,10 +57,10 @@ export const Testimonials = () => {
             Nossos clientes já reduziram
           </p>
           <h1 className="text-[88px] font-semibold mb-14 hidden lg:flex justify-center">
-            50 Toneladas de Co2
+            {count} Toneladas de Co2
           </h1>
           <h1 className="lg:hidden ">
-            <span className="block text-[88px] font-semibold">50</span>
+            <span className="block text-[88px] font-semibold">{count}</span>
             <span className="block text-[32px] mb-2 font-medium">
               Toneladas <br />
               de
