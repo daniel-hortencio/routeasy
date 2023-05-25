@@ -4,10 +4,10 @@ import { ButtonPrimary } from 'components/elements/Button'
 
 export const Banner = () => {
   return (
-    <Section className="h-screen flex">
+    <Section className="h-screen flex mb-12">
       <div className="flex h-full relative min-h-[640px]">
-        <div className="md:max-w-lg md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-white uppercase font-medium text-5xl lg:text-6xl pb-5">
+        <div className="md:max-w-xl md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left">
+          <h1 className="text-white uppercase font-semibold text-5xl lg:text-[50px]/[68px] pb-5">
             A melhor solução para{' '}
             <span className="text-primary-100">last-mile</span>
           </h1>
@@ -21,7 +21,7 @@ export const Banner = () => {
             <ButtonPrimary href="/">Quero uma demonstração</ButtonPrimary>
           </div>
         </div>
-        <div className="hidden lg:block absolute w-3/4 -right-36 top-0 h-full">
+        <div className="hidden lg:block absolute w-[70%] -right-36 top-0 h-full">
           <div className="relative h-full">
             <Image
               style={{
