@@ -69,7 +69,7 @@ export const ContactForm = () => {
     <Section className="mb-20">
       <form
         onSubmit={handleSubmit}
-        className="bg-grayscale-600 px-4 pt-20 pb-12 rounded-lg"
+        className="bg-grayscale-600 px-4 lg:px-24 pt-20 pb-12 rounded-lg"
       >
         <Title className="mb-4">
           Nós entramos em <TextHighlight>contato</TextHighlight> com você!
@@ -94,7 +94,11 @@ export const ContactForm = () => {
               placeholder="(00) 00000-0000"
             />
           </InputGroup>
-          <InputGroup label="Email" error={errors.email}>
+          <InputGroup
+            label="Email"
+            error={errors.email}
+            className="sm:col-span-2 md:col-span-1"
+          >
             <InputText
               value={data.email}
               onChange={(value: string) => handleChange('email', value)}
