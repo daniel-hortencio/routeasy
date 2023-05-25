@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import S from './styles.module.css'

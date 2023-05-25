@@ -1,3 +1,5 @@
+'use client'
+
 import { Section } from 'components/elements/Section'
 import { Title } from 'components/elements/Texts'
 import { ButtonPrimary } from 'components/elements/Button'

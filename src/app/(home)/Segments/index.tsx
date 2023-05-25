@@ -1,3 +1,5 @@
+'use client'
+
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
