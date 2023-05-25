@@ -56,7 +56,7 @@ interface IContentProps {
 const TabItem = ({ label, onClick, isActive }: ITabProps) => {
   return (
     <button
-      className={`w-[170px] h-12 whitespace-nowrap rounded-full ${
+      className={`w-full lg:w-[170px] h-12 whitespace-nowrap rounded-full ${
         isActive && 'bg-primary-100'
       }`}
       onClick={onClick}
@@ -116,34 +116,36 @@ export const Segments = () => {
   })
 
   return (
-    <Section
-      title={
-        <Title>
-          Soluções que se <TextHighlight>adaptam</TextHighlight> ao seu negócio
-        </Title>
-      }
-      className="mb-20"
-      subtitle="Sabemos que cada operação é única e, por isso, nosso time de especialistas está preparado para: "
-    >
-      <div className="hidden md:block">
-        <div className="flex mb-12 bg-grayscale-500 p-2 w-min mx-auto items-center rounded-full">
-          {segmentsContent.map((button, index) => (
-            <TabItem
-              key={index}
-              label={button.label}
-              isActive={tab === index}
-              onClick={() => setTab(index)}
-            />
-          ))}
+    <>
+      <Section
+        title={
+          <Title>
+            Soluções que se <TextHighlight>adaptam</TextHighlight> ao seu
+            negócio
+          </Title>
+        }
+        subtitle="Sabemos que cada operação é única e, por isso, nosso time de especialistas está preparado para: "
+      >
+        <div className="hidden lg:block">
+          <div className="flex mb-12 bg-grayscale-500 p-2 w-min mx-auto items-center rounded-full">
+            {segmentsContent.map((button, index) => (
+              <TabItem
+                key={index}
+                label={button.label}
+                isActive={tab === index}
+                onClick={() => setTab(index)}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </Section>
 
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <div ref={sliderRef} className="keen-slider ">
           <div className="flex">
             {segmentsContent.map((button, index) => (
-              <div key={index} className="keen-slider__slide pr-6">
-                <div className="mb-12 bg-grayscale-500 w-[170px] h-12 mx-auto items-center rounded-full">
+              <div key={index} className="keen-slider__slide pl-6">
+                <div className="mb-12 bg-grayscale-500 w-full h-12 mx-auto items-center rounded-full">
                   <TabItem
                     label={button.label}
                     isActive={tab === index}
@@ -156,20 +158,22 @@ export const Segments = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center md:w-[878px] m-auto pt-6 px-6 md:px-16 pb-10 rounded-lg bg-grayscale-500">
-        {segmentsContent.map(
-          (content, index) =>
-            tab === index && (
-              <ContentItem
-                key={index}
-                title={content.title}
-                text={content.text}
-                image={content.image}
-                altImage={content.label}
-              />
-            )
-        )}
-      </div>
-    </Section>
+      <Section className="mb-20">
+        <div className="flex justify-between items-center md:w-[878px] m-auto pt-6 px-6 md:px-16 pb-10 rounded-lg bg-grayscale-500">
+          {segmentsContent.map(
+            (content, index) =>
+              tab === index && (
+                <ContentItem
+                  key={index}
+                  title={content.title}
+                  text={content.text}
+                  image={content.image}
+                  altImage={content.label}
+                />
+              )
+          )}
+        </div>
+      </Section>
+    </>
   )
 }
