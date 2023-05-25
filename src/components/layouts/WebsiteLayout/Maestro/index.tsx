@@ -1,3 +1,5 @@
+'use client'
+
 import { Section } from 'components/elements/Section'
 import { ButtonSecondary } from 'components/elements/Button'
 import React from 'react'
