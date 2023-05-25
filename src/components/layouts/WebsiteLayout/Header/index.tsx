@@ -16,11 +16,18 @@ export const Header = () => {
       const distance = window.pageYOffset
       setScrollTopDistance(distance)
     }
-
     window.addEventListener('scroll', handleScroll)
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpenMobileMenu(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 

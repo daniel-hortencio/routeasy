@@ -13,6 +13,7 @@ module.exports = {
           50: '#B0E6D2',
           100: '#3CBC8D',
           200: '#32AA82',
+          DEFAULT: '#3CBC8D',
         },
         grayscale: {
           50: '#EDEDED',
