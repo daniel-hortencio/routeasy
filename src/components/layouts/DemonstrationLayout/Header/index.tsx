@@ -38,7 +38,7 @@ export const Header = () => {
       }`}
     >
       <div className="pt-4 lg:pt-0 flex items-end lg:items-center justify-between">
-        <Link href="./" className="relative w-36 h-12">
+        <Link href="/" className="relative w-36 h-12">
           <Image
             fill
             alt="Routeasy"

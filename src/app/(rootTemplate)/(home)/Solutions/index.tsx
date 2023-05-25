@@ -13,7 +13,7 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   return (
     <div
       onClick={onClick}
-      className={`rounded-lg border md:w-44 h-40 border-grayscale-500 hover:bg-grayscale-600 cursor-pointer flex items-center justify-center ${
+      className={`rounded-lg border w-full lg:w-44 h-40 border-grayscale-500 hover:bg-grayscale-600 cursor-pointer flex items-center justify-center ${
         isActive && 'bg-grayscale-500'
       }`}
     >
@@ -68,31 +68,31 @@ export const Solutions = () => {
     {
       title: 'Roteirização',
       src: '/images/pictures/Screen_roteirizacao.svg',
-      icon: <Icon name="FaRoute" size={20} />,
+      icon: <Icon name="FaRoute" size={20} color="white" />,
       alt: 'Roteirização'
     },
     {
       title: 'Gestão de entregas',
       src: '/images/pictures/Screen_gestao.svg',
-      icon: <Icon name="BiChalkboard" size={20} />,
+      icon: <Icon name="BiChalkboard" size={20} color="white" />,
       alt: 'Gestão de Entregas'
     },
     {
       title: 'Automação',
       src: '/images/pictures/Screen_automacao_API.svg',
-      icon: <Icon name="AiOutlineSetting" size={20} />,
+      icon: <Icon name="AiOutlineSetting" size={20} color="white" />,
       alt: 'Automação'
     },
     {
       title: 'Aplicativo',
       src: '/images/pictures/Screen_aplicativo.svg',
-      icon: <Icon name="FiSmartphone" size={20} />,
+      icon: <Icon name="FiSmartphone" size={20} color="white" />,
       alt: 'Aplicativo'
     },
     {
       title: 'API',
       src: '/images/pictures/Screen_automacao_API.svg',
-      icon: <Icon name="HiArrowsPointingIn" size={20} />,
+      icon: <Icon name="HiArrowsPointingIn" size={20} color="white" />,
       alt: 'API'
     }
   ]
@@ -100,50 +100,52 @@ export const Solutions = () => {
   const list_soluctions = [
     {
       title: 'Personalização de objetivos de otimização',
-      icon: <Icon name="FiEdit2" size={20} />
+      icon: <Icon name="FiEdit2" size={20} color="white" />
     },
     {
       title: 'Entregas e coletas na mesma rota',
-      icon: <Icon name="FiPackage" size={20} />
+      icon: <Icon name="FiPackage" size={20} color="white" />
     },
     {
       title: 'Resequenciamento automático  ',
-      icon: <Icon name="TfiLayoutMenuSeparated" size={20} />
+      icon: <Icon name="TfiLayoutMenuSeparated" size={20} color="white" />
     },
     {
       title: 'Configuração de restrições operacionais',
-      icon: <Icon name="RiFileSettingsLine" size={20} />
+      icon: <Icon name="RiFileSettingsLine" size={20} color="white" />
     }
   ]
 
   return (
-    <Section
-      className="pb-32"
-      title={
-        <Title className="px-5">
-          Encontre as soluções ideais para sua{' '}
-          <TextHighlight>operação</TextHighlight>
-        </Title>
-      }
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
-    >
-      <div className="hidden md:block pb-16">
-        <div className="mt-2 flex items-center justify-evenly">
-          {tab_list.map((item, index) => (
-            <CardSoluctions
-              key={index}
-              isActive={tab === index}
-              onClick={() => setTab(index)}
-              title={item.title}
-              icon={item.icon}
-            />
-          ))}
+    <>
+      <Section
+        title={
+          <Title className="px-5">
+            Encontre as soluções ideais para sua{' '}
+            <TextHighlight>operação</TextHighlight>
+          </Title>
+        }
+        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      >
+        <div className="hidden lg:block">
+          <div className="mt-2 flex items-center justify-evenly">
+            {tab_list.map((item, index) => (
+              <CardSoluctions
+                key={index}
+                isActive={tab === index}
+                onClick={() => setTab(index)}
+                title={item.title}
+                icon={item.icon}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </Section>
+
       <div className="lg:hidden">
         <div ref={sliderRef} className="keen-slider">
           {tab_list.map((item, index) => (
-            <div className="keen-slider__slide" key={index}>
+            <div className="keen-slider__slide pl-5" key={index}>
               <CardSoluctions
                 isActive={tab === index}
                 onClick={() => setTab(index)}
@@ -154,35 +156,37 @@ export const Solutions = () => {
           ))}
         </div>
       </div>
-      <div className="w-full relative mb-4 flex justify-center h-[543px]">
-        {tab_list.map(
-          (item, index) =>
-            tab === index && (
-              <div className="px-5" key={index}>
-                <Image src={item.src} fill alt={item.alt} />
-              </div>
-            )
-        )}
-      </div>
-      <div>
-        <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-12">
-          Imagem meramente ilustrativa
-        </p>
-      </div>
-      <div className="md:flex px-5 mb-10 items-center justify-between">
-        {list_soluctions.map((item, index) => (
-          <CardRoute key={index} title={item.title} icon={item.icon} />
-        ))}
-      </div>
-      <div className="pb-16">
-        <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
-          Com o Routing Studio você pode realizar todo o planajamento de suas
-          rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
-        </p>
-      </div>
-      <div className="md:w-32 m-auto">
-        <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
-      </div>
-    </Section>
+      <Section>
+        <div className="mt-16 w-full relative mb-4 flex justify-center h-[543px]">
+          {tab_list.map(
+            (item, index) =>
+              tab === index && (
+                <div className="px-5" key={index}>
+                  <Image src={item.src} fill alt={item.alt} />
+                </div>
+              )
+          )}
+        </div>
+        <div>
+          <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-12">
+            Imagem meramente ilustrativa
+          </p>
+        </div>
+        <div className="md:flex px-5 mb-10 items-center justify-between">
+          {list_soluctions.map((item, index) => (
+            <CardRoute key={index} title={item.title} icon={item.icon} />
+          ))}
+        </div>
+        <div className="pb-16">
+          <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
+            Com o Routing Studio você pode realizar todo o planajamento de suas
+            rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
+          </p>
+        </div>
+        <div className="md:w-32 m-auto">
+          <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
+        </div>
+      </Section>
+    </>
   )
 }

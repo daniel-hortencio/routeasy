@@ -20,7 +20,8 @@ a,
 span,
 strong,
 small,
-label {
+label,
+p {
   color: white;
 }
 

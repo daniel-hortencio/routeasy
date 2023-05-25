@@ -26,7 +26,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer border-2 border-grayscale-500 w-12 h-12 flex items-center justify-center"
+        className="cursor-pointer border-2 border-grayscale-500 w-12 h-12 flex items-center justify-center text-white"
       >
         <Icon name={isOpen ? 'FiX' : 'FiMenu'} size={24} />
       </button>
