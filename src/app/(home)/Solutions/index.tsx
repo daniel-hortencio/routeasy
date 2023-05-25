@@ -97,7 +97,7 @@ export const Solutions = () => {
     }
   ]
 
-  const tab_soluctions = [
+  const list_soluctions = [
     {
       title: 'Personalização de objetivos de otimização',
       icon: <Icon name="FiEdit2" size={20} />
@@ -170,11 +170,11 @@ export const Solutions = () => {
         </p>
       </div>
       <div className="md:flex px-5 mb-10 items-center justify-between">
-        {tab_soluctions.map((item, index) => (
+        {list_soluctions.map((item, index) => (
           <CardRoute key={index} title={item.title} icon={item.icon} />
         ))}
       </div>
-      <div className="">
+      <div className="pb-16">
         <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
           Com o Routing Studio você pode realizar todo o planajamento de suas
           rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
