@@ -11,7 +11,7 @@ import { Testimonials } from './Testimonials'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Banner />
       <Clients />
       <Solutions />
@@ -22,6 +22,6 @@ export default function Home() {
       <Testimonials />
       <Midia />
       <Blog />
-    </div>
+    </>
   )
 }
