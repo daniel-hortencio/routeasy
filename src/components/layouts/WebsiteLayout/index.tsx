@@ -9,7 +9,7 @@ interface Props {
 
 export const WebsiteLayout = ({ children }: Props) => {
   return (
-    <div className="bg-grayscale-700 relative">
+    <div className="relative">
       <div
         className="absolute w-full h-screen"
         style={{

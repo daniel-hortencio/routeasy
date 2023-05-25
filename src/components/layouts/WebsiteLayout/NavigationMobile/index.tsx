@@ -50,7 +50,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
           </div>
 
           <div className="flex items-center">
-            <ButtonSecondary href="/">
+            <ButtonSecondary href="/demonstracao">
               Solicite uma Demonstração
             </ButtonSecondary>
           </div>

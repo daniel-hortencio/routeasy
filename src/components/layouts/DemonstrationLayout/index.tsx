@@ -8,7 +8,7 @@ interface Props {
 
 export const DemonstrationLayout = ({ children }: Props) => {
   return (
-    <div className="bg-grayscale-700 relative">
+    <div className="relative">
       <Header />
       <main>{children}</main>
     </div>

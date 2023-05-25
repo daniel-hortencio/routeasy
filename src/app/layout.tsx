@@ -1,6 +1,5 @@
 import { Open_Sans } from '@next/font/google'
 
-import { WebsiteLayout } from 'components/layouts/WebsiteLayout'
 import '../styles/global.css'
 
 const open_sans = Open_Sans({
@@ -17,7 +16,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={open_sans.className}>
-        <main>{children}</main>
+        <main className="bg-grayscale-700 min-h-screen">{children}</main>
       </body>
     </html>
   )
