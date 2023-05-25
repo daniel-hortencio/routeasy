@@ -31,12 +31,14 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   )
 }
 
-const CardRoute = ({ icon = '', title }) => {
+const CardRoute = ({ icon, title }) => {
   return (
     <div className="rounded-lg border md:w-60 h-16 border-grayscale-500 cursor-pointer flex items-center justify-start md:justify-center px-4 mx-auto mb-4 md:mb-0">
-      <div className="border border-white h-6 w-6">{icon}</div>
+      <div className="flex items-center justify-center h-[30px] w-[50px] bg-grayscale-500 rounded-[4px]">
+        {icon}
+      </div>
       <div>
-        <p className="text-sm font-sans font-semibold ml-8">{title}</p>
+        <p className="text-sm font-sans font-semibold ml-4">{title}</p>
       </div>
     </div>
   )
@@ -95,9 +97,28 @@ export const Solutions = () => {
     }
   ]
 
+  const tab_soluctions = [
+    {
+      title: 'Personalização de objetivos de otimização',
+      icon: <Icon name="FiEdit2" size={20} />
+    },
+    {
+      title: 'Entregas e coletas na mesma rota',
+      icon: <Icon name="FiPackage" size={20} />
+    },
+    {
+      title: 'Resequenciamento automático  ',
+      icon: <Icon name="TfiLayoutMenuSeparated" size={20} />
+    },
+    {
+      title: 'Configuração de restrições operacionais',
+      icon: <Icon name="RiFileSettingsLine" size={20} />
+    }
+  ]
+
   return (
     <Section
-      noPadding
+      className="pb-32"
       title={
         <Title className="px-5">
           Encontre as soluções ideais para sua{' '}
@@ -106,7 +127,7 @@ export const Solutions = () => {
       }
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <div className="hidden md:block">
+      <div className="hidden md:block pb-16">
         <div className="mt-2 flex items-center justify-evenly">
           {tab_list.map((item, index) => (
             <CardSoluctions
@@ -133,27 +154,25 @@ export const Solutions = () => {
           ))}
         </div>
       </div>
-      <div className="w-full relative my-12 flex justify-center">
+      <div className="w-full relative mb-4 flex justify-center h-[543px]">
         {tab_list.map(
           (item, index) =>
             tab === index && (
               <div className="px-5" key={index}>
-                <Image src={item.src} width="842" height="543" alt={item.alt} />
+                <Image src={item.src} fill alt={item.alt} />
               </div>
             )
         )}
       </div>
-      <div className="md:flex px-5 mb-8 items-center justify-between">
-        <CardRoute
-          icon=""
-          title="Personalização de objetivos de otimização"
-        ></CardRoute>
-        <CardRoute icon="" title="Entregas e coletas na mesma rota"></CardRoute>
-        <CardRoute icon="" title="Resequenciamento automático"></CardRoute>
-        <CardRoute
-          icon=""
-          title="Configuração de restrições operacionais"
-        ></CardRoute>
+      <div>
+        <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-12">
+          Imagem meramente ilustrativa
+        </p>
+      </div>
+      <div className="md:flex px-5 mb-10 items-center justify-between">
+        {tab_soluctions.map((item, index) => (
+          <CardRoute key={index} title={item.title} icon={item.icon} />
+        ))}
       </div>
       <div className="">
         <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
@@ -161,7 +180,7 @@ export const Solutions = () => {
           rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
         </p>
       </div>
-      <div className="md:w-32 m-auto px-5 mt-8 mb-20 md:mb-24 md:mt-12">
+      <div className="md:w-32 m-auto">
         <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
       </div>
     </Section>
