@@ -33,7 +33,7 @@ export const NavigationDesktop = () => {
           Login
         </Link>
         <Link
-          href="/"
+          href="/demonstracao"
           className="ml-10 text-primary-100 hover:text-primary-200 border-[1px] rounded border-primary-100 hover:border-primary-200 transition-all h-12 w-36 flex items-center justify-center"
         >
           Demonstração

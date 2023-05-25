@@ -17,9 +17,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={open_sans.className}>
-        <main>
-          <WebsiteLayout>{children}</WebsiteLayout>
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   )
