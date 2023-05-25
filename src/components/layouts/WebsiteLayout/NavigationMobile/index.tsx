@@ -3,11 +3,16 @@
 import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import Link from 'next/link'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import routes from '../Header/routes'
 import { usePathname } from 'next/navigation'
 
-export const NavigationMobile = () => {
+interface Props {
+  isOpen: boolean
+  setIsOpen: Dispatch<SetStateAction<boolean>>
+}
+
+export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
   const pathname = usePathname()
 
   const getClassName = (isActive: boolean, index: number) => {
@@ -17,20 +22,18 @@ export const NavigationMobile = () => {
     ${index < routes.length - 1 && 'mr-8'}`
   }
 
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer border-2 border-grayscale-700 w-12 h-12 flex items-center justify-center"
+        className="cursor-pointer border-2 border-grayscale-500 w-12 h-12 flex items-center justify-center"
       >
         <Icon name={isOpen ? 'FiX' : 'FiMenu'} size={24} />
       </button>
       <nav
         onClick={() => setIsOpen(false)}
-        className={`pt-[124px] z-50 fixed h-screen top-0 left-0 overflow-hidden ${
-          isOpen ? 'w-full' : 'w-0'
+        className={`pt-[124px] z-50 fixed h-screen top-0 left-0 transition-opacity overflow-hidden ${
+          isOpen ? 'w-full opacity-100' : 'w-0 opacity-0'
         }`}
       >
         <div className="bg-grayscale-700 flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
