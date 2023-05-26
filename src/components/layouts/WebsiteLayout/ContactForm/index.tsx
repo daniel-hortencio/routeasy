@@ -10,7 +10,6 @@ import {
   InputPhone,
   InputText
 } from 'components/elements/Inputs'
-import { Section } from 'components/elements/Section'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
 
@@ -66,71 +65,69 @@ export const ContactForm = () => {
   }
 
   return (
-    <Section className="mb-20">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-grayscale-600 px-4 lg:px-24 pt-20 pb-12 rounded-lg"
-      >
-        <Title className="mb-4">
-          Nós entramos em <TextHighlight>contato</TextHighlight> com você!
-        </Title>
-        <Text className="text-center mb-10">
-          Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-          assumenda voluptates qui beatae quis id Quis cupiditate.{' '}
-        </Text>
+    <form
+      onSubmit={handleSubmit}
+      className="bg-grayscale-600 px-4 lg:px-24 pt-20 pb-12 rounded-lg"
+    >
+      <Title className="mb-4 text-3xl text-center">
+        Nós entramos em <TextHighlight>contato</TextHighlight> com você!
+      </Title>
+      <Text className="text-center mb-10">
+        Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
+        assumenda voluptates qui beatae quis id Quis cupiditate.{' '}
+      </Text>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
-          <InputGroup label="Nome" error={errors.name}>
-            <InputText
-              value={data.name}
-              onChange={(value: string) => handleChange('name', value)}
-              placeholder="José da Silva"
-            />
-          </InputGroup>
-          <InputGroup label="Telefone" error={errors.phone}>
-            <InputPhone
-              value={data.phone}
-              onChange={(value: string) => handleChange('phone', value)}
-              placeholder="(00) 00000-0000"
-            />
-          </InputGroup>
-          <InputGroup
-            label="Email"
-            error={errors.email}
-            className="sm:col-span-2 md:col-span-1"
-          >
-            <InputText
-              value={data.email}
-              onChange={(value: string) => handleChange('email', value)}
-              placeholder="josedasilva@gmail.com"
-            />
-          </InputGroup>
-          <InputGroup label="Empresa" error={errors.company}>
-            <InputText
-              value={data.company}
-              onChange={(value: string) => handleChange('company', value)}
-              placeholder="Routeasy"
-            />
-          </InputGroup>
-          <InputGroup
-            label="Quantidade de veículos"
-            error={errors.amountOfVehicles}
-            className="mb-10"
-          >
-            <InputNumber
-              value={data.amountOfVehicles}
-              onChange={(value: string) =>
-                handleChange('amountOfVehicles', value)
-              }
-              placeholder="00"
-            />
-          </InputGroup>
-        </div>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
+        <InputGroup label="Nome" error={errors.name}>
+          <InputText
+            value={data.name}
+            onChange={(value: string) => handleChange('name', value)}
+            placeholder="José da Silva"
+          />
+        </InputGroup>
+        <InputGroup label="Telefone" error={errors.phone}>
+          <InputPhone
+            value={data.phone}
+            onChange={(value: string) => handleChange('phone', value)}
+            placeholder="(00) 00000-0000"
+          />
+        </InputGroup>
+        <InputGroup
+          label="Email"
+          error={errors.email}
+          className="sm:col-span-2 md:col-span-1"
+        >
+          <InputText
+            value={data.email}
+            onChange={(value: string) => handleChange('email', value)}
+            placeholder="josedasilva@gmail.com"
+          />
+        </InputGroup>
+        <InputGroup label="Empresa" error={errors.company}>
+          <InputText
+            value={data.company}
+            onChange={(value: string) => handleChange('company', value)}
+            placeholder="Routeasy"
+          />
+        </InputGroup>
+        <InputGroup
+          label="Quantidade de veículos"
+          error={errors.amountOfVehicles}
+          className="mb-10"
+        >
+          <InputNumber
+            value={data.amountOfVehicles}
+            onChange={(value: string) =>
+              handleChange('amountOfVehicles', value)
+            }
+            placeholder="00"
+          />
+        </InputGroup>
+      </div>
 
-        <div className="sm:w-20 sm:mx-auto">
-          <ButtonSecondary type="submit">Enviar</ButtonSecondary>
-        </div>
-      </form>
-    </Section>
+      <div className="sm:w-20 sm:mx-auto">
+        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
+      </div>
+    </form>
   )
 }
