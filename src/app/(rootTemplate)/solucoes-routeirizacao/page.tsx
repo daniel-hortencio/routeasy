@@ -1,5 +1,4 @@
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
-import { FeaturedFrame } from './FeaturedFrame'
 import { Integrating } from 'components/layouts/WebsiteLayout/Integrating'
 import { Differentials } from './Differentials'
 import { Maestro } from 'components/layouts/WebsiteLayout/Maestro'
@@ -11,7 +10,7 @@ import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
 import { TextHighlight, Title } from 'components/elements/Texts'
 
-export default function Solutions() {
+export default function SolutionsRoteirizacao() {
   return (
     <>
       <BannerCentered
@@ -27,11 +26,6 @@ export default function Solutions() {
         quis."
         buttonText="Quero saber mais"
         buttonHref="/"
-      />
-      <FeaturedFrame
-        title="Lorem ipsum dolor sit amet"
-        text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
-        image="/images/pictures/max-mid.png"
       />
       <Differentials />
       <Integrating />
