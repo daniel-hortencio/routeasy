@@ -91,7 +91,7 @@ export const ContactArea = () => {
   return (
     <>
       <Section>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="flex">
             {list_area.map((item, index) => (
               <CardArea
