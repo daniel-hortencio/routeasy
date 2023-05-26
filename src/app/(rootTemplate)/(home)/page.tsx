@@ -16,7 +16,12 @@ export default function Home() {
       <Clients />
       <Solutions />
       <Integrating />
-      <CTA />
+      <CTA
+        title="Que saber como se tornar um especialista em roteirização?"
+        description="Conheça o Routing Academy, o primeiro curso on-lline de roteirização do Brasil."
+        href="/"
+        buttonText="Quero saber mais"
+      />
       <Maestro />
       <Segments />
       <Testimonials />
