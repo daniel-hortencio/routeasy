@@ -228,7 +228,7 @@ export const Solutions = () => {
             rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
           </p>
         </div>
-        <div className="md:w-32 m-auto">
+        <div className="md:w-32 m-auto mb-32">
           <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
         </div>
       </Section>

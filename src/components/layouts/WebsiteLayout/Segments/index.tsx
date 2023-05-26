@@ -56,7 +56,7 @@ interface IContentProps {
 const TabItem = ({ label, onClick, isActive }: ITabProps) => {
   return (
     <button
-      className={`w-full lg:w-[170px] h-12 whitespace-nowrap rounded-full ${
+      className={`w-full text-white lg:w-[170px] h-12 whitespace-nowrap rounded-full ${
         isActive && 'bg-primary-100'
       }`}
       onClick={onClick}
