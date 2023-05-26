@@ -9,7 +9,7 @@ import 'keen-slider/keen-slider.min.css'
 
 const CardArea = ({ icon, title, text, button }) => {
   return (
-    <div className="block rounded-2xl border border-grayscale-500 py-12 px-20 md:p-8 md:w-[338px] md:h-[311px] m-auto text-center mb-8 md:mb-0">
+    <div className="block rounded-2xl border border-grayscale-500 py-12 px-5 lg:px-20 md:p-8 m-auto text-center mb-8 md:mb-0">
       {icon}
       <h1 className="uppercase text-xl font-semibold py-4">{title}</h1>
       <p className="text-grayscale-200 text-sm mb-6">{text}</p>
@@ -67,7 +67,7 @@ export const ContactArea = () => {
   }, [])
 
   const useWindowWidth = () => {
-    if (windowWidth > 640) {
+    if (windowWidth > 520) {
       return 2.25
     }
 
@@ -79,7 +79,8 @@ export const ContactArea = () => {
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth()
+      perView: useWindowWidth(),
+      spacing: 20
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -92,7 +93,7 @@ export const ContactArea = () => {
     <>
       <Section>
         <div className="hidden lg:block">
-          <div className="flex">
+          <div className="grid grid-cols-3 gap-5">
             {list_area.map((item, index) => (
               <CardArea
                 key={index}
@@ -108,7 +109,7 @@ export const ContactArea = () => {
       <div className="lg:hidden">
         <div ref={sliderRef} className="keen-slider">
           {list_area.map((item, index) => (
-            <div className="keen-slider__slide pr-6 ml-5" key={index}>
+            <div className="keen-slider__slide" key={index}>
               <CardArea
                 icon={item.icon}
                 title={item.title}

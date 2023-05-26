@@ -75,7 +75,6 @@ export const ContactForm = () => {
         Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
         assumenda voluptates qui beatae quis id Quis cupiditate.
       </Text>
-
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
         <InputGroup label="Nome" error={errors.name}>
           <InputText
@@ -123,7 +122,6 @@ export const ContactForm = () => {
           />
         </InputGroup>
       </div>
-
       <div className="sm:w-20">
         <ButtonSecondary type="submit">Enviar</ButtonSecondary>
       </div>
