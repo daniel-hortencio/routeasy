@@ -73,12 +73,12 @@ export const FAQ = () => {
 
   return (
     <Section
-      className="my-40"
+      className="my-16 md:my-40"
       title={<Title>Dúvidas frequentes</Title>}
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <div className="flex justify-between px-12">
-        <div className="w-5/12">
+      <div className="flex flex-col-reverse md:flex-row justify-between px-12">
+        <div className="md:w-5/12">
           <div className="rounded-lg p-6 border border-grayscale-500">
             <div className="bg-grayscale-500 rounded-md p-3 w-12 h-12 mb-4">
               <Image
@@ -102,7 +102,7 @@ export const FAQ = () => {
             </div>
           </div>
         </div>
-        <div className="w-6/12">
+        <div className="md:w-6/12 mb-20 md:mb-0">
           {faqList.map((question, index) => {
             return (
               <FaqItem

@@ -1,3 +1,15 @@
+import { Banner } from './Banner'
+import { ContactArea } from './ContactArea'
+import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
+import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
+
 export default function Contact() {
-  return <h1>Conteudo</h1>
+  return (
+    <>
+      <Banner />
+      <ContactArea />
+      <FAQ />
+      <ContactForm />
+    </>
+  )
 }
