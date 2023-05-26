@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useCallback, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import * as yup from 'yup'
 
 import { ButtonSecondary } from 'components/elements/Button'

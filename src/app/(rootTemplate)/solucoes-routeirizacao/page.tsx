@@ -1,12 +1,12 @@
 import { Banner } from './Banner'
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
-
 import { FeaturedFrame } from './FeaturedFrame'
 import { Integrating } from 'components/layouts/WebsiteLayout/Integrating'
 import { Differentials } from './Differentials'
 import { Maestro } from 'components/layouts/WebsiteLayout/Maestro'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
+import { Statistics } from './Statistics'
 
 export default function Solutions() {
   return (
@@ -18,8 +18,9 @@ export default function Solutions() {
         image="/images/pictures/max-mid.png"
       />
       <Differentials />
-      <Maestro />
       <Integrating />
+      <Statistics />
+      <Maestro />
       <Segments />
       <FAQ />
       <ContactForm />
