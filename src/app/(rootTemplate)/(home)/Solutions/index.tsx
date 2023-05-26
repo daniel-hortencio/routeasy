@@ -202,7 +202,7 @@ export const Solutions = () => {
         </div>
       </div>
       <Section>
-        <div className="mt-8 lg:mt-16 w-full relative mb-4 flex justify-center pt-[64%] lg:pt-[56%]">
+        <div className="mt-8 lg:mt-16 w-full relative mb-4 flex justify-center pt-[64%] md:pt-[50%]">
           {tab_list.map(
             (item, index) =>
               tab === index && (
