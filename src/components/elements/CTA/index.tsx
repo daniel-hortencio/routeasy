@@ -21,7 +21,7 @@ export const CTA = ({ title, description, buttonText, href }: Props) => {
             {description}
           </p>
         </div>
-        <div className="lg:w-40">
+        <div className="lg:w-52">
           <ButtonPrimary href={href}>{buttonText}</ButtonPrimary>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { Maestro } from 'components/layouts/WebsiteLayout/Maestro'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Statistics } from './Statistics'
+import { CTA } from 'components/elements/CTA'
 
 export default function Solutions() {
   return (
@@ -19,6 +20,12 @@ export default function Solutions() {
       />
       <Differentials />
       <Integrating />
+      <CTA
+        title="Quer levar facilidade para a sua operação?"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        buttonText="Solicite uma demonstração"
+        href="/"
+      />
       <Statistics />
       <Maestro />
       <Segments />
