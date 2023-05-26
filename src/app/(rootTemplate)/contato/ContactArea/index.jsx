@@ -109,7 +109,10 @@ export const ContactArea = () => {
       <div className="lg:hidden">
         <div ref={sliderRef} className="keen-slider">
           {list_area.map((item, index) => (
-            <div className="keen-slider__slide" key={index}>
+            <div
+              className={`keen-slider__slide ${index === 0 && 'ml-5'} `}
+              key={index}
+            >
               <CardArea
                 icon={item.icon}
                 title={item.title}
