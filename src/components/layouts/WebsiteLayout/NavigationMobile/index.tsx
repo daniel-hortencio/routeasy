@@ -3,7 +3,7 @@
 import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import Link from 'next/link'
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import routes from '../Header/routes'
 import { usePathname } from 'next/navigation'
 

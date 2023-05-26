@@ -19,7 +19,12 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
     >
       <div>
         <div className="border border-white rounded-lg h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center m-auto">
-          {icon}
+          <Image
+            src={icon.src}
+            width={icon.width || 18}
+            height={icon.height || 18}
+            alt={icon.alt}
+          />
         </div>
         <div>
           <p className="text-sm font-sans text-center font-semibold mt-4">
@@ -35,7 +40,12 @@ const CardRoute = ({ icon, title }) => {
   return (
     <div className="rounded-lg border md:w-60 h-16 border-grayscale-500 cursor-pointer flex items-center justify-start md:justify-center px-4 mx-auto mb-4 md:mb-0">
       <div className="flex items-center justify-center h-[30px] w-[50px] bg-grayscale-500 rounded-[4px]">
-        {icon}
+        <Image
+          src={icon.src}
+          width={icon.width || 18}
+          height={icon.height || 18}
+          alt={icon.alt}
+        />
       </div>
       <div>
         <p className="text-sm font-sans font-semibold ml-4">{title}</p>
@@ -68,31 +78,46 @@ export const Solutions = () => {
     {
       title: 'Roteirização',
       src: '/images/pictures/Screen_roteirizacao.svg',
-      icon: <Icon name="FaRoute" size={20} color="white" />,
+      icon: {
+        src: '/images/icons/home-solutions-routeirizacao.svg',
+        alt: 'Roteirização'
+      },
       alt: 'Roteirização'
     },
     {
       title: 'Gestão de entregas',
       src: '/images/pictures/Screen_gestao.svg',
-      icon: <Icon name="BiChalkboard" size={20} color="white" />,
+      icon: {
+        src: '/images/icons/home-solutions-gestao-de-entrega.svg',
+        alt: 'Gestão de entregas'
+      },
       alt: 'Gestão de Entregas'
     },
     {
       title: 'Automação',
       src: '/images/pictures/Screen_automacao_API.svg',
-      icon: <Icon name="AiOutlineSetting" size={20} color="white" />,
+      icon: {
+        src: '/images/icons/home-solutions-automacao.svg',
+        alt: 'Automação'
+      },
       alt: 'Automação'
     },
     {
       title: 'Aplicativo',
       src: '/images/pictures/Screen_aplicativo.svg',
-      icon: <Icon name="FiSmartphone" size={20} color="white" />,
+      icon: {
+        src: '/images/icons/home-solutions-aplicativo.svg',
+        alt: 'Aplicativo'
+      },
       alt: 'Aplicativo'
     },
     {
       title: 'API',
       src: '/images/pictures/Screen_automacao_API.svg',
-      icon: <Icon name="HiArrowsPointingIn" size={20} color="white" />,
+      icon: {
+        src: '/images/icons/home-solutions-api.svg',
+        alt: 'API'
+      },
       alt: 'API'
     }
   ]
@@ -100,19 +125,39 @@ export const Solutions = () => {
   const list_soluctions = [
     {
       title: 'Personalização de objetivos de otimização',
-      icon: <Icon name="FiEdit2" size={20} color="white" />
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-pen.svg',
+        alt: 'API'
+      }
     },
     {
       title: 'Entregas e coletas na mesma rota',
-      icon: <Icon name="FiPackage" size={20} color="white" />
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-box.svg',
+        alt: 'API'
+      }
     },
     {
       title: 'Resequenciamento automático  ',
-      icon: <Icon name="TfiLayoutMenuSeparated" size={20} color="white" />
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-dots.svg',
+        alt: 'API'
+      }
     },
     {
       title: 'Configuração de restrições operacionais',
-      icon: <Icon name="RiFileSettingsLine" size={20} color="white" />
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-car.svg',
+        alt: 'API'
+      }
     }
   ]
 
@@ -128,7 +173,7 @@ export const Solutions = () => {
         subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
       >
         <div className="hidden lg:block">
-          <div className="mt-2 flex items-center justify-evenly">
+          <div className="mt-14 flex items-center justify-evenly">
             {tab_list.map((item, index) => (
               <CardSoluctions
                 key={index}
