@@ -3,7 +3,7 @@
 import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import Link from 'next/link'
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import routes from '../Header/routes'
 import { usePathname } from 'next/navigation'
 
@@ -26,7 +26,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer border-2 border-grayscale-500 w-12 h-12 flex items-center justify-center"
+        className="cursor-pointer border-2 border-grayscale-500 w-12 h-12 flex items-center justify-center text-white"
       >
         <Icon name={isOpen ? 'FiX' : 'FiMenu'} size={24} />
       </button>
@@ -50,7 +50,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
           </div>
 
           <div className="flex items-center">
-            <ButtonSecondary href="/">
+            <ButtonSecondary href="/demonstracao">
               Solicite uma Demonstração
             </ButtonSecondary>
           </div>

@@ -8,6 +8,8 @@ import * as Fc from 'react-icons/fc'
 import * as Bi from 'react-icons/bi'
 import * as Tfi from 'react-icons/tfi'
 import * as Ri from 'react-icons/ri'
+import * as Bs from 'react-icons/bs'
+import * as Io from 'react-icons/io'
 /* import * as Cg from 'react-icons/cg'
 import * as Bi from 'react-icons/bi'
 import * as Io from 'react-icons/io'
@@ -23,7 +25,9 @@ export const AllIcons = {
   ...Bi,
   ...Hi2,
   ...Tfi,
-  ...Ri
+  ...Ri,
+  ...Bs,
+  ...Io
   /*   ...Md,
 
   ...Cg,
@@ -41,7 +45,7 @@ interface IconProps {
   hoverColor?: string
 }
 
-const Icon = ({ name, size, color = '', ...rest }: IconProps) => {
+export const Icon = ({ name, size, color = '', ...rest }: IconProps) => {
   const RIcon =
     AllIcons[name as keyof typeof AllIcons] || AllIcons.FaRegWindowClose
 

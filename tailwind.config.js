@@ -27,6 +27,12 @@ module.exports = {
         },
         bluescale: {
           50: '#3BB5EF',
+        },
+        redscale: {
+          50: '#FF4E32',
+        },
+        yellowscale: {
+          50: '#FCB400'
         }
       },
       boxShadow: {

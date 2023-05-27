@@ -3,8 +3,6 @@
 import { Section } from 'components/elements/Section'
 import Image from 'next/image'
 import Link from 'next/link'
-import { NavigationDesktop } from '../NavigationDesktop'
-import { NavigationMobile } from '../NavigationMobile'
 import { useEffect, useState } from 'react'
 
 export const Header = () => {
@@ -40,7 +38,7 @@ export const Header = () => {
       }`}
     >
       <div className="pt-4 lg:pt-0 flex items-end lg:items-center justify-between">
-        <Link href="./" className="relative w-36 h-12">
+        <Link href="/" className="relative w-36 h-12">
           <Image
             fill
             alt="Routeasy"
@@ -48,15 +46,6 @@ export const Header = () => {
             style={{ objectFit: 'contain' }}
           />
         </Link>
-        <div className="hidden lg:block">
-          <NavigationDesktop />
-        </div>
-        <div className="lg:hidden">
-          <NavigationMobile
-            isOpen={isOpenMobileMenu}
-            setIsOpen={setIsOpenMobileMenu}
-          />
-        </div>
       </div>
     </Section>
   )

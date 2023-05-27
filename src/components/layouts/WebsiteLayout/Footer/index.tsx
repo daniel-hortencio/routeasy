@@ -1,5 +1,6 @@
 import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
+import { Text, Title } from 'components/elements/Texts'
 import Link from 'next/link'
 
 export const Footer = () => {
@@ -74,7 +75,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center lg:items-start">
           <p className="mb-6">LINGUAGEM</p>
 
-          <button className="bg-grayscale-600 rounded h-12 flex items-center px-2 justify-between w-full mb-6 max-w-[272px]">
+          <button className="text-white bg-grayscale-600 rounded h-12 flex items-center px-2 justify-between w-full mb-6 max-w-[272px]">
             Português
           </button>
 
@@ -119,13 +120,13 @@ export const Footer = () => {
 
       <div className="border-y-2 border-grayscale-400 lg:flex lg:items-center justify-between py-9 px-10">
         <div className="lg:pr-32">
-          <h1 className="text-center lg:text-left uppercase mb-1">
+          <Title className="text-center text-base lg:text-left uppercase mb-1">
             Escreva-se em nossa newsletter
-          </h1>
-          <p className="text-center lg:text-left mb-5 lg:mb-0 text-sm text-grayscale-100">
+          </Title>
+          <Text className="text-center lg:text-left mb-5 lg:mb-0 text-sm text-grayscale-100">
             Fique por dentro de tudo o que acontece com a Routeasy e com o
             mercado de logística.
-          </p>
+          </Text>
         </div>
 
         <div className="h-14 lg:h-12 flex items-center rounded overflow-hidden">
@@ -133,7 +134,7 @@ export const Footer = () => {
             placeholder="Escreva seu e-mail"
             className="bg-grayscale-600 h-full px-6 flex-auto"
           />
-          <button className="bg-primary-100 h-full w-40 hover:bg-primary-200">
+          <button className="bg-primary-100 h-full w-40 hover:bg-primary-200 text-white">
             INSCREVER
           </button>
         </div>
