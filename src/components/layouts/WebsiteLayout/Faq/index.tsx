@@ -39,23 +39,21 @@ interface IFaqItemProps {
 const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
   return (
     <div className="p-6 border-b border-grayscale-400">
-      <header className="flex justify-between">
+      <header onClick={onClick} className="cursor-pointer flex justify-between">
         <p className="font-base text-white">{title}</p>
-        <button onClick={onClick}>
-          <Image
-            width="24"
-            height="24"
-            src={`/images/pictures/icon-${isOpen ? 'minus' : 'plus'}.svg`}
-            alt="Pergunta icone"
-          />
-        </button>
+        <Image
+          width="24"
+          height="24"
+          src={`/images/pictures/icon-${isOpen ? 'minus' : 'plus'}.svg`}
+          alt="Pergunta icone"
+        />
       </header>
 
-      {isOpen && (
-        <main className="mt-4">
-          <p className="font-base text-white/80">{answer}</p>
-        </main>
-      )}
+      <main
+        className={`overflow-hidden transition-all ${isOpen ? 'h-32' : 'h-0'}`}
+      >
+        <p className="font-base mt-4 text-white/80">{answer}</p>
+      </main>
     </div>
   )
 }
@@ -63,13 +61,8 @@ const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
 export const FAQ = () => {
   const [questOpened, setQuestOpened] = useState<number | undefined>(undefined)
 
-  const handleQuestionClick = (index: number) => {
-    if (index === questOpened) {
-      setQuestOpened(undefined)
-    } else {
-      setQuestOpened(index)
-    }
-  }
+  const handleQuestionClick = (index: number) =>
+    index === questOpened ? setQuestOpened(undefined) : setQuestOpened(index)
 
   return (
     <Section
