@@ -28,8 +28,6 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
     ${isLast && 'mr-8'}`
   }
 
-  console.log(pathname.startsWith('/solucoes'))
-
   return (
     <div className="relative">
       <button

@@ -38,15 +38,19 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
       >
         <div className="border-t-2 border-primary bg-grayscale-700 flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
           <div>
-            {routes.map((route, index) => (
-              <Link
-                key={index}
-                href={route.href}
-                className={getClassName(pathname === route.href, index)}
-              >
-                {route.label}
-              </Link>
-            ))}
+            {routes.map((route, index) =>
+              route.href ? (
+                <Link
+                  key={index}
+                  href={route.href}
+                  className={getClassName(pathname === route.href, index)}
+                >
+                  {route.label}
+                </Link>
+              ) : (
+                <p key={route.label}>SubItems</p>
+              )
+            )}
           </div>
 
           <div className="flex items-center">

@@ -18,12 +18,10 @@ export const NavigationDesktop = () => {
     ${isLast && 'mr-8'}`
   }
 
-  console.log(routes.map(route => route.href))
-
   return (
     <nav className="flex items-center">
       {routes.map((route, index) =>
-        !route.sub_items ? (
+        route.href ? (
           <Link
             key={route.label}
             href={route.href}
