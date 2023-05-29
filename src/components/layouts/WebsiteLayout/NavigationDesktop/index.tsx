@@ -1,30 +1,49 @@
 'use client'
+
 import Link from 'next/link'
 import routes from '../Header/routes'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+import Icon from 'components/elements/Icon'
+import { LinkDropDown } from '../LinkDropDown'
 
 export const NavigationDesktop = () => {
   const pathname = usePathname()
+  const [isOpenDropDown, setIsOpenDropDown] = useState(false)
 
-  const getClassName = (isActive: boolean, index: number) => {
+  const getClassName = (isActive: boolean, isLast?: boolean) => {
     return `hover:text-primary-200 transition-all ${
       isActive && 'text-primary-200'
     }
-    ${index < routes.length - 1 && 'mr-8'}`
+    ${isLast && 'mr-8'}`
   }
+
+  console.log(routes.map(route => route.href))
 
   return (
     <nav className="flex items-center">
-      {routes.map((route, index) => (
-        <Link
-          key={index}
-          href={route.href}
-          className={getClassName(pathname === route.href, index)}
-        >
-          {route.label}
-        </Link>
-      ))}
-
+      {routes.map((route, index) =>
+        !route.sub_items ? (
+          <Link
+            key={route.label}
+            href={route.href}
+            className={getClassName(
+              pathname === route.href,
+              index < routes.length - 1
+            )}
+          >
+            {route.label}
+          </Link>
+        ) : (
+          <LinkDropDown
+            label={route.label}
+            key={route.label}
+            sub_items={route.sub_items}
+            isActive={pathname.startsWith('/solucoes')}
+            isLast={index < routes.length - 1}
+          />
+        )
+      )}
       <div className="flex items-center ml-24">
         <Link
           href="/"
