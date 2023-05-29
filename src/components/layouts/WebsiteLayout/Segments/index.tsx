@@ -75,7 +75,7 @@ const ContentItem = ({ title, text, image, altImage }: IContentProps) => {
         <p>{text}</p>
       </div>
       <div className="w-[256px] h-[256px] relative hidden md:block">
-        <Image src={image} fill alt={altImage} />
+        <Image src={image} width="256" height="256" alt={altImage} />
       </div>
     </>
   )
@@ -83,36 +83,19 @@ const ContentItem = ({ title, text, image, altImage }: IContentProps) => {
 
 export const Segments = () => {
   const [tab, setTab] = useState(0)
-  const [windowWidth, setWindowWidth] = useState(null)
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 640) {
-      return 3.25
-    }
-
-    return 2.3
-  }
-
-  // const [currentSlide, setCurrentSlide] = useState(0)
-  // const [loaded, setLoaded] = useState(false)
   const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth()
+      perView: 2.3
+    },
+    breakpoints: {
+      '(min-width: 640)': {
+        slides: {
+          perView: 3.25
+        }
+      }
     }
-    // created() {
-    //   setLoaded(true)
-    // }
   })
 
   return (

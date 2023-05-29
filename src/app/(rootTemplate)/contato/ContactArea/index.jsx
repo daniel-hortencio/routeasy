@@ -4,7 +4,6 @@ import { Section } from 'components/elements/Section'
 import { Icon } from 'components/elements/Icon'
 import { ButtonPrimary } from 'components/elements/Button'
 import { useKeenSlider } from 'keen-slider/react'
-import { useEffect, useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 
 const CardArea = ({ icon, title, text, button }) => {
@@ -54,39 +53,18 @@ export const list_area = [
 ]
 
 export const ContactArea = () => {
-  const [windowWidth, setWindowWidth] = useState(null)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 520) {
-      return 2.25
-    }
-
-    return 1.15
-  }
-
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth(),
+      perView: 1.15,
       spacing: 20
     },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
+    breakpoints: {
+      '(min-width: 520)': {
+        slides: {
+          perView: 2.25
+        }
+      }
     }
   })
   return (

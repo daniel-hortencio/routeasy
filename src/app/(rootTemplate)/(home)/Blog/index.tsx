@@ -2,12 +2,11 @@
 
 import { Section } from 'components/elements/Section'
 import { useKeenSlider } from 'keen-slider/react'
-import { useEffect, useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { ButtonSecondary } from 'components/elements/Button'
 import { TextHighlight, Title } from 'components/elements/Texts'
 
-const CardBlog = ({ tag, title, avatar, author, date }) => {
+const CardBlog = ({ tag, title, author, date }) => {
   return (
     <div className="rounded-2xl h-96 bg-[#555] flex items-end">
       <div className="pb-6 px-4">
@@ -26,38 +25,17 @@ const CardBlog = ({ tag, title, avatar, author, date }) => {
 }
 
 export const Blog = () => {
-  const [windowWidth, setWindowWidth] = useState(null)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 640) {
-      return 2.25
-    }
-
-    return 1.25
-  }
-
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth()
+      perView: 1.25
     },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
+    breakpoints: {
+      '(min-width: 640px)': {
+        slides: {
+          perView: 2.25
+        }
+      }
     }
   })
 
@@ -77,21 +55,18 @@ export const Blog = () => {
           <CardBlog
             tag="Logística"
             title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-            avatar="Asdw"
             author="Luana Torres"
             date="Março 2023"
           />
           <CardBlog
             tag="Logística"
             title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-            avatar="Asdw"
             author="Luana Torres"
             date="Março 2023"
           />
           <CardBlog
             tag="Logística"
             title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-            avatar="Asdw"
             author="Luana Torres"
             date="Março 2023"
           />
@@ -103,7 +78,6 @@ export const Blog = () => {
             <CardBlog
               tag="Logística"
               title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-              avatar="Asdw"
               author="Luana Torres"
               date="Março 2023"
             />
@@ -112,7 +86,6 @@ export const Blog = () => {
             <CardBlog
               tag="Logística"
               title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-              avatar="Asdw"
               author="Luana Torres"
               date="Março 2023"
             />
@@ -121,7 +94,6 @@ export const Blog = () => {
             <CardBlog
               tag="Logística"
               title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-              avatar="Asdw"
               author="Luana Torres"
               date="Março 2023"
             />
@@ -130,7 +102,6 @@ export const Blog = () => {
             <CardBlog
               tag="Logística"
               title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-              avatar="Asdw"
               author="Luana Torres"
               date="Março 2023"
             />
@@ -139,7 +110,6 @@ export const Blog = () => {
             <CardBlog
               tag="Logística"
               title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-              avatar="Asdw"
               author="Luana Torres"
               date="Março 2023"
             />
@@ -148,7 +118,6 @@ export const Blog = () => {
             <CardBlog
               tag="Logística"
               title="SAME DAY DELIVERY: QUAIS SÃO OS PRINCIPAIS DESAFIOS"
-              avatar="Asdw"
               author="Luana Torres"
               date="Março 2023"
             />

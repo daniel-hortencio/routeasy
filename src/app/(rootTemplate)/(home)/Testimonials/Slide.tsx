@@ -2,45 +2,29 @@
 
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import { useEffect, useState } from 'react'
-import { Skeleton } from 'components/elements/Skeleton'
+import { useState } from 'react'
 
 export const SlideTestimonials = () => {
-  const [windowWidth, setWindowWidth] = useState(undefined)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    if (!windowWidth) {
-      setWindowWidth(window.innerWidth)
-    }
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 1024) {
-      return 3
-    }
-
-    if (windowWidth > 640) {
-      return 2
-    }
-
-    return 1
-  }
 
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth() || 3,
+      perView: 1,
       spacing: 20
+    },
+    breakpoints: {
+      '(min-width: 1024)': {
+        slides: {
+          perView: 3
+        }
+      },
+      '(min-width: 640px)': {
+        slides: {
+          perView: 2
+        }
+      }
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -69,12 +53,7 @@ export const SlideTestimonials = () => {
     )
   }
 
-  return !windowWidth ? (
-    <div className="flex flex-col items-center">
-      <Skeleton className="h-[460px] w-full mb-20 rounded-xl" />
-      <Skeleton className="h-2 w-20 rounded-full" />
-    </div>
-  ) : (
+  return (
     <div>
       <div ref={sliderRef} className="keen-slider mb-[72px]">
         <div className="keen-slider__slide pt-2">
