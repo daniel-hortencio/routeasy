@@ -16,11 +16,16 @@ export const Eventos = () => {
         <div className="relative mx-auto w-16 h-16 mb-8 md:mb-10">
           <Image src="/images/logos/union.svg" fill alt="Recicável" />
         </div>
+        <div className="relative mx-auto w-[514px] h-[64px] mb-8 md:mb-10">
+          <Image src="/images/logos/log-trends-logo.png" fill alt="Recicável" />
+        </div>
         <div className="relative z-10">
           <Text className="mb-12">
             Conheça o maior evento de tecnologia logística do brasil.
           </Text>
-          <ButtonWhite href="/">Quero saber mais</ButtonWhite>
+          <div className="m-auto mt-12 mb-8">
+            <ButtonWhite href="/">Quero saber mais</ButtonWhite>
+          </div>
         </div>
       </div>
     </Section>
