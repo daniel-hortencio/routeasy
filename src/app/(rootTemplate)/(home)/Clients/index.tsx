@@ -2,43 +2,22 @@
 
 import Image from 'next/image'
 import { Section } from 'components/elements/Section'
-import { useEffect, useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
 export const Clients = () => {
-  const [windowWidth, setWindowWidth] = useState(null)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    // Limpe o listener do evento resize ao desmontar o componente
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 520) {
-      return 3.5
-    }
-
-    return 2.5
-  }
-
-  const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth(),
+      perView: 2.5,
       spacing: 20
     },
-    created() {
-      setLoaded(true)
+    breakpoints: {
+      '(min-width: 640px)': {
+        slides: {
+          perView: 3.25
+        }
+      }
     }
   })
 

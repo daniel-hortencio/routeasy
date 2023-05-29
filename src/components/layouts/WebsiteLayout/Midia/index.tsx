@@ -5,42 +5,20 @@ import { Section } from 'components/elements/Section'
 import S from './styles.module.css'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
-import { useEffect, useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 
 export const Midia = () => {
-  const [windowWidth, setWindowWidth] = useState(null)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const useWindowWidth = () => {
-    if (windowWidth > 640) {
-      return 2.25
-    }
-
-    return 1.25
-  }
-
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: useWindowWidth()
+      perView: 1.25
     },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
+    breakpoints: {
+      '(min-width: 640)': {
+        slides: {
+          perView: 2.25
+        }
+      }
     }
   })
 

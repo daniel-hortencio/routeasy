@@ -25,7 +25,7 @@ export const Maestro = () => {
           src="/images/pictures/video-player-thumbnail.png"
           alt="Thumbnail"
         />
-        <ReactPlayer
+        {/* <ReactPlayer
           width="100%"
           height="100%"
           onPlay={() => setIsPlaying(true)}
@@ -39,7 +39,7 @@ export const Maestro = () => {
             transition: 'opacity 0.2s'
           }}
           url="https://www.youtube.com/watch?v=L3WzRR5Ugks&t=1s"
-        />
+        /> */}
       </div>
       <div className="md:w-40 text-sm m-auto my-12 mb-20">
         <ButtonSecondary>Quero saber mais</ButtonSecondary>
