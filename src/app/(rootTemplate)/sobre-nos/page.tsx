@@ -25,7 +25,9 @@ export default function SobreNos() {
       <Cultura></Cultura>
       <Cerimonias></Cerimonias>
       <Eventos></Eventos>
-      <Midia></Midia>
+      <div className="pb-16">
+        <Midia></Midia>
+      </div>
       <TrabalheConosco></TrabalheConosco>
     </>
   )

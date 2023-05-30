@@ -13,13 +13,13 @@ export const TrabalheConosco = () => {
           alt="Background"
           style={{ objectFit: 'cover' }}
         />
-        <div className="relative z-10">
+        <div className="relative py-12 px-12">
           <Title>Trabalhe conosco</Title>
           <Text className="mb-12">
             Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
             assumenda voluptates qui beatae.
           </Text>
-          <div className="md:w-40 text-sm m-auto">
+          <div className="w-40 text-sm m-auto">
             <ButtonSecondary href="/">Quero saber mais</ButtonSecondary>
           </div>
         </div>
