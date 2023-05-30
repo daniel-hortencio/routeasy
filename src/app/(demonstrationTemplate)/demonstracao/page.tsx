@@ -4,13 +4,13 @@ import Icon from 'components/elements/Icon'
 
 export default function DemonstrationPage() {
   return (
-    <div className="flex">
-      <div className="w-1/2">
-        <div className="max-w-xl w-full ml-auto px-5 pt-[150px] pb-[60px] pr-36 pl-14">
-          <Title className="text-left text-[72px] mb-16">
+    <div className="lg:flex">
+      <div className="lg:w-1/2">
+        <div className="lg:max-w-xl w-full lg:ml-auto px-5 pt-[150px] lg:pb-[60px] lg:pr-36 lg:pl-14">
+          <Title className="text-center lg:text-left text-[40px] lg:text-[72px] mb-12 lg:mb-16">
             A GENTE ESTÁ <TextHighlight> QUASE</TextHighlight> LÁ
           </Title>
-          <div className="flex items-center justify-between mb-4">
+          <div className="hidden lg:flex items-center justify-between mb-4">
             <Title className="text-lg">Você sabia?</Title>
             <div className="grid grid-cols-2 gap-2">
               <button className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300">
@@ -21,14 +21,14 @@ export default function DemonstrationPage() {
               </button>
             </div>
           </div>
-          <Text className="text-grayscale-50">
+          <Text className="hidden lg:block text-grayscale-50">
             Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
             assumenda voluptates qui beatae quis id Quis cupiditate.
           </Text>
         </div>
       </div>
-      <div className="w-1/2 bg-grayscale-600 min-h-screen">
-        <div className="max-w-xl w-full mr-auto px-5">
+      <div className="lg:w-1/2 bg-grayscale-600 lg:min-h-screen">
+        <div className="lg:max-w-xl w-full mr-auto">
           <ContactForm />
         </div>
       </div>

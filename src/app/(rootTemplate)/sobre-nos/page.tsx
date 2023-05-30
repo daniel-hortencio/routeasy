@@ -4,15 +4,15 @@ import { Cerimonias } from './Cerimonias'
 import { Cultura } from './Cultura'
 import { Eventos } from './Eventos'
 import { Historia } from './Historia'
-import { RouteasyNumeros } from './RouteasyNumeros'
 import { TrabalheConosco } from './TrabalheConosco'
 import { CTA } from 'components/elements/CTA'
+import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 
 export default function SobreNos() {
   return (
     <>
-      <Banner></Banner>
-      <Historia></Historia>
+      <Banner />
+      <Historia />
       <div className="pb-8">
         <CTA
           title="Você sabia?"
@@ -21,12 +21,14 @@ export default function SobreNos() {
           buttonText="Veja nossas vagas disponíveis"
         />
       </div>
-      <RouteasyNumeros></RouteasyNumeros>
-      <Cultura></Cultura>
-      <Cerimonias></Cerimonias>
-      <Eventos></Eventos>
-      <Midia></Midia>
-      <TrabalheConosco></TrabalheConosco>
+      <Statistics />
+      <Cultura />
+      <Cerimonias />
+      <Eventos />
+      <div className="pb-16">
+        <Midia />
+      </div>
+      <TrabalheConosco />
     </>
   )
 }
