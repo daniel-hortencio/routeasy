@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const Cultura = () => {
   return (
     <Section className="pb-12">
-      <div className={`md:flex items-center pb-40`}>
+      <div className={`md:flex items-center mb-6 md:mb-40`}>
         <div className="text-center md:text-left mb-8 lg:mb-0 md:mr-12 lg:mr-28">
           <Title>Nossa Cultura</Title>
           <Text className="text-[13px]/[20px] text-grayscale-50">
