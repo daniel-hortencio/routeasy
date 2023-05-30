@@ -1,13 +1,12 @@
 import { Section } from 'components/elements/Section'
 import { Title, Text } from 'components/elements/Texts'
-import S from './styles.module.css'
 import Image from 'next/image'
 
 export const Cultura = () => {
   return (
     <Section className="pb-12">
-      <div className={`${S.CulturaGrid} pb-40 block lg:grid`}>
-        <div className="mb-8 lg:mb-0">
+      <div className={`md:flex items-center pb-40`}>
+        <div className="text-center md:text-left mb-8 lg:mb-0 md:mr-12 lg:mr-28">
           <Title>Nossa Cultura</Title>
           <Text className="text-[13px]/[20px] text-grayscale-50">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,34 +25,64 @@ export const Cultura = () => {
             officia deserunt mollit anim id est laborum
           </Text>
         </div>
-        <div className={`${S.BoxImg} w-full`}>
-          <div className="relative">
-            <Image fill src="/images/pictures/cultura-1.png" alt="Cultura" />
+        <div>
+          <div className={`grid grid-cols-4 gap-2 mb-2 w-full`}>
+            {[
+              { src: '/images/pictures/cultura-1.png', alt: 'Cultura' },
+              { src: '/images/pictures/cultura-2.png', alt: 'Cultura' },
+              { src: '/images/pictures/cultura-3.png', alt: 'Cultura' },
+              { src: '/images/pictures/cultura-4.png', alt: 'Cultura' }
+            ].map(image => (
+              <div className="relative py-[50%]" key={image.src}>
+                <Image
+                  style={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                  fill
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </div>
+            ))}
           </div>
-          <div className="relative">
-            <Image fill src="/images/pictures/cultura-2.png" alt="Cultura" />
-          </div>
-          <div className="relative">
-            <Image fill src="/images/pictures/cultura-3.png" alt="Cultura" />
-          </div>
-          <div className="relative">
-            <Image fill src="/images/pictures/cultura-4.png" alt="Cultura" />
-          </div>
-          <div className={`${S.box_5} relative`}>
-            {' '}
-            <Image fill src="/images/pictures/cultura-5.png" alt="Cultura" />
-          </div>
-          <div className={`${S.box_6} bg-grayscale-500 relative p-4`}>
-            <h2 className="uppercase text-[26px]/[32px] font-semibold">
-              Adoramos <span className="text-primary-100">festinhas!</span>
-            </h2>
-            <p className="text-sm text-grayscale-50 mb-2">
-              Sempre temos motivos para comemoração e aproveitamos cada momento
-              como se fosse único.
-            </p>
-          </div>
-          <div className={`${S.box_7} relative`}>
-            <Image fill src="/images/pictures/cultura-6.png" alt="Cultura" />
+
+          <div className={`grid grid-cols-2 gap-2 relative`}>
+            <div className="relative py-[80%]">
+              <Image
+                fill
+                src="/images/pictures/cultura-5.png"
+                alt="Cultura"
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
+            </div>
+            <div className="flex flex-col">
+              <div
+                className={`bg-grayscale-500 flex-auto flex flex-col justify-center relative p-4 mb-2`}
+              >
+                <h2 className="uppercase text-[26px]/[32px] font-semibold">
+                  Adoramos <span className="text-primary-100">festinhas!</span>
+                </h2>
+                <p className="text-sm text-grayscale-50 mb-2">
+                  Sempre temos motivos para comemoração e aproveitamos cada
+                  momento como se fosse único.
+                </p>
+              </div>
+              <div className={`relative pt-[80%] flex-auto`}>
+                <Image
+                  fill
+                  src="/images/pictures/cultura-6.png"
+                  alt="Cultura"
+                  style={{
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
