@@ -15,7 +15,7 @@ export const Cerimonias = () => {
         </Text>
       </div>
 
-      <div className={`pb-40 block items-center grid-cols-2 md:grid`}>
+      <div className={`pb-24 pmd:b-40 block items-center grid-cols-2 md:grid`}>
         <div className={`mb-8 md:mb-0`}>
           <div className="grid grid-cols-3 gap-2 mb-2">
             <div className={`pt-[180%] relative`}>
