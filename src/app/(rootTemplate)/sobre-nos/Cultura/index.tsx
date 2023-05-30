@@ -5,9 +5,9 @@ import Image from 'next/image'
 
 export const Cultura = () => {
   return (
-    <Section>
-      <div className={`${S.CulturaGrid} pb-40`}>
-        <div>
+    <Section className="pb-12">
+      <div className={`${S.CulturaGrid} pb-40 block lg:grid`}>
+        <div className="mb-8 lg:mb-0">
           <Title>Nossa Cultura</Title>
           <Text className="text-[13px]/[20px] text-grayscale-50">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

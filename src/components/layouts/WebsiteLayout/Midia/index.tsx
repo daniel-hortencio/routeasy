@@ -33,7 +33,7 @@ export const Midia = () => {
         }
         subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
       >
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className={`${S.MidiaGrid} grid w-full gap-6`}>
             <div className={`${S.MidiaBoxPrimary}`}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded overflow-hidden z-10">
