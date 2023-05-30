@@ -17,7 +17,8 @@ export const WebsiteLayout = ({ children }: Props) => {
             'linear-gradient(205deg, #2D3051 0%, rgba(13, 14, 24, 0) 50%)',
           backgroundSize: '100%',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'right bottom'
+          backgroundPosition: 'right bottom',
+          pointerEvents: 'none'
         }}
       />
       <Header />

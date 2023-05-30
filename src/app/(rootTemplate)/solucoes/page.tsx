@@ -8,12 +8,12 @@ import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
+import { Routing } from 'components/layouts/WebsiteLayout/Routing'
 import { TextHighlight, Title } from 'components/elements/Texts'
 
 export default function Solutions() {
   return (
     <>
-      {/* <Banner /> */}
       <BannerCentered
         title={
           <Title className="text-[35px] lg:text-[40px] pb-5">
@@ -28,6 +28,7 @@ export default function Solutions() {
         buttonText="Quero saber mais"
         buttonHref="/"
       />
+      <Routing />
       <FeaturedFrame
         title="Lorem ipsum dolor sit amet"
         text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
