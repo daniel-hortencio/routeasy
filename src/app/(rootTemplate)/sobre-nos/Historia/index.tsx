@@ -2,6 +2,11 @@ import { Section } from 'components/elements/Section'
 import { Title } from 'components/elements/Texts'
 
 export const Historia = () => {
+  const Dot = () => (
+    <div className="translate-x-[0.5px] ml-[1.1rem] mb-4 bg-primary bg-opacity-25 w-7 h-7 rounded-full flex items-center justify-center">
+      <div className="bg-primary h-[14px] w-[14px] rounded-full" />
+    </div>
+  )
   return (
     <Section
       className="pb-28"
@@ -13,19 +18,7 @@ export const Historia = () => {
           <div className="mb-8">
             <p className="text-2xl font-semibold">2016</p>
           </div>
-          <div>
-            <svg
-              className="mb-4 ml-[1.1rem]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-            >
-              <circle opacity="0.34" cx="14" cy="14" r="14" fill="#3CBC8D" />
-              <circle cx="14" cy="14" r="6" fill="#3CBC8D" />
-            </svg>
-          </div>
+          <Dot />
           <div className="pl-8">
             <p className="pl-4 border-l border-[#424678]">
               Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
@@ -39,19 +32,7 @@ export const Historia = () => {
           <div className="mb-8">
             <p className="text-2xl font-semibold">2017</p>
           </div>
-          <div>
-            <svg
-              className="mb-4 ml-[1.1rem]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-            >
-              <circle opacity="0.34" cx="14" cy="14" r="14" fill="#3CBC8D" />
-              <circle cx="14" cy="14" r="6" fill="#3CBC8D" />
-            </svg>
-          </div>
+          <Dot />
           <div className="pl-8">
             <p className="pl-4 border-l border-[#424678]">
               Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
@@ -65,19 +46,7 @@ export const Historia = () => {
           <div className="mb-8">
             <p className="text-2xl font-semibold">2018</p>
           </div>
-          <div>
-            <svg
-              className="mb-4 ml-[1.1rem]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-            >
-              <circle opacity="0.34" cx="14" cy="14" r="14" fill="#3CBC8D" />
-              <circle cx="14" cy="14" r="6" fill="#3CBC8D" />
-            </svg>
-          </div>
+          <Dot />
           <div className="pl-8">
             <p className="pl-4 border-l border-[#424678]">
               Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
