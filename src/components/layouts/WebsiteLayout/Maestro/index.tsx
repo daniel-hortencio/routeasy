@@ -2,13 +2,13 @@
 
 import { Section } from 'components/elements/Section'
 import { ButtonSecondary } from 'components/elements/Button'
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import ReactPlayer from 'react-player/youtube'
+// import ReactPlayer from 'react-player/youtube'
 import { TextHighlight, Title } from 'components/elements/Texts'
 
 export const Maestro = () => {
-  const [isPlaying, setIsPlaying] = useState(false)
+  // const [isPlaying, setIsPlaying] = useState(false)
 
   return (
     <Section

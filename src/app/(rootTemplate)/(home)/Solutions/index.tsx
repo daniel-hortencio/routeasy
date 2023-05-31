@@ -76,7 +76,7 @@ export const Solutions = () => {
 
   const tabList = [
     {
-      title: 'Roteirização 1',
+      title: 'Roteirização',
       src: '/images/pictures/Screen_roteirizacao.svg',
       icon: {
         src: '/images/icons/home-solutions-routeirizacao.svg',

@@ -55,7 +55,7 @@ export const NavigationDesktop = () => {
         >
           Demonstração
         </Link>
-        <button className="border-[1px] border-grayscale-500 h-12 px-[10px] flex items-center justify-center rounded ml-2">
+        <button className="text-white border-[1px] border-grayscale-500 h-12 px-[10px] flex items-center justify-center rounded ml-2">
           EN
         </button>
       </div>
