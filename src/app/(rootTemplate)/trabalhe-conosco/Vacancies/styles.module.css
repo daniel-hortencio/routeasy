@@ -1,0 +1,5 @@
+.VacanciesGrid {
+  grid-template-columns: 1.5fr 2fr;
+  justify-content: center;
+  align-items: center;
+}

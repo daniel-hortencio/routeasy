@@ -2,7 +2,7 @@ import { Section } from 'components/elements/Section'
 import { Title, Text } from 'components/elements/Texts'
 import Image from 'next/image'
 
-export const Cultura = () => {
+export const Culture = () => {
   return (
     <Section className="pb-12">
       <div className={`md:flex items-center mb-6 md:mb-40`}>

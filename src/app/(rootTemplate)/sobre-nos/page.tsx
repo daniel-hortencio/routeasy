@@ -1,10 +1,10 @@
 import { Midia } from 'components/layouts/WebsiteLayout/Midia'
 import { Banner } from './Banner'
-import { Cerimonias } from './Cerimonias'
-import { Cultura } from './Cultura'
-import { Eventos } from './Eventos'
-import { Historia } from './Historia'
-import { TrabalheConosco } from './TrabalheConosco'
+import { Ceremonies } from 'components/layouts/WebsiteLayout//Ceremonies'
+import { Culture } from './Culture'
+import { Events } from './Events'
+import { History } from './History'
+import { Career } from './Career'
 import { CTA } from 'components/elements/CTA'
 import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 
@@ -12,7 +12,7 @@ export default function SobreNos() {
   return (
     <>
       <Banner />
-      <Historia />
+      <History />
       <div className="pb-8">
         <CTA
           title="Você sabia?"
@@ -22,13 +22,13 @@ export default function SobreNos() {
         />
       </div>
       <Statistics />
-      <Cultura />
-      <Cerimonias />
-      <Eventos />
+      <Culture />
+      <Ceremonies />
+      <Events />
       <div className="pb-16">
         <Midia />
       </div>
-      <TrabalheConosco />
+      <Career />
     </>
   )
 }

@@ -7,7 +7,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
 import { Skeleton } from 'components/elements/Skeleton'
 
-export const Historia = () => {
+export const History = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef] = useKeenSlider({
@@ -35,7 +35,7 @@ export const Historia = () => {
     </div>
   )
 
-  const CardHistoria = ({ title, text }) => {
+  const CardHistory = ({ title, text }) => {
     return (
       <div>
         <div className="mb-8">
@@ -60,7 +60,7 @@ export const Historia = () => {
       {loaded ? (
         <div ref={sliderRef} className="keen-slider mb-12">
           <div className="keen-slider__slide pr-6">
-            <CardHistoria
+            <CardHistory
               title="2016"
               text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
           aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum
@@ -69,7 +69,7 @@ export const Historia = () => {
             />
           </div>
           <div className="keen-slider__slide pr-6">
-            <CardHistoria
+            <CardHistory
               title="2017"
               text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
           aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum
@@ -78,7 +78,7 @@ export const Historia = () => {
             />
           </div>
           <div className="keen-slider__slide pr-6">
-            <CardHistoria
+            <CardHistory
               title="2018"
               text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
           aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum
@@ -88,7 +88,7 @@ export const Historia = () => {
           </div>
         </div>
       ) : (
-        <Skeleton className="w-full h-[400px] rounded-lg" />
+        <Skeleton className="w-full h-[204px] rounded-lg" />
       )}
     </Section>
   )

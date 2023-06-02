@@ -3,7 +3,7 @@ import { Section } from 'components/elements/Section'
 import Image from 'next/image'
 import { Text } from 'components/elements/Texts'
 
-export const Eventos = () => {
+export const Events = () => {
   return (
     <Section>
       <div className="relative overflow-hidden rounded-3xl w-full text-center px-5 py-10 md:py-11 pb-16">
