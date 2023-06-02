@@ -76,7 +76,7 @@ export const Vacancies = () => {
           <BoxVacancies
             title="Analista - Junior"
             tag={
-              <div className="w-[121px] text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
+              <div className="w-20 text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
                 Financeiro
               </div>
             }
@@ -85,7 +85,7 @@ export const Vacancies = () => {
           <BoxVacancies
             title="Tech Recruiter - Pleno"
             tag={
-              <div className="w-[121px] text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
+              <div className="w-[131px] text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
                 Recursos Humanos
               </div>
             }

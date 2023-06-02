@@ -19,7 +19,7 @@ const CardOffice = ({ icon, title }) => {
 
 export const Office = () => {
   return (
-    <Section className="pt-[100rem] pb-20">
+    <Section className="pb-20">
       <div className="relative overflow-hidden w-full text-center px-8 lg:px-40 py-20 lg:pb-20 lg:pt-16">
         <Image
           src="/images/pictures/escritorio.png"

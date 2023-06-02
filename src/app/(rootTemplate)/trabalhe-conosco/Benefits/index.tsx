@@ -4,7 +4,6 @@ import { Section } from 'components/elements/Section'
 import { Title } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import { useState } from 'react'
 
 export const CardBenefits = ({ title, text }) => {
   return (
@@ -60,7 +59,13 @@ export const Benefits = () => {
       perView: 1.4
     },
     breakpoints: {
-      '(min-width: 640px)': {
+      '(min-width: 540px)': {
+        slides: {
+          perView: 2.25,
+          spacing: 20
+        }
+      },
+      '(min-width: 768px)': {
         slides: {
           perView: 3.25,
           spacing: 20

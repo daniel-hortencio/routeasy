@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const Culture = () => {
   return (
-    <Section className="pb-12">
+    <Section className="pb-28 md:pb-12">
       <div className={`md:flex items-center mb-6 md:mb-40`}>
         <div className="text-center md:text-left mb-8 lg:mb-0 md:mr-12 lg:mr-28">
           <Title>Nossa Cultura</Title>
