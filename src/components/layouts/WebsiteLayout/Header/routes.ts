@@ -12,6 +12,7 @@ const routes = [
     ]
   },
   { label: 'Sobre', href: '/sobre-nos' },
+  { label: 'Carreira', href: '/carreira' },
   { label: 'Contato', href: '/contato' }
 ]
 
