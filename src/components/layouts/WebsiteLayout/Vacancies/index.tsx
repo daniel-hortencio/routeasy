@@ -11,7 +11,7 @@ export const BoxVacancies = ({ title, tag, button }) => {
         <div>
           <div className="pb-4">
             <h1 className="text-[22px]/[32px] uppercase text-white font-semibold">
-              {title} {title} {title}
+              {title}
             </h1>
           </div>
           <div className="">
