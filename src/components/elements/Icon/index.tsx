@@ -10,6 +10,7 @@ import * as Tfi from 'react-icons/tfi'
 import * as Ri from 'react-icons/ri'
 import * as Bs from 'react-icons/bs'
 import * as Io from 'react-icons/io'
+import * as Io5 from 'react-icons/io5'
 /* import * as Cg from 'react-icons/cg'
 import * as Bi from 'react-icons/bi'
 import * as Io from 'react-icons/io'
@@ -28,7 +29,8 @@ export const AllIcons = {
   ...Ri,
   ...Bs,
   ...Io,
-  ...Md
+  ...Md,
+  ...Io5
   /*   ...Md,
 
   ...Cg,

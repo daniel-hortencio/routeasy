@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Title, Text, TextHighlight } from 'components/elements/Texts'
 import Icon from 'components/elements/Icon'
 
-export const Cerimonias = () => {
+export const Ceremonies = () => {
   return (
     <Section className="pb-8">
       <div className="mb-12 text-center md:text-left md:ml-12 lg:ml-28 md:hidden">

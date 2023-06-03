@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Text, Title } from 'components/elements/Texts'
 import { ButtonSecondary } from 'components/elements/Button'
 
-export const TrabalheConosco = () => {
+export const Career = () => {
   return (
     <Section className="pb-24">
       <div className="relative flex items-center justify-center overflow-hidden rounded-3xl w-full h-[404px] text-center py-10 md:py-11 pb-16">
