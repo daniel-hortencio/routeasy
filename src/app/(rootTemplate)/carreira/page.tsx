@@ -5,6 +5,7 @@ import { Benefits } from 'components/layouts/WebsiteLayout/Benefits'
 import { Office } from 'components/layouts/WebsiteLayout/Office'
 import { Culture } from 'components/layouts/WebsiteLayout/Culture'
 import { PetDay } from 'components/layouts/WebsiteLayout/PetDay'
+import { FacesOfRoutEasy } from 'components/layouts/WebsiteLayout/FacesOfRoutEasy'
 
 export default function Carrer() {
   return (
@@ -17,6 +18,7 @@ export default function Carrer() {
           href="/"
           buttonText="Veja nossas vagas disponíveis"
         />
+        <FacesOfRoutEasy />
         <Culture />
         <PetDay />
         <Office />

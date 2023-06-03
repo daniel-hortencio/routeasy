@@ -10,7 +10,7 @@ const CardBlog = ({ tag, title, author, date }) => {
   return (
     <div className="rounded-2xl h-96 bg-[#555] flex items-end">
       <div className="pb-6 px-4">
-        <p className="h-6 px-2 mb-1 bg-primary-50 rounded w-min text-xs text-black">
+        <p className="h-6 px-2 mb-1 bg-primary-50 rounded w-min text-xs text-black font-bold flex items-center">
           {tag}
         </p>
         <p className="mb-1 text-xl uppercase font-semibold">{title}</p>
