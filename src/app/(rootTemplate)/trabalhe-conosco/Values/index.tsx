@@ -4,6 +4,7 @@ import { Section } from 'components/elements/Section'
 import { Icon } from 'components/elements/Icon'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
+import { Title } from 'components/elements/Texts'
 
 const CardValues = ({ icon, title, text }) => {
   return (
@@ -96,7 +97,11 @@ export const Values = () => {
 
   return (
     <>
-      <Section className="pb-20">
+      <Section
+        className="pb-20"
+        title={<Title>Nossos valores</Title>}
+        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      >
         <div className="hidden lg:block">
           <div className="grid grid-cols-4 grid-rows-2 gap-4 justify-center items-center">
             {list_area.map((item, index) => (
