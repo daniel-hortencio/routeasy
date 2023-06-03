@@ -1,10 +1,10 @@
-import { Benefits } from './Benefits'
+import { Benefits } from '../../../components/layouts/WebsiteLayout/Benefits'
 import { CTA } from 'components/elements/CTA'
 import { Culture } from 'components/layouts/WebsiteLayout/Culture'
 import { Food } from './Food'
-import { Office } from './Office'
-import { PetDay } from './PetDay'
-import { Vacancies } from './Vacancies'
+import { Office } from '../../../components/layouts/WebsiteLayout/Office'
+import { PetDay } from '../../../components/layouts/WebsiteLayout/PetDay'
+import { Vacancies } from '../../../components/layouts/WebsiteLayout/Vacancies'
 import { Values } from './Values'
 
 export default function TrabalheConosco() {

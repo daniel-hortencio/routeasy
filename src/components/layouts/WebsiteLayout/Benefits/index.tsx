@@ -8,7 +8,7 @@ import 'keen-slider/keen-slider.min.css'
 export const CardBenefits = ({ title, text }) => {
   return (
     <div className="border border-grayscale-500 rounded-[15px] py-12 px-4 text-center">
-      <div className="uppercase text-[22px]/[33px] font-semibold text-white">
+      <div className="uppercase text-[22px]/[33px] mb-4 font-semibold text-white">
         {title}
       </div>
       <div className="text-grayscale-200 text-sm font-normal">{text}</div>

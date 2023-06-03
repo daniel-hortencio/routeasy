@@ -7,18 +7,18 @@ import S from './styles.module.css'
 export const BoxVacancies = ({ title, tag, button }) => {
   return (
     <div>
-      <div className="flex justify-between mb-4 mt-4 items-center pb-4 border-b border-grayscale-500">
+      <div className="grid gap-5 grid-cols-1 sm:grid-cols-[1fr_8rem] mb-4 mt-4 items-center pb-4 border-b border-grayscale-500">
         <div>
           <div className="pb-4">
             <h1 className="text-[22px]/[32px] uppercase text-white font-semibold">
-              {title}
+              {title} {title} {title}
             </h1>
           </div>
           <div className="">
             <p className="">{tag}</p>
           </div>
-        </div>
-        <div className="text-xs w-24">
+        </div>{' '}
+        <div className="text-xs">
           <ButtonSecondary>{button}</ButtonSecondary>
         </div>
       </div>

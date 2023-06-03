@@ -1,5 +1,10 @@
 import { CTA } from 'components/elements/CTA'
 import { Banner } from './Banner'
+import { Vacancies } from 'components/layouts/WebsiteLayout/Vacancies'
+import { Benefits } from 'components/layouts/WebsiteLayout/Benefits'
+import { Office } from 'components/layouts/WebsiteLayout/Office'
+import { Culture } from 'components/layouts/WebsiteLayout/Culture'
+import { PetDay } from 'components/layouts/WebsiteLayout/PetDay'
 
 export default function Carrer() {
   return (
@@ -12,6 +17,11 @@ export default function Carrer() {
           href="/"
           buttonText="Veja nossas vagas disponíveis"
         />
+        <Culture />
+        <PetDay />
+        <Office />
+        <Benefits />
+        <Vacancies />
       </div>
     </>
   )
