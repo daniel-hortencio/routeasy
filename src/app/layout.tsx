@@ -16,7 +16,10 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={open_sans.className}>
-        <main className="bg-grayscale-700 min-h-screen">{children}</main>
+        <main className="min-h-screen">
+          {children}
+          <div className="bg-grayscale-700 fixed w-screen h-screen top-0 left-0 -z-20" />
+        </main>
       </body>
     </html>
   )

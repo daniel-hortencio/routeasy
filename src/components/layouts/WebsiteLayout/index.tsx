@@ -13,7 +13,7 @@ export const WebsiteLayout = ({ children }: Props) => {
   return (
     <div className="relative">
       <div
-        className="absolute w-full h-screen"
+        className="absolute w-full h-screen -z-10"
         style={{
           background:
             'linear-gradient(205deg, #2D3051 0%, rgba(13, 14, 24, 0) 50%)',
