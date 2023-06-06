@@ -1,9 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { Section } from 'components/elements/Section'
 import { ButtonSecondary } from 'components/elements/Button'
+import { Section } from 'components/elements/Section'
 import { TextHighlight, Title } from 'components/elements/Texts'
+import { useEffect, useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
@@ -148,6 +149,8 @@ const animation2 = { duration: 12000, easing: (t: number) => t }
 const animation3 = { duration: 10000, easing: (t: number) => t }
 
 export const Banner = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
   const [ref1] = useKeenSlider<HTMLDivElement>({
     loop: true,
     renderMode: 'performance',
@@ -211,6 +214,10 @@ export const Banner = () => {
     vertical: true
   })
 
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
   return (
     <Section className="lg:h-screen flex mb-24 lg:mb-32">
       <div className="lg:flex items-center lg:h-full relative pt-56 lg:pt-0 lg:mt-20">
@@ -230,23 +237,27 @@ export const Banner = () => {
             </ButtonSecondary>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-2 w-[390px] lg:w-[464px] mx-auto overflow-hidden rounded-md">
-          <div ref={ref1} className="keen-slider" style={{ height: 477 }}>
-            {list_col1.map((item, index) => (
-              <CardEmployee key={index} image={item.image} />
-            ))}
+        {loaded ? (
+          <div className="grid grid-cols-3 gap-2 w-[390px] lg:w-[464px] mx-auto overflow-hidden rounded-md">
+            <div ref={ref1} className="keen-slider" style={{ height: 477 }}>
+              {list_col1.map((item, index) => (
+                <CardEmployee key={index} image={item.image} />
+              ))}
+            </div>
+            <div ref={ref2} className="keen-slider" style={{ height: 477 }}>
+              {list_col2.map((item, index) => (
+                <CardEmployee key={index} image={item.image} />
+              ))}
+            </div>
+            <div ref={ref3} className="keen-slider" style={{ height: 477 }}>
+              {list_col3.map((item, index) => (
+                <CardEmployee key={index} image={item.image} />
+              ))}
+            </div>
           </div>
-          <div ref={ref2} className="keen-slider" style={{ height: 477 }}>
-            {list_col2.map((item, index) => (
-              <CardEmployee key={index} image={item.image} />
-            ))}
-          </div>
-          <div ref={ref3} className="keen-slider" style={{ height: 477 }}>
-            {list_col3.map((item, index) => (
-              <CardEmployee key={index} image={item.image} />
-            ))}
-          </div>
-        </div>
+        ) : (
+          <div className="opacity-0"></div>
+        )}
       </div>
     </Section>
   )
