@@ -3,7 +3,6 @@
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
-import { useEffect, useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import Image from 'next/image'
 
@@ -27,8 +26,8 @@ const segmentsContent = [
     image: '/images/pictures/Rectangle 1856.png'
   },
   {
-    label: 'First e Middle e Mile',
-    title: 'First e Middle e Mile',
+    label: 'First e Middle Mile',
+    title: 'First e Middle Mile',
     text: 'Planeje rotas de entrega e coleta com máxima eficiência, considerando todas as restrições da operacionais de clientes/fornecedores. Conte com uma torre de controle inteligente, que garante visibilidade total da operação, além de relatórios completos com indicadores de desempenho relevantes, como taxas de sucesso na entrega/coleta, tempos de espera em cada parada e quantidade de ocorrências por rota.',
     image: '/images/pictures/Rectangle 1856.png'
   },

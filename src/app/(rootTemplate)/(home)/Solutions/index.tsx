@@ -7,7 +7,6 @@ import { useKeenSlider } from 'keen-slider/react'
 import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { TextHighlight, Title } from 'components/elements/Texts'
-import Icon from 'components/elements/Icon'
 
 const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   return (
@@ -48,14 +47,14 @@ const CardRoute = ({ icon, title }) => {
         />
       </div>
       <div>
-        <p className="text-sm font-sans font-semibold ml-4">{title}</p>
+        <p className="text-sm font-sans font-normal ml-4">{title}</p>
       </div>
     </div>
   )
 }
 
 export const Solutions = () => {
-  const [tab, setTab] = useState(1)
+  const [tab, setTab] = useState(0)
 
   const [sliderRef] = useKeenSlider({
     initial: 0,
@@ -170,10 +169,10 @@ export const Solutions = () => {
             <TextHighlight>operação</TextHighlight>
           </Title>
         }
-        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+        subtitle="Conheça nossas solções e escolha a combinação ideal para atingir seus objetivos."
       >
         <div className="hidden lg:block">
-          <div className="mt-14 flex items-center justify-evenly">
+          <div className="mt-24 flex items-center justify-evenly pb-24">
             {tabList.map((item, index) => (
               <CardSoluctions
                 key={index}
@@ -201,26 +200,33 @@ export const Solutions = () => {
           ))}
         </div>
       </div>
-      <Section>
-        <div className="mt-8 lg:mt-16 w-full relative mb-4 flex justify-center pt-[64%] md:pt-[50%]">
-          {tabList.map(
-            (item, index) =>
-              tab === index && (
-                <div className="px-5" key={index}>
-                  <Image src={item.src} fill alt={item.alt} />
-                </div>
-              )
-          )}
+      <div className="px-20">
+        <div className="flex pb-8">
+          <div className="flex flex-col px-5 items-center justify-evenly">
+            {list_soluctions.map((item, index) => (
+              <CardRoute key={index} title={item.title} icon={item.icon} />
+            ))}
+          </div>
+          <div className="mt-8 lg:mt-0 w-full relative flex justify-center pt-[64%] md:pt-[32%]">
+            {tabList.map(
+              (item, index) =>
+                tab === index && (
+                  <div className="px-5" key={index}>
+                    <Image src={item.src} fill alt={item.alt} />
+                  </div>
+                )
+            )}
+          </div>
+          <div className="flex flex-col px-5 items-center justify-evenly">
+            {list_soluctions.map((item, index) => (
+              <CardRoute key={index} title={item.title} icon={item.icon} />
+            ))}
+          </div>
         </div>
         <div>
           <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-12">
             Imagem meramente ilustrativa
           </p>
-        </div>
-        <div className="md:flex px-5 mb-10 items-center justify-between">
-          {list_soluctions.map((item, index) => (
-            <CardRoute key={index} title={item.title} icon={item.icon} />
-          ))}
         </div>
         <div className="pb-16">
           <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
@@ -228,10 +234,10 @@ export const Solutions = () => {
             rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
           </p>
         </div>
-        <div className="md:w-32 m-auto mb-32">
+        <div className="md:w-32 m-auto mb-24">
           <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
         </div>
-      </Section>
+      </div>
     </>
   )
 }

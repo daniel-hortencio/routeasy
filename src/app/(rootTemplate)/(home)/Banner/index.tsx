@@ -1,15 +1,48 @@
+'use client'
+
 import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
+import { useEffect, useState } from 'react'
+import { TextHighlight } from 'components/elements/Texts'
+import TextTransition, { presets } from 'react-text-transition'
+
+const list_operations = [
+  'LASTMILE B2C',
+
+  'LASTMILE B2B',
+
+  'SAME DAY.D',
+
+  'FIRST MILE',
+
+  'MIDLE MILE'
+]
 
 export const Banner = () => {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex(index => index + 1),
+      3000 // every 3 seconds
+    )
+    return () => clearTimeout(intervalId)
+  }, [])
+
   return (
     <Section className="h-screen flex mb-12">
       <div className="flex h-full relative min-h-[640px]">
-        <div className="md:max-w-xl md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left">
+        <div className="md:max-w-[34rem] md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left">
           <h1 className="text-white uppercase font-semibold text-5xl lg:text-[50px]/[68px] pb-5">
-            A melhor solução para{' '}
-            <span className="text-primary-100">last-mile</span>
+            Tecnologia avançada para
+            <div>
+              <TextHighlight>
+                <TextTransition springConfig={presets.wobbly}>
+                  {list_operations[index % list_operations.length]}
+                </TextTransition>
+              </TextHighlight>
+            </div>
           </h1>
           <p className="font-normal text-base pb-8">
             Nossas soluções são a chave para aumentar a eficiência da sua
@@ -28,7 +61,7 @@ export const Banner = () => {
                 objectFit: 'contain'
               }}
               fill
-              src="/images/pictures/home-banner-1.svg"
+              src="/images/pictures/frame_hero_home.svg"
               alt="Banner"
             />
           </div>
