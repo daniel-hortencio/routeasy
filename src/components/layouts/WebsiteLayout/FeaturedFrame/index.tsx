@@ -16,14 +16,16 @@ export const FeaturedFrame = ({ title, text, image }: ITextBoxProps) => {
           <p className="text-sm text-grayscale-50 font-normal">{text}</p>
         </div>
         <div className="w-full md:w-[316px] h-[198px] relative">
-          <Image
-            src={image}
-            fill
-            alt="Screen"
-            style={{
-              objectFit: 'contain'
-            }}
-          />
+          {image && (
+            <Image
+              src={image}
+              fill
+              alt="Screen"
+              style={{
+                objectFit: 'contain'
+              }}
+            />
+          )}
         </div>
       </div>
     </Section>
