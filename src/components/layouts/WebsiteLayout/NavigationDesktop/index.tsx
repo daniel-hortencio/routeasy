@@ -38,7 +38,7 @@ export const NavigationDesktop = () => {
               label={route.label}
               key={route.label}
               sub_items={route.sub_items}
-              isActive={pathname.startsWith('/solucoes')}
+              isActive={!!pathname?.startsWith('/solucoes')}
               isLast={index < routes.length - 1}
             />
           )

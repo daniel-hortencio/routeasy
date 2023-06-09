@@ -47,11 +47,13 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
                   {route.label}
                 </Link>
               ) : (
-                <LinkDropDownMobile
-                  key={index}
-                  label={route.label}
-                  sub_items={route.sub_items}
-                />
+                route?.sub_items?.length && (
+                  <LinkDropDownMobile
+                    key={index}
+                    label={route.label}
+                    sub_items={route.sub_items}
+                  />
+                )
               )
             )}
           </div>
