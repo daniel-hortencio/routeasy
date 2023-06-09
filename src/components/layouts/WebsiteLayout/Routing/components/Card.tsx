@@ -15,9 +15,11 @@ export const RoutingCard = ({
       }`}
     >
       <div>
-        <div className="border border-white rounded-lg h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center m-auto">
-          <Image src={icon} width={16} height={16} alt={title} />
-        </div>
+        {icon && (
+          <div className="border border-white rounded-lg h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center m-auto">
+            <Image src={icon} width={16} height={16} alt={title} />
+          </div>
+        )}
         <div>
           <p className="text-sm font-sans text-center font-semibold mt-4">
             {title}

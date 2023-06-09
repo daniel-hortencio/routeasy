@@ -1,6 +1,6 @@
 export interface IRoutingCardProps {
   title: string
-  icon: string
+  icon?: string
   isActive: boolean
   onClick: () => void
 }
