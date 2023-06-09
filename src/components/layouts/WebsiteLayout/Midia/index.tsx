@@ -25,7 +25,6 @@ export const Midia = () => {
   return (
     <div>
       <Section
-        className="pt-16 md:pt-36"
         title={
           <Title>
             Rout<TextHighlight>easy</TextHighlight> na mídia
@@ -224,7 +223,7 @@ export const Midia = () => {
         </div>
       </div>
       <div>
-        <Section className="pb-14 mb-8 md:mb-4 md:py-20 w-full">
+        <Section className="pb-14 lg:pb-28 mb-8 lg:mb-4 lg:py-20 w-full">
           <h2 className="font-medium text-[32px] uppercase mb-4 text-center">
             PRÊMIOS
           </h2>

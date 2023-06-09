@@ -15,8 +15,8 @@ const ContentItem = ({ title, text, image, altImage }: IContentProps) => {
         <div className="h-[2px] w-full bg-primary-100 mb-4 md:mb-9" />
         <p>{text}</p>
       </div>
-      <div className="w-[256px] h-[256px] relative hidden md:block">
-        <Image src={image} width="256" height="256" alt={altImage} />
+      <div className="relative pt-[32%] flex-auto hidden md:block">
+        <Image src={image} fill alt={altImage} />
       </div>
     </div>
   )

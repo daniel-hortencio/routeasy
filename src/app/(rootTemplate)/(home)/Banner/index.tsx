@@ -31,12 +31,12 @@ export const Banner = () => {
   }, [])
 
   return (
-    <Section className="h-screen flex mb-12">
+    <Section className="h-screen flex lg:mb-12">
       <div className="flex h-full relative min-h-[640px]">
         <div className="md:max-w-[34rem] md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left">
           <h1 className="text-white uppercase font-semibold text-5xl lg:text-[50px]/[68px] pb-5">
             Tecnologia avançada para
-            <div>
+            <div className="flex justify-center lg:justify-start">
               <TextHighlight>
                 <TextTransition springConfig={presets.wobbly}>
                   {list_operations[index % list_operations.length]}
