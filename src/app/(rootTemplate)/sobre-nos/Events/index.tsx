@@ -5,7 +5,7 @@ import { Text } from 'components/elements/Texts'
 
 export const Events = () => {
   return (
-    <Section>
+    <Section className="pb-28">
       <div className="relative overflow-hidden rounded-3xl w-full text-center px-5 py-10 md:py-11 pb-16">
         <Image
           src="/images/pictures/Log-Trend.png"

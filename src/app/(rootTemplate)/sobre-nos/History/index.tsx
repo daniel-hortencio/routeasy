@@ -6,6 +6,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
 import { Skeleton } from 'components/elements/Skeleton'
+import Icon from 'components/elements/Icon'
 
 export const History = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -30,7 +31,7 @@ export const History = () => {
   }, [])
 
   const Dot = () => (
-    <div className="translate-x-[0.5px] ml-[1.1rem] mb-4 bg-primary bg-opacity-25 w-7 h-7 rounded-full flex items-center justify-center">
+    <div className="translate-x-[0.5px] ml-[0.7rem] mb-4 bg-primary bg-opacity-25 w-7 h-7 rounded-full flex items-center justify-center">
       <div className="bg-primary h-[14px] w-[14px] rounded-full" />
     </div>
   )
@@ -38,11 +39,12 @@ export const History = () => {
   const CardHistory = ({ title, text }) => {
     return (
       <div>
-        <div className="mb-8">
-          <p className="text-2xl font-semibold">{title}</p>
+        <div className="mb-8 flex items-center">
+          <p className="text-2xl font-semibold pr-6">{title}</p>
+          <div className="w-full border-t border-dashed border-bluescale-100"></div>
         </div>
         <Dot />
-        <div className="pl-6 lg:pl-8">
+        <div className="pl-6 lg:pl-[1.7rem]">
           <p className="pl-0 lg:pl-4 pb-4 lg:pb-0 border-b lg:border-b-0 border-l-0 lg:border-l border-[#424678]">
             {text}
           </p>
@@ -53,10 +55,18 @@ export const History = () => {
 
   return (
     <Section
-      className="pb-28 bg-grayscale-700 pt-16"
+      className="pb-12 lg:pb-20 bg-grayscale-700 pt-16"
       title={<Title>Nossa história</Title>}
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
+      <div className="grid grid-cols-2 gap-16 lg:gap-4 w-16 mx-auto pb-16">
+        <button className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300">
+          <Icon name="FiArrowLeft" size={16} />
+        </button>
+        <button className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300">
+          <Icon name="FiArrowRight" size={16} />
+        </button>
+      </div>
       {loaded ? (
         <div ref={sliderRef} className="keen-slider mb-12">
           <div className="keen-slider__slide pr-6">

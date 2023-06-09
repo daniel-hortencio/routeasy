@@ -223,7 +223,7 @@ export const Midia = () => {
         </div>
       </div>
       <div>
-        <Section className="pb-14 lg:pb-28 mb-8 lg:mb-4 lg:py-20 w-full">
+        <Section className="pb-14 lg:pb-16 mb-8 lg:mb-4 lg:py-20 w-full">
           <h2 className="font-medium text-[32px] uppercase mb-4 text-center">
             PRÊMIOS
           </h2>
