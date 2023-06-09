@@ -6,6 +6,7 @@ import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 import { Testimonials } from 'components/layouts/WebsiteLayout/Testimonials'
+import { RoutingAcademy } from 'components/layouts/WebsiteLayout/RoutingAcademy'
 
 export default function SolutionsApi() {
   return (
@@ -20,6 +21,7 @@ export default function SolutionsApi() {
       />
       <Statistics />
       <Testimonials />
+      <RoutingAcademy />
       <Segments />
       <FAQ />
       <Section>
