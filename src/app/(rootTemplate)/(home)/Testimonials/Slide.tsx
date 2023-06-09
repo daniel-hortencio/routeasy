@@ -15,14 +15,16 @@ export const SlideTestimonials = () => {
       spacing: 20
     },
     breakpoints: {
-      '(min-width: 1024)': {
+      // '(min-width: 1024)': {
+      //   slides: {
+      //     perView: 3,
+      //     spacing: 20
+      //   }
+      // },
+      '(min-width: 768px)': {
         slides: {
-          perView: 3
-        }
-      },
-      '(min-width: 640px)': {
-        slides: {
-          perView: 2
+          perView: 3,
+          spacing: 20
         }
       }
     },

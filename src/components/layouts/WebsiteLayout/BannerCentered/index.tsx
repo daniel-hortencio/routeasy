@@ -18,7 +18,7 @@ export const BannerCentered = ({
   return (
     <Section className="flex">
       <div className="flex justify-center h-full relative min-h-[640px]">
-        <div className="md:mx-auto mt-[124px] lg:mx-0 flex flex-col justify-center w-[645px] text-center">
+        <div className="md:mx-auto mt-[124px] lg:mx-0 flex flex-col justify-center w-[782px] text-center">
           {title}
           <Text className="text-grayscale-50 pb-8">{description}</Text>
           {buttonText && (

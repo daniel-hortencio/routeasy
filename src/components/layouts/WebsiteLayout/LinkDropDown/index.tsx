@@ -40,7 +40,10 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
             isOpenDropDown ? 'rotate-0' : 'rotate-180'
           }`}
         >
-          <Icon name="MdKeyboardArrowUp" color={isActive && '#32aa82'} />
+          <Icon
+            name="MdKeyboardArrowUp"
+            color={isActive ? '#32aa82' : undefined}
+          />
         </span>
       </button>
       <div

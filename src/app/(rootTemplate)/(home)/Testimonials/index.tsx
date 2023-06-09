@@ -3,14 +3,12 @@
 import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 
-import { Suspense, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ButtonWhite } from 'components/elements/Button'
 import { TextHighlight, Title } from 'components/elements/Texts'
 import { SlideTestimonials } from './Slide'
 
 export const Testimonials = () => {
-  // const [loaded, setLoaded] = useState(false)
-
   const [count, setCount] = useState(50)
 
   useEffect(() => {

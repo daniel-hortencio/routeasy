@@ -7,7 +7,6 @@ import { useKeenSlider } from 'keen-slider/react'
 import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { TextHighlight, Title } from 'components/elements/Texts'
-import Icon from 'components/elements/Icon'
 
 const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   return (

@@ -1,6 +1,6 @@
 import { Banner } from './Banner'
 import { Blog } from './Blog'
-import { Clients } from './Clients'
+import { Clients } from 'components/layouts/WebsiteLayout/Clients'
 import { Integrating } from 'components/layouts/WebsiteLayout/Integrating'
 import { CTA } from '../../../components/elements/CTA'
 import { Maestro } from 'components/layouts/WebsiteLayout/Maestro'
