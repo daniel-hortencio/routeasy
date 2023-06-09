@@ -24,21 +24,6 @@ const TabItem = ({ label, onClick, isActive }: ITabItemProps) => {
   )
 }
 
-// const ContentItem = ({ title, text, image, altImage }: IContentProps) => {
-//   return (
-//     <>
-//       <div className="md:w-[56%]">
-//         <h3 className="mb-2 md:mb-3 text-[32px] font-medium">{title}</h3>
-//         <div className="h-[2px] w-full bg-primary-100 mb-4 md:mb-9" />
-//         <p>{text}</p>
-//       </div>
-//       <div className="w-[256px] h-[256px] relative hidden md:block">
-//         <Image src={image} width="256" height="256" alt={altImage} />
-//       </div>
-//     </>
-//   )
-// }
-
 export const Tabs = ({ tabsLabels, tabsContent }: ITabsProps) => {
   const [tab, setTab] = useState(0)
 
@@ -89,9 +74,9 @@ export const Tabs = ({ tabsLabels, tabsContent }: ITabsProps) => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center md:w-[878px] m-auto pt-6 px-6 md:px-16 pb-10 rounded-lg bg-grayscale-500">
-        {tabsContent.map((elem, index) => tab === index && elem)}
-      </div>
+      <div>{tabsContent.map((elem, index) => tab === index && elem)}</div>
+
+      {/* <div className="flex justify-between items-center md:w-[878px] m-auto pt-6 px-6 md:px-16 pb-10 rounded-lg bg-grayscale-500"></div> */}
     </>
   )
 }
