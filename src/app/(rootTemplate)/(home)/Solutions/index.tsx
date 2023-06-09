@@ -37,7 +37,7 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
 
 const CardRoute = ({ icon, title }) => {
   return (
-    <div className="rounded-lg border md:w-60 h-16 border-grayscale-500 cursor-pointer flex items-center justify-start md:justify-center px-4 mx-auto mb-4 md:mb-0">
+    <div className="rounded-lg border lg:w-60 h-16 border-grayscale-500 cursor-pointer flex items-center justify-start lg:justify-center px-4 mx-auto mb-4 lg:mb-0">
       <div className="flex items-center justify-center h-[30px] w-[50px] bg-grayscale-500 rounded-[4px]">
         <Image
           src={icon.src}
@@ -60,12 +60,11 @@ export const Solutions = () => {
     initial: 0,
     loop: true,
     slides: {
-      spacing: 20,
-      origin: 'center',
+      origin: 'auto',
       perView: 2.4
     },
     breakpoints: {
-      '(min-width: 640px)': {
+      '(min-width: 600px)': {
         slides: {
           perView: 3.25
         }
@@ -163,6 +162,7 @@ export const Solutions = () => {
   return (
     <>
       <Section
+        className="mb-16 lg:mb-0"
         title={
           <Title className="px-5">
             Encontre as soluções ideais para sua{' '}
@@ -183,6 +183,28 @@ export const Solutions = () => {
               />
             ))}
           </div>
+          <div className="flex pb-8">
+            <div className="flex flex-col px-5 items-center justify-evenly">
+              {list_soluctions.map((item, index) => (
+                <CardRoute key={index} title={item.title} icon={item.icon} />
+              ))}
+            </div>
+            <div className="mt-8 lg:mt-0 w-full relative flex justify-center pt-[64%] md:pt-[32%] mb-4 lg:mb-0">
+              {tabList.map(
+                (item, index) =>
+                  tab === index && (
+                    <div className="px-5" key={index}>
+                      <Image src={item.src} fill alt={item.alt} />
+                    </div>
+                  )
+              )}
+            </div>
+            <div className="flex flex-col px-5 items-center justify-evenly">
+              {list_soluctions.map((item, index) => (
+                <CardRoute key={index} title={item.title} icon={item.icon} />
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -199,15 +221,8 @@ export const Solutions = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="px-20">
-        <div className="flex pb-8">
-          <div className="flex flex-col px-5 items-center justify-evenly">
-            {list_soluctions.map((item, index) => (
-              <CardRoute key={index} title={item.title} icon={item.icon} />
-            ))}
-          </div>
-          <div className="mt-8 lg:mt-0 w-full relative flex justify-center pt-[64%] md:pt-[32%]">
+        <div className="pb-8">
+          <div className="mt-8 lg:mt-0 w-full relative flex justify-center pt-[59%] md:pt-[60%] lg:pt-[32%] mb-4">
             {tabList.map(
               (item, index) =>
                 tab === index && (
@@ -217,19 +232,26 @@ export const Solutions = () => {
                 )
             )}
           </div>
-          <div className="flex flex-col px-5 items-center justify-evenly">
+          <div className="block lg:hidden">
+            <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-8">
+              Imagem meramente ilustrativa
+            </p>
+          </div>
+          <div className="px-5 items-center justify-evenly">
             {list_soluctions.map((item, index) => (
               <CardRoute key={index} title={item.title} icon={item.icon} />
             ))}
           </div>
         </div>
-        <div>
+      </div>
+      <div className="px-20">
+        <div className="hidden lg:block">
           <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-12">
             Imagem meramente ilustrativa
           </p>
         </div>
-        <div className="pb-16">
-          <p className="md:max-w-[60%] px-5 m-auto text-grayscale-200 text-base font-normal text-center">
+        <div className="pb-12 md:pb-16">
+          <p className="lg:max-w-[60%] lg:px-5 m-auto text-grayscale-200 text-base font-normal text-center">
             Com o Routing Studio você pode realizar todo o planajamento de suas
             rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
           </p>
