@@ -1,14 +1,21 @@
 'use client'
+import React, { useState, useEffect } from 'react'
 
 import { Section } from 'components/elements/Section'
 import { ButtonSecondary } from 'components/elements/Button'
-import React, { useState } from 'react'
 import Image from 'next/image'
 import ReactPlayer from 'react-player/youtube'
 import { TextHighlight, Title } from 'components/elements/Texts'
 
 export const Maestro = () => {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [hasWindow, setHasWindow] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setHasWindow(true)
+    }
+  }, [])
 
   return (
     <Section
@@ -26,21 +33,23 @@ export const Maestro = () => {
           src="/images/pictures/video-player-thumbnail.png"
           alt="Thumbnail"
         />
-        <ReactPlayer
-          width="100%"
-          height="100%"
-          onPlay={() => setIsPlaying(true)}
-          onEnded={() => setIsPlaying(false)}
-          controls={true}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            opacity: isPlaying ? 1 : 0,
-            transition: 'opacity 0.2s'
-          }}
-          url="https://www.youtube.com/watch?v=L3WzRR5Ugks&t=1s"
-        />
+        {hasWindow && (
+          <ReactPlayer
+            width="100%"
+            height="100%"
+            onPlay={() => setIsPlaying(true)}
+            onEnded={() => setIsPlaying(false)}
+            controls={true}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              opacity: isPlaying ? 1 : 0,
+              transition: 'opacity 0.2s'
+            }}
+            url="https://www.youtube.com/watch?v=L3WzRR5Ugks&t=1s"
+          />
+        )}
       </div>
       <div className="md:w-40 text-sm m-auto my-12 mb-20">
         <ButtonSecondary>Quero saber mais</ButtonSecondary>

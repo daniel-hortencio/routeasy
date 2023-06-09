@@ -8,9 +8,9 @@ import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
 import { Prices } from 'components/layouts/WebsiteLayout/Prices'
 import Image from 'next/image'
-import { ICardColoredProps } from 'components/layouts/WebsiteLayout/CardListColored/types'
+import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
-const listDifferentials: ICardColoredProps[] = [
+const listDifferentials: IIconCardColoredProps[] = [
   {
     icon: 'FiDatabase',
     title: 'Roteirizador',

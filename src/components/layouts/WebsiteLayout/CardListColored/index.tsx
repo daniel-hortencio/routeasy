@@ -1,22 +1,8 @@
 import { Section } from 'components/elements/Section'
 import { Title } from 'components/elements/Texts'
-import { Icon } from 'components/elements/Icon'
+import { IconCardColored } from 'components/elements/IconColoredCard'
 
-import { ICardColoredProps, ICardListProps } from './types'
-
-const CardColored = ({ icon, title, text, accentColor }: ICardColoredProps) => {
-  return (
-    <div className="block rounded-2xl border border-grayscale-500 p-6 pb-[51px] text-center md:text-left">
-      <div
-        className={`flex items-center justify-center ${accentColor} rounded-md w-12 h-12 m-auto md:m-0`}
-      >
-        <Icon color="white" name={icon} size={24} />
-      </div>
-      <h1 className="uppercase text-xl font-semibold py-4">{title}</h1>
-      <p className="text-grayscale-200 text-sm">{text}</p>
-    </div>
-  )
-}
+import { ICardListProps } from './types'
 
 export const CardListColored = ({ cards, title, subtitle }: ICardListProps) => {
   return (
@@ -28,7 +14,7 @@ export const CardListColored = ({ cards, title, subtitle }: ICardListProps) => {
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         {cards &&
           cards.map((item, index) => (
-            <CardColored
+            <IconCardColored
               key={index}
               title={item.title}
               icon={item.icon}
