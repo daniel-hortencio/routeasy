@@ -55,7 +55,14 @@ export const ContactForm = () => {
       schema: contactFormSchema,
       data,
       setError: handleSetError,
-      onSuccess: () => console.log('Deu certo')
+      onSuccess: () => {
+        console.log({ data })
+
+        /*         fetch('https://gyruss.rdops.systems/v2/conversions', options)
+        //   .then(response => response.json())
+        //   .then(response => console.log({ response }))
+        //   .catch(err => console.error(err)) */
+      }
     })
   }
 
