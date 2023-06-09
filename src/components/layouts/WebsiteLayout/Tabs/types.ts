@@ -8,7 +8,7 @@ export interface IContentProps {
   title: string
   text: string
   image: string
-  altImage?: string
+  altImage: string
 }
 export interface ITabsProps {
   tabsLabels: ITabItemProps[]

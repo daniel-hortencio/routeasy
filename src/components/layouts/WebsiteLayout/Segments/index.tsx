@@ -7,7 +7,12 @@ import Image from 'next/image'
 import { ITabsProps, IContentProps } from '../Tabs/types'
 import 'keen-slider/keen-slider.min.css'
 
-const ContentItem = ({ title, text, image, altImage }: IContentProps) => {
+const ContentItem = ({
+  title,
+  text,
+  image,
+  altImage = 'Image'
+}: IContentProps) => {
   return (
     <div className="flex justify-between items-center md:w-[878px] m-auto pt-6 px-6 md:px-16 pb-10 rounded-lg bg-grayscale-500">
       <div className="md:w-[56%]">
