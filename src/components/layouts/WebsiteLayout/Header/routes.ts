@@ -8,7 +8,7 @@ const routes = [
         href: '/solucoes/'
       },
       { label: 'Roteirizador', href: '/solucoes/' },
-      { label: 'Api', href: '/solucoes' }
+      { label: 'Api', href: '/solucoes/api' }
     ]
   },
   { label: 'Sobre', href: '/sobre-nos' },

@@ -5,9 +5,9 @@ import Icon from 'components/elements/Icon'
 
 export const Ceremonies = () => {
   return (
-    <Section className="pb-8">
+    <Section className="pb-28">
       <div className="mb-12 text-center md:text-left md:ml-12 lg:ml-28 md:hidden">
-        <Title className="text-[32px]/[40px]">Cerimônias</Title>
+        <Title className="text-[40px]/[52px]">Cerimônias</Title>
         <Text className="text-[13px]/[20px] text-grayscale-50">
           Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
           assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis

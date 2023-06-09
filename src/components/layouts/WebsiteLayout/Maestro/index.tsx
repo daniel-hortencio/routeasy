@@ -12,6 +12,7 @@ export const Maestro = () => {
 
   return (
     <Section
+      className="pb-4"
       title={
         <Title>
           Conheça O <TextHighlight>Maestro</TextHighlight>
@@ -19,7 +20,7 @@ export const Maestro = () => {
       }
       subtitle="Coloque sua operação no piloto automático enquanto você gerencia apenas as exceções. O Maestro automatiza 100% das tarefas manuais, possibilitando o same day delivery e as coletas dinâmicas graças às regras e parâmetrizações que identificam sempre a melhor rota. Conte ainda com o despacho automático para um motorista disponível mais próximo."
     >
-      <div className="flex justify-center w-full pt-[56%] relative">
+      <div className="flex justify-center w-full pt-[50%] relative max-w-[979px] mx-auto">
         <Image
           fill
           src="/images/pictures/video-player-thumbnail.png"
