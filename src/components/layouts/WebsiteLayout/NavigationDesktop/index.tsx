@@ -33,13 +33,15 @@ export const NavigationDesktop = () => {
             {route.label}
           </Link>
         ) : (
-          <LinkDropDown
-            label={route.label}
-            key={route.label}
-            sub_items={route.sub_items}
-            isActive={pathname.startsWith('/solucoes')}
-            isLast={index < routes.length - 1}
-          />
+          route?.sub_items?.length && (
+            <LinkDropDown
+              label={route.label}
+              key={route.label}
+              sub_items={route.sub_items}
+              isActive={!!pathname?.startsWith('/solucoes')}
+              isLast={index < routes.length - 1}
+            />
+          )
         )
       )}
       <div className="flex items-center ml-24">
