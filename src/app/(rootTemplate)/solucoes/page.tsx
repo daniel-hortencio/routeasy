@@ -9,9 +9,9 @@ import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
 import { Routing } from 'components/layouts/WebsiteLayout/Routing'
 import { TextHighlight, Title } from 'components/elements/Texts'
-import { ICardColoredProps } from 'components/layouts/WebsiteLayout/CardListColored/types'
+import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
-const listDifferentials: ICardColoredProps[] = [
+const listDifferentials: IIconCardColoredProps[] = [
   {
     icon: 'BsShield',
     title: 'Apólice de seguro',

@@ -1,12 +1,7 @@
-export interface ICardColoredProps {
-  icon: string
-  title: string
-  text: string
-  accentColor: string
-}
+import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
 export interface ICardListProps {
-  cards: ICardColoredProps[]
+  cards: IIconCardColoredProps[]
   title: string
   subtitle: string
 }
