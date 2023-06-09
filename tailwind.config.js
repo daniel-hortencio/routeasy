@@ -13,6 +13,7 @@ module.exports = {
           50: '#B0E6D2',
           100: '#3CBC8D',
           200: '#32AA82',
+          300: '#A7DA75',
           DEFAULT: '#3CBC8D',
         },
         grayscale: {
@@ -33,6 +34,9 @@ module.exports = {
         },
         yellowscale: {
           50: '#FCB400'
+        },
+        purplescale: {
+          50: '#424678'
         }
       },
       boxShadow: {

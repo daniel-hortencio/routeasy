@@ -3,16 +3,30 @@
 import { Section } from 'components/elements/Section'
 import { Tabs } from '../Tabs'
 import { TextHighlight, Title } from 'components/elements/Texts'
-import 'keen-slider/keen-slider.min.css'
 import Image from 'next/image'
 import { ITabsProps, IContentProps } from '../Tabs/types'
+import 'keen-slider/keen-slider.min.css'
 
-export const ContentItem = ({
-  title,
-  text,
-  image,
-  altImage
-}: IContentProps) => {
+interface ITabProps {
+  label: string
+  isActive: boolean
+  onClick: () => void
+}
+
+const TabItem = ({ label, onClick, isActive }: ITabProps) => {
+  return (
+    <button
+      className={`w-full text-white lg:w-[170px] h-12 whitespace-nowrap rounded-full ${
+        isActive && 'bg-primary-100'
+      }`}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  )
+}
+
+const ContentItem = ({ title, text, image, altImage }: IContentProps) => {
   return (
     <>
       <div className="md:w-[56%]">

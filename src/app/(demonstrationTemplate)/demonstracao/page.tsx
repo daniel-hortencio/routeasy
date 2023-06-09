@@ -6,7 +6,7 @@ export default function DemonstrationPage() {
   return (
     <div className="lg:flex">
       <div className="lg:w-1/2">
-        <div className="lg:max-w-xl w-full lg:ml-auto px-5 pt-[150px] lg:pb-[60px] lg:pr-36 lg:pl-14">
+        <div className="flex flex-col lg:h-screen justify-center lg:max-w-xl w-full lg:ml-auto px-5 pt-48 pb-12 lg:py-16 lg:pr-36 lg:pl-14">
           <Title className="text-center lg:text-left text-[40px] lg:text-[72px] mb-12 lg:mb-16">
             A GENTE ESTÁ <TextHighlight> QUASE</TextHighlight> LÁ
           </Title>
@@ -27,7 +27,7 @@ export default function DemonstrationPage() {
           </Text>
         </div>
       </div>
-      <div className="lg:w-1/2 bg-grayscale-600 lg:min-h-screen">
+      <div className="lg:w-1/2 bg-grayscale-600 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
         <div className="lg:max-w-xl w-full mr-auto">
           <ContactForm />
         </div>

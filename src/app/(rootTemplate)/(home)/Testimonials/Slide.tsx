@@ -2,7 +2,8 @@
 
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Skeleton } from 'components/elements/Skeleton'
 
 export const SlideTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -15,26 +16,27 @@ export const SlideTestimonials = () => {
       spacing: 20
     },
     breakpoints: {
-      // '(min-width: 1024)': {
-      //   slides: {
-      //     perView: 3,
-      //     spacing: 20
-      //   }
-      // },
-      '(min-width: 768px)': {
+      '(min-width: 1024px)': {
         slides: {
           perView: 3,
+          spacing: 20
+        }
+      },
+      '(min-width: 640px) and (max-width: 1023px)': {
+        slides: {
+          perView: 2,
           spacing: 20
         }
       }
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
     }
   })
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
 
   const CardTestimonial = ({ avatar, name, position, testimonial }) => {
     return (
@@ -57,56 +59,60 @@ export const SlideTestimonials = () => {
 
   return (
     <div>
-      <div ref={sliderRef} className="keen-slider mb-[72px]">
-        <div className="keen-slider__slide pt-2">
-          <CardTestimonial
-            avatar=""
-            name="Antonio Silva"
-            position="Customer"
-            testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-          />
+      {loaded ? (
+        <div ref={sliderRef} className={`keen-slider mb-[72px]`}>
+          <div className="keen-slider__slide pt-2">
+            <CardTestimonial
+              avatar=""
+              name="Antonio Silva"
+              position="Customer"
+              testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+            />
+          </div>
+          <div className="keen-slider__slide pt-2">
+            <CardTestimonial
+              avatar=""
+              name="Antonio Silva"
+              position="Customer"
+              testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+            />
+          </div>
+          <div className="keen-slider__slide pt-2">
+            <CardTestimonial
+              avatar=""
+              name="Antonio Silva"
+              position="Customer"
+              testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+            />
+          </div>
+          <div className="keen-slider__slide pt-2">
+            <CardTestimonial
+              avatar=""
+              name="Antonio Silva"
+              position="Customer"
+              testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+            />
+          </div>
+          <div className="keen-slider__slide pt-2">
+            <CardTestimonial
+              avatar=""
+              name="Antonio Silva"
+              position="Customer"
+              testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+            />
+          </div>
+          <div className="keen-slider__slide pt-2">
+            <CardTestimonial
+              avatar=""
+              name="Antonio Silva"
+              position="Customer"
+              testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+            />
+          </div>
         </div>
-        <div className="keen-slider__slide pt-2">
-          <CardTestimonial
-            avatar=""
-            name="Antonio Silva"
-            position="Customer"
-            testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-          />
-        </div>
-        <div className="keen-slider__slide pt-2">
-          <CardTestimonial
-            avatar=""
-            name="Antonio Silva"
-            position="Customer"
-            testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-          />
-        </div>
-        <div className="keen-slider__slide pt-2">
-          <CardTestimonial
-            avatar=""
-            name="Antonio Silva"
-            position="Customer"
-            testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-          />
-        </div>
-        <div className="keen-slider__slide pt-2">
-          <CardTestimonial
-            avatar=""
-            name="Antonio Silva"
-            position="Customer"
-            testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-          />
-        </div>
-        <div className="keen-slider__slide pt-2">
-          <CardTestimonial
-            avatar=""
-            name="Antonio Silva"
-            position="Customer"
-            testimonial="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
-          />
-        </div>
-      </div>
+      ) : (
+        <Skeleton className="w-full pt-[48%] rounded-xl" />
+      )}
       {loaded && instanceRef.current && (
         <div className="flex justify-center translate-x-1">
           {[

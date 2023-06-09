@@ -68,7 +68,7 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-grayscale-600 px-4 lg:px-20 pt-20 lg:pt-[150px] pb-12 rounded-lg"
+      className="bg-grayscale-600 px-4 lg:px-20 pt-20 lg:py-16 pb-12 rounded-lg"
     >
       <Title className="mb-4">Contato</Title>
       <Text className="mb-10 text-grayscale-200">
