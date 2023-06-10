@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from 'react'
+import { Dispatch, ReactNode, SetStateAction, useState } from 'react'
 import { mask } from 'utils/masks'
 
 interface InputProps {
@@ -20,8 +20,58 @@ export const InputText = ({
       value={value}
       onChange={e => onChange(e.target.value)}
       placeholder={placeholder}
-      type=""
+      type={type}
     />
+  )
+}
+
+interface IInputSelectProps {
+  options: Array<string>
+  value: string | number
+  onChoose: (event: string | number) => void
+}
+
+export const InputSelect = ({
+  value,
+  options,
+  onChoose
+}: IInputSelectProps) => {
+  const [inputValue, setInputValue] = useState<string | number>(value)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleChoose = (option: string | number) => {
+    setInputValue(option)
+    onChoose(option)
+    toggleOpen()
+  }
+
+  return (
+    <div className="relative">
+      <div
+        onClick={toggleOpen}
+        className="text-sm focus:border-none cursor-pointer focus:outline-none bg-grayscale-500 text-white py-4 px-[18px] w-full rounded"
+      >
+        {inputValue}
+      </div>
+      {isOpen && (
+        <ul className="absolute mt-2 w-full h-[180px] overflow-auto top-full left-0 rounded">
+          {options &&
+            options.map((option, index) => (
+              <li
+                key={index}
+                onClick={() => handleChoose(option)}
+                className="text-sm focus:outline-none cursor-pointer bg-grayscale-500 text-white  py-4 px-[18px] w-full hover:bg-grayscale-600"
+              >
+                {option}
+              </li>
+            ))}
+        </ul>
+      )}
+    </div>
   )
 }
 

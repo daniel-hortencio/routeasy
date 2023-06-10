@@ -6,9 +6,9 @@ import * as yup from 'yup'
 import { ButtonSecondary } from 'components/elements/Button'
 import {
   InputGroup,
-  InputNumber,
   InputPhone,
-  InputText
+  InputText,
+  InputSelect
 } from 'components/elements/Inputs'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
@@ -61,7 +61,7 @@ export const ContactForm = () => {
       onSuccess: async () => {
         const response = await axios.post('/api/hello', data)
 
-        console.log({ response })
+        console.log('RESPONSE', { response })
       }
     })
   }
@@ -117,12 +117,12 @@ export const ContactForm = () => {
             placeholder="Routeasy"
           />
         </InputGroup>
-        <InputGroup
+        {/* <InputGroup
           label="Quantidade de veículos"
           error={errors.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
           className="mb-10"
         >
-          <InputNumber
+          <InputText
             value={data.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
             onChange={(value: string) =>
               handleChange(
@@ -130,7 +130,23 @@ export const ContactForm = () => {
                 value
               )
             }
-            placeholder="00"
+            placeholder="00 a 100"
+          />
+        </InputGroup> */}
+        <InputGroup
+          label="Quantidade de veículos"
+          error={errors.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
+          className="mb-10"
+        >
+          <InputSelect
+            value={data.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
+            options={['5 a 15', '15 a 50', '50 a 100', 'Mais de 100']}
+            onChoose={(value: string) =>
+              handleChange(
+                'cf_quantidade_de_veiculos_proprios_e_ou_terceirizados',
+                value
+              )
+            }
           />
         </InputGroup>
       </div>
