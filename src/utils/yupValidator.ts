@@ -19,7 +19,7 @@ export const yupValidator = ({ schema, data, setError, onSuccess }: Props) => {
     .validate(data, { abortEarly: false })
     .then(onSuccess)
     .catch(validationErrors => {
-      const errors_list = validationErrors.inner.map(
+      const errors_list = validationErrors?.inner?.map(
         ({ message, path }: ValidationError) => ({
           value: message,
           param: path

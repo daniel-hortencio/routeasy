@@ -13,6 +13,7 @@ import {
 import { Section } from 'components/elements/Section'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
+import axios from 'axios'
 
 const init_data = {
   name: '',
@@ -56,7 +57,37 @@ export const ContactForm = () => {
       schema: contactFormSchema,
       data,
       setError: handleSetError,
-      onSuccess: () => console.log('Deu certo')
+      onSuccess: async () => {
+        await axios
+          .post('https://api.example.com/endpoint', data, {
+            headers: {
+              authority: 'gyruss.rdops.systems',
+              accept: '*/*',
+              'accept-language': 'es-ES,es;q=0.9,pt;q=0.8,en;q=0.7',
+              authorization: 'PublicToken 8f24fb763a4fe60e5e110624116f9c5e',
+              'cache-control': 'no-cache',
+              'content-type': 'application/json; charset=UTF-8',
+              origin: 'http://localhost:3006',
+              pragma: 'no-cache',
+              referer: 'http://localhost:3006/',
+              'sec-ch-ua':
+                '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
+              'sec-ch-ua-mobile': '?0',
+              'sec-ch-ua-platform': '"Windows"',
+              'sec-fetch-dest': 'empty',
+              'sec-fetch-mode': 'cors',
+              'sec-fetch-site': 'cross-site',
+              'user-agent':
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+            }
+          })
+          .then(success => {
+            console.log({ success })
+          })
+          .catch(error => {
+            console.error(error)
+          })
+      }
     })
   }
 

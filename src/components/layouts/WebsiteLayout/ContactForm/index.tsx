@@ -12,13 +12,14 @@ import {
 } from 'components/elements/Inputs'
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
+import axios from 'axios'
 
 const init_data = {
   name: '',
-  phone: '',
+  personal_phone: '',
   email: '',
-  company: '',
-  amountOfVehicles: ''
+  company_name: '',
+  cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: ''
 }
 
 export const ContactForm = () => {
@@ -43,25 +44,24 @@ export const ContactForm = () => {
         .string()
         .required('Campo obrigatório')
         .email('Insira um e-mail com formato válido'),
-      phone: yup
+      personal_phone: yup
         .string()
         .required('Campo obrigatório')
         .min(15, 'Deve conter pelo menos 9 dígitos'),
-      company: yup.string().required('Campo obrigatório'),
-      amountOfVehicles: yup.string().required('Campo obrigatório')
+      company_name: yup.string().required('Campo obrigatório'),
+      cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
+        .string()
+        .required('Campo obrigatório')
     })
 
     yupValidator({
       schema: contactFormSchema,
       data,
       setError: handleSetError,
-      onSuccess: () => {
-        console.log({ data })
+      onSuccess: async () => {
+        const response = await axios.post('/api/hello', data)
 
-        /*         fetch('https://gyruss.rdops.systems/v2/conversions', options)
-        //   .then(response => response.json())
-        //   .then(response => console.log({ response }))
-        //   .catch(err => console.error(err)) */
+        console.log({ response })
       }
     })
   }
@@ -92,10 +92,10 @@ export const ContactForm = () => {
             placeholder="José da Silva"
           />
         </InputGroup>
-        <InputGroup label="Telefone" error={errors.phone}>
+        <InputGroup label="Telefone" error={errors.personal_phone}>
           <InputPhone
-            value={data.phone}
-            onChange={(value: string) => handleChange('phone', value)}
+            value={data.personal_phone}
+            onChange={(value: string) => handleChange('personal_phone', value)}
             placeholder="(00) 00000-0000"
           />
         </InputGroup>
@@ -110,22 +110,25 @@ export const ContactForm = () => {
             placeholder="josedasilva@gmail.com"
           />
         </InputGroup>
-        <InputGroup label="Empresa" error={errors.company}>
+        <InputGroup label="Empresa" error={errors.company_name}>
           <InputText
-            value={data.company}
-            onChange={(value: string) => handleChange('company', value)}
+            value={data.company_name}
+            onChange={(value: string) => handleChange('company_name', value)}
             placeholder="Routeasy"
           />
         </InputGroup>
         <InputGroup
           label="Quantidade de veículos"
-          error={errors.amountOfVehicles}
+          error={errors.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
           className="mb-10"
         >
           <InputNumber
-            value={data.amountOfVehicles}
+            value={data.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
             onChange={(value: string) =>
-              handleChange('amountOfVehicles', value)
+              handleChange(
+                'cf_quantidade_de_veiculos_proprios_e_ou_terceirizados',
+                value
+              )
             }
             placeholder="00"
           />
@@ -133,7 +136,7 @@ export const ContactForm = () => {
       </div>
 
       <div className="sm:w-20 sm:mx-auto">
-        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
+        <ButtonSecondary type="submit">Enviar aqui</ButtonSecondary>
       </div>
     </form>
   )
