@@ -31,9 +31,9 @@ export const Banner = () => {
   }, [])
 
   return (
-    <Section className="h-screen flex lg:mb-12">
+    <Section className="h-[90vh] flex lg:mb-12">
       <div className="flex h-full relative min-h-[640px]">
-        <div className="md:max-w-[34rem] md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left">
+        <div className="md:max-w-[32rem] pt-20 md:mx-auto lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left">
           <h1 className="text-white uppercase font-semibold text-5xl lg:text-[50px]/[68px] pb-5">
             Tecnologia avançada para
             <div className="flex justify-center lg:justify-start">
@@ -54,7 +54,7 @@ export const Banner = () => {
             <ButtonPrimary href="/">Quero uma demonstração</ButtonPrimary>
           </div>
         </div>
-        <div className="hidden lg:block absolute w-[70%] -right-36 top-0 h-full">
+        <div className="hidden lg:block absolute w-[80%] -right-36 top-0 h-full">
           <div className="relative h-full">
             <Image
               style={{
