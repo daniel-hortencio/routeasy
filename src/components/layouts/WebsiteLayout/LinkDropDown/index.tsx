@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import Icon from 'components/elements/Icon'
 
 import S from './styles.module.css'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 interface Props {
   label: string
@@ -51,15 +52,25 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
           !isOpenDropDown && 'h-0 opacity-0'
         }`}
       >
-        {sub_items.map(sub_item => (
-          <Link
-            key={sub_item.label}
-            href={sub_item.href}
-            className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-grayscale-400"
-          >
-            {sub_item.label}
-          </Link>
-        ))}
+        {sub_items.map(sub_item =>
+          sub_item.href.startsWith('http') ? (
+            <LinkExternal
+              href={sub_item.href}
+              key={sub_item.label}
+              className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-grayscale-400"
+            >
+              {sub_item.label}
+            </LinkExternal>
+          ) : (
+            <Link
+              key={sub_item.label}
+              href={sub_item.href}
+              className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-grayscale-400"
+            >
+              {sub_item.label}
+            </Link>
+          )
+        )}
       </div>
       <div
         className={`w-full h-screen top-0 left-0 z-10 ${

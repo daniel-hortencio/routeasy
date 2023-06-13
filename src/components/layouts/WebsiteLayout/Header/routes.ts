@@ -12,8 +12,37 @@ const routes = [
       { label: 'Onboarding', href: '/solucoes/onboarding' }
     ]
   },
-  { label: 'Sobre', href: '/sobre-nos' },
-  { label: 'Trabalhe conosco', href: '/trabalhe-conosco' },
+  {
+    label: 'Conteúdo',
+    sub_items: [
+      {
+        label: 'Blog',
+        href: 'http://routeasy.com.br/content/'
+      },
+      {
+        label: 'RoutingAcademy',
+        href: 'https://routeasy.com.br/content/routingacademy/'
+      },
+      {
+        label: 'Cases',
+        href: 'https://routeasy.com.br/content/cases/'
+      },
+      {
+        label: 'Materiais',
+        href: 'https://routeasy.com.br/content/materiais-gratuitos/'
+      }
+    ]
+  },
+  {
+    label: 'Sobre nós',
+    sub_items: [
+      {
+        label: 'Sobre nós',
+        href: '/sobre-nos/'
+      },
+      { label: 'Trabalhe conosco', href: '/trabalhe-conosco/' }
+    ]
+  },
   { label: 'Contato', href: '/contato' }
 ]
 

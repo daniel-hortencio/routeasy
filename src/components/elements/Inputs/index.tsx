@@ -16,7 +16,7 @@ export const InputText = ({
 }: InputProps) => {
   return (
     <input
-      className="text-sm focus:border-none focus:outline-none bg-grayscale-500 text-white placeholder:text-grayscale-200 py-4 px-[18px] w-full rounded"
+      className="text-sm border border-transparent focus:border-primary-50 hover:border-primary focus:outline-none bg-grayscale-500 focus:bg-grayscale-400 text-white placeholder:text-grayscale-200 py-4 px-[18px] w-full rounded"
       value={value}
       onChange={e => onChange(e.target.value)}
       placeholder={placeholder}
@@ -53,9 +53,13 @@ export const InputSelect = ({
     <div className="relative">
       <div
         onClick={toggleOpen}
-        className="text-sm focus:border-none cursor-pointer focus:outline-none bg-grayscale-500 text-white py-4 px-[18px] w-full rounded"
+        className={
+          isOpen
+            ? 'text-sm focus:border-none cursor-pointer focus:outline-none border border-primary-50 bg-grayscale-400 text-white py-[10px] px-[18px] w-full rounded'
+            : 'text-sm border border-transparent hover:border-primary focus:border-none cursor-pointer focus:outline-none bg-grayscale-500 text-white py-[10px] px-[18px] w-full rounded'
+        }
       >
-        {inputValue}
+        <div className={inputValue ? 'py-[6px]' : 'py-4'}>{inputValue}</div>
       </div>
       {isOpen && (
         <ul className="absolute mt-2 w-full h-[180px] overflow-auto top-full left-0 rounded">

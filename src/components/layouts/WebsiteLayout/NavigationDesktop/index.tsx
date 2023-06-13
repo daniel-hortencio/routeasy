@@ -19,7 +19,7 @@ export const NavigationDesktop = () => {
   }
 
   return (
-    <nav className="flex items-center">
+    <nav className="flex items-center text-[15px] font-semibold">
       {routes.map((route, index) =>
         route.href ? (
           <Link
@@ -44,7 +44,7 @@ export const NavigationDesktop = () => {
           )
         )
       )}
-      <div className="flex items-center ml-24">
+      <div className="flex items-center ml-24 text-[15px]">
         <Link
           href="/"
           className="text-primary-100 hover:text-primary-200 transition-all text-gray"
@@ -57,9 +57,11 @@ export const NavigationDesktop = () => {
         >
           Demonstração
         </Link>
-        <button className="text-white border-[1px] border-grayscale-500 h-12 px-[10px] flex items-center justify-center rounded ml-2">
-          EN
-        </button>
+        <div className="hidden">
+          <button className="text-white border-[1px] border-grayscale-500 h-12 px-[10px] flex items-center justify-center rounded ml-2">
+            EN
+          </button>
+        </div>
       </div>
     </nav>
   )

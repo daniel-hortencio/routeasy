@@ -151,8 +151,8 @@ export const ContactForm = () => {
         </InputGroup>
       </div>
 
-      <div className="sm:w-20 sm:mx-auto">
-        <ButtonSecondary type="submit">Enviar aqui</ButtonSecondary>
+      <div className="md:w-[91px] md:mx-auto">
+        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
       </div>
     </form>
   )
