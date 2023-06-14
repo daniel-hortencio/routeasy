@@ -5,7 +5,6 @@ import { Section } from 'components/elements/Section'
 import { RoutingList } from './content'
 import { RoutingCard } from './components/Card'
 import { RoutingMainContent } from './components/Main'
-import { FeatureCardList } from './components/FeatureCards'
 
 export const Routing: React.FC = () => {
   const [cardActive, setCardActive] = useState<number>(0)
@@ -36,11 +35,11 @@ export const Routing: React.FC = () => {
               text={content.text}
               link={content.link}
               image={content.image}
+              featureContent={content.featureContent}
             />
           </div>
         ))}
       </div>
-      <FeatureCardList />
     </Section>
   )
 }
