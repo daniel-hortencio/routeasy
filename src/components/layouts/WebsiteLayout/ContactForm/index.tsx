@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from 'react'
 import * as yup from 'yup'
+import { PulseLoader } from 'react-spinners'
+import Swal from 'sweetalert2'
 
 import { ButtonSecondary } from 'components/elements/Button'
 import {
@@ -25,6 +27,7 @@ const init_data = {
 export const ContactForm = () => {
   const [data, setData] = useState(init_data)
   const [errors, setErrors] = useState(init_data)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSetError = (errors_list: { param: any; value: string }[]) => {
     const errors_dto = { ...errors }
@@ -35,23 +38,36 @@ export const ContactForm = () => {
     setErrors(errors_dto)
   }
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast'
+    },
+    timer: 10000,
+    timerProgressBar: true
+  })
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    setIsLoading(true)
 
     const contactFormSchema = yup.object().shape({
-      name: yup.string().min(1, 'Campo obrigatório'),
+      name: yup.string().min(1, 'Obrigatório'),
       email: yup
         .string()
-        .required('Campo obrigatório')
+        .required('Obrigatório')
         .email('Insira um e-mail com formato válido'),
       personal_phone: yup
         .string()
-        .required('Campo obrigatório')
-        .min(15, 'Deve conter pelo menos 9 dígitos'),
-      company_name: yup.string().required('Campo obrigatório'),
+        .required('Obrigatório')
+        .min(15, 'Mínimo 9 dígitos'),
+      company_name: yup.string().required('Obrigatório'),
       cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
         .string()
-        .required('Campo obrigatório')
+        .required('Obrigatório')
     })
 
     yupValidator({
@@ -59,11 +75,24 @@ export const ContactForm = () => {
       data,
       setError: handleSetError,
       onSuccess: async () => {
-        const response = await axios.post('/api/hello', data)
-
+        const response = await axios
+          .post('/api/hello', data)
+          .then(() =>
+            Toast.fire({
+              icon: 'success',
+              title: 'Contato enviado com sucesso!'
+            })
+          )
+          .catch(() =>
+            Toast.fire({
+              icon: 'error',
+              title:
+                'Não foi possível enviar seu contato. Tente novamente em alguns minutos.'
+            })
+          )
         console.log('RESPONSE', { response })
       }
-    })
+    }).finally(() => setIsLoading(false))
   }
 
   const handleChange = (param: keyof typeof data, value: string) => {
@@ -152,7 +181,9 @@ export const ContactForm = () => {
       </div>
 
       <div className="md:w-[91px] md:mx-auto">
-        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
+        <ButtonSecondary type="submit" disabled={isLoading}>
+          {isLoading ? <PulseLoader size={10} color="#B0E6D2" /> : 'Enviar'}
+        </ButtonSecondary>
       </div>
     </form>
   )
