@@ -46,8 +46,13 @@ export const ContactForm = () => {
     customClass: {
       popup: 'colored-toast'
     },
-    timer: 10000,
-    timerProgressBar: true
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: toast => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+    showCloseButton: true
   })
 
   const handleSubmit = (e: FormEvent) => {
@@ -73,26 +78,32 @@ export const ContactForm = () => {
     yupValidator({
       schema: contactFormSchema,
       data,
-      setError: handleSetError,
+      setError: errors => {
+        setIsLoading(false)
+        handleSetError(errors)
+      },
       onSuccess: async () => {
         const response = await axios
           .post('/api/hello', data)
-          .then(() =>
+          .then(() => {
+            setIsLoading(false)
             Toast.fire({
               icon: 'success',
               title: 'Contato enviado com sucesso!'
             })
-          )
-          .catch(() =>
+          })
+          .catch(() => {
+            setIsLoading(false)
             Toast.fire({
               icon: 'error',
               title:
-                'Não foi possível enviar seu contato. Tente novamente em alguns minutos.'
+                'Falha ao enviar contato! Tente novamente em alguns minutos'
             })
-          )
+          })
+
         console.log('RESPONSE', { response })
       }
-    }).finally(() => setIsLoading(false))
+    })
   }
 
   const handleChange = (param: keyof typeof data, value: string) => {
