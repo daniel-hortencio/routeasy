@@ -4,28 +4,28 @@ export const RoutingList: IRoutingContentProps[] = [
   {
     title: 'Roteirização',
     icon: '/images/icons/home-solutions-routeirizacao.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
+    text: 'O algoritmo de roteirização da RoutEasy tem a maior capacidade de processamento do mercado, o que significa roteirizar mais pontos em menos tempo. Otimize a utilização de recursos, minimize custos e maximize a eficiência da sua operação!',
     link: 'https://www.google.com',
     image: '/images/pictures/Screen_roteirizacao.svg'
   },
   {
     title: 'Gestão de entregas',
     icon: '/images/icons/home-solutions-gestao-de-entrega.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
+    text: 'Acompanhe tudo o que acontece em tempo real na sua operação. Em uma plataforma amigável, você analisa todas as métricas que precisa e toma as decisões certas na hora certa.',
     link: 'https://www.google.com',
     image: '/images/pictures/Screen_gestao.svg'
   },
   {
     title: 'Automação',
     icon: '/images/icons/home-solutions-automacao.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
+    text: 'Ellimine os processos manuais para ganhar mais agilidade e eficiência. Com regras e parâmetros pré definidos, o Maestro automatiza todo o fluxo de trabalho, possibilitando o same day dellivery e as coletas dinâmicas.',
     link: 'https://www.google.com',
     image: '/images/pictures/Screen_automacao_API.svg'
   },
   {
     title: 'Aplicativo',
     icon: '/images/icons/home-solutions-aplicativo.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
+    text: 'O aplicativo garante a integração de todas as etapas do processo de entrega. Com ele o motorista recebe as rotas e executa tarefas direto no celular. ',
     link: 'https://www.google.com',
     image: '/images/pictures/Screen_aplicativo.svg'
   },
@@ -34,7 +34,7 @@ export const RoutingList: IRoutingContentProps[] = [
     icon: '/images/icons/home-solutions-api.svg',
     text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
     link: 'https://www.google.com',
-    image: '/images/pictures/Screen_automacao_API.svg'
+    image: '/images/pictures/Screen_API.svg'
   }
 ]
 
@@ -42,7 +42,7 @@ export const FeatureList: IFeatureProps[] = [
   {
     title: 'Personalização de objetivos de otimização',
     icon: '/images/icons/features-icon-01.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+    text: 'O algoritmo de roteirização da RoutEasy tem a maior capacidade de processamento do mercado, o que significa roteirizar mais pontos em menos tempo. Otimize a utilização de recursos, minimize custos e maximize a eficiência da sua operação!'
   },
   {
     title: 'Entregas e coletas na mesma rota',

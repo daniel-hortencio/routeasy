@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { IFeatureProps } from '../types'
 import { FeatureList } from '../content'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const FeatureCard = ({
   title,
@@ -34,7 +34,7 @@ export const FeatureCardList = () => {
   const [featureActive, setFeatureActive] = useState(0)
 
   return (
-    <div className="w-10/12 my-28 m-auto flex justify-between items-center">
+    <div className="w-10/12 mt-12 mb-24 m-auto flex justify-between items-center">
       <div className="w-5/12">
         {FeatureList.map((feature, index) => (
           <FeatureCard
@@ -46,7 +46,7 @@ export const FeatureCardList = () => {
           />
         ))}
       </div>
-      <div className="w-6/12">
+      <div className="w-6/12 flex flex-col justify-center">
         {FeatureList.map((content, index) => (
           <div
             key={index}
@@ -55,7 +55,7 @@ export const FeatureCardList = () => {
             <p className="text-[26px] font-bold uppercase mb-3.5">
               {content.title}
             </p>
-            <p>{content.text}</p>
+            <p className="text-sm">{content.text}</p>
           </div>
         ))}
       </div>

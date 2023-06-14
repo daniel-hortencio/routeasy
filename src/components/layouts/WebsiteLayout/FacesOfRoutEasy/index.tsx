@@ -22,6 +22,7 @@ export const FacesOfRoutEasy = () => {
         'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
     }
   ]
+
   const time_transition = 5000
 
   const [currentEmployeeSlider, setCurrentEmployeeSlider] = useState(
