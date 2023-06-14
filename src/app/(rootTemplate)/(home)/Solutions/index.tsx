@@ -7,6 +7,8 @@ import { useKeenSlider } from 'keen-slider/react'
 import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { TextHighlight, Title } from 'components/elements/Texts'
+import { title } from 'process'
+import S from './styles.module.css'
 
 const CardSoluctions = ({ icon, title, onClick, isActive }) => {
   return (
@@ -37,7 +39,9 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
 
 const CardRoute = ({ icon, title }) => {
   return (
-    <div className="rounded-lg border lg:w-60 h-16 border-grayscale-500 cursor-pointer flex items-center justify-start lg:justify-center px-4 mx-auto mb-4 lg:mb-0">
+    <div
+      className={`${S.SoluctionsGrid} rounded-lg border lg:w-60 h-16 border-grayscale-500 cursor-pointer justify-start lg:justify-center px-4 mx-auto mb-4 lg:mb-0`}
+    >
       <div className="flex items-center justify-center h-[30px] w-[50px] bg-grayscale-500 rounded-[4px]">
         <Image
           src={icon.src}
@@ -93,7 +97,7 @@ export const Solutions = () => {
     },
     {
       title: 'Automação',
-      src: '/images/pictures/Screen_automacao_API.svg',
+      src: '/images/pictures/Screen_automacao.svg',
       icon: {
         src: '/images/icons/home-solutions-automacao.svg',
         alt: 'Automação'
@@ -111,7 +115,7 @@ export const Solutions = () => {
     },
     {
       title: 'API',
-      src: '/images/pictures/Screen_automacao_API.svg',
+      src: '/images/pictures/Screen_API.svg',
       icon: {
         src: '/images/icons/home-solutions-api.svg',
         alt: 'API'
@@ -120,14 +124,14 @@ export const Solutions = () => {
     }
   ]
 
-  const list_soluctions = [
+  const list_soluctions_route_cl = [
     {
       title: 'Personalização de objetivos de otimização',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/home-solutions-pen.svg',
-        alt: 'API'
+        alt: 'Personalização de objetivos de otimização'
       }
     },
     {
@@ -136,7 +140,7 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/home-solutions-box.svg',
-        alt: 'API'
+        alt: 'Entregas e coletas na mesma rota'
       }
     },
     {
@@ -145,7 +149,7 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/home-solutions-dots.svg',
-        alt: 'API'
+        alt: 'Resequenciamento automático'
       }
     },
     {
@@ -154,7 +158,194 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/home-solutions-car.svg',
-        alt: 'API'
+        alt: 'Configuração de restrições operacionais'
+      }
+    }
+  ]
+
+  const list_soluctions_route_cr = [
+    {
+      title:
+        'Cadastro de clientes, veículos, origens, frete e apólice de seguro',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-plus.svg',
+        alt: 'Cadastro de clientes, veículos, origens, frete e apólice de seguro'
+      }
+    },
+    {
+      title: 'Regras associadas a perfil de clientes, frotas e regiões',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-file.svg',
+        alt: 'Regras associadas a perfil de clientes, frotas e regiões'
+      }
+    },
+    {
+      title: 'Uso de prioridade e sequenciamento de serviços',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-chevrons-up.svg',
+        alt: 'Uso de prioridade e sequenciamento de serviços'
+      }
+    },
+    {
+      title: 'Edição, duplicação e clonagem de rotas e serviços',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-pen.svg',
+        alt: 'Edição, duplicação e clonagem de rotas e serviços'
+      }
+    }
+  ]
+
+  const list_management_cl = [
+    {
+      title: 'Chat direto com o motorista',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-chat.svg',
+        alt: 'Chat direto com o motorista'
+      }
+    },
+    {
+      title: 'Tracking para o cliente',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-map.svg',
+        alt: 'Tracking para o cliente'
+      }
+    },
+    {
+      title: 'Alertas inteligentes para ocorrências',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-alert.svg',
+        alt: 'Alertas inteligentes para ocorrências'
+      }
+    },
+    {
+      title: 'Proof of delivery',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-file.svg',
+        alt: 'Proof of delivery'
+      }
+    }
+  ]
+
+  const list_management_cr = [
+    {
+      title: 'Avaliações do serviço, produto e motorista.',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-chat.svg',
+        alt: 'Avaliações do serviço, produto e motorista.'
+      }
+    },
+    {
+      title: 'Dashbord de Indicadores.',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-map.svg',
+        alt: 'Dashbord de Indicadores.'
+      }
+    },
+    {
+      title: 'Relatórios de registros e dados de execução da operação.',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-alert.svg',
+        alt: 'Relatórios de registros e dados de execução da operação.'
+      }
+    },
+    {
+      title: 'Visibilidade para a operação e cliente final.',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-file.svg',
+        alt: 'Visibilidade para a operação e cliente final.'
+      }
+    }
+  ]
+
+  const list_automation_cl = [
+    {
+      title: 'Roteirização programada automaticamente',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-route.svg',
+        alt: 'Roteirização programada automaticamente'
+      }
+    },
+    {
+      title: 'Seleção de frota própria ou terceirizada',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/vehicle.png',
+        alt: 'Seleção de frota própria ou terceirizada'
+      }
+    },
+    {
+      title: 'Despacho automático para o motorista ideal',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-user.svg',
+        alt: 'Despacho automático para o motorista ideal'
+      }
+    }
+  ]
+
+  const list_app_cl = [
+    {
+      title: 'Chat direto com a operação',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-chat.svg',
+        alt: 'Chat direto com a operação'
+      }
+    },
+    {
+      title: 'Integração com Google Maps e Waze',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-map.svg',
+        alt: 'Integração com Google Maps e Waze'
+      }
+    },
+    {
+      title: 'Comprovação por foto, vídeo e assinatura',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-camera.svg',
+        alt: 'Comprovação por foto, vídeo e assinatura'
+      }
+    },
+    {
+      title: 'Aceite da rota direto no app',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-route.svg',
+        alt: 'Aceite da rota direto no app'
       }
     }
   ]
@@ -183,11 +374,62 @@ export const Solutions = () => {
               />
             ))}
           </div>
-          <div className="flex pb-8">
+          <div className="flex pb-6">
             <div className="flex flex-col px-5 items-center justify-evenly">
-              {list_soluctions.map((item, index) => (
-                <CardRoute key={index} title={item.title} icon={item.icon} />
-              ))}
+              {list_soluctions_route_cl.map(
+                (item, index) =>
+                  tab === 0 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_management_cl.map(
+                (item, index) =>
+                  tab === 1 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_automation_cl.map(
+                (item, index) =>
+                  tab === 2 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_app_cl.map(
+                (item, index) =>
+                  tab === 3 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_automation_cl.map(
+                (item, index) =>
+                  tab === 4 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
             </div>
             <div className="mt-8 lg:mt-0 w-full relative flex justify-center pt-[64%] md:pt-[32%] mb-4 lg:mb-0">
               {tabList.map(
@@ -200,9 +442,60 @@ export const Solutions = () => {
               )}
             </div>
             <div className="flex flex-col px-5 items-center justify-evenly">
-              {list_soluctions.map((item, index) => (
-                <CardRoute key={index} title={item.title} icon={item.icon} />
-              ))}
+              {list_soluctions_route_cr.map(
+                (item, index) =>
+                  tab === 0 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_management_cr.map(
+                (item, index) =>
+                  tab === 1 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_automation_cl.map(
+                (item, index) =>
+                  tab === 2 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_app_cl.map(
+                (item, index) =>
+                  tab === 3 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
+
+              {list_automation_cl.map(
+                (item, index) =>
+                  tab === 4 && (
+                    <CardRoute
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                    />
+                  )
+              )}
             </div>
           </div>
         </div>
@@ -238,9 +531,75 @@ export const Solutions = () => {
             </p>
           </div>
           <div className="px-5 items-center justify-evenly">
-            {list_soluctions.map((item, index) => (
-              <CardRoute key={index} title={item.title} icon={item.icon} />
-            ))}
+            {list_soluctions_route_cl.map(
+              (item, index) =>
+                tab === 0 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_soluctions_route_cr.map(
+              (item, index) =>
+                tab === 0 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_management_cl.map(
+              (item, index) =>
+                tab === 1 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_management_cr.map(
+              (item, index) =>
+                tab === 1 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_automation_cl.map(
+              (item, index) =>
+                tab === 2 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_automation_cl.map(
+              (item, index) =>
+                tab === 2 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_app_cl.map(
+              (item, index) =>
+                tab === 3 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_app_cl.map(
+              (item, index) =>
+                tab === 3 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_automation_cl.map(
+              (item, index) =>
+                tab === 4 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
+
+            {list_automation_cl.map(
+              (item, index) =>
+                tab === 4 && (
+                  <CardRoute key={index} title={item.title} icon={item.icon} />
+                )
+            )}
           </div>
         </div>
       </div>
