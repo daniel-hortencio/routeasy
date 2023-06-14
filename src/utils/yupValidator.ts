@@ -7,10 +7,15 @@ export type ValidationError = {
   path: string
 }
 
+type IError = {
+  param: any
+  value: string
+}
+
 type Props = {
   schema: yup.ObjectSchema<any>
   data: any
-  setError: (errors: { param: any; value: string }[]) => void
+  setError: (errors: IError[]) => void
   onSuccess: (params?: any) => void
 }
 
@@ -19,7 +24,7 @@ export const yupValidator = ({ schema, data, setError, onSuccess }: Props) => {
     .validate(data, { abortEarly: false })
     .then(onSuccess)
     .catch(validationErrors => {
-      const errors_list = validationErrors?.inner?.map(
+      const errors_list: IError[] = validationErrors?.inner?.map(
         ({ message, path }: ValidationError) => ({
           value: message,
           param: path

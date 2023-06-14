@@ -7,6 +7,7 @@ export interface IButtonBase {
   onClick?: () => void
   className: string
   type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export const ButtonBase = ({
@@ -14,14 +15,20 @@ export const ButtonBase = ({
   onClick,
   href,
   className,
-  type = 'button'
+  type = 'button',
+  disabled
 }: IButtonBase) => {
   return href ? (
     <Link className={className} href={href}>
       {children}
     </Link>
   ) : (
-    <button className={className} onClick={onClick} type={type}>
+    <button
+      className={className}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+    >
       {children}
     </button>
   )

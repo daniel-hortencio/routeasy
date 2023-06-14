@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from 'react'
 import * as yup from 'yup'
+import { PulseLoader } from 'react-spinners'
+import Swal from 'sweetalert2'
 
 import { ButtonSecondary } from 'components/elements/Button'
 import {
@@ -25,6 +27,7 @@ const init_data = {
 export const ContactForm = () => {
   const [data, setData] = useState(init_data)
   const [errors, setErrors] = useState(init_data)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSetError = (errors_list: { param: any; value: string }[]) => {
     const errors_dto = { ...errors }
@@ -35,31 +38,68 @@ export const ContactForm = () => {
     setErrors(errors_dto)
   }
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast'
+    },
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: toast => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+    showCloseButton: true
+  })
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    setIsLoading(true)
 
     const contactFormSchema = yup.object().shape({
-      name: yup.string().min(1, 'Campo obrigatório'),
+      name: yup.string().min(1, 'Obrigatório'),
       email: yup
         .string()
-        .required('Campo obrigatório')
+        .required('Obrigatório')
         .email('Insira um e-mail com formato válido'),
       personal_phone: yup
         .string()
-        .required('Campo obrigatório')
-        .min(15, 'Deve conter pelo menos 9 dígitos'),
-      company_name: yup.string().required('Campo obrigatório'),
+        .required('Obrigatório')
+        .min(15, 'Mínimo 9 dígitos'),
+      company_name: yup.string().required('Obrigatório'),
       cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
         .string()
-        .required('Campo obrigatório')
+        .required('Obrigatório')
     })
 
     yupValidator({
       schema: contactFormSchema,
       data,
-      setError: handleSetError,
+      setError: errors => {
+        setIsLoading(false)
+        handleSetError(errors)
+      },
       onSuccess: async () => {
-        const response = await axios.post('/api/hello', data)
+        const response = await axios
+          .post('/api/hello', data)
+          .then(() => {
+            setIsLoading(false)
+            Toast.fire({
+              icon: 'success',
+              title: 'Contato enviado com sucesso!'
+            })
+          })
+          .catch(() => {
+            setIsLoading(false)
+            Toast.fire({
+              icon: 'error',
+              title:
+                'Falha ao enviar contato! Tente novamente em alguns minutos'
+            })
+          })
 
         console.log('RESPONSE', { response })
       }
@@ -152,7 +192,9 @@ export const ContactForm = () => {
       </div>
 
       <div className="md:w-[91px] md:mx-auto">
-        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
+        <ButtonSecondary type="submit" disabled={isLoading}>
+          {isLoading ? <PulseLoader size={10} color="#B0E6D2" /> : 'Enviar'}
+        </ButtonSecondary>
       </div>
     </form>
   )

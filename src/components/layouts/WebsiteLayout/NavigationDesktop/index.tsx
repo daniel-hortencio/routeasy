@@ -12,14 +12,14 @@ export const NavigationDesktop = () => {
   const [isOpenDropDown, setIsOpenDropDown] = useState(false)
 
   const getClassName = (isActive: boolean, isLast?: boolean) => {
-    return `hover:text-primary-200 transition-all ${
+    return `hover:text-primary-200 font-medium transition-all ${
       isActive && 'text-primary-200'
     }
     ${isLast && 'mr-8'}`
   }
 
   return (
-    <nav className="flex items-center text-sm font-semibold">
+    <nav className="flex items-center text-[15px] font-medium">
       {routes.map((route, index) =>
         route.href ? (
           <Link

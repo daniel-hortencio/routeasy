@@ -48,3 +48,18 @@ p {
     font-size: 2.5rem;
   }
 }
+
+/* -------------------------------------------- OVERRIDES -------------------------------------------- */
+
+/* Sweet Alert -------------------------------------------  */
+.colored-toast.swal2-icon-success {
+  background-color: #3cbc8d !important;
+  color: white !important;
+}
+.colored-toast.swal2-icon-error {
+  background-color: #ff4e32 !important;
+  color: white !important;
+}
+.swal2-close {
+  color: white !important;
+}
