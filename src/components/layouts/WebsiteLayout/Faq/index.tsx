@@ -1,7 +1,7 @@
 'use client'
 
 import { Section } from 'components/elements/Section'
-import { Title } from 'components/elements/Texts'
+import { Title, Text } from 'components/elements/Texts'
 import { ButtonPrimary } from 'components/elements/Button'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -40,7 +40,7 @@ const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
   return (
     <div className="p-6 border-b border-grayscale-400">
       <header onClick={onClick} className="cursor-pointer flex justify-between">
-        <p className="font-base text-white">{title}</p>
+        <Text className="text-[15px] text-white">{title}</Text>
         <Image
           width="24"
           height="24"
@@ -52,7 +52,7 @@ const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
       <main
         className={`overflow-hidden transition-all ${isOpen ? 'h-32' : 'h-0'}`}
       >
-        <p className="font-base mt-4 text-white/80">{answer}</p>
+        <Text className="text-grayscale-50 text-[13px] mt-4">{answer}</Text>
       </main>
     </div>
   )
@@ -66,11 +66,16 @@ export const FAQ = () => {
 
   return (
     <Section
-      className="my-16 md:my-40"
+      className="lg:mb-40"
       title={<Title>Dúvidas frequentes</Title>}
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px]">
+          Aqui você encontrará as respostas para as dúvidas mais comuns sobre
+          nossas soluções.
+        </Text>
+      }
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between px-12">
+      <div className="flex flex-col-reverse md:flex-row justify-between px-12 pb-24 lg:pb-0">
         <div className="md:w-5/12">
           <div className="rounded-lg p-6 border border-grayscale-500">
             <div className="bg-grayscale-500 rounded-md p-3 w-12 h-12 mb-4">
@@ -82,16 +87,15 @@ export const FAQ = () => {
               />
             </div>
             <h4 className="text-white text-[22px] uppercase font-semibold mb-2">
-              Suporte
+              Help center
             </h4>
-            <p className="text-grayscale-200 text-base mb-4">
-              Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
-              aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-              veritatis voluptatem hic dolores fuga eum dolorum tenetur est
-              iusto quis.
-            </p>
-            <div className="lg:w-[138px] text-center mb-6">
-              <ButtonPrimary href="/">Entre em contato</ButtonPrimary>
+            <Text className="text-grayscale-200 text-[15px] mb-4">
+              Nossa equipe está sempre pronta para ajudar! Navegue pelo help
+              center e confira todos os artigos de suporte, além das
+              atualizações mais recentes sobre a nossa plataforma.
+            </Text>
+            <div className="lg:w-[176px] text-center">
+              <ButtonPrimary href="/">Acessar Help Center</ButtonPrimary>
             </div>
           </div>
         </div>

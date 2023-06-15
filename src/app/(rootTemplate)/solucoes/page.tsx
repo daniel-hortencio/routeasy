@@ -15,25 +15,25 @@ const listDifferentials: IIconCardColoredProps[] = [
   {
     icon: 'BsShield',
     title: 'Apólice de seguro',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.',
+    text: 'Inteligência artificial avançada para a sua operação logística. Alcance níveis superiores de produtividade e desempenho, graças ao poder do nosso algoritmo inteligente.',
     accentColor: 'bg-bluescale-50'
   },
   {
     icon: 'FiTarget',
     title: 'Gamificação',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.',
+    text: 'Ranqueamento de motoristas e entregadores com base em avaliações, rotas finalizadas com sucesso e outros critérios personalizados. Conte com a nossa solução para criar programas de bonificação para aumentar o engajamento.',
     accentColor: 'bg-primary-100'
   },
   {
     icon: 'AiOutlineFile',
     title: 'Relatórios',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.',
+    text: 'Soluções sob medida, criadas e implantadas por especialistas. Combinamos conhecimento técnico e uma abordagem consultiva para atender as necessidades do seu negócio e colocar seu sucesso em primeiro lugar.',
     accentColor: 'bg-yellowscale-50'
   },
   {
     icon: 'AiOutlineFileAdd',
     title: 'POD + OCR',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.',
+    text: 'Primeira tecnologia 100% brasileira para viabilizar o same day delivery e as coletas dinâmicas. Graças às regras e parametrizações para identificar os melhores cenários de rota, o Maestro automatiza 100% dos processos manuais no last mile.',
     accentColor: 'bg-redscale-50'
   }
 ]
@@ -48,23 +48,26 @@ export default function Solutions() {
             <TextHighlight>operação</TextHighlight>
           </Title>
         }
-        description="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-        assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-        veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
-        quis."
+        description="Combine módulos e funcionalidades de acordo com os seus objetivos de negócio. Com a RoutEsy, você tem soluções sob medida para otimizar rotas, automatizar processos e ter uma gestão completa da sua operação."
         buttonText="Quero saber mais"
         buttonHref="/"
       />
       <Routing />
       <FeaturedFrame
-        title="Lorem ipsum dolor sit amet"
-        text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+        title={
+          <Title className="text-[26px]/[40px] font-bold">
+            Soluções que
+            <TextHighlight> moldam </TextHighlight>o
+            <TextHighlight> futuro </TextHighlight>da logística
+          </Title>
+        }
+        text="Com a RoutEasy, você tem as soluções mais inovadoras a serviço da sua operação. Descubra como podemos te ajudar a superar os maiores desafios do mercado e alcançar resultados excepcionais."
         image="/images/pictures/max-mid.png"
       />
       <CardListColored
         cards={listDifferentials}
         title="Diferenciais"
-        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+        subtitle="Conte com a RoutEasy para desbloquear todo o potencial da sua operação logística. Conheça os nossos diferenciais:"
       />
       <Maestro />
       <Integrating />

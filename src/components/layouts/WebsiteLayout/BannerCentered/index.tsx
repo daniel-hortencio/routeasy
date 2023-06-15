@@ -17,12 +17,14 @@ export const BannerCentered = ({
 }: Props) => {
   return (
     <Section className="flex">
-      <div className="flex justify-center h-full relative min-h-[640px]">
-        <div className="md:mx-auto mt-[124px] lg:mx-0 flex flex-col justify-center w-[782px] text-center">
+      <div className="flex justify-center h-full relative min-h-[620px]">
+        <div className="md:mx-auto mt-[62px] lg:mx-0 flex flex-col justify-center w-[640px] text-center">
           {title}
-          <Text className="text-grayscale-50 pb-8">{description}</Text>
+          <Text className="text-[15px] text-grayscale-50 pb-8">
+            {description}
+          </Text>
           {buttonText && (
-            <div className="w-full sm:w-56 text-center mx-[auto]">
+            <div className="w-full sm:w-[168px] text-center mx-[auto]">
               <ButtonPrimary href={buttonHref}>{buttonText}</ButtonPrimary>
             </div>
           )}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { IRoutingCardProps } from '../types'
+import { Text } from 'components/elements/Texts'
 
 export const RoutingCard = ({
   title,
@@ -21,9 +22,9 @@ export const RoutingCard = ({
           </div>
         )}
         <div>
-          <p className="text-sm font-sans text-center font-semibold mt-4">
+          <Text className="text-[13px] text-center font-normal mt-4">
             {title}
-          </p>
+          </Text>
         </div>
       </div>
     </div>

@@ -119,9 +119,9 @@ export const ContactForm = () => {
       <Title className="mb-4 text-3xl text-center">
         Nós entramos em <TextHighlight>contato</TextHighlight> com você!
       </Title>
-      <Text className="text-center mb-10">
-        Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-        assumenda voluptates qui beatae quis id Quis cupiditate.{' '}
+      <Text className="text-grayscale-200 text-[15px] text-center mb-10">
+        Descubra como nossas soluções podem transformar sua operação logística.
+        Solicite uma demonstração preenchendo o formulário abaixo.
       </Text>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">

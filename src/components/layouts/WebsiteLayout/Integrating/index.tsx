@@ -1,5 +1,5 @@
 import { Section } from 'components/elements/Section'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import Image from 'next/image'
 
 export const Integrating = () => {
@@ -11,7 +11,13 @@ export const Integrating = () => {
           seus resultados
         </Title>
       }
-      subtitle="Nossas soluções se conectam facilmente a outras ferramentas como ERP, WMS  TMS. Sincronize dados em tempo real e garanta um fluxo contínuo de informações."
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px]">
+          Nossass soluções se conectam facilmente a outras ferramentas como ERP,
+          WMS TMS. Sincronize dados em tempo real e garanta um fluxo contínuo de
+          informações.
+        </Text>
+      }
     >
       <div className="relative text-center pt-4 lg:pt-20 pb-40 flex justify-center">
         <Image

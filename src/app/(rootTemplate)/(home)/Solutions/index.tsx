@@ -179,7 +179,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-file.svg',
+        src: '/images/icons/icon-file.svg',
         alt: 'Regras associadas a perfil de clientes, frotas e regiões'
       }
     },
@@ -209,7 +209,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-chat.svg',
+        src: '/images/icons/icon-chat.svg',
         alt: 'Chat direto com o motorista'
       }
     },
@@ -218,7 +218,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-map.svg',
+        src: '/images/icons/icon-map.svg',
         alt: 'Tracking para o cliente'
       }
     },
@@ -227,7 +227,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-alert.svg',
+        src: '/images/icons/icon-alert.svg',
         alt: 'Alertas inteligentes para ocorrências'
       }
     },
@@ -236,7 +236,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-file.svg',
+        src: '/images/icons/icon-file.svg',
         alt: 'Proof of delivery'
       }
     }
@@ -248,7 +248,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-chat.svg',
+        src: '/images/icons/icon-chat.svg',
         alt: 'Avaliações do serviço, produto e motorista.'
       }
     },
@@ -257,7 +257,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-map.svg',
+        src: '/images/icons/icon-map.svg',
         alt: 'Dashbord de Indicadores.'
       }
     },
@@ -266,7 +266,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-alert.svg',
+        src: '/images/icons/icon-alert.svg',
         alt: 'Relatórios de registros e dados de execução da operação.'
       }
     },
@@ -275,7 +275,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-file.svg',
+        src: '/images/icons/icon-file.svg',
         alt: 'Visibilidade para a operação e cliente final.'
       }
     }
@@ -296,7 +296,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/vehicle.png',
+        src: '/images/icons/icon-vehicle.png',
         alt: 'Seleção de frota própria ou terceirizada'
       }
     },
@@ -305,7 +305,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-user.svg',
+        src: '/images/icons/icon-user.svg',
         alt: 'Despacho automático para o motorista ideal'
       }
     }
@@ -317,7 +317,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-chat.svg',
+        src: '/images/icons/icon-chat.svg',
         alt: 'Chat direto com a operação'
       }
     },
@@ -326,7 +326,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-map.svg',
+        src: '/images/icons/icon-map.svg',
         alt: 'Integração com Google Maps e Waze'
       }
     },
@@ -335,7 +335,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/home-solutions-camera.svg',
+        src: '/images/icons/icon-camera.svg',
         alt: 'Comprovação por foto, vídeo e assinatura'
       }
     },

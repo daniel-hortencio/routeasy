@@ -5,7 +5,7 @@ import { Section } from 'components/elements/Section'
 import { ButtonSecondary } from 'components/elements/Button'
 import Image from 'next/image'
 import ReactPlayer from 'react-player/youtube'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 
 export const Maestro = () => {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -21,11 +21,20 @@ export const Maestro = () => {
     <Section
       className="pb-4"
       title={
-        <Title>
+        <Title className="font-medium">
           Conheça O <TextHighlight>Maestro</TextHighlight>
         </Title>
       }
-      subtitle="Coloque sua operação no piloto automático enquanto você gerencia apenas as exceções. O Maestro automatiza 100% das tarefas manuais, possibilitando o same day delivery e as coletas dinâmicas graças às regras e parâmetrizações que identificam sempre a melhor rota. Conte ainda com o despacho automático para um motorista disponível mais próximo."
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px]">
+          Coloque sua operação no piloto automático enquanto você gerencia
+          apenas as exceções. O Maestro automatiza 100% das tarefas manuais,
+          possibilitando o same day delivery e as coletas dinâmicas graças às
+          regras e parâmetrizações que identificam sempre a melhor rota. Conte
+          ainda com o despacho automático para um motorista disponível mais
+          próximo.
+        </Text>
+      }
     >
       <div className="flex justify-center w-full pt-[50%] relative max-w-[979px] mx-auto">
         <Image
