@@ -1,4 +1,4 @@
-const routes = [
+const routes = (pathname: string) => [
   { label: 'Início', href: '/' },
   {
     label: 'Soluções',
@@ -10,7 +10,8 @@ const routes = [
       { label: 'Roteirizador', href: '/solucoes/' },
       { label: 'Api', href: '/solucoes/api' },
       { label: 'Onboarding', href: '/solucoes/onboarding' }
-    ]
+    ],
+    isActive: pathname?.startsWith('/solucoes')
   },
   {
     label: 'Conteúdo',

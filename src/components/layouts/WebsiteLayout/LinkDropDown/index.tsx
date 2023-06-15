@@ -26,7 +26,7 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
     return `hover:text-primary-200 text-primary-200 transition-all ${
       isActive ? 'text-primary-200' : 'text-white'
     }
-    ${isLast && 'mr-8'}`
+    ${!isLast && 'mr-8'}`
   }
 
   return (

@@ -15,12 +15,12 @@ export const NavigationDesktop = () => {
     return `hover:text-primary-200 font-medium transition-all ${
       isActive && 'text-primary-200'
     }
-    ${isLast && 'mr-8'}`
+    ${!isLast && 'mr-8'}`
   }
 
   return (
     <nav className="flex items-center text-[15px] font-medium">
-      {routes.map((route, index) =>
+      {routes(`${pathname}`).map((route, index) =>
         route.href ? (
           <Link
             key={route.label}
@@ -38,7 +38,7 @@ export const NavigationDesktop = () => {
               label={route.label}
               key={route.label}
               sub_items={route.sub_items}
-              isActive={!!pathname?.startsWith('/solucoes')}
+              isActive={!!route.isActive}
               isLast={index < routes.length - 1}
             />
           )
