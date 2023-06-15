@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useCallback, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import * as yup from 'yup'
 
 import { ButtonSecondary } from 'components/elements/Button'
@@ -8,24 +8,27 @@ import {
   InputGroup,
   InputNumber,
   InputPhone,
+  InputSelect,
   InputText
 } from 'components/elements/Inputs'
-import { Section } from 'components/elements/Section'
-import { Text, TextHighlight, Title } from 'components/elements/Texts'
+import { Text, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
 import axios from 'axios'
+import Swal from 'sweetalert2'
+import { PulseLoader } from 'react-spinners'
 
 const init_data = {
   name: '',
-  phone: '',
+  personal_phone: '',
   email: '',
-  company: '',
-  amountOfVehicles: ''
+  company_name: '',
+  cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: ''
 }
 
 export const ContactForm = () => {
   const [data, setData] = useState(init_data)
   const [errors, setErrors] = useState(init_data)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSetError = (errors_list: { param: any; value: string }[]) => {
     const errors_dto = { ...errors }
@@ -36,57 +39,70 @@ export const ContactForm = () => {
     setErrors(errors_dto)
   }
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast'
+    },
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: toast => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+    showCloseButton: true
+  })
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    setIsLoading(true)
 
     const contactFormSchema = yup.object().shape({
-      name: yup.string().min(1, 'Campo obrigatório'),
+      name: yup.string().min(1, 'Obrigatório'),
       email: yup
         .string()
-        .required('Campo obrigatório')
+        .required('Obrigatório')
         .email('Insira um e-mail com formato válido'),
-      phone: yup
+      personal_phone: yup
         .string()
-        .required('Campo obrigatório')
-        .min(15, 'Deve conter pelo menos 9 dígitos'),
-      company: yup.string().required('Campo obrigatório'),
-      amountOfVehicles: yup.string().required('Campo obrigatório')
+        .required('Obrigatório')
+        .min(15, 'Mínimo 9 dígitos'),
+      company_name: yup.string().required('Obrigatório'),
+      cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
+        .string()
+        .required('Obrigatório')
     })
 
     yupValidator({
       schema: contactFormSchema,
       data,
-      setError: handleSetError,
+      setError: errors => {
+        setIsLoading(false)
+        handleSetError(errors)
+      },
       onSuccess: async () => {
-        await axios
-          .post('https://api.example.com/endpoint', data, {
-            headers: {
-              authority: 'gyruss.rdops.systems',
-              accept: '*/*',
-              'accept-language': 'es-ES,es;q=0.9,pt;q=0.8,en;q=0.7',
-              authorization: 'PublicToken 8f24fb763a4fe60e5e110624116f9c5e',
-              'cache-control': 'no-cache',
-              'content-type': 'application/json; charset=UTF-8',
-              origin: 'http://localhost:3006',
-              pragma: 'no-cache',
-              referer: 'http://localhost:3006/',
-              'sec-ch-ua':
-                '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
-              'sec-ch-ua-mobile': '?0',
-              'sec-ch-ua-platform': '"Windows"',
-              'sec-fetch-dest': 'empty',
-              'sec-fetch-mode': 'cors',
-              'sec-fetch-site': 'cross-site',
-              'user-agent':
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
-            }
+        const response = await axios
+          .post('/api/hello', data)
+          .then(() => {
+            setIsLoading(false)
+            Toast.fire({
+              icon: 'success',
+              title: 'Contato enviado com sucesso!'
+            })
           })
-          .then(success => {
-            console.log({ success })
+          .catch(() => {
+            setIsLoading(false)
+            Toast.fire({
+              icon: 'error',
+              title:
+                'Falha ao enviar contato! Tente novamente em alguns minutos'
+            })
           })
-          .catch(error => {
-            console.error(error)
-          })
+
+        console.log('RESPONSE', { response })
       }
     })
   }
@@ -114,17 +130,17 @@ export const ContactForm = () => {
             placeholder="José da Silva"
           />
         </InputGroup>
-        <InputGroup label="Telefone" error={errors.phone}>
+        <InputGroup label="Telefone" error={errors.personal_phone}>
           <InputPhone
-            value={data.phone}
-            onChange={(value: string) => handleChange('phone', value)}
+            value={data.personal_phone}
+            onChange={(value: string) => handleChange('personal_phone', value)}
             placeholder="(00) 00000-0000"
           />
         </InputGroup>
         <InputGroup
           label="Email"
           error={errors.email}
-          className="md:col-span-2"
+          className="sm:col-span-2 md:col-span-1"
         >
           <InputText
             value={data.email}
@@ -132,29 +148,35 @@ export const ContactForm = () => {
             placeholder="josedasilva@gmail.com"
           />
         </InputGroup>
-        <InputGroup label="Empresa" error={errors.company}>
+        <InputGroup label="Empresa" error={errors.company_name}>
           <InputText
-            value={data.company}
-            onChange={(value: string) => handleChange('company', value)}
+            value={data.company_name}
+            onChange={(value: string) => handleChange('company_name', value)}
             placeholder="Routeasy"
           />
         </InputGroup>
         <InputGroup
           label="Quantidade de veículos"
-          error={errors.amountOfVehicles}
+          error={errors.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
           className="mb-10"
         >
-          <InputNumber
-            value={data.amountOfVehicles}
-            onChange={(value: string) =>
-              handleChange('amountOfVehicles', value)
+          <InputSelect
+            placeholder="5 a 15"
+            value={data.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
+            options={['5 a 15', '15 a 50', '50 a 100', 'Mais de 100']}
+            onChoose={(value: string) =>
+              handleChange(
+                'cf_quantidade_de_veiculos_proprios_e_ou_terceirizados',
+                value
+              )
             }
-            placeholder="00"
           />
         </InputGroup>
       </div>
       <div className="sm:w-20">
-        <ButtonSecondary type="submit">Enviar</ButtonSecondary>
+        <ButtonSecondary type="submit" disabled={isLoading}>
+          {isLoading ? <PulseLoader size={10} color="#B0E6D2" /> : 'Enviar'}
+        </ButtonSecondary>
       </div>
     </form>
   )

@@ -157,22 +157,6 @@ export const ContactForm = () => {
             placeholder="Routeasy"
           />
         </InputGroup>
-        {/* <InputGroup
-          label="Quantidade de veículos"
-          error={errors.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
-          className="mb-10"
-        >
-          <InputText
-            value={data.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
-            onChange={(value: string) =>
-              handleChange(
-                'cf_quantidade_de_veiculos_proprios_e_ou_terceirizados',
-                value
-              )
-            }
-            placeholder="00 a 100"
-          />
-        </InputGroup> */}
         <InputGroup
           label="Quantidade de veículos"
           error={errors.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
@@ -181,6 +165,7 @@ export const ContactForm = () => {
           <InputSelect
             value={data.cf_quantidade_de_veiculos_proprios_e_ou_terceirizados}
             options={['5 a 15', '15 a 50', '50 a 100', 'Mais de 100']}
+            placeholder="5 a 15"
             onChoose={(value: string) =>
               handleChange(
                 'cf_quantidade_de_veiculos_proprios_e_ou_terceirizados',

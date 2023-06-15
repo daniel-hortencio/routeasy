@@ -29,12 +29,14 @@ interface IInputSelectProps {
   options: Array<string>
   value: string | number
   onChoose: (event: string | number) => void
+  placeholder: string
 }
 
 export const InputSelect = ({
   value,
   options,
-  onChoose
+  onChoose,
+  placeholder
 }: IInputSelectProps) => {
   const [inputValue, setInputValue] = useState<string | number>(value)
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -59,7 +61,13 @@ export const InputSelect = ({
             : 'text-sm border border-transparent hover:border-primary focus:border-none cursor-pointer focus:outline-none bg-grayscale-500 text-white py-[10px] px-[18px] w-full rounded'
         }
       >
-        <div className={inputValue ? 'py-[6px]' : 'py-4'}>{inputValue}</div>
+        <div className={inputValue ? 'py-[6px]' : 'py-4'}>
+          {inputValue || (
+            <span className="h-0 block -translate-y-2.5 text-grayscale-200">
+              {placeholder}
+            </span>
+          )}
+        </div>
       </div>
       {isOpen && (
         <ul className="absolute mt-2 w-full h-[180px] overflow-auto top-full left-0 rounded">
