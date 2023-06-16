@@ -56,7 +56,6 @@ export const History = () => {
     )
   }
 
-  console.log(parseInt(instanceRef.current?.options.slides?.perView))
   return (
     <Section
       className="pb-12 lg:pb-20 bg-grayscale-700 pt-16"
@@ -64,7 +63,7 @@ export const History = () => {
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
       {loaded && instanceRef.current && (
-        <div className="grid grid-cols-2 gap-16 lg:gap-4 w-16 mx-auto pb-16">
+        <div className="grid grid-cols-2 gap-4 w-28 lg:w-20 mx-auto pb-16">
           <button
             className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
             onClick={() => instanceRef.current?.prev()}
