@@ -1,6 +1,6 @@
 'use client'
 
-import { TextHighlight } from 'components/elements/Texts'
+import { TextHighlight, Text, Title } from 'components/elements/Texts'
 import Image from 'next/image'
 import { Link as LinkScroll } from 'react-scroll'
 
@@ -16,22 +16,21 @@ export const Banner = () => {
           src="/images/pictures/banner-sobre-nos.png"
           alt="Banner"
         />
-        <div className="flex justify-center items-center h-full relative min-h-[640px]">
+        <div className="flex justify-center items-center h-full relative min-h-[600px]">
           <div className="pt-16 md:pt-56 md:mx-auto lg:mx-0 flex flex-col justify-center w-[645px] text-center">
-            <h1 className="text-white uppercase font-semibold text-5xl lg:text-[56px]/[72px] mb-5">
+            <Title className="text-white uppercase font-medium text-5xl lg:text-[56px]/[72px] mb-5">
               Sobre
               <TextHighlight> nós</TextHighlight>
-            </h1>
-            <p className="font-normal text-grayscale-50 text-base mb-8">
-              Somos uma empresa focada em resultados com um DNA cultural de
-              Start-Up.
-            </p>
-            <p className="font-normal text-grayscale-50 text-base">
-              Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum
-              aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-              veritatis voluptatem hic dolores fuga eum dolorum tenetur est
-              iusto quis.
-            </p>
+            </Title>
+            <Text className="text-grayscale-50 text-[15px] font-light mb-2">
+              Somos mais de 100 mentes inovadoras compartilhando a missão de
+              revolucionar a logística no Brasil.
+            </Text>
+            <Text className="text-grayscale-50 text-[15px] font-light">
+              Acreditamos que nossos talentos são o que nos diferencia. Cada
+              membro da nossa equipe tem conhecimentos e habilidades únicas, que
+              se combinam para criar uma cultura única e poderosa.
+            </Text>
             <div className="hidden md:flex justify-center pt-20">
               <LinkScroll
                 smooth={true}

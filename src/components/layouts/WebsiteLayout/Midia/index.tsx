@@ -14,7 +14,7 @@ export const Midia = () => {
       perView: 1.25
     },
     breakpoints: {
-      '(min-width: 640)': {
+      '(min-width: 640px)': {
         slides: {
           perView: 2.25
         }
@@ -151,10 +151,9 @@ export const Midia = () => {
                 style={{ objectFit: 'fill' }}
               />
               <div className={`${S.MidiaBoxText}`}>
-                <div className={`${S.border} h-[100px]`}></div>
+                <div className={`${S.border} h-[50px]`}></div>
                 <p className={`${S.MidiaText}`}>
-                  Tecnologia é a base para um futuro global do Supply Chain,
-                  ligando cadeias instaladas em vários locais
+                  Digitalização mapeia rotas e reduz custos
                 </p>
               </div>
             </div>
@@ -175,9 +174,10 @@ export const Midia = () => {
                 style={{ objectFit: 'fill' }}
               />
               <div className={`${S.MidiaBoxText}`}>
-                <div className={`${S.border} h-12`}></div>
+                <div className={`${S.border} h-128`}></div>
                 <p className={`${S.MidiaText}`}>
-                  Digitalização mapeais rotas e reduz custos
+                  Tecnologia é a base para um futuro global do Supply Chain,
+                  ligando cadeias instaladas em vários locais
                 </p>
               </div>
             </div>
