@@ -10,7 +10,7 @@ const CardOffice = ({ icon, title }) => {
           <Image src={icon} width={16} height={16} alt={title} />
         </div>
         <div>
-          <p className="text-base text-white font-normal">{title}</p>
+          <Text className="text-base text-white font-light">{title}</Text>
         </div>
       </div>
     </div>
@@ -29,30 +29,24 @@ export const Office = () => {
         />
         <div className="relative">
           <Title>O escritório</Title>
-          <Text className="text-grayscale-50 mb-12">
-            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-            assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-            veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
-            quis.{' '}
+          <Text className="text-grayscale-50 mb-12 text-sm font-light">
+            Nosso escritório é projetado para minimizar o nosso impacto
+            ambiental. Com uma arquitetura que privilegia a iluminação natural,
+            reduzimos os gastos energéticos e aumentamos o conforto térmico.
+            Além disso, toda a água da chuva é captada e armazenada em
+            reservatórios, localizados no subsolos. Aqui, o trabalho se une a um
+            ambiente descontraído, inspirador e, claro, com diversos momentos de
+            lazer.
           </Text>
         </div>
         <div className="relative grid grid-cols-2 md:grid-cols-4 gap-4">
+          <CardOffice icon="/images/icons/game.svg" title="Video Game" />
+          <CardOffice icon="/images/icons/pebolim.svg" title="Pebolim" />
           <CardOffice
-            icon="/images/icons/home-solutions-routeirizacao.svg"
-            title="Video Game"
-          />
-          <CardOffice
-            icon="/images/icons/home-solutions-routeirizacao.svg"
-            title="Pebolim"
-          />
-          <CardOffice
-            icon="/images/icons/home-solutions-routeirizacao.svg"
+            icon="/images/icons/churrasqueira.svg"
             title="Churrasqueira"
           />
-          <CardOffice
-            icon="/images/icons/home-solutions-routeirizacao.svg"
-            title="Fumódromo"
-          />
+          <CardOffice icon="/images/icons/fumodromo.svg" title="Fumódromo" />
         </div>
       </div>
     </Section>

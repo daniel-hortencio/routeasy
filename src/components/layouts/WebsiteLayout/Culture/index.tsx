@@ -6,7 +6,7 @@ export const Culture = () => {
   return (
     <Section className="pb-28 md:pb-12">
       <div
-        className={`md:grid gap-[150px] grid-cols-2 items-center mb-6 md:mb-40`}
+        className={`md:grid gap-[150px] grid-cols-2 items-center mb-6 md:mb-28`}
       >
         <div className="text-center md:text-left mb-8 lg:mb-0 md:mr-12">
           <Title className="text-[40px]/[52px] mb-4">Nossa Cultura</Title>
