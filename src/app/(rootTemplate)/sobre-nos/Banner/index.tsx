@@ -33,7 +33,12 @@ export const Banner = () => {
               iusto quis.
             </p>
             <div className="hidden md:flex justify-center pt-20">
-              <LinkScroll smooth={true} to="our-history" offset={-320}>
+              <LinkScroll
+                smooth={true}
+                to="our-history"
+                offset={-320}
+                duration={400}
+              >
                 <Image
                   width={40}
                   height={100}
