@@ -7,6 +7,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
 import { Skeleton } from 'components/elements/Skeleton'
 import Icon from 'components/elements/Icon'
+import { SmoothScrollAnchorPoint } from 'components/elements/SmoothScroll'
 
 export const History = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -62,6 +63,7 @@ export const History = () => {
       title={<Title>Nossa história</Title>}
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
+      <SmoothScrollAnchorPoint id="history" />
       {loaded && instanceRef.current && (
         <div className="grid grid-cols-2 gap-4 w-28 lg:w-20 mx-auto pb-16">
           <button
