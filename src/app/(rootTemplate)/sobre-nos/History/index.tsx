@@ -11,7 +11,7 @@ import Icon from 'components/elements/Icon'
 export const History = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: {
       perView: 1.25,
@@ -23,6 +23,9 @@ export const History = () => {
           perView: 2.25
         }
       }
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
     }
   })
 
@@ -53,20 +56,29 @@ export const History = () => {
     )
   }
 
+  console.log(parseInt(instanceRef.current?.options.slides?.perView))
   return (
     <Section
       className="pb-12 lg:pb-20 bg-grayscale-700 pt-16"
       title={<Title>Nossa história</Title>}
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <div className="grid grid-cols-2 gap-16 lg:gap-4 w-16 mx-auto pb-16">
-        <button className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300">
-          <Icon name="FiArrowLeft" size={16} />
-        </button>
-        <button className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300">
-          <Icon name="FiArrowRight" size={16} />
-        </button>
-      </div>
+      {loaded && instanceRef.current && (
+        <div className="grid grid-cols-2 gap-16 lg:gap-4 w-16 mx-auto pb-16">
+          <button
+            className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
+            onClick={() => instanceRef.current?.prev()}
+          >
+            <Icon name="FiArrowLeft" size={16} />
+          </button>
+          <button
+            className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
+            onClick={() => instanceRef.current?.next()}
+          >
+            <Icon name="FiArrowRight" size={16} />
+          </button>
+        </div>
+      )}
       {loaded ? (
         <div ref={sliderRef} className="keen-slider mb-12">
           <div className="keen-slider__slide pr-6">
