@@ -5,24 +5,17 @@ import Image from 'next/image'
 export const Culture = () => {
   return (
     <Section className="pb-28 md:pb-12">
-      <div className={`md:flex items-center mb-6 md:mb-40`}>
-        <div className="text-center md:text-left mb-8 lg:mb-0 md:mr-12 lg:mr-28">
+      <div
+        className={`md:grid gap-[150px] grid-cols-2 items-center mb-6 md:mb-40`}
+      >
+        <div className="text-center md:text-left mb-8 lg:mb-0 md:mr-12">
           <Title className="text-[40px]/[52px] mb-4">Nossa Cultura</Title>
-          <Text className="text-[13px]/[20px] text-grayscale-50">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
-          </Text>
-          <br />
-          <Text className="text-[13px]/[20px] text-grayscale-50">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </Text>
-          <br />
-          <Text className="text-[13px]/[20px] text-grayscale-50">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum
+          <Text className="text-[13px]/[20px] text-grayscale-50 font-light">
+            Somos o Time de Casa! Ccreditamos que comemorar cada bom resultado é
+            essencial para fortalecer nossa cultura e impulsionar nosso sucesso.
+            Seja um novo cliente conquistado, um projeto concluído ou uma meta
+            superada, cada vitória é um motivo para juntar a equipe em um happy
+            hour.
           </Text>
         </div>
         <div>

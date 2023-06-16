@@ -191,7 +191,7 @@ export const History = () => {
           </div>
         </div>
       ) : (
-        <Skeleton className="w-full h-[204px] rounded-lg" />
+        <Skeleton className="w-full h-[260px] rounded-lg" />
       )}
     </Section>
   )
