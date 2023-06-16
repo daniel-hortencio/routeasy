@@ -21,11 +21,6 @@ const faqList = [
     title: 'Pergunta 3',
     answer:
       'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
-  },
-  {
-    title: 'Pergunta 4',
-    answer:
-      'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
   }
 ]
 
@@ -38,7 +33,7 @@ interface IFaqItemProps {
 
 const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
   return (
-    <div className="p-6 border-b border-grayscale-400">
+    <div className="px-6 pb-6 mb-6 border-b border-grayscale-400">
       <header onClick={onClick} className="cursor-pointer flex justify-between">
         <Text className="text-[15px] text-white">{title}</Text>
         <Image
@@ -50,9 +45,11 @@ const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
       </header>
 
       <main
-        className={`overflow-hidden transition-all ${isOpen ? 'h-32' : 'h-0'}`}
+        className={`overflow-hidden transition-all ${isOpen ? 'h-28' : 'h-0'}`}
       >
-        <Text className="text-grayscale-50 text-[13px] mt-4">{answer}</Text>
+        <Text className="text-grayscale-50 text-[13px] mt-4 h-10 overflow-hidden">
+          {answer}
+        </Text>
       </main>
     </div>
   )
@@ -67,7 +64,7 @@ export const FAQ = () => {
   return (
     <Section
       className="lg:mb-40"
-      title={<Title>Dúvidas frequentes AQUI</Title>}
+      title={<Title>Dúvidas frequentes</Title>}
       subtitle={
         <Text className="text-grayscale-50 text-[15px]">
           Aqui você encontrará as respostas para as dúvidas mais comuns sobre
@@ -76,7 +73,7 @@ export const FAQ = () => {
       }
     >
       <div className="flex flex-col-reverse md:flex-row justify-between px-12 pb-24 lg:pb-0">
-        <div className="md:w-5/12">
+        <div className="md:w-5/12 ">
           <div className="rounded-lg p-6 border border-grayscale-500">
             <div className="bg-grayscale-500 rounded-md p-3 w-12 h-12 mb-4">
               <Image
