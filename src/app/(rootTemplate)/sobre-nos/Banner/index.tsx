@@ -1,6 +1,8 @@
-import { SmoothScroll } from 'components/elements/SmoothScroll'
+'use client'
+
 import { TextHighlight } from 'components/elements/Texts'
 import Image from 'next/image'
+import { Link as LinkScroll } from 'react-scroll'
 
 export const Banner = () => {
   return (
@@ -31,10 +33,7 @@ export const Banner = () => {
               iusto quis.
             </p>
             <div className="hidden md:flex justify-center pt-20">
-              <SmoothScroll
-                anchorHref="/sobre-nos/#history"
-                className="opacity-60 hover:opacity-100 transition-all"
-              >
+              <LinkScroll smooth={true} to="our-history" offset={-320}>
                 <Image
                   width={40}
                   height={100}
@@ -44,7 +43,7 @@ export const Banner = () => {
                     objectFit: 'cover'
                   }}
                 />
-              </SmoothScroll>
+              </LinkScroll>
             </div>
           </div>
         </div>

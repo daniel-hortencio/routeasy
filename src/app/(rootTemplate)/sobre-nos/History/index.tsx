@@ -7,7 +7,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useEffect, useState } from 'react'
 import { Skeleton } from 'components/elements/Skeleton'
 import Icon from 'components/elements/Icon'
-import { SmoothScrollAnchorPoint } from 'components/elements/SmoothScroll'
+import { Element as ScrollElement } from 'react-scroll'
 
 export const History = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -63,23 +63,24 @@ export const History = () => {
       title={<Title>Nossa história</Title>}
       subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
     >
-      <SmoothScrollAnchorPoint id="history" />
-      {loaded && instanceRef.current && (
-        <div className="grid grid-cols-2 gap-4 w-28 lg:w-20 mx-auto pb-16">
-          <button
-            className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
-            onClick={() => instanceRef.current?.prev()}
-          >
-            <Icon name="FiArrowLeft" size={16} />
-          </button>
-          <button
-            className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
-            onClick={() => instanceRef.current?.next()}
-          >
-            <Icon name="FiArrowRight" size={16} />
-          </button>
-        </div>
-      )}
+      <ScrollElement name="our-history">
+        {loaded && instanceRef.current && (
+          <div className="grid grid-cols-2 gap-4 w-28 lg:w-20 mx-auto pb-16">
+            <button
+              className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
+              onClick={() => instanceRef.current?.prev()}
+            >
+              <Icon name="FiArrowLeft" size={16} />
+            </button>
+            <button
+              className="bg-white rounded-full w-12 lg:w-8 h-12 lg:h-8 flex items-center justify-center fill-grayscale-300 disabled:opacity-50"
+              onClick={() => instanceRef.current?.next()}
+            >
+              <Icon name="FiArrowRight" size={16} />
+            </button>
+          </div>
+        )}
+      </ScrollElement>
       {loaded ? (
         <div ref={sliderRef} className="keen-slider mb-12">
           <div className="keen-slider__slide pr-6">
