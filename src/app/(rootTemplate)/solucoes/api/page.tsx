@@ -7,7 +7,7 @@ import { CardDescription } from 'components/elements/CardDescription'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
-import { Prices } from 'components/layouts/WebsiteLayout/Prices'
+// import { Prices } from 'components/layouts/WebsiteLayout/Prices'
 import Image from 'next/image'
 import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
@@ -106,6 +106,7 @@ export default function SolutionsApi() {
         title="Nossas API's"
         subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
       />
+
       <FeaturedFrame
         title={
           <>
@@ -115,7 +116,7 @@ export default function SolutionsApi() {
         text="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
         image="/images/pictures/max-mid.png"
       />
-      <Prices />
+      {/* <Prices /> */}
       <FAQ />
       <Section>
         <div className="px-0 md:px-12 mb-16 md:mb-40">
