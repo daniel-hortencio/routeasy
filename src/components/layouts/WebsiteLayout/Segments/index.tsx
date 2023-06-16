@@ -50,7 +50,7 @@ const segmentsContent: ITabsProps = {
       key="Last mile B2C"
       title="Last mile B2C"
       text="Conte com o algoritmo de roteirização mais avançado do mercado para reduzir o tempo e as etapas do seu planejamento rotas, aumentando a produtividade e reduzindo custos operacionais. Tenha também visibilidade completa e em tempo real de todas as rotas, para responder mais rápido a qualquer imprevisto e garantir a satisfação dos seus clientes."
-      image="/images/pictures/B2C.svg"
+      image="/images/gifs/Gif001.gif"
       altImage="Last mile B2C"
     />,
     <ContentItem
