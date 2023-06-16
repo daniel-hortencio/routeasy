@@ -30,7 +30,7 @@ export const Routing: React.FC = () => {
       <Section>
         <div className="hidden lg:block">
           <div className="w-full mb-16">
-            <div className="w-10/12 m-auto flex justify-between">
+            <div className="w-10/12 m-auto flex justify-between gap-[35px]">
               {RoutingList.map((card, index) => (
                 <RoutingCard
                   title={card.title}

@@ -3,6 +3,7 @@ import { Clients } from 'components/layouts/WebsiteLayout/Clients'
 import { CardListColored } from 'components/layouts/WebsiteLayout/CardListColored'
 import { FeaturedFrame } from 'components/layouts/WebsiteLayout/FeaturedFrame'
 import { TextHighlight, Title } from 'components/elements/Texts'
+import { CardDescription } from 'components/elements/CardDescription'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
@@ -78,6 +79,28 @@ export default function SolutionsApi() {
         />
       </div>
       <Clients />
+
+      <Section>
+        <div className="w-full lg:w-[968px] mx-auto">
+          <CardDescription
+            title="Roteirizador"
+            text="Esta modalidade é recomendada para operações dinâmicas, nas quais os pedidos são integrados em tempo real, e novas rotas podem surgir ao longo do dia, ou um conjunto de pedidos possa ser adicionado a uma rota já existente."
+            link="#"
+            image="/images/pictures/mockup-notebook.png"
+          />
+
+          <div className="h-[120px]"></div>
+
+          <CardDescription
+            title="Matriz de distância"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            link="#"
+            image="/images/pictures/mockup-notebook.png"
+            side="right"
+          />
+        </div>
+      </Section>
+
       <CardListColored
         cards={listDifferentials}
         title="Nossas API's"
