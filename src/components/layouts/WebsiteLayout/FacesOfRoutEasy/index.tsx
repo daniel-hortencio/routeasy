@@ -8,18 +8,39 @@ import { useEffect, useState } from 'react'
 export const FacesOfRoutEasy = () => {
   const employee_list = [
     {
-      src: '/images/pictures/avatar-employee-1.png',
-      name: 'Fulano',
+      src: '/images/pictures/employee-1.png',
+      name: 'Vinicius sacramento',
       position: 'Implantação',
       description:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
+        'Desde o primeiro dia, me senti acolhido pela cultura do Time de Casa, onde todos trabalham juntos na busca pelos melhores resultados. É um prazer imenso fazer parte desse time e tenho muito orgulho de tudo que conquistamos até aqui.'
     },
     {
-      src: '/images/pictures/avatar-employee-2.png',
-      name: 'Cicrano',
-      position: 'Limpeza',
+      src: '/images/pictures/employee-2.png',
+      name: 'Edson Catatau',
+      position: 'Tech',
       description:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
+        'Consegui ver a empresa sair de 20 funcionários para 100. E tem sido uma jornada bacana fazer novas funcionalidades e vê-las sendo utilizadas pelos clientes. Além disso, meu time é incrível, tenho orgulho do que estamos construindo!'
+    },
+    {
+      src: '/images/pictures/employee-3.png',
+      name: 'Ana carolina',
+      position: 'Suporte',
+      description:
+        'Temos uma cultura nova, dinâmica e voltada a resultados, incentiva a autonomia, a iniciativa e a colaboração entre os membros da equipe. Tenho a liberdade de contribuir com minhas ideias, me tornando parte dessa caminhada de sucesso.'
+    },
+    {
+      src: '/images/pictures/employee-4.png',
+      name: 'Washigton CARVALHO',
+      position: 'SMB',
+      description:
+        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+    },
+    {
+      src: '/images/pictures/employee-5.png',
+      name: 'Vinicius soares',
+      position: 'SMB',
+      description:
+        'A RoutEasy é um grande coração pulsante, que traz nas veias muita solidariedade, amizade, verdade. É diferente pensar em uma empresa com mais vieses emocionais que racionais, mas essa é a verdade e o grande diferencial do Time de Casa.'
     }
   ]
 
@@ -51,11 +72,11 @@ export const FacesOfRoutEasy = () => {
       <div className="lg:grid lg:grid-cols-[1fr_40rem_1.75rem] mb-16 lg:mb-0 ">
         <div className="pr-6 flex flex-col justify-center">
           <Title className="lg:text-[64px] leading-[72px]">
-            Faces da Rout<TextHighlight>easy</TextHighlight>
+            <TextHighlight>Time </TextHighlight>que inspira
           </Title>
-          <Text className="text-grayscale-50">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <Text className="text-grayscale-50 font-light text-sm">
+            Nossa equipe é a base do nosso sucesso! Veja o que alguns dos nossos
+            talentos têm a dizer sobre como é trabalhar na RoutEasy.
           </Text>
         </div>
         <div className="hidden lg:block relative lg:h-[370px]">

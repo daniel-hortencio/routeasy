@@ -122,7 +122,7 @@ export const Values = () => {
           </div>
         </div>
       </Section>
-      <div className="lg:hidden mb-12">
+      <div className="lg:hidden mb-16">
         <div ref={sliderRef} className="keen-slider">
           {list_area.map((item, index) => (
             <div
