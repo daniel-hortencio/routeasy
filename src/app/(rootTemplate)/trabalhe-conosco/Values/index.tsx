@@ -102,10 +102,8 @@ export const Values = () => {
         title={<Title>Nossos valores</Title>}
         subtitle={
           <Text className="text-grayscale-50 text-[15px] font-light">
-            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-            assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-            veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
-            quis.{' '}
+            Nós, da RoutEasy somos guiados pelos nossos valores e eles estão
+            presentes em nossa cultura e em nossa visão de mundo.
           </Text>
         }
       >

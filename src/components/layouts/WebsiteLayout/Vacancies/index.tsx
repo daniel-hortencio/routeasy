@@ -1,7 +1,7 @@
 import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import S from './styles.module.css'
 
 export const BoxVacancies = ({ title, tag, button }) => {
@@ -31,7 +31,13 @@ export const Vacancies = () => {
     <Section
       className="pb-20 md:pb-52"
       title={<Title>Junte-se ao nosso time</Title>}
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px] font-light">
+          Se você quer fazer parte de uma empresa que está revolucionando o
+          mercado da logística, venha para a nossa equipe! Confira nossas
+          oportunidades.
+        </Text>
+      }
     >
       <div
         className={`${S.VacanciesGrid} flex flex-col-reverse gap-4 md:gap-[70px] md:grid`}

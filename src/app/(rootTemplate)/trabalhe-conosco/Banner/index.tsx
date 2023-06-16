@@ -28,37 +28,223 @@ const CardEmployee = ({ image }) => {
 export const list_col1 = [
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_1.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_2.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_3.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_4.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_5.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_6.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_7.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_8.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_9.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_10.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_11.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_12.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_13.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_14.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_15.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_16.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_17.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_18.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_19.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_20.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_21.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_22.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_23.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_24.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_25.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_26.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_27.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_28.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_29.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_30.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_31.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_32.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_33.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_34.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_35.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_36.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_37.png',
       alt: 'Colaborador'
     }
   }
@@ -67,37 +253,223 @@ export const list_col1 = [
 export const list_col2 = [
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_38.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_39.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_40.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_41.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_42.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_43.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_44.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_45.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_46.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_47.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_48.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_49.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_50.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_51.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_52.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_53.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_54.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_55.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_56.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_57.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_58.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_59.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_60.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_61.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_62.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_63.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_64.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_65.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_66.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_67.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_68.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_69.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_70.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_71.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_72.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_73.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_74.png',
       alt: 'Colaborador'
     }
   }
@@ -106,37 +478,205 @@ export const list_col2 = [
 export const list_col3 = [
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_75.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_76.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_77.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_78.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_79.png',
       alt: 'Colaborador'
     }
   },
   {
     image: {
-      src: '/images/pictures/avatar-employee-1.png',
+      src: '/images/pictures/avatar-employee_80.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_81.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_82.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_83.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_84.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_85.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_86.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_87.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_88.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_89.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_90.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_91.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_92.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_93.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_94.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_95.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_96.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_97.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_98.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_99.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_100.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_101.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_102.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_103.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_104.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_105.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_106.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_107.png',
+      alt: 'Colaborador'
+    }
+  },
+  {
+    image: {
+      src: '/images/pictures/avatar-employee_108.png',
       alt: 'Colaborador'
     }
   }

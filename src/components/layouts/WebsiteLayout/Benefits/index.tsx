@@ -1,7 +1,7 @@
 'use client'
 
 import { Section } from 'components/elements/Section'
-import { Title } from 'components/elements/Texts'
+import { Title, Text } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
@@ -79,7 +79,12 @@ export const Benefits = () => {
       <Section
         className="lg:pb-32"
         title={<Title>Benefícios Routeasy</Title>}
-        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Oferecemos uma ampla gama de benefícios com o objetivo de valorizar
+            e cuidar do bem-estar de cada membro de nossa equipe.
+          </Text>
+        }
       >
         <div className="hidden lg:block">
           <div className="grid grid-cols-4 grid-rows-2 gap-4 justify-center items-center">
