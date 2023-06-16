@@ -8,6 +8,7 @@ import { Vacancies } from '../../../components/layouts/WebsiteLayout/Vacancies'
 import { Values } from './Values'
 import { Banner } from './Banner'
 import { FacesOfRoutEasy } from 'components/layouts/WebsiteLayout/FacesOfRoutEasy'
+import { Text } from 'components/elements/Texts'
 
 export default function TrabalheConosco() {
   return (
@@ -16,7 +17,12 @@ export default function TrabalheConosco() {
       <div className="pb-8">
         <CTA
           title="Você sabia?"
-          description="A Routeasy sempre está em busca de novos talentos, confira nossas vagas agora mesmo ;)"
+          description={
+            <Text className="text-grayscale-50 text-[15px] font-light">
+              A Routeasy sempre está em busca de novos talentos, confira nossas
+              vagas agora mesmo ;)
+            </Text>
+          }
           href="/"
           buttonText="Veja nossas vagas disponíveis"
         />

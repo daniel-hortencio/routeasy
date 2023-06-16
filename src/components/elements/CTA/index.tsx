@@ -1,9 +1,10 @@
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
+import { ElementType, ReactNode } from 'react'
 
 interface Props {
   title: string
-  description: string
+  description?: ReactNode | string
   buttonText: string
   href: string
 }

@@ -4,14 +4,14 @@ import { Section } from 'components/elements/Section'
 import { Icon } from 'components/elements/Icon'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import { Title } from 'components/elements/Texts'
+import { Title, Text } from 'components/elements/Texts'
 
 const CardValues = ({ icon, title, text }) => {
   return (
     <div className="border border-grayscale-500 rounded-[15px] pt-4 px-4 h-[300px]">
       {icon}
       <h1 className="uppercase text-xl font-semibold py-4">{title}</h1>
-      <p className="text-grayscale-200 text-sm mb-6">{text}</p>
+      <Text className="text-grayscale-200 text-sm mb-6 font-light">{text}</Text>
     </div>
   )
 }
@@ -24,7 +24,7 @@ export const list_area = [
       </div>
     ),
     title: 'Antecipamos Tendências',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum.'
+    text: 'Corremos atrás do que é inovador e disruptivo. Nos orgulhamos de criar soluções que lideram mudanças e transformam o mercado.'
   },
   {
     icon: (
@@ -33,7 +33,7 @@ export const list_area = [
       </div>
     ),
     title: 'Gostamos de Erros Inéditos',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum.'
+    text: 'Gostamos de pessoas que se arriscam, testam novas possibilidades, abraçam os erros e se projetam para o futuro. Afinal, o aprendizado sempre está no erro inédito.'
   },
   {
     icon: (
@@ -42,7 +42,7 @@ export const list_area = [
       </div>
     ),
     title: 'Quanto + Rápido + Rápido',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum.'
+    text: 'Temos uma mente empreendedora que nos inspira a tomar riscos e tirar os planos do papel. É mais ação, sem demora. Encorajamos a autonomia para errar rápido para corrigir erros mais rápido ainda.'
   },
   {
     icon: (
@@ -51,7 +51,7 @@ export const list_area = [
       </div>
     ),
     title: 'Foca no Dream Space',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum.'
+    text: 'Sonhamos alto, confiamos no sucesso e sabemos o que fazer para chegar aonde queremos. É foco total no que realmente importa, sem desperdiçar energia pelo caminho.'
   },
   {
     icon: (
@@ -60,7 +60,7 @@ export const list_area = [
       </div>
     ),
     title: 'Hype-se',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum.'
+    text: 'Somos protagonistas da nossa carreira. Sabemos que nada é impossível e, por isso, desafiamos nossos limites para ir além das expectativas. É foco total em entregar sempre mais e melhor, desde o primeiro dia!'
   },
   {
     icon: (
@@ -69,7 +69,7 @@ export const list_area = [
       </div>
     ),
     title: '1+1>2',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum.'
+    text: 'Juntos, superamos a lógica! Trabalhamos em equipe para unir forças e alcançar resultados maiores e melhores.'
   }
 ]
 
@@ -100,7 +100,14 @@ export const Values = () => {
       <Section
         className="pb-20"
         title={<Title>Nossos valores</Title>}
-        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
+            assumenda voluptates qui beatae quis id Quis cupiditate. Cum
+            veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
+            quis.{' '}
+          </Text>
+        }
       >
         <div className="hidden lg:block">
           <div className="grid grid-cols-4 grid-rows-2 gap-4 justify-center items-center">
