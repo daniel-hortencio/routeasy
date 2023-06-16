@@ -44,7 +44,7 @@ export const ButtonWhite = ({
 }: Omit<IButtonBase, 'className'>) => {
   return (
     <ButtonBase
-      className="rounded w-64 bg-grayscale-50 text-grayscale-300 h-12 text-sm flex items-center justify-center mx-auto font-medium"
+      className="rounded w-[168px] bg-grayscale-50 text-grayscale-300 h-12 text-sm flex items-center justify-center mx-auto font-medium"
       onClick={onClick}
       href={href}
       type={type}
