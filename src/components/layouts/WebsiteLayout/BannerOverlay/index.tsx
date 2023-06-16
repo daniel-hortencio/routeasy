@@ -29,7 +29,7 @@ export const BannerOverlay = ({ image, children }: IBannerOverlay) => {
 
   return (
     <Section className="pb-20 lg:pb-28">
-      <div className="test relative overflow-hidden rounded-3xl w-full text-center py-10 md:py-11 pb-16">
+      <div className="relative overflow-hidden rounded-3xl w-full text-center py-10 md:py-11 pb-16">
         <Image
           src={image}
           fill
