@@ -6,7 +6,7 @@ import { ButtonPrimary } from 'components/elements/Button'
 import { useKeenSlider } from 'keen-slider/react'
 import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { title } from 'process'
 import S from './styles.module.css'
 
@@ -28,9 +28,9 @@ const CardSoluctions = ({ icon, title, onClick, isActive }) => {
           />
         </div>
         <div>
-          <p className="text-sm font-sans text-center font-semibold mt-4">
+          <Text className="text-[13px] text-center font-normal mt-4">
             {title}
-          </p>
+          </Text>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ const CardRoute = ({ icon, title }) => {
         />
       </div>
       <div>
-        <p className="text-sm font-sans font-normal ml-4">{title}</p>
+        <Text className="text-[13px]/[18px] font-normal ml-2">{title}</Text>
       </div>
     </div>
   )
@@ -248,7 +248,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/icon-chat.svg',
+        src: '/images/icons/icon-star.svg',
         alt: 'Avaliações do serviço, produto e motorista.'
       }
     },
@@ -257,7 +257,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/icon-map.svg',
+        src: '/images/icons/icon-dashboard.svg',
         alt: 'Dashbord de Indicadores.'
       }
     },
@@ -266,7 +266,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/icon-alert.svg',
+        src: '/images/icons/icon-data.svg',
         alt: 'Relatórios de registros e dados de execução da operação.'
       }
     },
@@ -275,7 +275,7 @@ export const Solutions = () => {
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/icon-file.svg',
+        src: '/images/icons/icon-vision.svg',
         alt: 'Visibilidade para a operação e cliente final.'
       }
     }
@@ -283,30 +283,60 @@ export const Solutions = () => {
 
   const list_automation_cl = [
     {
-      title: 'Roteirização programada automaticamente',
+      title: 'Ajuste de regras para envio de pedidos',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/home-solutions-route.svg',
+        alt: 'Ajuste de regras para envio de pedidos'
+      }
+    },
+    {
+      title: 'Roteirização programada automaticamente',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-vehicle.png',
         alt: 'Roteirização programada automaticamente'
       }
     },
+    {
+      title: 'Testes de melhores cenários de rotas',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-user.svg',
+        alt: 'Testes de melhores cenários de rotas'
+      }
+    }
+  ]
+
+  const list_automation_cr = [
     {
       title: 'Seleção de frota própria ou terceirizada',
       icon: {
         width: 16,
         height: 16,
-        src: '/images/icons/icon-vehicle.png',
+        src: '/images/icons/icon-report.svg',
         alt: 'Seleção de frota própria ou terceirizada'
       }
     },
     {
-      title: 'Despacho automático para o motorista ideal',
+      title: 'Despache automático ao motorista',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/icon-user.svg',
-        alt: 'Despacho automático para o motorista ideal'
+        alt: 'Despache automático ao motorista'
+      }
+    },
+    {
+      title: 'Critérios de priorização do motorista',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-star.svg',
+        alt: 'Critérios de priorização do motorista'
       }
     }
   ]
@@ -360,7 +390,12 @@ export const Solutions = () => {
             <TextHighlight>operação</TextHighlight>
           </Title>
         }
-        subtitle="Conheça nossas solções e escolha a combinação ideal para atingir seus objetivos."
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Conheça nossas solções e escolha a combinação ideal para atingir
+            seus objetivos.
+          </Text>
+        }
       >
         <div className="hidden lg:block">
           <div className="mt-24 flex items-center justify-evenly pb-24">
@@ -464,7 +499,7 @@ export const Solutions = () => {
                   )
               )}
 
-              {list_automation_cl.map(
+              {list_automation_cr.map(
                 (item, index) =>
                   tab === 2 && (
                     <CardRoute
@@ -566,7 +601,7 @@ export const Solutions = () => {
                 )
             )}
 
-            {list_automation_cl.map(
+            {list_automation_cr.map(
               (item, index) =>
                 tab === 2 && (
                   <CardRoute key={index} title={item.title} icon={item.icon} />
@@ -594,7 +629,7 @@ export const Solutions = () => {
                 )
             )}
 
-            {list_automation_cl.map(
+            {list_automation_cr.map(
               (item, index) =>
                 tab === 4 && (
                   <CardRoute key={index} title={item.title} icon={item.icon} />
@@ -610,10 +645,10 @@ export const Solutions = () => {
           </p>
         </div>
         <div className="pb-12 md:pb-16">
-          <p className="lg:max-w-[60%] lg:px-5 m-auto text-grayscale-200 text-base font-normal text-center">
+          <Text className="lg:max-w-[60%] lg:px-5 m-auto text-grayscale-200 text-[15px] font-normal text-center">
             Com o Routing Studio você pode realizar todo o planajamento de suas
             rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
-          </p>
+          </Text>
         </div>
         <div className="md:w-32 m-auto mb-24">
           <ButtonPrimary href="/">Saiba mais</ButtonPrimary>

@@ -20,7 +20,7 @@ export const RoutingAcademy = () => {
             />
           </div>
           <div className="relative z-10">
-            <Text className="text-lg/[24px] text-grayscale-50 mb-8">
+            <Text className="text-base/[22px] font-light text-grayscale-50 mb-8">
               Aprenda todos os conceitos fundamentais envolvidos na otimização
               de processos logísticos.Saiba como a aplicação de tecnologias com
               inteligência artificial podem transformar os resultados das

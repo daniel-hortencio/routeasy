@@ -26,7 +26,7 @@ export const Maestro = () => {
         </Title>
       }
       subtitle={
-        <Text className="text-grayscale-50 text-[15px]">
+        <Text className="text-grayscale-50 text-[15px] font-light">
           Coloque sua operação no piloto automático enquanto você gerencia
           apenas as exceções. O Maestro automatiza 100% das tarefas manuais,
           possibilitando o same day delivery e as coletas dinâmicas graças às

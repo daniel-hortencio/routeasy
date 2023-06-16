@@ -12,7 +12,7 @@ export const Integrating = () => {
         </Title>
       }
       subtitle={
-        <Text className="text-grayscale-50 text-[15px]">
+        <Text className="text-grayscale-50 text-[15px] font-light">
           Nossass soluções se conectam facilmente a outras ferramentas como ERP,
           WMS TMS. Sincronize dados em tempo real e garanta um fluxo contínuo de
           informações.

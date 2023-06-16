@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
 import { useEffect, useState } from 'react'
-import { TextHighlight } from 'components/elements/Texts'
+import { TextHighlight, Text } from 'components/elements/Texts'
 import TextTransition, { presets } from 'react-text-transition'
 
 const list_operations = [
@@ -44,12 +44,12 @@ export const Banner = () => {
               </TextHighlight>
             </div>
           </h1>
-          <p className="font-normal text-base pb-8">
+          <Text className="pb-8 font-light text-grayscale-50 text-[15px]">
             Nossas soluções são a chave para aumentar a eficiência da sua
             operação. Acelere processos, reduza custos e ganhe mais
             produtividade com uma plataforma completa de otimização de rotas e
             gestão de entregas e coletas.
-          </p>
+          </Text>
           <div className="lg:w-56">
             <ButtonPrimary href="/">Quero uma demonstração</ButtonPrimary>
           </div>

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { Section } from 'components/elements/Section'
 import S from './styles.module.css'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
@@ -30,7 +30,13 @@ export const Midia = () => {
             Rout<TextHighlight>easy</TextHighlight> na mídia
           </Title>
         }
-        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Nossa dedicação em oferecer soluções inovadoras e eficientes tem
+            atraído a atenção dos principais veículos de comunicação. Confira
+            algumas das nossas principais aparições.
+          </Text>
+        }
       >
         <div className="hidden lg:block">
           <div className={`${S.MidiaGrid} grid w-full gap-6`}>
@@ -49,10 +55,9 @@ export const Midia = () => {
                 style={{ objectFit: 'fill' }}
               />
               <div className={`${S.MidiaBoxText}`}>
-                <div className={`${S.border} h-[74px]`}></div>
+                <div className={`${S.border} h-[50px]`}></div>
                 <p className={`${S.MidiaText}`}>
-                  Tecnologia é a base para um futuro global do Supply Chain,
-                  ligando cadeias instaladas em vários locais
+                  Digitalização mapeia rotas e reduz custos
                 </p>
               </div>
             </div>
@@ -71,9 +76,10 @@ export const Midia = () => {
                 style={{ objectFit: 'fill' }}
               />
               <div className={`${S.MidiaBoxText}`}>
-                <div className={`${S.border} h-12`}></div>
+                <div className={`${S.border} h-[128px]`}></div>
                 <p className={`${S.MidiaText}`}>
-                  Digitalização mapeais rotas e reduz custos
+                  Tecnologia é a base para um futuro global do Supply Chain,
+                  ligando cadeias instaladas em vários locais
                 </p>
               </div>
             </div>

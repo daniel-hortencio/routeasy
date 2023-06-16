@@ -22,12 +22,12 @@ export const Clients = () => {
   })
 
   const clients = [
-    { src: '/images/logos/DHL.svg', alt: 'DHL' },
-    { src: '/images/logos/solistica.svg', alt: 'Solistica' },
-    { src: '/images/logos/shopee.svg', alt: 'Shopee' },
-    { src: '/images/logos/magalu.svg', alt: 'Magalu' },
-    { src: '/images/logos/magalu.svg', alt: 'Magalu' },
-    { src: '/images/logos/magalu.svg', alt: 'Magalu' }
+    { src: '/images/logos/dhl.png', alt: 'DHL' },
+    { src: '/images/logos/solist.png', alt: 'Solistica' },
+    { src: '/images/logos/shop.png', alt: 'Shopee' },
+    { src: '/images/logos/mag.png', alt: 'Magalu' },
+    { src: '/images/logos/mag.png', alt: 'Magalu' },
+    { src: '/images/logos/mag.png', alt: 'Magalu' }
   ]
 
   return (

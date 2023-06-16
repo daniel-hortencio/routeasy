@@ -4,7 +4,7 @@ import { Section } from 'components/elements/Section'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { ButtonSecondary } from 'components/elements/Button'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 
 const CardBlog = ({ tag, title, author, date }) => {
   return (
@@ -47,9 +47,11 @@ export const Blog = () => {
             Acompanhe as <TextHighlight>novidades</TextHighlight> da Logística
           </Title>
         }
-        subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-      assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis
-      voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Acesse o blog da RoutEasy e fique por dentro de todas as novidades!
+          </Text>
+        }
       >
         <div className="hidden lg:grid grid-cols-3 gap-6 mt-2">
           <CardBlog

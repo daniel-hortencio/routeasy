@@ -18,7 +18,7 @@ const ContentItem = ({
       <div className="md:w-[56%] pr-8">
         <h3 className="mb-2 md:mb-3 text-[32px] font-medium">{title}</h3>
         <div className="h-[2px] w-full bg-primary-100 mb-4 md:mb-6" />
-        <Text className="text-[15px]">{text}</Text>
+        <Text className="text-[15px] font-light">{text}</Text>
       </div>
       <div className="relative pt-[32%] flex-auto hidden md:block">
         <Image src={image} fill alt={altImage} />
@@ -95,7 +95,7 @@ export const Segments = () => {
           </Title>
         }
         subtitle={
-          <Text className="text-grayscale-50 text-[15px]">
+          <Text className="text-grayscale-50 text-[15px] font-light">
             Sabemos que cada operação é única e, por isso, nosso time de
             especialistas está preparado para:
           </Text>

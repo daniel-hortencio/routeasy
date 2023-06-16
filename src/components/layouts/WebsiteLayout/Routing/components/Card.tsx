@@ -17,7 +17,7 @@ export const RoutingCard = ({
     >
       <div>
         {icon && (
-          <div className="border border-white rounded-lg h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center m-auto">
+          <div className="border border-white rounded-lg h-14 w-14 lg:h-10 lg:npm run dev flex items-center justify-center m-auto">
             <Image src={icon} width={16} height={16} alt={title} />
           </div>
         )}

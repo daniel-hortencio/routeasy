@@ -1,6 +1,6 @@
 'use client'
 import { Section } from 'components/elements/Section'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { SlideTestimonials } from './Slide'
 
 export const Testimonials = () => {
@@ -12,7 +12,13 @@ export const Testimonials = () => {
           Quem usa <TextHighlight>confia</TextHighlight>
         </Title>
       }
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      subtitle={
+        <Text className="text-grayscale-50 font-light text-[15px]">
+          Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
+          assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis
+          voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.{' '}
+        </Text>
+      }
     >
       <div className="mb-[88px] lg:mb-32">
         <div className="mb-12 ">
