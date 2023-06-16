@@ -6,21 +6,23 @@ import { ButtonSecondary } from 'components/elements/Button'
 export const Career = () => {
   return (
     <Section className="pb-24">
-      <div className="relative flex items-center justify-center overflow-hidden rounded-3xl w-full h-[404px] text-center py-10 md:py-11 pb-16">
+      <div className="relative flex items-center justify-center overflow-hidden rounded-3xl w-full h-[404px] text-center py-10 md:py-11">
         <Image
           src="/images/pictures/trabalhe-conosco.png"
           fill
           alt="Background"
           style={{ objectFit: 'cover' }}
         />
-        <div className="relative py-12 px-12">
-          <Title>Trabalhe conosco</Title>
-          <Text className="mb-12">
+        <div className="relative py-12 px-12 h-full">
+          <Title className="mb-4">Trabalhe conosco</Title>
+          <Text className="mb-12 max-w-xl">
             Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
             assumenda voluptates qui beatae.
           </Text>
           <div className="w-40 text-sm m-auto">
-            <ButtonSecondary href="/">Quero saber mais</ButtonSecondary>
+            <ButtonSecondary href="/trabalhe-conosco">
+              Quero saber mais
+            </ButtonSecondary>
           </div>
         </div>
       </div>

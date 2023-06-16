@@ -69,22 +69,20 @@ export const ContactArea = () => {
   })
   return (
     <>
-      <Section>
-        <div className="hidden lg:block">
-          <div className="grid grid-cols-3 gap-5">
-            {list_area.map((item, index) => (
-              <CardArea
-                key={index}
-                icon={item.icon}
-                title={item.title}
-                text={item.text}
-                button={item.button}
-              />
-            ))}
-          </div>
+      <Section className="mb-32 hidden lg:block">
+        <div className="grid grid-cols-3 gap-5">
+          {list_area.map((item, index) => (
+            <CardArea
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              text={item.text}
+              button={item.button}
+            />
+          ))}
         </div>
       </Section>
-      <div className="lg:hidden">
+      <div className="lg:hidden mb-14">
         <div ref={sliderRef} className="keen-slider">
           {list_area.map((item, index) => (
             <div

@@ -59,7 +59,7 @@ const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
 }
 
 export const FAQ = () => {
-  const [questOpened, setQuestOpened] = useState<number | undefined>(undefined)
+  const [questOpened, setQuestOpened] = useState<number | undefined>(0)
 
   const handleQuestionClick = (index: number) =>
     index === questOpened ? setQuestOpened(undefined) : setQuestOpened(index)
@@ -67,7 +67,7 @@ export const FAQ = () => {
   return (
     <Section
       className="lg:mb-40"
-      title={<Title>Dúvidas frequentes</Title>}
+      title={<Title>Dúvidas frequentes AQUI</Title>}
       subtitle={
         <Text className="text-grayscale-50 text-[15px]">
           Aqui você encontrará as respostas para as dúvidas mais comuns sobre

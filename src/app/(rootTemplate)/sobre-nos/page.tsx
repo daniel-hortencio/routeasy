@@ -17,7 +17,7 @@ export default function SobreNos() {
         <CTA
           title="Você sabia?"
           description="A Routeasy sempre está em busca de novos talentos, confira nossas vagas agora mesmo ;)"
-          href="/"
+          href="/trabalhe-conosco"
           buttonText="Veja nossas vagas disponíveis"
         />
       </div>

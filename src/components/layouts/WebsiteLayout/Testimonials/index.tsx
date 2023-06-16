@@ -6,7 +6,7 @@ import { SlideTestimonials } from './Slide'
 export const Testimonials = () => {
   return (
     <Section
-      className="pb-20 lg:pb-28"
+      className="pb-20"
       title={
         <Title>
           Quem usa <TextHighlight>confia</TextHighlight>
@@ -20,7 +20,7 @@ export const Testimonials = () => {
         </Text>
       }
     >
-      <div className="mb-[88px] lg:mb-32">
+      <div>
         <div className="mb-12 ">
           <SlideTestimonials />
         </div>
