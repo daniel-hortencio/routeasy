@@ -14,7 +14,7 @@ export const Banner = () => {
           alt="Banner"
         />
         <div className="flex justify-center items-center h-full relative min-h-[640px]">
-          <div className="md:mx-auto lg:mx-0 flex flex-col justify-center w-[645px] text-center">
+          <div className="pt-16 md:mx-auto lg:mx-0 flex flex-col justify-center w-[645px] text-center">
             <h1 className="text-white uppercase font-semibold text-5xl lg:text-[56px]/[72px] mb-5">
               Sobre
               <TextHighlight> nós</TextHighlight>
