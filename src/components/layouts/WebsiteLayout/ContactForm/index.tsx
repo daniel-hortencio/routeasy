@@ -84,7 +84,7 @@ export const ContactForm = () => {
       },
       onSuccess: async () => {
         const response = await axios
-          .post('/api/hello', data)
+          .post('/api/send-contact', data)
           .then(() => {
             setIsLoading(false)
             Toast.fire({

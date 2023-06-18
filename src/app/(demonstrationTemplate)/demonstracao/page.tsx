@@ -1,5 +1,5 @@
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
-import { ContactForm } from './ContactForm'
+import { ContactForm } from '../../(rootTemplate)/contato/ContactForm'
 import Icon from 'components/elements/Icon'
 
 export default function DemonstrationPage() {

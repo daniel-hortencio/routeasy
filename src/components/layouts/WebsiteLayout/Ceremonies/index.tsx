@@ -1,9 +1,31 @@
+'use client'
+
 import { Section } from 'components/elements/Section'
-import Image from 'next/image'
-import { Title, Text, TextHighlight } from 'components/elements/Texts'
+import { Title, Text } from 'components/elements/Texts'
 import Icon from 'components/elements/Icon'
+import { useState } from 'react'
+import { ceremoniesSlides } from './Slides'
 
 export const Ceremonies = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const next = 1
+  const previous = -1
+
+  function handleChangeSlide(to: 1 | -1) {
+    if (currentSlide + to === ceremoniesSlides.length) {
+      setCurrentSlide(0)
+      return
+    }
+
+    if (currentSlide + to < 0) {
+      setCurrentSlide(ceremoniesSlides.length - 1)
+      return
+    }
+
+    setCurrentSlide(currentSlide + to)
+  }
+
   return (
     <Section className="pb-28">
       <div className="mb-12 text-center md:text-left md:ml-12 lg:ml-28 md:hidden">
@@ -16,90 +38,43 @@ export const Ceremonies = () => {
       </div>
 
       <div className={`pb-24 pmd:b-40 block items-center grid-cols-2 md:grid`}>
-        <div className={`mb-8 md:mb-0`}>
-          <div className="grid grid-cols-3 gap-2 mb-2">
-            <div className={`pt-[180%] relative`}>
-              <Image
-                fill
-                src="/images/pictures/techday_1.png"
-                alt="Tech Day"
-                style={{
-                  position: 'absolute',
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover'
-                }}
-              />
-            </div>
-            <div className={`grid gap-2`}>
-              <div className="relative">
-                <Image
-                  fill
-                  src="/images/pictures/techday_2.png"
-                  alt="Tech Day"
-                />
-              </div>
-              <div className="relative">
-                <Image
-                  fill
-                  src="/images/pictures/techday_3.png"
-                  alt="Tech Day"
-                />
-              </div>
-            </div>
-            <div className={`pt-[180%] relative`}>
-              <Image
-                fill
-                src="/images/pictures/techday_4.png"
-                alt="Tech Day"
-                style={{
-                  position: 'absolute',
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover'
-                }}
-              />
-            </div>
-          </div>
-          <div className={`pt-[30%] relative`}>
-            <Image
-              fill
-              src="/images/pictures/techday_5.png"
-              alt="Tech Day"
-              style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
-            />
-          </div>
-        </div>
+        {ceremoniesSlides[currentSlide].grid}
 
         <div className="text-center md:text-left md:ml-12 lg:ml-28">
           <header className="md:flex md:items-center md:justify-between">
             <Title className="text-[32px]/[40px]">
-              Tech<TextHighlight>Day</TextHighlight>
+              {ceremoniesSlides[currentSlide].title}
             </Title>
 
             <div className="md:grid grid-cols-2 gap-2 w-16 hidden">
-              <button className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300">
+              <button
+                onClick={() => handleChangeSlide(previous)}
+                className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300"
+              >
                 <Icon name="FiArrowLeft" size={14} />
               </button>
-              <button className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300">
+              <button
+                onClick={() => handleChangeSlide(next)}
+                className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300"
+              >
                 <Icon name="FiArrowRight" size={14} />
               </button>
             </div>
           </header>
           <Text className="text-[13px]/[20px] text-grayscale-50">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
+            {ceremoniesSlides[currentSlide].description}
           </Text>
           <div className="grid grid-cols-2 gap-2 w-16  mx-auto md:hidden mt-10">
-            <button className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300">
+            <button
+              onClick={() => handleChangeSlide(previous)}
+              className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300"
+            >
               <Icon name="FiArrowLeft" size={14} />
             </button>
-            <button className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300">
+            <button
+              onClick={() => handleChangeSlide(next)}
+              className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300"
+            >
               <Icon name="FiArrowRight" size={14} />
             </button>
           </div>

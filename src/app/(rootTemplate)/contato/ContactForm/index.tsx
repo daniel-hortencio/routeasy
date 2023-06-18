@@ -25,7 +25,12 @@ const init_data = {
   cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: ''
 }
 
-export const ContactForm = () => {
+interface Props {
+  title: string
+  conversion_identifier: string
+}
+
+export const ContactForm = ({ title, conversion_identifier }: Props) => {
   const [data, setData] = useState(init_data)
   const [errors, setErrors] = useState(init_data)
   const [isLoading, setIsLoading] = useState(false)
@@ -85,7 +90,7 @@ export const ContactForm = () => {
       },
       onSuccess: async () => {
         const response = await axios
-          .post('/api/hello', data)
+          .post('/api/send-contact', { ...data, conversion_identifier })
           .then(() => {
             setIsLoading(false)
             Toast.fire({
@@ -115,9 +120,9 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-grayscale-600 px-4 lg:px-20 pt-20 lg:py-16 pb-12 rounded-lg"
+      className="bg-grayscale-600 px-4 lg:px-16 pt-20 lg:py-16 pb-12 rounded-lg"
     >
-      <Title className="mb-4">Contato</Title>
+      <Title className="mb-4">{title}</Title>
       <Text className="mb-10 text-grayscale-200">
         Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
         assumenda voluptates qui beatae quis id Quis cupiditate.
@@ -137,11 +142,7 @@ export const ContactForm = () => {
             placeholder="(00) 00000-0000"
           />
         </InputGroup>
-        <InputGroup
-          label="Email"
-          error={errors.email}
-          className="sm:col-span-2 md:col-span-1"
-        >
+        <InputGroup label="Email" error={errors.email} className="col-span-2">
           <InputText
             value={data.email}
             onChange={(value: string) => handleChange('email', value)}

@@ -63,3 +63,11 @@ p {
 .swal2-close {
   color: white !important;
 }
+.swal2-html-container {
+  margin: 0 !important;
+}
+
+.swal2-popup {
+  padding: 0 !important;
+  border-radius: 1rem;
+}
