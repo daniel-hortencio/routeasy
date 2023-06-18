@@ -3,6 +3,7 @@ import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import S from './styles.module.css'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 export const BoxVacancies = ({ title, tag, button }) => {
   return (
@@ -19,7 +20,9 @@ export const BoxVacancies = ({ title, tag, button }) => {
           </div>
         </div>{' '}
         <div className="text-xs">
-          <ButtonSecondary>{button}</ButtonSecondary>
+          <LinkExternal href="https://routeasy.gupy.io/">
+            <ButtonSecondary>{button}</ButtonSecondary>
+          </LinkExternal>
         </div>
       </div>
     </div>
@@ -50,12 +53,11 @@ export const Vacancies = () => {
             venha <TextHighlight>trabalhar</TextHighlight> na melhor log
             <TextHighlight>tech</TextHighlight> do brasil
           </h1>
-          <p className="mb-6 text-grayscale-200">
-            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-            assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-            veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
-            quis.{' '}
-          </p>
+          <Text className="text-grayscale-50 text-[15px] font-light mb-6">
+            Estamos em constante crescimento e buscamos profissionais que querem
+            impulsionar suas carreiras em um ambiente dinâmico e inovador.
+            Confira nossas oportunidades e faça parte dessa jornada de sucesso!
+          </Text>
           <div className="lg:w-36 lg:h-10 text-sm mb-2">
             <ButtonSecondary>Ver todas as vagas</ButtonSecondary>
           </div>

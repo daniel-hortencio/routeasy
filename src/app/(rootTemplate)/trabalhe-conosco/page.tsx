@@ -25,7 +25,7 @@ export default function TrabalheConosco() {
               vagas agora mesmo ;)
             </Text>
           }
-          href="/"
+          href="https://routeasy.gupy.io/"
           buttonText="Veja nossas vagas disponíveis"
         />
       </div>
@@ -35,7 +35,6 @@ export default function TrabalheConosco() {
       <Ceremonies />
       <Office />
       <Food />
-      <Benefits />
       <Vacancies />
     </>
   )

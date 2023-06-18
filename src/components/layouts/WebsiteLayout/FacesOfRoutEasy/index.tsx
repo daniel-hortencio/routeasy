@@ -29,13 +29,6 @@ export const FacesOfRoutEasy = () => {
         'Temos uma cultura nova, dinâmica e voltada a resultados, incentiva a autonomia, a iniciativa e a colaboração entre os membros da equipe. Tenho a liberdade de contribuir com minhas ideias, me tornando parte dessa caminhada de sucesso.'
     },
     {
-      src: '/images/pictures/employee-4.png',
-      name: 'Washigton CARVALHO',
-      position: 'SMB',
-      description:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
-    },
-    {
       src: '/images/pictures/employee-5.png',
       name: 'Vinicius soares',
       position: 'SMB',

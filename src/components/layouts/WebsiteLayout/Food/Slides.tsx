@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 export const foodSlides = [
   {
-    title: <>Café da Manhã</>,
+    title: <>Café da Tarde</>,
     description:
-      'Eventos mensais para celebrar nossos bons resultados, com happy hours temáticos, premiações e reconhecimentos a membros que se destacaram. Essas comemorações não apenas reforçam a união da equipe, mas também nos motivam a buscar novos patamares de excelência para o nosso trabalho.',
+      'É uma oportunidade de relaxar, recarregar as energias e nos conectar com as outras equipes. Grandes ideias surgem durante a pausa para o café!',
     grid: (
       <div className={`grid grid-cols-3 gap-2 relative pb-8 md:pb-0`}>
         <div className={`pt-[180%] relative`}>
@@ -49,14 +49,14 @@ export const foodSlides = [
   {
     title: <>Frutinhas</>,
     description:
-      'Eventos mensais para celebrar nossos bons resultados, com happy hours temáticos, premiações e reconhecimentos a membros que se destacaram. Essas comemorações não apenas reforçam a união da equipe, mas também nos motivam a buscar novos patamares de excelência para o nosso trabalho.',
+      'É uma oportunidade de relaxar, recarregar as energias e nos conectar com as outras equipes. Grandes ideias surgem durante a pausa para o café!',
     grid: (
       <div className={`grid grid-cols-3 gap-2 relative pb-8 md:pb-0`}>
         <div className={`pt-[180%] relative`}>
           <Image
             fill
             src="/images/pictures/cafe_5.png"
-            alt="Café da tarde"
+            alt="Frutinhas"
             style={{
               position: 'absolute',
               width: '100%',
@@ -92,7 +92,7 @@ export const foodSlides = [
   {
     title: <>Bolo</>,
     description:
-      'Eventos mensais para celebrar nossos bons resultados, com happy hours temáticos, premiações e reconhecimentos a membros que se destacaram. Essas comemorações não apenas reforçam a união da equipe, mas também nos motivam a buscar novos patamares de excelência para o nosso trabalho.',
+      'É uma oportunidade de relaxar, recarregar as energias e nos conectar com as outras equipes. Grandes ideias surgem durante a pausa para o café!',
     grid: (
       <div className={`grid grid-cols-3 gap-2 relative pb-8 md:pb-0`}>
         <div className={`pt-[180%] relative`}>

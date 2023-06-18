@@ -31,10 +31,16 @@ export const Food = () => {
       className="lg:pb-20"
       title={
         <Title>
-          Gostamos muito de <TextHighlight>Comer</TextHighlight>
+          Gostamos muito de <TextHighlight>NOS REUNIR (e comer)</TextHighlight>
         </Title>
       }
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px] font-light">
+          Aqui, valorizamos a troca de ideias e o compartilhamento de
+          experiências em um ambiente descontraído. E se tiver comida, melhor
+          ainda!
+        </Text>
+      }
     >
       <div className={`pb-24 pmd:b-40 block items-center grid-cols-2 md:grid`}>
         <div className={`mb-8 md:mb-0`}>{foodSlides[currentSlide].grid}</div>

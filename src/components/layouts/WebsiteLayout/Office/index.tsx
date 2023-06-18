@@ -46,7 +46,10 @@ export const Office = () => {
             icon="/images/icons/churrasqueira.svg"
             title="Churrasqueira"
           />
-          <CardOffice icon="/images/icons/fumodromo.svg" title="Fumódromo" />
+          <CardOffice
+            icon="/images/icons/fumodromo.svg"
+            title="Área ao ar livre"
+          />
         </div>
       </div>
     </Section>
