@@ -17,6 +17,7 @@ import Swal from 'sweetalert2'
 import { PulseLoader } from 'react-spinners'
 import { ContactFormSchemaValidation } from 'components/layouts/WebsiteLayout/ContactForm/ContactFormSchemaValidation'
 import { IConversionIdentifier, SendContactDTO, services } from 'services'
+import Icon from 'components/elements/Icon'
 
 const init_data: SendContactDTO = {
   name: '',
@@ -28,10 +29,17 @@ const init_data: SendContactDTO = {
 
 interface Props {
   title: string
+  description: string
   conversion_identifier: IConversionIdentifier
+  onClose?: () => void
 }
 
-export const ContactForm = ({ title, conversion_identifier }: Props) => {
+export const ContactForm = ({
+  title,
+  description,
+  conversion_identifier,
+  onClose
+}: Props) => {
   const [data, setData] = useState(init_data)
   const [errors, setErrors] = useState(init_data)
   const [isLoading, setIsLoading] = useState(false)
@@ -105,12 +113,21 @@ export const ContactForm = ({ title, conversion_identifier }: Props) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-grayscale-600 px-4 lg:px-16 pt-20 lg:py-16 pb-12 rounded-lg"
+      className="bg-grayscale-600 px-4 lg:px-16 pt-20 lg:py-16 pb-12 rounded-lg relative"
     >
-      <Title className="mb-4">{title}</Title>
-      <Text className="mb-10 text-grayscale-200">
-        Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-        assumenda voluptates qui beatae quis id Quis cupiditate.
+      {onClose && (
+        <button
+          onClick={onClose}
+          className="absolute top-10 right-10 transition-all text-white hover:text-primary"
+        >
+          <Icon name="MdOutlineClose" size={24} />
+        </button>
+      )}
+      <Title className="mb-4" style={{ textAlign: 'left' }}>
+        {title}
+      </Title>
+      <Text className="mb-10 text-grayscale-200" style={{ textAlign: 'left' }}>
+        {description}
       </Text>
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
         <InputGroup label="Nome" error={errors.name}>

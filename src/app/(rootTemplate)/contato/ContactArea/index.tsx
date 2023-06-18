@@ -43,14 +43,19 @@ export const ContactArea = () => {
 
   function getModal(
     title: string,
+    description: string,
     conversion_identifier: IConversionIdentifier
   ) {
     MySwal.fire({
       html: (
-        <ContactForm
-          title={title}
-          conversion_identifier={conversion_identifier}
-        />
+        <>
+          <ContactForm
+            title={title}
+            description={description}
+            conversion_identifier={conversion_identifier}
+            onClose={Swal.close}
+          />
+        </>
       ),
       showConfirmButton: false
     })
@@ -66,7 +71,12 @@ export const ContactArea = () => {
       title: 'Comercial',
       text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
       button: 'Mandar Mensagem',
-      onClick: () => getModal('Comercial', 'lp-roteirizador-teste') // colocar identificador do form
+      onClick: () =>
+        getModal(
+          'Comercial',
+          'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
+          'lp-roteirizador-teste' // TODO colocar identificador do form
+        )
     },
     {
       icon: (
@@ -77,7 +87,12 @@ export const ContactArea = () => {
       title: 'Parcerias',
       text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
       button: 'Mandar Mensagem',
-      onClick: () => getModal('Parcerias', 'lp-roteirizador-teste') // colocar identificador do form
+      onClick: () =>
+        getModal(
+          'Parcerias',
+          'Receba informações diretamente da equipe de comunicação.',
+          'lp-roteirizador-teste' // TODO colocar identificador do form
+        )
     },
     {
       icon: (
@@ -88,7 +103,12 @@ export const ContactArea = () => {
       title: 'Suporte',
       text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
       button: 'Mandar Mensagem',
-      onClick: () => getModal('Suporte', 'lp-roteirizador-teste') // colocar identificador do form
+      onClick: () =>
+        getModal(
+          'Suporte',
+          'Receba ajuda para solucionar de problemas e comunicar erros.',
+          'lp-roteirizador-teste' // TODO colocar identificador do form
+        )
     }
   ]
 
