@@ -7,14 +7,14 @@ import Link from 'next/link'
 export const Footer = () => {
   const links_navegation = [
     { label: 'Início', href: '/' },
-    { label: 'Soluções', href: '/' },
+    { label: 'Soluções', href: 'solucoes' },
     { label: 'Segmentos', href: '/' },
-    { label: 'Sobre nós', href: '/' },
-    { label: 'Contato', href: '/' }
+    { label: 'Sobre nós', href: 'sobre-nos' },
+    { label: 'Contato', href: 'contato' }
   ]
 
   const links_solutions = [
-    { label: 'Roteirizador', href: '/' },
+    { label: 'Roteirizador', href: 'roteirizacao' },
     { label: 'Automação', href: '/' },
     { label: 'Gestão de entregas', href: '/' },
     { label: 'Aplicativo', href: '/' },
@@ -22,10 +22,16 @@ export const Footer = () => {
   ]
 
   const links_routeasy = [
-    { label: 'Blog', href: '/' },
-    { label: 'Route Academy', href: '/' },
+    {
+      label: 'Blog',
+      href: 'https://routeasy.com.br/content/'
+    },
+    {
+      label: 'Route Academy',
+      href: 'https://routeasy.com.br/content/routingacademy/'
+    },
     { label: 'Routeasy na mídia', href: '/' },
-    { label: 'Trabalhe conosco', href: '/' },
+    { label: 'Trabalhe conosco', href: 'trabalhe-conosco' },
     { label: 'Eventos', href: '/' }
   ]
 
@@ -93,33 +99,33 @@ export const Footer = () => {
           <div className="grid gap-4 lg:gap-1 grid-cols-4">
             <a
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
-              href="/"
+              href="https://br.linkedin.com/company/routeasy"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Icon name="FaLinkedin" size={20} />
             </a>
             <a
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
-              href="/"
+              href="https://www.instagram.com/routeasy/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Icon name="FaInstagram" size={20} />
             </a>
             <a
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
-              href="/"
+              href="https://www.facebook.com/routeasy/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Icon name="FaFacebookF" size={20} />
             </a>
             <a
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
-              href="/"
+              href="https://www.youtube.com/c/CanalRoutEasy"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Icon name="FaYoutube" size={20} />
             </a>
