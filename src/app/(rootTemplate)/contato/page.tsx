@@ -21,7 +21,7 @@ export default function Contact() {
       <FAQ />
       <Section>
         <div className="px-0 md:px-12 mb-16 md:mb-40">
-          <ContactForm></ContactForm>
+          <ContactForm />
         </div>
       </Section>
     </>

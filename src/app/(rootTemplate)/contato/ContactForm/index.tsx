@@ -13,11 +13,12 @@ import {
 } from 'components/elements/Inputs'
 import { Text, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
-import axios from 'axios'
 import Swal from 'sweetalert2'
 import { PulseLoader } from 'react-spinners'
+import { ContactFormSchemaValidation } from 'components/layouts/WebsiteLayout/ContactForm/ContactFormSchemaValidation'
+import { IConversionIdentifier, SendContactDTO, services } from 'services'
 
-const init_data = {
+const init_data: SendContactDTO = {
   name: '',
   personal_phone: '',
   email: '',
@@ -27,7 +28,7 @@ const init_data = {
 
 interface Props {
   title: string
-  conversion_identifier: string
+  conversion_identifier: IConversionIdentifier
 }
 
 export const ContactForm = ({ title, conversion_identifier }: Props) => {
@@ -65,32 +66,16 @@ export const ContactForm = ({ title, conversion_identifier }: Props) => {
     e.preventDefault()
     setIsLoading(true)
 
-    const contactFormSchema = yup.object().shape({
-      name: yup.string().min(1, 'Obrigatório'),
-      email: yup
-        .string()
-        .required('Obrigatório')
-        .email('Insira um e-mail com formato válido'),
-      personal_phone: yup
-        .string()
-        .required('Obrigatório')
-        .min(15, 'Mínimo 9 dígitos'),
-      company_name: yup.string().required('Obrigatório'),
-      cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
-        .string()
-        .required('Obrigatório')
-    })
-
     yupValidator({
-      schema: contactFormSchema,
+      schema: ContactFormSchemaValidation,
       data,
       setError: errors => {
         setIsLoading(false)
         handleSetError(errors)
       },
       onSuccess: async () => {
-        const response = await axios
-          .post('/api/send-contact', { ...data, conversion_identifier })
+        const response = await services
+          .sendContact(data, conversion_identifier)
           .then(() => {
             setIsLoading(false)
             Toast.fire({

@@ -8,6 +8,7 @@ import 'keen-slider/keen-slider.min.css'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { ContactForm } from '../ContactForm'
+import { IConversionIdentifier } from 'services'
 
 const MySwal = withReactContent(Swal)
 
@@ -40,7 +41,10 @@ export const ContactArea = () => {
     }
   })
 
-  function getModal(title: string, conversion_identifier: string) {
+  function getModal(
+    title: string,
+    conversion_identifier: IConversionIdentifier
+  ) {
     MySwal.fire({
       html: (
         <ContactForm
@@ -73,7 +77,7 @@ export const ContactArea = () => {
       title: 'Parcerias',
       text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
       button: 'Mandar Mensagem',
-      onClick: () => getModal('Parcerias', 'lp-roteirizador-parcerias') // colocar identificador do form
+      onClick: () => getModal('Parcerias', 'lp-roteirizador-teste') // colocar identificador do form
     },
     {
       icon: (
@@ -84,7 +88,7 @@ export const ContactArea = () => {
       title: 'Suporte',
       text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
       button: 'Mandar Mensagem',
-      onClick: () => getModal('Suporte', 'lp-roteirizador-suporte') // colocar identificador do form
+      onClick: () => getModal('Suporte', 'lp-roteirizador-teste') // colocar identificador do form
     }
   ]
 

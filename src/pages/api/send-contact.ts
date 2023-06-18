@@ -1,13 +1,18 @@
 import axios from 'axios'
+import { IConversionIdentifier, SendContactDTO } from 'services'
+
+interface IRequestBody extends SendContactDTO {
+  conversion_identifier: IConversionIdentifier
+}
 
 export default async function handler(req, res) {
-  const { body } = req
+  const body = req.body as IRequestBody
 
   const dataReq = {
     conversion_url: 'http://localhost:3006/',
     conversion_domain: 'localhost:3002',
     company_name: body.company_name,
-    conversion_identifier: 'lp-roteirizador-teste',
+    conversion_identifier: body.conversion_identifier,
     internal_source: '6',
     name: body.name,
     personal_phone: `+55 ${body.personal_phone}`,

@@ -1,7 +1,6 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
-import * as yup from 'yup'
 import { PulseLoader } from 'react-spinners'
 import Swal from 'sweetalert2'
 
@@ -15,8 +14,10 @@ import {
 import { Text, TextHighlight, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
 import axios from 'axios'
+import { ContactFormSchemaValidation } from './ContactFormSchemaValidation'
+import { SendContactDTO, services } from 'services'
 
-const init_data = {
+const init_data: SendContactDTO = {
   name: '',
   personal_phone: '',
   email: '',
@@ -59,59 +60,16 @@ export const ContactForm = () => {
     e.preventDefault()
     setIsLoading(true)
 
-    const contactFormSchema = yup.object().shape({
-      name: yup.string().min(1, 'Obrigatório'),
-      email: yup
-        .string()
-        .required('Obrigatório')
-        .email('Insira um e-mail com formato válido')
-        .test('is-corporate-email', 'Deve ser um e-mail corporativo', email => {
-          if (!email) return true // O valor está vazio, a validação é ignorada
-
-          const [_, e_mail_domain] = email.split('@')
-
-          const not_corporative_email_domains = [
-            'gmail.com',
-            'yahoo.com',
-            'outlook.com',
-            'hotmail.com',
-            'icloud.com',
-            'aol.com',
-            'mail.com',
-            'protonmail.com',
-            'zoho.com',
-            'yandex.com',
-            'gmx.com',
-            'outlook.com.br',
-            'live.com',
-            'rediffmail.com',
-            'mail.ru'
-          ]
-          if (not_corporative_email_domains.includes(e_mail_domain))
-            return false // Não é um e-mail corporativo válido
-
-          return true // Não é um e-mail corporativo válido
-        }),
-      personal_phone: yup
-        .string()
-        .required('Obrigatório')
-        .min(15, 'Mínimo 9 dígitos'),
-      company_name: yup.string().required('Obrigatório'),
-      cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
-        .string()
-        .required('Obrigatório')
-    })
-
     yupValidator({
-      schema: contactFormSchema,
+      schema: ContactFormSchemaValidation,
       data,
       setError: errors => {
         setIsLoading(false)
         handleSetError(errors)
       },
       onSuccess: async () => {
-        const response = await axios
-          .post('/api/send-contact', data)
+        const response = await services
+          .sendContact(data, 'lp-roteirizador-teste')
           .then(() => {
             setIsLoading(false)
             Toast.fire({
