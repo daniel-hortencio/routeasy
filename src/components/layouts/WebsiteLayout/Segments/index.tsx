@@ -33,7 +33,7 @@ const segmentsContent: ITabsProps = {
       label: 'Last mile B2C'
     },
     {
-      label: 'E-Last Mile B2B'
+      label: 'Last Mile B2B'
     },
     {
       label: 'Same day delivery'
@@ -42,7 +42,7 @@ const segmentsContent: ITabsProps = {
       label: 'First e Middle Mile'
     },
     {
-      label: 'Outros'
+      label: 'PUDO'
     }
   ],
   tabsContent: [
@@ -55,7 +55,7 @@ const segmentsContent: ITabsProps = {
     />,
     <ContentItem
       key="Last mile B2C"
-      title="E-Last Mile B2B"
+      title="Last Mile B2B"
       text="Planeje rotas mais inteligentes para aproveitar toda a capacidade da sua frota. Com nossas soluções, sua operação reduz prazos de entrega, evita falhas e elimina ineficiências para otimizar custos operacionais. Além disso, você tem visibilidade completa e em tempo real de todas as rotas em andamento, mantendo seus clientes informados a cada etapa do processo."
       image="/images/pictures/B2C.svg"
       altImage="Last mile B2C"
@@ -76,8 +76,8 @@ const segmentsContent: ITabsProps = {
     />,
     <ContentItem
       key="Last mile B2C"
-      title="Outros"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      title="PUDO"
+      text="Otimize a capacidade da sua frota e tempo de entrega e coleta, utilizando únicas ou distintas ordens de serviço com a nossa solução de Pick-up and Drop-off. Nossa solução foi desenvolvida para as mais diversas estratégias de planejamento logístico"
       image="/images/pictures/B2C.svg"
       altImage="Last mile B2C"
     />
