@@ -29,8 +29,7 @@ export const ContactArea = () => {
   const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: 1.15,
-      spacing: 20
+      perView: 1.15
     },
     breakpoints: {
       '(min-width: 520)': {
@@ -132,7 +131,7 @@ export const ContactArea = () => {
         <div ref={sliderRef} className="keen-slider">
           {list_area.map((item, index) => (
             <div
-              className={`keen-slider__slide ${index === 0 && 'ml-5'} `}
+              className={`keen-slider__slide ${index === 0 ? 'px-5' : 'pr-5'} `}
               key={index}
             >
               <CardArea
