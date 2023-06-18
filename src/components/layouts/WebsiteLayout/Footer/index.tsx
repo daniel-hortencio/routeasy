@@ -1,4 +1,5 @@
 import Icon from 'components/elements/Icon'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 import { Section } from 'components/elements/Section'
 import { Text, Title } from 'components/elements/Texts'
 import Link from 'next/link'
@@ -34,8 +35,14 @@ export const Footer = () => {
   ]
 
   const FooterLink = ({ href, label }) => {
-    return (
-      <Link href={href} className="text-sm hover:text-primary-100 mt-6 block">
+    const className = 'text-sm hover:text-primary-100 mt-6 block'
+
+    return href.startsWith('http') ? (
+      <LinkExternal href={href} className={className}>
+        {label}
+      </LinkExternal>
+    ) : (
+      <Link href={href} className={className}>
         {label}
       </Link>
     )
