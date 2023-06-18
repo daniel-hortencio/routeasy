@@ -97,38 +97,30 @@ export const Footer = () => {
           <p className="mb-6">SOCIAL MEDIA</p>
 
           <div className="grid gap-4 lg:gap-1 grid-cols-4">
-            <a
+            <LinkExternal
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
               href="https://br.linkedin.com/company/routeasy"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="FaLinkedin" size={20} />
-            </a>
-            <a
+            </LinkExternal>
+            <LinkExternal
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
               href="https://www.instagram.com/routeasy/"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="FaInstagram" size={20} />
-            </a>
-            <a
+            </LinkExternal>
+            <LinkExternal
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
               href="https://www.facebook.com/routeasy/"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="FaFacebookF" size={20} />
-            </a>
-            <a
+            </LinkExternal>
+            <LinkExternal
               className="h-14 w-14 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg bg-grayscale-600"
               href="https://www.youtube.com/c/CanalRoutEasy"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Icon name="FaYoutube" size={20} />
-            </a>
+            </LinkExternal>
           </div>
         </div>
       </div>
