@@ -13,7 +13,7 @@ export default function SobreNos() {
     <>
       <Banner />
       <History />
-      <div className="pb-20 lg:pb-8">
+      <div className="pb-20 lg:pb-8 mt-20 lg:mt-36">
         <CTA
           title="Você sabia?"
           description="A Routeasy sempre está em busca de novos talentos, confira nossas vagas agora mesmo ;)"
