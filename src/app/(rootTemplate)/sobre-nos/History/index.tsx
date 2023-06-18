@@ -102,7 +102,7 @@ export const History = () => {
                 title="2016"
                 text={
                   <Text className="text-grayscale-50 text-[15px] font-light">
-                    Durantesssss seu projeto de mestrado, nosso CEO, Caio Reina,
+                    Durante seu projeto de mestrado, nosso CEO, Caio Reina,
                     criou um algoritmo de roteirização capaz de superar
                     resultados de soluções já estabelecidas no mercado. Após
                     várioses em operações reais, o algoritmo foi integrado em

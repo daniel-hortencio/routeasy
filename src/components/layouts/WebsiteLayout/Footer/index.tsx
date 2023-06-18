@@ -29,8 +29,14 @@ export const Footer = () => {
       label: 'Route Academy',
       href: 'https://routeasy.com.br/content/routingacademy/'
     },
-    { label: 'Routeasy na mídia', href: '/' },
-    { label: 'Eventos', href: '/' }
+    {
+      label: 'Cases',
+      href: 'https://routeasy.com.br/content/cases/'
+    },
+    {
+      label: 'Materiais',
+      href: 'https://routeasy.com.br/content/materiais-gratuitos/'
+    }
   ]
 
   const links_legal = [
@@ -39,7 +45,7 @@ export const Footer = () => {
   ]
 
   const FooterLink = ({ href, label }) => {
-    const className = 'text-sm hover:text-primary-100 mt-6 block'
+    const className = 'text-sm hover:text-primary-100 mt-6 block font-light'
 
     return href.startsWith('http') ? (
       <LinkExternal href={href} className={className}>
@@ -56,21 +62,21 @@ export const Footer = () => {
     <Section className="pt-12 pb-8 border-t-2 border-primary-100">
       <div className="lg:grid grid-cols-5 mb-6 lg:mb-20 px-10">
         <div className="hidden lg:block">
-          <p>NAVEGAÇÃO</p>
+          <p>Navegação</p>
           {links_navegation.map((link, index) => (
             <FooterLink key={index} href={link.href} label={link.label} />
           ))}
         </div>
 
         <div className="hidden lg:block">
-          <p>SOLUÇÕES</p>
+          <p>Soluções</p>
           {links_solutions.map((link, index) => (
             <FooterLink key={index} href={link.href} label={link.label} />
           ))}
         </div>
 
         <div className="hidden lg:block">
-          <p>ROUTEASY</p>
+          <p>Conteúdo</p>
           {links_routeasy.map((link, index) => (
             <FooterLink key={index} href={link.href} label={link.label} />
           ))}
@@ -128,7 +134,7 @@ export const Footer = () => {
           <Title className="text-center text-base lg:text-left uppercase mb-1">
             Escreva-se em nossa newsletter
           </Title>
-          <Text className="text-center lg:text-left mb-5 lg:mb-0 text-sm text-grayscale-100">
+          <Text className="text-center lg:text-left mb-5 lg:mb-0 text-sm text-grayscale-100 font-light">
             Fique por dentro de tudo o que acontece com a Routeasy e com o
             mercado de logística.
           </Text>
@@ -145,7 +151,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <p className="text-center lg:text-left px-10 pt-7 text-sm text-grayscale-100 w-full h-full">
+      <p className="text-center lg:text-left px-10 pt-7 text-sm text-grayscale-100 w-full h-full font-light">
         ©2022 Todos os direitos reservados - RoutEasy
       </p>
     </Section>
