@@ -73,11 +73,13 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center lg:items-start">
-          <p className="mb-6">LINGUAGEM</p>
+          <div className="hidden">
+            <p className="mb-6">LINGUAGEM</p>
 
-          <button className="text-white bg-grayscale-600 rounded h-12 flex items-center px-2 justify-between w-full mb-6 max-w-[272px]">
-            Português
-          </button>
+            <button className="text-white bg-grayscale-600 rounded h-12 flex items-center px-2 justify-between w-full mb-6 max-w-[272px]">
+              Português
+            </button>
+          </div>
 
           <p className="mb-6">SOCIAL MEDIA</p>
 

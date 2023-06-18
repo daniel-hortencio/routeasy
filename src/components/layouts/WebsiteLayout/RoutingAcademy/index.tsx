@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Text } from 'components/elements/Texts'
 
 import { BannerOverlay } from '../BannerOverlay'
+import Link from 'next/link'
 
 export const RoutingAcademy = () => {
   return (
@@ -27,7 +28,12 @@ export const RoutingAcademy = () => {
               empresas!
             </Text>
             <div className="mx-auto mb-8">
-              <ButtonWhite href="/">Quero saber mais</ButtonWhite>
+              <Link
+                href="https://routeasy.com.br/content/routingacademy/"
+                target="_blank"
+              >
+                <ButtonWhite>Quero saber mais</ButtonWhite>
+              </Link>
             </div>
           </div>
         </div>

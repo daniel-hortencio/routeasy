@@ -14,9 +14,9 @@ export const Testimonials = () => {
       }
       subtitle={
         <Text className="text-grayscale-50 font-light text-[15px]">
-          Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-          assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis
-          voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.{' '}
+          Nosso maior objetivo é impactar de verdade a operação de nossos
+          clientes, diminuindo custos e otimizando processos. Veja o que nossos
+          clientes falam sobre a RoutEasy:
         </Text>
       }
     >

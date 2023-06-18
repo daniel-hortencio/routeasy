@@ -5,6 +5,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { ButtonSecondary } from 'components/elements/Button'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
+import Link from 'next/link'
 
 const CardBlog = ({ tag, title, author, date }) => {
   return (
@@ -128,7 +129,9 @@ export const Blog = () => {
       </div>
       <Section className="pt-16 pb-14 md:py-20 w-full">
         <div className="mx-auto sm:w-36">
-          <ButtonSecondary>Ir para o blog</ButtonSecondary>
+          <Link href="https://routeasy.com.br/content/" target="_blank">
+            <ButtonSecondary>Ir para o blog</ButtonSecondary>
+          </Link>
         </div>
       </Section>
     </div>
