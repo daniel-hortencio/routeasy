@@ -8,17 +8,16 @@ export const Footer = () => {
   const links_navegation = [
     { label: 'Início', href: '/' },
     { label: 'Soluções', href: 'solucoes' },
-    { label: 'Segmentos', href: '/' },
     { label: 'Sobre nós', href: 'sobre-nos' },
+    { label: 'Trabalhe conosco', href: 'trabalhe-conosco' },
     { label: 'Contato', href: 'contato' }
   ]
 
   const links_solutions = [
+    { label: 'Todas soluções', href: 'soluções' },
     { label: 'Roteirizador', href: 'roteirizacao' },
-    { label: 'Automação', href: '/' },
-    { label: 'Gestão de entregas', href: '/' },
-    { label: 'Aplicativo', href: '/' },
-    { label: 'Outros', href: '/' }
+    { label: "API's", href: 'api' },
+    { label: 'Onboarding', href: 'onboarding' }
   ]
 
   const links_routeasy = [
@@ -31,7 +30,6 @@ export const Footer = () => {
       href: 'https://routeasy.com.br/content/routingacademy/'
     },
     { label: 'Routeasy na mídia', href: '/' },
-    { label: 'Trabalhe conosco', href: 'trabalhe-conosco' },
     { label: 'Eventos', href: '/' }
   ]
 
