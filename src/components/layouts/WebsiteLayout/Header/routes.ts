@@ -18,7 +18,7 @@ const routes = (pathname: string) => [
     sub_items: [
       {
         label: 'Blog',
-        href: 'http://routeasy.com.br/content/'
+        href: 'https://routeasy.com.br/content/'
       },
       {
         label: 'RoutingAcademy',
