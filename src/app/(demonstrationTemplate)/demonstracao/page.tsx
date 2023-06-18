@@ -8,7 +8,7 @@ export default function DemonstrationPage() {
       <div className="lg:w-1/2">
         <div className="flex flex-col lg:h-screen justify-center lg:max-w-xl w-full lg:ml-auto px-5 pt-48 pb-12 lg:py-16 lg:pr-36 lg:pl-14">
           <Title className="text-center lg:text-left text-[40px] lg:text-[72px] mb-12 lg:mb-16">
-            A GENTE ESTÁ <TextHighlight> QUASE</TextHighlight> LÁ
+            ESTAMOS <TextHighlight> QUASE</TextHighlight> LÁ
           </Title>
           <div className="hidden lg:flex items-center justify-between mb-4">
             <Title className="text-lg">Você sabia?</Title>
@@ -21,9 +21,9 @@ export default function DemonstrationPage() {
               </button>
             </div>
           </div>
-          <Text className="hidden lg:block text-grayscale-50">
-            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-            assumenda voluptates qui beatae quis id Quis cupiditate.
+          <Text className="hidden lg:block text-grayscale-50 font-light">
+            99% de nossos clientes recomendam a RoutEasy para redução de custos
+            de operação.
           </Text>
         </div>
       </div>

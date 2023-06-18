@@ -92,9 +92,10 @@ export const FAQ = () => {
               Help center
             </h4>
             <Text className="text-grayscale-200 text-[15px] mb-4">
-              Nossa equipe está sempre pronta para ajudar! Navegue pelo help
-              center e confira todos os artigos de suporte, além das
-              atualizações mais recentes sobre a nossa plataforma.
+              Acesse o Help Center, um guia completo para solucionar dúvidas e
+              encontrar respostas rápidas sobre nossos produtos e serviços.
+              Navegue por diferentes categorias, utilize a barra de pesquisa ou
+              explore nossos artigos em destaque.
             </Text>
             <div className="lg:w-[176px] text-center">
               <ButtonPrimary href="/">Acessar Help Center</ButtonPrimary>

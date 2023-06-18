@@ -14,7 +14,7 @@ const MySwal = withReactContent(Swal)
 
 const CardArea = ({ icon, title, text, button, onClick }) => {
   return (
-    <div className="block rounded-2xl border border-grayscale-500 py-12 px-5 lg:px-20 md:p-8 m-auto text-center mb-8 md:mb-0">
+    <div className="block rounded-2xl border border-grayscale-500 py-12 px-5 lg:px-12 md:p-8 m-auto text-center mb-8 md:mb-0">
       {icon}
       <h1 className="uppercase text-xl font-semibold py-4">{title}</h1>
       <p className="text-grayscale-200 text-sm mb-6">{text}</p>
@@ -68,7 +68,7 @@ export const ContactArea = () => {
         </div>
       ),
       title: 'Comercial',
-      text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
+      text: 'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
       button: 'Mandar Mensagem',
       onClick: () =>
         getModal(
@@ -84,7 +84,7 @@ export const ContactArea = () => {
         </div>
       ),
       title: 'Parcerias',
-      text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
+      text: 'Receba informações diretamente da equipe de comunicação.',
       button: 'Mandar Mensagem',
       onClick: () =>
         getModal(
@@ -100,7 +100,7 @@ export const ContactArea = () => {
         </div>
       ),
       title: 'Suporte',
-      text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
+      text: 'Receba ajuda para solucionar de problemas e comunicar erros.',
       button: 'Mandar Mensagem',
       onClick: () =>
         getModal(
