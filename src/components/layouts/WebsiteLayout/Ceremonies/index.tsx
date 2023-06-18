@@ -27,7 +27,7 @@ export const Ceremonies = () => {
   }
 
   return (
-    <Section className="pb-28">
+    <Section className="pb-10 lg:pb-28">
       <div className="mb-12 text-center md:text-left md:ml-12 lg:ml-28 md:hidden">
         <Title className="text-[40px]/[52px]">Cerimônias</Title>
         <Text className="text-[13px]/[20px] text-grayscale-50">
