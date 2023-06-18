@@ -68,6 +68,7 @@ p {
 }
 
 .swal2-popup {
+  background: transparent !important;
   padding: 0 !important;
   border-radius: 1rem;
 }
