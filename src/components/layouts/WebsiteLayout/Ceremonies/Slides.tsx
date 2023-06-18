@@ -108,7 +108,7 @@ export const ceremoniesSlides = [
         </div>
 
         <div className={`grid grid-cols-2 gap-2 relative pb-8 md:pb-0`}>
-          <div className="relative py-[80%]">
+          <div className="relative py-[83%]">
             <Image
               fill
               src="/images/pictures/techday_5.png"
@@ -164,7 +164,7 @@ export const ceremoniesSlides = [
         </div>
 
         <div className={`grid grid-cols-2 gap-2 relative pb-8 md:pb-0`}>
-          <div className="relative py-[80%]">
+          <div className="relative py-[83%]">
             <Image
               fill
               src="/images/pictures/salesday_5.png"

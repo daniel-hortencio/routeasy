@@ -60,10 +60,9 @@ export const Culture = () => {
                 <h2 className="uppercase text-[26px]/[32px] font-semibold">
                   Adoramos <span className="text-primary-100">festinhas!</span>
                 </h2>
-                <p className="text-sm text-grayscale-50 mb-2">
-                  Sempre temos motivos para comemoração e aproveitamos cada
-                  momento como se fosse único.
-                </p>
+                <Text className="text-sm text-grayscale-50 mb-2 font-light">
+                  E temos muitos motivos para comemorar!
+                </Text>
               </div>
               <div className={`relative pt-[80%] flex-auto`}>
                 <Image

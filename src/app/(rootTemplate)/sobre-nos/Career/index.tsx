@@ -15,9 +15,9 @@ export const Career = () => {
         />
         <div className="relative py-12 px-12 h-full">
           <Title className="mb-4">Trabalhe conosco</Title>
-          <Text className="mb-12 max-w-xl">
-            Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-            assumenda voluptates qui beatae.
+          <Text className="mb-12 max-w-xl font-light">
+            Seja parte de uma equipe que valoriza cada sucesso e construa seu
+            futuro com a gente!
           </Text>
           <div className="w-40 text-sm m-auto">
             <ButtonSecondary href="/trabalhe-conosco">

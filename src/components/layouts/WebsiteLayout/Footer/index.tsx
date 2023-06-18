@@ -83,7 +83,7 @@ export const Footer = () => {
         </div>
 
         <div className="hidden lg:block">
-          <p>LEGAL</p>
+          <p>Legal</p>
           {links_legal.map((link, index) => (
             <FooterLink key={index} href={link.href} label={link.label} />
           ))}

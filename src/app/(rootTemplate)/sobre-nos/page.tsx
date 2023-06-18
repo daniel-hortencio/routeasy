@@ -23,8 +23,8 @@ export default function SobreNos() {
               vagas agora mesmo ;)
             </Text>
           }
-          href="/trabalhe-conosco"
-          buttonText="Veja nossas vagas disponíveis"
+          href="https://routeasy.gupy.io/"
+          buttonText="Conheça nossas vagas"
         />
       </div>
       <Statistics />

@@ -28,7 +28,8 @@ export const Events = () => {
         </div>
         <div className="relative z-10">
           <Text className="mb-12">
-            Conheça o maior evento de tecnologia logística do brasil.
+            Conheça o evento que reune as mentes mais brilhantes da logística no
+            Brasil.
           </Text>
           <div className="m-auto mt-12 mb-8">
             <ButtonWhite href="/">Quero saber mais</ButtonWhite>
