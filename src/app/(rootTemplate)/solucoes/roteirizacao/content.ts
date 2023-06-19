@@ -4,21 +4,21 @@ export const FeatureList: ITabHorizontalItemProps[] = [
   {
     title: 'Apólice de seguros',
     icon: '/images/icons/features-icon-01.svg',
-    text: 'O algoritmo de roteirização da RoutEasy tem a maior capacidade de processamento do mercado, o que significa roteirizar mais pontos em menos tempo. Otimize a utilização de recursos, minimize custos e maximize a eficiência da sua operação!'
+    text: 'Realize o cadastro de diferentes apólices de seguro, para garantir a vigência das regras e restrições, relacionadas a abrangência do seguro de sua operação.'
   },
   {
-    title: 'Entregas e coletas na mesma rota',
+    title: 'Consolidação de serviços',
     icon: '/images/icons/features-icon-02.svg',
-    text: 'Diminua custos e maximize a eficiência operacional consolidando entregas e coletas em uma única rota estrategicamente planejada. Aproveite ao máximo a capacidade de carga dos veículos enquanto evita a ociosidade.'
+    text: 'Com a consolidação de serviços é possível dar celeridade no processo de registros e finalização de mais de uma entrega e, ou coleta para um mesmo perfil de cliente. Geres diversos serviços com o mesmo perfil de cliente com apenas uma ação.'
   },
   {
-    title: 'Resequenciamento automático',
+    title: 'Alertas inteligentes',
     icon: '/images/icons/features-icon-03.svg',
-    text: 'Reduza o tempo gasto com edições manuais. Caso haja alterações na rota, nossa plataforma recalcula a ordem das paradas e atualiza, automaticamente, os ETAs dos clientes em rota.'
+    text: 'Crie alertas de rotas, serviços e operadores, para sinalizar a torre de controle ou seu cliente final sobre possíveis imprevistos.'
   },
   {
-    title: 'Configuração de restrições operacionais',
+    title: 'Comprovante de finalização (POD)',
     icon: '/images/icons/features-icon-04.svg',
-    text: 'Planeje rotas eficientes e que se adaptam às restrições da sua operação ou dos seus clientes. Nosso módulo de otimização considera restrições como janelas horárias, características dos veículos, distância máxima de viagem e preferências de sequenciamento.'
+    text: 'Com nosso Proof of delivery (POD) é possível configurar as informações necessárias para uma comprovação de entrega eletrônica respaldada em validade jurídica, utilizando recursos como comprovação do CPF, CNPJ, assinatura, foto e vídeo.'
   }
 ]
