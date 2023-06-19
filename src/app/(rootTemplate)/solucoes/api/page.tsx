@@ -86,7 +86,7 @@ export default function SolutionsApi() {
             title="Roteirizador"
             text="Esta modalidade é recomendada para operações dinâmicas, nas quais os pedidos são integrados em tempo real, e novas rotas podem surgir ao longo do dia, ou um conjunto de pedidos possa ser adicionado a uma rota já existente."
             link="#"
-            image="/images/pictures/mockup-notebook.png"
+            image="/images/pictures/desenvolva-voce-mesmo01.png"
           />
 
           <div className="h-[120px]"></div>
@@ -95,7 +95,7 @@ export default function SolutionsApi() {
             title="Matriz de distância"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             link="#"
-            image="/images/pictures/mockup-notebook.png"
+            image="/images/pictures/desenvolva-voce-mesmo02.png"
             side="right"
           />
         </div>

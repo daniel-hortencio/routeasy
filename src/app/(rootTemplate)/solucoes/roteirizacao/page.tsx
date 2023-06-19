@@ -1,6 +1,5 @@
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
 import { Integrating } from 'components/layouts/WebsiteLayout/Integrating'
-import { Differentials } from './Differentials'
 import { Comparison } from 'components/layouts/WebsiteLayout/Comparison'
 import { Maestro } from 'components/layouts/WebsiteLayout/Maestro'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
