@@ -14,7 +14,7 @@ export const Comparison = () => {
       }
       subtitle="Nosso algoritmo de roteirização é comprovadamente o mais rápido do mercado brasileiro. Faça planejamento de rotas sem precisar com velocidade quase instantânea."
     >
-      <div className="relative pt-0 md:pt-20 pb-16 md:pb-28 flex items-center justify-center">
+      <div className="relative flex items-center justify-center">
         <CardComparison label="Routeasy" seconds="30" isHighlight />
         <div className="mx-8">
           <Image

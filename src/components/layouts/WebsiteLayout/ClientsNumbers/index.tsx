@@ -97,7 +97,7 @@ export const ClientsNumbers = () => {
         </div>
       )}
 
-      <div className="w-full sm:w-[232px] mt-16 text-center mx-[auto]">
+      <div className="w-full sm:w-[232px] mt-16 mb-28 text-center mx-[auto]">
         <ButtonSecondary href="">Quero saber mais</ButtonSecondary>
       </div>
     </Section>

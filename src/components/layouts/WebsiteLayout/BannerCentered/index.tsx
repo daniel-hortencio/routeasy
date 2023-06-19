@@ -7,13 +7,15 @@ interface Props {
   description: string
   buttonText?: string | React.ReactNode
   buttonHref?: string
+  children?: React.ReactNode
 }
 
 export const BannerCentered = ({
   title,
   description,
   buttonText,
-  buttonHref = '/'
+  buttonHref = '/',
+  children
 }: Props) => {
   return (
     <Section className="flex">
@@ -28,6 +30,7 @@ export const BannerCentered = ({
               <ButtonPrimary href={buttonHref}>{buttonText}</ButtonPrimary>
             </div>
           )}
+          {children}
         </div>
       </div>
     </Section>
