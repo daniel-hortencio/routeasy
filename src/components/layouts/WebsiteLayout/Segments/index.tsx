@@ -57,28 +57,28 @@ const segmentsContent: ITabsProps = {
       key="Last mile B2C"
       title="Last Mile B2B"
       text="Planeje rotas mais inteligentes para aproveitar toda a capacidade da sua frota. Com nossas soluções, sua operação reduz prazos de entrega, evita falhas e elimina ineficiências para otimizar custos operacionais. Além disso, você tem visibilidade completa e em tempo real de todas as rotas em andamento, mantendo seus clientes informados a cada etapa do processo."
-      image="/images/pictures/B2C.svg"
+      image="/images/gifs/Gif002.gif"
       altImage="Last mile B2C"
     />,
     <ContentItem
       key="Last mile B2C"
       title="Same day delivery"
       text="Nossa tecnologia de orquestração automatiza 100% do fluxo operacional para viabilizar o same day e o same hour delivery. Por meio de regras e parametrizações pré definidas, o Maestro executa a roteirização e o despacho para os motoristas de forma totalmente automática, sem qualquer trabalho manual. É ideal operações complexas que envolvem diversos pontos de origem, clientes e parceiros de entrega."
-      image="/images/pictures/B2C.svg"
+      image="/images/gifs/Gif003.gif"
       altImage="Last mile B2C"
     />,
     <ContentItem
       key="Last mile B2C"
       title="First e Middle e Mile"
       text="Planeje rotas de entrega e coleta com máxima eficiência, considerando todas as restrições da operacionais de clientes/fornecedores. Conte com uma torre de controle inteligente, que garante visibilidade total da operação, além de relatórios completos com indicadores de desempenho relevantes, como taxas de sucesso na entrega/coleta, tempos de espera em cada parada e quantidade de ocorrências por rota."
-      image="/images/pictures/B2C.svg"
+      image="/images/gifs/Gif004.gif"
       altImage="Last mile B2C"
     />,
     <ContentItem
       key="Last mile B2C"
       title="PUDO"
       text="Otimize a capacidade da sua frota e tempo de entrega e coleta, utilizando únicas ou distintas ordens de serviço com a nossa solução de Pick-up and Drop-off. Nossa solução foi desenvolvida para as mais diversas estratégias de planejamento logístico"
-      image="/images/pictures/B2C.svg"
+      image="/images/gifs/Gif005.gif"
       altImage="Last mile B2C"
     />
   ]
