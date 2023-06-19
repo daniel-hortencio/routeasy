@@ -32,7 +32,9 @@ export const Events = () => {
             Brasil.
           </Text>
           <div className="m-auto mt-12 mb-8">
-            <ButtonWhite href="/">Quero saber mais</ButtonWhite>
+            <ButtonWhite href="https://lp.routeasy.com.br/logtrends-pos">
+              Quero saber mais
+            </ButtonWhite>
           </div>
         </div>
       </div>

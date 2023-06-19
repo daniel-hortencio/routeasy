@@ -312,30 +312,30 @@ export const Solutions = () => {
 
   const list_automation_cr = [
     {
-      title: 'Seleção de frota própria ou terceirizada',
+      title: 'Avaliações do serviço, produto e motorista',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/icon-report.svg',
-        alt: 'Seleção de frota própria ou terceirizada'
+        alt: 'Avaliações do serviço, produto e motorista'
       }
     },
     {
-      title: 'Despache automático ao motorista',
+      title: 'Dashbord de indicadores',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/icon-user.svg',
-        alt: 'Despache automático ao motorista'
+        alt: 'Dashbord de indicadores'
       }
     },
     {
-      title: 'Critérios de priorização do motorista',
+      title: 'Relatórios de registros e dados de execução da operação',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/icon-star.svg',
-        alt: 'Critérios de priorização do motorista'
+        alt: 'Relatórios de registros e dados de execução da operação'
       }
     }
   ]
@@ -366,6 +366,45 @@ export const Solutions = () => {
         height: 16,
         src: '/images/icons/icon-camera.svg',
         alt: 'Comprovação por foto, vídeo e assinatura'
+      }
+    },
+    {
+      title: 'Aceite da rota direto no app',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-route.svg',
+        alt: 'Aceite da rota direto no app'
+      }
+    }
+  ]
+
+  const list_app_cr = [
+    {
+      title: 'Avaliação do serviço, produto e motorista',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-chat.svg',
+        alt: 'Avaliação do serviço, produto e motorista'
+      }
+    },
+    {
+      title: 'Dashbord de indicadores',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-map.svg',
+        alt: 'Dashbord de indicadores'
+      }
+    },
+    {
+      title: 'Relatórios de registros e dados de execução da operação',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-camera.svg',
+        alt: 'Relatórios de registros e dados de execução da operação'
       }
     },
     {
@@ -411,30 +450,30 @@ export const Solutions = () => {
 
   const list_api_cr = [
     {
-      title: 'Roteirização programada automaticamente',
+      title: 'Avaliações, produto e motorista',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/home-solutions-route.svg',
-        alt: 'Roteirização programada automaticamente'
+        alt: 'Avaliações, produto e motorista'
       }
     },
     {
-      title: 'Seleção de frota própria ou terceirizada',
+      title: 'Dashbord de indicadores',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/icon-vehicle.png',
-        alt: 'Seleção de frota própria ou terceirizada'
+        alt: 'Dashbord de indicadores'
       }
     },
     {
-      title: 'Despacho automático para o motorista ideal',
+      title: 'Relatórios de registros e dados de execução da operação',
       icon: {
         width: 16,
         height: 16,
         src: '/images/icons/icon-user.svg',
-        alt: 'Despacho automático para o motorista ideal'
+        alt: 'Relatórios de registros e dados de execução da operação'
       }
     }
   ]
@@ -569,7 +608,7 @@ export const Solutions = () => {
                   )
               )}
 
-              {list_app_cl.map(
+              {list_app_cr.map(
                 (item, index) =>
                   tab === 3 && (
                     <CardRoute
@@ -674,7 +713,7 @@ export const Solutions = () => {
                 )
             )}
 
-            {list_app_cl.map(
+            {list_app_cr.map(
               (item, index) =>
                 tab === 3 && (
                   <CardRoute key={index} title={item.title} icon={item.icon} />
