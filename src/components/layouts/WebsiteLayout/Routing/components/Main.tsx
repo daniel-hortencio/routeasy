@@ -2,6 +2,7 @@ import { IRoutingContentProps } from '../types'
 import { ButtonPrimary } from 'components/elements/Button'
 import { TabsHorizontal } from '../../TabHorizontal'
 import Image from 'next/image'
+import { Text } from 'components/elements/Texts'
 
 export const RoutingMainContent = ({
   title,
@@ -17,7 +18,9 @@ export const RoutingMainContent = ({
           <h3 className="font-white text-2xl font-semibold uppercase mb-3.5">
             {title}
           </h3>
-          <p className="text-grayscale-50 text-sm mb-3.5">{text}</p>
+          <Text className="text-grayscale-50 text-[13px] font-light mb-3.5">
+            {text}
+          </Text>
 
           <div className="md:w-28">
             <ButtonPrimary href={link}>Saiba mais</ButtonPrimary>

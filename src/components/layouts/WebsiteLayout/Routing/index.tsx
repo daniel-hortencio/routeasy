@@ -63,7 +63,7 @@ export const Routing: React.FC = () => {
           </div>
         </div>
       </div>
-      <Section>
+      <Section className="mb-28">
         <div className="w-full mb-16 flex justify-between">
           {RoutingList.map((content, index) => (
             <div
