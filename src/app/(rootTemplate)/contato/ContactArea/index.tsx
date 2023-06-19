@@ -83,7 +83,7 @@ export const ContactArea = () => {
           <Icon color="white" name="FiUsers" size={24} />
         </div>
       ),
-      title: 'Parcerias',
+      title: 'Imprensa',
       text: 'Receba informações diretamente da equipe de comunicação.',
       button: 'Mandar Mensagem',
       onClick: () =>
