@@ -16,11 +16,11 @@ export default function SobreNos() {
       <History />
       <div className="pb-20 lg:pb-8 mt-20 lg:mt-36">
         <CTA
-          title="Você sabia?"
+          title="Quer trabalhar com a gente?"
           description={
             <Text className="text-grayscale-50 text-[15px] font-light">
-              A Routeasy sempre está em busca de novos talentos, confira nossas
-              vagas agora mesmo ;)
+              A Routeasy está em busca de novos talentos. Venha fazer parte do
+              time!
             </Text>
           }
           href="https://routeasy.gupy.io/"
