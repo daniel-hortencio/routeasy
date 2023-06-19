@@ -16,7 +16,7 @@ export const FacesOfRoutEasy = () => {
     },
     {
       src: '/images/pictures/employee-2.png',
-      name: 'Edson Catatau',
+      name: 'Edson Marques',
       position: 'Tech',
       description:
         'Consegui ver a empresa sair de 20 funcionários para 100. E tem sido uma jornada bacana fazer novas funcionalidades e vê-las sendo utilizadas pelos clientes. Além disso, meu time é incrível, tenho orgulho do que estamos construindo!'
@@ -75,7 +75,9 @@ export const FacesOfRoutEasy = () => {
         <div className="hidden lg:block relative lg:h-[370px]">
           <div className="py-14 absolute h-full top-0 ">
             <div className="pl-[300px] bg-grayscale-400 h-full flex flex-col justify-center pr-5">
-              <Text className="text-xl mb-2">{currentEmployeeSlider.name}</Text>
+              <Text className="text-xl mb-2 uppercase">
+                {currentEmployeeSlider.name}
+              </Text>
               <p className="mb-5 h-6 px-2  bg-primary-50 rounded w-min text-xs text-black font-bold flex items-center">
                 {currentEmployeeSlider.position}
               </p>
