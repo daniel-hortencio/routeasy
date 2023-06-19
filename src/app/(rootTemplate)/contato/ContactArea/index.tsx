@@ -64,7 +64,7 @@ export const ContactArea = () => {
     {
       icon: (
         <div className="flex items-center justify-center bg-bluescale-50 rounded-md w-12 h-12 m-auto">
-          <Icon color="white" name="" size={24} />
+          <Icon color="white" name="BiTrendingUp" size={24} />
         </div>
       ),
       title: 'Comercial',
