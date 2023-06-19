@@ -1,6 +1,6 @@
 import { IRoutingContentProps } from '../types'
 import { ButtonPrimary } from 'components/elements/Button'
-import { FeatureCardList } from './FeatureCards'
+import { TabsHorizontal } from '../../TabHorizontal'
 import Image from 'next/image'
 
 export const RoutingMainContent = ({
@@ -33,7 +33,9 @@ export const RoutingMainContent = ({
           />
         </div>
       </div>
-      <FeatureCardList featureContent={featureContent} />
+      <div className="lg:w-10/12 mx-auto">
+        <TabsHorizontal featureContent={featureContent} />
+      </div>
     </>
   )
 }

@@ -1,14 +1,16 @@
-import Image from 'next/image'
-import { IFeatureProps, IFeatureCardListProps } from '../types'
-import { Text, Title } from 'components/elements/Texts'
-import { useState } from 'react'
+'use client'
 
-export const FeatureCard = ({
+import { useState } from 'react'
+import Image from 'next/image'
+import { Text, Title } from 'components/elements/Texts'
+import { ITabsHorizontalProps, ITabHorizontalItemProps } from './types'
+
+export const TabItem = ({
   title,
   icon,
   isActive,
   onClick
-}: IFeatureProps) => {
+}: ITabHorizontalItemProps) => {
   return (
     <div
       onClick={onClick}
@@ -30,15 +32,15 @@ export const FeatureCard = ({
   )
 }
 
-export const FeatureCardList = ({ featureContent }: IFeatureCardListProps) => {
+export const TabsHorizontal = ({ featureContent }: ITabsHorizontalProps) => {
   const [featureActive, setFeatureActive] = useState(0)
 
   return (
     <div className="hidden md:block">
-      <div className="lg:w-10/12 mt-12 mb-24 lg:m-auto flex justify-between items-center">
+      <div className="lg:w-full mt-12 mb-24 lg:m-auto flex justify-between items-center">
         <div className="lg:w-5/12">
           {featureContent.map((feature, index) => (
-            <FeatureCard
+            <TabItem
               key={index}
               title={feature.title}
               icon={feature.icon}

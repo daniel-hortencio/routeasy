@@ -1,6 +1,7 @@
-import { IRoutingContentProps, IFeatureProps } from './types'
+import { ITabHorizontalItemProps } from './../TabHorizontal/types'
+import { IRoutingContentProps } from './types'
 
-export const FeatureList: IFeatureProps[] = [
+export const FeatureList: ITabHorizontalItemProps[] = [
   {
     title: 'Personalização de objetivos de otimização',
     icon: '/images/icons/features-icon-01.svg',
@@ -23,7 +24,7 @@ export const FeatureList: IFeatureProps[] = [
   }
 ]
 
-export const FeatureList_two: IFeatureProps[] = [
+export const FeatureList_two: ITabHorizontalItemProps[] = [
   {
     title: 'Chat direto com o motorista',
     icon: '/images/icons/icon-chat.svg',
@@ -46,7 +47,7 @@ export const FeatureList_two: IFeatureProps[] = [
   }
 ]
 
-export const FeatureList_three: IFeatureProps[] = [
+export const FeatureList_three: ITabHorizontalItemProps[] = [
   {
     title: 'Roteirização programada automaticamente ',
     icon: '/images/icons/icon-route.svg',
@@ -64,7 +65,7 @@ export const FeatureList_three: IFeatureProps[] = [
   }
 ]
 
-export const FeatureList_four: IFeatureProps[] = [
+export const FeatureList_four: ITabHorizontalItemProps[] = [
   {
     title: 'Chat direto com a operação',
     icon: '/images/icons/icon-chat.svg',
@@ -87,7 +88,7 @@ export const FeatureList_four: IFeatureProps[] = [
   }
 ]
 
-export const FeatureList_five: IFeatureProps[] = [
+export const FeatureList_five: ITabHorizontalItemProps[] = [
   {
     title: 'Personalização de objetivos de otimização',
     icon: '/images/icons/icon-route.svg',

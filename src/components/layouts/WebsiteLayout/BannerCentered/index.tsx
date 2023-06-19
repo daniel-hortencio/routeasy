@@ -5,7 +5,7 @@ import { Text } from 'components/elements/Texts'
 interface Props {
   title: JSX.Element
   description: string
-  buttonText?: string
+  buttonText?: string | React.ReactNode
   buttonHref?: string
 }
 
