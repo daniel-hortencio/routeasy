@@ -1,58 +1,22 @@
-class ApiFetch {
-  private async fetchMethod(
-    endpoint: string,
-    method: 'GET' | 'POST',
-    config?: RequestInit | undefined
-  ): Promise<any> {
-    return await fetch(endpoint, {
-      method,
-      ...config
-    })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error()
-        }
-        return res.json()
-      })
-      .then(({ data }) => data)
-      .catch(err => err)
-  }
+import axios from 'axios'
 
-  private get(endpoint, config?: RequestInit | undefined) {
-    return this.fetchMethod(endpoint, 'GET', config)
-  }
+export type IConversionIdentifier =
+  | 'lp-roteirizador-teste'
+  | 'site-routeasy'
+  | 'formulario-suporte-site-18-06-2023'
+  | 'formulario-imprensa-site-18-06-2023'
 
-  private post(endpoint, config?: RequestInit | undefined) {
-    return this.fetchMethod(endpoint, 'POST', config)
-  }
+export interface SendContactDTO {
+  name: string
+  personal_phone: string
+  email: string
+  company_name: string
+  cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: string
+}
 
-  async sendContactForm(dto: {
-    // client_tracking_id: string
-    conversion_url: string
-    conversion_domain: string
-    company_name: string
-    google_analytics_client_id: string
-    conversion_identifier: string
-    internal_source: string
-    privacy_data: {
-      // browser: string
-      consent: string
-      consent_privacy_policy: string
-    }
-    name: string
-    personal_phone: string
-    email: string
-    cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: string
-    // emP7yF13ld: string
-    // sh0uldN07ch4ng3: string
-    redirect_to: string
-  }) {
-    return this.post('https://gyruss.rdops.systems/v2/conversions', {
-      body: JSON.stringify(dto),
-      headers: {
-        authorization: 'PublicToken 8f24fb763a4fe60e5e110624116f9c5e',
-        authority: 'gyruss.rdops.systems'
-      }
-    })
-  }
+export const services = {
+  sendContact: (
+    data: SendContactDTO,
+    conversion_identifier: IConversionIdentifier
+  ) => axios.post('/api/send-contact', { ...data, conversion_identifier })
 }

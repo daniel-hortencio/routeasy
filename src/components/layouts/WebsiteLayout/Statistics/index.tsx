@@ -20,23 +20,47 @@ export const Statistics = () => {
         </Title>
       }
       className="mb-36"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px] font-light">
+          Nossos indicadores falam por si: nossa equipe está empenhada em
+          superar suas expectativas.
+        </Text>
+      }
     >
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0">
-        <Card title="40%" text="Redução de custos de transporte" />
+        <Card
+          title="40%"
+          text={
+            <Text className="text-grayscale-50 text-[15px] font-light">
+              Redução de custos de transporte
+            </Text>
+          }
+        />
         <Card
           title="+300"
-          text="Clientes novos"
+          text={
+            <Text className="text-grayscale-50 text-[15px] font-light">
+              Clientes novos
+            </Text>
+          }
           className="lg:border-l-[1px] border-grayscale-300 border-dashed"
         />
         <Card
           title="8M"
-          text="Serviços roteirizados por mês"
+          text={
+            <Text className="text-grayscale-50 text-[15px] font-light">
+              Serviços roteirizados por mês
+            </Text>
+          }
           className="lg:border-l-[1px] border-grayscale-300 border-dashed"
         />
         <Card
           title="60%"
-          text="Redução de atrasos e erros nas operações"
+          text={
+            <Text className="text-grayscale-50 text-[15px] font-light">
+              Redução de atrasos e erros nas operações
+            </Text>
+          }
           className="lg:border-l-[1px] border-grayscale-300 border-dashed"
         />
       </div>

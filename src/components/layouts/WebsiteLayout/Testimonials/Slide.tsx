@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { Skeleton } from 'components/elements/Skeleton'
 import { Text } from 'components/elements/Texts'
 import Image from 'next/image'
+import S from './styles.module.css'
 
 export const SlideTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -51,9 +52,11 @@ export const SlideTestimonials = () => {
         <p className="text-[13px] mb-8">{position}</p>
 
         <p className="text-sm h-44">
-          <span className="text-primary-100 text-3xl">”</span>
-          <Text className="text-[13px]/[22px] font-light">{testimonial}</Text>
-          <span className="text-primary-100 text-3xl">”</span>
+          <Text
+            className={`${S.RightQuote} ${S.LeftQuote} text-[13px]/[22px] font-light`}
+          >
+            {testimonial}
+          </Text>
         </p>
       </div>
     )

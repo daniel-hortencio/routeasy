@@ -379,6 +379,66 @@ export const Solutions = () => {
     }
   ]
 
+  const list_api_cl = [
+    {
+      title: 'Roteirização programada automaticamente',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-route.svg',
+        alt: 'Roteirização programada automaticamente'
+      }
+    },
+    {
+      title: 'Seleção de frota própria ou terceirizada',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-vehicle.png',
+        alt: 'Seleção de frota própria ou terceirizada'
+      }
+    },
+    {
+      title: 'Despacho automático para o motorista ideal',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-user.svg',
+        alt: 'Despacho automático para o motorista ideal'
+      }
+    }
+  ]
+
+  const list_api_cr = [
+    {
+      title: 'Roteirização programada automaticamente',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/home-solutions-route.svg',
+        alt: 'Roteirização programada automaticamente'
+      }
+    },
+    {
+      title: 'Seleção de frota própria ou terceirizada',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-vehicle.png',
+        alt: 'Seleção de frota própria ou terceirizada'
+      }
+    },
+    {
+      title: 'Despacho automático para o motorista ideal',
+      icon: {
+        width: 16,
+        height: 16,
+        src: '/images/icons/icon-user.svg',
+        alt: 'Despacho automático para o motorista ideal'
+      }
+    }
+  ]
+
   return (
     <>
       <Section
@@ -454,7 +514,7 @@ export const Solutions = () => {
                   )
               )}
 
-              {list_automation_cl.map(
+              {list_api_cl.map(
                 (item, index) =>
                   tab === 4 && (
                     <CardRoute
@@ -520,7 +580,7 @@ export const Solutions = () => {
                   )
               )}
 
-              {list_automation_cl.map(
+              {list_api_cr.map(
                 (item, index) =>
                   tab === 4 && (
                     <CardRoute
@@ -621,14 +681,14 @@ export const Solutions = () => {
                 )
             )}
 
-            {list_automation_cl.map(
+            {list_api_cl.map(
               (item, index) =>
                 tab === 4 && (
                   <CardRoute key={index} title={item.title} icon={item.icon} />
                 )
             )}
 
-            {list_automation_cr.map(
+            {list_api_cr.map(
               (item, index) =>
                 tab === 4 && (
                   <CardRoute key={index} title={item.title} icon={item.icon} />

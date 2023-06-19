@@ -13,11 +13,13 @@ import {
 } from 'components/elements/Inputs'
 import { Text, Title } from 'components/elements/Texts'
 import { yupValidator } from 'utils/yupValidator'
-import axios from 'axios'
 import Swal from 'sweetalert2'
 import { PulseLoader } from 'react-spinners'
+import { ContactFormSchemaValidation } from 'components/layouts/WebsiteLayout/ContactForm/ContactFormSchemaValidation'
+import { IConversionIdentifier, SendContactDTO, services } from 'services'
+import Icon from 'components/elements/Icon'
 
-const init_data = {
+const init_data: SendContactDTO = {
   name: '',
   personal_phone: '',
   email: '',
@@ -25,7 +27,19 @@ const init_data = {
   cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: ''
 }
 
-export const ContactForm = () => {
+interface Props {
+  title: string
+  description: string
+  conversion_identifier: IConversionIdentifier
+  onClose?: () => void
+}
+
+export const ContactForm = ({
+  title,
+  description,
+  conversion_identifier,
+  onClose
+}: Props) => {
   const [data, setData] = useState(init_data)
   const [errors, setErrors] = useState(init_data)
   const [isLoading, setIsLoading] = useState(false)
@@ -60,32 +74,16 @@ export const ContactForm = () => {
     e.preventDefault()
     setIsLoading(true)
 
-    const contactFormSchema = yup.object().shape({
-      name: yup.string().min(1, 'Obrigatório'),
-      email: yup
-        .string()
-        .required('Obrigatório')
-        .email('Insira um e-mail com formato válido'),
-      personal_phone: yup
-        .string()
-        .required('Obrigatório')
-        .min(15, 'Mínimo 9 dígitos'),
-      company_name: yup.string().required('Obrigatório'),
-      cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: yup
-        .string()
-        .required('Obrigatório')
-    })
-
     yupValidator({
-      schema: contactFormSchema,
+      schema: ContactFormSchemaValidation,
       data,
       setError: errors => {
         setIsLoading(false)
         handleSetError(errors)
       },
       onSuccess: async () => {
-        const response = await axios
-          .post('/api/hello', data)
+        const response = await services
+          .sendContact(data, conversion_identifier)
           .then(() => {
             setIsLoading(false)
             Toast.fire({
@@ -115,12 +113,21 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-grayscale-600 px-4 lg:px-20 pt-20 lg:py-16 pb-12 rounded-lg"
+      className="bg-grayscale-600 px-4 lg:px-16 pt-20 lg:py-16 pb-12 rounded-lg relative"
     >
-      <Title className="mb-4">Contato</Title>
-      <Text className="mb-10 text-grayscale-200">
-        Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-        assumenda voluptates qui beatae quis id Quis cupiditate.
+      {onClose && (
+        <button
+          onClick={onClose}
+          className="absolute top-10 right-10 transition-all text-white hover:text-primary"
+        >
+          <Icon name="MdOutlineClose" size={24} />
+        </button>
+      )}
+      <Title className="mb-4" style={{ textAlign: 'left' }}>
+        {title}
+      </Title>
+      <Text className="mb-10 text-grayscale-200" style={{ textAlign: 'left' }}>
+        {description}
       </Text>
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
         <InputGroup label="Nome" error={errors.name}>
@@ -137,11 +144,7 @@ export const ContactForm = () => {
             placeholder="(00) 00000-0000"
           />
         </InputGroup>
-        <InputGroup
-          label="Email"
-          error={errors.email}
-          className="sm:col-span-2 md:col-span-1"
-        >
+        <InputGroup label="Email" error={errors.email} className="col-span-2">
           <InputText
             value={data.email}
             onChange={(value: string) => handleChange('email', value)}

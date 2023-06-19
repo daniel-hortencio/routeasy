@@ -3,25 +3,25 @@ import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
-import { Title } from 'components/elements/Texts'
+import { TextHighlight, Title } from 'components/elements/Texts'
 
 export default function Contact() {
   return (
     <>
       <BannerCentered
         title={
-          <Title className="text-[35px] lg:text-[40px] pb-5">Contato</Title>
+          <Title className="text-[35px] lg:text-[40px] pb-5">
+            Quer <TextHighlight>falar </TextHighlight>com a gente?
+          </Title>
         }
-        description=" Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-        assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-        veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
-        quis."
+        description="É só escolher o setor abaixo e enviar sua mensagem!
+        Nossa equipe está pronta para te atender."
       />
       <ContactArea />
       <FAQ />
       <Section>
         <div className="px-0 md:px-12 mb-16 md:mb-40">
-          <ContactForm></ContactForm>
+          <ContactForm />
         </div>
       </Section>
     </>

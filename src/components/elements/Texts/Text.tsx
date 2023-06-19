@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import { Open_Sans } from '@next/font/google'
 
 const open_sans = Open_Sans({
@@ -11,10 +11,15 @@ const open_sans = Open_Sans({
 interface Props {
   children: ReactNode
   className?: string
+  style?: CSSProperties
 }
 
-export const Text = ({ children, className = '' }: Props) => {
+export const Text = ({ children, style, className = '' }: Props) => {
   const getClassName = () => `${open_sans.className} ${className}`
 
-  return <p className={getClassName()}>{children}</p>
+  return (
+    <p className={getClassName()} style={style}>
+      {children}
+    </p>
+  )
 }

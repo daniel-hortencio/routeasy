@@ -771,7 +771,7 @@ export const Banner = () => {
             Confira nossas oportunidades e faça parte dessa jornada de sucesso!
           </Text>
           <div className="lg:w-56">
-            <ButtonSecondary href="/demonstracao">
+            <ButtonSecondary href="https://routeasy.gupy.io/">
               Junte-se a nós
             </ButtonSecondary>
           </div>

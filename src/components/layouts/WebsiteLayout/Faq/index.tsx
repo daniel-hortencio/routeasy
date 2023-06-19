@@ -29,11 +29,16 @@ interface IFaqItemProps {
   answer: string
   isOpen: boolean
   onClick: () => void
+  isLast: boolean
 }
 
-const FaqItem = ({ title, answer, isOpen, onClick }: IFaqItemProps) => {
+const FaqItem = ({ title, answer, isOpen, onClick, isLast }: IFaqItemProps) => {
   return (
-    <div className="px-6 pb-6 mb-6 border-b border-grayscale-400">
+    <div
+      className={`px-6 pb-6  border-b border-grayscale-400 ${
+        isLast ? 'mb-0' : 'mb-6'
+      }`}
+    >
       <header onClick={onClick} className="cursor-pointer flex justify-between">
         <Text className="text-[15px] text-white">{title}</Text>
         <Image
@@ -87,9 +92,10 @@ export const FAQ = () => {
               Help center
             </h4>
             <Text className="text-grayscale-200 text-[15px] mb-4">
-              Nossa equipe está sempre pronta para ajudar! Navegue pelo help
-              center e confira todos os artigos de suporte, além das
-              atualizações mais recentes sobre a nossa plataforma.
+              Acesse o Help Center, um guia completo para solucionar dúvidas e
+              encontrar respostas rápidas sobre nossos produtos e serviços.
+              Navegue por diferentes categorias, utilize a barra de pesquisa ou
+              explore nossos artigos em destaque.
             </Text>
             <div className="lg:w-[176px] text-center">
               <ButtonPrimary href="/">Acessar Help Center</ButtonPrimary>
@@ -105,6 +111,7 @@ export const FAQ = () => {
                 answer={question.answer}
                 isOpen={questOpened === index}
                 onClick={() => handleQuestionClick(index)}
+                isLast={index === faqList.length - 1}
               />
             )
           })}

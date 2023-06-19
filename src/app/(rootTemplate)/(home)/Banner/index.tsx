@@ -51,7 +51,9 @@ export const Banner = () => {
             gestão de entregas e coletas.
           </Text>
           <div className="lg:w-56">
-            <ButtonPrimary href="/">Quero uma demonstração</ButtonPrimary>
+            <ButtonPrimary href="demonstracao">
+              Quero uma demonstração
+            </ButtonPrimary>
           </div>
         </div>
         <div className="hidden lg:block absolute w-[80%] -right-36 top-0 h-full">

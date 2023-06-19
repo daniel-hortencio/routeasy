@@ -127,8 +127,8 @@ export const InputGroup = ({
   className
 }: InputGroupProps) => (
   <div className={className}>
-    <div className="mb-1">
-      <label className="text-sm">{label}</label>
+    <div className="mb-1 flex flex-col items-start">
+      <label className="text-sm text-left mr-auto">{label}</label>
       {error && <span className="ml-1 text-sm text-yellow-500">{error}</span>}
     </div>
     {children}

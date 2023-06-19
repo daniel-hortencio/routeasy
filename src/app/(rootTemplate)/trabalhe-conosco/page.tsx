@@ -1,14 +1,16 @@
+'use client'
+
 import { Benefits } from '../../../components/layouts/WebsiteLayout/Benefits'
 import { CTA } from 'components/elements/CTA'
 import { Culture } from 'components/layouts/WebsiteLayout/Culture'
 import { Food } from '../../../components/layouts/WebsiteLayout/Food'
 import { Office } from '../../../components/layouts/WebsiteLayout/Office'
-import { PetDay } from '../../../components/layouts/WebsiteLayout/PetDay'
 import { Vacancies } from '../../../components/layouts/WebsiteLayout/Vacancies'
 import { Values } from './Values'
 import { Banner } from './Banner'
 import { FacesOfRoutEasy } from 'components/layouts/WebsiteLayout/FacesOfRoutEasy'
 import { Text } from 'components/elements/Texts'
+import { Ceremonies } from 'components/layouts/WebsiteLayout/Ceremonies'
 
 export default function TrabalheConosco() {
   return (
@@ -23,17 +25,16 @@ export default function TrabalheConosco() {
               vagas agora mesmo ;)
             </Text>
           }
-          href="/"
+          href="https://routeasy.gupy.io/"
           buttonText="Veja nossas vagas disponíveis"
         />
       </div>
       <Values />
       <FacesOfRoutEasy />
       <Culture />
-      <PetDay />
+      <Ceremonies />
       <Office />
       <Food />
-      <Benefits />
       <Vacancies />
     </>
   )
