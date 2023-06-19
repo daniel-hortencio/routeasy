@@ -8,6 +8,8 @@ interface IRequestBody extends SendContactDTO {
 export default async function handler(req, res) {
   const body = req.body as IRequestBody
 
+  console.log({ body })
+
   const dataReq = {
     conversion_url: 'http://localhost:3006/',
     conversion_domain: 'localhost:3002',

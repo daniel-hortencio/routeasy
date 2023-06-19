@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-export type IConversionIdentifier = 'lp-roteirizador-teste'
+export type IConversionIdentifier =
+  | 'lp-roteirizador-teste'
+  | 'site-routeasy'
+  | 'formulario-suporte-site-18-06-2023'
+  | 'formulario-imprensa-site-18-06-2023'
 
 export interface SendContactDTO {
   name: string

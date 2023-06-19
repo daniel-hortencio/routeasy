@@ -74,7 +74,7 @@ export const ContactArea = () => {
         getModal(
           'Comercial',
           'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
-          'lp-roteirizador-teste' // TODO colocar identificador do form
+          'site-routeasy' // TODO colocar identificador do form
         )
     },
     {
@@ -90,7 +90,7 @@ export const ContactArea = () => {
         getModal(
           'Parcerias',
           'Receba informações diretamente da equipe de comunicação.',
-          'lp-roteirizador-teste' // TODO colocar identificador do form
+          'formulario-imprensa-site-18-06-2023' // TODO colocar identificador do form
         )
     },
     {
@@ -106,7 +106,7 @@ export const ContactArea = () => {
         getModal(
           'Suporte',
           'Receba ajuda para solucionar de problemas e comunicar erros.',
-          'lp-roteirizador-teste' // TODO colocar identificador do form
+          'formulario-suporte-site-18-06-2023' // TODO colocar identificador do form
         )
     }
   ]
