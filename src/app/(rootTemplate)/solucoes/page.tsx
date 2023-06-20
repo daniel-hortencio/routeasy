@@ -69,7 +69,7 @@ export default function Solutions() {
           </Title>
         }
         text={
-          <Text className="text-grayscale-50 text-[15px] font-light">
+          <Text className="text-grayscale-50 text-[13px] font-light">
             Com a RoutEasy, você tem as soluções mais inovadoras a serviço da
             sua operação. Descubra como podemos te ajudar a superar os maiores
             desafios do mercado e alcançar resultados excepcionais.
@@ -83,7 +83,7 @@ export default function Solutions() {
         subtitle={
           <Text className="text-grayscale-50 text-[15px] font-light">
             Conte com a RoutEasy para desbloquear todo o potencial da sua
-            operação logística. Conheça os nossos diferenciais:"
+            operação logística. Conheça os nossos diferenciais:
           </Text>
         }
       />

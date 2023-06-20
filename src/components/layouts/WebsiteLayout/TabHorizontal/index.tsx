@@ -26,7 +26,7 @@ export const TabItem = ({
         <Image src={icon} width={13} height={13} alt={title} />
       </div>
       <div className="w-[84%] inline-block align-middle">
-        <Text className="text-sm font-normal">{title}</Text>
+        <Text className="text-sm font-light">{title}</Text>
       </div>
     </div>
   )
@@ -58,7 +58,7 @@ export const TabsHorizontal = ({ featureContent }: ITabsHorizontalProps) => {
               <Title className="text-[26px] font-bold uppercase mb-3.5">
                 {content.title}
               </Title>
-              <Text className="text-[13px]">{content.text}</Text>
+              <Text className="text-[13px] font-light">{content.text}</Text>
             </div>
           ))}
         </div>

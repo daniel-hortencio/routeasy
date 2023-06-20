@@ -2,6 +2,10 @@ import Image from 'next/image'
 
 import { Title, Text } from '../Texts'
 import { ButtonPrimary } from '../Button'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { IConversionIdentifier } from 'services'
 
 interface ICardKnowledgeProps {
   title: string
@@ -11,11 +15,32 @@ interface ICardKnowledgeProps {
   side?: 'left' | 'right'
 }
 
+const MySwal = withReactContent(Swal)
+
+function getModal(
+  title: string,
+  description: string,
+  conversion_identifier: IConversionIdentifier
+) {
+  MySwal.fire({
+    html: (
+      <>
+        <FormModal
+          title={title}
+          description={description}
+          conversion_identifier={conversion_identifier}
+          onClose={Swal.close}
+        />
+      </>
+    ),
+    showConfirmButton: false
+  })
+}
+
 export const CardKnowledge = ({
   title,
   text,
   image,
-  link,
   side = 'left'
 }: ICardKnowledgeProps) => {
   const setClassName = (side: 'left' | 'right') =>
@@ -49,10 +74,22 @@ export const CardKnowledge = ({
         </div>
       </div>
       <div className="w-full py-[70px]">
-        <Title className="text-2xl font-bold py-4">{title}</Title>
-        <Text className="text-grayscale-200 ">{text}</Text>
-        <div className="w-[100px] text-center mt-4 mx-auto md:mx-0">
-          <ButtonPrimary href={link}>Saiba mais</ButtonPrimary>
+        <Title className="text-[26px]/[32px] py-4">{title}</Title>
+        <Text className="text-grayscale-50 font-light text-sm/[24px]">
+          {text}
+        </Text>
+        <div className="lg:w-[100px] text-center mt-4">
+          <ButtonPrimary
+            onClick={() =>
+              getModal(
+                'Comercial',
+                'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
+                'site-routeasy' // Cheila
+              )
+            }
+          >
+            Saiba mais
+          </ButtonPrimary>
         </div>
       </div>
     </div>
