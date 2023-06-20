@@ -17,7 +17,9 @@ import { ButtonPrimary } from 'components/elements/Button'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { IConversionIdentifier } from 'services'
-import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal' // Cheila
+import { CardListColored } from 'components/layouts/WebsiteLayout/CardListColored'
+import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
 const MySwal = withReactContent(Swal)
 
@@ -41,6 +43,58 @@ function getModal(
   })
 }
 
+// Cheila
+const listDifferentials: IIconCardColoredProps[] = [
+  {
+    icon: 'AiOutlineFile',
+    title: 'Projetos',
+    text: 'Do início ao fim, estaremos ao seu lado garantindo uma transição tranquila para nossa plataforma. Com processos bem definidos e uma abordagem personalizada, nossa equipe se dedica a entender suas necessidades e impulsionar seus resultados.',
+    accentColor: 'bg-yellow-500'
+  },
+  {
+    icon: 'FiUsers',
+    title: 'Implantação',
+    text: 'Com vasta experiência em logística e implementação de novas tecnologias, nossa equipe é responsável por garantir que a integração de nossas soluções seja mais simples e eficiente na sua operação.',
+    accentColor: 'bg-bluescale-50'
+  },
+  {
+    icon: 'FiTarget',
+    title: 'Sucesso do cliente',
+    text: 'Estamos comprometidos em entender suas metas e desafios, fornecendo orientação especializada e estratégias sob medida. Sua satisfação é nossa prioridade número um da nossa equipe de customer success.',
+    accentColor: 'bg-green-400'
+  },
+  {
+    icon: 'IoMdHelp',
+    title: 'Suporte',
+    text: 'Nossa equipe de Suporte está dedicada a oferecer assistência e soluções rápidas para todas as suas necessidades. Com um time altamente qualificado e comprometido, estamos prontos para ajudar em escala 6x1, X horas por dia. ',
+    accentColor: 'bg-red-500'
+  },
+  {
+    icon: 'GoLightBulb',
+    title: 'Design de soluções',
+    text: 'Criamos e desenvolvemos soluções eficazes para atender às necessidades e desafios específicos de cada cliente. Esse processo envolve identificar problemas, analisar as necessidades dos usuários e propor soluções inovadoras.',
+    accentColor: 'bg-primary-100'
+  },
+  {
+    icon: 'TfiMoney',
+    title: 'Auditoria técnica',
+    text: 'Nossos especialistas realizam uma análise minuciosa da operação, avaliando e identificando áreas de melhoria. Com uma abordagem detalhada e focada em resultados, a auditoria técnica tem o objetivo de desbloquear todo o potencial do seu negócio.',
+    accentColor: 'bg-green-400'
+  },
+  {
+    icon: 'BiChevronsUp',
+    title: 'Melhoria contínua',
+    text: 'Investimos no desenvolvimento da nossa equipe e acompanhamos as tendências mais recentes do setor. Nosso compromisso é oferecer soluções sempre inovadoras, com recursos e funcionalidades que superam as demandas de um mercado em constante mudança.',
+    accentColor: 'bg-bluescale-200'
+  },
+  {
+    icon: 'BiChevronsUp',
+    title: 'Integração',
+    text: 'A garantia de uma integração tranquila e produtiva é um dos nossos principais diferenciais. Oferecemos treinamentos detalhados e suporte técnico para garantir que sua equipe esteja plenamente preparada para utilizar nossas soluções.',
+    accentColor: 'bg-purplescale-50'
+  }
+]
+
 export default function SolutionsApi() {
   return (
     <>
@@ -49,6 +103,7 @@ export default function SolutionsApi() {
           <Title className="text-[35px] lg:text-[40px] pb-5">Onboarding</Title>
         }
         description={
+          // Cheila
           <Text className="text-grayscale-50 text-[15px] font-light">
             Somos especialistas em garantir o sucesso dos nossos clientes Desde
             a implantação até a rotina diária, estamos ao seu lado para alcançar
@@ -62,7 +117,7 @@ export default function SolutionsApi() {
               getModal(
                 'Comercial',
                 'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
-                'site-routeasy'
+                'site-routeasy' // Cheila
               )
             }
           >
@@ -71,15 +126,16 @@ export default function SolutionsApi() {
         </div>
       </BannerCentered>
       <ListFeatures listFeatures={listFeaturesCard} />
-
       <Section
         title={
+          // Cheila
           <Title>
             Nossas equipes de <TextHighlight>especialistas </TextHighlight>vão
             até você
           </Title>
         }
         subtitle={
+          // Cheila
           <Text className="text-grayscale-50 text-[15px] font-light">
             Nossas equipes viajam por todo o Brasil para conhecer os detalhes de
             cada operação logística. Tudo isso nos permite oferecer soluções
@@ -106,9 +162,9 @@ export default function SolutionsApi() {
           />
         </div>
       </Section>
-
       <Section>
-        <div className="px-0 md:px-12 mt-20 mb-16 md:mb-40">
+        {/* Cheila */}
+        <div className="px-0 md:px-12 mt-20 mb-16 md:mb-44">
           <div className="relative mx-auto bg-grayscale-500 rounded-lg p-8 mb-12 md:mb-24 shadow-3xl">
             <div className="md:pr-60 text-left mb-4 md:mb-0">
               <Title className="text-[26px]/[32px] mb-2">
@@ -132,7 +188,22 @@ export default function SolutionsApi() {
       </Section>
       <Statistics />
       <Testimonials />
-      <RoutingAcademy />
+      <CardListColored // Cheila
+        cards={listDifferentials}
+        title={
+          <Title>
+            O MÉTODO ROUTEASY DE FAZER A{' '}
+            <TextHighlight>diferença</TextHighlight>
+          </Title>
+        }
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Conte com a RoutEasy para desbloquear todo o potencial da sua
+            operação logística. Conheça nossos pilares de atuação:
+          </Text>
+        }
+      />
+      <RoutingAcademy /> {/* Cheila */}
       <Segments />
       <FAQ />
       <Section>

@@ -29,6 +29,7 @@ module.exports = {
         bluescale: {
           50: '#3BB5EF',
           100: '#424678',
+          200: '#5CC1F2',
         },
         redscale: {
           50: '#FF4E32',

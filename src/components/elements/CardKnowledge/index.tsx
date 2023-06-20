@@ -2,6 +2,10 @@ import Image from 'next/image'
 
 import { Title, Text } from '../Texts'
 import { ButtonPrimary } from '../Button'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { IConversionIdentifier } from 'services'
 
 interface ICardKnowledgeProps {
   title: string
@@ -9,6 +13,28 @@ interface ICardKnowledgeProps {
   image: string
   link: string
   side?: 'left' | 'right'
+}
+
+const MySwal = withReactContent(Swal)
+
+function getModal(
+  title: string,
+  description: string,
+  conversion_identifier: IConversionIdentifier
+) {
+  MySwal.fire({
+    html: (
+      <>
+        <FormModal
+          title={title}
+          description={description}
+          conversion_identifier={conversion_identifier}
+          onClose={Swal.close}
+        />
+      </>
+    ),
+    showConfirmButton: false
+  })
 }
 
 export const CardKnowledge = ({
@@ -48,7 +74,17 @@ export const CardKnowledge = ({
           {text}
         </Text>
         <div className="lg:w-[100px] text-center mt-4">
-          <ButtonPrimary href={link}>Saiba mais</ButtonPrimary>
+          <ButtonPrimary
+            onClick={() =>
+              getModal(
+                'Comercial',
+                'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
+                'site-routeasy' // Cheila
+              )
+            }
+          >
+            Saiba mais
+          </ButtonPrimary>
         </div>
       </div>
     </div>
