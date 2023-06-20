@@ -1,4 +1,5 @@
 import { ITabHorizontalItemProps } from 'components/layouts/WebsiteLayout/TabHorizontal/types'
+import { ICardFeatureProps } from 'components/elements/CardFeature/types'
 
 export const FeatureList: ITabHorizontalItemProps[] = [
   {
@@ -20,5 +21,23 @@ export const FeatureList: ITabHorizontalItemProps[] = [
     title: 'Configuração de restrições operacionais',
     icon: '/images/icons/features-icon-04.svg',
     text: 'Planeje rotas eficientes e que se adaptam às restrições da sua operação ou dos seus clientes. Nosso módulo de otimização considera restrições como janelas horárias, características dos veículos, distância máxima de viagem e preferências de sequenciamento.'
+  }
+]
+
+export const listFeaturesCard: ICardFeatureProps[] = [
+  {
+    title: 'Velocidade',
+    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
+    icon: 'BiSolidZap'
+  },
+  {
+    title: 'Segurança',
+    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
+    icon: 'BiSolidShield'
+  },
+  {
+    title: 'Eficiência',
+    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
+    icon: 'BiAbacus'
   }
 ]

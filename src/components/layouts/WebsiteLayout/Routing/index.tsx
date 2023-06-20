@@ -8,7 +8,7 @@ import { RoutingMainContent } from './components/Main'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
-export const Routing: React.FC = () => {
+export const Routing = () => {
   const [cardActive, setCardActive] = useState<number>(0)
 
   const [sliderRef] = useKeenSlider({

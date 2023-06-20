@@ -15,7 +15,7 @@ import { ListFeatures } from 'components/layouts/WebsiteLayout/ListFeatures'
 
 import { BsFillPlayFill } from 'react-icons/bs'
 import { TabsHorizontal } from 'components/layouts/WebsiteLayout/TabHorizontal'
-import { FeatureList } from './content'
+import { FeatureList, listFeaturesCard } from './content'
 import { ClientsNumbers } from 'components/layouts/WebsiteLayout/ClientsNumbers'
 import { ButtonPrimary } from 'components/elements/Button'
 
@@ -40,7 +40,7 @@ export default function SolutionsRoteirizacao() {
           </ButtonPrimary>
         </div>
       </BannerCentered>
-      <ListFeatures />
+      <ListFeatures listFeatures={listFeaturesCard} />
       <Section>
         <div className="w-full lg:w-[962px] mx-auto my-[72px]">
           <TabsHorizontal featureContent={FeatureList} />
