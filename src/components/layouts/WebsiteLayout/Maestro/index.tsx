@@ -19,7 +19,7 @@ export const Maestro = () => {
 
   return (
     <Section
-      className="pb-4"
+      className="pb-32"
       title={
         <Title className="font-medium">
           Conheça O <TextHighlight>Maestro</TextHighlight>
@@ -60,7 +60,7 @@ export const Maestro = () => {
           />
         )}
       </div>
-      <div className="md:w-40 text-sm m-auto my-12 mb-20">
+      <div className="md:w-40 text-sm m-auto mt-12">
         <ButtonSecondary>Quero saber mais</ButtonSecondary>
       </div>
     </Section>
