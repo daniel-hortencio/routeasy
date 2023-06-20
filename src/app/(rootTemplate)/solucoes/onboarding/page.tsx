@@ -1,4 +1,6 @@
-import { Title, TextHighlight } from 'components/elements/Texts'
+'use client'
+
+import { Title, TextHighlight, Text } from 'components/elements/Texts'
 import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
@@ -11,6 +13,33 @@ import Image from 'next/image'
 import { listFeaturesCard } from './content'
 import { ListFeatures } from 'components/layouts/WebsiteLayout/ListFeatures'
 import { CardKnowledge } from 'components/elements/CardKnowledge'
+import { ButtonPrimary } from 'components/elements/Button'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { IConversionIdentifier } from 'services'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
+
+const MySwal = withReactContent(Swal)
+
+function getModal(
+  title: string,
+  description: string,
+  conversion_identifier: IConversionIdentifier
+) {
+  MySwal.fire({
+    html: (
+      <>
+        <FormModal
+          title={title}
+          description={description}
+          conversion_identifier={conversion_identifier}
+          onClose={Swal.close}
+        />
+      </>
+    ),
+    showConfirmButton: false
+  })
+}
 
 export default function SolutionsApi() {
   return (
@@ -19,13 +48,45 @@ export default function SolutionsApi() {
         title={
           <Title className="text-[35px] lg:text-[40px] pb-5">Onboarding</Title>
         }
-        description="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. "
-        buttonText="Quero saber mais"
-        buttonHref="/"
-      />
+        description={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Somos especialistas em garantir o sucesso dos nossos clientes Desde
+            a implantação até a rotina diária, estamos ao seu lado para alcançar
+            resultados incríveis.{' '}
+          </Text>
+        }
+      >
+        <div className="lg:w-[168px] text-center mx-[auto]">
+          <ButtonPrimary
+            onClick={() =>
+              getModal(
+                'Comercial',
+                'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
+                'site-routeasy'
+              )
+            }
+          >
+            Quero saber mais
+          </ButtonPrimary>
+        </div>
+      </BannerCentered>
       <ListFeatures listFeatures={listFeaturesCard} />
 
-      <Section>
+      <Section
+        title={
+          <Title>
+            Nossas equipes de <TextHighlight>especialistas </TextHighlight>vão
+            até você
+          </Title>
+        }
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Nossas equipes viajam por todo o Brasil para conhecer os detalhes de
+            cada operação logística. Tudo isso nos permite oferecer soluções
+            personalizadas e que se encaixam perfeitamente no seu negócio.{' '}
+          </Text>
+        }
+      >
         <div className="w-full mx-auto mb-52">
           <CardKnowledge
             title="Especialista em operações logísticas "
@@ -50,14 +111,14 @@ export default function SolutionsApi() {
         <div className="px-0 md:px-12 mt-20 mb-16 md:mb-40">
           <div className="relative mx-auto bg-grayscale-500 rounded-lg p-8 mb-12 md:mb-24 shadow-3xl">
             <div className="md:pr-60 text-left mb-4 md:mb-0">
-              <h2 className="text-xl/8 font-bold sm uppercase mb-4 md:mb-2">
+              <Title className="text-[26px]/[32px] mb-2">
                 Certificação rout<TextHighlight>easy</TextHighlight>
-              </h2>
-              <p className="text-base font-normal text-grayscale-50">
+              </Title>
+              <Text className="text-grayscale-50 text-sm/[24px] font-light">
                 Após o treinamento sobre a plataforma, todo participante que
                 atingir, pelo menos, 70% de aproveitamento recebe um certificado
                 que garante a aptidão para utilizar as nossas soluções.
-              </p>
+              </Text>
             </div>
             <div className="hidden absolute md:block w-[266px] h-[266px] top-[50%] right-0 -translate-y-2/4">
               <Image

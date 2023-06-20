@@ -43,8 +43,10 @@ export const CardKnowledge = ({
         </div>
       </div>
       <div className="w-full py-[70px]">
-        <Title className="text-xl font-normal py-4">{title}</Title>
-        <Text className="text-grayscale-200">{text}</Text>
+        <Title className="text-[26px]/[32px] py-4">{title}</Title>
+        <Text className="text-grayscale-50 font-light text-sm/[24px]">
+          {text}
+        </Text>
         <div className="lg:w-[100px] text-center mt-4">
           <ButtonPrimary href={link}>Saiba mais</ButtonPrimary>
         </div>
