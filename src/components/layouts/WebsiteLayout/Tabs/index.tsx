@@ -14,7 +14,7 @@ import 'keen-slider/keen-slider.min.css'
 const TabItem = ({ label, onClick, isActive }: ITabItemProps) => {
   return (
     <button
-      className={`w-full text-white lg:w-[170px] h-12 whitespace-nowrap rounded-full ${
+      className={`w-full px-2 text-white text-small lg:w-[170px] h-12 whitespace-nowrap rounded-full ${
         isActive && 'bg-primary-100'
       }`}
       onClick={onClick}
@@ -29,8 +29,9 @@ export const Tabs = ({ tabsLabels, tabsContent }: ITabsProps) => {
 
   const [sliderRef] = useKeenSlider({
     initial: 0,
+    mode: 'free',
     slides: {
-      perView: 2.3
+      perView: 'auto'
     },
     breakpoints: {
       '(min-width: 640)': {

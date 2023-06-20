@@ -39,7 +39,7 @@ export default function SolutionsRoteirizacao() {
         }
       >
         <div className="w-[64px] text-center mx-[auto]">
-          <ButtonPrimary onClick={() => console.log('TEAD')}>
+          <ButtonPrimary onClick={() => alert('TEAD')}>
             <BsFillPlayFill color="#FFFFFF" size={20} />
           </ButtonPrimary>
         </div>

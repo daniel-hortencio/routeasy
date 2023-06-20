@@ -5,8 +5,8 @@ export const Statistics = () => {
   const Card = ({ title, text, className = '' }) => {
     return (
       <div className={`text-center lg:px-8 ${className}`}>
-        <div className="h-[200px] rounded-lg px-[18px] pt-8 pb-8 border-[1px] border-grayscale-300">
-          <Title className="text-[56px]">{title}</Title>
+        <div className="h-[200px] rounded-lg px-[18px] pt-8 pb-8 border-[1px] border-grayscale-300 flex flex-col items-center justify-center">
+          <Title className="text-[40px]  md:text-[56px]">{title}</Title>
           <Text>{text}</Text>
         </div>
       </div>
@@ -27,7 +27,7 @@ export const Statistics = () => {
         </Text>
       }
     >
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5 lg:gap-0">
         <Card
           title="40%"
           text={

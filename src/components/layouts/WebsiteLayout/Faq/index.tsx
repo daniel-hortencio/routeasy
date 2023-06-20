@@ -77,7 +77,7 @@ export const FAQ = () => {
         </Text>
       }
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between px-12 pb-24 lg:pb-0">
+      <div className="flex flex-col-reverse md:flex-row justify-between px-0 md:px-12 pb-24 lg:pb-0">
         <div className="md:w-5/12 ">
           <div className="rounded-lg p-6 border border-grayscale-500">
             <div className="bg-grayscale-500 rounded-md p-3 w-12 h-12 mb-4">

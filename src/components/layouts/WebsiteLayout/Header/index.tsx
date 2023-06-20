@@ -34,12 +34,12 @@ export const Header = () => {
   return (
     <Section
       asTag="header"
-      className={`fixed w-full h-[124px] lg:h-[88px] flex items-center z-50 transition-all ${
+      className={`fixed w-full h-[96px] lg:h-[88px] flex items-center z-50 transition-all ${
         (scrollTopDistance > 150 || isOpenMobileMenu) &&
         'bg-grayscale-700 backdrop-blur-lg bg-opacity-60'
       }`}
     >
-      <div className="pt-4 lg:pt-0 flex items-end lg:items-center justify-between">
+      <div className="md:pt-4 lg:pt-0 flex items-end lg:items-center justify-between">
         <Link href="./" className="relative w-36 h-12">
           <Image
             fill
