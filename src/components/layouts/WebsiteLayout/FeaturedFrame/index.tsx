@@ -3,7 +3,7 @@ import { Section } from 'components/elements/Section'
 
 interface ITextBoxProps {
   title: string | JSX.Element
-  text?: string
+  text?: string | React.ReactNode
   image?: string
 }
 

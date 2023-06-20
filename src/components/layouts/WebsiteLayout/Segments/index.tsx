@@ -69,7 +69,7 @@ const segmentsContent: ITabsProps = {
     />,
     <ContentItem
       key="Last mile B2C"
-      title="First e Middle e Mile"
+      title="First e Middle Mile"
       text="Planeje rotas de entrega e coleta com máxima eficiência, considerando todas as restrições da operacionais de clientes/fornecedores. Conte com uma torre de controle inteligente, que garante visibilidade total da operação, além de relatórios completos com indicadores de desempenho relevantes, como taxas de sucesso na entrega/coleta, tempos de espera em cada parada e quantidade de ocorrências por rota."
       image="/images/gifs/Gif004.gif"
       altImage="Last mile B2C"
@@ -77,7 +77,7 @@ const segmentsContent: ITabsProps = {
     <ContentItem
       key="Last mile B2C"
       title="PUDO"
-      text="Otimize a capacidade da sua frota e tempo de entrega e coleta, utilizando únicas ou distintas ordens de serviço com a nossa solução de Pick-up and Drop-off. Nossa solução foi desenvolvida para as mais diversas estratégias de planejamento logístico"
+      text="Otimize a capacidade de sua frota e tempo de execução com a nossa solução de Pick-Up and Drop-off, alocando entregas e coletas em rotas ativas. Nossa solução foi desenvolvida para as mais diversas estratégias de planejamento logístico."
       image="/images/gifs/Gif005.gif"
       altImage="Last mile B2C"
     />

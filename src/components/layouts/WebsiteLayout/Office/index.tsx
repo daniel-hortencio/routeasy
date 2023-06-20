@@ -28,7 +28,7 @@ export const Office = () => {
           style={{ objectFit: 'cover', opacity: 0.3 }}
         />
         <div className="relative">
-          <Title>O escritório</Title>
+          <Title>A nossa casa</Title>
           <Text className="text-grayscale-50 mb-12 text-sm font-light">
             Nosso escritório é projetado para minimizar o nosso impacto
             ambiental. Com uma arquitetura que privilegia a iluminação natural,

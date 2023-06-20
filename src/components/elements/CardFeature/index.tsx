@@ -12,7 +12,7 @@ export const CardFeature = ({ icon, title, text }: ICardFeatureProps) => {
         <Icon color="white" name={icon} size={24} />
       </div>
       <Title className="text-xl font-normal py-4">{title}</Title>
-      <Text className="text-grayscale-200">{text}</Text>
+      <Text className="text-grayscale-200 font-light">{text}</Text>
     </div>
   )
 }

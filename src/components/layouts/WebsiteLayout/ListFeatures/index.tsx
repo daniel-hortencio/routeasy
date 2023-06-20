@@ -1,7 +1,6 @@
 import { Section } from 'components/elements/Section'
 import { CardFeature } from 'components/elements/CardFeature'
 import { ICardFeatureProps } from 'components/elements/CardFeature/types'
-
 interface IListFeaturesProps {
   listFeatures: ICardFeatureProps[]
 }

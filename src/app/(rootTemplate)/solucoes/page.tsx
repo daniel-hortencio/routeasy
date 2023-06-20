@@ -8,13 +8,13 @@ import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
 import { Routing } from 'components/layouts/WebsiteLayout/Routing'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
 const listDifferentials: IIconCardColoredProps[] = [
   {
-    icon: 'BsShield',
-    title: 'Apólice de seguro',
+    icon: 'FiCode',
+    title: 'Algoritmo Avançado',
     text: 'Inteligência artificial avançada para a sua operação logística. Alcance níveis superiores de produtividade e desempenho, graças ao poder do nosso algoritmo inteligente.',
     accentColor: 'bg-bluescale-50'
   },
@@ -25,14 +25,14 @@ const listDifferentials: IIconCardColoredProps[] = [
     accentColor: 'bg-primary-100'
   },
   {
-    icon: 'AiOutlineFile',
-    title: 'Relatórios',
+    icon: 'FiUsers',
+    title: 'Equipe consultiva',
     text: 'Soluções sob medida, criadas e implantadas por especialistas. Combinamos conhecimento técnico e uma abordagem consultiva para atender as necessidades do seu negócio e colocar seu sucesso em primeiro lugar.',
     accentColor: 'bg-yellowscale-50'
   },
   {
-    icon: 'AiOutlineFileAdd',
-    title: 'POD + OCR',
+    icon: 'FiPackage',
+    title: 'Orquestração',
     text: 'Primeira tecnologia 100% brasileira para viabilizar o same day delivery e as coletas dinâmicas. Graças às regras e parametrizações para identificar os melhores cenários de rota, o Maestro automatiza 100% dos processos manuais no last mile.',
     accentColor: 'bg-redscale-50'
   }
@@ -48,7 +48,14 @@ export default function Solutions() {
             <TextHighlight>operação</TextHighlight>
           </Title>
         }
-        description="Combine módulos e funcionalidades de acordo com os seus objetivos de negócio. Com a RoutEsy, você tem soluções sob medida para otimizar rotas, automatizar processos e ter uma gestão completa da sua operação."
+        description={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Combine módulos e funcionalidades de acordo com os seus objetivos de
+            negócio. Com a RoutEsy, você tem soluções sob medida para otimizar
+            rotas, automatizar processos e ter uma gestão completa da sua
+            operação.
+          </Text>
+        }
         buttonText="Quero saber mais"
         buttonHref="/"
       />
@@ -61,13 +68,24 @@ export default function Solutions() {
             <TextHighlight> futuro </TextHighlight>da logística
           </Title>
         }
-        text="Com a RoutEasy, você tem as soluções mais inovadoras a serviço da sua operação. Descubra como podemos te ajudar a superar os maiores desafios do mercado e alcançar resultados excepcionais."
+        text={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Com a RoutEasy, você tem as soluções mais inovadoras a serviço da
+            sua operação. Descubra como podemos te ajudar a superar os maiores
+            desafios do mercado e alcançar resultados excepcionais.
+          </Text>
+        }
         image="/images/pictures/max-mid.png"
       />
       <CardListColored
         cards={listDifferentials}
         title="Diferenciais"
-        subtitle="Conte com a RoutEasy para desbloquear todo o potencial da sua operação logística. Conheça os nossos diferenciais:"
+        subtitle={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Conte com a RoutEasy para desbloquear todo o potencial da sua
+            operação logística. Conheça os nossos diferenciais:"
+          </Text>
+        }
       />
       <Maestro />
       <Integrating />

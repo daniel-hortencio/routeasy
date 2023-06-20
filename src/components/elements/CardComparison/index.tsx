@@ -17,8 +17,9 @@ export const CardComparison = ({
   return (
     <div className="w-[200px] text-center">
       <div className={`rounded-t-lg border py-14 ${getBorderColor()}`}>
+        <p className="text-base font-normal text-white"> 500 pontos </p>
         <p className="text-5xl font-semibold text-white"> {seconds} </p>
-        <p className="text-base font-normal text-white"> segundos </p>
+        <p className="text-base font-normal text-white"> Segundos </p>
       </div>
 
       <div className={`rounded-b-lg p-3 ${getBgColor()}`}>

@@ -10,7 +10,9 @@ export const CardListColored = ({ cards, title, subtitle }: ICardListProps) => {
       className="my-20 md:my-32 "
       title={<Title>{title}</Title>}
       subtitle={
-        <Text className="text-grayscale-50 text-[15px]">{subtitle}</Text>
+        <Text className="text-grayscale-50 text-[15px] font-light">
+          {subtitle}
+        </Text>
       }
     >
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
