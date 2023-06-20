@@ -103,7 +103,6 @@ export default function SolutionsApi() {
           <Title className="text-[35px] lg:text-[40px] pb-5">Onboarding</Title>
         }
         description={
-          // Cheila
           <Text className="text-grayscale-50 text-[15px] font-light">
             Somos especialistas em garantir o sucesso dos nossos clientes Desde
             a implantação até a rotina diária, estamos ao seu lado para alcançar
@@ -117,7 +116,7 @@ export default function SolutionsApi() {
               getModal(
                 'Comercial',
                 'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
-                'site-routeasy' // Cheila
+                'site-routeasy'
               )
             }
           >
@@ -151,7 +150,7 @@ export default function SolutionsApi() {
             image="/images/pictures/knowledge-01.png"
           />
 
-          <div className="h-[120px]"></div>
+          <div className="h-[50px] md:h-[120px]"></div>
 
           <CardKnowledge
             title="Treinamento e capacitação "
@@ -163,9 +162,8 @@ export default function SolutionsApi() {
         </div>
       </Section>
       <Section>
-        {/* Cheila */}
         <div className="px-0 md:px-12 mt-20 mb-16 md:mb-44">
-          <div className="relative mx-auto bg-grayscale-500 rounded-lg p-8 mb-12 md:mb-24 shadow-3xl">
+          <div className="relative mx-auto bg-grayscale-500 rounded-lg pt-20 md:pt-8 p-8 mb-12 md:mb-24 shadow-3xl">
             <div className="md:pr-60 text-left mb-4 md:mb-0">
               <Title className="text-[26px]/[32px] mb-2">
                 Certificação rout<TextHighlight>easy</TextHighlight>
@@ -176,7 +174,14 @@ export default function SolutionsApi() {
                 que garante a aptidão para utilizar as nossas soluções.
               </Text>
             </div>
-            <div className="hidden absolute md:block w-[266px] h-[266px] top-[50%] right-0 -translate-y-2/4">
+            <div className="md:hidden absolute w-[146px] h-[146px] left-2/4 top-0 -translate-x-2/4 -translate-y-2/4">
+              <Image
+                src="/images/pictures/certificacao.svg"
+                alt="imagem explicativa"
+                fill
+              />
+            </div>
+            <div className="hidden md:block absolute w-[266px] h-[266px] right-0 top-2/4 -translate-y-2/4">
               <Image
                 src="/images/pictures/certificacao.svg"
                 alt="imagem explicativa"
