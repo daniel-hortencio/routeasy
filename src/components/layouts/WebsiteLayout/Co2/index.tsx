@@ -9,19 +9,25 @@ import { Text, Title } from 'components/elements/Texts'
 export const Co2 = () => {
   const [count, setCount] = useState(50)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (count < 600) {
-        setCount(prevCount => prevCount + (prevCount < 100 ? 50 : 100))
-      } else {
-        setCount(50)
-      }
-    }, 500)
+  const setCounter = (time: number) => {
+    let initialValue = 50
 
-    return () => {
-      clearInterval(interval)
-    }
-  }, [count])
+    const interval = setInterval(() => {
+      initialValue += 50
+
+      if (initialValue <= 600) {
+        console.log('contando...')
+        setCount(initialValue)
+      } else {
+        console.log('parou')
+        clearInterval(interval)
+      }
+    }, time)
+  }
+
+  useEffect(() => {
+    setCounter(500)
+  }, [])
 
   return (
     <>
