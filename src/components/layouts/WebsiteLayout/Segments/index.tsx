@@ -14,9 +14,11 @@ const ContentItem = ({
   altImage = 'Image'
 }: IContentProps) => {
   return (
-    <div className="flex justify-between items-center lg:w-[878px] m-auto p-6 md:p-8 rounded-lg bg-grayscale-500">
+    <div className="flex justify-between items-start lg:w-[878px] m-auto p-6 md:p-8 rounded-lg bg-grayscale-500">
       <div className="md:w-[56%] pr-8">
-        <h3 className="mb-2 md:mb-3 text-[32px] font-medium">{title}</h3>
+        <h3 className="mb-2 md:mb-3 text-[32px] font-medium uppercase">
+          {title}
+        </h3>
         <div className="h-[2px] w-full bg-primary-100 mb-4 md:mb-6" />
         <Text className="text-[15px] font-light">{text}</Text>
       </div>

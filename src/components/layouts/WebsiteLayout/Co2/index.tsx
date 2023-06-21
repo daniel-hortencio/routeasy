@@ -30,7 +30,7 @@ export const Co2 = () => {
           Nossos clientes já reduziram
         </Text>
         <Title className="normal-case text-[88px] font-medium mb-14 hidden lg:flex justify-center">
-          {count} toneladas de CO2
+          {count} toneladas de CO<sub>2</sub>
         </Title>
         <h1 className="lg:hidden">
           <span className="block text-[88px] font-semibold">{count}</span>
@@ -38,7 +38,9 @@ export const Co2 = () => {
             toneladas <br />
             de
           </span>
-          <span className="block text-7xl mb-6 font-semibold">CO2</span>
+          <span className="block text-7xl mb-6 font-semibold">
+            CO<sub className="text-6xl">2</sub>
+          </span>
         </h1>
         <ButtonWhite href="">Veja alguns cases de sucesso</ButtonWhite>
       </BannerOverlay>

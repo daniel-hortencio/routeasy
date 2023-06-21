@@ -208,7 +208,7 @@ export default function SolutionsApi() {
           </Text>
         }
       />
-      <RoutingAcademy /> {/* Cheila */}
+      <RoutingAcademy />
       <Segments />
       <FAQ />
       <Section>
