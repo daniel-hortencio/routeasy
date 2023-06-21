@@ -1,9 +1,8 @@
 import { ButtonWhite } from 'components/elements/Button'
 import Image from 'next/image'
 import { Text } from 'components/elements/Texts'
-
 import { BannerOverlay } from '../BannerOverlay'
-import Link from 'next/link'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 export const RoutingAcademy = () => {
   return (
@@ -28,12 +27,9 @@ export const RoutingAcademy = () => {
               empresas!
             </Text>
             <div className="mx-auto mb-8">
-              <Link
-                href="https://routeasy.com.br/content/routingacademy/"
-                target="_blank"
-              >
+              <LinkExternal href="https://routeasy.com.br/content/routingacademy/">
                 <ButtonWhite>Quero saber mais</ButtonWhite>
-              </Link>
+              </LinkExternal>
             </div>
           </div>
         </div>
