@@ -33,6 +33,7 @@ module.exports = {
         },
         redscale: {
           50: '#FF4E32',
+          100: '#FF6C54'
         },
         yellowscale: {
           50: '#FCB400'

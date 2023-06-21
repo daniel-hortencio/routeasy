@@ -5,6 +5,7 @@ import { Title, Text } from 'components/elements/Texts'
 import { ButtonPrimary } from 'components/elements/Button'
 import Image from 'next/image'
 import { useState } from 'react'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 const faqList = [
   {
@@ -97,7 +98,9 @@ export const FAQ = () => {
               atualizações mais recentes sobre a nossa plataforma.
             </Text>
             <div className="lg:w-[176px] text-center">
-              <ButtonPrimary href="/">Acessar Help Center</ButtonPrimary>
+              <LinkExternal href="https://help.routeasy.com.br/hc/pt-br">
+                <ButtonPrimary>Acessar Help Center</ButtonPrimary>
+              </LinkExternal>
             </div>
           </div>
         </div>

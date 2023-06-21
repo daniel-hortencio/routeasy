@@ -1,10 +1,10 @@
 import Image from 'next/image'
+import { ReactNode } from 'react'
 
 import { Title, Text } from '../Texts'
-import { ButtonPrimary } from '../Button'
 
 interface ICardDescriptionProps {
-  title: string
+  title?: ReactNode | string
   text: string
   image: string
   link: string
@@ -28,10 +28,7 @@ export const CardDescription = ({
       </div>
       <div className="w-full py-[70px]">
         <Title className="text-xl font-normal py-4">{title}</Title>
-        <Text className="text-grayscale-200">{text}</Text>
-        <div className="lg:w-[100px] text-center mt-4">
-          <ButtonPrimary href={link}>Saiba mais</ButtonPrimary>
-        </div>
+        <Text className="text-grayscale-50 font-light">{text}</Text>
       </div>
     </div>
   )

@@ -4,52 +4,43 @@ import { Section } from 'components/elements/Section'
 import { Title, Text } from 'components/elements/Texts'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
+import { Icon } from 'components/elements/Icon'
+import { FaCheck } from 'react-icons/fa'
 
-export const CardBenefits = ({ title, text }) => {
+interface CardBenefitsProp {
+  icon: string
+  title: string
+  featureList: string[]
+}
+
+export const CardBenefits = ({
+  icon,
+  title,
+  featureList
+}: CardBenefitsProp) => {
   return (
-    <div className="border border-grayscale-500 rounded-[15px] py-12 px-4 text-center">
-      <div className="uppercase text-[22px]/[33px] mb-4 font-semibold text-white">
-        {title}
+    <div className="text-center rounded-2xl border border-grayscale-500 m-auto max-w-[350px] pt-16 py-8 px-8 h-full w-full">
+      <div
+        className={`flex items-center justify-center rounded-md bg-grayscale-500 w-12 h-12 m-auto`}
+      >
+        <Icon color="white" name={icon} size={24} />
       </div>
-      <div className="text-grayscale-200 text-sm font-normal">{text}</div>
+      <Title className="text-xl font-normal py-4">{title}</Title>
+
+      <ul>
+        {featureList.map((feature, index) => (
+          <li
+            key={index}
+            className="flex justify-center items-center mb-4 h-full"
+          >
+            <FaCheck color="#3CBC8D" size={10} />
+            <Text className="ml-2 font-light text-sm/[24px]">{feature}</Text>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
-
-export const list_benefits = [
-  {
-    title: 'Benefício 1',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 2',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 3',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 4',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 5',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 6',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 7',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Benefício 8',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  }
-]
 
 export const Benefits = () => {
   const [sliderRef] = useKeenSlider({
@@ -59,15 +50,9 @@ export const Benefits = () => {
       perView: 1.4
     },
     breakpoints: {
-      '(min-width: 540px)': {
+      '(min-width: 640px)': {
         slides: {
           perView: 2.25,
-          spacing: 20
-        }
-      },
-      '(min-width: 768px)': {
-        slides: {
-          perView: 3.25,
           spacing: 20
         }
       }
@@ -87,20 +72,74 @@ export const Benefits = () => {
         }
       >
         <div className="hidden lg:block">
-          <div className="grid grid-cols-4 grid-rows-2 gap-4 justify-center items-center">
-            {list_benefits.map((item, index) => (
-              <CardBenefits key={index} title={item.title} text={item.text} />
-            ))}
+          <div className="grid grid-cols-3 gap-8 pb-16">
+            <CardBenefits
+              icon="AiOutlineHeart"
+              title="Saúde e bem estar"
+              featureList={[
+                'Convênio médico',
+                'Convênio odontológico',
+                'TotalPass'
+              ]}
+            />
+            <CardBenefits
+              icon="FiBriefcase"
+              title="Desenvolvimento"
+              featureList={[
+                'Plano de carreira',
+                'Auxílio educação (desconto em cursos)',
+                'Ciclos de avaliação de performance'
+              ]}
+            />
+            <CardBenefits
+              icon="BsEmojiSmile"
+              title="Qualidade de vida"
+              featureList={[
+                'Auxílio creche',
+                'Seguro de vida',
+                'Vale refeição',
+                'Vale transporte'
+              ]}
+            />
           </div>
         </div>
       </Section>
       <div className="lg:hidden pb-8 ml-6">
         <div ref={sliderRef} className="keen-slider mb-12">
-          {list_benefits.map((item, index) => (
-            <div className={`keen-slider__slide ${index === 0} `} key={index}>
-              <CardBenefits title={item.title} text={item.text} />
-            </div>
-          ))}
+          <div className="keen-slider__slide">
+            <CardBenefits
+              icon="AiOutlineHeart"
+              title="Saúde e bem estar"
+              featureList={[
+                'Convênio médico',
+                'Convênio odontológico',
+                'TotalPass'
+              ]}
+            />
+          </div>
+          <div className="keen-slider__slide">
+            <CardBenefits
+              icon="FiBriefcase"
+              title="Desenvolvimento"
+              featureList={[
+                'Plano de carreira',
+                'Auxílio educação (desconto em cursos)',
+                'Ciclos de avaliação de performance'
+              ]}
+            />
+          </div>
+          <div className="keen-slider__slide">
+            <CardBenefits
+              icon="BsEmojiSmile"
+              title="Qualidade de vida"
+              featureList={[
+                'Auxílio creche',
+                'Seguro de vida',
+                'Vale refeição',
+                'Vale transporte'
+              ]}
+            />
+          </div>
         </div>
       </div>
     </div>

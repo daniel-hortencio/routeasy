@@ -17,7 +17,7 @@ import { ButtonPrimary } from 'components/elements/Button'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { IConversionIdentifier } from 'services'
-import { FormModal } from 'components/layouts/WebsiteLayout/FormModal' // Cheila
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
 import { CardListColored } from 'components/layouts/WebsiteLayout/CardListColored'
 import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
@@ -43,7 +43,6 @@ function getModal(
   })
 }
 
-// Cheila
 const listDifferentials: IIconCardColoredProps[] = [
   {
     icon: 'AiOutlineFile',
