@@ -138,12 +138,12 @@ export default function SolutionsApi() {
         </div>
       </BannerCentered>
 
-      <div className="mt-[-9rem] mb-16 w-full h-[550px] relative mx-auto">
+      <div className="hidden lg:block mt-[-9rem] mb-16 w-full h-[550px] relative mx-auto">
         <Image
           fill
           alt="notebook mockup"
-          src="/images/pictures/mockup-notebook.png"
-          style={{ objectFit: 'contain' }}
+          src="/images/gifs/Screen_API.gif"
+          style={{ objectFit: 'none' }}
         />
       </div>
       <Clients />

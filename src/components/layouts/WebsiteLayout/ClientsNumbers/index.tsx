@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import { Section } from 'components/elements/Section'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { ButtonSecondary } from 'components/elements/Button'
 import Image from 'next/image'
 
@@ -35,7 +35,7 @@ const ClientContent = ({ logo, cards }: IClientContentProps) => {
               <p className="text-[56px] font-semibold text-white mb-1">
                 {card.number}
               </p>
-              <p className="text-small font-normal px-2 text-white">
+              <p className="text-small px-2 text-white font-light">
                 {card.label}
               </p>
             </div>
@@ -63,13 +63,19 @@ export const ClientsNumbers = () => {
 
   return (
     <Section
+      className="pb-4"
       title={
         <Title>
-          Impactando de <TextHighlight>verdade </TextHighlight>
-          na operação de clientes
+          Impacto <TextHighlight>real </TextHighlight>
+          nos resultados de nossos clientes
         </Title>
       }
-      subtitle="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis."
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px] font-light">
+          O roteirizador da RoutEasy revolucionou as operações logísticas de
+          empresas em diversos setores. Confira alguns resultados!
+        </Text>
+      }
     >
       <div ref={sliderRef} className="keen-slider">
         {clientsContent.map(item => (

@@ -5,7 +5,7 @@ import { Title, Text } from '../Texts'
 
 export const CardFeature = ({ icon, title, text }: ICardFeatureProps) => {
   return (
-    <div className="text-center rounded-2xl border border-grayscale-500 m-auto max-w-[350px] pt-16 py-8 px-14">
+    <div className="text-center rounded-2xl border border-grayscale-500 m-auto max-w-[350px] pt-16 py-16 px-14">
       <div
         className={`flex items-center justify-center rounded-md bg-grayscale-500 w-12 h-12 m-auto`}
       >
