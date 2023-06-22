@@ -19,7 +19,7 @@ const CardOffice = ({ icon, title }) => {
 
 export const Office = () => {
   return (
-    <Section className="pb-20">
+    <Section className="pb-28">
       <div className="relative overflow-hidden w-full text-center px-8 lg:px-40 py-20 lg:pb-20 lg:pt-16">
         <Image
           src="/images/pictures/escritorio.png"
@@ -28,7 +28,7 @@ export const Office = () => {
           style={{ objectFit: 'cover', opacity: 0.3 }}
         />
         <div className="relative">
-          <Title>O escritório</Title>
+          <Title>A nossa casa</Title>
           <Text className="text-grayscale-50 mb-12 text-sm font-light">
             Nosso escritório é projetado para minimizar o nosso impacto
             ambiental. Com uma arquitetura que privilegia a iluminação natural,

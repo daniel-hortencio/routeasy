@@ -19,16 +19,16 @@ export const IconCardColored = ({
 
   return (
     <div
-      className={`block rounded-2xl border border-grayscale-500 m-auto max-w-[350px] ${setCardType()}`}
+      className={`block rounded-2xl border border-grayscale-500 m-auto max-w-[350px] h-full ${setCardType()}`}
     >
       <div
         className={`inline-flex items-center justify-center ${accentColor} rounded-md w-12 h-12 m-auto md:m-0`}
       >
         <Icon color="white" name={icon} size={24} />
       </div>
-      <Title className="text-xl font-normal py-4">{title}</Title>
+      <Title className="text-lg font-normal py-4">{title}</Title>
       <Text
-        className={`text-grayscale-200 ${
+        className={`text-grayscale-200 font-light ${
           center ? 'text-xs' : 'text-sm/[24px]'
         }`}
       >

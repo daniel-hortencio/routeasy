@@ -13,10 +13,9 @@ export const Testimonials = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log('TESTE')
       if (count < 600) {
         setCount(prevCount => prevCount + (prevCount < 100 ? 50 : 100))
-      } else {
-        setCount(50)
       }
     }, 500)
 
@@ -56,15 +55,17 @@ export const Testimonials = () => {
             Nossos clientes já reduziram
           </p>
           <h1 className="text-[88px] font-semibold mb-14 hidden lg:flex justify-center">
-            {count} Toneladas de Co2
+            {count} Toneladas de CO<sub>2</sub>
           </h1>
-          <h1 className="lg:hidden ">
+          <h1 className="lg:hidden">
             <span className="block text-[88px] font-semibold">{count}</span>
             <span className="block text-[32px] mb-2 font-medium">
               Toneladas <br />
               de
             </span>
-            <span className="block text-7xl mb-6 font-semibold">Co2</span>
+            <span className="block text-7xl mb-6 font-semibold">
+              CO<sub className="text-6xl">2</sub>
+            </span>
           </h1>
           <ButtonWhite href="/">Veja alguns cases de sucesso</ButtonWhite>
         </div>

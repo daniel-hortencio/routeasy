@@ -1,30 +1,14 @@
 import { Section } from 'components/elements/Section'
-
-import { ICardFeatureProps } from 'components/elements/CardFeature/types'
 import { CardFeature } from 'components/elements/CardFeature'
+import { ICardFeatureProps } from 'components/elements/CardFeature/types'
+interface IListFeaturesProps {
+  listFeatures: ICardFeatureProps[]
+}
 
-const listFeatures: ICardFeatureProps[] = [
-  {
-    title: 'Velocidade',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
-    icon: 'BiSolidZap'
-  },
-  {
-    title: 'Segurança',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
-    icon: 'BiSolidShield'
-  },
-  {
-    title: 'Eficiência',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
-    icon: 'BiAbacus'
-  }
-]
-
-export const ListFeatures = () => {
+export const ListFeatures = ({ listFeatures }: IListFeaturesProps) => {
   return (
     <Section>
-      <div className="flex gap-8 pb-16">
+      <div className="flex flex-col md:flex-row gap-8 pb-16">
         {listFeatures.map((card, index) => (
           <CardFeature
             key={index}

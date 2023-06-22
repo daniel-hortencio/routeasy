@@ -31,7 +31,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
         <Icon name={isOpen ? 'FiX' : 'FiMenu'} size={24} />
       </button>
       <nav
-        className={`fixed h-[calc(100vh-124px)] top-[124px] left-0 transition-opacity overflow-hidden ${
+        className={`fixed h-[calc(100vh-96px)] top-[96px] left-0 transition-opacity overflow-hidden ${
           isOpen ? 'w-full opacity-100' : 'w-0 opacity-0'
         }`}
       >

@@ -35,6 +35,7 @@ export default function TrabalheConosco() {
       <Ceremonies />
       <Office />
       <Food />
+      <Benefits />
       <Vacancies />
     </>
   )

@@ -8,7 +8,7 @@ import { RoutingMainContent } from './components/Main'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
-export const Routing: React.FC = () => {
+export const Routing = () => {
   const [cardActive, setCardActive] = useState<number>(0)
 
   const [sliderRef] = useKeenSlider({
@@ -63,7 +63,7 @@ export const Routing: React.FC = () => {
           </div>
         </div>
       </div>
-      <Section>
+      <Section className="mb-28">
         <div className="w-full mb-16 flex justify-between">
           {RoutingList.map((content, index) => (
             <div

@@ -1,19 +1,22 @@
 import { Section } from 'components/elements/Section'
 import { ButtonPrimary } from 'components/elements/Button'
 import { Text } from 'components/elements/Texts'
+import { ReactNode } from 'react'
 
 interface Props {
   title: JSX.Element
-  description: string
+  description?: ReactNode | string
   buttonText?: string | React.ReactNode
   buttonHref?: string
+  children?: React.ReactNode
 }
 
 export const BannerCentered = ({
   title,
   description,
   buttonText,
-  buttonHref = '/'
+  buttonHref = '/',
+  children
 }: Props) => {
   return (
     <Section className="flex">
@@ -28,6 +31,7 @@ export const BannerCentered = ({
               <ButtonPrimary href={buttonHref}>{buttonText}</ButtonPrimary>
             </div>
           )}
+          {children}
         </div>
       </div>
     </Section>

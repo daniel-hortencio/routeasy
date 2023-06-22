@@ -5,6 +5,7 @@ import { Title, Text } from 'components/elements/Texts'
 import { ButtonPrimary } from 'components/elements/Button'
 import Image from 'next/image'
 import { useState } from 'react'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 const faqList = [
   {
@@ -52,7 +53,7 @@ const FaqItem = ({ title, answer, isOpen, onClick, isLast }: IFaqItemProps) => {
       <main
         className={`overflow-hidden transition-all ${isOpen ? 'h-28' : 'h-0'}`}
       >
-        <Text className="text-grayscale-50 text-[13px] mt-4 h-10 overflow-hidden">
+        <Text className="text-grayscale-50 text-[15px] font-light mt-4 h-10 overflow-hidden">
           {answer}
         </Text>
       </main>
@@ -71,13 +72,13 @@ export const FAQ = () => {
       className="lg:mb-40"
       title={<Title>Dúvidas frequentes</Title>}
       subtitle={
-        <Text className="text-grayscale-50 text-[15px]">
+        <Text className="text-grayscale-50 text-[15px] font-light">
           Aqui você encontrará as respostas para as dúvidas mais comuns sobre
           nossas soluções.
         </Text>
       }
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between px-12 pb-24 lg:pb-0">
+      <div className="flex flex-col-reverse md:flex-row justify-between px-0 md:px-12 pb-24 lg:pb-0">
         <div className="md:w-5/12 ">
           <div className="rounded-lg p-6 border border-grayscale-500">
             <div className="bg-grayscale-500 rounded-md p-3 w-12 h-12 mb-4">
@@ -91,14 +92,15 @@ export const FAQ = () => {
             <h4 className="text-white text-[22px] uppercase font-semibold mb-2">
               Help center
             </h4>
-            <Text className="text-grayscale-200 text-[15px] mb-4">
-              Acesse o Help Center, um guia completo para solucionar dúvidas e
-              encontrar respostas rápidas sobre nossos produtos e serviços.
-              Navegue por diferentes categorias, utilize a barra de pesquisa ou
-              explore nossos artigos em destaque.
+            <Text className="text-grayscale-200 text-[15px] mb-8 font-light">
+              Nossa equipe está sempre pronta para ajudar! Navegue pelo help
+              center e confira todos os artigos de suporte, além das
+              atualizações mais recentes sobre a nossa plataforma.
             </Text>
             <div className="lg:w-[176px] text-center">
-              <ButtonPrimary href="/">Acessar Help Center</ButtonPrimary>
+              <LinkExternal href="https://help.routeasy.com.br/hc/pt-br">
+                <ButtonPrimary>Acessar Help Center</ButtonPrimary>
+              </LinkExternal>
             </div>
           </div>
         </div>

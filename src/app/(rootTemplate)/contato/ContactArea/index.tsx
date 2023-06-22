@@ -7,7 +7,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { ContactForm } from '../ContactForm'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
 import { IConversionIdentifier } from 'services'
 
 const MySwal = withReactContent(Swal)
@@ -48,7 +48,7 @@ export const ContactArea = () => {
     MySwal.fire({
       html: (
         <>
-          <ContactForm
+          <FormModal
             title={title}
             description={description}
             conversion_identifier={conversion_identifier}

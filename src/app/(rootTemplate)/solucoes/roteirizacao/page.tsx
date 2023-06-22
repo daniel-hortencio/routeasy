@@ -1,3 +1,5 @@
+'use client'
+
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
 import { Integrating } from 'components/layouts/WebsiteLayout/Integrating'
 import { Comparison } from 'components/layouts/WebsiteLayout/Comparison'
@@ -8,13 +10,14 @@ import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 import { CTA } from 'components/elements/CTA'
 import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { ListFeatures } from 'components/layouts/WebsiteLayout/ListFeatures'
 
 import { BsFillPlayFill } from 'react-icons/bs'
 import { TabsHorizontal } from 'components/layouts/WebsiteLayout/TabHorizontal'
-import { FeatureList } from './content'
+import { FeatureList, listFeaturesCard } from './content'
 import { ClientsNumbers } from 'components/layouts/WebsiteLayout/ClientsNumbers'
+import { ButtonPrimary } from 'components/elements/Button'
 
 export default function SolutionsRoteirizacao() {
   return (
@@ -22,18 +25,26 @@ export default function SolutionsRoteirizacao() {
       <BannerCentered
         title={
           <Title className="text-[35px] lg:text-[40px] pb-5">
-            O melhor e mais rápido <TextHighlight>roteirizador</TextHighlight>
-            do mercado
+            CONHEÇA O <TextHighlight>roteirizador </TextHighlight>
+            MAIS RÁPIDO Do mercado
           </Title>
         }
-        description="Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut
-        assumenda voluptates qui beatae quis id Quis cupiditate. Cum
-        veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto
-        quis."
-        buttonText={<BsFillPlayFill color="#FFFFFF" size={20} />}
-        buttonHref="/"
-      />
-      <ListFeatures />
+        description={
+          <Text className="text-grayscale-50 text-[15px] font-light">
+            Enquanto outras soluções lutam para lidar com grandes volumes de
+            dados, nós entregamos resultados rápidos e precisos. Conte com o
+            algoritmo de roteirização mais eficiente do mercado para
+            revolucionar a sua operação logística.
+          </Text>
+        }
+      >
+        <div className="w-[64px] text-center mx-[auto]">
+          <ButtonPrimary onClick={() => alert('TEAD')}>
+            <BsFillPlayFill color="#FFFFFF" size={20} />
+          </ButtonPrimary>
+        </div>
+      </BannerCentered>
+      <ListFeatures listFeatures={listFeaturesCard} />
       <Section>
         <div className="w-full lg:w-[962px] mx-auto my-[72px]">
           <TabsHorizontal featureContent={FeatureList} />
@@ -43,9 +54,14 @@ export default function SolutionsRoteirizacao() {
         <div className="w-full lg:w-[1033px] mx-auto my-[72px]">
           <CTA
             title="Quer levar facilidade para a sua operação?"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            description={
+              <Text className="text-grayscale-50 text-[15px] font-light">
+                Solicite agora mesmo uma demonstração com um de nossos
+                especialistas.
+              </Text>
+            }
             buttonText="Solicite uma demonstração"
-            href="/"
+            href="/demonstracao"
           />
         </div>
       </Section>

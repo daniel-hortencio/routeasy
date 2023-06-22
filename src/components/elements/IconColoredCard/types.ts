@@ -1,5 +1,6 @@
+import { ReactNode } from 'react'
 export interface IIconCardColoredProps {
-  icon: string
+  icon?: ReactNode | string
   title: string
   text: string
   accentColor: string
