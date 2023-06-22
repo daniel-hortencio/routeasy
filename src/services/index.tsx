@@ -14,9 +14,17 @@ export interface SendContactDTO {
   cf_quantidade_de_veiculos_proprios_e_ou_terceirizados: string
 }
 
+export interface SendNewsletterDTO {
+  name?: string
+  email: string
+}
+
 export const services = {
   sendContact: (
     data: SendContactDTO,
     conversion_identifier: IConversionIdentifier
-  ) => axios.post('/api/send-contact', { ...data, conversion_identifier })
+  ) => axios.post('/api/send-contact', { ...data, conversion_identifier }),
+
+  sendNewsletter: (data: SendNewsletterDTO) =>
+    axios.post('/api/newsletter', { ...data })
 }
