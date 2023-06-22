@@ -129,7 +129,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="border-y-2 border-grayscale-400 lg:flex lg:items-center justify-between py-9 px-10">
+      <div className="border-y-2 border-grayscale-400 lg:flex lg:items-center justify-between py-9 px-4 md:px-10">
         <div className="lg:pr-32">
           <Title className="text-center text-base lg:text-left uppercase mb-1">
             Escreva-se em nossa newsletter
@@ -143,9 +143,9 @@ export const Footer = () => {
         <div className="h-14 lg:h-12 flex items-center rounded overflow-hidden">
           <input
             placeholder="Escreva seu e-mail"
-            className="bg-grayscale-600 h-full px-6 flex-auto"
+            className="bg-grayscale-600 h-full px-6 w-full"
           />
-          <button className="bg-primary-100 h-full w-40 hover:bg-primary-200 text-white">
+          <button className="bg-primary-100 text-sm h-full w-[123px] md:w-40 hover:bg-primary-200 text-white">
             INSCREVER
           </button>
         </div>
