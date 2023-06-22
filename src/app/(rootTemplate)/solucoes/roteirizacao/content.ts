@@ -27,17 +27,17 @@ export const FeatureList: ITabHorizontalItemProps[] = [
 export const listFeaturesCard: ICardFeatureProps[] = [
   {
     title: 'Velocidade',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
-    icon: 'BiSolidZap'
+    text: 'Roteirize mais pontos em menos tempo, diminuindo as etapas do planejmento de rotas.',
+    icon: 'FiZap'
   },
   {
     title: 'Segurança',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
-    icon: 'BiSolidShield'
+    text: 'Reduza custos e falhas com um algoritmo avançado que garante rotas altamente precisas.',
+    icon: 'FiShield'
   },
   {
     title: 'Eficiência',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates. ',
-    icon: 'BiAbacus'
+    text: 'Conte com a inteligência artificial líder de mercado trabalhando para otimizar o seu negócio.',
+    icon: 'FiTarget'
   }
 ]

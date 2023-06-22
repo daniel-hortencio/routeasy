@@ -45,12 +45,12 @@ export default function SolutionsRoteirizacao() {
         </div>
       </BannerCentered>
       <ListFeatures listFeatures={listFeaturesCard} />
-      <Section>
+      <Section className="mb-32">
         <div className="w-full lg:w-[962px] mx-auto my-[72px]">
           <TabsHorizontal featureContent={FeatureList} />
         </div>
       </Section>
-      <Section>
+      <Section className="pb-4">
         <div className="w-full lg:w-[1033px] mx-auto my-[72px]">
           <CTA
             title="Quer levar facilidade para a sua operação?"
@@ -68,7 +68,6 @@ export default function SolutionsRoteirizacao() {
       <Comparison />
       <ClientsNumbers />
       <Integrating />
-      <Statistics />
       <Maestro />
       <Segments />
       <FAQ />

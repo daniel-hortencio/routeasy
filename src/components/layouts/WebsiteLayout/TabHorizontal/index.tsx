@@ -55,10 +55,10 @@ export const TabsHorizontal = ({ featureContent }: ITabsHorizontalProps) => {
               key={index}
               className={`${featureActive === index ? 'show' : 'hidden'}`}
             >
-              <Title className="text-[26px] font-bold uppercase mb-3.5">
+              <Title className="text-[26px] font-medium uppercase mb-3.5">
                 {content.title}
               </Title>
-              <Text className="text-[13px] font-light">{content.text}</Text>
+              <Text className="text-sm font-light">{content.text}</Text>
             </div>
           ))}
         </div>

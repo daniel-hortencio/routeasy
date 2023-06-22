@@ -7,6 +7,7 @@ import { ButtonPrimary } from 'components/elements/Button'
 export const Comparison = () => {
   return (
     <Section
+      className="pb-20"
       title={
         <Title>
           Estamos <TextHighlight>a frente</TextHighlight> do mercado
