@@ -7,7 +7,6 @@ interface ICardDescriptionProps {
   title?: ReactNode | string
   text: string
   image: string
-  link: string
   side?: 'left' | 'right'
 }
 
@@ -15,7 +14,6 @@ export const CardDescription = ({
   title,
   text,
   image,
-  link,
   side = 'left'
 }: ICardDescriptionProps) => {
   const setClassName = (side: 'left' | 'right') =>
@@ -24,10 +22,15 @@ export const CardDescription = ({
   return (
     <div className={`flex gap-[70px] ${setClassName(side)}`}>
       <div className="bg-grayscale-500 flex justify-content items-center rounded-2xl relative w-[338px] h-[338px] min-w-[338px]">
-        <Image src={image} alt={title} fill style={{ objectFit: 'contain' }} />
+        <Image
+          src={image}
+          alt={title ? title?.toString() : ''}
+          fill
+          style={{ objectFit: 'contain' }}
+        />
       </div>
       <div className="w-full py-[70px]">
-        <Title className="text-xl font-normal py-4">{title}</Title>
+        <div className="text-xl font-normal py-4">{title}</div>
         <Text className="text-grayscale-50 font-light">{text}</Text>
       </div>
     </div>

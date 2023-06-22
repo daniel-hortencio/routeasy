@@ -22,7 +22,7 @@ export default function TrabalheConosco() {
           description={
             <Text className="text-grayscale-50 text-[15px] font-light">
               A Routeasy sempre está em busca de novos talentos, confira nossas
-              vagas agora mesmo ;)
+              vagas agora mesmo ;
             </Text>
           }
           href="https://routeasy.gupy.io/"

@@ -1,7 +1,7 @@
 import { Icon } from 'components/elements/Icon'
 
 import { IIconCardColoredProps } from './types'
-import { Title, Text } from '../Texts'
+import { Text } from '../Texts'
 
 export const IconCardColored = ({
   icon,
@@ -24,9 +24,9 @@ export const IconCardColored = ({
       <div
         className={`inline-flex items-center justify-center ${accentColor} rounded-md w-12 h-12 m-auto md:m-0`}
       >
-        <Icon color="white" name={icon} size={24} />
+        <Icon color="white" name={icon ? icon.toString() : ''} size={24} />
       </div>
-      <Title className="text-lg font-normal py-4">{title}</Title>
+      <div className="text-lg font-normal py-4">{title}</div>
       <Text
         className={`text-grayscale-200 font-light ${
           center ? 'text-xs' : 'text-sm/[24px]'

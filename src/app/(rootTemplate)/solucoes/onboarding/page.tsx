@@ -126,14 +126,12 @@ export default function SolutionsApi() {
       <ListFeatures listFeatures={listFeaturesCard} />
       <Section
         title={
-          // Cheila
           <Title>
             Nossas equipes de <TextHighlight>especialistas </TextHighlight>vão
             até você
           </Title>
         }
         subtitle={
-          // Cheila
           <Text className="text-grayscale-50 text-[15px] font-light">
             Nossas equipes viajam por todo o Brasil para conhecer os detalhes de
             cada operação logística. Tudo isso nos permite oferecer soluções

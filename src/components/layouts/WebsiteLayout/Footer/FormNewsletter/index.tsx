@@ -82,13 +82,13 @@ export const FormNewsletter = () => {
       <div className="flex h-14 lg:h-12">
         <input
           placeholder="Escreva seu e-mail"
-          className="h-full px-6 flex-auto border border-transparent focus:border-primary-50 hover:border-primary focus:outline-none bg-grayscale-500 focus:bg-grayscale-400 text-white placeholder:text-grayscale-200"
+          className="h-full w-full px-6 border border-transparent focus:border-primary-50 hover:border-primary focus:outline-none bg-grayscale-500 focus:bg-grayscale-400 text-white placeholder:text-grayscale-200"
           value={email}
           onChange={e => handleChange(e.target.value)}
         />
         <button
           type="submit"
-          className="bg-primary-100 h-full w-40 hover:bg-primary-200 text-white"
+          className="bg-primary-100 h-full w-[123px] md:w-40 hover:bg-primary-200 text-white"
           disabled={isLoading}
         >
           {isLoading ? <PulseLoader color="#fff" size={12} /> : 'INSCREVER'}

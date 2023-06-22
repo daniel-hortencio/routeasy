@@ -48,7 +48,7 @@ export const Routing = () => {
       <div className="lg:hidden">
         <div ref={sliderRef} className="keen-slider">
           <div className="w-full lg:mb-12">
-            <div className="w-full m-auto flex justify-between pl-5">
+            <div className="w-full m-auto flex justify-between px-5">
               {RoutingList.map((card, index) => (
                 <div className="keen-slider__slide" key={index}>
                   <RoutingCard

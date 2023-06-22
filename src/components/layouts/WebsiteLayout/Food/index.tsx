@@ -1,7 +1,6 @@
 import Icon from 'components/elements/Icon'
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
-import Image from 'next/image'
 import { useState } from 'react'
 import { foodSlides } from './Slides'
 import { ButtonSecondary } from 'components/elements/Button'

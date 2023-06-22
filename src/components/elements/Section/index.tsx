@@ -24,7 +24,9 @@ export const Section = ({
       <div className={getClass()}>
         {title && <div className="mb-2 text-center">{title}</div>}
         {subtitle && (
-          <p className="mb-10 md:mb-16 text-center px-5">{subtitle}</p>
+          <span className="block mb-10 md:mb-16 text-center px-5">
+            {subtitle}
+          </span>
         )}
         {children}
       </div>

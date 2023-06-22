@@ -18,8 +18,8 @@ export const Text = ({ children, style, className = '' }: Props) => {
   const getClassName = () => `${open_sans.className} ${className}`
 
   return (
-    <p className={getClassName()} style={style}>
+    <span className={getClassName()} style={style}>
       {children}
-    </p>
+    </span>
   )
 }

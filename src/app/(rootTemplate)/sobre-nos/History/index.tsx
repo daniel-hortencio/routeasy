@@ -48,9 +48,9 @@ export const History = () => {
         </div>
         <Dot />
         <div className="ml-6 lg:ml-[1.7rem] flex-auto border-b lg:border-b-0 border-[#424678]">
-          <p className="lg:h-36 pl-0 lg:pl-4 pb-4 lg:pb-0 border-l-0 lg:border-l border-[#424678]">
+          <div className="lg:h-36 pl-0 lg:pl-4 pb-4 lg:pb-0 border-l-0 lg:border-l border-[#424678]">
             {text}
-          </p>
+          </div>
         </div>
       </div>
     )

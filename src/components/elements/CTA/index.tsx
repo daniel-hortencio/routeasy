@@ -18,9 +18,9 @@ export const CTA = ({ title, description, buttonText, href }: Props) => {
           <h2 className="text-xl/8 font-bold sm uppercase mb-4 md:mb-2">
             {title}
           </h2>
-          <p className="text-base font-normal text-grayscale-50">
+          <div className="text-base font-normal text-grayscale-50">
             {description}
-          </p>
+          </div>
         </div>
         <div className="md:w-[455px] lg:w-56">
           <ButtonPrimary href={href}>{buttonText}</ButtonPrimary>
