@@ -1,5 +1,5 @@
 import { Section } from 'components/elements/Section'
-import { Title, Text } from 'components/elements/Texts'
+import { Text } from 'components/elements/Texts'
 import { IconCardColored } from 'components/elements/IconColoredCard'
 
 import { ICardListProps } from './types'
@@ -8,7 +8,7 @@ export const CardListColored = ({ cards, title, subtitle }: ICardListProps) => {
   return (
     <Section
       className="mb-20 md:mb-36 "
-      title={<Title>{title}</Title>}
+      title={title}
       subtitle={
         <Text className="text-grayscale-50 text-[15px] font-light">
           {subtitle}

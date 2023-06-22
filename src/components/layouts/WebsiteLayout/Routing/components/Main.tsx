@@ -15,7 +15,7 @@ export const RoutingMainContent = ({
     <>
       <div className="w-full lg:w-10/12 my-12 m-auto md:flex justify-between">
         <div className="md:w-6/12 lg:w-4/12 mb-12 md:mb-0">
-          <h3 className="font-white text-2xl font-semibold uppercase mb-3.5">
+          <h3 className="text-white text-2xl font-semibold uppercase mb-3.5">
             {title}
           </h3>
           <Text className="text-grayscale-50 block text-[13px] font-light mb-3.5">

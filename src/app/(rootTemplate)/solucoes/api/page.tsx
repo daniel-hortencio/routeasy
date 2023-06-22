@@ -11,13 +11,12 @@ import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
 // import { Prices } from 'components/layouts/WebsiteLayout/Prices'
 import Image from 'next/image'
-import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { IConversionIdentifier } from 'services'
 import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
 import { ButtonPrimary } from 'components/elements/Button'
-import Icon from 'components/elements/Icon'
+import { listDifferentials } from './content'
 
 const MySwal = withReactContent(Swal)
 
@@ -40,69 +39,6 @@ function getModal(
     showConfirmButton: false
   })
 }
-
-const listDifferentials: IIconCardColoredProps[] = [
-  {
-    icon: 'FiDatabase',
-    title: 'Roteirizador',
-    text: 'Otimize suas rotas de entrega com algoritmos avançados para calcular as melhores sequências de paradas, considerando restrições e economize custos logísticos com a poderosa API de roteirização RoutEasy.',
-    accentColor: 'bg-bluescale-50'
-  },
-  {
-    icon: 'AiOutlineCluster',
-    title: 'Cluster',
-    text: 'Agrupe pontos de serviços próximos com o refinado algoritmo genético RoutEasy e aumente a eficiência de processamento do seu planejamento logístico com uso de inteligência.',
-    accentColor: 'bg-red-500'
-  },
-  {
-    icon: 'AiOutlineUnorderedList',
-    title: 'Sequenciador',
-    text: 'Organize paradas de forma inteligente, considerando restrições como ordem de visita, prioridades, tempo de atendimento e garanta um fluxo de trabalho eficiente na sua cadeia de suprimentos.',
-    accentColor: 'bg-emerald-500'
-  },
-  {
-    icon: 'BiMap',
-    title: 'Geocoding',
-    text: 'Converta endereços em coordenadas geográficas para melhorar o mapeamento e localização de suas entregas. Utilize API de geocoding  para integrar com sistemas de mapeamento e localização geográfica.',
-    accentColor: 'bg-indigo-500'
-  },
-  {
-    icon: '/images/pictures/mockup-notebook.png',
-    title: 'Pedágio',
-    text: 'Calcule os custos de pedágio em suas rotas levando em consideração sua frota, planeje seus recursos financeiros com precisão e reduza os gastos extras.',
-    accentColor: 'bg-stone-400'
-  },
-  {
-    icon: '',
-    title: 'distância mínima',
-    text: 'Calcule a menor distância entre diversos pontos e ganhe tempo em sua operação logística com o conceituado algoritmo de otimização RoutEasy.',
-    accentColor: 'bg-green-400'
-  },
-  {
-    icon: 'LuTable2',
-    title: 'Matriz de distancia',
-    text: 'Tenha acesso rápido às distâncias entre múltiplos pontos, simplifique o planejamento e tomadas de decisões logísticas com acesso a informações precisas geradas por pesquisa operacional',
-    accentColor: 'bg-yellow-500'
-  },
-  {
-    icon: '',
-    title: 'Postal code',
-    text: 'Converta CEP em endereços e coordenadas geográficas. Obtenha informações precisas para uma localização rápida e precisa dos seus clientes e pontos de entrega.',
-    accentColor: 'bg-redscale-100'
-  },
-  {
-    icon: 'BsTruck',
-    title: 'Motorista / Rotas',
-    text: 'Gerencie a atribuição de motoristas às rotas planejadas, considerando disponibilidade e restrições, maximizando a produtividade e garantindo uma distribuição eficaz.',
-    accentColor: 'bg-stone-400'
-  },
-  {
-    icon: 'TfiMoney',
-    title: 'Cálculo de frete',
-    text: 'Realize cálculos precisos do custo de transporte, torne sua precificação mais eficiente com base em variáveis como distância, tipo de veículo, carga ou até mesmo personalize suas regras, para determinar preços competitivos e lucrativos.',
-    accentColor: 'bg-green-400'
-  }
-]
 
 export default function SolutionsApi() {
   return (
@@ -146,6 +82,7 @@ export default function SolutionsApi() {
           style={{ objectFit: 'none' }}
         />
       </div>
+
       <Clients />
 
       <Section className="pb-36 pt-20">
@@ -161,7 +98,7 @@ export default function SolutionsApi() {
             image="/images/pictures/desenvolva-voce-mesmo02.png"
             side="right"
           />
-          <div className="h-[120px]"></div>
+          <div className="h-[30px] md:h-[120px]"></div>
           <CardDescription
             title={
               <Title className="text-[26px]/[32px]">
@@ -196,7 +133,7 @@ export default function SolutionsApi() {
       <FeaturedFrame
         title={
           <>
-            Beneficios das <TextHighlight>API's</TextHighlight> <br /> routeasy
+            Benefícios das <TextHighlight>API's</TextHighlight> <br /> routeasy
           </>
         }
         text="Desfrute de toda a inteligência da RoutEasy sem sair da sua plataforma, aproveitando a qualidade que temos a oferecer. Conte com robustez e escalabilidade para impulsionar sua eficiência operacional. Experimente agora e leve sua logística a novos patamares!"
