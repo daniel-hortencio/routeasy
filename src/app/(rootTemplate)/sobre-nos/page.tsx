@@ -8,25 +8,28 @@ import { Career } from './Career'
 import { CTA } from 'components/elements/CTA'
 import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 import { Text } from 'components/elements/Texts'
+import { Section } from 'components/elements/Section'
 
 export default function SobreNos() {
   return (
     <>
       <Banner />
       <History />
-      <div className="pb-20 lg:pb-8 mt-20 lg:mt-36">
-        <CTA
-          title="Quer trabalhar com a gente?"
-          description={
-            <Text className="text-grayscale-50 text-[15px] font-light">
-              A Routeasy está em busca de novos talentos. Venha fazer parte do
-              time!
-            </Text>
-          }
-          href="https://routeasy.gupy.io/"
-          buttonText="Conheça nossas vagas"
-        />
-      </div>
+      <Section className="pb-8">
+        <div className="pb-20 lg:pb-8 mt-20 lg:mt-36">
+          <CTA
+            title="Quer trabalhar com a gente?"
+            description={
+              <Text className="text-grayscale-50 text-[15px] font-light">
+                A Routeasy está em busca de novos talentos. Venha fazer parte do
+                time!
+              </Text>
+            }
+            href="https://routeasy.gupy.io/"
+            buttonText="Conheça nossas vagas"
+          />
+        </div>
+      </Section>
       <Statistics />
       <Culture />
       <Ceremonies />

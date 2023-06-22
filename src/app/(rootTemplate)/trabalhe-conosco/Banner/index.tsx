@@ -777,7 +777,7 @@ export const Banner = () => {
           </div>
         </div>
         {loaded ? (
-          <div className="grid grid-cols-3 gap-3 w-[390px] lg:w-[405px] mx-auto overflow-hidden rounded-md">
+          <div className="hidden md:grid grid-cols-3 gap-3 w-[390px] lg:w-[405px] mx-auto overflow-hidden rounded-md">
             <div ref={ref1} className="keen-slider" style={{ height: 437 }}>
               {list_col1.map((item, index) => (
                 <CardEmployee key={index} image={item.image} />

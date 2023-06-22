@@ -15,8 +15,8 @@ export const BoxVacancies = ({ title, tag, buttonText, buttonHref }) => {
               {title}
             </h1>
           </div>
-          <div className="">
-            <p className="">{tag}</p>
+          <div>
+            <div>{tag}</div>
           </div>
         </div>{' '}
         <div className="text-xs">
@@ -68,11 +68,11 @@ export const Vacancies = () => {
           <BoxVacancies
             title="Account Executive"
             tag={
-              <div
+              <span
                 className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
               >
                 Sales
-              </div>
+              </span>
             }
             buttonHref="https://routeasy.gupy.io/job/eyJzb3VyY2UiOiJndXB5X3B1YmxpY19wYWdlIiwiam9iSWQiOjQ3OTc4Nzd9?jobBoardSource=gupy_public_page"
             buttonText="Ver vagas"

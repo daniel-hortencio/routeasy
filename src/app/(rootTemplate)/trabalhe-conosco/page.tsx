@@ -11,12 +11,13 @@ import { Banner } from './Banner'
 import { FacesOfRoutEasy } from 'components/layouts/WebsiteLayout/FacesOfRoutEasy'
 import { Text } from 'components/elements/Texts'
 import { Ceremonies } from 'components/layouts/WebsiteLayout/Ceremonies'
+import { Section } from 'components/elements/Section'
 
 export default function TrabalheConosco() {
   return (
     <>
       <Banner />
-      <div className="pb-8">
+      <Section className="pb-8">
         <CTA
           title="Você sabia?"
           description={
@@ -28,7 +29,7 @@ export default function TrabalheConosco() {
           href="https://routeasy.gupy.io/"
           buttonText="Veja nossas vagas disponíveis"
         />
-      </div>
+      </Section>
       <Values />
       <FacesOfRoutEasy />
       <Culture />
