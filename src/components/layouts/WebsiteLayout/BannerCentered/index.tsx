@@ -20,7 +20,7 @@ export const BannerCentered = ({
 }: Props) => {
   return (
     <Section className="flex">
-      <div className="flex justify-center h-full relative min-h-[480px] md:min-h-[620px]">
+      <div className="flex justify-center h-[90vh] relative min-h-[480px] md:min-h-[620px]">
         <div className="md:mx-auto mt-[62px] lg:mx-0 flex flex-col justify-center w-[640px] text-center">
           {title}
           <Text className="text-[15px] text-grayscale-50 pb-8">

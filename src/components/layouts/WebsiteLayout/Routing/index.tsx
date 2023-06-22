@@ -14,7 +14,8 @@ export const Routing = () => {
   const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: 2.4
+      perView: 2.1,
+      spacing: 20
     },
     breakpoints: {
       '(min-width: 600px)': {
@@ -47,9 +48,9 @@ export const Routing = () => {
       <div className="lg:hidden">
         <div ref={sliderRef} className="keen-slider">
           <div className="w-full lg:mb-12">
-            <div className="w-full m-auto flex justify-between">
+            <div className="w-full m-auto flex justify-between pl-5">
               {RoutingList.map((card, index) => (
-                <div className="keen-slider__slide pl-5" key={index}>
+                <div className="keen-slider__slide" key={index}>
                   <RoutingCard
                     title={card.title}
                     key={index}

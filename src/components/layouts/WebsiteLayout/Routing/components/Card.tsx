@@ -11,7 +11,7 @@ export const RoutingCard = ({
   return (
     <div
       onClick={onClick}
-      className={`rounded-lg border w-full lg:w-44 h-40 border-grayscale-500 hover:bg-grayscale-600 cursor-pointer flex items-center justify-center ${
+      className={`rounded-lg border lg:w-44 h-40 border-grayscale-500 hover:bg-grayscale-600 cursor-pointer flex items-center justify-center ${
         isActive && 'bg-grayscale-500'
       }`}
     >
