@@ -5,7 +5,7 @@ import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import S from './styles.module.css'
 import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
-export const BoxVacancies = ({ title, tag, button }) => {
+export const BoxVacancies = ({ title, tag, buttonText, buttonHref }) => {
   return (
     <div>
       <div className="grid gap-5 grid-cols-1 sm:grid-cols-[1fr_8rem] mb-4 mt-4 items-center pb-4 border-b border-grayscale-500">
@@ -20,8 +20,8 @@ export const BoxVacancies = ({ title, tag, button }) => {
           </div>
         </div>{' '}
         <div className="text-xs">
-          <LinkExternal href="https://routeasy.gupy.io/">
-            <ButtonSecondary>{button}</ButtonSecondary>
+          <LinkExternal href={buttonHref}>
+            <ButtonSecondary>{buttonText}</ButtonSecondary>
           </LinkExternal>
         </div>
       </div>
@@ -59,45 +59,47 @@ export const Vacancies = () => {
             Confira nossas oportunidades e faça parte dessa jornada de sucesso!
           </Text>
           <div className="lg:w-36 lg:h-10 text-sm mb-2">
-            <ButtonSecondary>Ver todas as vagas</ButtonSecondary>
+            <LinkExternal href="https://routeasy.gupy.io/">
+              <ButtonSecondary>Ver todas as vagas</ButtonSecondary>
+            </LinkExternal>
           </div>
         </div>
         <div className="flex-col">
           <BoxVacancies
-            title="Ux Designer - Pleno"
+            title="Account Executive"
             tag={
-              <div className="w-16 text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
-                Produto
+              <div
+                className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
+              >
+                Sales
               </div>
             }
-            button="Ver vagas"
+            buttonHref="https://routeasy.gupy.io/job/eyJzb3VyY2UiOiJndXB5X3B1YmxpY19wYWdlIiwiam9iSWQiOjQ3OTc4Nzd9?jobBoardSource=gupy_public_page"
+            buttonText="Ver vagas"
           />
           <BoxVacancies
-            title="Front-End React - Senior"
+            title="Business Development Representative [BDR]"
             tag={
-              <div className="w-[121px] text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
-                Desenvolvimento
+              <div
+                className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
+              >
+                Sales
               </div>
             }
-            button="Ver vagas"
+            buttonHref="https://routeasy.gupy.io/job/eyJzb3VyY2UiOiJndXB5X3B1YmxpY19wYWdlIiwiam9iSWQiOjQ4MDEyNzB9?jobBoardSource=gupy_public_page"
+            buttonText="Ver vagas"
           />
           <BoxVacancies
-            title="Analista - Junior"
+            title="Sales Ops"
             tag={
-              <div className="w-20 text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
-                Financeiro
+              <div
+                className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
+              >
+                Sales
               </div>
             }
-            button="Ver vagas"
-          />
-          <BoxVacancies
-            title="Tech Recruiter - Pleno"
-            tag={
-              <div className="w-[131px] text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px]">
-                Recursos Humanos
-              </div>
-            }
-            button="Ver vagas"
+            buttonHref="https://routeasy.gupy.io/job/eyJzb3VyY2UiOiJndXB5X3B1YmxpY19wYWdlIiwiam9iSWQiOjQ4MDk2ODR9?jobBoardSource=gupy_public_page"
+            buttonText="Ver vagas"
           />
         </div>
       </div>
