@@ -75,23 +75,20 @@ export const FormNewsletter = () => {
   }
 
   return (
-    <form
-      onSubmit={handleSubmitNewsletter}
-      className="items-center rounded overflow-hidden"
-    >
+    <form onSubmit={handleSubmitNewsletter} className="items-center rounded">
       <div className="flex h-14 lg:h-12">
         <input
           placeholder="Escreva seu e-mail"
-          className="h-full w-full px-6 border border-transparent focus:border-primary-50 hover:border-primary focus:outline-none bg-grayscale-500 focus:bg-grayscale-400 text-white placeholder:text-grayscale-200"
+          className="h-full text-sm w-full px-3 rounded-l-md border border-transparent focus:border-primary-50 hover:border-primary focus:outline-none bg-grayscale-500 focus:bg-grayscale-400 text-white placeholder:text-grayscale-200"
           value={email}
           onChange={e => handleChange(e.target.value)}
         />
         <button
           type="submit"
-          className="bg-primary-100 h-full w-[123px] md:w-40 hover:bg-primary-200 text-white"
+          className="text-sm uppercase bg-primary-100 h-full w-[123px] rounded-r-md md:w-40 hover:bg-primary-200 text-white px-2"
           disabled={isLoading}
         >
-          {isLoading ? <PulseLoader color="#fff" size={12} /> : 'INSCREVER'}
+          {isLoading ? <PulseLoader color="#fff" size={12} /> : 'Inscrever'}
         </button>
       </div>
       <p className="h-5 text-sm text-yellow-500 block">{emailError}</p>

@@ -15,7 +15,7 @@ const ContentItem = ({
 }: IContentProps) => {
   return (
     <div className="flex justify-between lg:w-[878px] m-auto p-6 md:p-8 rounded-lg bg-grayscale-500">
-      <div className="md:w-[56%] pr-8">
+      <div className="md:w-[56%] md:pr-8">
         <h3 className="mb-2 md:mb-3 text-[32px] font-medium uppercase">
           {title}
         </h3>

@@ -15,7 +15,7 @@ interface Props {
 }
 
 export const Text = ({ children, style, className = '' }: Props) => {
-  const getClassName = () => `${open_sans.className} ${className}`
+  const getClassName = () => `${open_sans.className} ${className} block`
 
   return (
     <span className={getClassName()} style={style}>

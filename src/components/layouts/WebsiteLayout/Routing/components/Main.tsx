@@ -18,11 +18,11 @@ export const RoutingMainContent = ({
           <h3 className="font-white text-2xl font-semibold uppercase mb-3.5">
             {title}
           </h3>
-          <Text className="text-grayscale-50 text-[13px] font-light mb-3.5">
+          <Text className="text-grayscale-50 block text-[13px] font-light mb-3.5">
             {text}
           </Text>
 
-          <div className="md:w-28">
+          <div className="md:w-28 mt-5">
             <ButtonPrimary href={link}>Saiba mais</ButtonPrimary>
           </div>
         </div>
