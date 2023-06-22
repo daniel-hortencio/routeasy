@@ -8,7 +8,7 @@ interface IListFeaturesProps {
 export const ListFeatures = ({ listFeatures }: IListFeaturesProps) => {
   return (
     <Section>
-      <div className="flex flex-col md:flex-row gap-8 pb-16">
+      <div className="flex flex-col md:flex-row gap-8 md:pb-16">
         {listFeatures.map((card, index) => (
           <CardFeature
             key={index}

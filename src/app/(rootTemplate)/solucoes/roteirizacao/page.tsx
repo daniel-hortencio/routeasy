@@ -6,7 +6,7 @@ import { Comparison } from 'components/layouts/WebsiteLayout/Comparison'
 import { Maestro } from 'components/layouts/WebsiteLayout/Maestro'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
-import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
+// import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 import { CTA } from 'components/elements/CTA'
 import { Section } from 'components/elements/Section'
 import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
@@ -45,7 +45,7 @@ export default function SolutionsRoteirizacao() {
         </div>
       </BannerCentered>
       <ListFeatures listFeatures={listFeaturesCard} />
-      <Section className="mb-32">
+      <Section className="mb-32 hidden md:block">
         <div className="w-full lg:w-[962px] mx-auto my-[72px]">
           <TabsHorizontal featureContent={FeatureList} />
         </div>

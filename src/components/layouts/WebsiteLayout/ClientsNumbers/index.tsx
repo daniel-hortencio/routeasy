@@ -23,21 +23,19 @@ const ClientContent = ({ logo, cards }: IClientContentProps) => {
   return (
     <>
       <div className="relative pt-0 md:pt-20 pb-16 md:pb-28 flex items-center flex-col">
-        <div className="mb-24">
+        <div className="mb-12 md:mb-24">
           <Image src={logo} alt="Detalhe" width={242} height={59} />
         </div>
-        <div className="flex gap-3 justify-between">
+        <div className="flex gap-3 justify-center md:justify-between flex-wrap">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="rounded-lg border border-grayscale-500 pt-9 pb-10 text-center w-[200px] h-[200px]"
+              className="rounded-lg border border-grayscale-500 pt-9 pb-10 text-center w-[calc(50%-0.75rem)] md:w-[200px] md:h-[200px]"
             >
               <p className="text-[56px] font-semibold text-white mb-1">
                 {card.number}
               </p>
-              <p className="text-small px-2 text-white font-light">
-                {card.label}
-              </p>
+              <p className="text-sm px-2 text-white font-light">{card.label}</p>
             </div>
           ))}
         </div>
