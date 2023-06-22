@@ -22,6 +22,7 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import ReactPlayer from 'react-player'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const MySwal = withReactContent(Swal)
 
@@ -38,7 +39,12 @@ export default function SolutionsRoteirizacao() {
   function getModal() {
     MySwal.fire({
       html: (
-        <div className="bg-grayscale-500 flex justify-center w-full pt-[50%] relative max-w-[979px] mx-auto">
+        <div className="flex justify-center w-full pt-[50%] relative max-w-[979px] mx-auto">
+          <Image
+            fill
+            src="/images/pictures/video-player-thumbnail.png"
+            alt="Thumbnail"
+          />
           {hasWindow && (
             <ReactPlayer
               width="100%"
@@ -53,7 +59,7 @@ export default function SolutionsRoteirizacao() {
                 opacity: isPlaying ? 1 : 0,
                 transition: 'opacity 0.2s'
               }}
-              url="https://www.youtube.com/watch?v=YB9XKRVeAmE"
+              url="https://www.youtube.com/watch?v=L3WzRR5Ugks&t=1s"
             />
           )}
         </div>

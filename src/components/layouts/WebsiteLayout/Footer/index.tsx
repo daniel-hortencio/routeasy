@@ -16,9 +16,9 @@ export const Footer = () => {
 
   const links_solutions = [
     { label: 'Todas soluções', href: 'soluções' },
-    { label: 'Roteirizador', href: 'roteirizacao' },
-    { label: "API's", href: 'api' },
-    { label: 'Onboarding', href: 'onboarding' }
+    { label: 'Roteirizador', href: 'solucoes/roteirizacao' },
+    { label: "API's", href: 'solucoes/api' },
+    { label: 'Onboarding', href: 'solucoes/onboarding' }
   ]
 
   const links_routeasy = [

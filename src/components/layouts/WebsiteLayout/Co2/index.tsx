@@ -48,7 +48,7 @@ export const Co2 = () => {
             CO<sub className="text-6xl">2</sub>
           </span>
         </h1>
-        <ButtonWhite href="">Veja alguns cases de sucesso</ButtonWhite>
+        <ButtonWhite href="/">Veja alguns cases de sucesso</ButtonWhite>
       </BannerOverlay>
     </>
   )
