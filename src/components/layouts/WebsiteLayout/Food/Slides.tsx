@@ -98,7 +98,7 @@ export const foodSlides = [
         <div className={`pt-[180%] relative`}>
           <Image
             fill
-            src="/images/pictures/cafe_1.png"
+            src="/images/pictures/bolo_1.png"
             alt="Café da tarde"
             style={{
               position: 'absolute',
@@ -110,16 +110,16 @@ export const foodSlides = [
         </div>
         <div className={`grid gap-2`}>
           <div className="relative">
-            <Image fill src="/images/pictures/cafe_2.png" alt="Café da tarde" />
+            <Image fill src="/images/pictures/bolo_2.png" alt="Café da tarde" />
           </div>
           <div className="relative">
-            <Image fill src="/images/pictures/cafe_3.png" alt="Café da tarde" />
+            <Image fill src="/images/pictures/bolo_3.png" alt="Café da tarde" />
           </div>
         </div>
         <div className={`pt-[180%] relative`}>
           <Image
             fill
-            src="/images/pictures/cafe_4.png"
+            src="/images/pictures/bolo_4.png"
             alt="Café da tarde"
             style={{
               position: 'absolute',
