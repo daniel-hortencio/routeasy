@@ -15,10 +15,10 @@ export const ceremoniesSlides = [
     grid: (
       <div className={`mb-8 md:mb-0`}>
         <div className="grid grid-cols-3 gap-2 mb-2">
-          <div className={`pt-[180%] relative`}>
+          <div className={`pt-[170%] relative`}>
             <Image
               fill
-              src="/images/pictures/friday_1.png"
+              src="/images/pictures/friday-1.png"
               alt="Friday Day"
               style={{
                 position: 'absolute',
@@ -32,22 +32,22 @@ export const ceremoniesSlides = [
             <div className="relative">
               <Image
                 fill
-                src="/images/pictures/friday_2.png"
+                src="/images/pictures/friday-2.png"
                 alt="Friday Day"
               />
             </div>
             <div className="relative">
               <Image
                 fill
-                src="/images/pictures/friday_3.png"
+                src="/images/pictures/friday-3.png"
                 alt="Friday Day"
               />
             </div>
           </div>
-          <div className={`pt-[180%] relative`}>
+          <div className={`pt-[170%] relative`}>
             <Image
               fill
-              src="/images/pictures/friday_4.png"
+              src="/images/pictures/friday-4.png"
               alt="Friday Day"
               style={{
                 position: 'absolute',
@@ -61,7 +61,7 @@ export const ceremoniesSlides = [
         <div className={`pt-[30%] relative`}>
           <Image
             fill
-            src="/images/pictures/friday_5.png"
+            src="/images/pictures/friday-5.png"
             alt="Friday Day"
             style={{
               position: 'absolute',
@@ -86,10 +86,10 @@ export const ceremoniesSlides = [
       <div>
         <div className={`grid grid-cols-4 gap-2 mb-2 w-full`}>
           {[
-            { src: '/images/pictures/techday_1.png', alt: 'Tech Day' },
-            { src: '/images/pictures/techday_2.png', alt: 'Tech Day' },
-            { src: '/images/pictures/techday_3.png', alt: 'Tech Day' },
-            { src: '/images/pictures/techday_4.png', alt: 'Tech Day' }
+            { src: '/images/pictures/techday1.png', alt: 'Tech Day' },
+            { src: '/images/pictures/techday2.png', alt: 'Tech Day' },
+            { src: '/images/pictures/techday3.png', alt: 'Tech Day' },
+            { src: '/images/pictures/techday4.png', alt: 'Tech Day' }
           ].map(image => (
             <div className="relative py-[50%]" key={image.src}>
               <Image
@@ -108,10 +108,10 @@ export const ceremoniesSlides = [
         </div>
 
         <div className={`grid grid-cols-2 gap-2 relative pb-8 md:pb-0`}>
-          <div className="relative py-[83%]">
+          <div className="relative py-[62%]">
             <Image
               fill
-              src="/images/pictures/techday_5.png"
+              src="/images/pictures/techday5.png"
               alt="Tech Day"
               style={{
                 objectFit: 'cover'
@@ -120,10 +120,10 @@ export const ceremoniesSlides = [
           </div>
           <div className={`grid gap-2`}>
             <div className="relative">
-              <Image fill src="/images/pictures/techday_6.png" alt="Tech Day" />
+              <Image fill src="/images/pictures/techday6.png" alt="Tech Day" />
             </div>
             <div className="relative">
-              <Image fill src="/images/pictures/techday_7.png" alt="Tech Day" />
+              <Image fill src="/images/pictures/techday7.png" alt="Tech Day" />
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ export const ceremoniesSlides = [
         </div>
 
         <div className={`grid grid-cols-2 gap-2 relative pb-8 md:pb-0`}>
-          <div className="relative py-[83%]">
+          <div className="relative py-[62%]">
             <Image
               fill
               src="/images/pictures/salesday_5.png"
@@ -197,7 +197,7 @@ export const ceremoniesSlides = [
   {
     title: (
       <>
-        Sales<TextHighlight>Day</TextHighlight>
+        Pet<TextHighlight>Day</TextHighlight>
       </>
     ),
     description:
@@ -228,7 +228,7 @@ export const ceremoniesSlides = [
         </div>
 
         <div className={`grid grid-cols-2 gap-2 relative pb-8 md:pb-0`}>
-          <div className="relative py-[80%]">
+          <div className="relative py-[62%]">
             <Image
               fill
               src="/images/pictures/petday_5.png"

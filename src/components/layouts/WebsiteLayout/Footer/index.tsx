@@ -3,6 +3,7 @@ import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 import { Section } from 'components/elements/Section'
 import { Text, Title } from 'components/elements/Texts'
 import Link from 'next/link'
+import { FormNewsletter } from './FormNewsletter'
 
 export const Footer = () => {
   const links_navegation = [
@@ -140,15 +141,7 @@ export const Footer = () => {
           </Text>
         </div>
 
-        <div className="h-14 lg:h-12 flex items-center rounded overflow-hidden">
-          <input
-            placeholder="Escreva seu e-mail"
-            className="bg-grayscale-600 h-full px-6 w-full"
-          />
-          <button className="bg-primary-100 text-sm h-full w-[123px] md:w-40 hover:bg-primary-200 text-white">
-            INSCREVER
-          </button>
-        </div>
+        <FormNewsletter />
       </div>
 
       <p className="text-center lg:text-left px-10 pt-7 text-sm text-grayscale-100 w-full h-full font-light">
