@@ -1,4 +1,5 @@
 import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
+import Image from 'next/image'
 
 export const listDifferentials: IIconCardColoredProps[] = [
   {
@@ -8,7 +9,14 @@ export const listDifferentials: IIconCardColoredProps[] = [
     accentColor: 'bg-bluescale-50'
   },
   {
-    icon: 'AiOutlineCluster',
+    icon: (
+      <Image
+        src="/images/icons/cluster.svg"
+        width={24}
+        height={24}
+        alt="Cluster"
+      />
+    ),
     title: 'Cluster',
     text: 'Agrupe pontos de serviços próximos com o refinado algoritmo genético RoutEasy e aumente a eficiência de processamento do seu planejamento logístico com uso de inteligência.',
     accentColor: 'bg-red-500'
@@ -26,25 +34,48 @@ export const listDifferentials: IIconCardColoredProps[] = [
     accentColor: 'bg-indigo-500'
   },
   {
-    icon: '/images/pictures/mockup-notebook.png',
+    icon: (
+      <Image
+        src="/images/icons/pedagio.svg"
+        width={24}
+        height={24}
+        alt="Pedágio"
+      />
+    ),
     title: 'Pedágio',
     text: 'Calcule os custos de pedágio em suas rotas levando em consideração sua frota, planeje seus recursos financeiros com precisão e reduza os gastos extras.',
     accentColor: 'bg-stone-400'
   },
   {
-    icon: '',
+    icon: (
+      <Image src="/images/icons/rotas.svg" width={24} height={24} alt="Rotas" />
+    ),
     title: 'distância mínima',
     text: 'Calcule a menor distância entre diversos pontos e ganhe tempo em sua operação logística com o conceituado algoritmo de otimização RoutEasy.',
     accentColor: 'bg-green-400'
   },
   {
-    icon: 'LuTable2',
+    icon: (
+      <Image
+        src="/images/icons/table.svg"
+        width={24}
+        height={24}
+        alt="Distância"
+      />
+    ),
     title: 'Matriz de distancia',
     text: 'Tenha acesso rápido às distâncias entre múltiplos pontos, simplifique o planejamento e tomadas de decisões logísticas com acesso a informações precisas geradas por pesquisa operacional',
     accentColor: 'bg-yellow-500'
   },
   {
-    icon: '',
+    icon: (
+      <Image
+        src="/images/icons/postal-code.svg"
+        width={24}
+        height={24}
+        alt="Postal Code"
+      />
+    ),
     title: 'Postal code',
     text: 'Converta CEP em endereços e coordenadas geográficas. Obtenha informações precisas para uma localização rápida e precisa dos seus clientes e pontos de entrega.',
     accentColor: 'bg-redscale-100'

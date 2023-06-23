@@ -1,7 +1,7 @@
 import { Icon } from 'components/elements/Icon'
 
 import { IIconCardColoredProps } from './types'
-import { Text } from '../Texts'
+import { Text, Title } from '../Texts'
 
 export const IconCardColored = ({
   icon,
@@ -30,7 +30,7 @@ export const IconCardColored = ({
           icon
         )}
       </div>
-      <div className="text-lg font-normal py-4">{title}</div>
+      <Title className="text-lg font-normal py-4">{title}</Title>
       <Text
         className={`text-grayscale-200 font-light ${
           center ? 'text-xs' : 'text-sm/[24px]'

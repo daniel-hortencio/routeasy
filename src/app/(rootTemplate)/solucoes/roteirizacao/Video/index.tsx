@@ -13,7 +13,7 @@ export default function Video() {
   }, [])
 
   return (
-    <div className="flex justify-center w-full pt-[50%] relative max-w-[1600px] mx-auto">
+    <div className="flex justify-center w-full pt-[50%] relative max-w-[1300px] mx-auto">
       <Image
         fill
         src="/images/pictures/video-player-thumbnail.png"
