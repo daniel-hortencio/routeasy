@@ -2,21 +2,25 @@ import { ContactArea } from './ContactArea'
 import { FAQ } from 'components/layouts/WebsiteLayout/Faq'
 import { ContactForm } from 'components/layouts/WebsiteLayout/ContactForm'
 import { Section } from 'components/elements/Section'
-import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
-import { TextHighlight, Title } from 'components/elements/Texts'
+import { TextHighlight, Title, Text } from 'components/elements/Texts'
 
 export default function Contact() {
   return (
     <>
-      <BannerCentered
-        title={
-          <Title className="text-[35px] lg:text-[40px] pb-5">
-            Quer <TextHighlight>falar </TextHighlight>com a gente?
-          </Title>
-        }
-        description="É só escolher o setor abaixo e enviar sua mensagem!
-        Nossa equipe está pronta para te atender."
-      />
+      <Section className="flex">
+        <div className="flex justify-center relative pt-40 lg:pt-32 pb-28">
+          <div className="md:mx-auto mt-[62px] lg:mx-0 flex flex-col justify-center w-[640px] text-center">
+            <Title className="text-[35px] lg:text-[40px] pb-5">
+              Quer <TextHighlight>falar </TextHighlight>com a gente?
+            </Title>
+            <Text className="text-[15px] text-grayscale-50 pb-8">
+              É só escolher o setor abaixo e enviar sua mensagem! Nossa equipe
+              está pronta para te atender.
+            </Text>
+          </div>
+        </div>
+      </Section>
+
       <ContactArea />
       <FAQ />
       <Section>
