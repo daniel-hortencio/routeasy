@@ -11,18 +11,20 @@ interface Props {
   children: ReactNode
   className?: string
   style?: CSSProperties
+  ref?: any
 }
 
 export const Title = ({
   children,
   className = '',
   as: Element = 'h1',
-  style
+  style,
+  ref
 }: Props) => {
   const getClassName = () => `${poppins.className} uppercase ${className}`
 
   return (
-    <Element className={`${getClassName()}`} style={style}>
+    <Element className={`${getClassName()}`} style={style} ref={ref}>
       {children}
     </Element>
   )
