@@ -20,50 +20,15 @@ import { ClientsNumbers } from 'components/layouts/WebsiteLayout/ClientsNumbers'
 import { ButtonPrimary } from 'components/elements/Button'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import ReactPlayer from 'react-player'
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import Video from './Video'
 
 const MySwal = withReactContent(Swal)
 
 export default function SolutionsRoteirizacao() {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [hasWindow, setHasWindow] = useState(false)
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setHasWindow(true)
-    }
-  }, [])
-
   function getModal() {
     MySwal.fire({
-      html: (
-        <div className="flex justify-center w-full pt-[50%] relative max-w-[979px] mx-auto">
-          <Image
-            fill
-            src="/images/pictures/video-player-thumbnail.png"
-            alt="Thumbnail"
-          />
-          {hasWindow && (
-            <ReactPlayer
-              width="100%"
-              height="100%"
-              onPlay={() => setIsPlaying(true)}
-              onEnded={() => setIsPlaying(false)}
-              controls={true}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                opacity: isPlaying ? 1 : 0,
-                transition: 'opacity 0.2s'
-              }}
-              url="https://www.youtube.com/watch?v=L3WzRR5Ugks&t=1s"
-            />
-          )}
-        </div>
-      ),
+      width: '72rem',
+      html: <Video />,
       showConfirmButton: false
     })
   }
