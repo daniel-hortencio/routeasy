@@ -96,7 +96,7 @@ export const Solutions = () => {
     },
     {
       title: 'Automação',
-      src: '/images/pictures/Screen_automacao.svg',
+      src: '/images/gifs/Gif_Automacao.gif',
       icon: {
         src: '/images/icons/home-solutions-automacao.svg',
         alt: 'Automação'
@@ -749,7 +749,7 @@ export const Solutions = () => {
           </Text>
         </div>
         <div className="md:w-32 m-auto mb-24">
-          <ButtonPrimary href="/">Saiba mais</ButtonPrimary>
+          <ButtonPrimary href="/solucoes">Saiba mais</ButtonPrimary>
         </div>
       </div>
     </>

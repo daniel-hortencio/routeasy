@@ -8,7 +8,7 @@ const routes = (pathname: string) => [
         href: '/solucoes/'
       },
       { label: 'Roteirizador', href: '/solucoes/roteirizacao' },
-      { label: 'Api', href: '/solucoes/api' },
+      { label: 'API', href: '/solucoes/api' },
       { label: 'Onboarding', href: '/solucoes/onboarding' }
     ],
     isActive: pathname?.startsWith('/solucoes')
