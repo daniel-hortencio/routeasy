@@ -76,20 +76,17 @@ export const list_area = [
 export const Values = () => {
   const [sliderRef] = useKeenSlider({
     slides: {
-      spacing: 20,
       perView: 1.4
     },
     breakpoints: {
       '(min-width: 540px)': {
         slides: {
-          perView: 2.25,
-          spacing: 20
+          perView: 2.25
         }
       },
       '(min-width: 768px)': {
         slides: {
-          perView: 3.25,
-          spacing: 20
+          perView: 3.25
         }
       }
     }
@@ -98,7 +95,7 @@ export const Values = () => {
   return (
     <>
       <Section
-        className="pb-20"
+        className="pb-4 lg:pb-12"
         title={<Title>Nossos valores</Title>}
         subtitle={
           <Text className="text-grayscale-50 text-[15px] font-light">
@@ -124,7 +121,7 @@ export const Values = () => {
         <div ref={sliderRef} className="keen-slider">
           {list_area.map((item, index) => (
             <div
-              className={`keen-slider__slide ${index === 0 && 'ml-5'} `}
+              className={`keen-slider__slide ${index === 0 ? 'px-5' : 'pr-5'} `}
               key={index}
             >
               <CardValues

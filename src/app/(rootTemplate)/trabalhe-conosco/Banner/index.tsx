@@ -762,7 +762,7 @@ export const Banner = () => {
     <Section className="flex mb-24 lg:mb-32">
       <div className="lg:flex items-center lg:h-full relative pt-56 lg:pt-0 lg:mt-20">
         <div className="md:max-w-xl md:mx-auto lg:pr-20 lg:mx-0 flex flex-col justify-center w-full h-full text-center lg:text-left mb-24 lg:mb-0">
-          <Title className="text-5xl lg:text-[50px]/[68px]">
+          <Title className="text-5xl lg:text-[50px]/[68px] mb-10">
             Carreira ROUT<TextHighlight>EASY</TextHighlight>
           </Title>
           <Text className="text-grayscale-50 text-[15px] font-light pb-8">
