@@ -24,7 +24,11 @@ export const IconCardColored = ({
       <div
         className={`inline-flex items-center justify-center ${accentColor} rounded-md w-12 h-12 m-auto md:m-0`}
       >
-        <Icon color="white" name={icon ? icon.toString() : ''} size={24} />
+        {typeof icon === 'string' ? (
+          <Icon color="white" name={icon ? icon.toString() : ''} size={24} />
+        ) : (
+          icon
+        )}
       </div>
       <div className="text-lg font-normal py-4">{title}</div>
       <Text
