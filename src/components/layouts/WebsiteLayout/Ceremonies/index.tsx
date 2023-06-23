@@ -64,19 +64,29 @@ export const Ceremonies = () => {
           <Text className="text-[13px]/[20px] text-grayscale-50">
             {ceremoniesSlides[currentSlide].description}
           </Text>
-          <div className="grid grid-cols-2 gap-2 w-16  mx-auto md:hidden mt-10">
+          <div className="grid grid-cols-2 gap-2 w-[104px] mx-auto md:hidden mt-10">
             <button
               onClick={() => handleChangeSlide(previous)}
-              className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300"
+              className="bg-white rounded-full w-12 h-12 flex items-center justify-center fill-grayscale-300"
             >
-              <Icon name="FiArrowLeft" size={14} />
+              <Icon name="FiArrowLeft" size={20} />
             </button>
             <button
               onClick={() => handleChangeSlide(next)}
-              className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300"
+              className="bg-white rounded-full w-12 h-12 flex items-center justify-center fill-grayscale-300"
             >
-              <Icon name="FiArrowRight" size={14} />
+              <Icon name="FiArrowRight" size={20} />
             </button>
+          </div>
+          <div className="flex md:hidden items-end w-full h-full justify-center mt-10">
+            {ceremoniesSlides.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full bg-primary-100 dot ${
+                  index === currentSlide ? 'opacity-100' : 'opacity-20'
+                } ${index === 0 ? 'mx-2' : 'mr-2'}`}
+              />
+            ))}
           </div>
         </div>
       </div>
