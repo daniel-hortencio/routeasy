@@ -55,17 +55,13 @@ export const Co2 = () => {
             </span>
           </Title>
         </div>
-        <h1 className="lg:hidden mb-12">
+        <h1 className="lg:hidden">
           <span className="block text-[88px] font-semibold">{count}</span>
-          <span className="block text-4xl mb-2 font-bold">
-            toneladas <br />
-            de
-          </span>
+          <span className="block text-4xl font-bold mb-4">toneladas de</span>
           <span className="block text-7xl mb-6 font-semibold">
-            CO<sub className="text-6xl">2</sub>
+            CO<sub className="text-5xl">2</sub>
           </span>
         </h1>
-        <ButtonWhite href="/">Veja alguns cases de sucesso</ButtonWhite>
       </BannerOverlay>
     </>
   )

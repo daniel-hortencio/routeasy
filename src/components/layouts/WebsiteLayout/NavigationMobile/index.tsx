@@ -23,8 +23,6 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
     }`
   }
 
-  console.log({ pathname })
-
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])

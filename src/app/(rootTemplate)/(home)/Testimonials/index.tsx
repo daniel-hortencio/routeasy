@@ -13,7 +13,6 @@ export const Testimonials = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log('TESTE')
       if (count < 600) {
         setCount(prevCount => prevCount + (prevCount < 100 ? 50 : 100))
       }

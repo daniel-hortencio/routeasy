@@ -51,7 +51,7 @@ export const SlideTestimonials = () => {
         <h2 className="text-[22px] uppercase font-semibold">{name}</h2>
         <p className="text-[13px] mb-8">{position}</p>
 
-        <p className="text-sm h-44">
+        <p className="text-base h-40">
           <Text className={`${S.Quote} text-sm font-light text-grayscale-50`}>
             {testimonial}
           </Text>

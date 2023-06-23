@@ -133,7 +133,7 @@ export const Footer = () => {
       <div className="border-y-2 border-grayscale-400 lg:flex lg:items-center justify-between py-9 px-4 md:px-10">
         <div className="lg:pr-32">
           <Title className="text-center text-base lg:text-left uppercase mb-1">
-            Escreva-se em nossa newsletter
+            Inscreva-se em nossa newsletter
           </Title>
           <Text className="text-center lg:text-left mb-5 lg:mb-0 text-sm text-grayscale-100 font-light">
             Fique por dentro de tudo o que acontece com a Routeasy e com o
