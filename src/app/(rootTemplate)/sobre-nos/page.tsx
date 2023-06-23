@@ -30,7 +30,17 @@ export default function SobreNos() {
           />
         </div>
       </Section>
-      <Statistics />
+      <Statistics
+        data={[
+          { title: '40%', description: 'Redução de custos de transporte' },
+          { title: '+300', description: 'Clientes novos' },
+          { title: '8M', description: 'Serviços roteirizados por mês' },
+          {
+            title: '60%',
+            description: 'Redução de atrasos e erros nas operações'
+          }
+        ]}
+      />
       <Culture />
       <Ceremonies />
       <Events />

@@ -188,7 +188,24 @@ export default function SolutionsApi() {
           </div>
         </div>
       </Section>
-      <Statistics />
+      <Statistics
+        data={[
+          {
+            title: '99%',
+            description: 'de satisfação de capacitação ao cliente'
+          },
+          { title: '9.8', description: 'Nota de NPS no atendimento' },
+          {
+            title: (
+              <>
+                1.0<small className="text-2xl">min</small>
+              </>
+            ),
+            description: 'tempo de resposta de suporte ao cliente'
+          },
+          { title: '95.7%', description: 'SLA taxa de realização' }
+        ]}
+      />
       <Testimonials />
       <CardListColored // Cheila
         cards={listDifferentials}
