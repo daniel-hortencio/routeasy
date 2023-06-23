@@ -1,19 +1,23 @@
-.RightQuote::before {
+.Quote::before {
   content: '“';
   font-family: 'Oldenburg';
+  position: absolute;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 24px;
-  color: #3CBC8D;
+  color: #3cbc8d;
+  transform: translatex(-150%);
 }
 
-.LeftQuote::after {
+.Quote::after {
   content: '”';
+  position: absolute;
   font-family: 'Oldenburg';
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
-  line-height: 24px;
-  color: #3CBC8D;
+  line-height: 13px;
+  color: #3cbc8d;
+  transform: translateY(50%) translateX(25%);
 }
