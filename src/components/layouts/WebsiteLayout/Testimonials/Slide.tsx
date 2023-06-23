@@ -52,7 +52,7 @@ export const SlideTestimonials = () => {
         <p className="text-[13px] mb-8">{position}</p>
 
         <p className="text-sm h-44">
-          <Text className={`${S.Quote} text-[13px]/[22px] font-light`}>
+          <Text className={`${S.Quote} text-sm font-light text-grayscale-50`}>
             {testimonial}
           </Text>
         </p>
