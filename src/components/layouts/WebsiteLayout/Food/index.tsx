@@ -72,7 +72,7 @@ export const Food = () => {
           <div className="hidden md:block mt-6 max-w-[160px]">
             <ButtonSecondary>Junte-se a nós</ButtonSecondary>
           </div>
-          <div className="grid grid-cols-2 gap-2 w-16  mx-auto md:hidden mt-10">
+          <div className="grid grid-cols-2 gap-2 w-16 mx-auto md:hidden mt-10">
             <button
               onClick={() => handleChangeSlide(previous)}
               className="bg-white rounded-full w-8 h-8 flex items-center justify-center fill-grayscale-300"
@@ -85,6 +85,16 @@ export const Food = () => {
             >
               <Icon name="FiArrowRight" size={14} />
             </button>
+          </div>
+          <div className="flex md:hidden items-end w-full h-full justify-center mt-10">
+            {foodSlides.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full bg-primary-100 dot ${
+                  index === currentSlide ? 'opacity-100' : 'opacity-20'
+                } ${index === 0 ? 'mx-2' : 'mr-2'}`}
+              />
+            ))}
           </div>
         </div>
       </div>
