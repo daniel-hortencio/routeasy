@@ -82,17 +82,24 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
   )
 }
 
+interface LinkDropDownMobileProps extends Omit<Props, 'isLast' | 'isActive'> {
+  isOpen: boolean
+  setIsOpen: (value: string) => void
+}
+
 export const LinkDropDownMobile = ({
   label,
-  sub_items
-}: Omit<Props, 'isLast' | 'isActive'>) => {
-  const [openSubMenu, setOpenSubMenu] = useState(false)
+  sub_items,
+  isOpen,
+  setIsOpen
+}: LinkDropDownMobileProps) => {
+  // const [openSubMenu, setOpenSubMenu] = useState(false)
 
   const pathname = usePathname()
 
-  useEffect(() => {
+  /*   useEffect(() => {
     setOpenSubMenu(false)
-  }, [pathname])
+  }, [pathname]) */
 
   const getClassName = () => {
     return `font-semibold mb-6 text-lg uppercase hover:text-primary-200 transition-all `
@@ -108,13 +115,11 @@ export const LinkDropDownMobile = ({
             ? 'border-primary'
             : 'border-transparent'
         }`}
-        onClick={() => setOpenSubMenu(!openSubMenu)}
+        onClick={() => setIsOpen(label)}
       >
         <p className="uppercase">{label}</p>{' '}
         <span
-          className={`transition-all ${
-            openSubMenu ? 'rotate-0' : 'rotate-180'
-          }`}
+          className={`transition-all ${isOpen ? 'rotate-0' : 'rotate-180'}`}
         >
           <Icon
             name="MdKeyboardArrowUp"
@@ -124,9 +129,7 @@ export const LinkDropDownMobile = ({
         </span>
       </button>
       <div
-        className={`flex flex-col overflow-hidden ${
-          openSubMenu ? 'h-auto' : 'h-0'
-        }`}
+        className={`flex flex-col overflow-hidden ${isOpen ? 'h-auto' : 'h-0'}`}
       >
         {sub_items.map(sub_item => (
           <Link

@@ -3,7 +3,7 @@
 import { ButtonSecondary } from 'components/elements/Button'
 import Icon from 'components/elements/Icon'
 import Link from 'next/link'
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import routes from '../Header/routes'
 import { usePathname } from 'next/navigation'
 import { LinkDropDownMobile } from '../LinkDropDown'
@@ -15,11 +15,22 @@ interface Props {
 
 export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
   const pathname = usePathname()
+  const [dropDownIsOpen, setDropDownIsOpen] = useState('')
 
   const getClassName = (isActive: boolean) => {
     return `font-semibold pl-4 mb-6 h-14 flex items-center border-l-2 text-lg uppercase hover:text-primary-200 transition-all ${
       isActive ? 'border-primary-200 text-primary-200' : 'border-transparent'
     }`
+  }
+
+  console.log({ pathname })
+
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
+
+  const handleDropDown = (value: string) => {
+    setDropDownIsOpen(() => (dropDownIsOpen === value ? '' : value))
   }
 
   return (
@@ -52,6 +63,8 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
                     key={index}
                     label={route.label}
                     sub_items={route.sub_items}
+                    isOpen={dropDownIsOpen === route.label}
+                    setIsOpen={handleDropDown}
                   />
                 )
               )
