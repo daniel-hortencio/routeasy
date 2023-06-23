@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Banner />
       <Clients />
-      <Solutions />
+      {/*       <Solutions /> */}
       <Integrating />
       <RoutingAcademy />
       <Maestro />
