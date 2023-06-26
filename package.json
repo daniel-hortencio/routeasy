@@ -24,6 +24,8 @@
     "@opentelemetry/sdk-trace-node": "^1.14.0",
     "@opentelemetry/semantic-conventions": "^1.14.0",
     "axios": "^1.4.0",
+    "graphql": "^16.7.1",
+    "graphql-request": "^6.1.0",
     "keen-slider": "^6.8.5",
     "next": "13.4.4",
     "nookies": "^2.5.2",
