@@ -1,7 +1,15 @@
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
+import { ReactNode } from 'react'
 
-export const Statistics = () => {
+interface Props {
+  data: {
+    title: string | ReactNode
+    description: string
+  }[]
+}
+
+export const Statistics = ({ data }: Props) => {
   const Card = ({ title, text, className = '' }) => {
     return (
       <div className={`text-center lg:px-8 ${className}`}>
@@ -28,41 +36,21 @@ export const Statistics = () => {
       }
     >
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5 lg:gap-0">
-        <Card
-          title="40%"
-          text={
-            <Text className="text-grayscale-50 text-[15px] font-light">
-              Redução de custos de transporte
-            </Text>
-          }
-        />
-        <Card
-          title="+300"
-          text={
-            <Text className="text-grayscale-50 text-[15px] font-light">
-              Clientes novos
-            </Text>
-          }
-          className="lg:border-l-[1px] border-grayscale-300 border-dashed"
-        />
-        <Card
-          title="8M"
-          text={
-            <Text className="text-grayscale-50 text-[15px] font-light">
-              Serviços roteirizados por mês
-            </Text>
-          }
-          className="lg:border-l-[1px] border-grayscale-300 border-dashed"
-        />
-        <Card
-          title="60%"
-          text={
-            <Text className="text-grayscale-50 text-[15px] font-light">
-              Redução de atrasos e erros nas operações
-            </Text>
-          }
-          className="lg:border-l-[1px] border-grayscale-300 border-dashed"
-        />
+        {data.map((item, index) => (
+          <Card
+            key={index}
+            title={item.title}
+            text={
+              <Text className="text-grayscale-50 text-[15px] font-light">
+                {item.description}
+              </Text>
+            }
+            className={`${
+              index !== 0 &&
+              'lg:border-l-[1px] border-grayscale-300 border-dashed'
+            }`}
+          />
+        ))}
       </div>
     </Section>
   )
