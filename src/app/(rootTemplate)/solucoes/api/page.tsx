@@ -74,7 +74,7 @@ export default function SolutionsApi() {
         </div>
       </BannerCentered>
 
-      <div className="hidden lg:block mt-[-2rem] mb-16 w-full h-[390px] relative mx-auto">
+      <div className="hidden lg:block mt-[-4rem] mb-16 w-full h-[390px] relative mx-auto">
         <Image
           fill
           alt="notebook mockup"

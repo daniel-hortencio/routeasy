@@ -128,7 +128,7 @@ export const RoutingList: IRoutingContentProps[] = [
     icon: '/images/icons/home-solutions-automacao.svg',
     text: 'Ellimine os processos manuais para ganhar mais agilidade e eficiência. Com regras e parâmetros pré definidos, o Maestro automatiza todo o fluxo de trabalho, possibilitando o same day dellivery e as coletas dinâmicas.',
     link: '/solucoes/roteirizacao',
-    image: '/images/pictures/Screen_automacao_API.svg',
+    image: '/images/gifs/Gif_Automacao.gif',
     featureContent: FeatureList_three
   },
   {
@@ -144,7 +144,7 @@ export const RoutingList: IRoutingContentProps[] = [
     icon: '/images/icons/home-solutions-api.svg',
     text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
     link: '/solucoes/roteirizacao',
-    image: '/images/pictures/Screen_API.svg',
+    image: '/images/pictures/Screen_API_.svg',
     featureContent: FeatureList_five
   }
 ]
