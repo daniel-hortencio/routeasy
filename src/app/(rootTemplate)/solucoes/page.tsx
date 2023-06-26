@@ -79,7 +79,9 @@ export default function Solutions() {
       />
       <CardListColored
         cards={listDifferentials}
-        title="Diferenciais"
+        title={
+          <Title className="text-[35px] lg:text-[40px]">Diferenciais</Title>
+        }
         subtitle={
           <Text className="text-grayscale-50 text-[15px] font-light">
             Conte com a RoutEasy para desbloquear todo o potencial da sua

@@ -10,7 +10,7 @@ import { Statistics } from 'components/layouts/WebsiteLayout/Statistics'
 import { Testimonials } from 'components/layouts/WebsiteLayout/Testimonials'
 import { RoutingAcademy } from 'components/layouts/WebsiteLayout/RoutingAcademy'
 import Image from 'next/image'
-import { listFeaturesCard } from './content'
+import { listFeaturesCard, listDifferentials } from './content'
 import { ListFeatures } from 'components/layouts/WebsiteLayout/ListFeatures'
 import { CardKnowledge } from 'components/elements/CardKnowledge'
 import { ButtonPrimary } from 'components/elements/Button'
@@ -19,7 +19,6 @@ import withReactContent from 'sweetalert2-react-content'
 import { IConversionIdentifier } from 'services'
 import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
 import { CardListColored } from 'components/layouts/WebsiteLayout/CardListColored'
-import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
 
 const MySwal = withReactContent(Swal)
 
@@ -43,57 +42,6 @@ function getModal(
   })
 }
 
-const listDifferentials: IIconCardColoredProps[] = [
-  {
-    icon: 'AiOutlineFile',
-    title: 'Projetos',
-    text: 'Do início ao fim, estaremos ao seu lado garantindo uma transição tranquila para nossa plataforma. Com processos bem definidos e uma abordagem personalizada, nossa equipe se dedica a entender suas necessidades e impulsionar seus resultados.',
-    accentColor: 'bg-yellow-500'
-  },
-  {
-    icon: 'FiUsers',
-    title: 'Implantação',
-    text: 'Com vasta experiência em logística e implementação de novas tecnologias, nossa equipe é responsável por garantir que a integração de nossas soluções seja mais simples e eficiente na sua operação.',
-    accentColor: 'bg-bluescale-50'
-  },
-  {
-    icon: 'FiTarget',
-    title: 'Sucesso do cliente',
-    text: 'Estamos comprometidos em entender suas metas e desafios, fornecendo orientação especializada e estratégias sob medida. Sua satisfação é nossa prioridade número um da nossa equipe de customer success.',
-    accentColor: 'bg-green-400'
-  },
-  {
-    icon: 'IoMdHelp',
-    title: 'Suporte',
-    text: 'Nossa equipe de Suporte está dedicada a oferecer assistência e soluções rápidas para todas as suas necessidades. Com um time altamente qualificado e comprometido, estamos prontos para ajudar em escala 6x1, X horas por dia. ',
-    accentColor: 'bg-red-500'
-  },
-  {
-    icon: 'GoLightBulb',
-    title: 'Design de soluções',
-    text: 'Criamos e desenvolvemos soluções eficazes para atender às necessidades e desafios específicos de cada cliente. Esse processo envolve identificar problemas, analisar as necessidades dos usuários e propor soluções inovadoras.',
-    accentColor: 'bg-primary-100'
-  },
-  {
-    icon: 'TfiMoney',
-    title: 'Auditoria técnica',
-    text: 'Nossos especialistas realizam uma análise minuciosa da operação, avaliando e identificando áreas de melhoria. Com uma abordagem detalhada e focada em resultados, a auditoria técnica tem o objetivo de desbloquear todo o potencial do seu negócio.',
-    accentColor: 'bg-green-400'
-  },
-  {
-    icon: 'BiChevronsUp',
-    title: 'Melhoria contínua',
-    text: 'Investimos no desenvolvimento da nossa equipe e acompanhamos as tendências mais recentes do setor. Nosso compromisso é oferecer soluções sempre inovadoras, com recursos e funcionalidades que superam as demandas de um mercado em constante mudança.',
-    accentColor: 'bg-bluescale-200'
-  },
-  {
-    icon: 'BiChevronsUp',
-    title: 'Integração',
-    text: 'A garantia de uma integração tranquila e produtiva é um dos nossos principais diferenciais. Oferecemos treinamentos detalhados e suporte técnico para garantir que sua equipe esteja plenamente preparada para utilizar nossas soluções.',
-    accentColor: 'bg-purplescale-50'
-  }
-]
-
 export default function SolutionsApi() {
   return (
     <>
@@ -109,7 +57,7 @@ export default function SolutionsApi() {
           </Text>
         }
       >
-        <div className="lg:w-[168px] text-center mx-[auto]">
+        <div className="w-[168px] text-center mx-[auto]">
           <ButtonPrimary
             onClick={() =>
               getModal(
@@ -125,6 +73,7 @@ export default function SolutionsApi() {
       </BannerCentered>
       <ListFeatures listFeatures={listFeaturesCard} />
       <Section
+        className="mt-14"
         title={
           <Title>
             Nossas equipes de <TextHighlight>especialistas </TextHighlight>vão
@@ -139,7 +88,7 @@ export default function SolutionsApi() {
           </Text>
         }
       >
-        <div className="w-full mx-auto mb-52">
+        <div className="w-full mx-auto mb-52 mt-16">
           <CardKnowledge
             title="Especialista em operações logísticas "
             text="Nosso time possui ampla experiência de mercado na área de logística, o que facilita o entendimento das necessidades dos clientes e nos dá a oportunidade de oferecer uma consultoria mais assertiva, direcionando as soluções conforme cada caso. Como o consultor já trabalhou na área, ele sabe quais são as dificuldades do cliente e como resolvê-las, ou seja, os dois falam de igual pra igual e isso facilita bastante o processo de implantação."
@@ -162,10 +111,10 @@ export default function SolutionsApi() {
         <div className="px-0 md:px-12 mt-20 mb-16 md:mb-44">
           <div className="relative mx-auto bg-grayscale-500 rounded-lg pt-20 md:pt-8 p-8 mb-12 md:mb-24 shadow-3xl">
             <div className="md:pr-60 text-left mb-4 md:mb-0">
-              <Title className="text-[26px]/[32px] mb-2">
+              <Title className="text-center md:text-left text-[26px]/[32px] mb-2">
                 Certificação rout<TextHighlight>easy</TextHighlight>
               </Title>
-              <Text className="text-grayscale-50 text-sm/[24px] font-light">
+              <Text className="text-center md:text-left text-grayscale-50 text-sm/[24px] font-light">
                 Após o treinamento sobre a plataforma, todo participante que
                 atingir, pelo menos, 70% de aproveitamento recebe um certificado
                 que garante a aptidão para utilizar as nossas soluções.
@@ -207,7 +156,7 @@ export default function SolutionsApi() {
         ]}
       />
       <Testimonials />
-      <CardListColored // Cheila
+      <CardListColored
         cards={listDifferentials}
         title={
           <Title>

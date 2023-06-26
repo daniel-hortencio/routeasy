@@ -59,7 +59,7 @@ export default function SolutionsApi() {
           </Text>
         }
       >
-        <div className="lg:w-[168px] text-center mx-[auto]">
+        <div className="w-[168px] text-center mx-[auto]">
           <ButtonPrimary
             onClick={() =>
               getModal(

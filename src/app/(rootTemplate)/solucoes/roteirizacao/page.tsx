@@ -58,7 +58,7 @@ export default function SolutionsRoteirizacao() {
         </div>
       </BannerCentered>
       <ListFeatures listFeatures={listFeaturesCard} />
-      <Section className="mb-32 hidden md:block">
+      <Section className="mb-32">
         <div className="w-full lg:w-[962px] mx-auto my-[72px]">
           <TabsHorizontal featureContent={FeatureList} />
         </div>

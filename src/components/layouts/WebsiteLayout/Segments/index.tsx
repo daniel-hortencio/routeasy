@@ -16,11 +16,13 @@ const ContentItem = ({
   return (
     <div className="flex justify-between lg:w-[878px] m-auto p-6 md:p-8 rounded-lg bg-grayscale-500">
       <div className="md:w-[56%] md:pr-8">
-        <h3 className="mb-2 md:mb-3 text-[32px] font-medium uppercase">
+        <h3 className="mb-2 md:mb-3 text-[28px] md:text-[32px] text-center md:text-left font-medium uppercase">
           {title}
         </h3>
         <div className="h-[2px] w-full bg-primary-100 mb-4 md:mb-6" />
-        <Text className="text-[15px] font-light">{text}</Text>
+        <Text className="text-center md:text-left text-[15px] font-light">
+          {text}
+        </Text>
       </div>
       <div className="relative pt-[32%] flex-auto hidden md:block">
         <Image src={image} fill alt={altImage} />

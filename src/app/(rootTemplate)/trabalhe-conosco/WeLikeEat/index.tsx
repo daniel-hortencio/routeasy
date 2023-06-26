@@ -33,6 +33,9 @@ export const WeLikeEat = () => {
                   fill
                   src="/images/pictures/petday_6.png"
                   alt="Tech Day"
+                  style={{
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
               <div className="relative">
@@ -40,6 +43,9 @@ export const WeLikeEat = () => {
                   fill
                   src="/images/pictures/petday_7.png"
                   alt="Tech Day"
+                  style={{
+                    objectFit: 'cover'
+                  }}
                 />
               </div>
             </div>
@@ -50,7 +56,7 @@ export const WeLikeEat = () => {
           <header className="md:flex md:items-center md:justify-between">
             <Title className="text-[32px]/[40px]">Café da tarde</Title>
 
-            <div className="md:grid grid-cols-2 gap-2 w-16 hidden">
+            <div className="md:grid grid-cols-2 gap-1 w-16 hidden">
               <button className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300">
                 <Icon name="FiArrowLeft" size={14} />
               </button>

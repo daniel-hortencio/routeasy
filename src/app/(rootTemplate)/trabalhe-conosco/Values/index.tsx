@@ -8,7 +8,7 @@ import { Title, Text } from 'components/elements/Texts'
 
 const CardValues = ({ icon, title, text }) => {
   return (
-    <div className="border border-grayscale-500 rounded-[15px] pt-4 px-4 h-[300px]">
+    <div className="border border-grayscale-500 rounded-[15px] pt-4 px-4 h-full">
       {icon}
       <h1 className="uppercase text-xl font-semibold py-4">{title}</h1>
       <Text className="text-grayscale-200 text-sm mb-6 font-light">{text}</Text>
