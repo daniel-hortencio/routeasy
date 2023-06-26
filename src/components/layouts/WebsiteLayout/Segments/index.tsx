@@ -37,7 +37,7 @@ const segmentsContent: ITabsProps = {
       label: 'Last mile B2C'
     },
     {
-      label: 'Last Mile B2B'
+      label: 'E-last Mile B2B'
     },
     {
       label: 'Same day delivery'
@@ -58,8 +58,8 @@ const segmentsContent: ITabsProps = {
       altImage="Last mile B2C"
     />,
     <ContentItem
-      key="Last mile B2B"
-      title="LAST MILE B2B"
+      key="E-last mile B2B"
+      title="E-LAST MILE B2B"
       text="Planeje rotas mais inteligentes para aproveitar toda a capacidade da sua frota. Com nossas soluções, sua operação reduz prazos de entrega, evita falhas e elimina ineficiências para otimizar custos operacionais. Além disso, você tem visibilidade completa e em tempo real de todas as rotas em andamento, mantendo seus clientes informados a cada etapa do processo."
       image="/images/gifs/Gif02.gif"
       altImage="Last mile B2B"
