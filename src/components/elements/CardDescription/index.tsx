@@ -21,7 +21,9 @@ export const CardDescription = ({
 
   return (
     <div
-      className={`flex flex-col gap-[30px] md:gap-[70px] ${setClassName(side)}`}
+      className={`flex flex-col gap-[30px] md:gap-[70px] items-center ${setClassName(
+        side
+      )}`}
     >
       <div className="bg-grayscale-500 flex justify-content items-center rounded-2xl relative w-[338px] h-[338px] min-w-[338px]">
         <Image
@@ -31,9 +33,13 @@ export const CardDescription = ({
           style={{ objectFit: 'contain' }}
         />
       </div>
-      <div className="w-full py-[70px]">
-        <div className="text-xl font-normal md:py-4">{title}</div>
-        <Text className="text-grayscale-50 font-light">{text}</Text>
+      <div className="w-full py-[30px] md:py-0">
+        <div className="text-center md:text-left text-xl font-normal md:py-4 mb-4 md:mb-1">
+          {title}
+        </div>
+        <Text className="text-center md:text-left first-line:text-grayscale-50 font-light">
+          {text}
+        </Text>
       </div>
     </div>
   )

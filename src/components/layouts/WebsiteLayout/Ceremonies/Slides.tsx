@@ -120,10 +120,24 @@ export const ceremoniesSlides = [
           </div>
           <div className={`grid gap-2`}>
             <div className="relative">
-              <Image fill src="/images/pictures/techday6.png" alt="Tech Day" />
+              <Image
+                fill
+                src="/images/pictures/techday6.png"
+                alt="Tech Day"
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
             </div>
             <div className="relative">
-              <Image fill src="/images/pictures/techday7.png" alt="Tech Day" />
+              <Image
+                fill
+                src="/images/pictures/techday7.png"
+                alt="Tech Day"
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
             </div>
           </div>
         </div>
@@ -180,6 +194,9 @@ export const ceremoniesSlides = [
                 fill
                 src="/images/pictures/salesday_6.png"
                 alt="Sales Day"
+                style={{
+                  objectFit: 'cover'
+                }}
               />
             </div>
             <div className="relative">
@@ -187,6 +204,9 @@ export const ceremoniesSlides = [
                 fill
                 src="/images/pictures/salesday_7.png"
                 alt="Sales Day"
+                style={{
+                  objectFit: 'cover'
+                }}
               />
             </div>
           </div>
@@ -240,10 +260,24 @@ export const ceremoniesSlides = [
           </div>
           <div className={`grid gap-2`}>
             <div className="relative">
-              <Image fill src="/images/pictures/petday_6.png" alt="Tech Day" />
+              <Image
+                fill
+                src="/images/pictures/petday_6.png"
+                alt="Tech Day"
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
             </div>
             <div className="relative">
-              <Image fill src="/images/pictures/petday_7.png" alt="Tech Day" />
+              <Image
+                fill
+                src="/images/pictures/petday_7.png"
+                alt="Tech Day"
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
             </div>
           </div>
         </div>

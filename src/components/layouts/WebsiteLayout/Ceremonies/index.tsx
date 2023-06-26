@@ -46,7 +46,7 @@ export const Ceremonies = () => {
               {ceremoniesSlides[currentSlide].title}
             </Title>
 
-            <div className="md:grid grid-cols-2 gap-2 w-16 hidden">
+            <div className="md:grid grid-cols-2 gap-1 w-16 hidden">
               <button
                 onClick={() => handleChangeSlide(previous)}
                 className="bg-white rounded-full w-6 h-6 flex items-center justify-center fill-grayscale-300"

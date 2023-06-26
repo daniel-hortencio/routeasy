@@ -73,7 +73,7 @@ export const CardKnowledge = ({
           />
         </div>
       </div>
-      <div className="w-full py-[70px]">
+      <div className="w-full py-[30px] md:py-[70px]">
         <Title className="text-[26px]/[32px] py-4">{title}</Title>
         <Text className="text-grayscale-50 font-light text-sm/[24px]">
           {text}

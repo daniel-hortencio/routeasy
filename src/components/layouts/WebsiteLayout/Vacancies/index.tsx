@@ -11,12 +11,12 @@ export const BoxVacancies = ({ title, tag, buttonText, buttonHref }) => {
       <div className="grid gap-5 grid-cols-1 sm:grid-cols-[1fr_8rem] mb-4 mt-4 items-center pb-4 border-b border-grayscale-500">
         <div>
           <div className="pb-4">
-            <h1 className="text-[22px]/[32px] uppercase text-white font-semibold">
+            <h1 className="text-[22px]/[32px] text-center md:text-left uppercase text-white font-semibold">
               {title}
             </h1>
           </div>
           <div>
-            <div>{tag}</div>
+            <div className="mx-auto md:mx-0">{tag}</div>
           </div>
         </div>{' '}
         <div className="text-xs">
@@ -69,7 +69,7 @@ export const Vacancies = () => {
             title="Account Executive"
             tag={
               <span
-                className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
+                className={`${S.tag} mx-auto md:mx-0 text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
               >
                 Sales
               </span>
@@ -81,7 +81,7 @@ export const Vacancies = () => {
             title="Business Development Representative [BDR]"
             tag={
               <div
-                className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
+                className={`${S.tag} mx-auto md:mx-0 text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
               >
                 Sales
               </div>
@@ -93,7 +93,7 @@ export const Vacancies = () => {
             title="Sales Ops"
             tag={
               <div
-                className={`${S.tag} text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
+                className={`${S.tag} mx-auto md:mx-0 text-black text-xs font-semibold bg-primary-50 rounded flex item-center justify-center py-[5px] px-4`}
               >
                 Sales
               </div>

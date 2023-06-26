@@ -57,7 +57,7 @@ export const Culture = () => {
               <div
                 className={`bg-grayscale-500 flex-auto flex flex-col justify-center relative p-4 mb-2`}
               >
-                <h2 className="uppercase text-[26px]/[32px] font-semibold">
+                <h2 className="uppercase text-[22px]/[27px] font-semibold mb-1">
                   Adoramos <span className="text-primary-100">festinhas!</span>
                 </h2>
                 <Text className="text-sm text-grayscale-50 mb-2 font-light">
