@@ -129,8 +129,8 @@ export const InputGroup = ({
   <div className={className}>
     <div className="mb-1 flex flex-col items-start">
       <label className="text-sm text-left mr-auto">{label}</label>
-      {error && <span className="ml-1 text-sm text-yellow-500">{error}</span>}
     </div>
     {children}
+    {error && <span className="ml-1 text-sm text-[#FF6C54]">{error}</span>}
   </div>
 )

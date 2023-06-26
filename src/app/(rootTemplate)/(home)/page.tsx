@@ -8,13 +8,14 @@ import { Midia } from 'components/layouts/WebsiteLayout/Midia'
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
 import { Testimonials } from 'components/layouts/WebsiteLayout/Testimonials'
 import { RoutingAcademy } from 'components/layouts/WebsiteLayout/RoutingAcademy'
+import { Solutions } from './Solutions'
 
 export default function Home() {
   return (
     <>
       <Banner />
       <Clients />
-      {/*       <Solutions /> */}
+      <Solutions />
       <Integrating />
       <RoutingAcademy />
       <Maestro />

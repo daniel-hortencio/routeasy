@@ -36,7 +36,7 @@ export const Co2 = () => {
   useEffect(() => {
     if (count < 600 && isVisible) {
       setTimeout(() => {
-        setCount(() => count + 1)
+        setCount(() => count + 10)
       }, 5)
     }
   }, [count, isVisible])

@@ -95,7 +95,7 @@ export const Values = () => {
   return (
     <>
       <Section
-        className="pb-4 lg:pb-12"
+        className="pb-4 md:pb-40"
         title={<Title>Nossos valores</Title>}
         subtitle={
           <Text className="text-grayscale-50 text-[15px] font-light">

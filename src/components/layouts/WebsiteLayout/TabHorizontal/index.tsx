@@ -79,7 +79,9 @@ export const TabsHorizontal = ({ featureContent }: ITabsHorizontalProps) => {
               <Title className="text-[26px] font-medium uppercase mb-3.5">
                 {content.title}
               </Title>
-              <Text className="text-sm font-light">{content.text}</Text>
+              <Text className="text-sm font-light text-grayscale-200">
+                {content.text}
+              </Text>
             </div>
           ))}
         </div>

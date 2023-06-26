@@ -8,15 +8,10 @@ import { TextHighlight, Text } from 'components/elements/Texts'
 import TextTransition, { presets } from 'react-text-transition'
 
 const list_operations = [
-  'LASTMILE B2C',
-
-  'LASTMILE B2B',
-
-  'SAME DAY.D',
-
-  'FIRST MILE',
-
-  'MIDLE MILE'
+  'ROTEIRIZAÇÃO',
+  'LASTMILE',
+  'GESTÃO DE ENTREGA',
+  'TORRE DE CONTROLE'
 ]
 
 export const Banner = () => {
