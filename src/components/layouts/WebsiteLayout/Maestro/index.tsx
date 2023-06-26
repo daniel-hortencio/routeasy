@@ -6,6 +6,7 @@ import { ButtonSecondary } from 'components/elements/Button'
 import Image from 'next/image'
 import ReactPlayer from 'react-player/youtube'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 export const Maestro = () => {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -61,7 +62,9 @@ export const Maestro = () => {
         )}
       </div>
       <div className="md:w-40 text-sm m-auto mt-12">
-        <ButtonSecondary>Quero saber mais</ButtonSecondary>
+        <LinkExternal href="https://routeasy.com.br/content/lancamos-o-maestro-nosso-novo-modulo-de-orquestracao-logistica/">
+          <ButtonSecondary>Quero saber mais</ButtonSecondary>
+        </LinkExternal>
       </div>
     </Section>
   )
