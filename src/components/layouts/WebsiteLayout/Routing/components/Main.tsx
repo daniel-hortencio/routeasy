@@ -18,7 +18,7 @@ export const RoutingMainContent = ({
           <h3 className="text-white text-2xl text-center md:text-left font-semibold uppercase mb-3.5">
             {title}
           </h3>
-          <Text className="text-grayscale-200 block text-sm text-center md:text-left font-light mb-3.5">
+          <Text className="text-grayscale-50 block text-sm text-center md:text-left font-light mb-3.5">
             {text}
           </Text>
 

@@ -90,19 +90,19 @@ export const FeatureList_four: ITabHorizontalItemProps[] = [
 
 export const FeatureList_five: ITabHorizontalItemProps[] = [
   {
-    title: 'Personalização de objetivos de otimização',
-    icon: '/images/icons/icon-route.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
-  },
-  {
-    title: 'Entregas e coletas na mesma rota',
+    title: 'Gestão de pedidos e otimização de rotas',
     icon: '/images/icons/icon-vehicle.png',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
+    text: "Integre ordens de serviços individuais ou agrupadas, com requisições completas para a gestão de pedidos e aprimore sua logística. Escolha a melhor solução, utilize nossa interface ou consuma de forma flexível nossas API's. Incorpore soluções robustas para planejamento de serviços, rotas, capacidades e controle de custos. Personalize agrupamentos, refine endereços e maximize sua eficiência."
   },
   {
-    title: 'Resequenciamento automático',
-    icon: '/images/icons/icon-user.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. '
+    title: 'Gestão de entregas e torre de controle',
+    icon: '/images/icons/home-solutions-gestao-de-entrega.svg',
+    text: 'Aperfeiçoe a gestão de entregas com um sistema de integração completo. Importe rotas planejadas, gerencie motoristas, rotas e tenha controle total sobre o progresso da operação. Ganhe visibilidade e encante o cliente integrando-se às poderosas soluções RoutEasy.'
+  },
+  {
+    title: 'Webhook',
+    icon: '/images/icons/code.svg',
+    text: 'Mantenha atualizada a aplicação externa com os eventos de rotas e serviços. Receba de forma personalizada informações de planejamento de rotas e gestão de entregas. Aprimore a visibilidade operacional com esse recurso RoutEasy de integração de retorno e impulsione seu negócio.'
   }
 ]
 
@@ -142,7 +142,7 @@ export const RoutingList: IRoutingContentProps[] = [
   {
     title: 'API',
     icon: '/images/icons/home-solutions-api.svg',
-    text: 'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis. ',
+    text: "Potencialize sua logística integrando com as API's RoutEasy. Alcance novos patamares de escalabilidade e desempenho! Otimize suas rotas, minimize custos e acelere entregas. Aproveite a infraestrutura robusta e o suporte especializado.",
     link: '/solucoes/roteirizacao',
     image: '/images/pictures/Screen_API_.svg',
     featureContent: FeatureList_five
