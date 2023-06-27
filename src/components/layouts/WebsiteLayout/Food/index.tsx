@@ -4,6 +4,7 @@ import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { useState } from 'react'
 import { foodSlides } from './Slides'
 import { ButtonSecondary } from 'components/elements/Button'
+import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
 export const Food = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -70,7 +71,9 @@ export const Food = () => {
             {foodSlides[currentSlide].description}
           </Text>
           <div className="hidden md:block mt-6 max-w-[160px]">
-            <ButtonSecondary>Junte-se a nós</ButtonSecondary>
+            <LinkExternal href="https://routeasy.gupy.io/">
+              <ButtonSecondary>Junte-se a nós</ButtonSecondary>
+            </LinkExternal>
           </div>
           <div className="grid grid-cols-2 gap-2 w-16 mx-auto md:hidden mt-10">
             <button
