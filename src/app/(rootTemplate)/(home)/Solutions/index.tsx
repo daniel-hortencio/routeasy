@@ -114,7 +114,7 @@ export const Solutions = () => {
     },
     {
       title: 'API',
-      src: '/images/pictures/Screen_API.svg',
+      src: '/images/pictures/Screen_API_.svg',
       icon: {
         src: '/images/icons/home-solutions-api.svg',
         alt: 'API'
