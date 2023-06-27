@@ -88,7 +88,7 @@ export const ContactArea = () => {
       button: 'Mandar Mensagem',
       onClick: () =>
         getModal(
-          'Parcerias',
+          'Imprensa',
           'Receba informações diretamente da equipe de comunicação.',
           'formulario-imprensa-site-18-06-2023' // TODO colocar identificador do form
         )
