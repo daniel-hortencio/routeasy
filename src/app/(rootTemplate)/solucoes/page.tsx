@@ -1,3 +1,5 @@
+'use client'
+
 import { Segments } from 'components/layouts/WebsiteLayout/Segments'
 import { FeaturedFrame } from 'components/layouts/WebsiteLayout/FeaturedFrame'
 import { Integrating } from 'components/layouts/WebsiteLayout/Integrating'
@@ -10,6 +12,33 @@ import { BannerCentered } from 'components/layouts/WebsiteLayout/BannerCentered'
 import { Routing } from 'components/layouts/WebsiteLayout/Routing'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { IConversionIdentifier } from 'services'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
+import { ButtonPrimary } from 'components/elements/Button'
+
+const MySwal = withReactContent(Swal)
+
+function getModal(
+  title: string,
+  description: string,
+  conversion_identifier: IConversionIdentifier
+) {
+  MySwal.fire({
+    html: (
+      <>
+        <FormModal
+          title={title}
+          description={description}
+          conversion_identifier={conversion_identifier}
+          onClose={Swal.close}
+        />
+      </>
+    ),
+    showConfirmButton: false
+  })
+}
 
 const listDifferentials: IIconCardColoredProps[] = [
   {
@@ -56,9 +85,21 @@ export default function Solutions() {
             operação.
           </Text>
         }
-        buttonText="Quero saber mais"
-        buttonHref="/"
-      />
+      >
+        <div className="w-[168px] text-center mx-[auto]">
+          <ButtonPrimary
+            onClick={() =>
+              getModal(
+                'Comercial',
+                'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
+                'site-routeasy'
+              )
+            }
+          >
+            Quero saber mais
+          </ButtonPrimary>
+        </div>
+      </BannerCentered>
       <Routing />
       <FeaturedFrame
         title={
