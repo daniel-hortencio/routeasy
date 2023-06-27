@@ -18,7 +18,7 @@ export const Banner = () => {
       <div className="flex justify-center items-center h-full relative min-h-[600px]">
         <div className="pt-24 md:pt-56 md:mx-auto lg:mx-0 flex flex-col justify-center w-[645px] text-center">
           <Title className="text-white uppercase font-medium text-5xl lg:text-[56px]/[72px] mb-5 px-5">
-            Sobre aqui
+            Sobre
             <TextHighlight> nós</TextHighlight>
           </Title>
           <Text className="text-grayscale-50 text-[15px] font-light mb-2 px-5">
