@@ -15,7 +15,7 @@ export const Footer = () => {
   ]
 
   const links_solutions = [
-    { label: 'Todas soluções', href: 'soluções' },
+    { label: 'Todas soluções', href: 'solucoes' },
     { label: 'Roteirizador', href: 'solucoes/roteirizacao' },
     { label: "API's", href: 'solucoes/api' },
     { label: 'Onboarding', href: 'solucoes/onboarding' }
