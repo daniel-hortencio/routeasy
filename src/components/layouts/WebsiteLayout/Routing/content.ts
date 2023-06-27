@@ -5,7 +5,7 @@ export const FeatureList: ITabHorizontalItemProps[] = [
   {
     title: 'Personalização de objetivos de otimização',
     icon: '/images/icons/features-icon-01.svg',
-    text: 'O algoritmo de roteirização da RoutEasy tem a maior capacidade de processamento do mercado, o que significa roteirizar mais pontos em menos tempo. Otimize a utilização de recursos, minimize custos e maximize a eficiência da sua operação!'
+    text: 'Defina quais os parâmetros utilizados na otimização para atingir o seu objetivo de negócio. Pode ser, por exemplo, diminuir a quilometragem total percorrida, reduzir a quantidade de veículos utilizados, limitar a jornada de trabalho dos motoristas etc.'
   },
   {
     title: 'Entregas e coletas na mesma rota',

@@ -135,7 +135,7 @@ export const FacesOfRoutEasy = () => {
         </div>
 
         <div className="w-full pt-6 px-5 relative flex flex-col items-center">
-          <Text className="text-xl mb-2 text-center">
+          <Text className="text-xl mb-2 text-center uppercase">
             {currentEmployeeSlider.name}
           </Text>
           <p className="mb-5 h-6 px-2 mx-auto bg-primary-50 rounded w-min text-xs text-black font-bold flex items-center">
