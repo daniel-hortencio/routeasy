@@ -95,7 +95,7 @@ export default function SolutionsApi() {
               </Title>
             }
             text="Aplique inteligência artificial, algoritmos avançados e programação de ponta nas operações logísticas. Refine endereços, acesse geocodes, otimize rotas, construa regiões de atuação, controle serviços, gerencie operadores, monitore veículos, calcule frete, consulte valores de pedágios e muito mais. Descubra como nossas API's revolucionam o setor com tecnologia de ponta, atendendo distribuidoras, transportadoras, e-commerce, indústrias, empresas de softwares, logtechs e muito mais!"
-            image="/images/pictures/desenvolva-voce-mesmo02.png"
+            image="/images/pictures/gestao-last-mile.png"
             side="right"
           />
           <div className="h-[30px] md:h-[120px]"></div>
@@ -103,11 +103,11 @@ export default function SolutionsApi() {
             title={
               <Title className="text-[26px]/[32px]">
                 Alcance a máxima eficiência com o pacote
-                <TextHighlight>full otimization </TextHighlight>da routeasy
+                <TextHighlight> full otimization </TextHighlight>da routeasy
               </Title>
             }
             text="Potencialize suas operações logísticas com nosso pacote completo. Integre todas as API's da RoutEasy para obter roteirizações otimizadas e o máximo de controle. Utilize restrições operacionais, apoiado em regras personalizadas de negócio. Transforme sua logística hoje mesmo!"
-            image="/images/pictures/desenvolva-voce-mesmo01.png"
+            image="/images/pictures/full-otimization.png"
           />
         </div>
       </Section>
