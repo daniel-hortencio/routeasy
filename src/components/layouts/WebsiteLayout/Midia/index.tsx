@@ -156,17 +156,20 @@ export const Midia = ({ href }: Props) => {
             <div className={`${S.MidiaBoxPrimary} h-full`}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded overflow-hidden z-10">
                 <Image
-                  src="/images/logos/logo Log Web.png"
+                  src="/images/logos/logo Valor.png"
                   fill
-                  alt="Log Web"
+                  alt="Valor Econômico"
                 />
               </div>
-              <Image
-                fill
-                src="/images/pictures/Log Web.png"
-                alt="Log Web"
-                style={{ objectFit: 'fill' }}
-              />
+              <LinkExternal href="https://valor.globo.com/publicacoes/suplementos/noticia/2022/07/29/digitalizacao-mapeia-rotas-e-reduz-custos.ghtml">
+                <Image
+                  className="cursor-pointer"
+                  fill
+                  src="/images/pictures/Log Web.png"
+                  alt="Valor Econômico"
+                  style={{ objectFit: 'fill' }}
+                />
+              </LinkExternal>
               <div className={`${S.MidiaBoxText}`}>
                 <div className={`${S.border} h-[50px]`}></div>
                 <p className={`${S.MidiaText}`}>
@@ -179,17 +182,20 @@ export const Midia = ({ href }: Props) => {
             <div className={`${S.MidiaBoxPrimary} h-full`}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded overflow-hidden z-10">
                 <Image
-                  src="/images/logos/logo Valor.png"
+                  src="/images/logos/logo Log Web.png"
                   fill
-                  alt="Valor Econômico"
+                  alt="Log Web"
                 />
               </div>
-              <Image
-                fill
-                src="/images/pictures/Valor Digitalizacao.png"
-                alt="Valor Econômico"
-                style={{ objectFit: 'fill' }}
-              />
+              <LinkExternal href="https://www.logweb.com.br/tecnologia-e-a-base-para-um-futuro-global-do-supply-chain-ligando-cadeias-instaladas-em-varios-locais/">
+                <Image
+                  className="cursor-pointer"
+                  fill
+                  src="/images/pictures/Valor Digitalizacao.png"
+                  alt="Log Web"
+                  style={{ objectFit: 'fill' }}
+                />
+              </LinkExternal>
               <div className={`${S.MidiaBoxText}`}>
                 <div className={`${S.border} h-128`}></div>
                 <p className={`${S.MidiaText}`}>
@@ -205,12 +211,15 @@ export const Midia = ({ href }: Props) => {
                 <div className="absolute top-4 right-4 w-12 h-12 rounded overflow-hidden z-10">
                   <Image src="/images/logos/logo Valor.png" fill alt="Valor" />
                 </div>
-                <Image
-                  fill
-                  src="/images/pictures/Valor Iot.png"
-                  alt="Valor Econômico"
-                  style={{ objectFit: 'fill' }}
-                />
+                <LinkExternal href="https://valor.globo.com/empresas/noticia/2023/03/30/internet-das-coisas-e-ia-ganham-espaco-em-processos-logisticos.ghtml">
+                  <Image
+                    className="cursor-pointer"
+                    fill
+                    src="/images/pictures/Valor Iot.png"
+                    alt="Valor Econômico"
+                    style={{ objectFit: 'fill' }}
+                  />
+                </LinkExternal>
                 <div className={`${S.MidiaBoxText}`}>
                   <div className={`${S.border} h-20`}></div>
                   <p className={`${S.MidiaText}`}>
@@ -227,12 +236,15 @@ export const Midia = ({ href }: Props) => {
                     alt="Mundo Logística"
                   />
                 </div>
-                <Image
-                  fill
-                  src="/images/pictures/Mundo Logistica.png"
-                  alt="Mundo Logística"
-                  style={{ objectFit: 'fill' }}
-                />
+                <LinkExternal href="https://mundologistica.com.br/artigos/principais-desafios-do-same-day-delivery">
+                  <Image
+                    className="cursor-pointer"
+                    fill
+                    src="/images/pictures/Mundo Logistica.png"
+                    alt="Mundo Logística"
+                    style={{ objectFit: 'fill' }}
+                  />
+                </LinkExternal>
                 <div className={`${S.MidiaBoxText}`}>
                   <div className={`${S.border} h-20`}></div>
                   <p className={`${S.MidiaText}`}>
