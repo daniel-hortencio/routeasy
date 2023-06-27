@@ -132,11 +132,19 @@ export default function SolutionsApi() {
 
       <FeaturedFrame
         title={
-          <>
+          <Title className="text-[26px]/[40px] font-bold">
             Benefícios das <TextHighlight>API's</TextHighlight> <br /> routeasy
-          </>
+          </Title>
         }
-        text="Desfrute de toda a inteligência da RoutEasy sem sair da sua plataforma, aproveitando a qualidade que temos a oferecer. Conte com robustez e escalabilidade para impulsionar sua eficiência operacional. Experimente agora e leve sua logística a novos patamares!"
+        text={
+          <Text className="text-grayscale-50 text-[13px] font-light">
+            Desfrute de toda a inteligência da RoutEasy sem sair da sua
+            plataforma, aproveitando a qualidade que temos a oferecer. Conte com
+            robustez e escalabilidade para impulsionar sua eficiência
+            operacional. Experimente agora e leve sua logística a novos
+            patamares!
+          </Text>
+        }
         image="/images/pictures/screen-api.png"
       />
       {/* <Prices /> */}
