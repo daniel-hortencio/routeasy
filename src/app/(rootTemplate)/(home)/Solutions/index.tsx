@@ -756,7 +756,7 @@ export const Solutions = () => {
           </div>
         </div>
       </div>
-      <div className="px-20">
+      <div className="px-4 lg:px-20">
         <div className="hidden lg:block">
           <p className="font-sans text-xs/6 text-center text-grayscale-200 pb-12">
             Imagem meramente ilustrativa
