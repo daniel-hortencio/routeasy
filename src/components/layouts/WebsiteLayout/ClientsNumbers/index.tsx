@@ -4,10 +4,13 @@ import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
-import { ButtonSecondary } from 'components/elements/Button'
+import { ButtonPrimary } from 'components/elements/Button'
 import Image from 'next/image'
-
 import { clientsContent } from './content'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { IConversionIdentifier } from 'services'
+import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
 
 interface ICardContent {
   number: string
@@ -17,6 +20,28 @@ interface ICardContent {
 interface IClientContentProps {
   logo: string
   cards: ICardContent[]
+}
+
+const MySwal = withReactContent(Swal)
+
+function getModal(
+  title: string,
+  description: string,
+  conversion_identifier: IConversionIdentifier
+) {
+  MySwal.fire({
+    html: (
+      <>
+        <FormModal
+          title={title}
+          description={description}
+          conversion_identifier={conversion_identifier}
+          onClose={Swal.close}
+        />
+      </>
+    ),
+    showConfirmButton: false
+  })
 }
 
 const ClientContent = ({ logo, cards }: IClientContentProps) => {
@@ -102,7 +127,17 @@ export const ClientsNumbers = () => {
       )}
 
       <div className="w-full sm:w-[232px] mt-16 mb-28 text-center mx-[auto]">
-        <ButtonSecondary href="">Quero saber mais</ButtonSecondary>
+        <ButtonPrimary
+          onClick={() =>
+            getModal(
+              'Comercial',
+              'Solicite uma demonstração ou tire dúvidas sobre nossas soluções.',
+              'site-routeasy'
+            )
+          }
+        >
+          Quero saber mais
+        </ButtonPrimary>
       </div>
     </Section>
   )

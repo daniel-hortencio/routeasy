@@ -2,7 +2,7 @@ import { Section } from 'components/elements/Section'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { CardComparison } from 'components/elements/CardComparison'
 import Image from 'next/image'
-import { ButtonPrimary } from 'components/elements/Button'
+import { ButtonSecondary } from 'components/elements/Button'
 
 export const Comparison = () => {
   return (
@@ -36,9 +36,9 @@ export const Comparison = () => {
       </div>
 
       <div className="w-full sm:w-[232px] my-16 text-center mx-[auto]">
-        <ButtonPrimary href="/demonstracao">
+        <ButtonSecondary href="/demonstracao">
           Solicite uma demonstração
-        </ButtonPrimary>
+        </ButtonSecondary>
       </div>
     </Section>
   )
