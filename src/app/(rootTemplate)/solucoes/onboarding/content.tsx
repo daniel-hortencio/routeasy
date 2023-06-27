@@ -1,5 +1,6 @@
 import { ICardFeatureProps } from 'components/elements/CardFeature/types'
 import { IIconCardColoredProps } from 'components/elements/IconColoredCard/types'
+import Image from 'next/image'
 
 export const listFeaturesCard: ICardFeatureProps[] = [
   {
@@ -63,7 +64,9 @@ export const listDifferentials: IIconCardColoredProps[] = [
     accentColor: 'bg-bluescale-200'
   },
   {
-    icon: 'BiChevronsUp',
+    icon: (
+      <Image src="/images/icons/rotas.svg" width={24} height={24} alt="Rotas" />
+    ),
     title: 'Integração',
     text: 'A garantia de uma integração tranquila e produtiva é um dos nossos principais diferenciais. Oferecemos treinamentos detalhados e suporte técnico para garantir que sua equipe esteja plenamente preparada para utilizar nossas soluções.',
     accentColor: 'bg-purplescale-50'
