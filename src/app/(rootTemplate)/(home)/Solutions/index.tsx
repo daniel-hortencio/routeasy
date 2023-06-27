@@ -75,6 +75,24 @@ export const Solutions = () => {
     }
   })
 
+  const ListTextImg = [
+    {
+      text: 'Com o Routing Studio você pode realizar todo o planajamento de suas rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.'
+    },
+    {
+      text: 'Tome as decisões certas na hora certa com alertas inteligentes para gerenciar exceções e imprevistos. Garanta a governança total de usuários e filliais criando perfis de acesso específicos para cada colaborador e restringindo informações e funções.'
+    },
+    {
+      text: 'Ganhe mais agilidade com uma operação 100% automatizada. O módulo de orquestração da RoutEasy possibilita same day delivery e coletas dinâmicas graças às regras e parametrizações para identificar os melhores cenários de rota, com atribuição automática para os motoristas.'
+    },
+    {
+      text: 'Com o aplicativo instalado, o do motorista recebe todas as rotas em tempo real, podendo, inclusive, receber atualizações em uma rota já iniciada. Utilize o chat direto no app para solucionar ocorrências com mais agilidade!'
+    },
+    {
+      text: 'Tenha acesso a toda a inteligência e expertise por trás do algoritmo mais avançado do mercado! Utilize nossas APIs e crie soluções únicas.'
+    }
+  ]
+
   const tabList = [
     {
       title: 'Roteirização',
@@ -568,9 +586,11 @@ export const Solutions = () => {
               {tabList.map(
                 (item, index) =>
                   tab === index && (
-                    <div className="px-5" key={index}>
-                      <Image src={item.src} fill alt={item.alt} />
-                    </div>
+                    <>
+                      <div className="px-5" key={index}>
+                        <Image src={item.src} fill alt={item.alt} />
+                      </div>
+                    </>
                   )
               )}
             </div>
@@ -742,12 +762,18 @@ export const Solutions = () => {
             Imagem meramente ilustrativa
           </p>
         </div>
-        <div className="pb-12 md:pb-16">
-          <Text className="lg:max-w-[60%] lg:px-5 m-auto text-grayscale-200 text-[15px] font-normal text-center">
-            Com o Routing Studio você pode realizar todo o planajamento de suas
-            rotas, sejam elas D+0, D+1 ou Apenas estudar o melhor planejamento.
-          </Text>
-        </div>
+        {ListTextImg.map(
+          (item, index) =>
+            tab === index && (
+              <>
+                <div className="pb-12 md:pb-16">
+                  <Text className="lg:max-w-[60%] lg:px-5 m-auto text-grayscale-200 text-[15px] font-normal text-center">
+                    {item.text}
+                  </Text>
+                </div>
+              </>
+            )
+        )}
         <div className="md:w-32 m-auto mb-24">
           <ButtonPrimary href="/solucoes">Saiba mais</ButtonPrimary>
         </div>
