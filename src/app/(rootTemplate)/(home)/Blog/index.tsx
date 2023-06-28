@@ -5,39 +5,15 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { ButtonSecondary } from 'components/elements/Button'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
-import { GraphQLClient, gql } from 'graphql-request'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Skeleton } from 'components/elements/Skeleton'
 
-const client = new GraphQLClient(
-  'https://routeasy.com.br/content/graphql'
-  // "https://test-frontity-wordpress.000webhostapp.com/graphql"
-  // https://routeasy.com.br/content/wp-admin/admin.php?isQueryComposerOpen=true&page=graphiql-ide&query=I4VwpgTgngBAcmA7gRXNGBvAUDGAHAewGcAXIzHXGMAEwHMxzsqqA7AmsCllkgSxIAbMJR4wAxgVYkw00VQC%2B8pbiUKgA
-)
-
-const query = gql`
-  query NewQuery {
-    posts {
-      edges {
-        node {
-          content
-          categories {
-            nodes {
-              name
-            }
-          }
-          title
-        }
-      }
-    }
-  }
-`
-
-const CardBlog = ({ tag, title, author, date }) => {
+const CardBlog = ({ tag, title, author, date, imageUrl }) => {
   return (
-    <div className="rounded-2xl h-96 bg-[#555] flex items-end">
-      <div className="pb-6 px-4">
+    <div className="relative rounded-2xl h-96 bg-[#555] flex items-end overflow-hidden">
+      <div className="pb-6 px-4 relative z-10">
         <p className="h-6 px-2 mb-1 bg-primary-50 rounded w-min text-xs text-black font-bold flex items-center whitespace-nowrap">
           {tag}
         </p>
@@ -50,19 +26,29 @@ const CardBlog = ({ tag, title, author, date }) => {
           <p className="ml-auto font-bold">{date}</p>
         </footer>
       </div>
+      <img
+        src={imageUrl}
+        alt="Imagem destacada"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
     </div>
   )
 }
 
 export const Blog = () => {
   const [posts, setPosts] = useState<any>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   async function getPosts() {
     const response = await axios.get('/api/get-blog')
 
+    console.log('POSTS:', response.data)
+
     if (response) {
       setPosts(response.data)
     }
+
+    setIsLoading(false)
   }
 
   const [sliderRef] = useKeenSlider({
@@ -83,6 +69,8 @@ export const Blog = () => {
     getPosts()
   }, [])
 
+  console.log({})
+
   return (
     <div>
       <Section
@@ -98,37 +86,47 @@ export const Blog = () => {
         }
       >
         <div className="hidden lg:grid grid-cols-3 gap-6 mt-2">
-          {posts
-            ?.map(post => (
-              <CardBlog
-                key={post?.title}
-                tag={post?.categories.nodes[0].name}
-                title={post?.title}
-                author="Luana Torres"
-                date="Março 2023"
-              />
-            ))
-            .slice(0, 3)}
+          {isLoading
+            ? [1, 2, 3].map(item => (
+                <Skeleton key={item} className="pt-96 rounded-2xl" />
+              ))
+            : posts
+                ?.map(post => (
+                  <CardBlog
+                    key={post?.title}
+                    tag={post?.categories.nodes[0].name}
+                    title={post?.title}
+                    imageUrl={post?.featuredImage?.node?.sourceUrl}
+                    author="Luana Torres"
+                    date="Março 2023"
+                  />
+                ))
+                .slice(0, 3)}
         </div>
       </Section>
       <div className="lg:hidden">
-        <div ref={sliderRef} className="keen-slider ">
-          {posts
-            ?.map((post, index) => (
-              <div
-                key={post?.title}
-                className={`keen-slider__slide pr-6 ${index === 0 && 'ml-5'}`}
-              >
-                <CardBlog
-                  tag={post?.categories.nodes[0].name}
-                  title={post?.title}
-                  author="Luana Torres"
-                  date="Março 2023"
-                />
-              </div>
-            ))
-            .slice(0, 10)}
-        </div>
+        {isLoading ? (
+          <Skeleton className="h-96 w-full mx-6 rounded-2xl" />
+        ) : (
+          <div ref={sliderRef} className="keen-slider ">
+            {posts
+              ?.map((post, index) => (
+                <div
+                  key={post?.title}
+                  className={`keen-slider__slide pr-6 ${index === 0 && 'ml-5'}`}
+                >
+                  <CardBlog
+                    tag={post?.categories.nodes[0].name}
+                    title={post?.title}
+                    imageUrl={post?.featuredImage?.node?.sourceUrl}
+                    author="Luana Torres"
+                    date="Março 2023"
+                  />
+                </div>
+              ))
+              .slice(0, 10)}
+          </div>
+        )}
       </div>
       <Section className="pt-16 pb-14 md:py-20 w-full">
         <div className="mx-auto sm:w-36">

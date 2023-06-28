@@ -18,6 +18,11 @@ const query = gql`
             }
           }
           title
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
         }
       }
     }
@@ -37,17 +42,4 @@ export default async function handler(req, res) {
     console.log('ERROR FROM GRAPHQL-REQUEST API CALL', err)
     return res.status(500).json(err)
   }
-  /*
-  try {
-    const response = await axios.post(
-      'https://gyruss.rdops.systems/v2/conversions',
-      dataReq,
-      config
-    )
-    console.log('RESPONSE DATA: ', response.data)
-    return res.status(200).json(response.data)
-  } catch (err) {
-    console.log('ERRO: ', err)
-    return res.status(500).json(err)
-  } */
 }
