@@ -8,11 +8,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
-interface Props {
-  href: string
-}
-
-export const Midia = ({ href }: Props) => {
+export const Midia = () => {
   const [sliderRef] = useKeenSlider({
     initial: 0,
     slides: {
