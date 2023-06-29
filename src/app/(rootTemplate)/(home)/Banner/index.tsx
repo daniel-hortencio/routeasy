@@ -9,9 +9,11 @@ import TextTransition, { presets } from 'react-text-transition'
 
 const list_operations = [
   'ROTEIRIZAÇÃO',
-  'LASTMILE',
   'GESTÃO DE ENTREGA',
-  'TORRE DE CONTROLE'
+  'LASTMILE',
+  'FIRST MILE',
+  'SAME DAY DELIVERY',
+  'MONITORAMENTO'
 ]
 
 export const Banner = () => {
