@@ -62,6 +62,7 @@ export const Banner = () => {
               fill
               src="/images/pictures/frame_hero_home.svg"
               alt="Banner"
+              priority={true}
             />
           </div>
         </div>

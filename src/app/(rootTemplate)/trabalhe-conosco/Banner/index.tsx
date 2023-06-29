@@ -19,6 +19,7 @@ const CardEmployee = ({ image }) => {
           style={{
             objectFit: 'cover'
           }}
+          priority={true}
         />
       </div>
     </div>
