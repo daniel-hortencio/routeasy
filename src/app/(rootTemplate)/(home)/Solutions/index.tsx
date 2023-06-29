@@ -143,7 +143,7 @@ export const Solutions = () => {
 
   const list_soluctions_route_cl = [
     {
-      title: 'Personalização de objetivos de otimização',
+      title: 'Personalização de objetivos de otimização.',
       icon: {
         width: 16,
         height: 16,
@@ -152,7 +152,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Entregas e coletas na mesma rota',
+      title: 'Entregas e coletas na mesma rota.',
       icon: {
         width: 16,
         height: 16,
@@ -161,7 +161,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Resequenciamento automático  ',
+      title: 'Resequenciamento automático. ',
       icon: {
         width: 16,
         height: 16,
@@ -170,7 +170,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Configuração de restrições operacionais',
+      title: 'Configuração de restrições operacionais.',
       icon: {
         width: 16,
         height: 16,
@@ -183,7 +183,7 @@ export const Solutions = () => {
   const list_soluctions_route_cr = [
     {
       title:
-        'Cadastro de clientes, veículos, origens, frete e apólice de seguro',
+        'Cadastro de clientes, veículos, origens, frete e apólice de seguro.',
       icon: {
         width: 16,
         height: 16,
@@ -192,7 +192,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Regras associadas a perfil de clientes, frotas e regiões',
+      title: 'Regras associadas a perfil de clientes, frotas e regiões.',
       icon: {
         width: 16,
         height: 16,
@@ -201,7 +201,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Uso de prioridade e sequenciamento de serviços',
+      title: 'Uso de prioridade e sequenciamento de serviços.',
       icon: {
         width: 16,
         height: 16,
@@ -210,7 +210,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Edição, duplicação e clonagem de rotas e serviços',
+      title: 'Edição, duplicação e clonagem de rotas e serviços.',
       icon: {
         width: 16,
         height: 16,
@@ -222,7 +222,7 @@ export const Solutions = () => {
 
   const list_management_cl = [
     {
-      title: 'Chat direto com o motorista',
+      title: 'Chat direto com o motorista.',
       icon: {
         width: 16,
         height: 16,
@@ -231,7 +231,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Tracking para o cliente',
+      title: 'Tracking para o cliente.',
       icon: {
         width: 16,
         height: 16,
@@ -240,7 +240,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Alertas inteligentes para ocorrências',
+      title: 'Alertas inteligentes para ocorrências.',
       icon: {
         width: 16,
         height: 16,
@@ -249,7 +249,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Proof of delivery',
+      title: 'Proof of delivery.',
       icon: {
         width: 16,
         height: 16,
@@ -266,7 +266,7 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/icon-star.svg',
-        alt: 'Avaliações do serviço, produto e motorista.'
+        alt: 'Avaliações do serviço, produto e motorista'
       }
     },
     {
@@ -275,7 +275,7 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/icon-dashboard.svg',
-        alt: 'Dashbord de Indicadores.'
+        alt: 'Dashbord de Indicadores'
       }
     },
     {
@@ -284,7 +284,7 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/icon-data.svg',
-        alt: 'Relatórios de registros e dados de execução da operação.'
+        alt: 'Relatórios de registros e dados de execução da operação'
       }
     },
     {
@@ -293,14 +293,14 @@ export const Solutions = () => {
         width: 16,
         height: 16,
         src: '/images/icons/icon-vision.svg',
-        alt: 'Visibilidade para a operação e cliente final.'
+        alt: 'Visibilidade para a operação e cliente final'
       }
     }
   ]
 
   const list_automation_cl = [
     {
-      title: 'Ajuste de regras para envio de pedidos',
+      title: 'Ajuste de regras para envio de pedidos.',
       icon: {
         width: 16,
         height: 16,
@@ -309,7 +309,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Roteirização programada automaticamente',
+      title: 'Roteirização programada automaticamente.',
       icon: {
         width: 16,
         height: 16,
@@ -318,7 +318,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Testes de melhores cenários de rotas',
+      title: 'Testes de melhores cenários de rotas.',
       icon: {
         width: 16,
         height: 16,
@@ -330,7 +330,7 @@ export const Solutions = () => {
 
   const list_automation_cr = [
     {
-      title: 'Avaliações do serviço, produto e motorista',
+      title: 'Avaliações do serviço, produto e motorista.',
       icon: {
         width: 16,
         height: 16,
@@ -339,7 +339,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Dashbord de indicadores',
+      title: 'Dashbord de indicadores.',
       icon: {
         width: 16,
         height: 16,
@@ -348,7 +348,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Relatórios de registros e dados de execução da operação',
+      title: 'Relatórios de registros e dados de execução da operação.',
       icon: {
         width: 16,
         height: 16,
@@ -360,7 +360,7 @@ export const Solutions = () => {
 
   const list_app_cl = [
     {
-      title: 'Chat direto com a operação',
+      title: 'Chat direto com a operação.',
       icon: {
         width: 16,
         height: 16,
@@ -369,7 +369,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Integração com Google Maps e Waze',
+      title: 'Integração com Google Maps e Waze.',
       icon: {
         width: 16,
         height: 16,
@@ -378,7 +378,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Comprovação por foto, vídeo e assinatura',
+      title: 'Comprovação por foto, vídeo e assinatura.',
       icon: {
         width: 16,
         height: 16,
@@ -387,7 +387,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Aceite da rota direto no app',
+      title: 'Aceite da rota direto no app.',
       icon: {
         width: 16,
         height: 16,
@@ -399,7 +399,7 @@ export const Solutions = () => {
 
   const list_app_cr = [
     {
-      title: 'Avaliação do serviço, produto e motorista',
+      title: 'Avaliação do serviço, produto e motorista.',
       icon: {
         width: 16,
         height: 16,
@@ -408,7 +408,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Dashbord de indicadores',
+      title: 'Dashbord de indicadores.',
       icon: {
         width: 16,
         height: 16,
@@ -417,7 +417,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Relatórios de registros e dados de execução da operação',
+      title: 'Relatórios de registros e dados de execução da operação.',
       icon: {
         width: 16,
         height: 16,
@@ -426,7 +426,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Aceite da rota direto no app',
+      title: 'Aceite da rota direto no app.',
       icon: {
         width: 16,
         height: 16,
@@ -438,7 +438,7 @@ export const Solutions = () => {
 
   const list_api_cl = [
     {
-      title: 'Roteirização programada automaticamente',
+      title: 'Roteirização programada automaticamente.',
       icon: {
         width: 16,
         height: 16,
@@ -447,7 +447,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Seleção de frota própria ou terceirizada',
+      title: 'Seleção de frota própria ou terceirizada.',
       icon: {
         width: 16,
         height: 16,
@@ -456,7 +456,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Despacho automático para o motorista ideal',
+      title: 'Despacho automático para o motorista ideal.',
       icon: {
         width: 16,
         height: 16,
@@ -468,7 +468,7 @@ export const Solutions = () => {
 
   const list_api_cr = [
     {
-      title: 'Avaliações, produto e motorista',
+      title: 'Avaliações, produto e motorista.',
       icon: {
         width: 16,
         height: 16,
@@ -477,7 +477,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Dashbord de indicadores',
+      title: 'Dashbord de indicadores.',
       icon: {
         width: 16,
         height: 16,
@@ -486,7 +486,7 @@ export const Solutions = () => {
       }
     },
     {
-      title: 'Relatórios de registros e dados de execução da operação',
+      title: 'Relatórios de registros e dados de execução da operação.',
       icon: {
         width: 16,
         height: 16,
