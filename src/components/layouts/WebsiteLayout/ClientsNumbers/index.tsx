@@ -142,7 +142,7 @@ export const ClientsNumbers = () => {
           </div>
           <div className="flex gap-2 justify-center">
             {[
-              ...Array(instanceRef.current.track.details.slides.length).keys()
+              ...Array(instanceRef.current?.track.details.slides.length).keys()
             ].map(idx => {
               return (
                 <button
