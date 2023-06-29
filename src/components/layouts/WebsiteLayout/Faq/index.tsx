@@ -33,9 +33,9 @@ const FaqItem = ({ title, answer, isOpen, onClick, isLast }: IFaqItemProps) => {
       </header>
 
       <main
-        className={`overflow-hidden transition-all ${isOpen ? 'h-16' : 'h-0'}`}
+        className={`overflow-hidden transition-all ${isOpen ? 'h-20' : 'h-0'}`}
       >
-        <Text className="text-grayscale-50 text-[15px] font-light mt-4 h-10 overflow-hidden">
+        <Text className="text-grayscale-50 text-[14px] font-light mt-4 h-20 overflow-hidden">
           {answer}
         </Text>
       </main>

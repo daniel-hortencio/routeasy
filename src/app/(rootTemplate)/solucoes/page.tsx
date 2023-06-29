@@ -70,19 +70,21 @@ const listDifferentials: IIconCardColoredProps[] = [
 export default function Solutions() {
   const faqList = [
     {
-      title: 'Pergunta 1',
+      title:
+        'Quais parametrizações o sistema RoutEasy me permite usar numa roteirização?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Com o RoutEasy você consegue combinar diversas parametrizações. São elas: restrições de operação, de serviço e de algoritmo.'
     },
     {
-      title: 'Pergunta 2',
+      title: 'Quais relatórios eu consigo extrair do sistema RoutEasy?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Existem 2 tipos de relatórios, os de roteirização, que são gerados com os dados do que foi planejado pelo RoutEasy e os de monitoramento que contém os dados do que foi executado pelo motorista. '
     },
     {
-      title: 'Pergunta 3',
+      title:
+        'As roteirizações feitas pelo Maestro são 100% automáticas ou é necessária alguma ação?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'São totalmente automáticas, sem necessidade de qualquer ação humana. O sistema cria as rotas de acordo com as regras pré-estabelecidas.'
     }
   ]
 

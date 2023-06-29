@@ -7,19 +7,20 @@ import { TextHighlight, Title, Text } from 'components/elements/Texts'
 export default function Contact() {
   const faqList = [
     {
-      title: 'Pergunta 1',
+      title: 'Quando devo acionar o Suporte?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Você pode acionar o Suporte sempre que quiser, em caso de dúvidas ou problemas. Nossa equipe está disponível todos os dias das 6h às 23h, exceto feriados nacionais.'
     },
     {
-      title: 'Pergunta 2',
+      title: 'Preciso de suporte técnico. Como receber ajuda?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'O suporte técnico é destinado aos clientes ativos da RoutEasy. Se for seu o caso, após realizar login na plataforma, acesse a seção "Ajuda", no menu lateral, e escolha a opção "Suporte".'
     },
     {
-      title: 'Pergunta 3',
+      title:
+        'Quanto tempo leva para receber uma resposta após enviar minha mensagem?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'O tempo de resposta pode variar de acordo com a demanda, mas garantimos faremos o possível para responder à sua mensagem o mais breve possível.'
     }
   ]
 

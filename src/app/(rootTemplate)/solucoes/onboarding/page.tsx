@@ -45,19 +45,19 @@ function getModal(
 export default function SolutionsApi() {
   const faqList = [
     {
-      title: 'Pergunta 1',
+      title: 'Os treinamentos são sempre presenciais?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Nós fazemos treinamentos on-line e presencial, fica a seu critério decidir.'
     },
     {
-      title: 'Pergunta 2',
+      title: 'Quem está apto a receber suporte técnico?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'O suporte técnico é destinado aos clientes ativos da RoutEasy e que finalizaram o processo de treinamento.'
     },
     {
-      title: 'Pergunta 3',
+      title: 'Quando devo acionar o Suporte?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Você pode acionar o Suporte sempre que quiser, em caso de dúvidas ou problemas. Nossa equipe está disponível todos os dias das 6h às 23h, exceto feriados nacionais.'
     }
   ]
 

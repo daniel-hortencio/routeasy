@@ -43,19 +43,19 @@ function getModal(
 export default function SolutionsApi() {
   const faqList = [
     {
-      title: 'Pergunta 1',
+      title: 'Como funciona a API RoutEasy?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'A API RoutEasy é uma solução aberta que requer autenticação para acesso. Integre de forma flexível aos nossos serviços e potencialize suas operações.'
     },
     {
-      title: 'Pergunta 2',
+      title: 'Quais os tipos de requisições utilizadas?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Utilize requisições HTTP do tipo POST e GET para enviar e receber dados, garantindo uma integração eficiente e confiável.'
     },
     {
-      title: 'Pergunta 3',
+      title: 'A RoutEasy desenvolve e/ou faz manutenção da integração?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Não, a RoutEasy fornece toda a documentação necessária e suporte técnico, mas o desenvolvimento e manutenção das integrações são de responsabilidade da pessoa cliente.'
     }
   ]
 

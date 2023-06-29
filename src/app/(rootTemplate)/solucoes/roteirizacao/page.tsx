@@ -35,19 +35,21 @@ export default function SolutionsRoteirizacao() {
 
   const faqList = [
     {
-      title: 'Pergunta 1',
+      title:
+        'Quais parametrizações o sistema RoutEasy me permite usar numa roteirização?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Com o RoutEasy é possível combinar diversas parametrizações. São elas: restrições de operação, de serviço e de algoritmo.'
     },
     {
-      title: 'Pergunta 2',
+      title: 'Quais tipos de alertas eu posso configurar no  sistema RoutEasy?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'Existem alertas de rota, serviço e motorista que servem para mostrar se algo está fora do planejado.'
     },
     {
-      title: 'Pergunta 3',
+      title:
+        'As roteirizações feitas pelo Maestro são 100% automáticas ou é necessária alguma ação?',
       answer:
-        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+        'São totalmente automáticas, sem necessidade de qualquer ação humana. O sistema cria as rotas de acordo com as regras pré-estabelecidas.'
     }
   ]
 
