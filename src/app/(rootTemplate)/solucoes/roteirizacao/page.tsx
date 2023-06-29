@@ -33,6 +33,24 @@ export default function SolutionsRoteirizacao() {
     })
   }
 
+  const faqList = [
+    {
+      title: 'Pergunta 1',
+      answer:
+        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+    },
+    {
+      title: 'Pergunta 2',
+      answer:
+        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+    },
+    {
+      title: 'Pergunta 3',
+      answer:
+        'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
+    }
+  ]
+
   return (
     <>
       <BannerCentered
@@ -83,7 +101,7 @@ export default function SolutionsRoteirizacao() {
       <Integrating />
       <Maestro />
       <Segments />
-      <FAQ />
+      <FAQ data={faqList} />
       <Section>
         <div className="px-0 md:px-12 mb-16 md:mb-40">
           <ContactForm />

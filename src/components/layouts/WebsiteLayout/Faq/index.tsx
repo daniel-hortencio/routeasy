@@ -7,24 +7,6 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { LinkExternal } from 'components/elements/LinkExternal/LinkExternal'
 
-const faqList = [
-  {
-    title: 'Pergunta 1',
-    answer:
-      'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
-  },
-  {
-    title: 'Pergunta 2',
-    answer:
-      'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
-  },
-  {
-    title: 'Pergunta 3',
-    answer:
-      'Lorem ipsum dolor sit amet. Ut sint laboriosam ut sapiente rerum aut assumenda voluptates qui beatae quis id Quis cupiditate. Cum veritatis voluptatem hic dolores fuga eum dolorum tenetur est iusto quis.'
-  }
-]
-
 interface IFaqItemProps {
   title: string
   answer: string
@@ -61,7 +43,11 @@ const FaqItem = ({ title, answer, isOpen, onClick, isLast }: IFaqItemProps) => {
   )
 }
 
-export const FAQ = () => {
+interface IFaq {
+  data: Omit<IFaqItemProps, 'isOpen' | 'onClick' | 'isLast'>[]
+}
+
+export const FAQ = ({ data }: IFaq) => {
   const [questOpened, setQuestOpened] = useState<number | undefined>(0)
 
   const handleQuestionClick = (index: number) =>
@@ -105,7 +91,7 @@ export const FAQ = () => {
           </div>
         </div>
         <div className="md:w-6/12 mb-20 md:mb-0">
-          {faqList.map((question, index) => {
+          {data.map((question, index) => {
             return (
               <FaqItem
                 key={index}
@@ -113,7 +99,7 @@ export const FAQ = () => {
                 answer={question.answer}
                 isOpen={questOpened === index}
                 onClick={() => handleQuestionClick(index)}
-                isLast={index === faqList.length - 1}
+                isLast={index === data.length - 1}
               />
             )
           })}
