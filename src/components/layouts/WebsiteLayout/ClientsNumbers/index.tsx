@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useKeenSlider } from 'keen-slider/react'
 import { Section } from 'components/elements/Section'
 import { TextHighlight, Title, Text } from 'components/elements/Texts'
 import { ButtonPrimary } from 'components/elements/Button'
@@ -11,7 +10,6 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { IConversionIdentifier } from 'services'
 import { FormModal } from 'components/layouts/WebsiteLayout/FormModal'
-import { Skeleton } from 'components/elements/Skeleton'
 
 const MySwal = withReactContent(Swal)
 
@@ -35,17 +33,7 @@ function getModal(
   })
 }
 
-interface ICardContent {
-  number: string
-  label: string
-}
-
-interface IClientContentProps {
-  logo: string
-  cards: ICardContent[]
-}
-
-const ClientContent = ({ logo, cards }: IClientContentProps) => {
+export const ClientsNumbers = () => {
   const time_transition = 3000
 
   const [currentClientsSlider, setCurrentClientsSlider] = useState(
@@ -70,7 +58,21 @@ const ClientContent = ({ logo, cards }: IClientContentProps) => {
   }, [currentClientsSlider])
 
   return (
-    <>
+    <Section
+      className="pb-4"
+      title={
+        <Title>
+          Impacto <TextHighlight>real </TextHighlight>
+          nos resultados de nossos clientes
+        </Title>
+      }
+      subtitle={
+        <Text className="text-grayscale-50 text-[15px] font-light">
+          O roteirizador da RoutEasy revolucionou as operações logísticas de
+          empresas em diversos setores. Confira alguns resultados!
+        </Text>
+      }
+    >
       <div className="relative pt-0 md:pt-20 pb-16 md:pb-28 flex items-center flex-col">
         <div className="mb-12 md:mb-24">
           <Image
@@ -94,71 +96,18 @@ const ClientContent = ({ logo, cards }: IClientContentProps) => {
           ))}
         </div>
       </div>
-    </>
-  )
-}
-
-export const ClientsNumbers = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0)
-  const [loaded, setLoaded] = useState<boolean>(false)
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    }
-  })
-
-  useEffect(() => {
-    setLoaded(true)
-  }, [])
-
-  const setDotOpacity = active => (active ? 'opacity-100' : 'opacity-40')
-
-  return (
-    <Section
-      className="pb-4"
-      title={
-        <Title>
-          Impacto <TextHighlight>real </TextHighlight>
-          nos resultados de nossos clientes
-        </Title>
-      }
-      subtitle={
-        <Text className="text-grayscale-50 text-[15px] font-light">
-          O roteirizador da RoutEasy revolucionou as operações logísticas de
-          empresas em diversos setores. Confira alguns resultados!
-        </Text>
-      }
-    >
-      {loaded ? (
-        /* {loaded && instanceRef.current && ( */
-        <>
-          <div ref={sliderRef} className="keen-slider">
-            {clientsContent.map(item => (
-              <div className="keen-slider__slide" key={item.logo}>
-                <ClientContent logo={item.logo} cards={item.cards} />
-              </div>
-            ))}
-          </div>
-          <div className="flex gap-2 justify-center">
-            {[
-              ...Array(instanceRef.current?.track.details.slides.length).keys()
-            ].map(idx => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => instanceRef.current?.moveToIdx(idx)}
-                  className={`w-2 h-2 rounded-full bg-primary-100 ${setDotOpacity(
-                    currentSlide === idx
-                  )}`}
-                ></button>
-              )
-            })}
-          </div>
-        </>
-      ) : (
-        <Skeleton className="w-12 lg:w-full h-12 lg:h-[575px] rounded-lg" />
-      )}
+      <div className="flex gap-2 justify-center">
+        {clientsContent.map(clients => (
+          <button
+            key={clients.logo}
+            className={`w-2 h-2 rounded-full bg-primary-100 mr-2 dot ${
+              currentClientsSlider.logo === clients.logo
+                ? 'opacity-100'
+                : 'opacity-20'
+            }`}
+          />
+        ))}
+      </div>
 
       <div className="w-full sm:w-[232px] mt-16 mb-28 text-center mx-[auto]">
         <ButtonPrimary
